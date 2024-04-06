@@ -1,0 +1,39 @@
+{
+  "version": "0.2",
+  "words": [
+    "cicd",
+    "commitlint",
+    "commitlintrc",
+    "corepack",
+    "dbaeumer",
+    "deps",
+    "esbenp",
+    "esbuild",
+    "gitzy",
+    "gruntfuggly",
+    "lcov",
+    "lefthook",
+    "nvmrc",
+    "pkgroll",
+    "pnpm",
+    "shellcheck",
+    "streetsidesoftware",
+    "tiged",
+    "typecheck",
+    "vitest",
+    "wagoid"
+  ],
+  "ignorePaths": [
+    "node_modules",
+    "**/node_modules",
+    "**/node_modules/**",
+    "node_modules/**",
+    "vscode-extension",
+    ".git",
+    ".gitignore",
+    "*.dll",
+    "**/*.dll",
+    "yarn.lock",
+    "pnpm-lock.yaml"
+  ]
+}

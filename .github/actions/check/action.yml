@@ -1,0 +1,21 @@
+name: Check
+description: Check everything
+
+runs:
+  using: composite
+  steps:
+    - name: 🚨 Lint
+      shell: bash
+      run: pnpm lint
+
+    - name: 🎨 Format
+      shell: bash
+      run: pnpm format
+
+    - name: 🏷️ Type Check
+      shell: bash
+      run: pnpm typecheck
+
+    - name: ✅ Coverage
+      shell: bash
+      run: pnpm coverage

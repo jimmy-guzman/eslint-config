@@ -1,0 +1,78 @@
+{
+  "name": "@jimmy.codes/eslint-config",
+  "version": "0.0.0",
+  "description": "my personal [eslint](https://eslint.org/) config",
+  "keywords": [
+    "eslint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jimmy-guzman/eslint-config.git"
+  },
+  "license": "MIT",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    "require": {
+      "types": "./dist/index.d.cts",
+      "default": "./dist/index.cjs"
+    },
+    "import": {
+      "types": "./dist/index.d.mts",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pkgroll --minify",
+    "dev": "pkgroll --watch",
+    "format": "prettier --check --cache .",
+    "format:fix": "prettier --write --cache .",
+    "lint": "eslint --cache --cache-location node_modules/.cache/eslint --color .",
+    "lint:fix": "pnpm lint --fix",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "typecheck": "tsc",
+    "prepack": "pnpm build && clean-pkg-json",
+    "prepare": "is-ci || lefthook install"
+  },
+  "prettier": "@jimmy.codes/prettier-config",
+  "devDependencies": {
+    "@commitlint/config-conventional": "19.1.0",
+    "@jimmy.codes/prettier-config": "1.0.1",
+    "@semantic-release/changelog": "6.0.3",
+    "@semantic-release/commit-analyzer": "12.0.0",
+    "@semantic-release/git": "10.0.1",
+    "@semantic-release/npm": "12.0.0",
+    "@semantic-release/release-notes-generator": "13.0.0",
+    "@types/node": "20.12.5",
+    "@vitest/coverage-v8": "1.4.0",
+    "clean-pkg-json": "1.2.0",
+    "commitlint": "19.2.1",
+    "eslint": "8.57.0",
+    "eslint-config-jimmy-guzman": "14.1.0",
+    "gitzy": "5.2.0",
+    "is-ci": "3.0.1",
+    "lefthook": "1.6.8",
+    "pkgroll": "2.0.2",
+    "prettier": "3.2.5",
+    "semantic-release": "23.0.7",
+    "typescript": "5.4.4",
+    "vitest": "1.4.0"
+  },
+  "packageManager": "pnpm@8.15.6",
+  "engines": {
+    "node": ">= 20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitzy": {
+    "useCommitlintConfig": true
+  }
+}
