@@ -32,7 +32,7 @@
     "build": "pkgroll --minify",
     "coverage": "vitest run --coverage",
     "dev": "pkgroll --watch",
-    "docs": "npx @eslint/config-inspector",
+    "docs:view": "npx @eslint/config-inspector",
     "docs:build": "npx @eslint/config-inspector build",
     "format": "prettier --check --cache .",
     "format:fix": "prettier --write --cache .",
