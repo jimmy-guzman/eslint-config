@@ -9,4 +9,14 @@ const jiti = JITI(import.meta.url);
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
 const jimmyDotCodes = jiti("./src").default;
 
-export default jimmyDotCodes({ typescript: true, vitest: true });
+export default jimmyDotCodes({
+  typescript: true,
+  vitest: true,
+  react: true,
+  testingLibrary: true,
+  overrides: [
+    {
+      ignores: ["fixtures"],
+    },
+  ],
+});

@@ -15,6 +15,9 @@
     "module": "ESNext",
     "noEmit": true,
 
+    "jsx": "react-jsx",
+
     "types": ["vitest/globals"]
-  }
+  },
+  "exclude": ["./fixtures/**/*.*"]
 }
