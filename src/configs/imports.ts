@@ -2,6 +2,8 @@ import importX from "eslint-plugin-import-x";
 import nodeImport from "eslint-plugin-node-import";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
 
+import { importsRules } from "../rules/imports";
+
 const typescriptImports = {
   name: "jimmy.codes/imports/typescript",
   settings: {
@@ -27,14 +29,7 @@ const importsConfig = ({ typescript = false }: ImportsConfigOptions = {}) => {
         "simple-import-sort": simpleImportSort,
         "node-import": nodeImport,
       },
-      rules: {
-        ...importX.configs.recommended.rules,
-        // ! can't get this rule to work
-        "import-x/namespace": "off",
-        "simple-import-sort/imports": "error",
-        "simple-import-sort/exports": "error",
-        "node-import/prefer-node-protocol": "error",
-      },
+      rules: importsRules,
     },
     ...(typescript ? [typescriptImports] : []),
   ];

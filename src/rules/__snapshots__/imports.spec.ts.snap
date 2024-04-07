@@ -1,0 +1,23 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should create imports rules 1`] = `
+{
+  "import-x/default": "error",
+  "import-x/export": "error",
+  "import-x/first": "error",
+  "import-x/named": "error",
+  "import-x/namespace": "off",
+  "import-x/newline-after-import": "error",
+  "import-x/no-absolute-path": "error",
+  "import-x/no-duplicates": "warn",
+  "import-x/no-empty-named-blocks": "error",
+  "import-x/no-named-as-default": "warn",
+  "import-x/no-named-as-default-member": "warn",
+  "import-x/no-self-import": "error",
+  "import-x/no-unresolved": "error",
+  "import-x/no-useless-path-segments": "error",
+  "node-import/prefer-node-protocol": "error",
+  "simple-import-sort/exports": "error",
+  "simple-import-sort/imports": "error",
+}
+`;

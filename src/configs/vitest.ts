@@ -1,7 +1,7 @@
 import jest from "eslint-plugin-jest";
 import * as jestDom from "eslint-plugin-jest-dom";
 
-import { GLOB_TESTS } from "../constants";
+import { GLOB_E2E, GLOB_TESTS } from "../constants";
 import { jestRules } from "../rules/jest";
 import testingLibraryConfig from "./testing-library";
 
@@ -28,6 +28,13 @@ const vitestConfig = ({
       name: "jimmy.codes/vitest/jest-dom",
       files: GLOB_TESTS,
       ...jestDom.configs["flat/recommended"],
+    },
+    {
+      name: "jimmy.codes/vitest/disabled",
+      files: GLOB_E2E,
+      rules: {
+        "jest/require-hook": "off",
+      },
     },
     ...(testingLibrary && react ? testingLibraryConfig() : []),
   ];
