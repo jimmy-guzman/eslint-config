@@ -3,6 +3,7 @@ import nodeImport from "eslint-plugin-node-import";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
 
 import { importsRules } from "../rules/imports";
+import { type TypescriptOptions } from "../types";
 
 const typescriptImports = {
   name: "jimmy.codes/imports/typescript",
@@ -17,7 +18,7 @@ const typescriptImports = {
 };
 
 interface ImportsConfigOptions {
-  typescript?: boolean;
+  typescript?: boolean | TypescriptOptions;
 }
 
 const importsConfig = ({ typescript = false }: ImportsConfigOptions = {}) => {

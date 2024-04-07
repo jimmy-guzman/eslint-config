@@ -8,13 +8,15 @@ import typescriptConfig from "./configs/typescript";
 import vitestConfig from "./configs/vitest";
 import { GLOB_IGNORES } from "./constants";
 import { baseRules } from "./rules/base";
+import { type TypescriptOptions } from "./types";
+import { getTypescriptOptions } from "./utils";
 
 interface Options {
   /**
    * Are TypeScript rules are enabled?
    * @default false
    */
-  typescript?: boolean;
+  typescript?: boolean | TypescriptOptions;
   /**
    * Are React rules are enabled?
    * @default false
@@ -59,7 +61,7 @@ export const jimmyDotCodes = ({
   return [
     { name: "jimmy.codes/base", rules: baseRules },
     ...(imports ? importsConfig({ typescript }) : []),
-    ...(typescript ? typescriptConfig() : []),
+    ...(typescript ? typescriptConfig(getTypescriptOptions(typescript)) : []),
     ...(react ? reactConfig() : []),
     ...(jest ? jestConfig({ testingLibrary, react }) : []),
     ...(vitest ? vitestConfig({ testingLibrary, react }) : []),

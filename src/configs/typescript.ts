@@ -1,17 +1,9 @@
 import { config, configs } from "typescript-eslint";
 
 import { GLOB_JS, GLOB_JSX } from "../constants";
+import { type TypescriptOptions } from "../types";
 
-interface TypescriptOptions {
-  /**
-   * @default "tsconfig.json"
-   */
-  tsconfigPath?: string;
-}
-
-const typescriptConfig = ({
-  tsconfigPath = "tsconfig.json",
-}: TypescriptOptions = {}) => {
+const typescriptConfig = (options: TypescriptOptions) => {
   return config(
     {
       //@ts-expect-error name should be allowed or provided
@@ -43,7 +35,7 @@ const typescriptConfig = ({
       name: "jimmy.codes/typescript",
       languageOptions: {
         parserOptions: {
-          project: tsconfigPath,
+          project: options.project,
           tsconfigRootDir: process.cwd(),
         },
       },

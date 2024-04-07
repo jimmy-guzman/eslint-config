@@ -1,9 +1,11 @@
 {
   "name": "@jimmy.codes/eslint-config",
   "version": "0.0.0",
-  "description": "my personal eslint config",
+  "description": "another opinionated eslint config",
   "keywords": [
-    "eslint"
+    "eslint",
+    "eslint-config",
+    "eslintconfig"
   ],
   "repository": {
     "type": "git",
