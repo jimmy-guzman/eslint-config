@@ -9799,13 +9799,23 @@ If your function does not access \`this\`, you can annotate it with \`this: void
   },
   {
     "files": [
+      "**/e2e/**/*.spec.?([cm])[jt]s?(x)",
+      "**/e2e/**/*.test.?([cm])[jt]s?(x)",
+    ],
+    "name": "jimmy.codes/jest/disabled",
+    "rules": {
+      "jest/require-hook": "off",
+    },
+  },
+  {
+    "files": [
       "**/__tests__/**/*.?([cm])[jt]s?(x)",
       "**/*.spec.?([cm])[jt]s?(x)",
       "**/*.test.?([cm])[jt]s?(x)",
       "**/*.bench.?([cm])[jt]s?(x)",
       "**/*.benchmark.?([cm])[jt]s?(x)",
     ],
-    "name": "jimmy.codes/jest/jest-dom",
+    "name": "jimmy.codes/testing-library",
     "plugins": {
       "jest-dom": {
         "configs": {
@@ -9829,7 +9839,160 @@ If your function does not access \`this\`, you can annotate it with \`this: void
           },
           "flat/all": {
             "plugins": {
-              "jest-dom": [Circular],
+              "jest-dom": {
+                "configs": [Circular],
+                "meta": {
+                  "name": "eslint-plugin-jest-dom",
+                  "version": "5.2.0",
+                },
+                "rules": {
+                  "prefer-checked": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toBeChecked over checking attributes",
+                        "recommended": true,
+                        "url": "prefer-checked",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-empty": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "Prefer toBeEmpty over checking innerHTML",
+                        "recommended": true,
+                        "url": "prefer-empty",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-enabled-disabled": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toBeDisabled or toBeEnabled over checking attributes",
+                        "recommended": true,
+                        "url": "prefer-enabled-disabled",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-focus": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toHaveFocus over checking document.activeElement",
+                        "recommended": true,
+                        "url": "prefer-focus",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-in-document": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "Prefer .toBeInTheDocument() for asserting the existence of a DOM node",
+                        "recommended": true,
+                        "url": "prefer-in-document",
+                      },
+                      "fixable": "code",
+                      "hasSuggestions": true,
+                      "messages": {
+                        "invalid-combination-length-1": "Invalid combination of {{ query }} and .toHaveLength(1). Did you mean to use {{ allQuery }}?",
+                        "replace-query-with-all": "Replace {{ query }} with {{ allQuery }}",
+                        "use-document": "Prefer .toBeInTheDocument() for asserting DOM node existence",
+                      },
+                      "type": "suggestion",
+                    },
+                  },
+                  "prefer-required": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toBeRequired over checking properties",
+                        "recommended": true,
+                        "url": "prefer-required",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-to-have-attribute": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toHaveAttribute over checking  getAttribute/hasAttribute ",
+                        "recommended": true,
+                        "url": "prefer-to-have-attribute",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-to-have-class": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toHaveClass over checking element className",
+                        "recommended": true,
+                        "url": "prefer-to-have-class",
+                      },
+                      "fixable": "code",
+                      "messages": {
+                        "use-to-have-class": "Prefer .toHaveClass() over checking element className",
+                      },
+                    },
+                  },
+                  "prefer-to-have-style": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toHaveStyle over checking element style",
+                        "recommended": true,
+                        "url": "prefer-to-have-style",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-to-have-text-content": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "Prefer toHaveTextContent over checking element.textContent",
+                        "recommended": true,
+                        "url": "prefer-to-have-text-content",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-to-have-value": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toHaveValue over checking element.value",
+                        "recommended": true,
+                        "url": "prefer-to-have-value",
+                      },
+                      "fixable": "code",
+                      "messages": {
+                        "use-to-have-value": "Prefer .toHaveValue() over other attribute checks",
+                      },
+                    },
+                  },
+                },
+              },
             },
             "rules": {
               "jest-dom/prefer-checked": "error",
@@ -9846,7 +10009,162 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             },
           },
           "flat/recommended": {
-            "plugins": [Circular],
+            "plugins": {
+              "jest-dom": {
+                "configs": [Circular],
+                "meta": {
+                  "name": "eslint-plugin-jest-dom",
+                  "version": "5.2.0",
+                },
+                "rules": {
+                  "prefer-checked": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toBeChecked over checking attributes",
+                        "recommended": true,
+                        "url": "prefer-checked",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-empty": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "Prefer toBeEmpty over checking innerHTML",
+                        "recommended": true,
+                        "url": "prefer-empty",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-enabled-disabled": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toBeDisabled or toBeEnabled over checking attributes",
+                        "recommended": true,
+                        "url": "prefer-enabled-disabled",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-focus": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toHaveFocus over checking document.activeElement",
+                        "recommended": true,
+                        "url": "prefer-focus",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-in-document": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "Prefer .toBeInTheDocument() for asserting the existence of a DOM node",
+                        "recommended": true,
+                        "url": "prefer-in-document",
+                      },
+                      "fixable": "code",
+                      "hasSuggestions": true,
+                      "messages": {
+                        "invalid-combination-length-1": "Invalid combination of {{ query }} and .toHaveLength(1). Did you mean to use {{ allQuery }}?",
+                        "replace-query-with-all": "Replace {{ query }} with {{ allQuery }}",
+                        "use-document": "Prefer .toBeInTheDocument() for asserting DOM node existence",
+                      },
+                      "type": "suggestion",
+                    },
+                  },
+                  "prefer-required": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toBeRequired over checking properties",
+                        "recommended": true,
+                        "url": "prefer-required",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-to-have-attribute": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toHaveAttribute over checking  getAttribute/hasAttribute ",
+                        "recommended": true,
+                        "url": "prefer-to-have-attribute",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-to-have-class": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toHaveClass over checking element className",
+                        "recommended": true,
+                        "url": "prefer-to-have-class",
+                      },
+                      "fixable": "code",
+                      "messages": {
+                        "use-to-have-class": "Prefer .toHaveClass() over checking element className",
+                      },
+                    },
+                  },
+                  "prefer-to-have-style": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toHaveStyle over checking element style",
+                        "recommended": true,
+                        "url": "prefer-to-have-style",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-to-have-text-content": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "Prefer toHaveTextContent over checking element.textContent",
+                        "recommended": true,
+                        "url": "prefer-to-have-text-content",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-to-have-value": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toHaveValue over checking element.value",
+                        "recommended": true,
+                        "url": "prefer-to-have-value",
+                      },
+                      "fixable": "code",
+                      "messages": {
+                        "use-to-have-value": "Prefer .toHaveValue() over other attribute checks",
+                      },
+                    },
+                  },
+                },
+              },
+            },
             "rules": {
               "jest-dom/prefer-checked": "error",
               "jest-dom/prefer-empty": "error",
@@ -9880,9 +10198,232 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             },
           },
         },
-        "meta": {
-          "name": "eslint-plugin-jest-dom",
-          "version": "5.2.0",
+        "default": {
+          "configs": {
+            "all": {
+              "plugins": [
+                "jest-dom",
+              ],
+              "rules": {
+                "jest-dom/prefer-checked": "error",
+                "jest-dom/prefer-empty": "error",
+                "jest-dom/prefer-enabled-disabled": "error",
+                "jest-dom/prefer-focus": "error",
+                "jest-dom/prefer-in-document": "error",
+                "jest-dom/prefer-required": "error",
+                "jest-dom/prefer-to-have-attribute": "error",
+                "jest-dom/prefer-to-have-class": "error",
+                "jest-dom/prefer-to-have-style": "error",
+                "jest-dom/prefer-to-have-text-content": "error",
+                "jest-dom/prefer-to-have-value": "error",
+              },
+            },
+            "flat/all": {
+              "plugins": {
+                "jest-dom": [Circular],
+              },
+              "rules": {
+                "jest-dom/prefer-checked": "error",
+                "jest-dom/prefer-empty": "error",
+                "jest-dom/prefer-enabled-disabled": "error",
+                "jest-dom/prefer-focus": "error",
+                "jest-dom/prefer-in-document": "error",
+                "jest-dom/prefer-required": "error",
+                "jest-dom/prefer-to-have-attribute": "error",
+                "jest-dom/prefer-to-have-class": "error",
+                "jest-dom/prefer-to-have-style": "error",
+                "jest-dom/prefer-to-have-text-content": "error",
+                "jest-dom/prefer-to-have-value": "error",
+              },
+            },
+            "flat/recommended": {
+              "plugins": {
+                "jest-dom": [Circular],
+              },
+              "rules": {
+                "jest-dom/prefer-checked": "error",
+                "jest-dom/prefer-empty": "error",
+                "jest-dom/prefer-enabled-disabled": "error",
+                "jest-dom/prefer-focus": "error",
+                "jest-dom/prefer-in-document": "error",
+                "jest-dom/prefer-required": "error",
+                "jest-dom/prefer-to-have-attribute": "error",
+                "jest-dom/prefer-to-have-class": "error",
+                "jest-dom/prefer-to-have-style": "error",
+                "jest-dom/prefer-to-have-text-content": "error",
+                "jest-dom/prefer-to-have-value": "error",
+              },
+            },
+            "recommended": {
+              "plugins": [
+                "jest-dom",
+              ],
+              "rules": {
+                "jest-dom/prefer-checked": "error",
+                "jest-dom/prefer-empty": "error",
+                "jest-dom/prefer-enabled-disabled": "error",
+                "jest-dom/prefer-focus": "error",
+                "jest-dom/prefer-in-document": "error",
+                "jest-dom/prefer-required": "error",
+                "jest-dom/prefer-to-have-attribute": "error",
+                "jest-dom/prefer-to-have-class": "error",
+                "jest-dom/prefer-to-have-style": "error",
+                "jest-dom/prefer-to-have-text-content": "error",
+                "jest-dom/prefer-to-have-value": "error",
+              },
+            },
+          },
+          "meta": {
+            "name": "eslint-plugin-jest-dom",
+            "version": "5.2.0",
+          },
+          "rules": {
+            "prefer-checked": {
+              "create": [Function],
+              "meta": {
+                "docs": {
+                  "category": "Best Practices",
+                  "description": "prefer toBeChecked over checking attributes",
+                  "recommended": true,
+                  "url": "prefer-checked",
+                },
+                "fixable": "code",
+              },
+            },
+            "prefer-empty": {
+              "create": [Function],
+              "meta": {
+                "docs": {
+                  "category": "Best Practices",
+                  "description": "Prefer toBeEmpty over checking innerHTML",
+                  "recommended": true,
+                  "url": "prefer-empty",
+                },
+                "fixable": "code",
+              },
+            },
+            "prefer-enabled-disabled": {
+              "create": [Function],
+              "meta": {
+                "docs": {
+                  "category": "Best Practices",
+                  "description": "prefer toBeDisabled or toBeEnabled over checking attributes",
+                  "recommended": true,
+                  "url": "prefer-enabled-disabled",
+                },
+                "fixable": "code",
+              },
+            },
+            "prefer-focus": {
+              "create": [Function],
+              "meta": {
+                "docs": {
+                  "category": "Best Practices",
+                  "description": "prefer toHaveFocus over checking document.activeElement",
+                  "recommended": true,
+                  "url": "prefer-focus",
+                },
+                "fixable": "code",
+              },
+            },
+            "prefer-in-document": {
+              "create": [Function],
+              "meta": {
+                "docs": {
+                  "category": "Best Practices",
+                  "description": "Prefer .toBeInTheDocument() for asserting the existence of a DOM node",
+                  "recommended": true,
+                  "url": "prefer-in-document",
+                },
+                "fixable": "code",
+                "hasSuggestions": true,
+                "messages": {
+                  "invalid-combination-length-1": "Invalid combination of {{ query }} and .toHaveLength(1). Did you mean to use {{ allQuery }}?",
+                  "replace-query-with-all": "Replace {{ query }} with {{ allQuery }}",
+                  "use-document": "Prefer .toBeInTheDocument() for asserting DOM node existence",
+                },
+                "type": "suggestion",
+              },
+            },
+            "prefer-required": {
+              "create": [Function],
+              "meta": {
+                "docs": {
+                  "category": "Best Practices",
+                  "description": "prefer toBeRequired over checking properties",
+                  "recommended": true,
+                  "url": "prefer-required",
+                },
+                "fixable": "code",
+              },
+            },
+            "prefer-to-have-attribute": {
+              "create": [Function],
+              "meta": {
+                "docs": {
+                  "category": "Best Practices",
+                  "description": "prefer toHaveAttribute over checking  getAttribute/hasAttribute ",
+                  "recommended": true,
+                  "url": "prefer-to-have-attribute",
+                },
+                "fixable": "code",
+              },
+            },
+            "prefer-to-have-class": {
+              "create": [Function],
+              "meta": {
+                "docs": {
+                  "category": "Best Practices",
+                  "description": "prefer toHaveClass over checking element className",
+                  "recommended": true,
+                  "url": "prefer-to-have-class",
+                },
+                "fixable": "code",
+                "messages": {
+                  "use-to-have-class": "Prefer .toHaveClass() over checking element className",
+                },
+              },
+            },
+            "prefer-to-have-style": {
+              "create": [Function],
+              "meta": {
+                "docs": {
+                  "category": "Best Practices",
+                  "description": "prefer toHaveStyle over checking element style",
+                  "recommended": true,
+                  "url": "prefer-to-have-style",
+                },
+                "fixable": "code",
+              },
+            },
+            "prefer-to-have-text-content": {
+              "create": [Function],
+              "meta": {
+                "docs": {
+                  "category": "Best Practices",
+                  "description": "Prefer toHaveTextContent over checking element.textContent",
+                  "recommended": true,
+                  "url": "prefer-to-have-text-content",
+                },
+                "fixable": "code",
+              },
+            },
+            "prefer-to-have-value": {
+              "create": [Function],
+              "meta": {
+                "docs": {
+                  "category": "Best Practices",
+                  "description": "prefer toHaveValue over checking element.value",
+                  "recommended": true,
+                  "url": "prefer-to-have-value",
+                },
+                "fixable": "code",
+                "messages": {
+                  "use-to-have-value": "Prefer .toHaveValue() over other attribute checks",
+                },
+              },
+            },
+          },
         },
         "rules": {
           "prefer-checked": {
@@ -10032,41 +10573,6 @@ If your function does not access \`this\`, you can annotate it with \`this: void
           },
         },
       },
-    },
-    "rules": {
-      "jest-dom/prefer-checked": "error",
-      "jest-dom/prefer-empty": "error",
-      "jest-dom/prefer-enabled-disabled": "error",
-      "jest-dom/prefer-focus": "error",
-      "jest-dom/prefer-in-document": "error",
-      "jest-dom/prefer-required": "error",
-      "jest-dom/prefer-to-have-attribute": "error",
-      "jest-dom/prefer-to-have-class": "error",
-      "jest-dom/prefer-to-have-style": "error",
-      "jest-dom/prefer-to-have-text-content": "error",
-      "jest-dom/prefer-to-have-value": "error",
-    },
-  },
-  {
-    "files": [
-      "**/e2e/**/*.spec.?([cm])[jt]s?(x)",
-      "**/e2e/**/*.test.?([cm])[jt]s?(x)",
-    ],
-    "name": "jimmy.codes/jest/disabled",
-    "rules": {
-      "jest/require-hook": "off",
-    },
-  },
-  {
-    "files": [
-      "**/__tests__/**/*.?([cm])[jt]s?(x)",
-      "**/*.spec.?([cm])[jt]s?(x)",
-      "**/*.test.?([cm])[jt]s?(x)",
-      "**/*.bench.?([cm])[jt]s?(x)",
-      "**/*.benchmark.?([cm])[jt]s?(x)",
-    ],
-    "name": "jimmy.codes/testing-library",
-    "plugins": {
       "testing-library": {
         "configs": {
           "angular": {
@@ -11240,6 +11746,17 @@ If your function does not access \`this\`, you can annotate it with \`this: void
       },
     },
     "rules": {
+      "jest-dom/prefer-checked": "error",
+      "jest-dom/prefer-empty": "error",
+      "jest-dom/prefer-enabled-disabled": "error",
+      "jest-dom/prefer-focus": "error",
+      "jest-dom/prefer-in-document": "error",
+      "jest-dom/prefer-required": "error",
+      "jest-dom/prefer-to-have-attribute": "error",
+      "jest-dom/prefer-to-have-class": "error",
+      "jest-dom/prefer-to-have-style": "error",
+      "jest-dom/prefer-to-have-text-content": "error",
+      "jest-dom/prefer-to-have-value": "error",
       "testing-library/await-async-events": [
         "error",
         {
@@ -15078,256 +15595,6 @@ If your function does not access \`this\`, you can annotate it with \`this: void
       "jest/valid-expect": "error",
       "jest/valid-expect-in-promise": "error",
       "jest/valid-title": "error",
-    },
-  },
-  {
-    "files": [
-      "**/__tests__/**/*.?([cm])[jt]s?(x)",
-      "**/*.spec.?([cm])[jt]s?(x)",
-      "**/*.test.?([cm])[jt]s?(x)",
-      "**/*.bench.?([cm])[jt]s?(x)",
-      "**/*.benchmark.?([cm])[jt]s?(x)",
-    ],
-    "name": "jimmy.codes/jest/jest-dom",
-    "plugins": {
-      "jest-dom": {
-        "configs": {
-          "all": {
-            "plugins": [
-              "jest-dom",
-            ],
-            "rules": {
-              "jest-dom/prefer-checked": "error",
-              "jest-dom/prefer-empty": "error",
-              "jest-dom/prefer-enabled-disabled": "error",
-              "jest-dom/prefer-focus": "error",
-              "jest-dom/prefer-in-document": "error",
-              "jest-dom/prefer-required": "error",
-              "jest-dom/prefer-to-have-attribute": "error",
-              "jest-dom/prefer-to-have-class": "error",
-              "jest-dom/prefer-to-have-style": "error",
-              "jest-dom/prefer-to-have-text-content": "error",
-              "jest-dom/prefer-to-have-value": "error",
-            },
-          },
-          "flat/all": {
-            "plugins": {
-              "jest-dom": [Circular],
-            },
-            "rules": {
-              "jest-dom/prefer-checked": "error",
-              "jest-dom/prefer-empty": "error",
-              "jest-dom/prefer-enabled-disabled": "error",
-              "jest-dom/prefer-focus": "error",
-              "jest-dom/prefer-in-document": "error",
-              "jest-dom/prefer-required": "error",
-              "jest-dom/prefer-to-have-attribute": "error",
-              "jest-dom/prefer-to-have-class": "error",
-              "jest-dom/prefer-to-have-style": "error",
-              "jest-dom/prefer-to-have-text-content": "error",
-              "jest-dom/prefer-to-have-value": "error",
-            },
-          },
-          "flat/recommended": {
-            "plugins": [Circular],
-            "rules": {
-              "jest-dom/prefer-checked": "error",
-              "jest-dom/prefer-empty": "error",
-              "jest-dom/prefer-enabled-disabled": "error",
-              "jest-dom/prefer-focus": "error",
-              "jest-dom/prefer-in-document": "error",
-              "jest-dom/prefer-required": "error",
-              "jest-dom/prefer-to-have-attribute": "error",
-              "jest-dom/prefer-to-have-class": "error",
-              "jest-dom/prefer-to-have-style": "error",
-              "jest-dom/prefer-to-have-text-content": "error",
-              "jest-dom/prefer-to-have-value": "error",
-            },
-          },
-          "recommended": {
-            "plugins": [
-              "jest-dom",
-            ],
-            "rules": {
-              "jest-dom/prefer-checked": "error",
-              "jest-dom/prefer-empty": "error",
-              "jest-dom/prefer-enabled-disabled": "error",
-              "jest-dom/prefer-focus": "error",
-              "jest-dom/prefer-in-document": "error",
-              "jest-dom/prefer-required": "error",
-              "jest-dom/prefer-to-have-attribute": "error",
-              "jest-dom/prefer-to-have-class": "error",
-              "jest-dom/prefer-to-have-style": "error",
-              "jest-dom/prefer-to-have-text-content": "error",
-              "jest-dom/prefer-to-have-value": "error",
-            },
-          },
-        },
-        "meta": {
-          "name": "eslint-plugin-jest-dom",
-          "version": "5.2.0",
-        },
-        "rules": {
-          "prefer-checked": {
-            "create": [Function],
-            "meta": {
-              "docs": {
-                "category": "Best Practices",
-                "description": "prefer toBeChecked over checking attributes",
-                "recommended": true,
-                "url": "prefer-checked",
-              },
-              "fixable": "code",
-            },
-          },
-          "prefer-empty": {
-            "create": [Function],
-            "meta": {
-              "docs": {
-                "category": "Best Practices",
-                "description": "Prefer toBeEmpty over checking innerHTML",
-                "recommended": true,
-                "url": "prefer-empty",
-              },
-              "fixable": "code",
-            },
-          },
-          "prefer-enabled-disabled": {
-            "create": [Function],
-            "meta": {
-              "docs": {
-                "category": "Best Practices",
-                "description": "prefer toBeDisabled or toBeEnabled over checking attributes",
-                "recommended": true,
-                "url": "prefer-enabled-disabled",
-              },
-              "fixable": "code",
-            },
-          },
-          "prefer-focus": {
-            "create": [Function],
-            "meta": {
-              "docs": {
-                "category": "Best Practices",
-                "description": "prefer toHaveFocus over checking document.activeElement",
-                "recommended": true,
-                "url": "prefer-focus",
-              },
-              "fixable": "code",
-            },
-          },
-          "prefer-in-document": {
-            "create": [Function],
-            "meta": {
-              "docs": {
-                "category": "Best Practices",
-                "description": "Prefer .toBeInTheDocument() for asserting the existence of a DOM node",
-                "recommended": true,
-                "url": "prefer-in-document",
-              },
-              "fixable": "code",
-              "hasSuggestions": true,
-              "messages": {
-                "invalid-combination-length-1": "Invalid combination of {{ query }} and .toHaveLength(1). Did you mean to use {{ allQuery }}?",
-                "replace-query-with-all": "Replace {{ query }} with {{ allQuery }}",
-                "use-document": "Prefer .toBeInTheDocument() for asserting DOM node existence",
-              },
-              "type": "suggestion",
-            },
-          },
-          "prefer-required": {
-            "create": [Function],
-            "meta": {
-              "docs": {
-                "category": "Best Practices",
-                "description": "prefer toBeRequired over checking properties",
-                "recommended": true,
-                "url": "prefer-required",
-              },
-              "fixable": "code",
-            },
-          },
-          "prefer-to-have-attribute": {
-            "create": [Function],
-            "meta": {
-              "docs": {
-                "category": "Best Practices",
-                "description": "prefer toHaveAttribute over checking  getAttribute/hasAttribute ",
-                "recommended": true,
-                "url": "prefer-to-have-attribute",
-              },
-              "fixable": "code",
-            },
-          },
-          "prefer-to-have-class": {
-            "create": [Function],
-            "meta": {
-              "docs": {
-                "category": "Best Practices",
-                "description": "prefer toHaveClass over checking element className",
-                "recommended": true,
-                "url": "prefer-to-have-class",
-              },
-              "fixable": "code",
-              "messages": {
-                "use-to-have-class": "Prefer .toHaveClass() over checking element className",
-              },
-            },
-          },
-          "prefer-to-have-style": {
-            "create": [Function],
-            "meta": {
-              "docs": {
-                "category": "Best Practices",
-                "description": "prefer toHaveStyle over checking element style",
-                "recommended": true,
-                "url": "prefer-to-have-style",
-              },
-              "fixable": "code",
-            },
-          },
-          "prefer-to-have-text-content": {
-            "create": [Function],
-            "meta": {
-              "docs": {
-                "category": "Best Practices",
-                "description": "Prefer toHaveTextContent over checking element.textContent",
-                "recommended": true,
-                "url": "prefer-to-have-text-content",
-              },
-              "fixable": "code",
-            },
-          },
-          "prefer-to-have-value": {
-            "create": [Function],
-            "meta": {
-              "docs": {
-                "category": "Best Practices",
-                "description": "prefer toHaveValue over checking element.value",
-                "recommended": true,
-                "url": "prefer-to-have-value",
-              },
-              "fixable": "code",
-              "messages": {
-                "use-to-have-value": "Prefer .toHaveValue() over other attribute checks",
-              },
-            },
-          },
-        },
-      },
-    },
-    "rules": {
-      "jest-dom/prefer-checked": "error",
-      "jest-dom/prefer-empty": "error",
-      "jest-dom/prefer-enabled-disabled": "error",
-      "jest-dom/prefer-focus": "error",
-      "jest-dom/prefer-in-document": "error",
-      "jest-dom/prefer-required": "error",
-      "jest-dom/prefer-to-have-attribute": "error",
-      "jest-dom/prefer-to-have-class": "error",
-      "jest-dom/prefer-to-have-style": "error",
-      "jest-dom/prefer-to-have-text-content": "error",
-      "jest-dom/prefer-to-have-value": "error",
     },
   },
   {
@@ -57148,13 +57415,23 @@ If your function does not access \`this\`, you can annotate it with \`this: void
   },
   {
     "files": [
+      "**/e2e/**/*.spec.?([cm])[jt]s?(x)",
+      "**/e2e/**/*.test.?([cm])[jt]s?(x)",
+    ],
+    "name": "jimmy.codes/vitest/disabled",
+    "rules": {
+      "jest/require-hook": "off",
+    },
+  },
+  {
+    "files": [
       "**/__tests__/**/*.?([cm])[jt]s?(x)",
       "**/*.spec.?([cm])[jt]s?(x)",
       "**/*.test.?([cm])[jt]s?(x)",
       "**/*.bench.?([cm])[jt]s?(x)",
       "**/*.benchmark.?([cm])[jt]s?(x)",
     ],
-    "name": "jimmy.codes/vitest/jest-dom",
+    "name": "jimmy.codes/testing-library",
     "plugins": {
       "jest-dom": {
         "configs": {
@@ -57178,7 +57455,160 @@ If your function does not access \`this\`, you can annotate it with \`this: void
           },
           "flat/all": {
             "plugins": {
-              "jest-dom": [Circular],
+              "jest-dom": {
+                "configs": [Circular],
+                "meta": {
+                  "name": "eslint-plugin-jest-dom",
+                  "version": "5.2.0",
+                },
+                "rules": {
+                  "prefer-checked": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toBeChecked over checking attributes",
+                        "recommended": true,
+                        "url": "prefer-checked",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-empty": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "Prefer toBeEmpty over checking innerHTML",
+                        "recommended": true,
+                        "url": "prefer-empty",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-enabled-disabled": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toBeDisabled or toBeEnabled over checking attributes",
+                        "recommended": true,
+                        "url": "prefer-enabled-disabled",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-focus": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toHaveFocus over checking document.activeElement",
+                        "recommended": true,
+                        "url": "prefer-focus",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-in-document": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "Prefer .toBeInTheDocument() for asserting the existence of a DOM node",
+                        "recommended": true,
+                        "url": "prefer-in-document",
+                      },
+                      "fixable": "code",
+                      "hasSuggestions": true,
+                      "messages": {
+                        "invalid-combination-length-1": "Invalid combination of {{ query }} and .toHaveLength(1). Did you mean to use {{ allQuery }}?",
+                        "replace-query-with-all": "Replace {{ query }} with {{ allQuery }}",
+                        "use-document": "Prefer .toBeInTheDocument() for asserting DOM node existence",
+                      },
+                      "type": "suggestion",
+                    },
+                  },
+                  "prefer-required": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toBeRequired over checking properties",
+                        "recommended": true,
+                        "url": "prefer-required",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-to-have-attribute": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toHaveAttribute over checking  getAttribute/hasAttribute ",
+                        "recommended": true,
+                        "url": "prefer-to-have-attribute",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-to-have-class": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toHaveClass over checking element className",
+                        "recommended": true,
+                        "url": "prefer-to-have-class",
+                      },
+                      "fixable": "code",
+                      "messages": {
+                        "use-to-have-class": "Prefer .toHaveClass() over checking element className",
+                      },
+                    },
+                  },
+                  "prefer-to-have-style": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toHaveStyle over checking element style",
+                        "recommended": true,
+                        "url": "prefer-to-have-style",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-to-have-text-content": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "Prefer toHaveTextContent over checking element.textContent",
+                        "recommended": true,
+                        "url": "prefer-to-have-text-content",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-to-have-value": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toHaveValue over checking element.value",
+                        "recommended": true,
+                        "url": "prefer-to-have-value",
+                      },
+                      "fixable": "code",
+                      "messages": {
+                        "use-to-have-value": "Prefer .toHaveValue() over other attribute checks",
+                      },
+                    },
+                  },
+                },
+              },
             },
             "rules": {
               "jest-dom/prefer-checked": "error",
@@ -57195,7 +57625,162 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             },
           },
           "flat/recommended": {
-            "plugins": [Circular],
+            "plugins": {
+              "jest-dom": {
+                "configs": [Circular],
+                "meta": {
+                  "name": "eslint-plugin-jest-dom",
+                  "version": "5.2.0",
+                },
+                "rules": {
+                  "prefer-checked": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toBeChecked over checking attributes",
+                        "recommended": true,
+                        "url": "prefer-checked",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-empty": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "Prefer toBeEmpty over checking innerHTML",
+                        "recommended": true,
+                        "url": "prefer-empty",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-enabled-disabled": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toBeDisabled or toBeEnabled over checking attributes",
+                        "recommended": true,
+                        "url": "prefer-enabled-disabled",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-focus": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toHaveFocus over checking document.activeElement",
+                        "recommended": true,
+                        "url": "prefer-focus",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-in-document": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "Prefer .toBeInTheDocument() for asserting the existence of a DOM node",
+                        "recommended": true,
+                        "url": "prefer-in-document",
+                      },
+                      "fixable": "code",
+                      "hasSuggestions": true,
+                      "messages": {
+                        "invalid-combination-length-1": "Invalid combination of {{ query }} and .toHaveLength(1). Did you mean to use {{ allQuery }}?",
+                        "replace-query-with-all": "Replace {{ query }} with {{ allQuery }}",
+                        "use-document": "Prefer .toBeInTheDocument() for asserting DOM node existence",
+                      },
+                      "type": "suggestion",
+                    },
+                  },
+                  "prefer-required": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toBeRequired over checking properties",
+                        "recommended": true,
+                        "url": "prefer-required",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-to-have-attribute": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toHaveAttribute over checking  getAttribute/hasAttribute ",
+                        "recommended": true,
+                        "url": "prefer-to-have-attribute",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-to-have-class": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toHaveClass over checking element className",
+                        "recommended": true,
+                        "url": "prefer-to-have-class",
+                      },
+                      "fixable": "code",
+                      "messages": {
+                        "use-to-have-class": "Prefer .toHaveClass() over checking element className",
+                      },
+                    },
+                  },
+                  "prefer-to-have-style": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toHaveStyle over checking element style",
+                        "recommended": true,
+                        "url": "prefer-to-have-style",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-to-have-text-content": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "Prefer toHaveTextContent over checking element.textContent",
+                        "recommended": true,
+                        "url": "prefer-to-have-text-content",
+                      },
+                      "fixable": "code",
+                    },
+                  },
+                  "prefer-to-have-value": {
+                    "create": [Function],
+                    "meta": {
+                      "docs": {
+                        "category": "Best Practices",
+                        "description": "prefer toHaveValue over checking element.value",
+                        "recommended": true,
+                        "url": "prefer-to-have-value",
+                      },
+                      "fixable": "code",
+                      "messages": {
+                        "use-to-have-value": "Prefer .toHaveValue() over other attribute checks",
+                      },
+                    },
+                  },
+                },
+              },
+            },
             "rules": {
               "jest-dom/prefer-checked": "error",
               "jest-dom/prefer-empty": "error",
@@ -57229,9 +57814,232 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             },
           },
         },
-        "meta": {
-          "name": "eslint-plugin-jest-dom",
-          "version": "5.2.0",
+        "default": {
+          "configs": {
+            "all": {
+              "plugins": [
+                "jest-dom",
+              ],
+              "rules": {
+                "jest-dom/prefer-checked": "error",
+                "jest-dom/prefer-empty": "error",
+                "jest-dom/prefer-enabled-disabled": "error",
+                "jest-dom/prefer-focus": "error",
+                "jest-dom/prefer-in-document": "error",
+                "jest-dom/prefer-required": "error",
+                "jest-dom/prefer-to-have-attribute": "error",
+                "jest-dom/prefer-to-have-class": "error",
+                "jest-dom/prefer-to-have-style": "error",
+                "jest-dom/prefer-to-have-text-content": "error",
+                "jest-dom/prefer-to-have-value": "error",
+              },
+            },
+            "flat/all": {
+              "plugins": {
+                "jest-dom": [Circular],
+              },
+              "rules": {
+                "jest-dom/prefer-checked": "error",
+                "jest-dom/prefer-empty": "error",
+                "jest-dom/prefer-enabled-disabled": "error",
+                "jest-dom/prefer-focus": "error",
+                "jest-dom/prefer-in-document": "error",
+                "jest-dom/prefer-required": "error",
+                "jest-dom/prefer-to-have-attribute": "error",
+                "jest-dom/prefer-to-have-class": "error",
+                "jest-dom/prefer-to-have-style": "error",
+                "jest-dom/prefer-to-have-text-content": "error",
+                "jest-dom/prefer-to-have-value": "error",
+              },
+            },
+            "flat/recommended": {
+              "plugins": {
+                "jest-dom": [Circular],
+              },
+              "rules": {
+                "jest-dom/prefer-checked": "error",
+                "jest-dom/prefer-empty": "error",
+                "jest-dom/prefer-enabled-disabled": "error",
+                "jest-dom/prefer-focus": "error",
+                "jest-dom/prefer-in-document": "error",
+                "jest-dom/prefer-required": "error",
+                "jest-dom/prefer-to-have-attribute": "error",
+                "jest-dom/prefer-to-have-class": "error",
+                "jest-dom/prefer-to-have-style": "error",
+                "jest-dom/prefer-to-have-text-content": "error",
+                "jest-dom/prefer-to-have-value": "error",
+              },
+            },
+            "recommended": {
+              "plugins": [
+                "jest-dom",
+              ],
+              "rules": {
+                "jest-dom/prefer-checked": "error",
+                "jest-dom/prefer-empty": "error",
+                "jest-dom/prefer-enabled-disabled": "error",
+                "jest-dom/prefer-focus": "error",
+                "jest-dom/prefer-in-document": "error",
+                "jest-dom/prefer-required": "error",
+                "jest-dom/prefer-to-have-attribute": "error",
+                "jest-dom/prefer-to-have-class": "error",
+                "jest-dom/prefer-to-have-style": "error",
+                "jest-dom/prefer-to-have-text-content": "error",
+                "jest-dom/prefer-to-have-value": "error",
+              },
+            },
+          },
+          "meta": {
+            "name": "eslint-plugin-jest-dom",
+            "version": "5.2.0",
+          },
+          "rules": {
+            "prefer-checked": {
+              "create": [Function],
+              "meta": {
+                "docs": {
+                  "category": "Best Practices",
+                  "description": "prefer toBeChecked over checking attributes",
+                  "recommended": true,
+                  "url": "prefer-checked",
+                },
+                "fixable": "code",
+              },
+            },
+            "prefer-empty": {
+              "create": [Function],
+              "meta": {
+                "docs": {
+                  "category": "Best Practices",
+                  "description": "Prefer toBeEmpty over checking innerHTML",
+                  "recommended": true,
+                  "url": "prefer-empty",
+                },
+                "fixable": "code",
+              },
+            },
+            "prefer-enabled-disabled": {
+              "create": [Function],
+              "meta": {
+                "docs": {
+                  "category": "Best Practices",
+                  "description": "prefer toBeDisabled or toBeEnabled over checking attributes",
+                  "recommended": true,
+                  "url": "prefer-enabled-disabled",
+                },
+                "fixable": "code",
+              },
+            },
+            "prefer-focus": {
+              "create": [Function],
+              "meta": {
+                "docs": {
+                  "category": "Best Practices",
+                  "description": "prefer toHaveFocus over checking document.activeElement",
+                  "recommended": true,
+                  "url": "prefer-focus",
+                },
+                "fixable": "code",
+              },
+            },
+            "prefer-in-document": {
+              "create": [Function],
+              "meta": {
+                "docs": {
+                  "category": "Best Practices",
+                  "description": "Prefer .toBeInTheDocument() for asserting the existence of a DOM node",
+                  "recommended": true,
+                  "url": "prefer-in-document",
+                },
+                "fixable": "code",
+                "hasSuggestions": true,
+                "messages": {
+                  "invalid-combination-length-1": "Invalid combination of {{ query }} and .toHaveLength(1). Did you mean to use {{ allQuery }}?",
+                  "replace-query-with-all": "Replace {{ query }} with {{ allQuery }}",
+                  "use-document": "Prefer .toBeInTheDocument() for asserting DOM node existence",
+                },
+                "type": "suggestion",
+              },
+            },
+            "prefer-required": {
+              "create": [Function],
+              "meta": {
+                "docs": {
+                  "category": "Best Practices",
+                  "description": "prefer toBeRequired over checking properties",
+                  "recommended": true,
+                  "url": "prefer-required",
+                },
+                "fixable": "code",
+              },
+            },
+            "prefer-to-have-attribute": {
+              "create": [Function],
+              "meta": {
+                "docs": {
+                  "category": "Best Practices",
+                  "description": "prefer toHaveAttribute over checking  getAttribute/hasAttribute ",
+                  "recommended": true,
+                  "url": "prefer-to-have-attribute",
+                },
+                "fixable": "code",
+              },
+            },
+            "prefer-to-have-class": {
+              "create": [Function],
+              "meta": {
+                "docs": {
+                  "category": "Best Practices",
+                  "description": "prefer toHaveClass over checking element className",
+                  "recommended": true,
+                  "url": "prefer-to-have-class",
+                },
+                "fixable": "code",
+                "messages": {
+                  "use-to-have-class": "Prefer .toHaveClass() over checking element className",
+                },
+              },
+            },
+            "prefer-to-have-style": {
+              "create": [Function],
+              "meta": {
+                "docs": {
+                  "category": "Best Practices",
+                  "description": "prefer toHaveStyle over checking element style",
+                  "recommended": true,
+                  "url": "prefer-to-have-style",
+                },
+                "fixable": "code",
+              },
+            },
+            "prefer-to-have-text-content": {
+              "create": [Function],
+              "meta": {
+                "docs": {
+                  "category": "Best Practices",
+                  "description": "Prefer toHaveTextContent over checking element.textContent",
+                  "recommended": true,
+                  "url": "prefer-to-have-text-content",
+                },
+                "fixable": "code",
+              },
+            },
+            "prefer-to-have-value": {
+              "create": [Function],
+              "meta": {
+                "docs": {
+                  "category": "Best Practices",
+                  "description": "prefer toHaveValue over checking element.value",
+                  "recommended": true,
+                  "url": "prefer-to-have-value",
+                },
+                "fixable": "code",
+                "messages": {
+                  "use-to-have-value": "Prefer .toHaveValue() over other attribute checks",
+                },
+              },
+            },
+          },
         },
         "rules": {
           "prefer-checked": {
@@ -57381,41 +58189,6 @@ If your function does not access \`this\`, you can annotate it with \`this: void
           },
         },
       },
-    },
-    "rules": {
-      "jest-dom/prefer-checked": "error",
-      "jest-dom/prefer-empty": "error",
-      "jest-dom/prefer-enabled-disabled": "error",
-      "jest-dom/prefer-focus": "error",
-      "jest-dom/prefer-in-document": "error",
-      "jest-dom/prefer-required": "error",
-      "jest-dom/prefer-to-have-attribute": "error",
-      "jest-dom/prefer-to-have-class": "error",
-      "jest-dom/prefer-to-have-style": "error",
-      "jest-dom/prefer-to-have-text-content": "error",
-      "jest-dom/prefer-to-have-value": "error",
-    },
-  },
-  {
-    "files": [
-      "**/e2e/**/*.spec.?([cm])[jt]s?(x)",
-      "**/e2e/**/*.test.?([cm])[jt]s?(x)",
-    ],
-    "name": "jimmy.codes/vitest/disabled",
-    "rules": {
-      "jest/require-hook": "off",
-    },
-  },
-  {
-    "files": [
-      "**/__tests__/**/*.?([cm])[jt]s?(x)",
-      "**/*.spec.?([cm])[jt]s?(x)",
-      "**/*.test.?([cm])[jt]s?(x)",
-      "**/*.bench.?([cm])[jt]s?(x)",
-      "**/*.benchmark.?([cm])[jt]s?(x)",
-    ],
-    "name": "jimmy.codes/testing-library",
-    "plugins": {
       "testing-library": {
         "configs": {
           "angular": {
@@ -58589,6 +59362,17 @@ If your function does not access \`this\`, you can annotate it with \`this: void
       },
     },
     "rules": {
+      "jest-dom/prefer-checked": "error",
+      "jest-dom/prefer-empty": "error",
+      "jest-dom/prefer-enabled-disabled": "error",
+      "jest-dom/prefer-focus": "error",
+      "jest-dom/prefer-in-document": "error",
+      "jest-dom/prefer-required": "error",
+      "jest-dom/prefer-to-have-attribute": "error",
+      "jest-dom/prefer-to-have-class": "error",
+      "jest-dom/prefer-to-have-style": "error",
+      "jest-dom/prefer-to-have-text-content": "error",
+      "jest-dom/prefer-to-have-value": "error",
       "testing-library/await-async-events": [
         "error",
         {
@@ -62427,256 +63211,6 @@ If your function does not access \`this\`, you can annotate it with \`this: void
       "jest/valid-expect": "error",
       "jest/valid-expect-in-promise": "error",
       "jest/valid-title": "error",
-    },
-  },
-  {
-    "files": [
-      "**/__tests__/**/*.?([cm])[jt]s?(x)",
-      "**/*.spec.?([cm])[jt]s?(x)",
-      "**/*.test.?([cm])[jt]s?(x)",
-      "**/*.bench.?([cm])[jt]s?(x)",
-      "**/*.benchmark.?([cm])[jt]s?(x)",
-    ],
-    "name": "jimmy.codes/vitest/jest-dom",
-    "plugins": {
-      "jest-dom": {
-        "configs": {
-          "all": {
-            "plugins": [
-              "jest-dom",
-            ],
-            "rules": {
-              "jest-dom/prefer-checked": "error",
-              "jest-dom/prefer-empty": "error",
-              "jest-dom/prefer-enabled-disabled": "error",
-              "jest-dom/prefer-focus": "error",
-              "jest-dom/prefer-in-document": "error",
-              "jest-dom/prefer-required": "error",
-              "jest-dom/prefer-to-have-attribute": "error",
-              "jest-dom/prefer-to-have-class": "error",
-              "jest-dom/prefer-to-have-style": "error",
-              "jest-dom/prefer-to-have-text-content": "error",
-              "jest-dom/prefer-to-have-value": "error",
-            },
-          },
-          "flat/all": {
-            "plugins": {
-              "jest-dom": [Circular],
-            },
-            "rules": {
-              "jest-dom/prefer-checked": "error",
-              "jest-dom/prefer-empty": "error",
-              "jest-dom/prefer-enabled-disabled": "error",
-              "jest-dom/prefer-focus": "error",
-              "jest-dom/prefer-in-document": "error",
-              "jest-dom/prefer-required": "error",
-              "jest-dom/prefer-to-have-attribute": "error",
-              "jest-dom/prefer-to-have-class": "error",
-              "jest-dom/prefer-to-have-style": "error",
-              "jest-dom/prefer-to-have-text-content": "error",
-              "jest-dom/prefer-to-have-value": "error",
-            },
-          },
-          "flat/recommended": {
-            "plugins": [Circular],
-            "rules": {
-              "jest-dom/prefer-checked": "error",
-              "jest-dom/prefer-empty": "error",
-              "jest-dom/prefer-enabled-disabled": "error",
-              "jest-dom/prefer-focus": "error",
-              "jest-dom/prefer-in-document": "error",
-              "jest-dom/prefer-required": "error",
-              "jest-dom/prefer-to-have-attribute": "error",
-              "jest-dom/prefer-to-have-class": "error",
-              "jest-dom/prefer-to-have-style": "error",
-              "jest-dom/prefer-to-have-text-content": "error",
-              "jest-dom/prefer-to-have-value": "error",
-            },
-          },
-          "recommended": {
-            "plugins": [
-              "jest-dom",
-            ],
-            "rules": {
-              "jest-dom/prefer-checked": "error",
-              "jest-dom/prefer-empty": "error",
-              "jest-dom/prefer-enabled-disabled": "error",
-              "jest-dom/prefer-focus": "error",
-              "jest-dom/prefer-in-document": "error",
-              "jest-dom/prefer-required": "error",
-              "jest-dom/prefer-to-have-attribute": "error",
-              "jest-dom/prefer-to-have-class": "error",
-              "jest-dom/prefer-to-have-style": "error",
-              "jest-dom/prefer-to-have-text-content": "error",
-              "jest-dom/prefer-to-have-value": "error",
-            },
-          },
-        },
-        "meta": {
-          "name": "eslint-plugin-jest-dom",
-          "version": "5.2.0",
-        },
-        "rules": {
-          "prefer-checked": {
-            "create": [Function],
-            "meta": {
-              "docs": {
-                "category": "Best Practices",
-                "description": "prefer toBeChecked over checking attributes",
-                "recommended": true,
-                "url": "prefer-checked",
-              },
-              "fixable": "code",
-            },
-          },
-          "prefer-empty": {
-            "create": [Function],
-            "meta": {
-              "docs": {
-                "category": "Best Practices",
-                "description": "Prefer toBeEmpty over checking innerHTML",
-                "recommended": true,
-                "url": "prefer-empty",
-              },
-              "fixable": "code",
-            },
-          },
-          "prefer-enabled-disabled": {
-            "create": [Function],
-            "meta": {
-              "docs": {
-                "category": "Best Practices",
-                "description": "prefer toBeDisabled or toBeEnabled over checking attributes",
-                "recommended": true,
-                "url": "prefer-enabled-disabled",
-              },
-              "fixable": "code",
-            },
-          },
-          "prefer-focus": {
-            "create": [Function],
-            "meta": {
-              "docs": {
-                "category": "Best Practices",
-                "description": "prefer toHaveFocus over checking document.activeElement",
-                "recommended": true,
-                "url": "prefer-focus",
-              },
-              "fixable": "code",
-            },
-          },
-          "prefer-in-document": {
-            "create": [Function],
-            "meta": {
-              "docs": {
-                "category": "Best Practices",
-                "description": "Prefer .toBeInTheDocument() for asserting the existence of a DOM node",
-                "recommended": true,
-                "url": "prefer-in-document",
-              },
-              "fixable": "code",
-              "hasSuggestions": true,
-              "messages": {
-                "invalid-combination-length-1": "Invalid combination of {{ query }} and .toHaveLength(1). Did you mean to use {{ allQuery }}?",
-                "replace-query-with-all": "Replace {{ query }} with {{ allQuery }}",
-                "use-document": "Prefer .toBeInTheDocument() for asserting DOM node existence",
-              },
-              "type": "suggestion",
-            },
-          },
-          "prefer-required": {
-            "create": [Function],
-            "meta": {
-              "docs": {
-                "category": "Best Practices",
-                "description": "prefer toBeRequired over checking properties",
-                "recommended": true,
-                "url": "prefer-required",
-              },
-              "fixable": "code",
-            },
-          },
-          "prefer-to-have-attribute": {
-            "create": [Function],
-            "meta": {
-              "docs": {
-                "category": "Best Practices",
-                "description": "prefer toHaveAttribute over checking  getAttribute/hasAttribute ",
-                "recommended": true,
-                "url": "prefer-to-have-attribute",
-              },
-              "fixable": "code",
-            },
-          },
-          "prefer-to-have-class": {
-            "create": [Function],
-            "meta": {
-              "docs": {
-                "category": "Best Practices",
-                "description": "prefer toHaveClass over checking element className",
-                "recommended": true,
-                "url": "prefer-to-have-class",
-              },
-              "fixable": "code",
-              "messages": {
-                "use-to-have-class": "Prefer .toHaveClass() over checking element className",
-              },
-            },
-          },
-          "prefer-to-have-style": {
-            "create": [Function],
-            "meta": {
-              "docs": {
-                "category": "Best Practices",
-                "description": "prefer toHaveStyle over checking element style",
-                "recommended": true,
-                "url": "prefer-to-have-style",
-              },
-              "fixable": "code",
-            },
-          },
-          "prefer-to-have-text-content": {
-            "create": [Function],
-            "meta": {
-              "docs": {
-                "category": "Best Practices",
-                "description": "Prefer toHaveTextContent over checking element.textContent",
-                "recommended": true,
-                "url": "prefer-to-have-text-content",
-              },
-              "fixable": "code",
-            },
-          },
-          "prefer-to-have-value": {
-            "create": [Function],
-            "meta": {
-              "docs": {
-                "category": "Best Practices",
-                "description": "prefer toHaveValue over checking element.value",
-                "recommended": true,
-                "url": "prefer-to-have-value",
-              },
-              "fixable": "code",
-              "messages": {
-                "use-to-have-value": "Prefer .toHaveValue() over other attribute checks",
-              },
-            },
-          },
-        },
-      },
-    },
-    "rules": {
-      "jest-dom/prefer-checked": "error",
-      "jest-dom/prefer-empty": "error",
-      "jest-dom/prefer-enabled-disabled": "error",
-      "jest-dom/prefer-focus": "error",
-      "jest-dom/prefer-in-document": "error",
-      "jest-dom/prefer-required": "error",
-      "jest-dom/prefer-to-have-attribute": "error",
-      "jest-dom/prefer-to-have-class": "error",
-      "jest-dom/prefer-to-have-style": "error",
-      "jest-dom/prefer-to-have-text-content": "error",
-      "jest-dom/prefer-to-have-value": "error",
     },
   },
   {

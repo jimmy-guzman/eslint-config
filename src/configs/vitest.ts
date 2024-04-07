@@ -1,5 +1,4 @@
 import jest from "eslint-plugin-jest";
-import * as jestDom from "eslint-plugin-jest-dom";
 
 import { GLOB_E2E, GLOB_TESTS } from "../constants";
 import { jestRules } from "../rules/jest";
@@ -23,11 +22,6 @@ const vitestConfig = ({
         ...jestRules,
         "jest/no-deprecated-functions": "off",
       },
-    },
-    {
-      name: "jimmy.codes/vitest/jest-dom",
-      files: GLOB_TESTS,
-      ...jestDom.configs["flat/recommended"],
     },
     {
       name: "jimmy.codes/vitest/disabled",
