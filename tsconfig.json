@@ -15,8 +15,6 @@
     "module": "ESNext",
     "noEmit": true,
 
-    "lib": ["ESNext"],
-
     "types": ["vitest/globals"]
   }
 }

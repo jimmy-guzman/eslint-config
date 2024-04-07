@@ -8,8 +8,79 @@
 
 > 🔍 my personal [eslint](https://eslint.org/) config
 
+_This is an evolution of [eslint-config-jimmy-guzman](https://github.com/jimmy-guzman/eslint-config-jimmy-guzman)_
+
 ## 🛠️ Usage
+
+### 🔨 Getting Started
+
+First install the package, by running the following:
 
 ```
 pnpm add -D @jimmy.codes/eslint-config
+```
+
+Then if you want a simple configuration:
+
+```js
+// eslint.config.mjs
+import jimmyDotCodes from "@jimmy.codes/eslint-config";
+
+export default jimmyDotCodes();
+```
+
+And if you're using [VS Code](https://code.visualstudio.com), make sure to enable [flat configuration](https://eslint.org/docs/v8.x/use/configure/configuration-files-new):
+
+```jsonc
+// .vscode/settings.json
+{
+  "eslint.experimental.useFlatConfig": true,
+}
+```
+
+### 🔧 Configuration
+
+This package contains rules that can be enabled or disabled as follows:
+
+```js
+// eslint.config.mjs
+import jimmyDotCodes from "@jimmy.codes/eslint-config";
+
+export default jimmyDotCodes({
+  /**
+   * Wether or not TypeScript rules are enabled?
+   * @default false
+   */
+  typescript: false,
+  /**
+   * Are React rules are enabled?
+   * @default false
+   */
+  react: false,
+  /**
+   * Are stylistic rules are enabled?
+   * @default true
+   */
+  stylistic: true,
+  /**
+   * Are imports rules are enabled?
+   * @default true
+   */
+  imports: true,
+  /**
+   * Are Jest rules are enabled?
+   * @default false
+   */
+  jest: false,
+  /**
+   * Are Vitest rules are enabled?
+   * @default false
+   */
+  vitest: false,
+  /**
+   * Are Testing Library rules are enabled?
+   * @default false
+   */
+  testingLibrary: false,
+});
 ```

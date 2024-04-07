@@ -4,7 +4,7 @@ export default defineConfig({
   test: {
     globals: true,
     coverage: {
-      reporter: ["json", "text-summary"],
+      reporter: ["html", "text-summary"],
     },
   },
 });
