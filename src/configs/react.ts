@@ -10,7 +10,7 @@ import { reactRules } from "../rules/react";
 const reactConfig = () => {
   return [
     {
-      name: "jimmy.codes/react/setup",
+      name: "jimmy.codes/react",
       files: [GLOB_JSX, GLOB_TSX],
       plugins: {
         react,
@@ -36,10 +36,6 @@ const reactConfig = () => {
           version: "detect",
         },
       },
-    },
-    {
-      name: "jimmy.codes/react/rules",
-      files: [GLOB_JSX, GLOB_TSX],
       rules: reactRules,
     },
   ];

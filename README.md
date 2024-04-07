@@ -102,3 +102,7 @@ export default jimmyDotCodes({
   ],
 });
 ```
+
+## ⭐️ Credits
+
+- [antfu/eslint-config](https://github.com/antfu/eslint-config) by [@antfu](https://antfu.me/)

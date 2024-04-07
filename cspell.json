@@ -1,6 +1,7 @@
 {
   "version": "0.2",
   "words": [
+    "antfu",
     "cicd",
     "commitlint",
     "commitlintrc",
@@ -19,6 +20,7 @@
     "nvmrc",
     "pkgroll",
     "pnpm",
+    "setstate",
     "shellcheck",
     "streetsidesoftware",
     "textnodes",
