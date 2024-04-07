@@ -2,16 +2,15 @@ import jest from "eslint-plugin-jest";
 import * as jestDom from "eslint-plugin-jest-dom";
 
 import { GLOB_TESTS } from "../constants";
+import { jestRules } from "../rules/jest";
 import testingLibraryConfig from "./testing-library";
 
 interface VitestConfigOptions {
-  stylistic?: boolean;
   testingLibrary?: boolean;
   react?: boolean;
 }
 
 const vitestConfig = ({
-  stylistic = true,
   testingLibrary = false,
   react = false,
 }: VitestConfigOptions = {}) => {
@@ -21,7 +20,7 @@ const vitestConfig = ({
       files: GLOB_TESTS,
       ...jest.configs["flat/recommended"],
       rules: {
-        ...jest.configs["flat/recommended"].rules,
+        ...jestRules,
         "jest/no-deprecated-functions": "off",
       },
     },
@@ -30,15 +29,6 @@ const vitestConfig = ({
       files: GLOB_TESTS,
       ...jestDom.configs["flat/recommended"],
     },
-    ...(stylistic
-      ? [
-          {
-            name: "jimmy.codes/vitest/stylistic",
-            files: GLOB_TESTS,
-            ...jest.configs["flat/style"],
-          },
-        ]
-      : []),
     ...(testingLibrary && react ? testingLibraryConfig() : []),
   ];
 };

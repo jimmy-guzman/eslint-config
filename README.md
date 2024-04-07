@@ -58,11 +58,6 @@ export default jimmyDotCodes({
    */
   react: false,
   /**
-   * Are stylistic rules are enabled?
-   * @default true
-   */
-  stylistic: true,
-  /**
    * Are imports rules are enabled?
    * @default true
    */
@@ -82,5 +77,28 @@ export default jimmyDotCodes({
    * @default false
    */
   testingLibrary: false,
+});
+```
+
+Or if you want to extend or override the configuration:
+
+```js
+// eslint.config.mjs
+import jimmyDotCodes from "@jimmy.codes/eslint-config";
+
+export default jimmyDotCodes({
+  overrides: [
+    {
+      rules: {
+        "prefer-const": "error",
+      },
+    },
+    {
+      files: ["/**/*.js"],
+      rules: {
+        semi: "error",
+      },
+    },
+  ],
 });
 ```
