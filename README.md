@@ -80,6 +80,23 @@ export default jimmyDotCodes({
 });
 ```
 
+#### TypeScript
+
+You can also change the project location which can be helpful for monorepos:
+
+```js
+// eslint.config.mjs
+import jimmyDotCodes from "@jimmy.codes/eslint-config";
+
+export default jimmyDotCodes({
+  typescript: {
+    project: ["./tsconfig.eslint.json", "./packages/*/tsconfig.json"],
+  },
+});
+```
+
+#### Overrides
+
 Or if you want to extend or override the configuration:
 
 ```js
