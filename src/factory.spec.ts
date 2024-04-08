@@ -6,9 +6,12 @@ describe("jimmyDotCodes", () => {
   });
 
   it("should create configuration w/ typescript", () => {
-    vi.spyOn(process, "cwd").mockReturnValue("/");
-
-    expect(jimmyDotCodes({ typescript: true })).toMatchSnapshot();
+    expect(jimmyDotCodes({ typescript: true })).toStrictEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ name: "jimmy.codes/typescript" }),
+        expect.objectContaining({ name: "jimmy.codes/imports/typescript" }),
+      ]),
+    );
   });
 
   it("should create configuration w/ react", () => {

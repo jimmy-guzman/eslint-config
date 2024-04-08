@@ -34,8 +34,8 @@
     "build": "pkgroll --minify",
     "coverage": "vitest run --coverage",
     "dev": "pkgroll --watch",
-    "docs:view": "npx @eslint/config-inspector --open=false",
     "docs:build": "npx @eslint/config-inspector build",
+    "docs:view": "npx @eslint/config-inspector --open=false",
     "format": "prettier --check --cache .",
     "format:fix": "prettier --write --cache .",
     "lint": "eslint .",
@@ -48,7 +48,7 @@
   "prettier": "@jimmy.codes/prettier-config",
   "dependencies": {
     "@eslint/js": "^8.57.0",
-    "@typescript-eslint/utils": "^7.5.0",
+    "@typescript-eslint/utils": "^7.6.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import-x": "0.5.0",
@@ -62,7 +62,7 @@
     "eslint-plugin-simple-import-sort": "^12.0.0",
     "eslint-plugin-testing-library": "^6.2.0",
     "globals": "^15.0.0",
-    "typescript-eslint": "^7.5.0"
+    "typescript-eslint": "^7.6.0"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "19.1.0",
@@ -99,6 +99,13 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "eslint-plugin-import"
+      ]
+    }
   },
   "gitzy": {
     "useCommitlintConfig": true

@@ -5,17 +5,16 @@ import { type TypescriptOptions } from "../types";
 
 const typescriptConfig = (options: TypescriptOptions) => {
   return config(
+    ...configs.strictTypeChecked,
     {
-      //@ts-expect-error name should be allowed or provided
       name: "jimmy.codes/typescript",
-      extends: [
-        ...configs.strictTypeChecked.map((config) => {
-          return { name: "jimmy.codes/typescript", ...config };
-        }),
-        ...configs.stylisticTypeChecked.map((config) => {
-          return { name: "jimmy.codes/typescript", ...config };
-        }),
-      ],
+      extends: [...configs.strictTypeChecked, ...configs.stylisticTypeChecked],
+      languageOptions: {
+        parserOptions: {
+          project: options.project,
+          tsconfigRootDir: process.cwd(),
+        },
+      },
       rules: {
         "@typescript-eslint/consistent-type-imports": [
           "error",
@@ -32,16 +31,6 @@ const typescriptConfig = (options: TypescriptOptions) => {
       },
     },
     {
-      name: "jimmy.codes/typescript",
-      languageOptions: {
-        parserOptions: {
-          project: options.project,
-          tsconfigRootDir: process.cwd(),
-        },
-      },
-    },
-    {
-      name: "jimmy.codes/typescript",
       files: [GLOB_JS, GLOB_JSX],
       ...configs.disableTypeChecked,
     },
