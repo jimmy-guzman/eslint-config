@@ -45,7 +45,6 @@ And if you're using [VS Code](https://code.visualstudio.com), make sure to enabl
 This package contains rules that can be enabled or disabled as follows:
 
 ```js
-// eslint.config.mjs
 import jimmyDotCodes from "@jimmy.codes/eslint-config";
 
 export default jimmyDotCodes({
@@ -72,7 +71,6 @@ export default jimmyDotCodes({
 You can also change the project location which can be helpful for monorepos:
 
 ```js
-// eslint.config.mjs
 import jimmyDotCodes from "@jimmy.codes/eslint-config";
 
 export default jimmyDotCodes({
@@ -84,10 +82,9 @@ export default jimmyDotCodes({
 
 #### Testing
 
-By default [vitest](https://vitest.dev) is used as the testing framework but you can override and add some utilities:
+By default [vitest](https://vitest.dev) is used as the testing framework but you can override and add additional rules for utilities:
 
 ```js
-// eslint.config.mjs
 import jimmyDotCodes from "@jimmy.codes/eslint-config";
 
 export default jimmyDotCodes({
@@ -98,12 +95,25 @@ export default jimmyDotCodes({
 });
 ```
 
+#### React
+
+You can add additional rules for utilities:
+
+```js
+import jimmyDotCodes from "@jimmy.codes/eslint-config";
+
+export default jimmyDotCodes({
+  react: {
+    utilities: ["@tanstack/query"],
+  },
+});
+```
+
 #### Overrides
 
 You can also extend or override the configuration:
 
 ```js
-// eslint.config.mjs
 import jimmyDotCodes from "@jimmy.codes/eslint-config";
 
 export default jimmyDotCodes({

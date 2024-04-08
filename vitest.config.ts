@@ -7,6 +7,7 @@ export default defineConfig({
     clearMocks: true,
     restoreMocks: true,
     coverage: {
+      thresholds: { 100: true },
       exclude: [...(configDefaults.coverage.exclude ?? []), "fixtures/**"],
     },
   },

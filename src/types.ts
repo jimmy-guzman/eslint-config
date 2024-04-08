@@ -10,6 +10,7 @@ export interface TypescriptOptions {
 
 type TestingFrameworks = "vitest" | "jest";
 type TestingUtilities = "testing-library";
+type ReactUtilities = "@tanstack/query";
 
 export interface TestingOptions {
   /**
@@ -22,6 +23,14 @@ export interface TestingOptions {
    * - [Testing Library](https://testing-library.com)
    */
   utilities?: TestingUtilities[];
+}
+
+export interface ReactOptions {
+  /**
+   * Enable additional rules for utilities such as:
+   * - [React Query](https://tanstack.com/query/latest/docs/framework/react/overview)
+   */
+  utilities?: ReactUtilities[];
 }
 
 export type FlatConfigItem = Omit<Linter.FlatConfig, "plugins"> & {
@@ -40,7 +49,7 @@ export interface Options {
    * Are React rules are enabled?
    * @default false
    */
-  react?: boolean;
+  react?: boolean | ReactOptions;
   /**
    * Are Jest rules are enabled?
    * @default false

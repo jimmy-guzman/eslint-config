@@ -15,7 +15,22 @@ describe("jimmyDotCodes", () => {
   });
 
   it("should create configuration w/ react", () => {
-    expect(jimmyDotCodes({ react: true })).toMatchSnapshot();
+    expect(jimmyDotCodes({ react: true })).toStrictEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ name: "jimmy.codes/react" }),
+      ]),
+    );
+  });
+
+  it("should create configuration w/ react & @tanstack/query", () => {
+    expect(
+      jimmyDotCodes({ react: { utilities: ["@tanstack/query"] } }),
+    ).toStrictEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ name: "jimmy.codes/react" }),
+        expect.objectContaining({ name: "jimmy.codes/react/query" }),
+      ]),
+    );
   });
 
   it("should create configuration w/ jest", () => {

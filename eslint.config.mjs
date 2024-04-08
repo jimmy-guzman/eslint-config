@@ -11,7 +11,9 @@ const jimmyDotCodes = jiti("./src").default;
 
 export default jimmyDotCodes({
   typescript: true,
-  react: true,
+  react: {
+    utilities: ["@tanstack/query"],
+  },
   testing: {
     utilities: ["testing-library"],
   },

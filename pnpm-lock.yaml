@@ -8,6 +8,9 @@ dependencies:
   '@eslint/js':
     specifier: ^8.57.0
     version: 8.57.0
+  '@tanstack/eslint-plugin-query':
+    specifier: ^5.28.11
+    version: 5.28.11(eslint@8.57.0)(typescript@5.4.4)
   '@typescript-eslint/utils':
     specifier: ^7.6.0
     version: 7.6.0(eslint@8.57.0)(typescript@5.4.4)
@@ -1235,6 +1238,18 @@ packages:
     resolution: {integrity: sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg==}
     engines: {node: '>=18'}
     dev: true
+
+  /@tanstack/eslint-plugin-query@5.28.11(eslint@8.57.0)(typescript@5.4.4):
+    resolution: {integrity: sha512-bODGLeG4WCGmHVKCh3bH1KLfq7xdi1jsRjTESV6ifCw1mZ0m2fBMxAjK42KjbhJwcvNdTlYHI+YY/aZWBk4Niw==}
+    peerDependencies:
+      eslint: ^8.0.0
+    dependencies:
+      '@typescript-eslint/utils': 6.21.0(eslint@8.57.0)(typescript@5.4.4)
+      eslint: 8.57.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+    dev: false
 
   /@types/conventional-commits-parser@5.0.0:
     resolution: {integrity: sha512-loB369iXNmAZglwWATL+WRe+CRMmmBPtpolYzIebFaX4YA3x+BEfLqhUAV9WanycKI3TG1IMr5bMJDajDKLlUQ==}

@@ -1,4 +1,8 @@
-import { getTestingOptions, getTypescriptOptions } from "./utils";
+import {
+  getReactOptions,
+  getTestingOptions,
+  getTypescriptOptions,
+} from "./utils";
 
 describe("getTypescriptOptions", () => {
   it("should return default options when a boolean is provided", () => {
@@ -32,6 +36,21 @@ describe("getTestingOptions", () => {
     ).toStrictEqual({
       framework: "jest",
       utilities: ["testing-library"],
+    });
+  });
+});
+
+describe("getReactOptions", () => {
+  it("should return default options when a boolean is provided", () => {
+    expect(getReactOptions(true)).toStrictEqual({ utilities: [] });
+  });
+  it("should return override options when an object is provided", () => {
+    expect(
+      getReactOptions({
+        utilities: ["@tanstack/query"],
+      }),
+    ).toStrictEqual({
+      utilities: ["@tanstack/query"],
     });
   });
 });

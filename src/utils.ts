@@ -1,4 +1,8 @@
-import { type TestingOptions, type TypescriptOptions } from "./types";
+import {
+  type ReactOptions,
+  type TestingOptions,
+  type TypescriptOptions,
+} from "./types";
 
 export const getTypescriptOptions = (options: boolean | TypescriptOptions) => {
   return typeof options === "object"
@@ -14,4 +18,8 @@ export const getTestingOptions = (options: boolean | TestingOptions) => {
     : {
         framework: "vitest" as const,
       };
+};
+
+export const getReactOptions = (options: boolean | ReactOptions) => {
+  return typeof options === "object" ? options : { utilities: [] };
 };
