@@ -24,6 +24,7 @@ Then if you want a simple configuration:
 
 ```js
 // eslint.config.mjs
+// @ts-check
 import jimmyDotCodes from "@jimmy.codes/eslint-config";
 
 export default jimmyDotCodes();
@@ -44,24 +45,25 @@ This package contains rules that can be enabled or disabled as follows:
 
 ```js
 // eslint.config.mjs
+// @ts-check
 import jimmyDotCodes from "@jimmy.codes/eslint-config";
 
 export default jimmyDotCodes({
   /**
-   * Wether or not TypeScript rules are enabled?
+   * Are TypeScript rules are enabled?
    * @default false
    */
-  typescript: false,
+  typescript: true,
   /**
    * Are React rules are enabled?
    * @default false
    */
-  react: false,
+  react: true,
   /**
    * Are testing rules are enabled?
    * @default false
    */
-  testing: false,
+  testing: true,
 });
 ```
 
@@ -71,6 +73,7 @@ You can also change the project location which can be helpful for monorepos:
 
 ```js
 // eslint.config.mjs
+// @ts-check
 import jimmyDotCodes from "@jimmy.codes/eslint-config";
 
 export default jimmyDotCodes({
@@ -86,6 +89,7 @@ By default [vitest](https://vitest.dev) is used as the testing framework but you
 
 ```js
 // eslint.config.mjs
+// @ts-check
 import jimmyDotCodes from "@jimmy.codes/eslint-config";
 
 export default jimmyDotCodes({
@@ -98,10 +102,11 @@ export default jimmyDotCodes({
 
 #### Overrides
 
-Or if you want to extend or override the configuration:
+You can also extend or override the configuration:
 
 ```js
 // eslint.config.mjs
+// @ts-check
 import jimmyDotCodes from "@jimmy.codes/eslint-config";
 
 export default jimmyDotCodes({
@@ -121,6 +126,7 @@ export default jimmyDotCodes({
 });
 ```
 
-## ⭐️ Credits
+## ❤️ Credits
 
-- [antfu/eslint-config](https://github.com/antfu/eslint-config) by [@antfu](https://antfu.me/)
+- [@antfu/eslint-config](https://github.com/antfu/eslint-config) by [Anthony Fu](https://antfu.me)
+- [@pvtnbr/eslint-config](https://github.com/privatenumber/eslint-config) by [Hiroki Osame](https://hirok.io/)

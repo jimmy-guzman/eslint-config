@@ -24,6 +24,12 @@ export interface TestingOptions {
   utilities?: TestingUtilities[];
 }
 
+export type FlatConfigItem = Omit<Linter.FlatConfig, "plugins"> & {
+  name?: string;
+  plugins?: Record<string, unknown>;
+  rules?: Linter.RuleEntry;
+};
+
 export interface Options {
   /**
    * Are TypeScript rules are enabled?
@@ -48,5 +54,5 @@ export interface Options {
    * Additional flat configs to either extend or overrides configurations
    * @default []
    */
-  overrides?: Linter.FlatConfig[];
+  overrides?: FlatConfigItem[];
 }
