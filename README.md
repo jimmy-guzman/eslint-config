@@ -12,6 +12,8 @@ _This is an evolution of [eslint-config-jimmy-guzman](https://github.com/jimmy-g
 
 ## 🛠️ Usage
 
+_For a better experience, make sure to use [@jimmy.codes/prettier-config](https://github.com/jimmy-guzman/prettier-config) as well_
+
 ### 🔨 Getting Started
 
 First install the package, by running the following:
