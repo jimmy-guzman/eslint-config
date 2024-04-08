@@ -36,11 +36,6 @@ export interface Options {
    */
   react?: boolean;
   /**
-   * Are imports rules are enabled?
-   * @default true
-   */
-  imports?: boolean;
-  /**
    * Are Jest rules are enabled?
    * @default false
    */

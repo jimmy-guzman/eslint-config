@@ -58,11 +58,6 @@ export default jimmyDotCodes({
    */
   react: false,
   /**
-   * Are imports rules are enabled?
-   * @default true
-   */
-  imports: true,
-  /**
    * Are testing rules are enabled?
    * @default false
    */

@@ -12,13 +12,12 @@ import { getTestingOptions, getTypescriptOptions } from "./utils";
 export const jimmyDotCodes = ({
   typescript = false,
   react = false,
-  imports = true,
   testing = false,
   overrides = [],
 }: Options = {}) => {
   return [
     { name: "jimmy.codes/base", rules: baseRules },
-    ...(imports ? importsConfig({ typescript }) : []),
+    ...importsConfig({ typescript }),
     ...(typescript ? typescriptConfig(getTypescriptOptions(typescript)) : []),
     ...(react ? reactConfig() : []),
     ...(testing ? testingConfig(getTestingOptions(testing)) : []),

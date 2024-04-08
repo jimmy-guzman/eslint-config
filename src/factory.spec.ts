@@ -15,10 +15,6 @@ describe("jimmyDotCodes", () => {
     expect(jimmyDotCodes({ react: true })).toMatchSnapshot();
   });
 
-  it("should create configuration w/o imports", () => {
-    expect(jimmyDotCodes({ imports: false })).toMatchSnapshot();
-  });
-
   it("should create configuration w/ jest", () => {
     expect(jimmyDotCodes({ testing: { framework: "jest" } })).toMatchSnapshot();
   });
