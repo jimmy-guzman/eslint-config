@@ -2,36 +2,31 @@ import jest from "eslint-plugin-jest";
 
 import { GLOB_E2E, GLOB_TESTS } from "../constants";
 import { jestRules } from "../rules/jest";
+import { type TestingOptions } from "../types";
 import testingLibraryConfig from "./testing-library";
 
-interface VitestConfigOptions {
-  testingLibrary?: boolean;
-  react?: boolean;
-}
-
-const vitestConfig = ({
-  testingLibrary = false,
-  react = false,
-}: VitestConfigOptions = {}) => {
+const testingConfig = ({ framework = "vitest", utilities }: TestingOptions) => {
   return [
     {
-      name: "jimmy.codes/vitest",
+      name: "jimmy.codes/testing",
       files: GLOB_TESTS,
       ...jest.configs["flat/recommended"],
       rules: {
         ...jestRules,
-        "jest/no-deprecated-functions": "off",
+        ...(framework === "vitest" && {
+          "jest/no-deprecated-functions": "off",
+        }),
       },
     },
     {
-      name: "jimmy.codes/vitest/disabled",
+      name: "jimmy.codes/testing/disabled",
       files: GLOB_E2E,
       rules: {
         "jest/require-hook": "off",
       },
     },
-    ...(testingLibrary && react ? testingLibraryConfig() : []),
+    ...(utilities?.includes("testing-library") ? testingLibraryConfig() : []),
   ];
 };
 
-export default vitestConfig;
+export default testingConfig;

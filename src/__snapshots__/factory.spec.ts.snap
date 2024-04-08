@@ -8191,7 +8191,7 @@ exports[`jimmyDotCodes > should create configuration w/ jest & react & testing l
         "xtest": false,
       },
     },
-    "name": "jimmy.codes/jest",
+    "name": "jimmy.codes/testing",
     "plugins": {
       "jest": {
         "configs": {
@@ -9802,7 +9802,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
       "**/e2e/**/*.spec.?([cm])[jt]s?(x)",
       "**/e2e/**/*.test.?([cm])[jt]s?(x)",
     ],
-    "name": "jimmy.codes/jest/disabled",
+    "name": "jimmy.codes/testing/disabled",
     "rules": {
       "jest/require-hook": "off",
     },
@@ -9815,7 +9815,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
       "**/*.bench.?([cm])[jt]s?(x)",
       "**/*.benchmark.?([cm])[jt]s?(x)",
     ],
-    "name": "jimmy.codes/testing-library",
+    "name": "jimmy.codes/testing/testing-library",
     "plugins": {
       "jest-dom": {
         "configs": {
@@ -11801,7 +11801,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
       "**/e2e/**/*.spec.?([cm])[jt]s?(x)",
       "**/e2e/**/*.test.?([cm])[jt]s?(x)",
     ],
-    "name": "jimmy.codes/testing-library/disabled",
+    "name": "jimmy.codes/testing/testing-library/disabled",
     "rules": {
       "testing-library/prefer-screen-queries": "off",
     },
@@ -13991,7 +13991,7 @@ exports[`jimmyDotCodes > should create configuration w/ jest 1`] = `
         "xtest": false,
       },
     },
-    "name": "jimmy.codes/jest",
+    "name": "jimmy.codes/testing",
     "plugins": {
       "jest": {
         "configs": {
@@ -15602,7 +15602,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
       "**/e2e/**/*.spec.?([cm])[jt]s?(x)",
       "**/e2e/**/*.test.?([cm])[jt]s?(x)",
     ],
-    "name": "jimmy.codes/jest/disabled",
+    "name": "jimmy.codes/testing/disabled",
     "rules": {
       "jest/require-hook": "off",
     },
@@ -55807,7 +55807,7 @@ exports[`jimmyDotCodes > should create configuration w/ vitest & react & testing
         "xtest": false,
       },
     },
-    "name": "jimmy.codes/vitest",
+    "name": "jimmy.codes/testing",
     "plugins": {
       "jest": {
         "configs": {
@@ -57418,7 +57418,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
       "**/e2e/**/*.spec.?([cm])[jt]s?(x)",
       "**/e2e/**/*.test.?([cm])[jt]s?(x)",
     ],
-    "name": "jimmy.codes/vitest/disabled",
+    "name": "jimmy.codes/testing/disabled",
     "rules": {
       "jest/require-hook": "off",
     },
@@ -57431,7 +57431,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
       "**/*.bench.?([cm])[jt]s?(x)",
       "**/*.benchmark.?([cm])[jt]s?(x)",
     ],
-    "name": "jimmy.codes/testing-library",
+    "name": "jimmy.codes/testing/testing-library",
     "plugins": {
       "jest-dom": {
         "configs": {
@@ -59417,7 +59417,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
       "**/e2e/**/*.spec.?([cm])[jt]s?(x)",
       "**/e2e/**/*.test.?([cm])[jt]s?(x)",
     ],
-    "name": "jimmy.codes/testing-library/disabled",
+    "name": "jimmy.codes/testing/testing-library/disabled",
     "rules": {
       "testing-library/prefer-screen-queries": "off",
     },
@@ -61607,7 +61607,7 @@ exports[`jimmyDotCodes > should create configuration w/ vitest 1`] = `
         "xtest": false,
       },
     },
-    "name": "jimmy.codes/vitest",
+    "name": "jimmy.codes/testing",
     "plugins": {
       "jest": {
         "configs": {
@@ -63218,7 +63218,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
       "**/e2e/**/*.spec.?([cm])[jt]s?(x)",
       "**/e2e/**/*.test.?([cm])[jt]s?(x)",
     ],
-    "name": "jimmy.codes/vitest/disabled",
+    "name": "jimmy.codes/testing/disabled",
     "rules": {
       "jest/require-hook": "off",
     },

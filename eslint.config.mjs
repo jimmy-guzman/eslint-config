@@ -11,9 +11,10 @@ const jimmyDotCodes = jiti("./src").default;
 
 export default jimmyDotCodes({
   typescript: true,
-  vitest: true,
   react: true,
-  testingLibrary: true,
+  testing: {
+    utilities: ["testing-library"],
+  },
   overrides: [
     {
       ignores: ["fixtures"],

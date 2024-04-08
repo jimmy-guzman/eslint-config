@@ -63,20 +63,10 @@ export default jimmyDotCodes({
    */
   imports: true,
   /**
-   * Are Jest rules are enabled?
+   * Are testing rules are enabled?
    * @default false
    */
-  jest: false,
-  /**
-   * Are Vitest rules are enabled?
-   * @default false
-   */
-  vitest: false,
-  /**
-   * Are Testing Library rules are enabled?
-   * @default false
-   */
-  testingLibrary: false,
+  testing: false,
 });
 ```
 
@@ -91,6 +81,22 @@ import jimmyDotCodes from "@jimmy.codes/eslint-config";
 export default jimmyDotCodes({
   typescript: {
     project: ["./tsconfig.eslint.json", "./packages/*/tsconfig.json"],
+  },
+});
+```
+
+#### Testing
+
+By default [vitest](https://vitest.dev) is used as the testing framework but you can override and add some utilities:
+
+```js
+// eslint.config.mjs
+import jimmyDotCodes from "@jimmy.codes/eslint-config";
+
+export default jimmyDotCodes({
+  testing: {
+    framework: "jest",
+    utilities: ["testing-library"],
   },
 });
 ```

@@ -1,4 +1,4 @@
-import { getTypescriptOptions } from "./utils";
+import { getTestingOptions, getTypescriptOptions } from "./utils";
 
 describe("getTypescriptOptions", () => {
   it("should return default options when a boolean is provided", () => {
@@ -13,6 +13,25 @@ describe("getTypescriptOptions", () => {
       }),
     ).toStrictEqual({
       project: "./tsconfig.eslint.json",
+    });
+  });
+});
+
+describe("getTestingOptions", () => {
+  it("should return default options when a boolean is provided", () => {
+    expect(getTestingOptions(true)).toStrictEqual({
+      framework: "vitest",
+    });
+  });
+  it("should return override options when an object is provided", () => {
+    expect(
+      getTestingOptions({
+        framework: "jest",
+        utilities: ["testing-library"],
+      }),
+    ).toStrictEqual({
+      framework: "jest",
+      utilities: ["testing-library"],
     });
   });
 });

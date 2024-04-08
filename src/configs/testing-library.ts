@@ -6,7 +6,7 @@ import { GLOB_E2E, GLOB_TESTS } from "../constants";
 const testingLibraryConfig = () => {
   return [
     {
-      name: "jimmy.codes/testing-library",
+      name: "jimmy.codes/testing/testing-library",
       files: GLOB_TESTS,
       plugins: {
         "testing-library": testingLibrary,
@@ -18,7 +18,7 @@ const testingLibraryConfig = () => {
       },
     },
     {
-      name: "jimmy.codes/testing-library/disabled",
+      name: "jimmy.codes/testing/testing-library/disabled",
       files: GLOB_E2E,
       rules: {
         "testing-library/prefer-screen-queries": "off",

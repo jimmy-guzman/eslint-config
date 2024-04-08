@@ -20,22 +20,28 @@ describe("jimmyDotCodes", () => {
   });
 
   it("should create configuration w/ jest", () => {
-    expect(jimmyDotCodes({ jest: true })).toMatchSnapshot();
+    expect(jimmyDotCodes({ testing: { framework: "jest" } })).toMatchSnapshot();
   });
 
   it("should create configuration w/ vitest", () => {
-    expect(jimmyDotCodes({ vitest: true })).toMatchSnapshot();
+    expect(jimmyDotCodes({ testing: true })).toMatchSnapshot();
   });
 
   it("should create configuration w/ jest & react & testing library", () => {
     expect(
-      jimmyDotCodes({ jest: true, react: true, testingLibrary: true }),
+      jimmyDotCodes({
+        react: true,
+        testing: { framework: "jest", utilities: ["testing-library"] },
+      }),
     ).toMatchSnapshot();
   });
 
   it("should create configuration w/ vitest & react & testing library", () => {
     expect(
-      jimmyDotCodes({ vitest: true, react: true, testingLibrary: true }),
+      jimmyDotCodes({
+        react: true,
+        testing: { utilities: ["testing-library"] },
+      }),
     ).toMatchSnapshot();
   });
 });
