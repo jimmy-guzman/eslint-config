@@ -63,7 +63,7 @@ export const reactRules = {
   "react/jsx-no-script-url": "error",
   "react/jsx-no-useless-fragment": "error",
   "react/jsx-one-expression-per-line": "off",
-  "react/jsx-pascal-case": "error",
+  "react/jsx-pascal-case": ["error", { allowNamespace: true }],
   "react/jsx-props-no-spreading": "off",
   "react/jsx-sort-default-props": "off",
   "react/jsx-sort-props": "off",
