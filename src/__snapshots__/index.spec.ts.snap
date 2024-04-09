@@ -2122,6 +2122,20 @@ exports[`should create default configuration 1`] = `
     },
   },
   {
+    "files": [
+      "**/*.cjs",
+    ],
+    "languageOptions": {
+      "globals": {
+        "exports": true,
+        "global": false,
+        "module": false,
+        "require": false,
+      },
+    },
+    "name": "jimmy.codes/commonjs",
+  },
+  {
     "ignores": [
       "**/node_modules",
       "**/dist",

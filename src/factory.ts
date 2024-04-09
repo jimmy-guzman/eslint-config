@@ -1,10 +1,11 @@
 import eslintConfigPrettier from "eslint-config-prettier";
+import globals from "globals";
 
 import importsConfig from "./configs/imports";
 import reactConfig from "./configs/react";
 import testingConfig from "./configs/testing";
 import typescriptConfig from "./configs/typescript";
-import { GLOB_IGNORES } from "./constants";
+import { GLOB_CJS, GLOB_IGNORES } from "./constants";
 import { baseRules } from "./rules/base";
 import { type Options } from "./types";
 import {
@@ -26,6 +27,13 @@ export const jimmyDotCodes = ({
     ...(react ? reactConfig(getReactOptions(react)) : []),
     ...(testing ? testingConfig(getTestingOptions(testing)) : []),
     { name: "jimmy.codes/disabled", ...eslintConfigPrettier },
+    {
+      name: "jimmy.codes/commonjs",
+      files: [GLOB_CJS],
+      languageOptions: {
+        globals: globals.commonjs,
+      },
+    },
     {
       ignores: GLOB_IGNORES,
     },
