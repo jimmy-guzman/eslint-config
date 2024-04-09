@@ -30,6 +30,18 @@ const importsConfig = ({ typescript = false }: ImportsConfigOptions = {}) => {
         "simple-import-sort": simpleImportSort,
         "node-import": nodeImport,
       },
+      // https://github.com/import-js/eslint-plugin-import/issues/2556#issuecomment-1419518561
+      settings: {
+        "import-x/parsers": {
+          espree: [".js", ".cjs", ".mjs", ".jsx"],
+        },
+      },
+      languageOptions: {
+        parserOptions: {
+          ecmaVersion: "latest",
+          sourceType: "module",
+        },
+      },
       rules: importsRules,
     },
     ...(typescript ? [typescriptImports] : []),

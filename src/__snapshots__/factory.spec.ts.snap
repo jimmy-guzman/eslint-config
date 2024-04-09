@@ -76,6 +76,12 @@ exports[`jimmyDotCodes > should create default configuration 1`] = `
     },
   },
   {
+    "languageOptions": {
+      "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+      },
+    },
     "name": "jimmy.codes/imports",
     "plugins": {
       "import-x": {
@@ -1936,6 +1942,16 @@ exports[`jimmyDotCodes > should create default configuration 1`] = `
       "node-import/prefer-node-protocol": "error",
       "simple-import-sort/exports": "error",
       "simple-import-sort/imports": "error",
+    },
+    "settings": {
+      "import-x/parsers": {
+        "espree": [
+          ".js",
+          ".cjs",
+          ".mjs",
+          ".jsx",
+        ],
+      },
     },
   },
   {
