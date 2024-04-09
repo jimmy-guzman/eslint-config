@@ -57,3 +57,5 @@ export const GLOB_E2E = [
 ];
 
 export const GLOB_CJS = "**/*.cjs";
+
+export const ALLOWED_VITEST_FUNCS = ["vi.mock"];
