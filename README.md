@@ -66,6 +66,14 @@ export default jimmyDotCodes({
 });
 ```
 
+Or you can enable auto detection to enable rules based on a project's dependencies
+
+```js
+import jimmyDotCodes from "@jimmy.codes/eslint-config";
+
+export default jimmyDotCodes({ autoDetect: true });
+```
+
 #### TypeScript
 
 You can also change the project location which can be helpful for monorepos:

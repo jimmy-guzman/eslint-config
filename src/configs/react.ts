@@ -6,10 +6,17 @@ import * as reactRefresh from "eslint-plugin-react-refresh";
 import globals from "globals";
 
 import { GLOB_JSX, GLOB_TSX } from "../constants";
+import { hasReactQuery } from "../has-dep";
 import { reactRules } from "../rules/react";
 import { type ReactOptions } from "../types";
 
-const reactConfig = ({ utilities = [] }: ReactOptions = {}) => {
+const reactConfig = (
+  { utilities = [] }: ReactOptions = {},
+  autoDetect = false,
+) => {
+  const includeReactQuery =
+    utilities.includes("@tanstack/query") || (autoDetect && hasReactQuery());
+
   return [
     {
       name: "jimmy.codes/react",
@@ -40,7 +47,7 @@ const reactConfig = ({ utilities = [] }: ReactOptions = {}) => {
       },
       rules: reactRules,
     },
-    ...(utilities.includes("@tanstack/query")
+    ...(includeReactQuery
       ? [
           {
             name: "jimmy.codes/react/query",

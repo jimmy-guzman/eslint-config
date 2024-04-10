@@ -64,4 +64,9 @@ export interface Options {
    * @default []
    */
   overrides?: FlatConfigItem[];
+  /**
+   * Is auto detection enabled?
+   * @default false
+   */
+  autoDetect?: boolean;
 }

@@ -1,4 +1,8 @@
+import { isPackageExists } from "local-pkg";
+
 import { jimmyDotCodes } from "./factory";
+
+vi.mock("local-pkg");
 
 describe("jimmyDotCodes", () => {
   it("should create default configuration", () => {
@@ -97,5 +101,129 @@ describe("jimmyDotCodes", () => {
         }),
       ]),
     );
+  });
+
+  describe("autoDetect", () => {
+    it("should include typescript when auto detection is enabled", () => {
+      vi.mocked(isPackageExists).mockImplementation((name) => {
+        return name === "typescript";
+      });
+
+      expect(jimmyDotCodes({ autoDetect: true })).toStrictEqual(
+        expect.arrayContaining([
+          expect.objectContaining({ name: "jimmy.codes/typescript" }),
+          expect.not.objectContaining({ name: "jimmy.codes/testing" }),
+          expect.not.objectContaining({ name: "jimmy.codes/testing/vitest" }),
+          expect.not.objectContaining({ name: "jimmy.codes/testing/jest" }),
+          expect.not.objectContaining({ name: "jimmy.codes/react" }),
+          expect.not.objectContaining({ name: "jimmy.codes/react/query" }),
+          expect.not.objectContaining({
+            name: "jimmy.codes/testing/testing-library",
+          }),
+        ]),
+      );
+    });
+
+    it("should include react when auto detection is enabled", () => {
+      vi.mocked(isPackageExists).mockImplementation((name) => {
+        return name === "react";
+      });
+
+      expect(jimmyDotCodes({ autoDetect: true })).toStrictEqual(
+        expect.arrayContaining([
+          expect.not.objectContaining({ name: "jimmy.codes/typescript" }),
+          expect.not.objectContaining({ name: "jimmy.codes/testing" }),
+          expect.not.objectContaining({ name: "jimmy.codes/testing/vitest" }),
+          expect.not.objectContaining({ name: "jimmy.codes/testing/jest" }),
+          expect.objectContaining({ name: "jimmy.codes/react" }),
+          expect.not.objectContaining({ name: "jimmy.codes/react/query" }),
+          expect.not.objectContaining({
+            name: "jimmy.codes/testing/testing-library",
+          }),
+        ]),
+      );
+    });
+
+    it("should include react-query when auto detection is enabled", () => {
+      vi.mocked(isPackageExists).mockImplementation((name) => {
+        // eslint-disable-next-line jest/no-conditional-in-test
+        return name === "react" || name === "@tanstack/react-query";
+      });
+
+      expect(jimmyDotCodes({ autoDetect: true })).toStrictEqual(
+        expect.arrayContaining([
+          expect.not.objectContaining({ name: "jimmy.codes/typescript" }),
+          expect.not.objectContaining({ name: "jimmy.codes/testing" }),
+          expect.not.objectContaining({ name: "jimmy.codes/testing/vitest" }),
+          expect.not.objectContaining({ name: "jimmy.codes/testing/jest" }),
+          expect.objectContaining({ name: "jimmy.codes/react" }),
+          expect.objectContaining({ name: "jimmy.codes/react/query" }),
+          expect.not.objectContaining({
+            name: "jimmy.codes/testing/testing-library",
+          }),
+        ]),
+      );
+    });
+
+    it("should include vitest when auto detection is enabled", () => {
+      vi.mocked(isPackageExists).mockImplementation((name) => {
+        return name === "vitest";
+      });
+
+      expect(jimmyDotCodes({ autoDetect: true })).toStrictEqual(
+        expect.arrayContaining([
+          expect.not.objectContaining({ name: "jimmy.codes/typescript" }),
+          expect.objectContaining({ name: "jimmy.codes/testing" }),
+          expect.objectContaining({ name: "jimmy.codes/testing/vitest" }),
+          expect.not.objectContaining({ name: "jimmy.codes/testing/jest" }),
+          expect.not.objectContaining({ name: "jimmy.codes/react" }),
+          expect.not.objectContaining({ name: "jimmy.codes/react/query" }),
+          expect.not.objectContaining({
+            name: "jimmy.codes/testing/testing-library",
+          }),
+        ]),
+      );
+    });
+
+    it("should include jest when auto detection is enabled", () => {
+      vi.mocked(isPackageExists).mockImplementation((name) => {
+        return name === "jest";
+      });
+
+      expect(jimmyDotCodes({ autoDetect: true })).toStrictEqual(
+        expect.arrayContaining([
+          expect.not.objectContaining({ name: "jimmy.codes/typescript" }),
+          expect.objectContaining({ name: "jimmy.codes/testing" }),
+          expect.not.objectContaining({ name: "jimmy.codes/testing/vitest" }),
+          expect.objectContaining({ name: "jimmy.codes/testing/jest" }),
+          expect.not.objectContaining({ name: "jimmy.codes/react" }),
+          expect.not.objectContaining({ name: "jimmy.codes/react/query" }),
+          expect.not.objectContaining({
+            name: "jimmy.codes/testing/testing-library",
+          }),
+        ]),
+      );
+    });
+
+    it("should include test-library when auto detection is enabled", () => {
+      vi.mocked(isPackageExists).mockImplementation((name) => {
+        // eslint-disable-next-line jest/no-conditional-in-test
+        return name === "@testing-library/react" || name === "vitest";
+      });
+
+      expect(jimmyDotCodes({ autoDetect: true })).toStrictEqual(
+        expect.arrayContaining([
+          expect.not.objectContaining({ name: "jimmy.codes/typescript" }),
+          expect.objectContaining({ name: "jimmy.codes/testing" }),
+          expect.objectContaining({ name: "jimmy.codes/testing/vitest" }),
+          expect.not.objectContaining({ name: "jimmy.codes/testing/jest" }),
+          expect.not.objectContaining({ name: "jimmy.codes/react" }),
+          expect.not.objectContaining({ name: "jimmy.codes/react/query" }),
+          expect.objectContaining({
+            name: "jimmy.codes/testing/testing-library",
+          }),
+        ]),
+      );
+    });
   });
 });

@@ -1,21 +1,28 @@
 import jest from "eslint-plugin-jest";
 
 import { ALLOWED_VITEST_FUNCS, GLOB_E2E, GLOB_TESTS } from "../constants";
+import { hasJest, hasTestingLibrary, hasVitest } from "../has-dep";
 import { jestRules } from "../rules/jest";
 import { type TestingOptions } from "../types";
 import testingLibraryConfig from "./testing-library";
 
-const testingConfig = ({
-  framework = "vitest",
-  utilities,
-}: TestingOptions = {}) => {
+const testingConfig = (
+  { framework = "vitest", utilities }: TestingOptions = {},
+  autoDetect = false,
+) => {
+  const isVitest = autoDetect ? hasVitest() : framework === "vitest";
+  const isJest = framework === "jest" || (autoDetect && hasJest());
+  const includeTestingLibrary =
+    !!utilities?.includes("testing-library") ||
+    (autoDetect && hasTestingLibrary());
+
   return [
     {
       name: "jimmy.codes/testing",
       files: GLOB_TESTS,
       ...jest.configs["flat/recommended"],
     },
-    ...(framework === "vitest"
+    ...(isVitest
       ? [
           {
             name: "jimmy.codes/testing/vitest",
@@ -33,14 +40,17 @@ const testingConfig = ({
             },
           },
         ]
-      : [
+      : []),
+    ...(isJest
+      ? [
           {
             name: "jimmy.codes/testing/jest",
             files: GLOB_TESTS,
             ...jest.configs["flat/recommended"],
             rules: jestRules,
           },
-        ]),
+        ]
+      : []),
     {
       name: "jimmy.codes/testing/disabled",
       files: GLOB_E2E,
@@ -50,7 +60,7 @@ const testingConfig = ({
         "jest/require-hook": "off",
       },
     },
-    ...(utilities?.includes("testing-library") ? testingLibraryConfig() : []),
+    ...(includeTestingLibrary ? testingLibraryConfig() : []),
   ];
 };
 
