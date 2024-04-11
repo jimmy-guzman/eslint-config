@@ -7,4 +7,5 @@ export const baseRules = {
   "arrow-body-style": ["error", "always"],
   "object-shorthand": "error",
   "prefer-arrow-callback": "error",
+  "no-console": "warn",
 } satisfies Linter.RulesRecord;

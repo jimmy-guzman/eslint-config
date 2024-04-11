@@ -18,6 +18,7 @@ exports[`jimmyDotCodes > should create default configuration 1`] = `
       "no-class-assign": "error",
       "no-compare-neg-zero": "error",
       "no-cond-assign": "error",
+      "no-console": "warn",
       "no-const-assign": "error",
       "no-constant-condition": "error",
       "no-control-regex": "error",
