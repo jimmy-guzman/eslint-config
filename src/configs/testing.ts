@@ -45,6 +45,8 @@ const testingConfig = ({
       name: "jimmy.codes/testing/disabled",
       files: GLOB_E2E,
       rules: {
+        "jest/expect-expect": "off",
+        "jest/no-deprecated-functions": "off",
         "jest/require-hook": "off",
       },
     },

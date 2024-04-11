@@ -3243,6 +3243,8 @@ If your function does not access \`this\`, you can annotate it with \`this: void
     ],
     "name": "jimmy.codes/testing/disabled",
     "rules": {
+      "jest/expect-expect": "off",
+      "jest/no-deprecated-functions": "off",
       "jest/require-hook": "off",
     },
   },
