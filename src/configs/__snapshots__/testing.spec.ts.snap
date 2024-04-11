@@ -3238,6 +3238,8 @@ If your function does not access \`this\`, you can annotate it with \`this: void
     "files": [
       "**/e2e/**/*.spec.?([cm])[jt]s?(x)",
       "**/e2e/**/*.test.?([cm])[jt]s?(x)",
+      "**/cypress/**/*.spec.?([cm])[jt]s?(x)",
+      "**/cypress/**/*.test.?([cm])[jt]s?(x)",
     ],
     "name": "jimmy.codes/testing/disabled",
     "rules": {

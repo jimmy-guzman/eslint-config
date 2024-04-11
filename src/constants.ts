@@ -54,6 +54,8 @@ export const GLOB_TESTS = [
 export const GLOB_E2E = [
   `**/e2e/**/*.spec.${GLOB_SRC_EXT}`,
   `**/e2e/**/*.test.${GLOB_SRC_EXT}`,
+  `**/cypress/**/*.spec.${GLOB_SRC_EXT}`,
+  `**/cypress/**/*.test.${GLOB_SRC_EXT}`,
 ];
 
 export const GLOB_CJS = "**/*.cjs";
