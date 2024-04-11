@@ -31714,6 +31714,12 @@ If your function does not access \`this\`, you can annotate it with \`this: void
           },
         },
       ],
+      "@typescript-eslint/restrict-template-expressions": [
+        "error",
+        {
+          "allowNumber": true,
+        },
+      ],
     },
   },
   {

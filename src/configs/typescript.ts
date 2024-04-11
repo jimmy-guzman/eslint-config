@@ -28,6 +28,10 @@ const typescriptConfig = (options: TypescriptOptions) => {
           "error",
           { checksVoidReturn: { attributes: false } },
         ],
+        "@typescript-eslint/restrict-template-expressions": [
+          "error",
+          { allowNumber: true },
+        ],
       },
     },
     {
