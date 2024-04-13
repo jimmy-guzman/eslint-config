@@ -1,5 +1,6 @@
-import { type Linter } from "eslint";
 import jest from "eslint-plugin-jest";
+
+import { type Rules } from "../types";
 
 export const jestRules = {
   ...jest.configs["flat/recommended"].rules,
@@ -40,4 +41,4 @@ export const jestRules = {
   "jest/require-to-throw-message": "error",
   "jest/require-top-level-describe": "off",
   "jest/unbound-method": "off", // requires typescript
-} satisfies Linter.RulesRecord;
+} satisfies Rules;

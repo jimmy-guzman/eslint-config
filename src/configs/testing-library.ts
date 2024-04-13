@@ -2,6 +2,7 @@ import * as jestDom from "eslint-plugin-jest-dom";
 import testingLibrary from "eslint-plugin-testing-library";
 
 import { GLOB_E2E, GLOB_TESTS } from "../constants";
+import { type FlatConfigItem } from "../types";
 
 const testingLibraryConfig = () => {
   return [
@@ -24,7 +25,7 @@ const testingLibraryConfig = () => {
         "testing-library/prefer-screen-queries": "off",
       },
     },
-  ];
+  ] satisfies FlatConfigItem[];
 };
 
 export default testingLibraryConfig;

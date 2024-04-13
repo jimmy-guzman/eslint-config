@@ -1,5 +1,6 @@
-import { type Linter } from "eslint";
 import jsxA11y from "eslint-plugin-jsx-a11y";
+
+import { type Rules } from "../types";
 
 export const reactRules = {
   ...jsxA11y.configs.recommended.rules,
@@ -100,4 +101,4 @@ export const reactRules = {
   "react/static-property-placement": "off",
   "react/style-prop-object": "error",
   "react/void-dom-elements-no-children": "error",
-} satisfies Linter.RulesRecord;
+} satisfies Rules;

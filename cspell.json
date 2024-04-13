@@ -33,6 +33,7 @@
     "textnodes",
     "tiged",
     "typecheck",
+    "typegen",
     "vitepress",
     "vitest",
     "wagoid"
@@ -50,6 +51,7 @@
     "yarn.lock",
     "pnpm-lock.yaml",
     "**/__snapshots__",
-    "**/__snapshots__/**"
+    "**/__snapshots__/**",
+    "src/rules.gen.d.ts"
   ]
 }

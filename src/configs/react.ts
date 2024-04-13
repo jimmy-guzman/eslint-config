@@ -8,7 +8,7 @@ import globals from "globals";
 import { GLOB_JSX, GLOB_TSX } from "../constants";
 import { hasReactQuery } from "../has-dep";
 import { reactRules } from "../rules/react";
-import { type ReactOptions } from "../types";
+import { type FlatConfigItem, type ReactOptions, type Rules } from "../types";
 
 const reactConfig = (
   { utilities = [] }: ReactOptions = {},
@@ -59,11 +59,11 @@ const reactConfig = (
               "@tanstack/query/exhaustive-deps": "error",
               "@tanstack/query/no-rest-destructuring": "warn",
               "@tanstack/query/stable-query-client": "error",
-            },
+            } satisfies Rules,
           },
         ]
       : []),
-  ];
+  ] satisfies FlatConfigItem[];
 };
 
 export default reactConfig;

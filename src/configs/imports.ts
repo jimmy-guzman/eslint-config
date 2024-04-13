@@ -1,3 +1,4 @@
+import { type ESLint, type Linter } from "eslint";
 import importX from "eslint-plugin-import-x";
 import nodeImport from "eslint-plugin-node-import";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
@@ -26,7 +27,8 @@ const importsConfig = ({ typescript = false }: ImportsConfigOptions = {}) => {
     {
       name: "jimmy.codes/imports",
       plugins: {
-        "import-x": importX,
+        // TODO: remove unknown conversion
+        "import-x": importX as unknown as ESLint.Plugin,
         "simple-import-sort": simpleImportSort,
         "node-import": nodeImport,
       },
@@ -45,7 +47,7 @@ const importsConfig = ({ typescript = false }: ImportsConfigOptions = {}) => {
       rules: importsRules,
     },
     ...(typescript ? [typescriptImports] : []),
-  ];
+  ] satisfies Linter.FlatConfig[];
 };
 
 export default importsConfig;

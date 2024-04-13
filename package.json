@@ -31,7 +31,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "pkgroll --minify",
+    "typegen": "tsx scripts/typegen.ts",
+    "build": "pnpm typegen && pkgroll --minify",
     "coverage": "vitest run --coverage",
     "dev": "pkgroll --watch",
     "docs:build": "npx @eslint/config-inspector build",
@@ -85,6 +86,7 @@
     "clean-pkg-json": "1.2.0",
     "commitlint": "19.2.1",
     "eslint": "8.57.0",
+    "eslint-typegen": "0.2.2",
     "gitzy": "5.3.0",
     "is-ci": "3.0.1",
     "jiti": "1.21.0",
@@ -94,6 +96,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "semantic-release": "23.0.8",
+    "tsx": "4.7.2",
     "typescript": "5.4.5",
     "vitest": "1.5.0"
   },

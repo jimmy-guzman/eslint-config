@@ -1,5 +1,9 @@
 import { type Linter } from "eslint";
 
+import type { RuleOptions } from "./rules.gen";
+
+export type Rules = RuleOptions;
+
 export interface TypescriptOptions {
   /**
    * Location of `tsconfig.json` used for [type aware linting](https://typescript-eslint.io/getting-started/typed-linting)
@@ -36,7 +40,7 @@ export interface ReactOptions {
 export type FlatConfigItem = Omit<Linter.FlatConfig, "plugins"> & {
   name?: string;
   plugins?: Record<string, unknown>;
-  rules?: Linter.RuleEntry;
+  rules?: Linter.RulesRecord & Rules;
 };
 
 export interface Options {

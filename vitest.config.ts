@@ -8,7 +8,11 @@ export default defineConfig({
     restoreMocks: true,
     coverage: {
       thresholds: { 100: true },
-      exclude: [...(configDefaults.coverage.exclude ?? []), "fixtures/**"],
+      exclude: [
+        ...(configDefaults.coverage.exclude ?? []),
+        "fixtures/**",
+        "scripts/**",
+      ],
     },
   },
 });

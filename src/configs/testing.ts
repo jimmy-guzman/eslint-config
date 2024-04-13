@@ -3,7 +3,7 @@ import jest from "eslint-plugin-jest";
 import { ALLOWED_VITEST_FUNCS, GLOB_E2E, GLOB_TESTS } from "../constants";
 import { hasJest, hasTestingLibrary, hasVitest } from "../has-dep";
 import { jestRules } from "../rules/jest";
-import { type TestingOptions } from "../types";
+import { type Rules, type TestingOptions } from "../types";
 import testingLibraryConfig from "./testing-library";
 
 const testingConfig = (
@@ -37,7 +37,7 @@ const testingConfig = (
                   allowedFunctionCalls: ALLOWED_VITEST_FUNCS,
                 },
               ],
-            },
+            } satisfies Rules,
           },
         ]
       : []),
@@ -58,7 +58,7 @@ const testingConfig = (
         "jest/expect-expect": "off",
         "jest/no-deprecated-functions": "off",
         "jest/require-hook": "off",
-      },
+      } satisfies Rules,
     },
     ...(includeTestingLibrary ? testingLibraryConfig() : []),
   ];

@@ -1,5 +1,6 @@
 import eslint from "@eslint/js";
-import { type Linter } from "eslint";
+
+import { type Rules } from "../types";
 
 export const baseRules = {
   ...eslint.configs.recommended.rules,
@@ -8,4 +9,4 @@ export const baseRules = {
   "object-shorthand": "error",
   "prefer-arrow-callback": "error",
   "no-console": "warn",
-} satisfies Linter.RulesRecord;
+} satisfies Rules;
