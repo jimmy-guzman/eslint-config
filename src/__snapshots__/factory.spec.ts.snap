@@ -2184,6 +2184,7 @@ exports[`jimmyDotCodes > should create default configuration 1`] = `
       "**/.yarn",
       "**/storybook-static",
       "**/.eslint-config-inspector",
+      "**/playwright-report",
       "**/CHANGELOG*.md",
       "**/*.min.*",
       "**/LICENSE*",

@@ -27,6 +27,7 @@ export const GLOB_IGNORES = [
   "**/.yarn",
   "**/storybook-static",
   "**/.eslint-config-inspector",
+  "**/playwright-report",
 
   "**/CHANGELOG*.md",
   "**/*.min.*",
