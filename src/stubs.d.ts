@@ -1,11 +1,4 @@
 /* eslint-disable @typescript-eslint/consistent-type-imports */
-declare module "eslint-plugin-simple-import-sort" {
-  type Plugin = import("eslint").ESLint.Plugin;
-
-  const plugin: Plugin;
-
-  export default plugin;
-}
 
 declare module "eslint-config-prettier" {
   type Rules = import("eslint").Linter.RulesRecord;
