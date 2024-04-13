@@ -7,7 +7,11 @@ exports[`should create base rules 1`] = `
     "always",
   ],
   "constructor-super": "error",
-  "curly": "error",
+  "curly": [
+    "error",
+    "multi-or-nest",
+    "consistent",
+  ],
   "for-direction": "error",
   "getter-return": "error",
   "no-async-promise-executor": "error",
