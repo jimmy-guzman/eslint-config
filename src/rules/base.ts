@@ -7,6 +7,7 @@ export const baseRules = {
   "curly": ["error", "multi-or-nest", "consistent"],
   "arrow-body-style": ["error", "always"],
   "object-shorthand": "error",
+  "no-useless-rename": "error",
   "prefer-arrow-callback": "error",
   "no-console": "warn",
 } satisfies Rules;

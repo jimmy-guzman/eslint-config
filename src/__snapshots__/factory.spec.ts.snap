@@ -72,6 +72,7 @@ exports[`jimmyDotCodes > should create default configuration 1`] = `
       "no-useless-backreference": "error",
       "no-useless-catch": "error",
       "no-useless-escape": "error",
+      "no-useless-rename": "error",
       "no-with": "error",
       "object-shorthand": "error",
       "prefer-arrow-callback": "error",
