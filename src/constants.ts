@@ -36,6 +36,8 @@ export const GLOB_IGNORES = [
   "**/auto-import?(s).d.ts",
   "**/components.d.ts",
   "**/vite.config.ts.*.mjs",
+
+  "!.storybook",
 ];
 
 export const GLOB_JS = "**/*.?([cm])js";

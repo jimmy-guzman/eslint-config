@@ -2192,6 +2192,7 @@ exports[`should create default configuration 1`] = `
       "**/auto-import?(s).d.ts",
       "**/components.d.ts",
       "**/vite.config.ts.*.mjs",
+      "!.storybook",
     ],
   },
 ]
