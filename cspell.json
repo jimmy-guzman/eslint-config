@@ -2,6 +2,8 @@
   "version": "0.2",
   "words": [
     "antfu",
+    "astro",
+    "canonicalurl",
     "cicd",
     "commitlint",
     "commitlintrc",
@@ -12,6 +14,8 @@
     "esbuild",
     "eslintconfig",
     "espree",
+    "fetchcontent",
+    "getentrybyslug",
     "gitzy",
     "gruntfuggly",
     "Hiroki",

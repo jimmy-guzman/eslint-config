@@ -103,6 +103,22 @@ describe("jimmyDotCodes", () => {
     );
   });
 
+  it("should create configuration w/ astro", () => {
+    expect(jimmyDotCodes({ astro: true })).toStrictEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          name: "jimmy.codes/astro",
+        }),
+        expect.objectContaining({
+          name: "jimmy.codes/astro/disable-type-checked",
+        }),
+        expect.objectContaining({
+          name: "jimmy.codes/astro/imports",
+        }),
+      ]),
+    );
+  });
+
   describe("autoDetect", () => {
     it("should include typescript when auto detection is enabled", () => {
       vi.mocked(isPackageExists).mockImplementation((name) => {
@@ -221,6 +237,26 @@ describe("jimmyDotCodes", () => {
           expect.not.objectContaining({ name: "jimmy.codes/react/query" }),
           expect.objectContaining({
             name: "jimmy.codes/testing/testing-library",
+          }),
+        ]),
+      );
+    });
+
+    it("should include astro when auto detection is enabled", () => {
+      vi.mocked(isPackageExists).mockImplementation((name) => {
+        return name === "astro";
+      });
+
+      expect(jimmyDotCodes({ autoDetect: true })).toStrictEqual(
+        expect.arrayContaining([
+          expect.objectContaining({
+            name: "jimmy.codes/astro",
+          }),
+          expect.objectContaining({
+            name: "jimmy.codes/astro/disable-type-checked",
+          }),
+          expect.objectContaining({
+            name: "jimmy.codes/astro/imports",
           }),
         ]),
       );

@@ -64,6 +64,11 @@ export interface Options {
    */
   testing?: boolean | TestingOptions;
   /**
+   * Are astro rules are enabled?
+   * @default false
+   */
+  astro?: boolean;
+  /**
    * Additional flat configs to either extend or overrides configurations
    * @default []
    */

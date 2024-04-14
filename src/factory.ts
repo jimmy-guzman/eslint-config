@@ -1,12 +1,13 @@
 import eslintConfigPrettier from "eslint-config-prettier";
 
+import { astroConfig } from "./configs/astro";
 import { commonjsConfig } from "./configs/commonjs";
 import importsConfig from "./configs/imports";
 import reactConfig from "./configs/react";
 import testingConfig from "./configs/testing";
 import typescriptConfig from "./configs/typescript";
 import { GLOB_IGNORES } from "./constants";
-import { hasReact, hasTesting, hasTypescript } from "./has-dep";
+import { hasAstro, hasReact, hasTesting, hasTypescript } from "./has-dep";
 import { baseRules } from "./rules/base";
 import { type Options } from "./types";
 import {
@@ -19,12 +20,14 @@ export const jimmyDotCodes = ({
   typescript = false,
   react = false,
   testing = false,
+  astro = false,
   overrides = [],
   autoDetect = false,
 }: Options = {}) => {
   const isTypescriptEnabled = typescript || (autoDetect && hasTypescript());
   const isReactEnabled = react || (autoDetect && hasReact());
   const isTestingEnabled = testing || (autoDetect && hasTesting());
+  const isAstroEnabled = astro || (autoDetect && hasAstro());
 
   return [
     { name: "jimmy.codes/base", rules: baseRules },
@@ -33,6 +36,7 @@ export const jimmyDotCodes = ({
       ? typescriptConfig(getTypescriptOptions(typescript))
       : []),
     ...(isReactEnabled ? reactConfig(getReactOptions(react), autoDetect) : []),
+    ...(isAstroEnabled ? astroConfig() : []),
     ...(isTestingEnabled
       ? testingConfig(getTestingOptions(testing), autoDetect)
       : []),

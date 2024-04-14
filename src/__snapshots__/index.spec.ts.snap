@@ -2185,6 +2185,7 @@ exports[`should create default configuration 1`] = `
       "**/storybook-static",
       "**/.eslint-config-inspector",
       "**/playwright-report",
+      "**/.astro",
       "**/CHANGELOG*.md",
       "**/*.min.*",
       "**/LICENSE*",

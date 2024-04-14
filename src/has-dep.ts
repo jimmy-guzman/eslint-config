@@ -31,3 +31,7 @@ export const hasTestingLibrary = () => {
 export const hasReactQuery = () => {
   return isPackageExists("@tanstack/react-query");
 };
+
+export const hasAstro = () => {
+  return isPackageExists("astro");
+};

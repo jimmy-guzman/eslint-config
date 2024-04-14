@@ -59,6 +59,11 @@ export default jimmyDotCodes({
    */
   react: true,
   /**
+   * Are Astro rules are enabled?
+   * @default false
+   */
+  astro: true,
+  /**
    * Are testing rules are enabled?
    * @default false
    */

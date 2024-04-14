@@ -133,3 +133,16 @@ declare module "eslint-plugin-react-refresh" {
 
   export default plugin;
 }
+
+declare module "eslint-plugin-astro" {
+  type Item = import("eslint").Linter.FlatConfig;
+
+  declare const _default: {
+    configs: {
+      "flat/recommended": Item[];
+      "flat/jsx-a11y-recommended": Item[];
+    };
+  };
+
+  export = _default;
+}
