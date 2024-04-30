@@ -1018,6 +1018,11 @@ export interface RuleOptions {
    */
   "astro/no-deprecated-getentrybyslug"?: Linter.RuleEntry<[]>;
   /**
+   * disallow value export
+   * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/no-exports-from-components/
+   */
+  "astro/no-exports-from-components"?: Linter.RuleEntry<[]>;
+  /**
    * disallow use of `set:html` to prevent XSS attack
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/no-set-html-directive/
    */

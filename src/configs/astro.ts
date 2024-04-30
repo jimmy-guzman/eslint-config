@@ -43,6 +43,7 @@ export const astroConfig = () => {
         "astro/no-deprecated-getentrybyslug": "error",
         "astro/no-unused-define-vars-in-style": "error",
         "astro/valid-compile": "error",
+        "astro/no-exports-from-components": "off",
       },
     },
     {
