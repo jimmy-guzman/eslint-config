@@ -5946,6 +5946,45 @@ exports[`reactConfig > should create config w/ @tanstack/query rules 1`] = `
         },
       },
       "react-refresh": {
+        "default": {
+          "rules": {
+            "only-export-components": {
+              "create": [Function],
+              "defaultOptions": [],
+              "meta": {
+                "messages": {
+                  "anonymousExport": "Fast refresh can't handle anonymous components. Add a name to your export.",
+                  "exportAll": "This rule can't verify that \`export *\` only exports components.",
+                  "localComponents": "Fast refresh only works when a file only exports components. Move your component(s) to a separate file.",
+                  "namedExport": "Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.",
+                  "noExport": "Fast refresh only works when a file has exports. Move your component(s) to a separate file.",
+                  "reactContext": "Fast refresh only works when a file only exports components. Move your React context(s) to a separate file.",
+                },
+                "schema": [
+                  {
+                    "additionalProperties": false,
+                    "properties": {
+                      "allowConstantExport": {
+                        "type": "boolean",
+                      },
+                      "allowExportNames": {
+                        "items": {
+                          "type": "string",
+                        },
+                        "type": "array",
+                      },
+                      "checkJS": {
+                        "type": "boolean",
+                      },
+                    },
+                    "type": "object",
+                  },
+                ],
+                "type": "problem",
+              },
+            },
+          },
+        },
         "rules": {
           "only-export-components": {
             "create": [Function],
@@ -5957,6 +5996,7 @@ exports[`reactConfig > should create config w/ @tanstack/query rules 1`] = `
                 "localComponents": "Fast refresh only works when a file only exports components. Move your component(s) to a separate file.",
                 "namedExport": "Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.",
                 "noExport": "Fast refresh only works when a file has exports. Move your component(s) to a separate file.",
+                "reactContext": "Fast refresh only works when a file only exports components. Move your React context(s) to a separate file.",
               },
               "schema": [
                 {
@@ -12315,6 +12355,45 @@ exports[`reactConfig > should create default config 1`] = `
         },
       },
       "react-refresh": {
+        "default": {
+          "rules": {
+            "only-export-components": {
+              "create": [Function],
+              "defaultOptions": [],
+              "meta": {
+                "messages": {
+                  "anonymousExport": "Fast refresh can't handle anonymous components. Add a name to your export.",
+                  "exportAll": "This rule can't verify that \`export *\` only exports components.",
+                  "localComponents": "Fast refresh only works when a file only exports components. Move your component(s) to a separate file.",
+                  "namedExport": "Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.",
+                  "noExport": "Fast refresh only works when a file has exports. Move your component(s) to a separate file.",
+                  "reactContext": "Fast refresh only works when a file only exports components. Move your React context(s) to a separate file.",
+                },
+                "schema": [
+                  {
+                    "additionalProperties": false,
+                    "properties": {
+                      "allowConstantExport": {
+                        "type": "boolean",
+                      },
+                      "allowExportNames": {
+                        "items": {
+                          "type": "string",
+                        },
+                        "type": "array",
+                      },
+                      "checkJS": {
+                        "type": "boolean",
+                      },
+                    },
+                    "type": "object",
+                  },
+                ],
+                "type": "problem",
+              },
+            },
+          },
+        },
         "rules": {
           "only-export-components": {
             "create": [Function],
@@ -12326,6 +12405,7 @@ exports[`reactConfig > should create default config 1`] = `
                 "localComponents": "Fast refresh only works when a file only exports components. Move your component(s) to a separate file.",
                 "namedExport": "Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.",
                 "noExport": "Fast refresh only works when a file has exports. Move your component(s) to a separate file.",
+                "reactContext": "Fast refresh only works when a file only exports components. Move your React context(s) to a separate file.",
               },
               "schema": [
                 {
