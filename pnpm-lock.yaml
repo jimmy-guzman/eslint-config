@@ -27,8 +27,8 @@ dependencies:
     specifier: ^1.1.1
     version: 1.1.1(eslint@8.57.0)(typescript@5.4.5)
   eslint-plugin-import-x:
-    specifier: 0.5.0
-    version: 0.5.0(eslint@8.57.0)(typescript@5.4.5)
+    specifier: 0.5.1
+    version: 0.5.1(eslint@8.57.0)(typescript@5.4.5)
   eslint-plugin-jest:
     specifier: ^28.2.0
     version: 28.2.0(eslint@8.57.0)(typescript@5.4.5)
@@ -3887,7 +3887,7 @@ packages:
     resolution: {integrity: sha512-WFj2isz22JahUv+B788TlO3N6zL3nNJGU8CcZbPZvVEkBPaJdCV4vy5wyghty5ROFbCRnm132v8BScu5/1BQ8g==}
     dependencies:
       debug: 3.2.7
-      is-core-module: 2.13.1
+      is-core-module: 2.14.0
       resolve: 1.22.8
     transitivePeerDependencies:
       - supports-color
@@ -3966,8 +3966,8 @@ packages:
       - typescript
     dev: false
 
-  /eslint-plugin-import-x@0.5.0(eslint@8.57.0)(typescript@5.4.5):
-    resolution: {integrity: sha512-C7R8Z4IzxmsoOPMtSzwuOBW5FH6iRlxHR6iTks+MzVlrk3r3TUxokkWTx3ypdj9nGOEP+CG/5e6ebZzHbxgbbQ==}
+  /eslint-plugin-import-x@0.5.1(eslint@8.57.0)(typescript@5.4.5):
+    resolution: {integrity: sha512-2JK8bbFOLes+gG6tgdnM8safCxMAj4u2wjX8X1BRFPfnY7Ct2hFYESoIcVwABX/DDcdpQFLGtKmzbNEWJZD9iQ==}
     engines: {node: '>=16'}
     peerDependencies:
       eslint: ^8.56.0 || ^9.0.0-0
@@ -3981,6 +3981,7 @@ packages:
       is-glob: 4.0.3
       minimatch: 9.0.4
       semver: 7.6.2
+      tslib: 2.6.3
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -5112,6 +5113,13 @@ packages:
     resolution: {integrity: sha512-hHrIjvZsftOsvKSn2TRYl63zvxsgE0K+0mYMoH6gD4omR5IWB2KynivBQczo3+wF1cCkjzvptnI9Q0sPU66ilw==}
     dependencies:
       hasown: 2.0.2
+
+  /is-core-module@2.14.0:
+    resolution: {integrity: sha512-a5dFJih5ZLYlRtDc0dZWP7RiKr6xIKzmn/oAYCDvdLThadVgyJwlaoQPmRtMSpz+rk0OGAgIu+TcM9HUF0fk1A==}
+    engines: {node: '>= 0.4'}
+    dependencies:
+      hasown: 2.0.2
+    dev: false
 
   /is-data-view@1.0.1:
     resolution: {integrity: sha512-AHkaJrsUVW6wq6JS8y3JnM/GJF/9cf+k20+iDzlSaJrinEo5+7vRiteOSwBhHRiAyQATN1AmY4hwzxJKPmYf+w==}

@@ -219,7 +219,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Style guide",
                 "description": "Enforce or ban the use of inline type-only markers for named imports.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/consistent-type-specifier-style.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/consistent-type-specifier-style.md",
               },
               "fixable": "code",
               "messages": {
@@ -246,7 +246,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Static analysis",
                 "description": "Ensure a default export is present, given a default import.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/default.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/default.md",
               },
               "messages": {
                 "noDefaultExport": "No default export found in imported module "{{module}}".",
@@ -262,7 +262,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Style guide",
                 "description": "Enforce a leading comment with the webpackChunkName for dynamic imports.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/dynamic-import-chunkname.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/dynamic-import-chunkname.md",
               },
               "messages": {
                 "blockComment": "dynamic imports require a /* foo */ style comment, not a // foo comment",
@@ -301,7 +301,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Helpful warnings",
                 "description": "Forbid any invalid exports, i.e. re-export of the same name.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/export.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/export.md",
               },
               "messages": {
                 "multiDefault": "Multiple default exports.",
@@ -319,7 +319,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Style guide",
                 "description": "Ensure all exports appear after other statements.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/exports-last.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/exports-last.md",
               },
               "messages": {
                 "end": "Export statements should appear at the end of the file",
@@ -335,7 +335,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Style guide",
                 "description": "Ensure consistent use of file extension within the import path.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/extensions.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/extensions.md",
               },
               "messages": {
                 "missing": "Missing file extension {{extension}}for "{{importPath}}"",
@@ -477,7 +477,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Style guide",
                 "description": "Ensure all imports appear before other statements.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/first.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/first.md",
               },
               "fixable": "code",
               "messages": {
@@ -503,7 +503,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Style guide",
                 "description": "Prefer named exports to be grouped together in a single export declaration.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/group-exports.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/group-exports.md",
               },
               "messages": {
                 "AssignmentExpression": "Multiple CommonJS exports; consolidate all exports into a single assignment to \`module.exports\`",
@@ -547,7 +547,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Style guide",
                 "description": "Enforce the maximum number of dependencies a module can have.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/max-dependencies.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/max-dependencies.md",
               },
               "messages": {
                 "max": "Maximum number of dependencies ({{max}}) exceeded.",
@@ -576,7 +576,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Static analysis",
                 "description": "Ensure named imports correspond to a named export in the remote file.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/named.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/named.md",
               },
               "messages": {
                 "notFound": "{{name}} not found in '{{path}}'",
@@ -607,7 +607,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Static analysis",
                 "description": "Ensure imported namespaces contain dereferenced properties as they are dereferenced.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/namespace.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/namespace.md",
               },
               "messages": {
                 "computedReference": "Unable to validate computed reference to imported namespace '{{namespace}}'.",
@@ -639,7 +639,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Style guide",
                 "description": "Enforce a newline after import statements.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/newline-after-import.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/newline-after-import.md",
               },
               "fixable": "whitespace",
               "messages": {
@@ -673,7 +673,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Static analysis",
                 "description": "Forbid import of modules using absolute paths.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-absolute-path.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-absolute-path.md",
               },
               "fixable": "code",
               "messages": {
@@ -714,7 +714,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Module systems",
                 "description": "Forbid AMD \`require\` and \`define\` calls.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-amd.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-amd.md",
               },
               "messages": {
                 "amd": "Expected imports instead of AMD {{type}}().",
@@ -730,7 +730,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Style guide",
                 "description": "Forbid anonymous values as default exports.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-anonymous-default-export.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-anonymous-default-export.md",
               },
               "messages": {
                 "anonymous": "Unexpected default export of anonymous {{type}}",
@@ -786,7 +786,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Module systems",
                 "description": "Forbid CommonJS \`require\` calls and \`module.exports\` or \`exports.*\`.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-commonjs.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-commonjs.md",
               },
               "messages": {
                 "export": "Expected "export" or "export default"",
@@ -839,7 +839,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Static analysis",
                 "description": "Forbid a module from importing a module with a dependency path back to itself.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-cycle.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-cycle.md",
               },
               "messages": {
                 "cycle": "Dependency cycle {{source}}",
@@ -904,7 +904,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Style guide",
                 "description": "Forbid default exports.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-default-export.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-default-export.md",
               },
               "messages": {
                 "noAliasDefault": "Do not alias \`{{local}}\` as \`default\`. Just export \`{{local}}\` itself instead.",
@@ -921,7 +921,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Helpful warnings",
                 "description": "Forbid imported names marked with \`@deprecated\` documentation tag.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-deprecated.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-deprecated.md",
               },
               "messages": {
                 "deprecated": "Deprecated{{description}}",
@@ -937,7 +937,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Style guide",
                 "description": "Forbid repeated import of the same module in multiple places.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-duplicates.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-duplicates.md",
               },
               "fixable": "code",
               "messages": {
@@ -967,7 +967,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Static analysis",
                 "description": "Forbid \`require()\` calls with expressions.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-dynamic-require.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-dynamic-require.md",
               },
               "messages": {
                 "import": "Calls to import() should use string literals",
@@ -994,7 +994,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Helpful warnings",
                 "description": "Forbid empty named import blocks.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-empty-named-blocks.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-empty-named-blocks.md",
               },
               "fixable": "code",
               "hasSuggestions": true,
@@ -1014,7 +1014,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Helpful warnings",
                 "description": "Forbid the use of extraneous packages.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-extraneous-dependencies.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-extraneous-dependencies.md",
               },
               "messages": {
                 "devDep": "'{{packageName}}' should be listed in the project's dependencies, not devDependencies.",
@@ -1082,7 +1082,7 @@ exports[`should create default configuration 1`] = `
                 "category": "Module systems",
                 "description": "Forbid import statements with CommonJS module.exports.",
                 "recommended": true,
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-import-module-exports.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-import-module-exports.md",
               },
               "fixable": "code",
               "messages": {
@@ -1109,7 +1109,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Static analysis",
                 "description": "Forbid importing the submodules of other modules.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-internal-modules.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-internal-modules.md",
               },
               "messages": {
                 "noAllowed": "Reaching to "{{importPath}}" is not allowed.",
@@ -1154,7 +1154,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Helpful warnings",
                 "description": "Forbid the use of mutable exports with \`var\` or \`let\`.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-mutable-exports.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-mutable-exports.md",
               },
               "messages": {
                 "noMutable": "Exporting mutable '{{kind}}' binding, use 'const' instead.",
@@ -1170,7 +1170,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Helpful warnings",
                 "description": "Forbid use of exported name as identifier of default export.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-named-as-default.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-named-as-default.md",
               },
               "messages": {
                 "default": "Using exported name '{{name}}' as identifier for default export.",
@@ -1186,7 +1186,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Helpful warnings",
                 "description": "Forbid use of exported name as property of default export.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-named-as-default-member.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-named-as-default-member.md",
               },
               "messages": {
                 "member": "Caution: \`{{objectName}}\` also has a named export \`{{propName}}\`. Check if you meant to write \`import {{{propName}}} from '{{sourcePath}}'\` instead.",
@@ -1202,7 +1202,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Style guide",
                 "description": "Forbid named default exports.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-named-default.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-named-default.md",
               },
               "messages": {
                 "default": "Use default import syntax to import '{{importName}}'.",
@@ -1218,7 +1218,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Style guide",
                 "description": "Forbid named exports.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-named-export.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-named-export.md",
               },
               "messages": {
                 "noAllowed": "Named exports are not allowed.",
@@ -1234,7 +1234,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Style guide",
                 "description": "Forbid namespace (a.k.a. "wildcard" \`*\`) imports.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-namespace.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-namespace.md",
               },
               "fixable": "code",
               "messages": {
@@ -1264,7 +1264,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Module systems",
                 "description": "Forbid Node.js builtin modules.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-nodejs-modules.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-nodejs-modules.md",
               },
               "messages": {
                 "builtin": "Do not import Node.js builtin module "{{moduleName}}"",
@@ -1294,7 +1294,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Static analysis",
                 "description": "Forbid importing packages through relative paths.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-relative-packages.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-relative-packages.md",
               },
               "fixable": "code",
               "messages": {
@@ -1335,7 +1335,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Static analysis",
                 "description": "Forbid importing modules from parent directories.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-relative-parent-imports.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-relative-parent-imports.md",
               },
               "messages": {
                 "noAllowed": "Relative imports from parent directories are not allowed. Please either pass what you're importing through at runtime (dependency injection), move \`{{filename}}\` to same directory as \`{{depPath}}\` or consider making \`{{depPath}}\` a package.",
@@ -1375,7 +1375,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Static analysis",
                 "description": "Enforce which files can be imported in a given folder.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-restricted-paths.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-restricted-paths.md",
               },
               "messages": {
                 "glob": "Restricted path exceptions must be glob patterns when \`from\` contains glob patterns",
@@ -1455,7 +1455,7 @@ exports[`should create default configuration 1`] = `
                 "category": "Static analysis",
                 "description": "Forbid a module from importing itself.",
                 "recommended": true,
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-self-import.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-self-import.md",
               },
               "messages": {
                 "self": "Module imports itself.",
@@ -1471,7 +1471,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Style guide",
                 "description": "Forbid unassigned imports.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-unassigned-import.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-unassigned-import.md",
               },
               "messages": {
                 "unassigned": "Imported module should be assigned",
@@ -1518,7 +1518,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Static analysis",
                 "description": "Ensure imports point to a file/module that can be resolved.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-unresolved.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-unresolved.md",
               },
               "messages": {
                 "casingMismatch": "Casing of {{module}} does not match the underlying filesystem.",
@@ -1566,7 +1566,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Helpful warnings",
                 "description": "Forbid modules without exports, or exports without matching import in another module.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-unused-modules.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-unused-modules.md",
               },
               "messages": {
                 "notFound": "No exports found",
@@ -1649,7 +1649,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Static analysis",
                 "description": "Forbid unnecessary path segments in import and require statements.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-useless-path-segments.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-useless-path-segments.md",
               },
               "fixable": "code",
               "messages": {
@@ -1679,7 +1679,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Static analysis",
                 "description": "Forbid webpack loader syntax in imports.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/no-webpack-loader-syntax.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/no-webpack-loader-syntax.md",
               },
               "messages": {
                 "unexpected": "Unexpected '!' in '{{name}}'. Do not use import syntax to configure webpack loaders.",
@@ -1695,7 +1695,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Style guide",
                 "description": "Enforce a convention in module import order.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/order.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/order.md",
               },
               "fixable": "code",
               "messages": {
@@ -1814,7 +1814,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Style guide",
                 "description": "Prefer a default export if module exports a single name or multiple names.",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/prefer-default-export.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/prefer-default-export.md",
               },
               "messages": {
                 "any": "Prefer default export to be present on every file that has export.",
@@ -1846,7 +1846,7 @@ exports[`should create default configuration 1`] = `
               "docs": {
                 "category": "Module systems",
                 "description": "Forbid potentially ambiguous parse goal (\`script\` vs. \`module\`).",
-                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.0/docs/rules/unambiguous.md",
+                "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v0.5.1/docs/rules/unambiguous.md",
               },
               "messages": {
                 "module": "This module could be parsed as a valid script.",
