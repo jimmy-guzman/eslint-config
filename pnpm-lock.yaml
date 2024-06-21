@@ -57,8 +57,8 @@ dependencies:
     specifier: ^6.2.0
     version: 6.2.0(eslint@8.57.0)(typescript@5.4.5)
   globals:
-    specifier: ^15.0.0
-    version: 15.0.0
+    specifier: ^15.11.0
+    version: 15.11.0
   local-pkg:
     specifier: 0.5.0
     version: 0.5.0
@@ -107,8 +107,8 @@ devDependencies:
     specifier: 8.42.3
     version: 8.42.3
   '@types/node':
-    specifier: 20.14.6
-    version: 20.14.6
+    specifier: 20.14.7
+    version: 20.14.7
   '@types/react':
     specifier: 18.3.3
     version: 18.3.3
@@ -116,14 +116,14 @@ devDependencies:
     specifier: 1.6.0
     version: 1.6.0(vitest@1.6.0)
   astro:
-    specifier: 4.10.3
-    version: 4.10.3(@types/node@20.14.6)(typescript@5.4.5)
+    specifier: 4.11.0
+    version: 4.11.0(@types/node@20.14.7)(typescript@5.4.5)
   clean-pkg-json:
     specifier: 1.2.0
     version: 1.2.0
   commitlint:
     specifier: 19.3.0
-    version: 19.3.0(@types/node@20.14.6)(typescript@5.4.5)
+    version: 19.3.0(@types/node@20.14.7)(typescript@5.4.5)
   eslint:
     specifier: 8.57.0
     version: 8.57.0
@@ -140,8 +140,8 @@ devDependencies:
     specifier: 1.21.6
     version: 1.21.6
   lefthook:
-    specifier: 1.6.16
-    version: 1.6.16
+    specifier: 1.6.17
+    version: 1.6.17
   pkgroll:
     specifier: 2.1.1
     version: 2.1.1(typescript@5.4.5)
@@ -165,7 +165,7 @@ devDependencies:
     version: 5.4.5
   vitest:
     specifier: 1.6.0
-    version: 1.6.0(@types/node@20.14.6)
+    version: 1.6.0(@types/node@20.14.7)
 
 packages:
 
@@ -495,14 +495,14 @@ packages:
     dev: true
     optional: true
 
-  /@commitlint/cli@19.3.0(@types/node@20.14.6)(typescript@5.4.5):
+  /@commitlint/cli@19.3.0(@types/node@20.14.7)(typescript@5.4.5):
     resolution: {integrity: sha512-LgYWOwuDR7BSTQ9OLZ12m7F/qhNY+NpAyPBgo4YNMkACE7lGuUnuQq1yi9hz1KA4+3VqpOYl8H1rY/LYK43v7g==}
     engines: {node: '>=v18'}
     hasBin: true
     dependencies:
       '@commitlint/format': 19.3.0
       '@commitlint/lint': 19.2.2
-      '@commitlint/load': 19.2.0(@types/node@20.14.6)(typescript@5.4.5)
+      '@commitlint/load': 19.2.0(@types/node@20.14.7)(typescript@5.4.5)
       '@commitlint/read': 19.2.1
       '@commitlint/types': 19.0.3
       execa: 8.0.1
@@ -571,7 +571,7 @@ packages:
       '@commitlint/types': 19.0.3
     dev: true
 
-  /@commitlint/load@19.2.0(@types/node@20.14.6)(typescript@5.4.5):
+  /@commitlint/load@19.2.0(@types/node@20.14.7)(typescript@5.4.5):
     resolution: {integrity: sha512-XvxxLJTKqZojCxaBQ7u92qQLFMMZc4+p9qrIq/9kJDy8DOrEa7P1yx7Tjdc2u2JxIalqT4KOGraVgCE7eCYJyQ==}
     engines: {node: '>=v18'}
     dependencies:
@@ -581,7 +581,7 @@ packages:
       '@commitlint/types': 19.0.3
       chalk: 5.3.0
       cosmiconfig: 9.0.0(typescript@5.4.5)
-      cosmiconfig-typescript-loader: 5.0.0(@types/node@20.14.6)(cosmiconfig@9.0.0)(typescript@5.4.5)
+      cosmiconfig-typescript-loader: 5.0.0(@types/node@20.14.7)(cosmiconfig@9.0.0)(typescript@5.4.5)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -2044,7 +2044,7 @@ packages:
   /@types/conventional-commits-parser@5.0.0:
     resolution: {integrity: sha512-loB369iXNmAZglwWATL+WRe+CRMmmBPtpolYzIebFaX4YA3x+BEfLqhUAV9WanycKI3TG1IMr5bMJDajDKLlUQ==}
     dependencies:
-      '@types/node': 20.14.6
+      '@types/node': 20.14.7
     dev: true
 
   /@types/cookie@0.6.0:
@@ -2099,8 +2099,8 @@ packages:
       '@types/unist': 2.0.10
     dev: true
 
-  /@types/node@20.14.6:
-    resolution: {integrity: sha512-JbA0XIJPL1IiNnU7PFxDXyfAwcwVVrOoqyzzyQTyMeVhBzkJVMSkC1LlVsRQ2lpqiY4n6Bb9oCS6lzDKVQxbZw==}
+  /@types/node@20.14.7:
+    resolution: {integrity: sha512-uTr2m2IbJJucF3KUxgnGOZvYbN0QgkGyWxG6973HCpMYFy2KfcgYuIwkJQMQkt1VbBMlvWRbpshFTLxnxCZjKQ==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -2455,7 +2455,7 @@ packages:
       std-env: 3.7.0
       strip-literal: 2.1.0
       test-exclude: 6.0.0
-      vitest: 1.6.0(@types/node@20.14.6)
+      vitest: 1.6.0(@types/node@20.14.7)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2772,8 +2772,8 @@ packages:
       - typescript
     dev: false
 
-  /astro@4.10.3(@types/node@20.14.6)(typescript@5.4.5):
-    resolution: {integrity: sha512-TWCJM+Vg+y0UoEz/H75rfp/u2N8yxeQQ2UrU9+fMcbjlzQJtGGDq3ApdundqPZgAuCryRuJnrKytStMZCFnlvQ==}
+  /astro@4.11.0(@types/node@20.14.7)(typescript@5.4.5):
+    resolution: {integrity: sha512-3VWxz/08sChQIX68tuE7Y769DUdjsT3Zq2/y4SkrDRlwN9IZ/aebwcRWr5a2yMSdO2vpFxtEdobq0mKnMlLErg==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
     dependencies:
@@ -2834,7 +2834,7 @@ packages:
       tsconfck: 3.1.0(typescript@5.4.5)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.3.1(@types/node@20.14.6)
+      vite: 5.3.1(@types/node@20.14.7)
       vitefu: 0.2.5(vite@5.3.1)
       which-pm: 2.2.0
       yargs-parser: 21.1.1
@@ -2948,7 +2948,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001636
-      electron-to-chromium: 1.4.806
+      electron-to-chromium: 1.4.807
       node-releases: 2.0.14
       update-browserslist-db: 1.0.16(browserslist@4.23.1)
     dev: true
@@ -3212,12 +3212,12 @@ packages:
     engines: {node: '>=16'}
     dev: true
 
-  /commitlint@19.3.0(@types/node@20.14.6)(typescript@5.4.5):
+  /commitlint@19.3.0(@types/node@20.14.7)(typescript@5.4.5):
     resolution: {integrity: sha512-B8eUVQCjz+1ZAjR3LC3+vzKg7c4/qN4QhSxkjp0u0v7Pi79t9CsnGAluvveKmFh56e885zgToPL5ax+l8BHTPg==}
     engines: {node: '>=v18'}
     hasBin: true
     dependencies:
-      '@commitlint/cli': 19.3.0(@types/node@20.14.6)(typescript@5.4.5)
+      '@commitlint/cli': 19.3.0(@types/node@20.14.7)(typescript@5.4.5)
       '@commitlint/types': 19.0.3
     transitivePeerDependencies:
       - '@types/node'
@@ -3336,7 +3336,7 @@ packages:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
     dev: true
 
-  /cosmiconfig-typescript-loader@5.0.0(@types/node@20.14.6)(cosmiconfig@9.0.0)(typescript@5.4.5):
+  /cosmiconfig-typescript-loader@5.0.0(@types/node@20.14.7)(cosmiconfig@9.0.0)(typescript@5.4.5):
     resolution: {integrity: sha512-+8cK7jRAReYkMwMiG+bxhcNKiHJDM6bR9FD/nGBXOWdMLuYawjF5cGrtLilJ+LGd3ZjCXnJjR5DkfWPoIVlqJA==}
     engines: {node: '>=v16'}
     peerDependencies:
@@ -3344,7 +3344,7 @@ packages:
       cosmiconfig: '>=8.2'
       typescript: '>=4'
     dependencies:
-      '@types/node': 20.14.6
+      '@types/node': 20.14.7
       cosmiconfig: 9.0.0(typescript@5.4.5)
       jiti: 1.21.6
       typescript: 5.4.5
@@ -3608,8 +3608,8 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: true
 
-  /electron-to-chromium@1.4.806:
-    resolution: {integrity: sha512-nkoEX2QIB8kwCOtvtgwhXWy2IHVcOLQZu9Qo36uaGB835mdX/h8uLRlosL6QIhLVUnAiicXRW00PwaPZC74Nrg==}
+  /electron-to-chromium@1.4.807:
+    resolution: {integrity: sha512-kSmJl2ZwhNf/bcIuCH/imtNOKlpkLDn2jqT5FJ+/0CXjhnFaOa9cOe9gHKKy71eM49izwuQjZhKk+lWQ1JxB7A==}
     dev: true
 
   /emoji-regex@10.3.0:
@@ -3958,7 +3958,7 @@ packages:
       astro-eslint-parser: 1.0.1(typescript@5.4.5)
       eslint: 8.57.0
       eslint-compat-utils: 0.5.0(eslint@8.57.0)
-      globals: 15.0.0
+      globals: 15.11.0
       postcss: 8.4.38
       postcss-selector-parser: 6.0.16
     transitivePeerDependencies:
@@ -4658,8 +4658,8 @@ packages:
     dependencies:
       type-fest: 0.20.2
 
-  /globals@15.0.0:
-    resolution: {integrity: sha512-m/C/yR4mjO6pXDTm9/R/SpYTAIyaUB4EOzcaaMEl7mds7Mshct9GfejiJNQGjHHbdMPey13Kpu4TMbYi9ex1pw==}
+  /globals@15.11.0:
+    resolution: {integrity: sha512-yeyNSjdbyVaWurlwCpcA6XNBrHTMIeDdj0/hnvX/OLJ9ekOXYbLsLinH/MucQyGvNnXhidTdNhTtJaffL2sMfw==}
     engines: {node: '>=18'}
     dev: false
 
@@ -5502,83 +5502,83 @@ packages:
       language-subtag-registry: 0.3.22
     dev: false
 
-  /lefthook-darwin-arm64@1.6.16:
-    resolution: {integrity: sha512-VwOegHjdu3jHBUoNsf2k/BUipHs7SpkF861ZQNTkLKqXneLDmiqljkPwruJi688oUC4otNOYJNqoron+DFy4BA==}
+  /lefthook-darwin-arm64@1.6.17:
+    resolution: {integrity: sha512-F4yEmN+9p6jvLdctEmVPkuTP7tgMNt5vciEp3Ci3id3UTs6/KCTg8pWtIoHKoFqRJWOTRhEMTGWm5LhO5g6eqg==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /lefthook-darwin-x64@1.6.16:
-    resolution: {integrity: sha512-opl1Yz1F5t11LLnelcu7Bok/1cnYaoCBSPve71jFwAq8W9wwHLbDLHLGLpRUcj5PxUpUkYzfl5RmGoNFLfD44A==}
+  /lefthook-darwin-x64@1.6.17:
+    resolution: {integrity: sha512-cPhqYq5LVnW7i5AqPr5QTk5FqdbpqaJjsOwfJ6g81lzuHwkzAGKzHrFAujCI/OB2tv71PDLeiPPypRB2IGsDXg==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /lefthook-freebsd-arm64@1.6.16:
-    resolution: {integrity: sha512-MFsGFkNRRtpphTa+gLFt5PwtaBFlgEXVlfhzwUZOZcRT99B2EkvTP8MacOuWeixy0yfIa+kluqonPXBZdQ9f0w==}
+  /lefthook-freebsd-arm64@1.6.17:
+    resolution: {integrity: sha512-+6L8+vhn7AcukQCmMk1xKHK9fup3PNSb2jZ7Lngm9+v/oEQGqYM2ePx26IWJ9mXvPJw0URgyYGKVuf0LGzY5Iw==}
     cpu: [arm64]
     os: [freebsd]
     requiresBuild: true
     dev: true
     optional: true
 
-  /lefthook-freebsd-x64@1.6.16:
-    resolution: {integrity: sha512-4+7StS5Tffzri3Zof3jMm0QvdUgF+vRGIfw31cDydxcSPIXJjJSEKwA2AhMOSPeq1i9MyJmqfFXSsgskHP+dvg==}
+  /lefthook-freebsd-x64@1.6.17:
+    resolution: {integrity: sha512-W5kTHjKhghyFifkD8QQ6ly9xcU7CetW2CSceK9Y52Rj0bvQtKdXBwvQ0Ipz0LwEb772URq2aobamycuDGtz8QA==}
     cpu: [x64]
     os: [freebsd]
     requiresBuild: true
     dev: true
     optional: true
 
-  /lefthook-linux-arm64@1.6.16:
-    resolution: {integrity: sha512-ytlMhHscl6kSGMRPtl2E+yMll3sLT41lsXUo6HyJ53Eg7fJ7sAhP38QdZBnXqJDZBh0Z21DbWuwaJ2QOgCvNew==}
+  /lefthook-linux-arm64@1.6.17:
+    resolution: {integrity: sha512-pHNW5lmd4MKiR7sWoZ6UMkHi8LjA0A4t01+4LYaVABrJiFjxOgFlJ4fV6hanrpO24uDcs7fcas1xJE85BKBDmw==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /lefthook-linux-x64@1.6.16:
-    resolution: {integrity: sha512-te+dZNhFhGRQqKFiSG4zeBcklXBRHNtLHzoGi15vRTZAocLrQkVydd9KGBRPgEvelXJuS4X7dGzuI7ijFVFZqA==}
+  /lefthook-linux-x64@1.6.17:
+    resolution: {integrity: sha512-ZvQqKdFyFL6GKwoqPQXHcZlVJxX0wSBkrMlvLpK5ytbssMRw6U9JotIhDI60GwedgAcQN5dys01mrK0zB8Bwdg==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /lefthook-windows-arm64@1.6.16:
-    resolution: {integrity: sha512-ip4BuMTdT7lGNo6zfVaoHmROJIrkgUf0LzpI6LpjbVuNPWsM896vEB0pzCj9HXOZtAdqHcLwzA647SDakveUVQ==}
+  /lefthook-windows-arm64@1.6.17:
+    resolution: {integrity: sha512-6DwJQmIC5FE1Sz1QOJ1r3I/Epvm3sQSGC8qkP/GCURA1VrdOWXva4RUnH1lOOXkDr96zMejqVmEfJMKtdFQqBA==}
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /lefthook-windows-x64@1.6.16:
-    resolution: {integrity: sha512-gsfzmVIXe8sk8JbVcK3JDub1ymcQmdv9UYy+8NkkymJJ98WE6tb29LQatiWmwDhMsn7i2DvhBC/aCTYK4xAlbA==}
+  /lefthook-windows-x64@1.6.17:
+    resolution: {integrity: sha512-BEhB93Cm1k63iAYmCHuIB+QlSz6oj9FHF192T6mCBz8sGcDzVhQPNPeuHh3Ku1CIElzddwKP7W1Sf/cC3wzRPQ==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /lefthook@1.6.16:
-    resolution: {integrity: sha512-KPwx9zyu+LivC8h6v+8CUGMK6TZ9ZqTv326OWFWJFsWXLUffG2uRaolui7b8gCGavJZMl8mYPXvsiNJgn8RolA==}
+  /lefthook@1.6.17:
+    resolution: {integrity: sha512-xE2CHzQVqg7g24dn3v/1WkXLlPUJlHlDhxw2hUfBdBVVGuNT1NHZfkjWsd5VFUMfMqRYyMwAYmSaEuFVxCKt1w==}
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      lefthook-darwin-arm64: 1.6.16
-      lefthook-darwin-x64: 1.6.16
-      lefthook-freebsd-arm64: 1.6.16
-      lefthook-freebsd-x64: 1.6.16
-      lefthook-linux-arm64: 1.6.16
-      lefthook-linux-x64: 1.6.16
-      lefthook-windows-arm64: 1.6.16
-      lefthook-windows-x64: 1.6.16
+      lefthook-darwin-arm64: 1.6.17
+      lefthook-darwin-x64: 1.6.17
+      lefthook-freebsd-arm64: 1.6.17
+      lefthook-freebsd-x64: 1.6.17
+      lefthook-linux-arm64: 1.6.17
+      lefthook-linux-x64: 1.6.17
+      lefthook-windows-arm64: 1.6.17
+      lefthook-windows-x64: 1.6.17
     dev: true
 
   /levn@0.4.1:
@@ -8368,7 +8368,7 @@ packages:
       vfile-message: 4.0.2
     dev: true
 
-  /vite-node@1.6.0(@types/node@20.14.6):
+  /vite-node@1.6.0(@types/node@20.14.7):
     resolution: {integrity: sha512-de6HJgzC+TFzOu0NTC4RAIsyf/DY/ibWDYQUcuEA84EMHhcefTUGkjFHKKEJhQN4A+6I0u++kr3l36ZF2d7XRw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -8377,7 +8377,7 @@ packages:
       debug: 4.3.5
       pathe: 1.1.2
       picocolors: 1.0.1
-      vite: 5.3.1(@types/node@20.14.6)
+      vite: 5.3.1(@types/node@20.14.7)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -8389,7 +8389,7 @@ packages:
       - terser
     dev: true
 
-  /vite@5.3.1(@types/node@20.14.6):
+  /vite@5.3.1(@types/node@20.14.7):
     resolution: {integrity: sha512-XBmSKRLXLxiaPYamLv3/hnP/KXDai1NDexN0FpkTaZXTfycHvkRHoenpgl/fvuK/kPbB6xAgoyiryAhQNxYmAQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -8417,7 +8417,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.14.6
+      '@types/node': 20.14.7
       esbuild: 0.21.5
       postcss: 8.4.38
       rollup: 4.18.0
@@ -8433,10 +8433,10 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 5.3.1(@types/node@20.14.6)
+      vite: 5.3.1(@types/node@20.14.7)
     dev: true
 
-  /vitest@1.6.0(@types/node@20.14.6):
+  /vitest@1.6.0(@types/node@20.14.7):
     resolution: {integrity: sha512-H5r/dN06swuFnzNFhq/dnz37bPXnq8xB2xB5JOVk8K09rUtoeNN+LHWkoQ0A/i3hvbUKKcCei9KpbxqHMLhLLA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -8461,7 +8461,7 @@ packages:
       jsdom:
         optional: true
     dependencies:
-      '@types/node': 20.14.6
+      '@types/node': 20.14.7
       '@vitest/expect': 1.6.0
       '@vitest/runner': 1.6.0
       '@vitest/snapshot': 1.6.0
@@ -8479,8 +8479,8 @@ packages:
       strip-literal: 2.1.0
       tinybench: 2.8.0
       tinypool: 0.8.4
-      vite: 5.3.1(@types/node@20.14.6)
-      vite-node: 1.6.0(@types/node@20.14.6)
+      vite: 5.3.1(@types/node@20.14.7)
+      vite-node: 1.6.0(@types/node@20.14.7)
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
       - less
