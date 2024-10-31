@@ -86,7 +86,7 @@
     "@types/eslint__js": "8.42.3",
     "@types/node": "20.14.8",
     "@types/react": "18.3.3",
-    "@vitest/coverage-v8": "1.6.0",
+    "@vitest/coverage-v8": "2.1.4",
     "astro": "4.11.0",
     "clean-pkg-json": "1.2.0",
     "commitlint": "19.5.0",
@@ -103,7 +103,7 @@
     "semantic-release": "24.2.0",
     "tsx": "4.19.2",
     "typescript": "5.4.5",
-    "vitest": "1.6.0"
+    "vitest": "2.1.4"
   },
   "peerDependencies": {
     "eslint": "^8.57.0"
