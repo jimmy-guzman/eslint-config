@@ -9,7 +9,7 @@ import globals from "globals";
 import { GLOB_JSX, GLOB_TSX } from "../constants";
 import { hasReactQuery } from "../has-dep";
 import { reactRules } from "../rules/react";
-import { type FlatConfigItem, type ReactOptions } from "../types";
+import { type ReactOptions, type TypedConfigItem } from "../types";
 
 const reactConfig = (
   { utilities = [] }: ReactOptions = {},
@@ -62,7 +62,7 @@ const reactConfig = (
           },
         ]
       : []),
-  ] satisfies FlatConfigItem[];
+  ] satisfies TypedConfigItem[];
 };
 
 export default reactConfig;

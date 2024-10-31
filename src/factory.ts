@@ -1,3 +1,4 @@
+import { type Linter } from "eslint";
 import eslintConfigPrettier from "eslint-config-prettier";
 
 import { astroConfig } from "./configs/astro";
@@ -9,21 +10,24 @@ import typescriptConfig from "./configs/typescript";
 import { GLOB_IGNORES } from "./constants";
 import { hasAstro, hasReact, hasTesting, hasTypescript } from "./has-dep";
 import { baseRules } from "./rules/base";
-import { type Options } from "./types";
+import { type Options, type TypedConfigItem } from "./types";
 import {
   getReactOptions,
   getTestingOptions,
   getTypescriptOptions,
 } from "./utils";
 
-export const jimmyDotCodes = ({
-  typescript = false,
-  react = false,
-  testing = false,
-  astro = false,
-  overrides = [],
-  autoDetect = false,
-}: Options = {}) => {
+export const jimmyDotCodes = (
+  {
+    typescript = false,
+    react = false,
+    testing = false,
+    astro = false,
+    autoDetect = false,
+    configs = [],
+  }: Options = {},
+  ...moreConfigs: TypedConfigItem[] | Linter.Config[]
+) => {
   const isTypescriptEnabled = typescript || (autoDetect && hasTypescript());
   const isReactEnabled = react || (autoDetect && hasReact());
   const isTestingEnabled = testing || (autoDetect && hasTesting());
@@ -45,6 +49,7 @@ export const jimmyDotCodes = ({
     {
       ignores: GLOB_IGNORES,
     },
-    ...overrides,
+    ...configs,
+    ...moreConfigs,
   ];
 };

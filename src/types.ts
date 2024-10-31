@@ -37,10 +37,16 @@ export interface ReactOptions {
   utilities?: ReactUtilities[];
 }
 
-export type FlatConfigItem = Omit<Linter.FlatConfig, "plugins"> & {
-  name?: string;
+export type TypedConfigItem = Omit<
+  Linter.Config<Linter.RulesRecord & Rules>,
+  "plugins"
+> & {
+  /**
+   * An object containing a name-value mapping of plugin names to plugin objects. When `files` is specified, these plugins are only available to the matching files.
+   *
+   * @see [Using plugins in your configuration](https://eslint.org/docs/latest/user-guide/configuring/configuration-files-new#using-plugins-in-your-configuration)
+   */
   plugins?: Record<string, unknown>;
-  rules?: Linter.RulesRecord & Rules;
 };
 
 export interface Options {
@@ -59,7 +65,7 @@ export interface Options {
    * @default false
    */
   /**
-   * Are testing  rules are enabled?
+   * Are testing rules are enabled?
    * @default false
    */
   testing?: boolean | TestingOptions;
@@ -69,10 +75,10 @@ export interface Options {
    */
   astro?: boolean;
   /**
-   * Additional flat configs to either extend or overrides configurations
+   * Additional configs to either extend or overrides configurations
    * @default []
    */
-  overrides?: FlatConfigItem[];
+  configs?: TypedConfigItem[] | Linter.Config[];
   /**
    * Is auto detection enabled?
    * @default false

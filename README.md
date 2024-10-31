@@ -124,26 +124,28 @@ export default jimmyDotCodes({
 
 #### Overrides
 
-You can also extend or override the configuration:
+You can also extend the configuration:
 
 ```js
 import jimmyDotCodes from "@jimmy.codes/eslint-config";
 
-export default jimmyDotCodes({
-  overrides: [
-    {
-      rules: {
-        "prefer-const": "error",
+export default jimmyDotCodes(
+  {
+    configs: [
+      {
+        files: ["**/*.js"],
+        rules: {
+          "prefer-spread": "error",
+        },
       },
+    ],
+  },
+  {
+    rules: {
+      "prefer-const": "error",
     },
-    {
-      files: ["/**/*.js"],
-      rules: {
-        semi: "error",
-      },
-    },
-  ],
-});
+  },
+);
 ```
 
 ## ❤️ Credits

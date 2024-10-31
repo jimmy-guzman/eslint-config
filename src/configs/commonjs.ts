@@ -1,7 +1,7 @@
 import globals from "globals";
 
 import { GLOB_CJS } from "../constants";
-import { type FlatConfigItem } from "../types";
+import { type TypedConfigItem } from "../types";
 
 export const commonjsConfig = () => {
   return [
@@ -12,5 +12,5 @@ export const commonjsConfig = () => {
         globals: globals.commonjs,
       },
     },
-  ] satisfies FlatConfigItem[];
+  ] satisfies TypedConfigItem[];
 };
