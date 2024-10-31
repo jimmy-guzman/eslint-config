@@ -71,7 +71,7 @@
     "typescript-eslint": "^7.6.0"
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "19.2.2",
+    "@commitlint/config-conventional": "19.5.0",
     "@eslint/config-inspector": "0.5.6",
     "@jimmy.codes/prettier-config": "1.1.0",
     "@semantic-release/changelog": "6.0.3",
@@ -79,15 +79,15 @@
     "@semantic-release/git": "10.0.1",
     "@semantic-release/npm": "12.0.1",
     "@semantic-release/release-notes-generator": "14.0.1",
-    "@tanstack/react-query": "5.45.1",
+    "@tanstack/react-query": "5.59.16",
     "@testing-library/dom": "10.1.0",
     "@testing-library/react": "16.0.0",
     "@types/eslint": "8.56.10",
     "@types/eslint__js": "8.42.3",
     "@types/node": "20.14.8",
-    "@types/react": "18.3.3",
+    "@types/react": "18.3.12",
     "@vitest/coverage-v8": "2.1.4",
-    "astro": "4.11.0",
+    "astro": "4.16.7",
     "clean-pkg-json": "1.2.0",
     "commitlint": "19.5.0",
     "eslint": "8.57.0",
@@ -108,7 +108,7 @@
   "peerDependencies": {
     "eslint": "^8.57.0"
   },
-  "packageManager": "pnpm@8.15.6",
+  "packageManager": "pnpm@9.12.3",
   "engines": {
     "node": ">= 20"
   },
