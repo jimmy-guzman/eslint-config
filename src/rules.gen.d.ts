@@ -4,21 +4,6 @@ import type { Linter } from 'eslint'
 
 export interface RuleOptions {
   /**
-   * Exhaustive deps rule for useQuery
-   * @see https://tanstack.com/query/latest/docs/eslint/exhaustive-deps
-   */
-  "@tanstack/query/exhaustive-deps"?: Linter.RuleEntry<[]>;
-  /**
-   * Disallows rest destructuring in queries
-   * @see https://tanstack.com/query/latest/docs/eslint/no-rest-destructuring
-   */
-  "@tanstack/query/no-rest-destructuring"?: Linter.RuleEntry<[]>;
-  /**
-   * Makes sure that QueryClient is stable
-   * @see https://tanstack.com/query/latest/docs/eslint/stable-query-client
-   */
-  "@tanstack/query/stable-query-client"?: Linter.RuleEntry<[]>;
-  /**
    * Require that function overload signatures be consecutive
    * @see https://typescript-eslint.io/rules/adjacent-overload-signatures
    */
