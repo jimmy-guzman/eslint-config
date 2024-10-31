@@ -31,7 +31,6 @@
     "dist"
   ],
   "scripts": {
-    "typegen": "tsx scripts/typegen.ts",
     "build": "pnpm typegen && pkgroll --minify",
     "coverage": "vitest run --coverage",
     "dev": "pkgroll --watch",
@@ -44,7 +43,8 @@
     "prepack": "pnpm build && clean-pkg-json",
     "prepare": "is-ci || lefthook install",
     "test": "vitest",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "typegen": "tsx scripts/typegen.ts"
   },
   "prettier": "@jimmy.codes/prettier-config",
   "dependencies": {
@@ -52,8 +52,8 @@
     "@tanstack/eslint-plugin-query": "^5.59.7",
     "@types/eslint": "8.56.10",
     "@types/eslint__js": "8.42.3",
-    "@typescript-eslint/utils": "^8.12.2",
     "@typescript-eslint/parser": "^8.12.2",
+    "@typescript-eslint/utils": "^8.12.2",
     "astro-eslint-parser": "^1.0.3",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.3",
@@ -114,13 +114,6 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "eslint-plugin-import"
-      ]
-    }
   },
   "gitzy": {
     "useCommitlintConfig": true

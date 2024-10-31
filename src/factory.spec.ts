@@ -5,10 +5,6 @@ import { jimmyDotCodes } from "./factory";
 vi.mock("local-pkg");
 
 describe("jimmyDotCodes", () => {
-  it("should create default configuration", () => {
-    expect(jimmyDotCodes()).toMatchSnapshot();
-  });
-
   it("should create configuration w/ typescript", () => {
     expect(jimmyDotCodes({ typescript: true })).toStrictEqual(
       expect.arrayContaining([

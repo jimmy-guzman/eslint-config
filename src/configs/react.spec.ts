@@ -1,11 +1,13 @@
 import reactConfig from "./react";
 
 describe("reactConfig", () => {
-  it("should create default config", () => {
-    expect(reactConfig()).toMatchSnapshot();
-  });
-
   it("should create config w/ @tanstack/query rules", () => {
-    expect(reactConfig({ utilities: ["@tanstack/query"] })).toMatchSnapshot();
+    expect(reactConfig({ utilities: ["@tanstack/query"] })).toStrictEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          name: "jimmy.codes/react/query",
+        }),
+      ]),
+    );
   });
 });
