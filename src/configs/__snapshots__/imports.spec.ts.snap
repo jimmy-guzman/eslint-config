@@ -8777,13 +8777,14 @@ exports[`importsConfig > should create default config 1`] = `
       "simple-import-sort": {
         "meta": {
           "name": "eslint-plugin-simple-import-sort",
-          "version": "12.1.0",
+          "version": "12.1.1",
         },
         "rules": {
           "exports": {
             "create": [Function],
             "meta": {
               "docs": {
+                "description": "Automatically sort exports.",
                 "url": "https://github.com/lydell/eslint-plugin-simple-import-sort#sort-order",
               },
               "fixable": "code",
@@ -8798,6 +8799,7 @@ exports[`importsConfig > should create default config 1`] = `
             "create": [Function],
             "meta": {
               "docs": {
+                "description": "Automatically sort imports.",
                 "url": "https://github.com/lydell/eslint-plugin-simple-import-sort#sort-order",
               },
               "fixable": "code",
