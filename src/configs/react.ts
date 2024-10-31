@@ -13,7 +13,7 @@ import { type ReactOptions, type TypedConfigItem } from "../types";
 
 const reactConfig = (
   { utilities = [] }: ReactOptions = {},
-  autoDetect = false,
+  autoDetect = true,
 ) => {
   const includeReactQuery =
     utilities.includes("@tanstack/query") || (autoDetect && hasReactQuery());

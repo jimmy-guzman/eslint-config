@@ -8,8 +8,6 @@
 
 > 🔍 another opinionated [eslint](https://eslint.org) config
 
-_This is an evolution of [eslint-config-jimmy-guzman](https://github.com/jimmy-guzman/eslint-config-jimmy-guzman)_
-
 ## 🛠️ Usage
 
 _For a better experience, make sure to use [@jimmy.codes/prettier-config](https://github.com/jimmy-guzman/prettier-config) as well_
@@ -42,6 +40,8 @@ And if you're using [VS Code](https://code.visualstudio.com), make sure to enabl
 
 ### 🔧 Configuration
 
+**By default all rules are enabled based on the project's dependencies.**
+
 This package contains rules that can be enabled or disabled as follows:
 
 ```js
@@ -49,34 +49,34 @@ import jimmyDotCodes from "@jimmy.codes/eslint-config";
 
 export default jimmyDotCodes({
   /**
-   * Are TypeScript rules are enabled?
+   * Are TypeScript rules enabled?
    * @default false
    */
   typescript: true,
   /**
-   * Are React rules are enabled?
+   * Are React rules enabled?
    * @default false
    */
   react: true,
   /**
-   * Are Astro rules are enabled?
+   * Are Astro rules enabled?
    * @default false
    */
   astro: true,
   /**
-   * Are testing rules are enabled?
+   * Are testing rules enabled?
    * @default false
    */
   testing: true,
 });
 ```
 
-Or you can enable auto detection to enable rules based on a project's dependencies
+Or you can turn off auto detection to enable rules based on a project's dependencies
 
 ```js
 import jimmyDotCodes from "@jimmy.codes/eslint-config";
 
-export default jimmyDotCodes({ autoDetect: true });
+export default jimmyDotCodes({ autoDetect: false });
 ```
 
 #### TypeScript
@@ -122,7 +122,7 @@ export default jimmyDotCodes({
 });
 ```
 
-#### Overrides
+#### Extending the Configuration
 
 You can also extend the configuration:
 

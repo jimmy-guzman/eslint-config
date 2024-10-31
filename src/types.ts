@@ -51,26 +51,26 @@ export type TypedConfigItem = Omit<
 
 export interface Options {
   /**
-   * Are TypeScript rules are enabled?
+   * Are TypeScript rules enabled?
    * @default false
    */
   typescript?: boolean | TypescriptOptions;
   /**
-   * Are React rules are enabled?
+   * Are React rules enabled?
    * @default false
    */
   react?: boolean | ReactOptions;
   /**
-   * Are Jest rules are enabled?
+   * Are Jest rules enabled?
    * @default false
    */
   /**
-   * Are testing rules are enabled?
+   * Are testing rules enabled?
    * @default false
    */
   testing?: boolean | TestingOptions;
   /**
-   * Are astro rules are enabled?
+   * Are astro rules enabled?
    * @default false
    */
   astro?: boolean;
@@ -81,7 +81,7 @@ export interface Options {
   configs?: TypedConfigItem[] | Linter.Config[];
   /**
    * Is auto detection enabled?
-   * @default false
+   * @default true
    */
   autoDetect?: boolean;
 }

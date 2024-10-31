@@ -8,7 +8,7 @@ import testingLibraryConfig from "./testing-library";
 
 const testingConfig = (
   { framework = "vitest", utilities }: TestingOptions = {},
-  autoDetect = false,
+  autoDetect = true,
 ) => {
   const isVitest = autoDetect ? hasVitest() : framework === "vitest";
   const isJest = framework === "jest" || (autoDetect && hasJest());

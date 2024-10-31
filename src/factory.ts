@@ -23,7 +23,7 @@ export const jimmyDotCodes = (
     react = false,
     testing = false,
     astro = false,
-    autoDetect = false,
+    autoDetect = true,
     configs = [],
   }: Options = {},
   ...moreConfigs: TypedConfigItem[] | Linter.Config[]

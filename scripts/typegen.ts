@@ -15,7 +15,7 @@ const ruleDts = await flatConfigsToRulesDTS(
       },
     },
     // @ts-expect-error TODO: config types don't seem to match
-    ...config({ autoDetect: true }),
+    ...config(),
   ],
   {
     includeAugmentation: false,
