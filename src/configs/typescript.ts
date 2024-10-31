@@ -32,6 +32,7 @@ const typescriptConfig = (options: TypescriptOptions) => {
           "error",
           { allowNumber: true },
         ],
+        "@typescript-eslint/no-deprecated": "warn",
       },
     },
     {
