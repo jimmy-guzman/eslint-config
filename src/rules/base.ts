@@ -4,10 +4,10 @@ import { type Rules } from "../types";
 
 export const baseRules = {
   ...eslint.configs.recommended.rules,
-  "curly": ["error", "multi-or-nest", "consistent"],
   "arrow-body-style": ["error", "always"],
-  "object-shorthand": "error",
-  "no-useless-rename": "error",
-  "prefer-arrow-callback": "error",
+  "curly": ["error", "multi-or-nest", "consistent"],
   "no-console": "warn",
+  "no-useless-rename": "error",
+  "object-shorthand": "error",
+  "prefer-arrow-callback": "error",
 } satisfies Rules;

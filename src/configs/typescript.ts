@@ -7,7 +7,6 @@ const typescriptConfig = (options: TypescriptOptions) => {
   return config(
     ...configs.strictTypeChecked,
     {
-      name: "jimmy.codes/typescript",
       extends: [...configs.strictTypeChecked, ...configs.stylisticTypeChecked],
       languageOptions: {
         parserOptions: {
@@ -15,15 +14,17 @@ const typescriptConfig = (options: TypescriptOptions) => {
           tsconfigRootDir: process.cwd(),
         },
       },
+      name: "jimmy.codes/typescript",
       rules: {
-        "@typescript-eslint/consistent-type-imports": [
-          "error",
-          { fixStyle: "inline-type-imports" },
-        ],
         "@typescript-eslint/consistent-type-exports": [
           "error",
           { fixMixedExportsWithInlineTypeSpecifier: true },
         ],
+        "@typescript-eslint/consistent-type-imports": [
+          "error",
+          { fixStyle: "inline-type-imports" },
+        ],
+        "@typescript-eslint/no-deprecated": "warn",
         "@typescript-eslint/no-misused-promises": [
           "error",
           { checksVoidReturn: { attributes: false } },
@@ -32,7 +33,6 @@ const typescriptConfig = (options: TypescriptOptions) => {
           "error",
           { allowNumber: true },
         ],
-        "@typescript-eslint/no-deprecated": "warn",
       },
     },
     {

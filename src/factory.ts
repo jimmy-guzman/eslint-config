@@ -4,6 +4,7 @@ import eslintConfigPrettier from "eslint-config-prettier";
 import { astroConfig } from "./configs/astro";
 import { commonjsConfig } from "./configs/commonjs";
 import importsConfig from "./configs/imports";
+import perfectionistConfig from "./configs/perfectionist";
 import reactConfig from "./configs/react";
 import testingConfig from "./configs/testing";
 import typescriptConfig from "./configs/typescript";
@@ -19,15 +20,15 @@ import {
 
 export const jimmyDotCodes = (
   {
-    typescript = false,
-    react = false,
-    testing = false,
     astro = false,
     autoDetect = true,
     configs = [],
     ignores = [],
+    react = false,
+    testing = false,
+    typescript = false,
   }: Options = {},
-  ...moreConfigs: TypedConfigItem[] | Linter.Config[]
+  ...moreConfigs: Linter.Config[] | TypedConfigItem[]
 ) => {
   const isTypescriptEnabled = typescript || (autoDetect && hasTypescript());
   const isReactEnabled = react || (autoDetect && hasReact());
@@ -36,6 +37,7 @@ export const jimmyDotCodes = (
 
   return [
     { name: "jimmy.codes/base", rules: baseRules },
+    ...perfectionistConfig(),
     ...importsConfig({ typescript: isTypescriptEnabled }),
     ...(isTypescriptEnabled
       ? typescriptConfig(getTypescriptOptions(typescript))
@@ -48,8 +50,8 @@ export const jimmyDotCodes = (
     { name: "jimmy.codes/disabled", ...eslintConfigPrettier },
     ...commonjsConfig(),
     {
-      name: "jimmy.codes/ignores",
       ignores: [...GLOB_IGNORES, ...ignores],
+      name: "jimmy.codes/ignores",
     },
     ...configs,
     ...moreConfigs,

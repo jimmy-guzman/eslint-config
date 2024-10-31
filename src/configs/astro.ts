@@ -12,11 +12,6 @@ export const astroConfig = () => {
   return [
     {
       files,
-      name: "jimmy.codes/astro",
-      plugins: {
-        "astro": pluginAstro,
-        "jsx-a11y": jsxA11y,
-      },
       languageOptions: {
         globals: {
           ...globals.node,
@@ -24,11 +19,16 @@ export const astroConfig = () => {
           Fragment: false,
         },
         parser: parserAstro,
-        sourceType: "module",
         parserOptions: {
-          parser: parserTs,
           extraFileExtensions: [".astro"],
+          parser: parserTs,
         },
+        sourceType: "module",
+      },
+      name: "jimmy.codes/astro",
+      plugins: {
+        "astro": pluginAstro,
+        "jsx-a11y": jsxA11y,
       },
       processor: "astro/client-side-ts",
       rules: {
@@ -39,9 +39,9 @@ export const astroConfig = () => {
         "astro/no-deprecated-astro-fetchcontent": "error",
         "astro/no-deprecated-astro-resolve": "error",
         "astro/no-deprecated-getentrybyslug": "error",
+        "astro/no-exports-from-components": "off",
         "astro/no-unused-define-vars-in-style": "error",
         "astro/valid-compile": "error",
-        "astro/no-exports-from-components": "off",
       },
     },
     {
@@ -50,10 +50,10 @@ export const astroConfig = () => {
       name: "jimmy.codes/astro/disable-type-checked",
     },
     {
+      name: "jimmy.codes/astro/imports",
       settings: {
         "import-x/core-modules": ["astro:content"],
       },
-      name: "jimmy.codes/astro/imports",
     },
   ];
 };

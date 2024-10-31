@@ -65,14 +65,14 @@ declare module "eslint-plugin-jest" {
 
   interface Configs {
     "flat/recommended": {
+      languageOptions: LanguageOptions;
       plugins: string[];
       rules: Rules;
-      languageOptions: LanguageOptions;
     };
     "flat/style": {
+      languageOptions: LanguageOptions;
       plugins: string[];
       rules: Rules;
-      languageOptions: LanguageOptions;
     };
   }
 

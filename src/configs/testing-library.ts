@@ -7,11 +7,11 @@ import { type TypedConfigItem } from "../types";
 const testingLibraryConfig = () => {
   return [
     {
-      name: "jimmy.codes/testing/testing-library",
       files: GLOB_TESTS,
+      name: "jimmy.codes/testing/testing-library",
       plugins: {
-        "testing-library": testingLibrary,
         "jest-dom": jestDom,
+        "testing-library": testingLibrary,
       },
       rules: {
         ...testingLibrary.configs.react.rules,
@@ -19,8 +19,8 @@ const testingLibraryConfig = () => {
       },
     },
     {
-      name: "jimmy.codes/testing/testing-library/disabled",
       files: GLOB_E2E,
+      name: "jimmy.codes/testing/testing-library/disabled",
       rules: {
         "testing-library/prefer-screen-queries": "off",
       },

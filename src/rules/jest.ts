@@ -5,8 +5,6 @@ import { type Rules } from "../types";
 export const jestRules = {
   ...jest.configs["flat/recommended"].rules,
   ...jest.configs["flat/style"].rules,
-  "jest/no-alias-methods": "error",
-  "jest/no-commented-out-tests": "error",
   "jest/consistent-test-it": [
     "error",
     {
@@ -14,6 +12,8 @@ export const jestRules = {
       withinDescribe: "it",
     },
   ],
+  "jest/no-alias-methods": "error",
+  "jest/no-commented-out-tests": "error",
   "jest/no-conditional-in-test": "error",
   "jest/no-confusing-set-timeout": "error",
   "jest/no-duplicate-hooks": "error",

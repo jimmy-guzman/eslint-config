@@ -6,15 +6,15 @@ describe("importsConfig", () => {
 
     expect(imports).toStrictEqual(
       expect.objectContaining({
-        settings: {
-          "import-x/parsers": {
-            espree: [".js", ".cjs", ".mjs", ".jsx"],
-          },
-        },
         languageOptions: {
           parserOptions: {
             ecmaVersion: "latest",
             sourceType: "module",
+          },
+        },
+        settings: {
+          "import-x/parsers": {
+            espree: [".js", ".cjs", ".mjs", ".jsx"],
           },
         },
       }),

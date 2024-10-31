@@ -20,38 +20,39 @@ const reactConfig = (
 
   return [
     {
-      name: "jimmy.codes/react",
       files: [GLOB_JSX, GLOB_TSX],
-      plugins: {
-        react,
-        "react-hooks": reactHooks,
-        "jsx-a11y": jsxA11y,
-        "react-refresh": reactRefresh,
-      },
       languageOptions: {
-        parserOptions: {
-          jsxPragma: null,
-          ecmaFeatures: {
-            jsx: true,
-          },
-        },
         globals: {
           ...globals.browser,
         },
+        parserOptions: {
+          ecmaFeatures: {
+            jsx: true,
+          },
+          jsxPragma: null,
+        },
       },
+      name: "jimmy.codes/react",
+      plugins: {
+        "jsx-a11y": jsxA11y,
+        react,
+        "react-hooks": reactHooks,
+        "react-refresh": reactRefresh,
+      },
+      rules: reactRules,
       settings: {
         react: {
           version: "detect",
         },
       },
-      rules: reactRules,
     },
     ...(includeReactQuery
       ? [
           {
-            name: "jimmy.codes/react/query",
             files: [GLOB_JSX, GLOB_TSX],
+            name: "jimmy.codes/react/query",
             plugins: {
+              // TODO: remove unknown conversion
               "@tanstack/query": queryPlugin as unknown as ESLint.Plugin,
             },
             rules: {

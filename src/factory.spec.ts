@@ -7,7 +7,7 @@ vi.mock("local-pkg");
 describe("jimmyDotCodes", () => {
   it("should create configuration w/ typescript", () => {
     expect(
-      jimmyDotCodes({ typescript: true, autoDetect: false }),
+      jimmyDotCodes({ autoDetect: false, typescript: true }),
     ).toStrictEqual(
       expect.arrayContaining([
         expect.objectContaining({ name: "jimmy.codes/typescript" }),
@@ -17,7 +17,7 @@ describe("jimmyDotCodes", () => {
   });
 
   it("should create configuration w/ react", () => {
-    expect(jimmyDotCodes({ react: true, autoDetect: false })).toStrictEqual(
+    expect(jimmyDotCodes({ autoDetect: false, react: true })).toStrictEqual(
       expect.arrayContaining([
         expect.objectContaining({ name: "jimmy.codes/react" }),
       ]),
@@ -27,8 +27,8 @@ describe("jimmyDotCodes", () => {
   it("should create configuration w/ react & @tanstack/query", () => {
     expect(
       jimmyDotCodes({
-        react: { utilities: ["@tanstack/query"] },
         autoDetect: false,
+        react: { utilities: ["@tanstack/query"] },
       }),
     ).toStrictEqual(
       expect.arrayContaining([
@@ -40,7 +40,7 @@ describe("jimmyDotCodes", () => {
 
   it("should create configuration w/ jest", () => {
     expect(
-      jimmyDotCodes({ testing: { framework: "jest" }, autoDetect: false }),
+      jimmyDotCodes({ autoDetect: false, testing: { framework: "jest" } }),
     ).toStrictEqual(
       expect.arrayContaining([
         expect.objectContaining({ name: "jimmy.codes/testing" }),
@@ -52,7 +52,7 @@ describe("jimmyDotCodes", () => {
   });
 
   it("should create configuration w/ vitest", () => {
-    expect(jimmyDotCodes({ testing: true, autoDetect: false })).toStrictEqual(
+    expect(jimmyDotCodes({ autoDetect: false, testing: true })).toStrictEqual(
       expect.arrayContaining([
         expect.objectContaining({ name: "jimmy.codes/testing" }),
         expect.objectContaining({ name: "jimmy.codes/testing/disabled" }),
@@ -65,9 +65,9 @@ describe("jimmyDotCodes", () => {
   it("should create configuration w/ jest & react & testing library", () => {
     expect(
       jimmyDotCodes({
+        autoDetect: false,
         react: true,
         testing: { framework: "jest", utilities: ["testing-library"] },
-        autoDetect: false,
       }),
     ).toStrictEqual(
       expect.arrayContaining([
@@ -88,9 +88,9 @@ describe("jimmyDotCodes", () => {
   it("should create configuration w/ vitest & react & testing library", () => {
     expect(
       jimmyDotCodes({
+        autoDetect: false,
         react: true,
         testing: { utilities: ["testing-library"] },
-        autoDetect: false,
       }),
     ).toStrictEqual(
       expect.arrayContaining([

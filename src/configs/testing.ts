@@ -18,15 +18,15 @@ const testingConfig = (
 
   return [
     {
-      name: "jimmy.codes/testing",
       files: GLOB_TESTS,
+      name: "jimmy.codes/testing",
       ...jest.configs["flat/recommended"],
     },
     ...(isVitest
       ? [
           {
-            name: "jimmy.codes/testing/vitest",
             files: GLOB_TESTS,
+            name: "jimmy.codes/testing/vitest",
             ...jest.configs["flat/recommended"],
             rules: {
               ...jestRules,
@@ -44,16 +44,16 @@ const testingConfig = (
     ...(isJest
       ? [
           {
-            name: "jimmy.codes/testing/jest",
             files: GLOB_TESTS,
+            name: "jimmy.codes/testing/jest",
             ...jest.configs["flat/recommended"],
             rules: jestRules,
           },
         ]
       : []),
     {
-      name: "jimmy.codes/testing/disabled",
       files: GLOB_E2E,
+      name: "jimmy.codes/testing/disabled",
       rules: {
         "jest/expect-expect": "off",
         "jest/no-deprecated-functions": "off",

@@ -12,7 +12,7 @@ export interface TypescriptOptions {
   project: string | string[];
 }
 
-type TestingFrameworks = "vitest" | "jest";
+type TestingFrameworks = "jest" | "vitest";
 type TestingUtilities = "testing-library";
 type ReactUtilities = "@tanstack/query";
 
@@ -37,24 +37,36 @@ export interface ReactOptions {
   utilities?: ReactUtilities[];
 }
 
-export type TypedConfigItem = Omit<
-  Linter.Config<Linter.RulesRecord & Rules>,
-  "plugins"
-> & {
+export type TypedConfigItem = {
   /**
    * An object containing a name-value mapping of plugin names to plugin objects. When `files` is specified, these plugins are only available to the matching files.
    *
    * @see [Using plugins in your configuration](https://eslint.org/docs/latest/user-guide/configuring/configuration-files-new#using-plugins-in-your-configuration)
    */
   plugins?: Record<string, unknown>;
-};
+} & Omit<Linter.Config<Linter.RulesRecord & Rules>, "plugins">;
 
 export interface Options {
   /**
-   * Are TypeScript rules enabled?
+   * Are astro rules enabled?
    * @default false
    */
-  typescript?: boolean | TypescriptOptions;
+  astro?: boolean;
+  /**
+   * Is auto detection enabled?
+   * @default true
+   */
+  autoDetect?: boolean;
+  /**
+   * Additional configs to either extend or overrides configurations
+   * @default []
+   */
+  configs?: Linter.Config[] | TypedConfigItem[];
+  /**
+   * Glob patterns for files that should be ignored
+   * @see [Ignoring files](https://eslint.org/docs/latest/use/configure/ignore)
+   */
+  ignores?: string[];
   /**
    * Are React rules enabled?
    * @default false
@@ -70,23 +82,8 @@ export interface Options {
    */
   testing?: boolean | TestingOptions;
   /**
-   * Are astro rules enabled?
+   * Are TypeScript rules enabled?
    * @default false
    */
-  astro?: boolean;
-  /**
-   * Additional configs to either extend or overrides configurations
-   * @default []
-   */
-  configs?: TypedConfigItem[] | Linter.Config[];
-  /**
-   * Is auto detection enabled?
-   * @default true
-   */
-  autoDetect?: boolean;
-  /**
-   * Glob patterns for files that should be ignored
-   * @see [Ignoring files](https://eslint.org/docs/latest/use/configure/ignore)
-   */
-  ignores?: string[];
+  typescript?: boolean | TypescriptOptions;
 }
