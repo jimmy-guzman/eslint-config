@@ -148,6 +148,16 @@ export default jimmyDotCodes(
 );
 ```
 
+You can also extend what is ignored:
+
+```ts
+import jimmyDotCodes from "@jimmy.codes/eslint-config";
+
+export default jimmyDotCodes({
+  ignores: ["**/*.mjs"],
+});
+```
+
 ## ❤️ Credits
 
 - [@antfu/eslint-config](https://github.com/antfu/eslint-config) by [Anthony Fu](https://antfu.me)

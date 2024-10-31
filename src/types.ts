@@ -84,4 +84,9 @@ export interface Options {
    * @default true
    */
   autoDetect?: boolean;
+  /**
+   * Glob patterns for files that should be ignored
+   * @see [Ignoring files](https://eslint.org/docs/latest/use/configure/ignore)
+   */
+  ignores?: string[];
 }

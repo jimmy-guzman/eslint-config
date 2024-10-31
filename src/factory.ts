@@ -25,6 +25,7 @@ export const jimmyDotCodes = (
     astro = false,
     autoDetect = true,
     configs = [],
+    ignores = [],
   }: Options = {},
   ...moreConfigs: TypedConfigItem[] | Linter.Config[]
 ) => {
@@ -47,7 +48,8 @@ export const jimmyDotCodes = (
     { name: "jimmy.codes/disabled", ...eslintConfigPrettier },
     ...commonjsConfig(),
     {
-      ignores: GLOB_IGNORES,
+      name: "jimmy.codes/ignores",
+      ignores: [...GLOB_IGNORES, ...ignores],
     },
     ...configs,
     ...moreConfigs,
