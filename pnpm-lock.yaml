@@ -30,8 +30,8 @@ importers:
         specifier: ^3.6.1
         version: 3.6.1(@typescript-eslint/parser@7.6.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)
       eslint-plugin-astro:
-        specifier: ^1.1.1
-        version: 1.1.1(eslint@8.57.0)(typescript@5.4.5)
+        specifier: ^1.3.0
+        version: 1.3.0(eslint@8.57.0)(typescript@5.4.5)
       eslint-plugin-import-x:
         specifier: ^4.4.0
         version: 4.4.0(eslint@8.57.0)(typescript@5.4.5)
@@ -1469,10 +1469,6 @@ packages:
     resolution: {integrity: sha512-h02rYQn8J+MureCvHVVzhl69/GAfQGPQZmOMjG1KfCl7o3HtMSlPaPUAPu6lLctXI5ySRGIYk94clD/AUMCUgQ==}
     engines: {node: ^18.18.0 || >=20.0.0}
 
-  '@typescript-eslint/types@7.8.0':
-    resolution: {integrity: sha512-wf0peJ+ZGlcH+2ZS23aJbOv+ztjeeP8uQ9GgwMJGVLx/Nj9CJt17GWgWWoSmoRVKAX2X+7fzEnAjxdvK2gqCLw==}
-    engines: {node: ^18.18.0 || >=20.0.0}
-
   '@typescript-eslint/types@8.12.2':
     resolution: {integrity: sha512-VwDwMF1SZ7wPBUZwmMdnDJ6sIFk4K4s+ALKLP6aIQsISkPv8jhiw65sAK6SuWODN/ix+m+HgbYDkH+zLjrzvOA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -2349,8 +2345,8 @@ packages:
       eslint-import-resolver-webpack:
         optional: true
 
-  eslint-plugin-astro@1.1.1:
-    resolution: {integrity: sha512-DDRPLz25oahOHpET5ubbK/G/O8D2CP18XKhQmf8r2jF4BJ5JCk8YGfK4kNmInsw5J41eeZiK1T8aey5ItLrr/g==}
+  eslint-plugin-astro@1.3.0:
+    resolution: {integrity: sha512-T4bAYOdF0V8zqFF/EeQat5xcYQV5nDmLeZgD1eHbcogY94HBOncwZxsOgcPNGpdCLXkpBDNbF2OMtrj26f5RFA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.57.0'
@@ -6212,8 +6208,6 @@ snapshots:
 
   '@typescript-eslint/types@7.6.0': {}
 
-  '@typescript-eslint/types@7.8.0': {}
-
   '@typescript-eslint/types@8.12.2': {}
 
   '@typescript-eslint/typescript-estree@5.62.0(typescript@5.4.5)':
@@ -7342,11 +7336,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-astro@1.1.1(eslint@8.57.0)(typescript@5.4.5):
+  eslint-plugin-astro@1.3.0(eslint@8.57.0)(typescript@5.4.5):
     dependencies:
       '@eslint-community/eslint-utils': 4.4.0(eslint@8.57.0)
       '@jridgewell/sourcemap-codec': 1.5.0
-      '@typescript-eslint/types': 7.8.0
+      '@typescript-eslint/types': 8.12.2
       astro-eslint-parser: 1.0.3(typescript@5.4.5)
       eslint: 8.57.0
       eslint-compat-utils: 0.5.0(eslint@8.57.0)

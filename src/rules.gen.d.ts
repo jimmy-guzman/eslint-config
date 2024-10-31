@@ -1063,6 +1063,11 @@ export interface RuleOptions {
    */
   "astro/semi"?: Linter.RuleEntry<AstroSemi>;
   /**
+   * enforce sorting of attributes
+   * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/sort-attributes/
+   */
+  "astro/sort-attributes"?: Linter.RuleEntry<AstroSortAttributes>;
+  /**
    * disallow warnings when compiling.
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/valid-compile/
    */
@@ -8736,6 +8741,16 @@ type AstroSemi =
       {
         omitLastInOneLineBlock?: boolean;
         omitLastInOneLineClassBody?: boolean;
+      },
+    ];
+// ----- astro/sort-attributes -----
+type AstroSortAttributes =
+  | []
+  | [
+      {
+        type?: "alphabetical" | "line-length";
+        ignoreCase?: boolean;
+        order?: "asc" | "desc";
       },
     ];
 // ----- block-spacing -----
