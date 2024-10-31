@@ -1,7 +1,7 @@
 // @ts-check
-import JITI from "jiti";
+import { createJiti } from "jiti";
 
-const jiti = JITI(import.meta.url);
+const jiti = createJiti(import.meta.url);
 
 /**
  * @type {import('./src').default}
