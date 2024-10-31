@@ -1,4 +1,5 @@
-import * as reactQuery from "@tanstack/eslint-plugin-query";
+import queryPlugin from "@tanstack/eslint-plugin-query";
+import { type ESLint } from "eslint";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -51,7 +52,7 @@ const reactConfig = (
             name: "jimmy.codes/react/query",
             files: [GLOB_JSX, GLOB_TSX],
             plugins: {
-              "@tanstack/query": reactQuery,
+              "@tanstack/query": queryPlugin as unknown as ESLint.Plugin,
             },
             rules: {
               "@tanstack/query/exhaustive-deps": "error",
