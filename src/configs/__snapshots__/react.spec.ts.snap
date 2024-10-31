@@ -2241,6 +2241,7 @@ exports[`reactConfig > should create config w/ @tanstack/query rules 1`] = `
               "react/forbid-elements": 2,
               "react/forbid-foreign-prop-types": 2,
               "react/forbid-prop-types": 2,
+              "react/forward-ref-uses-ref": 2,
               "react/function-component-definition": 2,
               "react/hook-use-state": 2,
               "react/iframe-missing-sandbox": 2,
@@ -2275,6 +2276,7 @@ exports[`reactConfig > should create config w/ @tanstack/query rules 1`] = `
               "react/jsx-one-expression-per-line": 2,
               "react/jsx-pascal-case": 2,
               "react/jsx-props-no-multi-spaces": 2,
+              "react/jsx-props-no-spread-multi": 2,
               "react/jsx-props-no-spreading": 2,
               "react/jsx-sort-props": 2,
               "react/jsx-tag-spacing": 2,
@@ -2329,6 +2331,176 @@ exports[`reactConfig > should create config w/ @tanstack/query rules 1`] = `
               "react/static-property-placement": 2,
               "react/style-prop-object": 2,
               "react/void-dom-elements-no-children": 2,
+            },
+          },
+          "flat": {
+            "all": {
+              "languageOptions": {
+                "parserOptions": {
+                  "ecmaFeatures": {
+                    "jsx": true,
+                  },
+                },
+              },
+              "plugins": {
+                "react": [Circular],
+              },
+              "rules": {
+                "react/boolean-prop-naming": 2,
+                "react/button-has-type": 2,
+                "react/checked-requires-onchange-or-readonly": 2,
+                "react/default-props-match-prop-types": 2,
+                "react/destructuring-assignment": 2,
+                "react/display-name": 2,
+                "react/forbid-component-props": 2,
+                "react/forbid-dom-props": 2,
+                "react/forbid-elements": 2,
+                "react/forbid-foreign-prop-types": 2,
+                "react/forbid-prop-types": 2,
+                "react/forward-ref-uses-ref": 2,
+                "react/function-component-definition": 2,
+                "react/hook-use-state": 2,
+                "react/iframe-missing-sandbox": 2,
+                "react/jsx-boolean-value": 2,
+                "react/jsx-child-element-spacing": 2,
+                "react/jsx-closing-bracket-location": 2,
+                "react/jsx-closing-tag-location": 2,
+                "react/jsx-curly-brace-presence": 2,
+                "react/jsx-curly-newline": 2,
+                "react/jsx-curly-spacing": 2,
+                "react/jsx-equals-spacing": 2,
+                "react/jsx-filename-extension": 2,
+                "react/jsx-first-prop-new-line": 2,
+                "react/jsx-fragments": 2,
+                "react/jsx-handler-names": 2,
+                "react/jsx-indent": 2,
+                "react/jsx-indent-props": 2,
+                "react/jsx-key": 2,
+                "react/jsx-max-depth": 2,
+                "react/jsx-max-props-per-line": 2,
+                "react/jsx-newline": 2,
+                "react/jsx-no-bind": 2,
+                "react/jsx-no-comment-textnodes": 2,
+                "react/jsx-no-constructed-context-values": 2,
+                "react/jsx-no-duplicate-props": 2,
+                "react/jsx-no-leaked-render": 2,
+                "react/jsx-no-literals": 2,
+                "react/jsx-no-script-url": 2,
+                "react/jsx-no-target-blank": 2,
+                "react/jsx-no-undef": 2,
+                "react/jsx-no-useless-fragment": 2,
+                "react/jsx-one-expression-per-line": 2,
+                "react/jsx-pascal-case": 2,
+                "react/jsx-props-no-multi-spaces": 2,
+                "react/jsx-props-no-spread-multi": 2,
+                "react/jsx-props-no-spreading": 2,
+                "react/jsx-sort-props": 2,
+                "react/jsx-tag-spacing": 2,
+                "react/jsx-uses-react": 2,
+                "react/jsx-uses-vars": 2,
+                "react/jsx-wrap-multilines": 2,
+                "react/no-access-state-in-setstate": 2,
+                "react/no-adjacent-inline-elements": 2,
+                "react/no-array-index-key": 2,
+                "react/no-arrow-function-lifecycle": 2,
+                "react/no-children-prop": 2,
+                "react/no-danger": 2,
+                "react/no-danger-with-children": 2,
+                "react/no-deprecated": 2,
+                "react/no-did-mount-set-state": 2,
+                "react/no-did-update-set-state": 2,
+                "react/no-direct-mutation-state": 2,
+                "react/no-find-dom-node": 2,
+                "react/no-invalid-html-attribute": 2,
+                "react/no-is-mounted": 2,
+                "react/no-multi-comp": 2,
+                "react/no-namespace": 2,
+                "react/no-object-type-as-default-prop": 2,
+                "react/no-redundant-should-component-update": 2,
+                "react/no-render-return-value": 2,
+                "react/no-set-state": 2,
+                "react/no-string-refs": 2,
+                "react/no-this-in-sfc": 2,
+                "react/no-typos": 2,
+                "react/no-unescaped-entities": 2,
+                "react/no-unknown-property": 2,
+                "react/no-unsafe": 2,
+                "react/no-unstable-nested-components": 2,
+                "react/no-unused-class-component-methods": 2,
+                "react/no-unused-prop-types": 2,
+                "react/no-unused-state": 2,
+                "react/no-will-update-set-state": 2,
+                "react/prefer-es6-class": 2,
+                "react/prefer-exact-props": 2,
+                "react/prefer-read-only-props": 2,
+                "react/prefer-stateless-function": 2,
+                "react/prop-types": 2,
+                "react/react-in-jsx-scope": 2,
+                "react/require-default-props": 2,
+                "react/require-optimization": 2,
+                "react/require-render-return": 2,
+                "react/self-closing-comp": 2,
+                "react/sort-comp": 2,
+                "react/sort-default-props": 2,
+                "react/sort-prop-types": 2,
+                "react/state-in-constructor": 2,
+                "react/static-property-placement": 2,
+                "react/style-prop-object": 2,
+                "react/void-dom-elements-no-children": 2,
+              },
+            },
+            "jsx-runtime": {
+              "languageOptions": {
+                "parserOptions": {
+                  "ecmaFeatures": {
+                    "jsx": true,
+                  },
+                  "jsxPragma": null,
+                },
+              },
+              "plugins": {
+                "react": [Circular],
+              },
+              "rules": {
+                "react/jsx-uses-react": 0,
+                "react/react-in-jsx-scope": 0,
+              },
+            },
+            "recommended": {
+              "languageOptions": {
+                "parserOptions": {
+                  "ecmaFeatures": {
+                    "jsx": true,
+                  },
+                },
+              },
+              "plugins": {
+                "react": [Circular],
+              },
+              "rules": {
+                "react/display-name": 2,
+                "react/jsx-key": 2,
+                "react/jsx-no-comment-textnodes": 2,
+                "react/jsx-no-duplicate-props": 2,
+                "react/jsx-no-target-blank": 2,
+                "react/jsx-no-undef": 2,
+                "react/jsx-uses-react": 2,
+                "react/jsx-uses-vars": 2,
+                "react/no-children-prop": 2,
+                "react/no-danger-with-children": 2,
+                "react/no-deprecated": 2,
+                "react/no-direct-mutation-state": 2,
+                "react/no-find-dom-node": 2,
+                "react/no-is-mounted": 2,
+                "react/no-render-return-value": 2,
+                "react/no-string-refs": 2,
+                "react/no-unescaped-entities": 2,
+                "react/no-unknown-property": 2,
+                "react/no-unsafe": 0,
+                "react/prop-types": 2,
+                "react/react-in-jsx-scope": 2,
+                "react/require-render-return": 2,
+              },
             },
           },
           "jsx-runtime": {
@@ -2679,6 +2851,13 @@ exports[`reactConfig > should create config w/ @tanstack/query rules 1`] = `
                                 "type": "array",
                                 "uniqueItems": true,
                               },
+                              "allowedForPatterns": {
+                                "items": {
+                                  "type": "string",
+                                },
+                                "type": "array",
+                                "uniqueItems": true,
+                              },
                               "message": {
                                 "type": "string",
                               },
@@ -2690,8 +2869,28 @@ exports[`reactConfig > should create config w/ @tanstack/query rules 1`] = `
                           },
                           {
                             "additionalProperties": false,
+                            "anyOf": [
+                              {
+                                "required": [
+                                  "disallowedFor",
+                                ],
+                              },
+                              {
+                                "required": [
+                                  "disallowedForPatterns",
+                                ],
+                              },
+                            ],
                             "properties": {
                               "disallowedFor": {
+                                "items": {
+                                  "type": "string",
+                                },
+                                "minItems": 1,
+                                "type": "array",
+                                "uniqueItems": true,
+                              },
+                              "disallowedForPatterns": {
                                 "items": {
                                   "type": "string",
                                 },
@@ -2706,9 +2905,72 @@ exports[`reactConfig > should create config w/ @tanstack/query rules 1`] = `
                                 "type": "string",
                               },
                             },
-                            "required": [
-                              "disallowedFor",
+                            "type": "object",
+                          },
+                          {
+                            "additionalProperties": false,
+                            "properties": {
+                              "allowedFor": {
+                                "items": {
+                                  "type": "string",
+                                },
+                                "type": "array",
+                                "uniqueItems": true,
+                              },
+                              "allowedForPatterns": {
+                                "items": {
+                                  "type": "string",
+                                },
+                                "type": "array",
+                                "uniqueItems": true,
+                              },
+                              "message": {
+                                "type": "string",
+                              },
+                              "propNamePattern": {
+                                "type": "string",
+                              },
+                            },
+                            "type": "object",
+                          },
+                          {
+                            "additionalProperties": false,
+                            "anyOf": [
+                              {
+                                "required": [
+                                  "disallowedFor",
+                                ],
+                              },
+                              {
+                                "required": [
+                                  "disallowedForPatterns",
+                                ],
+                              },
                             ],
+                            "properties": {
+                              "disallowedFor": {
+                                "items": {
+                                  "type": "string",
+                                },
+                                "minItems": 1,
+                                "type": "array",
+                                "uniqueItems": true,
+                              },
+                              "disallowedForPatterns": {
+                                "items": {
+                                  "type": "string",
+                                },
+                                "minItems": 1,
+                                "type": "array",
+                                "uniqueItems": true,
+                              },
+                              "message": {
+                                "type": "string",
+                              },
+                              "propNamePattern": {
+                                "type": "string",
+                              },
+                            },
                             "type": "object",
                           },
                         ],
@@ -2878,6 +3140,25 @@ exports[`reactConfig > should create config w/ @tanstack/query rules 1`] = `
                   "type": "object",
                 },
               ],
+            },
+          },
+          "forward-ref-uses-ref": {
+            "create": [Function],
+            "meta": {
+              "docs": {
+                "category": "Possible Errors",
+                "description": "Require all forwardRef components include a ref parameter",
+                "recommended": false,
+                "url": "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/forward-ref-uses-ref.md",
+              },
+              "hasSuggestions": true,
+              "messages": {
+                "addRefParameter": "Add a ref parameter",
+                "missingRefParameter": "forwardRef is used with this component but no ref parameter is set",
+                "removeForwardRef": "Remove forwardRef wrapper",
+              },
+              "schema": [],
+              "type": "suggestion",
             },
           },
           "function-component-definition": {
@@ -3178,9 +3459,34 @@ exports[`reactConfig > should create config w/ @tanstack/query rules 1`] = `
               },
               "fixable": "whitespace",
               "messages": {
+                "alignWithOpening": "Expected closing tag to be aligned with the line containing the opening tag",
                 "matchIndent": "Expected closing tag to match indentation of opening.",
                 "onOwnLine": "Closing tag of a multiline JSX expression must be on its own line.",
               },
+              "schema": [
+                {
+                  "anyOf": [
+                    {
+                      "enum": [
+                        "tag-aligned",
+                        "line-aligned",
+                      ],
+                    },
+                    {
+                      "additionalProperties": false,
+                      "properties": {
+                        "location": {
+                          "enum": [
+                            "tag-aligned",
+                            "line-aligned",
+                          ],
+                        },
+                      },
+                      "type": "object",
+                    },
+                  ],
+                },
+              ],
             },
           },
           "jsx-curly-brace-presence": {
@@ -3547,6 +3853,13 @@ exports[`reactConfig > should create config w/ @tanstack/query rules 1`] = `
                         "eventHandlerPropPrefix": {
                           "type": "string",
                         },
+                        "ignoreComponentNames": {
+                          "items": {
+                            "type": "string",
+                          },
+                          "type": "array",
+                          "uniqueItems": true,
+                        },
                       },
                       "type": "object",
                     },
@@ -3568,6 +3881,13 @@ exports[`reactConfig > should create config w/ @tanstack/query rules 1`] = `
                           ],
                           "type": "boolean",
                         },
+                        "ignoreComponentNames": {
+                          "items": {
+                            "type": "string",
+                          },
+                          "type": "array",
+                          "uniqueItems": true,
+                        },
                       },
                       "type": "object",
                     },
@@ -3589,6 +3909,13 @@ exports[`reactConfig > should create config w/ @tanstack/query rules 1`] = `
                         "eventHandlerPropPrefix": {
                           "type": "string",
                         },
+                        "ignoreComponentNames": {
+                          "items": {
+                            "type": "string",
+                          },
+                          "type": "array",
+                          "uniqueItems": true,
+                        },
                       },
                       "type": "object",
                     },
@@ -3606,6 +3933,18 @@ exports[`reactConfig > should create config w/ @tanstack/query rules 1`] = `
                       "properties": {
                         "checkInlineFunction": {
                           "type": "boolean",
+                        },
+                      },
+                      "type": "object",
+                    },
+                    {
+                      "properties": {
+                        "ignoreComponentNames": {
+                          "items": {
+                            "type": "string",
+                          },
+                          "type": "array",
+                          "uniqueItems": true,
                         },
                       },
                       "type": "object",
@@ -3954,7 +4293,7 @@ exports[`reactConfig > should create config w/ @tanstack/query rules 1`] = `
                 "withIdentifierMsg": "The '{{variableName}}' {{type}} (at line {{nodeLine}}) passed as the value prop to the Context provider (at line {{usageLine}}) changes every render. To fix this consider wrapping it in a useMemo hook.",
                 "withIdentifierMsgFunc": "The '{{variableName}}' {{type}} (at line {{nodeLine}}) passed as the value prop to the Context provider (at line {{usageLine}}) changes every render. To fix this consider wrapping it in a useCallback hook.",
               },
-              "schema": {},
+              "schema": false,
             },
           },
           "jsx-no-duplicate-props": {
@@ -4030,9 +4369,13 @@ exports[`reactConfig > should create config w/ @tanstack/query rules 1`] = `
               },
               "messages": {
                 "invalidPropValue": "Invalid prop value: "{{text}}"",
+                "invalidPropValueInElement": "Invalid prop value: "{{text}}" in {{element}}",
                 "literalNotInJSXExpression": "Missing JSX expression container around literal string: "{{text}}"",
+                "literalNotInJSXExpressionInElement": "Missing JSX expression container around literal string: "{{text}}" in {{element}}",
                 "noStringsInAttributes": "Strings not allowed in attributes: "{{text}}"",
+                "noStringsInAttributesInElement": "Strings not allowed in attributes: "{{text}}" in {{element}}",
                 "noStringsInJSX": "Strings not allowed in JSX files: "{{text}}"",
+                "noStringsInJSXInElement": "Strings not allowed in JSX files: "{{text}}" in {{element}}",
               },
               "schema": [
                 {
@@ -4044,6 +4387,35 @@ exports[`reactConfig > should create config w/ @tanstack/query rules 1`] = `
                       },
                       "type": "array",
                       "uniqueItems": true,
+                    },
+                    "elementOverrides": {
+                      "patternProperties": {
+                        "^[A-Z][\\w.]*$": {
+                          "properties": {
+                            "allowedStrings": {
+                              "items": {
+                                "type": "string",
+                              },
+                              "type": "array",
+                              "uniqueItems": true,
+                            },
+                            "applyToNestedElements": {
+                              "type": "boolean",
+                            },
+                            "ignoreProps": {
+                              "type": "boolean",
+                            },
+                            "noAttributeStrings": {
+                              "type": "boolean",
+                            },
+                            "noStrings": {
+                              "type": "boolean",
+                            },
+                          },
+                          "type": "object",
+                        },
+                      },
+                      "type": "object",
                     },
                     "ignoreProps": {
                       "type": "boolean",
@@ -4321,6 +4693,20 @@ exports[`reactConfig > should create config w/ @tanstack/query rules 1`] = `
               "schema": [],
             },
           },
+          "jsx-props-no-spread-multi": {
+            "create": [Function],
+            "meta": {
+              "docs": {
+                "category": "Best Practices",
+                "description": "Disallow JSX prop spreading the same identifier multiple times",
+                "recommended": false,
+                "url": "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/jsx-props-no-spread-multi.md",
+              },
+              "messages": {
+                "noMultiSpreading": "Spreading the same expression multiple times is forbidden",
+              },
+            },
+          },
           "jsx-props-no-spreading": {
             "create": [Function],
             "meta": {
@@ -4350,6 +4736,12 @@ exports[`reactConfig > should create config w/ @tanstack/query rules 1`] = `
                             "uniqueItems": true,
                           },
                           "type": "array",
+                        },
+                        "explicitSpread": {
+                          "enum": [
+                            "enforce",
+                            "ignore",
+                          ],
                         },
                         "html": {
                           "enum": [
@@ -4803,7 +5195,21 @@ exports[`reactConfig > should create config w/ @tanstack/query rules 1`] = `
               "messages": {
                 "dangerousProp": "Dangerous property '{{name}}' found",
               },
-              "schema": [],
+              "schema": [
+                {
+                  "properties": {
+                    "customComponentNames": {
+                      "items": {
+                        "type": "string",
+                      },
+                      "minItems": 0,
+                      "type": "array",
+                      "uniqueItems": true,
+                    },
+                  },
+                  "type": "object",
+                },
+              ],
             },
           },
           "no-danger-with-children": {
@@ -4930,8 +5336,8 @@ exports[`reactConfig > should create config w/ @tanstack/query rules 1`] = `
                 "suggestRemoveDefault": ""remove {{attributeName}}"",
                 "suggestRemoveEmpty": ""remove empty attribute {{attributeName}}"",
                 "suggestRemoveInvalid": "“remove invalid attribute {{reportingValue}}”",
-                "suggestRemoveNonString": "remove non-string value in “{{reportingValue}}”",
-                "suggestRemoveWhitespaces": "remove whitespaces in “{{reportingValue}}”",
+                "suggestRemoveNonString": "remove non-string value in “{{attributeName}}”",
+                "suggestRemoveWhitespaces": "remove whitespaces in “{{attributeName}}”",
               },
               "schema": [
                 {
@@ -5134,7 +5540,9 @@ exports[`reactConfig > should create config w/ @tanstack/query rules 1`] = `
                 "recommended": true,
                 "url": "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/no-unescaped-entities.md",
               },
+              "hasSuggestions": true,
               "messages": {
+                "replaceWithAlt": "Replace with \`{{alt}}\`.",
                 "unescapedEntity": "HTML entity, \`{{entity}}\` , must be escaped.",
                 "unescapedEntityAlts": "\`{{entity}}\` can be escaped with {{alts}}.",
               },
@@ -5256,6 +5664,9 @@ exports[`reactConfig > should create config w/ @tanstack/query rules 1`] = `
                         "type": "string",
                       },
                       "type": "array",
+                    },
+                    "propNamePattern": {
+                      "type": "string",
                     },
                   },
                   "type": "object",
@@ -8650,6 +9061,7 @@ exports[`reactConfig > should create default config 1`] = `
               "react/forbid-elements": 2,
               "react/forbid-foreign-prop-types": 2,
               "react/forbid-prop-types": 2,
+              "react/forward-ref-uses-ref": 2,
               "react/function-component-definition": 2,
               "react/hook-use-state": 2,
               "react/iframe-missing-sandbox": 2,
@@ -8684,6 +9096,7 @@ exports[`reactConfig > should create default config 1`] = `
               "react/jsx-one-expression-per-line": 2,
               "react/jsx-pascal-case": 2,
               "react/jsx-props-no-multi-spaces": 2,
+              "react/jsx-props-no-spread-multi": 2,
               "react/jsx-props-no-spreading": 2,
               "react/jsx-sort-props": 2,
               "react/jsx-tag-spacing": 2,
@@ -8738,6 +9151,176 @@ exports[`reactConfig > should create default config 1`] = `
               "react/static-property-placement": 2,
               "react/style-prop-object": 2,
               "react/void-dom-elements-no-children": 2,
+            },
+          },
+          "flat": {
+            "all": {
+              "languageOptions": {
+                "parserOptions": {
+                  "ecmaFeatures": {
+                    "jsx": true,
+                  },
+                },
+              },
+              "plugins": {
+                "react": [Circular],
+              },
+              "rules": {
+                "react/boolean-prop-naming": 2,
+                "react/button-has-type": 2,
+                "react/checked-requires-onchange-or-readonly": 2,
+                "react/default-props-match-prop-types": 2,
+                "react/destructuring-assignment": 2,
+                "react/display-name": 2,
+                "react/forbid-component-props": 2,
+                "react/forbid-dom-props": 2,
+                "react/forbid-elements": 2,
+                "react/forbid-foreign-prop-types": 2,
+                "react/forbid-prop-types": 2,
+                "react/forward-ref-uses-ref": 2,
+                "react/function-component-definition": 2,
+                "react/hook-use-state": 2,
+                "react/iframe-missing-sandbox": 2,
+                "react/jsx-boolean-value": 2,
+                "react/jsx-child-element-spacing": 2,
+                "react/jsx-closing-bracket-location": 2,
+                "react/jsx-closing-tag-location": 2,
+                "react/jsx-curly-brace-presence": 2,
+                "react/jsx-curly-newline": 2,
+                "react/jsx-curly-spacing": 2,
+                "react/jsx-equals-spacing": 2,
+                "react/jsx-filename-extension": 2,
+                "react/jsx-first-prop-new-line": 2,
+                "react/jsx-fragments": 2,
+                "react/jsx-handler-names": 2,
+                "react/jsx-indent": 2,
+                "react/jsx-indent-props": 2,
+                "react/jsx-key": 2,
+                "react/jsx-max-depth": 2,
+                "react/jsx-max-props-per-line": 2,
+                "react/jsx-newline": 2,
+                "react/jsx-no-bind": 2,
+                "react/jsx-no-comment-textnodes": 2,
+                "react/jsx-no-constructed-context-values": 2,
+                "react/jsx-no-duplicate-props": 2,
+                "react/jsx-no-leaked-render": 2,
+                "react/jsx-no-literals": 2,
+                "react/jsx-no-script-url": 2,
+                "react/jsx-no-target-blank": 2,
+                "react/jsx-no-undef": 2,
+                "react/jsx-no-useless-fragment": 2,
+                "react/jsx-one-expression-per-line": 2,
+                "react/jsx-pascal-case": 2,
+                "react/jsx-props-no-multi-spaces": 2,
+                "react/jsx-props-no-spread-multi": 2,
+                "react/jsx-props-no-spreading": 2,
+                "react/jsx-sort-props": 2,
+                "react/jsx-tag-spacing": 2,
+                "react/jsx-uses-react": 2,
+                "react/jsx-uses-vars": 2,
+                "react/jsx-wrap-multilines": 2,
+                "react/no-access-state-in-setstate": 2,
+                "react/no-adjacent-inline-elements": 2,
+                "react/no-array-index-key": 2,
+                "react/no-arrow-function-lifecycle": 2,
+                "react/no-children-prop": 2,
+                "react/no-danger": 2,
+                "react/no-danger-with-children": 2,
+                "react/no-deprecated": 2,
+                "react/no-did-mount-set-state": 2,
+                "react/no-did-update-set-state": 2,
+                "react/no-direct-mutation-state": 2,
+                "react/no-find-dom-node": 2,
+                "react/no-invalid-html-attribute": 2,
+                "react/no-is-mounted": 2,
+                "react/no-multi-comp": 2,
+                "react/no-namespace": 2,
+                "react/no-object-type-as-default-prop": 2,
+                "react/no-redundant-should-component-update": 2,
+                "react/no-render-return-value": 2,
+                "react/no-set-state": 2,
+                "react/no-string-refs": 2,
+                "react/no-this-in-sfc": 2,
+                "react/no-typos": 2,
+                "react/no-unescaped-entities": 2,
+                "react/no-unknown-property": 2,
+                "react/no-unsafe": 2,
+                "react/no-unstable-nested-components": 2,
+                "react/no-unused-class-component-methods": 2,
+                "react/no-unused-prop-types": 2,
+                "react/no-unused-state": 2,
+                "react/no-will-update-set-state": 2,
+                "react/prefer-es6-class": 2,
+                "react/prefer-exact-props": 2,
+                "react/prefer-read-only-props": 2,
+                "react/prefer-stateless-function": 2,
+                "react/prop-types": 2,
+                "react/react-in-jsx-scope": 2,
+                "react/require-default-props": 2,
+                "react/require-optimization": 2,
+                "react/require-render-return": 2,
+                "react/self-closing-comp": 2,
+                "react/sort-comp": 2,
+                "react/sort-default-props": 2,
+                "react/sort-prop-types": 2,
+                "react/state-in-constructor": 2,
+                "react/static-property-placement": 2,
+                "react/style-prop-object": 2,
+                "react/void-dom-elements-no-children": 2,
+              },
+            },
+            "jsx-runtime": {
+              "languageOptions": {
+                "parserOptions": {
+                  "ecmaFeatures": {
+                    "jsx": true,
+                  },
+                  "jsxPragma": null,
+                },
+              },
+              "plugins": {
+                "react": [Circular],
+              },
+              "rules": {
+                "react/jsx-uses-react": 0,
+                "react/react-in-jsx-scope": 0,
+              },
+            },
+            "recommended": {
+              "languageOptions": {
+                "parserOptions": {
+                  "ecmaFeatures": {
+                    "jsx": true,
+                  },
+                },
+              },
+              "plugins": {
+                "react": [Circular],
+              },
+              "rules": {
+                "react/display-name": 2,
+                "react/jsx-key": 2,
+                "react/jsx-no-comment-textnodes": 2,
+                "react/jsx-no-duplicate-props": 2,
+                "react/jsx-no-target-blank": 2,
+                "react/jsx-no-undef": 2,
+                "react/jsx-uses-react": 2,
+                "react/jsx-uses-vars": 2,
+                "react/no-children-prop": 2,
+                "react/no-danger-with-children": 2,
+                "react/no-deprecated": 2,
+                "react/no-direct-mutation-state": 2,
+                "react/no-find-dom-node": 2,
+                "react/no-is-mounted": 2,
+                "react/no-render-return-value": 2,
+                "react/no-string-refs": 2,
+                "react/no-unescaped-entities": 2,
+                "react/no-unknown-property": 2,
+                "react/no-unsafe": 0,
+                "react/prop-types": 2,
+                "react/react-in-jsx-scope": 2,
+                "react/require-render-return": 2,
+              },
             },
           },
           "jsx-runtime": {
@@ -9088,6 +9671,13 @@ exports[`reactConfig > should create default config 1`] = `
                                 "type": "array",
                                 "uniqueItems": true,
                               },
+                              "allowedForPatterns": {
+                                "items": {
+                                  "type": "string",
+                                },
+                                "type": "array",
+                                "uniqueItems": true,
+                              },
                               "message": {
                                 "type": "string",
                               },
@@ -9099,8 +9689,28 @@ exports[`reactConfig > should create default config 1`] = `
                           },
                           {
                             "additionalProperties": false,
+                            "anyOf": [
+                              {
+                                "required": [
+                                  "disallowedFor",
+                                ],
+                              },
+                              {
+                                "required": [
+                                  "disallowedForPatterns",
+                                ],
+                              },
+                            ],
                             "properties": {
                               "disallowedFor": {
+                                "items": {
+                                  "type": "string",
+                                },
+                                "minItems": 1,
+                                "type": "array",
+                                "uniqueItems": true,
+                              },
+                              "disallowedForPatterns": {
                                 "items": {
                                   "type": "string",
                                 },
@@ -9115,9 +9725,72 @@ exports[`reactConfig > should create default config 1`] = `
                                 "type": "string",
                               },
                             },
-                            "required": [
-                              "disallowedFor",
+                            "type": "object",
+                          },
+                          {
+                            "additionalProperties": false,
+                            "properties": {
+                              "allowedFor": {
+                                "items": {
+                                  "type": "string",
+                                },
+                                "type": "array",
+                                "uniqueItems": true,
+                              },
+                              "allowedForPatterns": {
+                                "items": {
+                                  "type": "string",
+                                },
+                                "type": "array",
+                                "uniqueItems": true,
+                              },
+                              "message": {
+                                "type": "string",
+                              },
+                              "propNamePattern": {
+                                "type": "string",
+                              },
+                            },
+                            "type": "object",
+                          },
+                          {
+                            "additionalProperties": false,
+                            "anyOf": [
+                              {
+                                "required": [
+                                  "disallowedFor",
+                                ],
+                              },
+                              {
+                                "required": [
+                                  "disallowedForPatterns",
+                                ],
+                              },
                             ],
+                            "properties": {
+                              "disallowedFor": {
+                                "items": {
+                                  "type": "string",
+                                },
+                                "minItems": 1,
+                                "type": "array",
+                                "uniqueItems": true,
+                              },
+                              "disallowedForPatterns": {
+                                "items": {
+                                  "type": "string",
+                                },
+                                "minItems": 1,
+                                "type": "array",
+                                "uniqueItems": true,
+                              },
+                              "message": {
+                                "type": "string",
+                              },
+                              "propNamePattern": {
+                                "type": "string",
+                              },
+                            },
                             "type": "object",
                           },
                         ],
@@ -9287,6 +9960,25 @@ exports[`reactConfig > should create default config 1`] = `
                   "type": "object",
                 },
               ],
+            },
+          },
+          "forward-ref-uses-ref": {
+            "create": [Function],
+            "meta": {
+              "docs": {
+                "category": "Possible Errors",
+                "description": "Require all forwardRef components include a ref parameter",
+                "recommended": false,
+                "url": "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/forward-ref-uses-ref.md",
+              },
+              "hasSuggestions": true,
+              "messages": {
+                "addRefParameter": "Add a ref parameter",
+                "missingRefParameter": "forwardRef is used with this component but no ref parameter is set",
+                "removeForwardRef": "Remove forwardRef wrapper",
+              },
+              "schema": [],
+              "type": "suggestion",
             },
           },
           "function-component-definition": {
@@ -9587,9 +10279,34 @@ exports[`reactConfig > should create default config 1`] = `
               },
               "fixable": "whitespace",
               "messages": {
+                "alignWithOpening": "Expected closing tag to be aligned with the line containing the opening tag",
                 "matchIndent": "Expected closing tag to match indentation of opening.",
                 "onOwnLine": "Closing tag of a multiline JSX expression must be on its own line.",
               },
+              "schema": [
+                {
+                  "anyOf": [
+                    {
+                      "enum": [
+                        "tag-aligned",
+                        "line-aligned",
+                      ],
+                    },
+                    {
+                      "additionalProperties": false,
+                      "properties": {
+                        "location": {
+                          "enum": [
+                            "tag-aligned",
+                            "line-aligned",
+                          ],
+                        },
+                      },
+                      "type": "object",
+                    },
+                  ],
+                },
+              ],
             },
           },
           "jsx-curly-brace-presence": {
@@ -9956,6 +10673,13 @@ exports[`reactConfig > should create default config 1`] = `
                         "eventHandlerPropPrefix": {
                           "type": "string",
                         },
+                        "ignoreComponentNames": {
+                          "items": {
+                            "type": "string",
+                          },
+                          "type": "array",
+                          "uniqueItems": true,
+                        },
                       },
                       "type": "object",
                     },
@@ -9977,6 +10701,13 @@ exports[`reactConfig > should create default config 1`] = `
                           ],
                           "type": "boolean",
                         },
+                        "ignoreComponentNames": {
+                          "items": {
+                            "type": "string",
+                          },
+                          "type": "array",
+                          "uniqueItems": true,
+                        },
                       },
                       "type": "object",
                     },
@@ -9998,6 +10729,13 @@ exports[`reactConfig > should create default config 1`] = `
                         "eventHandlerPropPrefix": {
                           "type": "string",
                         },
+                        "ignoreComponentNames": {
+                          "items": {
+                            "type": "string",
+                          },
+                          "type": "array",
+                          "uniqueItems": true,
+                        },
                       },
                       "type": "object",
                     },
@@ -10015,6 +10753,18 @@ exports[`reactConfig > should create default config 1`] = `
                       "properties": {
                         "checkInlineFunction": {
                           "type": "boolean",
+                        },
+                      },
+                      "type": "object",
+                    },
+                    {
+                      "properties": {
+                        "ignoreComponentNames": {
+                          "items": {
+                            "type": "string",
+                          },
+                          "type": "array",
+                          "uniqueItems": true,
                         },
                       },
                       "type": "object",
@@ -10363,7 +11113,7 @@ exports[`reactConfig > should create default config 1`] = `
                 "withIdentifierMsg": "The '{{variableName}}' {{type}} (at line {{nodeLine}}) passed as the value prop to the Context provider (at line {{usageLine}}) changes every render. To fix this consider wrapping it in a useMemo hook.",
                 "withIdentifierMsgFunc": "The '{{variableName}}' {{type}} (at line {{nodeLine}}) passed as the value prop to the Context provider (at line {{usageLine}}) changes every render. To fix this consider wrapping it in a useCallback hook.",
               },
-              "schema": {},
+              "schema": false,
             },
           },
           "jsx-no-duplicate-props": {
@@ -10439,9 +11189,13 @@ exports[`reactConfig > should create default config 1`] = `
               },
               "messages": {
                 "invalidPropValue": "Invalid prop value: "{{text}}"",
+                "invalidPropValueInElement": "Invalid prop value: "{{text}}" in {{element}}",
                 "literalNotInJSXExpression": "Missing JSX expression container around literal string: "{{text}}"",
+                "literalNotInJSXExpressionInElement": "Missing JSX expression container around literal string: "{{text}}" in {{element}}",
                 "noStringsInAttributes": "Strings not allowed in attributes: "{{text}}"",
+                "noStringsInAttributesInElement": "Strings not allowed in attributes: "{{text}}" in {{element}}",
                 "noStringsInJSX": "Strings not allowed in JSX files: "{{text}}"",
+                "noStringsInJSXInElement": "Strings not allowed in JSX files: "{{text}}" in {{element}}",
               },
               "schema": [
                 {
@@ -10453,6 +11207,35 @@ exports[`reactConfig > should create default config 1`] = `
                       },
                       "type": "array",
                       "uniqueItems": true,
+                    },
+                    "elementOverrides": {
+                      "patternProperties": {
+                        "^[A-Z][\\w.]*$": {
+                          "properties": {
+                            "allowedStrings": {
+                              "items": {
+                                "type": "string",
+                              },
+                              "type": "array",
+                              "uniqueItems": true,
+                            },
+                            "applyToNestedElements": {
+                              "type": "boolean",
+                            },
+                            "ignoreProps": {
+                              "type": "boolean",
+                            },
+                            "noAttributeStrings": {
+                              "type": "boolean",
+                            },
+                            "noStrings": {
+                              "type": "boolean",
+                            },
+                          },
+                          "type": "object",
+                        },
+                      },
+                      "type": "object",
                     },
                     "ignoreProps": {
                       "type": "boolean",
@@ -10730,6 +11513,20 @@ exports[`reactConfig > should create default config 1`] = `
               "schema": [],
             },
           },
+          "jsx-props-no-spread-multi": {
+            "create": [Function],
+            "meta": {
+              "docs": {
+                "category": "Best Practices",
+                "description": "Disallow JSX prop spreading the same identifier multiple times",
+                "recommended": false,
+                "url": "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/jsx-props-no-spread-multi.md",
+              },
+              "messages": {
+                "noMultiSpreading": "Spreading the same expression multiple times is forbidden",
+              },
+            },
+          },
           "jsx-props-no-spreading": {
             "create": [Function],
             "meta": {
@@ -10759,6 +11556,12 @@ exports[`reactConfig > should create default config 1`] = `
                             "uniqueItems": true,
                           },
                           "type": "array",
+                        },
+                        "explicitSpread": {
+                          "enum": [
+                            "enforce",
+                            "ignore",
+                          ],
                         },
                         "html": {
                           "enum": [
@@ -11212,7 +12015,21 @@ exports[`reactConfig > should create default config 1`] = `
               "messages": {
                 "dangerousProp": "Dangerous property '{{name}}' found",
               },
-              "schema": [],
+              "schema": [
+                {
+                  "properties": {
+                    "customComponentNames": {
+                      "items": {
+                        "type": "string",
+                      },
+                      "minItems": 0,
+                      "type": "array",
+                      "uniqueItems": true,
+                    },
+                  },
+                  "type": "object",
+                },
+              ],
             },
           },
           "no-danger-with-children": {
@@ -11339,8 +12156,8 @@ exports[`reactConfig > should create default config 1`] = `
                 "suggestRemoveDefault": ""remove {{attributeName}}"",
                 "suggestRemoveEmpty": ""remove empty attribute {{attributeName}}"",
                 "suggestRemoveInvalid": "“remove invalid attribute {{reportingValue}}”",
-                "suggestRemoveNonString": "remove non-string value in “{{reportingValue}}”",
-                "suggestRemoveWhitespaces": "remove whitespaces in “{{reportingValue}}”",
+                "suggestRemoveNonString": "remove non-string value in “{{attributeName}}”",
+                "suggestRemoveWhitespaces": "remove whitespaces in “{{attributeName}}”",
               },
               "schema": [
                 {
@@ -11543,7 +12360,9 @@ exports[`reactConfig > should create default config 1`] = `
                 "recommended": true,
                 "url": "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/no-unescaped-entities.md",
               },
+              "hasSuggestions": true,
               "messages": {
+                "replaceWithAlt": "Replace with \`{{alt}}\`.",
                 "unescapedEntity": "HTML entity, \`{{entity}}\` , must be escaped.",
                 "unescapedEntityAlts": "\`{{entity}}\` can be escaped with {{alts}}.",
               },
@@ -11665,6 +12484,9 @@ exports[`reactConfig > should create default config 1`] = `
                         "type": "string",
                       },
                       "type": "array",
+                    },
+                    "propNamePattern": {
+                      "type": "string",
                     },
                   },
                   "type": "object",

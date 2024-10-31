@@ -3217,6 +3217,11 @@ export interface RuleOptions {
    */
   "react/forbid-prop-types"?: Linter.RuleEntry<ReactForbidPropTypes>;
   /**
+   * Require all forwardRef components include a ref parameter
+   * @see https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/forward-ref-uses-ref.md
+   */
+  "react/forward-ref-uses-ref"?: Linter.RuleEntry<[]>;
+  /**
    * Enforce a specific function type for function components
    * @see https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/function-component-definition.md
    */
@@ -3250,7 +3255,7 @@ export interface RuleOptions {
    * Enforce closing tag location for multiline JSX
    * @see https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/jsx-closing-tag-location.md
    */
-  "react/jsx-closing-tag-location"?: Linter.RuleEntry<[]>;
+  "react/jsx-closing-tag-location"?: Linter.RuleEntry<ReactJsxClosingTagLocation>;
   /**
    * Disallow unnecessary JSX expressions when literals alone are sufficient or enforce JSX expressions on literals in JSX children or attributes
    * @see https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/jsx-curly-brace-presence.md
@@ -3335,7 +3340,7 @@ export interface RuleOptions {
    * Disallows JSX context provider values from taking values that will cause needless rerenders
    * @see https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/jsx-no-constructed-context-values.md
    */
-  "react/jsx-no-constructed-context-values"?: Linter.RuleEntry<ReactJsxNoConstructedContextValues>;
+  "react/jsx-no-constructed-context-values"?: Linter.RuleEntry<[]>;
   /**
    * Disallow duplicate properties in JSX
    * @see https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/jsx-no-duplicate-props.md
@@ -3386,6 +3391,11 @@ export interface RuleOptions {
    * @see https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/jsx-props-no-multi-spaces.md
    */
   "react/jsx-props-no-multi-spaces"?: Linter.RuleEntry<[]>;
+  /**
+   * Disallow JSX prop spreading the same identifier multiple times
+   * @see https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/jsx-props-no-spread-multi.md
+   */
+  "react/jsx-props-no-spread-multi"?: Linter.RuleEntry<[]>;
   /**
    * Disallow JSX prop spreading
    * @see https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/jsx-props-no-spreading.md
@@ -3457,7 +3467,7 @@ export interface RuleOptions {
    * Disallow usage of dangerous JSX properties
    * @see https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/no-danger.md
    */
-  "react/no-danger"?: Linter.RuleEntry<[]>;
+  "react/no-danger"?: Linter.RuleEntry<ReactNoDanger>;
   /**
    * Disallow when a DOM element is using both children and dangerouslySetInnerHTML
    * @see https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/no-danger-with-children.md
@@ -11992,14 +12002,31 @@ type ReactForbidComponentProps =
           | {
               propName?: string;
               allowedFor?: string[];
+              allowedForPatterns?: string[];
               message?: string;
             }
+          | (
+              | {
+                  [k: string]: unknown | undefined;
+                }
+              | {
+                  [k: string]: unknown | undefined;
+                }
+            )
           | {
-              propName?: string;
-
-              disallowedFor: [string, ...string[]];
+              propNamePattern?: string;
+              allowedFor?: string[];
+              allowedForPatterns?: string[];
               message?: string;
             }
+          | (
+              | {
+                  [k: string]: unknown | undefined;
+                }
+              | {
+                  [k: string]: unknown | undefined;
+                }
+            )
         )[];
         [k: string]: unknown | undefined;
       },
@@ -12128,6 +12155,15 @@ type ReactJsxClosingBracketLocation =
             | false;
         },
     ];
+// ----- react/jsx-closing-tag-location -----
+type ReactJsxClosingTagLocation =
+  | []
+  | [
+      | ("tag-aligned" | "line-aligned")
+      | {
+          location?: "tag-aligned" | "line-aligned";
+        },
+    ];
 // ----- react/jsx-curly-brace-presence -----
 type ReactJsxCurlyBracePresence =
   | []
@@ -12216,24 +12252,31 @@ type ReactJsxHandlerNames =
           eventHandlerPropPrefix?: string;
           checkLocalVariables?: boolean;
           checkInlineFunction?: boolean;
+          ignoreComponentNames?: string[];
         }
       | {
           eventHandlerPrefix?: string;
           eventHandlerPropPrefix?: false;
           checkLocalVariables?: boolean;
           checkInlineFunction?: boolean;
+          ignoreComponentNames?: string[];
         }
       | {
           eventHandlerPrefix?: false;
           eventHandlerPropPrefix?: string;
           checkLocalVariables?: boolean;
           checkInlineFunction?: boolean;
+          ignoreComponentNames?: string[];
         }
       | {
           checkLocalVariables?: boolean;
         }
       | {
           checkInlineFunction?: boolean;
+        }
+      | {
+          ignoreComponentNames?: string[];
+          [k: string]: unknown | undefined;
         },
     ];
 // ----- react/jsx-indent -----
@@ -12314,10 +12357,6 @@ type ReactJsxNoBind =
         ignoreDOMComponents?: boolean;
       },
     ];
-// ----- react/jsx-no-constructed-context-values -----
-interface ReactJsxNoConstructedContextValues {
-  [k: string]: unknown | undefined;
-}
 // ----- react/jsx-no-duplicate-props -----
 type ReactJsxNoDuplicateProps =
   | []
@@ -12339,6 +12378,16 @@ type ReactJsxNoLiterals =
   | []
   | [
       {
+        elementOverrides?: {
+          [k: string]: {
+            applyToNestedElements?: boolean;
+            noStrings?: boolean;
+            allowedStrings?: string[];
+            ignoreProps?: boolean;
+            noAttributeStrings?: boolean;
+            [k: string]: unknown | undefined;
+          };
+        };
         noStrings?: boolean;
         allowedStrings?: string[];
         ignoreProps?: boolean;
@@ -12427,6 +12476,7 @@ type ReactJsxPropsNoSpreading =
       {
         html?: "enforce" | "ignore";
         custom?: "enforce" | "ignore";
+        explicitSpread?: "enforce" | "ignore";
         exceptions?: string[];
         [k: string]: unknown | undefined;
       } & {
@@ -12531,6 +12581,15 @@ type ReactNoChildrenProp =
         allowFunctions?: boolean;
       },
     ];
+// ----- react/no-danger -----
+type ReactNoDanger =
+  | []
+  | [
+      {
+        customComponentNames?: string[];
+        [k: string]: unknown | undefined;
+      },
+    ];
 // ----- react/no-did-mount-set-state -----
 type ReactNoDidMountSetState = [] | ["disallow-in-func"];
 // ----- react/no-did-update-set-state -----
@@ -12592,6 +12651,7 @@ type ReactNoUnstableNestedComponents =
       {
         customValidators?: string[];
         allowAsProps?: boolean;
+        propNamePattern?: string;
       },
     ];
 // ----- react/no-unused-prop-types -----
