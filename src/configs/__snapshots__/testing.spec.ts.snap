@@ -66,6 +66,14 @@ exports[`testingConfig > should create default config 1`] = `
               "jest/no-test-prefixes": "error",
               "jest/no-test-return-statement": "error",
               "jest/no-untyped-mock-factory": "error",
+              "jest/padding-around-after-all-blocks": "error",
+              "jest/padding-around-after-each-blocks": "error",
+              "jest/padding-around-all": "error",
+              "jest/padding-around-before-all-blocks": "error",
+              "jest/padding-around-before-each-blocks": "error",
+              "jest/padding-around-describe-blocks": "error",
+              "jest/padding-around-expect-groups": "error",
+              "jest/padding-around-test-blocks": "error",
               "jest/prefer-called-with": "error",
               "jest/prefer-comparison-matcher": "error",
               "jest/prefer-each": "error",
@@ -75,6 +83,7 @@ exports[`testingConfig > should create default config 1`] = `
               "jest/prefer-hooks-in-order": "error",
               "jest/prefer-hooks-on-top": "error",
               "jest/prefer-importing-jest-globals": "error",
+              "jest/prefer-jest-mocked": "error",
               "jest/prefer-lowercase-title": "error",
               "jest/prefer-mock-promise-shorthand": "error",
               "jest/prefer-snapshot-hint": "error",
@@ -143,6 +152,14 @@ exports[`testingConfig > should create default config 1`] = `
               "jest/no-test-prefixes": "error",
               "jest/no-test-return-statement": "error",
               "jest/no-untyped-mock-factory": "error",
+              "jest/padding-around-after-all-blocks": "error",
+              "jest/padding-around-after-each-blocks": "error",
+              "jest/padding-around-all": "error",
+              "jest/padding-around-before-all-blocks": "error",
+              "jest/padding-around-before-each-blocks": "error",
+              "jest/padding-around-describe-blocks": "error",
+              "jest/padding-around-expect-groups": "error",
+              "jest/padding-around-test-blocks": "error",
               "jest/prefer-called-with": "error",
               "jest/prefer-comparison-matcher": "error",
               "jest/prefer-each": "error",
@@ -152,6 +169,7 @@ exports[`testingConfig > should create default config 1`] = `
               "jest/prefer-hooks-in-order": "error",
               "jest/prefer-hooks-on-top": "error",
               "jest/prefer-importing-jest-globals": "error",
+              "jest/prefer-jest-mocked": "error",
               "jest/prefer-lowercase-title": "error",
               "jest/prefer-mock-promise-shorthand": "error",
               "jest/prefer-snapshot-hint": "error",
@@ -305,7 +323,7 @@ exports[`testingConfig > should create default config 1`] = `
         },
         "meta": {
           "name": "eslint-plugin-jest",
-          "version": "28.2.0",
+          "version": "28.8.3",
         },
         "rules": {
           "consistent-test-it": {
@@ -319,7 +337,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Enforce \`test\` and \`it\` usage conventions",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/consistent-test-it.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/consistent-test-it.md",
               },
               "fixable": "code",
               "messages": {
@@ -364,7 +382,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Enforce assertion to be made in a test body",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/expect-expect.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/expect-expect.md",
               },
               "messages": {
                 "noAssertions": "Test has no assertions",
@@ -380,11 +398,9 @@ exports[`testingConfig > should create default config 1`] = `
                       "type": "array",
                     },
                     "assertFunctionNames": {
-                      "items": [
-                        {
-                          "type": "string",
-                        },
-                      ],
+                      "items": {
+                        "type": "string",
+                      },
                       "type": "array",
                     },
                   },
@@ -404,7 +420,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Enforces a maximum number assertion calls in a test body",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/max-expects.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/max-expects.md",
               },
               "messages": {
                 "exceededMaxAssertion": "Too many assertion calls ({{ count }}) - maximum allowed is {{ max }}",
@@ -434,7 +450,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Enforces a maximum depth to nested describe calls",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/max-nested-describe.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/max-nested-describe.md",
               },
               "messages": {
                 "exceededMaxDepth": "Too many nested describe calls ({{ depth }}) - maximum allowed is {{ max }}",
@@ -460,7 +476,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Disallow alias methods",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-alias-methods.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-alias-methods.md",
               },
               "fixable": "code",
               "messages": {
@@ -476,7 +492,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Disallow commented out tests",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-commented-out-tests.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-commented-out-tests.md",
               },
               "messages": {
                 "commentedTests": "Some tests seem to be commented",
@@ -491,7 +507,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Disallow calling \`expect\` conditionally",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-conditional-expect.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-conditional-expect.md",
               },
               "messages": {
                 "conditionalExpect": "Avoid calling \`expect\` conditionally\`",
@@ -506,7 +522,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Disallow conditional logic in tests",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-conditional-in-test.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-conditional-in-test.md",
               },
               "messages": {
                 "conditionalInTest": "Avoid having conditionals in tests",
@@ -521,7 +537,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Disallow confusing usages of jest.setTimeout",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-confusing-set-timeout.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-confusing-set-timeout.md",
               },
               "messages": {
                 "globalSetTimeout": "\`jest.setTimeout\` should be call in \`global\` scope",
@@ -538,7 +554,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Disallow use of deprecated functions",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-deprecated-functions.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-deprecated-functions.md",
               },
               "fixable": "code",
               "messages": {
@@ -554,7 +570,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Disallow disabled tests",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-disabled-tests.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-disabled-tests.md",
               },
               "messages": {
                 "disabledSuite": "Disabled test suite",
@@ -574,7 +590,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Disallow using a callback in asynchronous tests and hooks",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-done-callback.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-done-callback.md",
               },
               "hasSuggestions": true,
               "messages": {
@@ -592,7 +608,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Disallow duplicate setup and teardown hooks",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-duplicate-hooks.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-duplicate-hooks.md",
               },
               "messages": {
                 "noDuplicateHook": "Duplicate {{hook}} in describe block",
@@ -607,7 +623,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Disallow using \`exports\` in files containing tests",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-export.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-export.md",
               },
               "messages": {
                 "unexpectedExport": "Do not export from a test file",
@@ -622,7 +638,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Disallow focused tests",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-focused-tests.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-focused-tests.md",
               },
               "hasSuggestions": true,
               "messages": {
@@ -643,7 +659,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Disallow setup and teardown hooks",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-hooks.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-hooks.md",
               },
               "messages": {
                 "unexpectedHook": "Unexpected '{{ hookName }}' hook",
@@ -674,7 +690,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Disallow identical titles",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-identical-title.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-identical-title.md",
               },
               "messages": {
                 "multipleDescribeTitle": "Describe block title is used multiple times in the same describe block",
@@ -690,7 +706,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Disallow string interpolation inside snapshots",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-interpolation-in-snapshots.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-interpolation-in-snapshots.md",
               },
               "messages": {
                 "noInterpolation": "Do not use string interpolation inside of snapshots",
@@ -705,7 +721,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Disallow Jasmine globals",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-jasmine-globals.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-jasmine-globals.md",
               },
               "fixable": "code",
               "messages": {
@@ -727,7 +743,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Disallow large snapshots",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-large-snapshots.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-large-snapshots.md",
               },
               "messages": {
                 "noSnapshot": "\`{{ lineCount }}\`s should begin with lowercase",
@@ -762,7 +778,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Disallow manually importing from \`__mocks__\`",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-mocks-import.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-mocks-import.md",
               },
               "messages": {
                 "noManualImport": "Mocks should not be manually imported from a __mocks__ directory. Instead use \`jest.mock\` and import from the original module path",
@@ -779,7 +795,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Disallow specific \`jest.\` methods",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-restricted-jest-methods.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-restricted-jest-methods.md",
               },
               "messages": {
                 "restrictedJestMethod": "Use of \`{{ restriction }}\` is disallowed",
@@ -807,7 +823,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Disallow specific matchers & modifiers",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-restricted-matchers.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-restricted-matchers.md",
               },
               "messages": {
                 "restrictedChain": "Use of \`{{ restriction }}\` is disallowed",
@@ -837,7 +853,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Disallow using \`expect\` outside of \`it\` or \`test\` blocks",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-standalone-expect.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-standalone-expect.md",
               },
               "messages": {
                 "unexpectedExpect": "Expect must be inside of a test block",
@@ -865,7 +881,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Require using \`.only\` and \`.skip\` over \`f\` and \`x\`",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-test-prefixes.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-test-prefixes.md",
               },
               "fixable": "code",
               "messages": {
@@ -881,7 +897,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Disallow explicitly returning from tests",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-test-return-statement.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-test-return-statement.md",
               },
               "messages": {
                 "noReturnValue": "Jest tests should not return a value",
@@ -896,11 +912,147 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Disallow using \`jest.mock()\` factories without an explicit type parameter",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-untyped-mock-factory.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-untyped-mock-factory.md",
               },
               "fixable": "code",
               "messages": {
                 "addTypeParameterToModuleMock": "Add a type parameter to the mock factory such as \`typeof import({{ moduleName }})\`",
+              },
+              "schema": [],
+              "type": "suggestion",
+            },
+          },
+          "padding-around-after-all-blocks": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "deprecated": false,
+              "docs": {
+                "description": "Enforce padding around \`afterAll\` blocks",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/padding-around-after-all-blocks.md",
+              },
+              "fixable": "whitespace",
+              "messages": {
+                "missingPadding": "Expected blank line before this statement.",
+              },
+              "schema": [],
+              "type": "suggestion",
+            },
+          },
+          "padding-around-after-each-blocks": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "deprecated": false,
+              "docs": {
+                "description": "Enforce padding around \`afterEach\` blocks",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/padding-around-after-each-blocks.md",
+              },
+              "fixable": "whitespace",
+              "messages": {
+                "missingPadding": "Expected blank line before this statement.",
+              },
+              "schema": [],
+              "type": "suggestion",
+            },
+          },
+          "padding-around-all": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "deprecated": false,
+              "docs": {
+                "description": "Enforce padding around Jest functions",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/padding-around-all.md",
+              },
+              "fixable": "whitespace",
+              "messages": {
+                "missingPadding": "Expected blank line before this statement.",
+              },
+              "schema": [],
+              "type": "suggestion",
+            },
+          },
+          "padding-around-before-all-blocks": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "deprecated": false,
+              "docs": {
+                "description": "Enforce padding around \`beforeAll\` blocks",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/padding-around-before-all-blocks.md",
+              },
+              "fixable": "whitespace",
+              "messages": {
+                "missingPadding": "Expected blank line before this statement.",
+              },
+              "schema": [],
+              "type": "suggestion",
+            },
+          },
+          "padding-around-before-each-blocks": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "deprecated": false,
+              "docs": {
+                "description": "Enforce padding around \`beforeEach\` blocks",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/padding-around-before-each-blocks.md",
+              },
+              "fixable": "whitespace",
+              "messages": {
+                "missingPadding": "Expected blank line before this statement.",
+              },
+              "schema": [],
+              "type": "suggestion",
+            },
+          },
+          "padding-around-describe-blocks": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "deprecated": false,
+              "docs": {
+                "description": "Enforce padding around \`describe\` blocks",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/padding-around-describe-blocks.md",
+              },
+              "fixable": "whitespace",
+              "messages": {
+                "missingPadding": "Expected blank line before this statement.",
+              },
+              "schema": [],
+              "type": "suggestion",
+            },
+          },
+          "padding-around-expect-groups": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "deprecated": false,
+              "docs": {
+                "description": "Enforce padding around \`expect\` groups",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/padding-around-expect-groups.md",
+              },
+              "fixable": "whitespace",
+              "messages": {
+                "missingPadding": "Expected blank line before this statement.",
+              },
+              "schema": [],
+              "type": "suggestion",
+            },
+          },
+          "padding-around-test-blocks": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "deprecated": false,
+              "docs": {
+                "description": "Enforce padding around afterAll blocks",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/padding-around-test-blocks.md",
+              },
+              "fixable": "whitespace",
+              "messages": {
+                "missingPadding": "Expected blank line before this statement.",
               },
               "schema": [],
               "type": "suggestion",
@@ -912,7 +1064,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Suggest using \`toBeCalledWith()\` or \`toHaveBeenCalledWith()\`",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-called-with.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-called-with.md",
               },
               "messages": {
                 "preferCalledWith": "Prefer {{ matcherName }}With(/* expected args */)",
@@ -927,7 +1079,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Suggest using the built-in comparison matchers",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-comparison-matcher.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-comparison-matcher.md",
               },
               "fixable": "code",
               "messages": {
@@ -943,7 +1095,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Prefer using \`.each\` rather than manual loops",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-each.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-each.md",
               },
               "messages": {
                 "preferEach": "prefer using \`{{ fn }}.each\` rather than a manual loop",
@@ -958,7 +1110,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Suggest using the built-in equality matchers",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-equality-matcher.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-equality-matcher.md",
               },
               "hasSuggestions": true,
               "messages": {
@@ -981,7 +1133,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Suggest using \`expect.assertions()\` OR \`expect.hasAssertions()\`",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-expect-assertions.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-expect-assertions.md",
               },
               "hasSuggestions": true,
               "messages": {
@@ -1019,7 +1171,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Prefer \`await expect(...).resolves\` over \`expect(await ...)\` syntax",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-expect-resolves.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-expect-resolves.md",
               },
               "fixable": "code",
               "messages": {
@@ -1035,7 +1187,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Prefer having hooks in a consistent order",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-hooks-in-order.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-hooks-in-order.md",
               },
               "messages": {
                 "reorderHooks": "\`{{ currentHook }}\` hooks should be before any \`{{ previousHook }}\` hooks",
@@ -1050,7 +1202,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Suggest having hooks before any test cases",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-hooks-on-top.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-hooks-on-top.md",
               },
               "messages": {
                 "noHookOnTop": "Hooks should come before test cases",
@@ -1061,18 +1213,66 @@ exports[`testingConfig > should create default config 1`] = `
           },
           "prefer-importing-jest-globals": {
             "create": [Function],
-            "defaultOptions": [],
+            "defaultOptions": [
+              {
+                "types": [
+                  "hook",
+                  "describe",
+                  "test",
+                  "expect",
+                  "jest",
+                  "unknown",
+                ],
+              },
+            ],
             "meta": {
               "docs": {
                 "description": "Prefer importing Jest globals",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-importing-jest-globals.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-importing-jest-globals.md",
               },
               "fixable": "code",
               "messages": {
                 "preferImportingJestGlobal": "Import the following Jest functions from '@jest/globals': {{ jestFunctions }}",
               },
-              "schema": [],
+              "schema": [
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "types": {
+                      "items": {
+                        "enum": [
+                          "hook",
+                          "describe",
+                          "test",
+                          "expect",
+                          "jest",
+                          "unknown",
+                        ],
+                        "type": "string",
+                      },
+                      "type": "array",
+                    },
+                  },
+                  "type": "object",
+                },
+              ],
               "type": "problem",
+            },
+          },
+          "prefer-jest-mocked": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Prefer \`jest.mocked()\` over \`fn as jest.Mock\`",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-jest-mocked.md",
+              },
+              "fixable": "code",
+              "messages": {
+                "useJestMocked": "Prefer \`jest.mocked()\`",
+              },
+              "schema": [],
+              "type": "suggestion",
             },
           },
           "prefer-lowercase-title": {
@@ -1087,7 +1287,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Enforce lowercase test names",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-lowercase-title.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-lowercase-title.md",
               },
               "fixable": "code",
               "messages": {
@@ -1133,7 +1333,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Prefer mock resolved/rejected shorthands for promises",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-mock-promise-shorthand.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-mock-promise-shorthand.md",
               },
               "fixable": "code",
               "messages": {
@@ -1151,7 +1351,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Prefer including a hint with external snapshots",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-snapshot-hint.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-snapshot-hint.md",
               },
               "messages": {
                 "missingHint": "You should provide a hint for this snapshot",
@@ -1174,7 +1374,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Suggest using \`jest.spyOn()\`",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-spy-on.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-spy-on.md",
               },
               "fixable": "code",
               "messages": {
@@ -1190,7 +1390,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Suggest using \`toStrictEqual()\`",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-strict-equal.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-strict-equal.md",
               },
               "hasSuggestions": true,
               "messages": {
@@ -1207,7 +1407,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Suggest using \`toBe()\` for primitive literals",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-to-be.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-to-be.md",
               },
               "fixable": "code",
               "messages": {
@@ -1227,7 +1427,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Suggest using \`toContain()\`",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-to-contain.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-to-contain.md",
               },
               "fixable": "code",
               "messages": {
@@ -1243,7 +1443,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Suggest using \`toHaveLength()\`",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-to-have-length.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-to-have-length.md",
               },
               "fixable": "code",
               "messages": {
@@ -1259,7 +1459,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Suggest using \`test.todo\`",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-todo.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-todo.md",
               },
               "fixable": "code",
               "messages": {
@@ -1280,7 +1480,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Require setup and teardown code to be within a hook",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/require-hook.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/require-hook.md",
               },
               "messages": {
                 "useHook": "This should be done within a hook",
@@ -1308,7 +1508,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Require a message for \`toThrow()\`",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/require-to-throw-message.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/require-to-throw-message.md",
               },
               "messages": {
                 "addErrorMessage": "Add an error message to {{ matcherName }}()",
@@ -1325,7 +1525,7 @@ exports[`testingConfig > should create default config 1`] = `
             "meta": {
               "docs": {
                 "description": "Require test cases and hooks to be inside a \`describe\` block",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/require-top-level-describe.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/require-top-level-describe.md",
               },
               "messages": {
                 "tooManyDescribes": "There should not be more than {{ max }} describe{{ s }} at the top level",
@@ -1359,7 +1559,7 @@ exports[`testingConfig > should create default config 1`] = `
                 "description": "Enforce unbound methods are called with their expected scope",
                 "recommended": undefined,
                 "requiresTypeChecking": true,
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/unbound-method.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/unbound-method.md",
               },
               "messages": {
                 "unbound": "Avoid referencing unbound methods which may cause unintentional scoping of \`this\`.",
@@ -1387,7 +1587,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Enforce valid \`describe()\` callback",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/valid-describe-callback.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/valid-describe-callback.md",
               },
               "messages": {
                 "nameAndCallback": "Describe requires name and callback arguments",
@@ -1416,8 +1616,9 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Enforce valid \`expect()\` usage",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/valid-expect.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/valid-expect.md",
               },
+              "fixable": "code",
               "messages": {
                 "asyncMustBeAwaited": "Async assertions must be awaited{{ orReturned }}",
                 "matcherNotCalled": "Matchers must be called to assert",
@@ -1462,7 +1663,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Require promises that have expectations in their chain to be valid",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/valid-expect-in-promise.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/valid-expect-in-promise.md",
               },
               "messages": {
                 "expectInFloatingPromise": "This promise should either be returned or awaited to ensure the expects in its chain are called",
@@ -1484,7 +1685,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Enforce valid titles",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/valid-title.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/valid-title.md",
               },
               "fixable": "code",
               "messages": {
@@ -1660,6 +1861,14 @@ If your function does not access \`this\`, you can annotate it with \`this: void
               "jest/no-test-prefixes": "error",
               "jest/no-test-return-statement": "error",
               "jest/no-untyped-mock-factory": "error",
+              "jest/padding-around-after-all-blocks": "error",
+              "jest/padding-around-after-each-blocks": "error",
+              "jest/padding-around-all": "error",
+              "jest/padding-around-before-all-blocks": "error",
+              "jest/padding-around-before-each-blocks": "error",
+              "jest/padding-around-describe-blocks": "error",
+              "jest/padding-around-expect-groups": "error",
+              "jest/padding-around-test-blocks": "error",
               "jest/prefer-called-with": "error",
               "jest/prefer-comparison-matcher": "error",
               "jest/prefer-each": "error",
@@ -1669,6 +1878,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
               "jest/prefer-hooks-in-order": "error",
               "jest/prefer-hooks-on-top": "error",
               "jest/prefer-importing-jest-globals": "error",
+              "jest/prefer-jest-mocked": "error",
               "jest/prefer-lowercase-title": "error",
               "jest/prefer-mock-promise-shorthand": "error",
               "jest/prefer-snapshot-hint": "error",
@@ -1737,6 +1947,14 @@ If your function does not access \`this\`, you can annotate it with \`this: void
               "jest/no-test-prefixes": "error",
               "jest/no-test-return-statement": "error",
               "jest/no-untyped-mock-factory": "error",
+              "jest/padding-around-after-all-blocks": "error",
+              "jest/padding-around-after-each-blocks": "error",
+              "jest/padding-around-all": "error",
+              "jest/padding-around-before-all-blocks": "error",
+              "jest/padding-around-before-each-blocks": "error",
+              "jest/padding-around-describe-blocks": "error",
+              "jest/padding-around-expect-groups": "error",
+              "jest/padding-around-test-blocks": "error",
               "jest/prefer-called-with": "error",
               "jest/prefer-comparison-matcher": "error",
               "jest/prefer-each": "error",
@@ -1746,6 +1964,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
               "jest/prefer-hooks-in-order": "error",
               "jest/prefer-hooks-on-top": "error",
               "jest/prefer-importing-jest-globals": "error",
+              "jest/prefer-jest-mocked": "error",
               "jest/prefer-lowercase-title": "error",
               "jest/prefer-mock-promise-shorthand": "error",
               "jest/prefer-snapshot-hint": "error",
@@ -1899,7 +2118,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
         },
         "meta": {
           "name": "eslint-plugin-jest",
-          "version": "28.2.0",
+          "version": "28.8.3",
         },
         "rules": {
           "consistent-test-it": {
@@ -1913,7 +2132,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Enforce \`test\` and \`it\` usage conventions",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/consistent-test-it.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/consistent-test-it.md",
               },
               "fixable": "code",
               "messages": {
@@ -1958,7 +2177,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Enforce assertion to be made in a test body",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/expect-expect.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/expect-expect.md",
               },
               "messages": {
                 "noAssertions": "Test has no assertions",
@@ -1974,11 +2193,9 @@ If your function does not access \`this\`, you can annotate it with \`this: void
                       "type": "array",
                     },
                     "assertFunctionNames": {
-                      "items": [
-                        {
-                          "type": "string",
-                        },
-                      ],
+                      "items": {
+                        "type": "string",
+                      },
                       "type": "array",
                     },
                   },
@@ -1998,7 +2215,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Enforces a maximum number assertion calls in a test body",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/max-expects.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/max-expects.md",
               },
               "messages": {
                 "exceededMaxAssertion": "Too many assertion calls ({{ count }}) - maximum allowed is {{ max }}",
@@ -2028,7 +2245,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Enforces a maximum depth to nested describe calls",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/max-nested-describe.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/max-nested-describe.md",
               },
               "messages": {
                 "exceededMaxDepth": "Too many nested describe calls ({{ depth }}) - maximum allowed is {{ max }}",
@@ -2054,7 +2271,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Disallow alias methods",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-alias-methods.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-alias-methods.md",
               },
               "fixable": "code",
               "messages": {
@@ -2070,7 +2287,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Disallow commented out tests",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-commented-out-tests.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-commented-out-tests.md",
               },
               "messages": {
                 "commentedTests": "Some tests seem to be commented",
@@ -2085,7 +2302,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Disallow calling \`expect\` conditionally",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-conditional-expect.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-conditional-expect.md",
               },
               "messages": {
                 "conditionalExpect": "Avoid calling \`expect\` conditionally\`",
@@ -2100,7 +2317,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Disallow conditional logic in tests",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-conditional-in-test.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-conditional-in-test.md",
               },
               "messages": {
                 "conditionalInTest": "Avoid having conditionals in tests",
@@ -2115,7 +2332,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Disallow confusing usages of jest.setTimeout",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-confusing-set-timeout.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-confusing-set-timeout.md",
               },
               "messages": {
                 "globalSetTimeout": "\`jest.setTimeout\` should be call in \`global\` scope",
@@ -2132,7 +2349,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Disallow use of deprecated functions",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-deprecated-functions.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-deprecated-functions.md",
               },
               "fixable": "code",
               "messages": {
@@ -2148,7 +2365,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Disallow disabled tests",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-disabled-tests.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-disabled-tests.md",
               },
               "messages": {
                 "disabledSuite": "Disabled test suite",
@@ -2168,7 +2385,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Disallow using a callback in asynchronous tests and hooks",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-done-callback.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-done-callback.md",
               },
               "hasSuggestions": true,
               "messages": {
@@ -2186,7 +2403,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Disallow duplicate setup and teardown hooks",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-duplicate-hooks.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-duplicate-hooks.md",
               },
               "messages": {
                 "noDuplicateHook": "Duplicate {{hook}} in describe block",
@@ -2201,7 +2418,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Disallow using \`exports\` in files containing tests",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-export.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-export.md",
               },
               "messages": {
                 "unexpectedExport": "Do not export from a test file",
@@ -2216,7 +2433,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Disallow focused tests",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-focused-tests.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-focused-tests.md",
               },
               "hasSuggestions": true,
               "messages": {
@@ -2237,7 +2454,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Disallow setup and teardown hooks",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-hooks.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-hooks.md",
               },
               "messages": {
                 "unexpectedHook": "Unexpected '{{ hookName }}' hook",
@@ -2268,7 +2485,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Disallow identical titles",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-identical-title.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-identical-title.md",
               },
               "messages": {
                 "multipleDescribeTitle": "Describe block title is used multiple times in the same describe block",
@@ -2284,7 +2501,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Disallow string interpolation inside snapshots",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-interpolation-in-snapshots.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-interpolation-in-snapshots.md",
               },
               "messages": {
                 "noInterpolation": "Do not use string interpolation inside of snapshots",
@@ -2299,7 +2516,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Disallow Jasmine globals",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-jasmine-globals.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-jasmine-globals.md",
               },
               "fixable": "code",
               "messages": {
@@ -2321,7 +2538,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Disallow large snapshots",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-large-snapshots.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-large-snapshots.md",
               },
               "messages": {
                 "noSnapshot": "\`{{ lineCount }}\`s should begin with lowercase",
@@ -2356,7 +2573,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Disallow manually importing from \`__mocks__\`",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-mocks-import.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-mocks-import.md",
               },
               "messages": {
                 "noManualImport": "Mocks should not be manually imported from a __mocks__ directory. Instead use \`jest.mock\` and import from the original module path",
@@ -2373,7 +2590,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Disallow specific \`jest.\` methods",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-restricted-jest-methods.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-restricted-jest-methods.md",
               },
               "messages": {
                 "restrictedJestMethod": "Use of \`{{ restriction }}\` is disallowed",
@@ -2401,7 +2618,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Disallow specific matchers & modifiers",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-restricted-matchers.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-restricted-matchers.md",
               },
               "messages": {
                 "restrictedChain": "Use of \`{{ restriction }}\` is disallowed",
@@ -2431,7 +2648,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Disallow using \`expect\` outside of \`it\` or \`test\` blocks",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-standalone-expect.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-standalone-expect.md",
               },
               "messages": {
                 "unexpectedExpect": "Expect must be inside of a test block",
@@ -2459,7 +2676,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Require using \`.only\` and \`.skip\` over \`f\` and \`x\`",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-test-prefixes.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-test-prefixes.md",
               },
               "fixable": "code",
               "messages": {
@@ -2475,7 +2692,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Disallow explicitly returning from tests",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-test-return-statement.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-test-return-statement.md",
               },
               "messages": {
                 "noReturnValue": "Jest tests should not return a value",
@@ -2490,11 +2707,147 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Disallow using \`jest.mock()\` factories without an explicit type parameter",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/no-untyped-mock-factory.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/no-untyped-mock-factory.md",
               },
               "fixable": "code",
               "messages": {
                 "addTypeParameterToModuleMock": "Add a type parameter to the mock factory such as \`typeof import({{ moduleName }})\`",
+              },
+              "schema": [],
+              "type": "suggestion",
+            },
+          },
+          "padding-around-after-all-blocks": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "deprecated": false,
+              "docs": {
+                "description": "Enforce padding around \`afterAll\` blocks",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/padding-around-after-all-blocks.md",
+              },
+              "fixable": "whitespace",
+              "messages": {
+                "missingPadding": "Expected blank line before this statement.",
+              },
+              "schema": [],
+              "type": "suggestion",
+            },
+          },
+          "padding-around-after-each-blocks": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "deprecated": false,
+              "docs": {
+                "description": "Enforce padding around \`afterEach\` blocks",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/padding-around-after-each-blocks.md",
+              },
+              "fixable": "whitespace",
+              "messages": {
+                "missingPadding": "Expected blank line before this statement.",
+              },
+              "schema": [],
+              "type": "suggestion",
+            },
+          },
+          "padding-around-all": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "deprecated": false,
+              "docs": {
+                "description": "Enforce padding around Jest functions",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/padding-around-all.md",
+              },
+              "fixable": "whitespace",
+              "messages": {
+                "missingPadding": "Expected blank line before this statement.",
+              },
+              "schema": [],
+              "type": "suggestion",
+            },
+          },
+          "padding-around-before-all-blocks": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "deprecated": false,
+              "docs": {
+                "description": "Enforce padding around \`beforeAll\` blocks",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/padding-around-before-all-blocks.md",
+              },
+              "fixable": "whitespace",
+              "messages": {
+                "missingPadding": "Expected blank line before this statement.",
+              },
+              "schema": [],
+              "type": "suggestion",
+            },
+          },
+          "padding-around-before-each-blocks": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "deprecated": false,
+              "docs": {
+                "description": "Enforce padding around \`beforeEach\` blocks",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/padding-around-before-each-blocks.md",
+              },
+              "fixable": "whitespace",
+              "messages": {
+                "missingPadding": "Expected blank line before this statement.",
+              },
+              "schema": [],
+              "type": "suggestion",
+            },
+          },
+          "padding-around-describe-blocks": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "deprecated": false,
+              "docs": {
+                "description": "Enforce padding around \`describe\` blocks",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/padding-around-describe-blocks.md",
+              },
+              "fixable": "whitespace",
+              "messages": {
+                "missingPadding": "Expected blank line before this statement.",
+              },
+              "schema": [],
+              "type": "suggestion",
+            },
+          },
+          "padding-around-expect-groups": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "deprecated": false,
+              "docs": {
+                "description": "Enforce padding around \`expect\` groups",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/padding-around-expect-groups.md",
+              },
+              "fixable": "whitespace",
+              "messages": {
+                "missingPadding": "Expected blank line before this statement.",
+              },
+              "schema": [],
+              "type": "suggestion",
+            },
+          },
+          "padding-around-test-blocks": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "deprecated": false,
+              "docs": {
+                "description": "Enforce padding around afterAll blocks",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/padding-around-test-blocks.md",
+              },
+              "fixable": "whitespace",
+              "messages": {
+                "missingPadding": "Expected blank line before this statement.",
               },
               "schema": [],
               "type": "suggestion",
@@ -2506,7 +2859,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Suggest using \`toBeCalledWith()\` or \`toHaveBeenCalledWith()\`",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-called-with.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-called-with.md",
               },
               "messages": {
                 "preferCalledWith": "Prefer {{ matcherName }}With(/* expected args */)",
@@ -2521,7 +2874,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Suggest using the built-in comparison matchers",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-comparison-matcher.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-comparison-matcher.md",
               },
               "fixable": "code",
               "messages": {
@@ -2537,7 +2890,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Prefer using \`.each\` rather than manual loops",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-each.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-each.md",
               },
               "messages": {
                 "preferEach": "prefer using \`{{ fn }}.each\` rather than a manual loop",
@@ -2552,7 +2905,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Suggest using the built-in equality matchers",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-equality-matcher.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-equality-matcher.md",
               },
               "hasSuggestions": true,
               "messages": {
@@ -2575,7 +2928,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Suggest using \`expect.assertions()\` OR \`expect.hasAssertions()\`",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-expect-assertions.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-expect-assertions.md",
               },
               "hasSuggestions": true,
               "messages": {
@@ -2613,7 +2966,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Prefer \`await expect(...).resolves\` over \`expect(await ...)\` syntax",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-expect-resolves.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-expect-resolves.md",
               },
               "fixable": "code",
               "messages": {
@@ -2629,7 +2982,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Prefer having hooks in a consistent order",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-hooks-in-order.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-hooks-in-order.md",
               },
               "messages": {
                 "reorderHooks": "\`{{ currentHook }}\` hooks should be before any \`{{ previousHook }}\` hooks",
@@ -2644,7 +2997,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Suggest having hooks before any test cases",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-hooks-on-top.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-hooks-on-top.md",
               },
               "messages": {
                 "noHookOnTop": "Hooks should come before test cases",
@@ -2655,18 +3008,66 @@ If your function does not access \`this\`, you can annotate it with \`this: void
           },
           "prefer-importing-jest-globals": {
             "create": [Function],
-            "defaultOptions": [],
+            "defaultOptions": [
+              {
+                "types": [
+                  "hook",
+                  "describe",
+                  "test",
+                  "expect",
+                  "jest",
+                  "unknown",
+                ],
+              },
+            ],
             "meta": {
               "docs": {
                 "description": "Prefer importing Jest globals",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-importing-jest-globals.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-importing-jest-globals.md",
               },
               "fixable": "code",
               "messages": {
                 "preferImportingJestGlobal": "Import the following Jest functions from '@jest/globals': {{ jestFunctions }}",
               },
-              "schema": [],
+              "schema": [
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "types": {
+                      "items": {
+                        "enum": [
+                          "hook",
+                          "describe",
+                          "test",
+                          "expect",
+                          "jest",
+                          "unknown",
+                        ],
+                        "type": "string",
+                      },
+                      "type": "array",
+                    },
+                  },
+                  "type": "object",
+                },
+              ],
               "type": "problem",
+            },
+          },
+          "prefer-jest-mocked": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Prefer \`jest.mocked()\` over \`fn as jest.Mock\`",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-jest-mocked.md",
+              },
+              "fixable": "code",
+              "messages": {
+                "useJestMocked": "Prefer \`jest.mocked()\`",
+              },
+              "schema": [],
+              "type": "suggestion",
             },
           },
           "prefer-lowercase-title": {
@@ -2681,7 +3082,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Enforce lowercase test names",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-lowercase-title.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-lowercase-title.md",
               },
               "fixable": "code",
               "messages": {
@@ -2727,7 +3128,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Prefer mock resolved/rejected shorthands for promises",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-mock-promise-shorthand.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-mock-promise-shorthand.md",
               },
               "fixable": "code",
               "messages": {
@@ -2745,7 +3146,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Prefer including a hint with external snapshots",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-snapshot-hint.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-snapshot-hint.md",
               },
               "messages": {
                 "missingHint": "You should provide a hint for this snapshot",
@@ -2768,7 +3169,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Suggest using \`jest.spyOn()\`",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-spy-on.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-spy-on.md",
               },
               "fixable": "code",
               "messages": {
@@ -2784,7 +3185,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Suggest using \`toStrictEqual()\`",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-strict-equal.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-strict-equal.md",
               },
               "hasSuggestions": true,
               "messages": {
@@ -2801,7 +3202,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Suggest using \`toBe()\` for primitive literals",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-to-be.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-to-be.md",
               },
               "fixable": "code",
               "messages": {
@@ -2821,7 +3222,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Suggest using \`toContain()\`",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-to-contain.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-to-contain.md",
               },
               "fixable": "code",
               "messages": {
@@ -2837,7 +3238,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Suggest using \`toHaveLength()\`",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-to-have-length.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-to-have-length.md",
               },
               "fixable": "code",
               "messages": {
@@ -2853,7 +3254,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Suggest using \`test.todo\`",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/prefer-todo.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/prefer-todo.md",
               },
               "fixable": "code",
               "messages": {
@@ -2874,7 +3275,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Require setup and teardown code to be within a hook",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/require-hook.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/require-hook.md",
               },
               "messages": {
                 "useHook": "This should be done within a hook",
@@ -2902,7 +3303,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Require a message for \`toThrow()\`",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/require-to-throw-message.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/require-to-throw-message.md",
               },
               "messages": {
                 "addErrorMessage": "Add an error message to {{ matcherName }}()",
@@ -2919,7 +3320,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Require test cases and hooks to be inside a \`describe\` block",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/require-top-level-describe.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/require-top-level-describe.md",
               },
               "messages": {
                 "tooManyDescribes": "There should not be more than {{ max }} describe{{ s }} at the top level",
@@ -2953,7 +3354,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
                 "description": "Enforce unbound methods are called with their expected scope",
                 "recommended": undefined,
                 "requiresTypeChecking": true,
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/unbound-method.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/unbound-method.md",
               },
               "messages": {
                 "unbound": "Avoid referencing unbound methods which may cause unintentional scoping of \`this\`.",
@@ -2981,7 +3382,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Enforce valid \`describe()\` callback",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/valid-describe-callback.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/valid-describe-callback.md",
               },
               "messages": {
                 "nameAndCallback": "Describe requires name and callback arguments",
@@ -3010,8 +3411,9 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Enforce valid \`expect()\` usage",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/valid-expect.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/valid-expect.md",
               },
+              "fixable": "code",
               "messages": {
                 "asyncMustBeAwaited": "Async assertions must be awaited{{ orReturned }}",
                 "matcherNotCalled": "Matchers must be called to assert",
@@ -3056,7 +3458,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Require promises that have expectations in their chain to be valid",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/valid-expect-in-promise.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/valid-expect-in-promise.md",
               },
               "messages": {
                 "expectInFloatingPromise": "This promise should either be returned or awaited to ensure the expects in its chain are called",
@@ -3078,7 +3480,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
             "meta": {
               "docs": {
                 "description": "Enforce valid titles",
-                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.2.0/docs/rules/valid-title.md",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.8.3/docs/rules/valid-title.md",
               },
               "fixable": "code",
               "messages": {
