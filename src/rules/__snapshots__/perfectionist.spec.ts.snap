@@ -57,6 +57,10 @@ exports[`should create perfectionist rules 1`] = `
         "object",
         "unknown",
       ],
+      "internalPattern": [
+        "~/**",
+        "@/**",
+      ],
       "order": "asc",
       "type": "natural",
     },

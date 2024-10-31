@@ -20,6 +20,7 @@ export const perfectionistRules = {
         "object",
         "unknown",
       ],
+      internalPattern: ["~/**", "@/**"],
       order: "asc",
       type: "natural",
     },
