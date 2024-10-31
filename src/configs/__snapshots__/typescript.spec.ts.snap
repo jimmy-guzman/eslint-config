@@ -5610,7 +5610,15 @@ You must still type the parameters of the function.",
               },
               "fixable": undefined,
               "messages": {
+                "allowedImportName": "'{{importName}}' import from '{{importSource}}' is restricted because only '{{allowedImportNames}}' import(s) is/are allowed.",
+                "allowedImportNamePattern": "'{{importName}}' import from '{{importSource}}' is restricted because only imports that match the pattern '{{allowedImportNamePattern}}' are allowed from '{{importSource}}'.",
+                "allowedImportNamePatternWithCustomMessage": "'{{importName}}' import from '{{importSource}}' is restricted because only imports that match the pattern '{{allowedImportNamePattern}}' are allowed from '{{importSource}}'. {{customMessage}}",
+                "allowedImportNameWithCustomMessage": "'{{importName}}' import from '{{importSource}}' is restricted because only '{{allowedImportNames}}' import(s) is/are allowed. {{customMessage}}",
                 "everything": "* import is invalid because '{{importNames}}' from '{{importSource}}' is restricted.",
+                "everythingWithAllowImportNames": "* import is invalid because only '{{allowedImportNames}}' from '{{importSource}}' is/are allowed.",
+                "everythingWithAllowImportNamesAndCustomMessage": "* import is invalid because only '{{allowedImportNames}}' from '{{importSource}}' is/are allowed. {{customMessage}}",
+                "everythingWithAllowedImportNamePattern": "* import is invalid because only imports that match the pattern '{{allowedImportNamePattern}}' from '{{importSource}}' are allowed.",
+                "everythingWithAllowedImportNamePatternWithCustomMessage": "* import is invalid because only imports that match the pattern '{{allowedImportNamePattern}}' from '{{importSource}}' are allowed. {{customMessage}}",
                 "everythingWithCustomMessage": "* import is invalid because '{{importNames}}' from '{{importSource}}' is restricted. {{customMessage}}",
                 "importName": "'{{importName}}' import from '{{importSource}}' is restricted.",
                 "importNameWithCustomMessage": "'{{importName}}' import from '{{importSource}}' is restricted. {{customMessage}}",
@@ -5636,6 +5644,12 @@ You must still type the parameters of the function.",
                         {
                           "additionalProperties": false,
                           "properties": {
+                            "allowImportNames": {
+                              "items": {
+                                "type": "string",
+                              },
+                              "type": "array",
+                            },
                             "allowTypeImports": {
                               "description": "Whether to allow type-only imports for a path.",
                               "type": "boolean",
@@ -5679,6 +5693,12 @@ You must still type the parameters of the function.",
                                 {
                                   "additionalProperties": false,
                                   "properties": {
+                                    "allowImportNames": {
+                                      "items": {
+                                        "type": "string",
+                                      },
+                                      "type": "array",
+                                    },
                                     "allowTypeImports": {
                                       "description": "Whether to allow type-only imports for a path.",
                                       "type": "boolean",
@@ -5720,6 +5740,17 @@ You must still type the parameters of the function.",
                                 "items": {
                                   "additionalProperties": false,
                                   "properties": {
+                                    "allowImportNamePattern": {
+                                      "type": "string",
+                                    },
+                                    "allowImportNames": {
+                                      "items": {
+                                        "type": "string",
+                                      },
+                                      "minItems": 1,
+                                      "type": "array",
+                                      "uniqueItems": true,
+                                    },
                                     "allowTypeImports": {
                                       "description": "Whether to allow type-only imports for a path.",
                                       "type": "boolean",
@@ -5750,10 +5781,11 @@ You must still type the parameters of the function.",
                                       "minLength": 1,
                                       "type": "string",
                                     },
+                                    "regex": {
+                                      "type": "string",
+                                    },
                                   },
-                                  "required": [
-                                    "group",
-                                  ],
+                                  "required": undefined,
                                   "type": "object",
                                 },
                                 "type": "array",
@@ -6668,9 +6700,10 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                 "recommended": "strict",
                 "url": "https://typescript-eslint.io/rules/no-useless-constructor",
               },
-              "hasSuggestions": undefined,
+              "hasSuggestions": true,
               "messages": {
                 "noUselessConstructor": "Useless constructor.",
+                "removeConstructor": "Remove the constructor.",
               },
               "schema": [],
               "type": "problem",
@@ -14224,7 +14257,15 @@ You must still type the parameters of the function.",
               },
               "fixable": undefined,
               "messages": {
+                "allowedImportName": "'{{importName}}' import from '{{importSource}}' is restricted because only '{{allowedImportNames}}' import(s) is/are allowed.",
+                "allowedImportNamePattern": "'{{importName}}' import from '{{importSource}}' is restricted because only imports that match the pattern '{{allowedImportNamePattern}}' are allowed from '{{importSource}}'.",
+                "allowedImportNamePatternWithCustomMessage": "'{{importName}}' import from '{{importSource}}' is restricted because only imports that match the pattern '{{allowedImportNamePattern}}' are allowed from '{{importSource}}'. {{customMessage}}",
+                "allowedImportNameWithCustomMessage": "'{{importName}}' import from '{{importSource}}' is restricted because only '{{allowedImportNames}}' import(s) is/are allowed. {{customMessage}}",
                 "everything": "* import is invalid because '{{importNames}}' from '{{importSource}}' is restricted.",
+                "everythingWithAllowImportNames": "* import is invalid because only '{{allowedImportNames}}' from '{{importSource}}' is/are allowed.",
+                "everythingWithAllowImportNamesAndCustomMessage": "* import is invalid because only '{{allowedImportNames}}' from '{{importSource}}' is/are allowed. {{customMessage}}",
+                "everythingWithAllowedImportNamePattern": "* import is invalid because only imports that match the pattern '{{allowedImportNamePattern}}' from '{{importSource}}' are allowed.",
+                "everythingWithAllowedImportNamePatternWithCustomMessage": "* import is invalid because only imports that match the pattern '{{allowedImportNamePattern}}' from '{{importSource}}' are allowed. {{customMessage}}",
                 "everythingWithCustomMessage": "* import is invalid because '{{importNames}}' from '{{importSource}}' is restricted. {{customMessage}}",
                 "importName": "'{{importName}}' import from '{{importSource}}' is restricted.",
                 "importNameWithCustomMessage": "'{{importName}}' import from '{{importSource}}' is restricted. {{customMessage}}",
@@ -14250,6 +14291,12 @@ You must still type the parameters of the function.",
                         {
                           "additionalProperties": false,
                           "properties": {
+                            "allowImportNames": {
+                              "items": {
+                                "type": "string",
+                              },
+                              "type": "array",
+                            },
                             "allowTypeImports": {
                               "description": "Whether to allow type-only imports for a path.",
                               "type": "boolean",
@@ -14293,6 +14340,12 @@ You must still type the parameters of the function.",
                                 {
                                   "additionalProperties": false,
                                   "properties": {
+                                    "allowImportNames": {
+                                      "items": {
+                                        "type": "string",
+                                      },
+                                      "type": "array",
+                                    },
                                     "allowTypeImports": {
                                       "description": "Whether to allow type-only imports for a path.",
                                       "type": "boolean",
@@ -14334,6 +14387,17 @@ You must still type the parameters of the function.",
                                 "items": {
                                   "additionalProperties": false,
                                   "properties": {
+                                    "allowImportNamePattern": {
+                                      "type": "string",
+                                    },
+                                    "allowImportNames": {
+                                      "items": {
+                                        "type": "string",
+                                      },
+                                      "minItems": 1,
+                                      "type": "array",
+                                      "uniqueItems": true,
+                                    },
                                     "allowTypeImports": {
                                       "description": "Whether to allow type-only imports for a path.",
                                       "type": "boolean",
@@ -14364,10 +14428,11 @@ You must still type the parameters of the function.",
                                       "minLength": 1,
                                       "type": "string",
                                     },
+                                    "regex": {
+                                      "type": "string",
+                                    },
                                   },
-                                  "required": [
-                                    "group",
-                                  ],
+                                  "required": undefined,
                                   "type": "object",
                                 },
                                 "type": "array",
@@ -15282,9 +15347,10 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                 "recommended": "strict",
                 "url": "https://typescript-eslint.io/rules/no-useless-constructor",
               },
-              "hasSuggestions": undefined,
+              "hasSuggestions": true,
               "messages": {
                 "noUselessConstructor": "Useless constructor.",
+                "removeConstructor": "Remove the constructor.",
               },
               "schema": [],
               "type": "problem",
@@ -22838,7 +22904,15 @@ You must still type the parameters of the function.",
               },
               "fixable": undefined,
               "messages": {
+                "allowedImportName": "'{{importName}}' import from '{{importSource}}' is restricted because only '{{allowedImportNames}}' import(s) is/are allowed.",
+                "allowedImportNamePattern": "'{{importName}}' import from '{{importSource}}' is restricted because only imports that match the pattern '{{allowedImportNamePattern}}' are allowed from '{{importSource}}'.",
+                "allowedImportNamePatternWithCustomMessage": "'{{importName}}' import from '{{importSource}}' is restricted because only imports that match the pattern '{{allowedImportNamePattern}}' are allowed from '{{importSource}}'. {{customMessage}}",
+                "allowedImportNameWithCustomMessage": "'{{importName}}' import from '{{importSource}}' is restricted because only '{{allowedImportNames}}' import(s) is/are allowed. {{customMessage}}",
                 "everything": "* import is invalid because '{{importNames}}' from '{{importSource}}' is restricted.",
+                "everythingWithAllowImportNames": "* import is invalid because only '{{allowedImportNames}}' from '{{importSource}}' is/are allowed.",
+                "everythingWithAllowImportNamesAndCustomMessage": "* import is invalid because only '{{allowedImportNames}}' from '{{importSource}}' is/are allowed. {{customMessage}}",
+                "everythingWithAllowedImportNamePattern": "* import is invalid because only imports that match the pattern '{{allowedImportNamePattern}}' from '{{importSource}}' are allowed.",
+                "everythingWithAllowedImportNamePatternWithCustomMessage": "* import is invalid because only imports that match the pattern '{{allowedImportNamePattern}}' from '{{importSource}}' are allowed. {{customMessage}}",
                 "everythingWithCustomMessage": "* import is invalid because '{{importNames}}' from '{{importSource}}' is restricted. {{customMessage}}",
                 "importName": "'{{importName}}' import from '{{importSource}}' is restricted.",
                 "importNameWithCustomMessage": "'{{importName}}' import from '{{importSource}}' is restricted. {{customMessage}}",
@@ -22864,6 +22938,12 @@ You must still type the parameters of the function.",
                         {
                           "additionalProperties": false,
                           "properties": {
+                            "allowImportNames": {
+                              "items": {
+                                "type": "string",
+                              },
+                              "type": "array",
+                            },
                             "allowTypeImports": {
                               "description": "Whether to allow type-only imports for a path.",
                               "type": "boolean",
@@ -22907,6 +22987,12 @@ You must still type the parameters of the function.",
                                 {
                                   "additionalProperties": false,
                                   "properties": {
+                                    "allowImportNames": {
+                                      "items": {
+                                        "type": "string",
+                                      },
+                                      "type": "array",
+                                    },
                                     "allowTypeImports": {
                                       "description": "Whether to allow type-only imports for a path.",
                                       "type": "boolean",
@@ -22948,6 +23034,17 @@ You must still type the parameters of the function.",
                                 "items": {
                                   "additionalProperties": false,
                                   "properties": {
+                                    "allowImportNamePattern": {
+                                      "type": "string",
+                                    },
+                                    "allowImportNames": {
+                                      "items": {
+                                        "type": "string",
+                                      },
+                                      "minItems": 1,
+                                      "type": "array",
+                                      "uniqueItems": true,
+                                    },
                                     "allowTypeImports": {
                                       "description": "Whether to allow type-only imports for a path.",
                                       "type": "boolean",
@@ -22978,10 +23075,11 @@ You must still type the parameters of the function.",
                                       "minLength": 1,
                                       "type": "string",
                                     },
+                                    "regex": {
+                                      "type": "string",
+                                    },
                                   },
-                                  "required": [
-                                    "group",
-                                  ],
+                                  "required": undefined,
                                   "type": "object",
                                 },
                                 "type": "array",
@@ -23896,9 +23994,10 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                 "recommended": "strict",
                 "url": "https://typescript-eslint.io/rules/no-useless-constructor",
               },
-              "hasSuggestions": undefined,
+              "hasSuggestions": true,
               "messages": {
                 "noUselessConstructor": "Useless constructor.",
+                "removeConstructor": "Remove the constructor.",
               },
               "schema": [],
               "type": "problem",

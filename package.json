@@ -38,7 +38,7 @@
     "docs:view": "npx @eslint/config-inspector --open=false",
     "format": "prettier --check --cache .",
     "format:fix": "prettier --write --cache .",
-    "lint": "eslint .",
+    "lint": "eslint --flag unstable_ts_config .",
     "lint:fix": "pnpm lint --fix",
     "prepack": "pnpm build && clean-pkg-json",
     "prepare": "is-ci || lefthook install",
@@ -48,9 +48,9 @@
   },
   "prettier": "@jimmy.codes/prettier-config",
   "dependencies": {
-    "@eslint/js": "^8.57.0",
+    "@eslint/js": "^9.13.0",
     "@tanstack/eslint-plugin-query": "^5.59.7",
-    "@types/eslint": "8.56.10",
+    "@types/eslint": "9.6.1",
     "@types/eslint__js": "8.42.3",
     "@typescript-eslint/parser": "^8.12.2",
     "@typescript-eslint/utils": "^8.12.2",
@@ -67,7 +67,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "0.4.14",
     "eslint-plugin-simple-import-sort": "^12.1.1",
-    "eslint-plugin-testing-library": "^6.4.0",
+    "eslint-plugin-testing-library": "7.0.0-beta.4",
     "globals": "^15.11.0",
     "local-pkg": "0.5.0",
     "typescript-eslint": "^8.12.2"
@@ -90,8 +90,8 @@
     "astro": "4.16.7",
     "clean-pkg-json": "1.2.0",
     "commitlint": "19.5.0",
-    "eslint": "8.57.0",
-    "eslint-typegen": "0.2.4",
+    "eslint": "9.13.0",
+    "eslint-typegen": "0.3.2",
     "gitzy": "5.4.0",
     "is-ci": "3.0.1",
     "jiti": "2.3.3",
@@ -106,7 +106,7 @@
     "vitest": "2.1.4"
   },
   "peerDependencies": {
-    "eslint": "^8.57.0"
+    "eslint": "^9.10.0"
   },
   "packageManager": "pnpm@9.12.3",
   "engines": {

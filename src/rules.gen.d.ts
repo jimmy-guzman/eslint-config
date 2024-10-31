@@ -728,182 +728,182 @@ export interface RuleOptions {
    * apply `jsx-a11y/alt-text` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/alt-text/
    */
-  "astro/jsx-a11y/alt-text"?: Linter.RuleEntry<AstroJsxA11yAltText>;
+  "astro/jsx-a11y/alt-text"?: Linter.RuleEntry<AstroJsxA11YAltText>;
   /**
    * apply `jsx-a11y/anchor-ambiguous-text` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/anchor-ambiguous-text/
    */
-  "astro/jsx-a11y/anchor-ambiguous-text"?: Linter.RuleEntry<AstroJsxA11yAnchorAmbiguousText>;
+  "astro/jsx-a11y/anchor-ambiguous-text"?: Linter.RuleEntry<AstroJsxA11YAnchorAmbiguousText>;
   /**
    * apply `jsx-a11y/anchor-has-content` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/anchor-has-content/
    */
-  "astro/jsx-a11y/anchor-has-content"?: Linter.RuleEntry<AstroJsxA11yAnchorHasContent>;
+  "astro/jsx-a11y/anchor-has-content"?: Linter.RuleEntry<AstroJsxA11YAnchorHasContent>;
   /**
    * apply `jsx-a11y/anchor-is-valid` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/anchor-is-valid/
    */
-  "astro/jsx-a11y/anchor-is-valid"?: Linter.RuleEntry<AstroJsxA11yAnchorIsValid>;
+  "astro/jsx-a11y/anchor-is-valid"?: Linter.RuleEntry<AstroJsxA11YAnchorIsValid>;
   /**
    * apply `jsx-a11y/aria-activedescendant-has-tabindex` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/aria-activedescendant-has-tabindex/
    */
-  "astro/jsx-a11y/aria-activedescendant-has-tabindex"?: Linter.RuleEntry<AstroJsxA11yAriaActivedescendantHasTabindex>;
+  "astro/jsx-a11y/aria-activedescendant-has-tabindex"?: Linter.RuleEntry<AstroJsxA11YAriaActivedescendantHasTabindex>;
   /**
    * apply `jsx-a11y/aria-props` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/aria-props/
    */
-  "astro/jsx-a11y/aria-props"?: Linter.RuleEntry<AstroJsxA11yAriaProps>;
+  "astro/jsx-a11y/aria-props"?: Linter.RuleEntry<AstroJsxA11YAriaProps>;
   /**
    * apply `jsx-a11y/aria-proptypes` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/aria-proptypes/
    */
-  "astro/jsx-a11y/aria-proptypes"?: Linter.RuleEntry<AstroJsxA11yAriaProptypes>;
+  "astro/jsx-a11y/aria-proptypes"?: Linter.RuleEntry<AstroJsxA11YAriaProptypes>;
   /**
    * apply `jsx-a11y/aria-role` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/aria-role/
    */
-  "astro/jsx-a11y/aria-role"?: Linter.RuleEntry<AstroJsxA11yAriaRole>;
+  "astro/jsx-a11y/aria-role"?: Linter.RuleEntry<AstroJsxA11YAriaRole>;
   /**
    * apply `jsx-a11y/aria-unsupported-elements` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/aria-unsupported-elements/
    */
-  "astro/jsx-a11y/aria-unsupported-elements"?: Linter.RuleEntry<AstroJsxA11yAriaUnsupportedElements>;
+  "astro/jsx-a11y/aria-unsupported-elements"?: Linter.RuleEntry<AstroJsxA11YAriaUnsupportedElements>;
   /**
    * apply `jsx-a11y/autocomplete-valid` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/autocomplete-valid/
    */
-  "astro/jsx-a11y/autocomplete-valid"?: Linter.RuleEntry<AstroJsxA11yAutocompleteValid>;
+  "astro/jsx-a11y/autocomplete-valid"?: Linter.RuleEntry<AstroJsxA11YAutocompleteValid>;
   /**
    * apply `jsx-a11y/click-events-have-key-events` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/click-events-have-key-events/
    */
-  "astro/jsx-a11y/click-events-have-key-events"?: Linter.RuleEntry<AstroJsxA11yClickEventsHaveKeyEvents>;
+  "astro/jsx-a11y/click-events-have-key-events"?: Linter.RuleEntry<AstroJsxA11YClickEventsHaveKeyEvents>;
   /**
    * apply `jsx-a11y/control-has-associated-label` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/control-has-associated-label/
    */
-  "astro/jsx-a11y/control-has-associated-label"?: Linter.RuleEntry<AstroJsxA11yControlHasAssociatedLabel>;
+  "astro/jsx-a11y/control-has-associated-label"?: Linter.RuleEntry<AstroJsxA11YControlHasAssociatedLabel>;
   /**
    * apply `jsx-a11y/heading-has-content` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/heading-has-content/
    */
-  "astro/jsx-a11y/heading-has-content"?: Linter.RuleEntry<AstroJsxA11yHeadingHasContent>;
+  "astro/jsx-a11y/heading-has-content"?: Linter.RuleEntry<AstroJsxA11YHeadingHasContent>;
   /**
    * apply `jsx-a11y/html-has-lang` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/html-has-lang/
    */
-  "astro/jsx-a11y/html-has-lang"?: Linter.RuleEntry<AstroJsxA11yHtmlHasLang>;
+  "astro/jsx-a11y/html-has-lang"?: Linter.RuleEntry<AstroJsxA11YHtmlHasLang>;
   /**
    * apply `jsx-a11y/iframe-has-title` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/iframe-has-title/
    */
-  "astro/jsx-a11y/iframe-has-title"?: Linter.RuleEntry<AstroJsxA11yIframeHasTitle>;
+  "astro/jsx-a11y/iframe-has-title"?: Linter.RuleEntry<AstroJsxA11YIframeHasTitle>;
   /**
    * apply `jsx-a11y/img-redundant-alt` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/img-redundant-alt/
    */
-  "astro/jsx-a11y/img-redundant-alt"?: Linter.RuleEntry<AstroJsxA11yImgRedundantAlt>;
+  "astro/jsx-a11y/img-redundant-alt"?: Linter.RuleEntry<AstroJsxA11YImgRedundantAlt>;
   /**
    * apply `jsx-a11y/interactive-supports-focus` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/interactive-supports-focus/
    */
-  "astro/jsx-a11y/interactive-supports-focus"?: Linter.RuleEntry<AstroJsxA11yInteractiveSupportsFocus>;
+  "astro/jsx-a11y/interactive-supports-focus"?: Linter.RuleEntry<AstroJsxA11YInteractiveSupportsFocus>;
   /**
    * apply `jsx-a11y/label-has-associated-control` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/label-has-associated-control/
    */
-  "astro/jsx-a11y/label-has-associated-control"?: Linter.RuleEntry<AstroJsxA11yLabelHasAssociatedControl>;
+  "astro/jsx-a11y/label-has-associated-control"?: Linter.RuleEntry<AstroJsxA11YLabelHasAssociatedControl>;
   /**
    * apply `jsx-a11y/lang` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/lang/
    */
-  "astro/jsx-a11y/lang"?: Linter.RuleEntry<AstroJsxA11yLang>;
+  "astro/jsx-a11y/lang"?: Linter.RuleEntry<AstroJsxA11YLang>;
   /**
    * apply `jsx-a11y/media-has-caption` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/media-has-caption/
    */
-  "astro/jsx-a11y/media-has-caption"?: Linter.RuleEntry<AstroJsxA11yMediaHasCaption>;
+  "astro/jsx-a11y/media-has-caption"?: Linter.RuleEntry<AstroJsxA11YMediaHasCaption>;
   /**
    * apply `jsx-a11y/mouse-events-have-key-events` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/mouse-events-have-key-events/
    */
-  "astro/jsx-a11y/mouse-events-have-key-events"?: Linter.RuleEntry<AstroJsxA11yMouseEventsHaveKeyEvents>;
+  "astro/jsx-a11y/mouse-events-have-key-events"?: Linter.RuleEntry<AstroJsxA11YMouseEventsHaveKeyEvents>;
   /**
    * apply `jsx-a11y/no-access-key` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/no-access-key/
    */
-  "astro/jsx-a11y/no-access-key"?: Linter.RuleEntry<AstroJsxA11yNoAccessKey>;
+  "astro/jsx-a11y/no-access-key"?: Linter.RuleEntry<AstroJsxA11YNoAccessKey>;
   /**
    * apply `jsx-a11y/no-aria-hidden-on-focusable` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/no-aria-hidden-on-focusable/
    */
-  "astro/jsx-a11y/no-aria-hidden-on-focusable"?: Linter.RuleEntry<AstroJsxA11yNoAriaHiddenOnFocusable>;
+  "astro/jsx-a11y/no-aria-hidden-on-focusable"?: Linter.RuleEntry<AstroJsxA11YNoAriaHiddenOnFocusable>;
   /**
    * apply `jsx-a11y/no-autofocus` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/no-autofocus/
    */
-  "astro/jsx-a11y/no-autofocus"?: Linter.RuleEntry<AstroJsxA11yNoAutofocus>;
+  "astro/jsx-a11y/no-autofocus"?: Linter.RuleEntry<AstroJsxA11YNoAutofocus>;
   /**
    * apply `jsx-a11y/no-distracting-elements` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/no-distracting-elements/
    */
-  "astro/jsx-a11y/no-distracting-elements"?: Linter.RuleEntry<AstroJsxA11yNoDistractingElements>;
+  "astro/jsx-a11y/no-distracting-elements"?: Linter.RuleEntry<AstroJsxA11YNoDistractingElements>;
   /**
    * apply `jsx-a11y/no-interactive-element-to-noninteractive-role` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/no-interactive-element-to-noninteractive-role/
    */
-  "astro/jsx-a11y/no-interactive-element-to-noninteractive-role"?: Linter.RuleEntry<AstroJsxA11yNoInteractiveElementToNoninteractiveRole>;
+  "astro/jsx-a11y/no-interactive-element-to-noninteractive-role"?: Linter.RuleEntry<AstroJsxA11YNoInteractiveElementToNoninteractiveRole>;
   /**
    * apply `jsx-a11y/no-noninteractive-element-interactions` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/no-noninteractive-element-interactions/
    */
-  "astro/jsx-a11y/no-noninteractive-element-interactions"?: Linter.RuleEntry<AstroJsxA11yNoNoninteractiveElementInteractions>;
+  "astro/jsx-a11y/no-noninteractive-element-interactions"?: Linter.RuleEntry<AstroJsxA11YNoNoninteractiveElementInteractions>;
   /**
    * apply `jsx-a11y/no-noninteractive-element-to-interactive-role` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/no-noninteractive-element-to-interactive-role/
    */
-  "astro/jsx-a11y/no-noninteractive-element-to-interactive-role"?: Linter.RuleEntry<AstroJsxA11yNoNoninteractiveElementToInteractiveRole>;
+  "astro/jsx-a11y/no-noninteractive-element-to-interactive-role"?: Linter.RuleEntry<AstroJsxA11YNoNoninteractiveElementToInteractiveRole>;
   /**
    * apply `jsx-a11y/no-noninteractive-tabindex` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/no-noninteractive-tabindex/
    */
-  "astro/jsx-a11y/no-noninteractive-tabindex"?: Linter.RuleEntry<AstroJsxA11yNoNoninteractiveTabindex>;
+  "astro/jsx-a11y/no-noninteractive-tabindex"?: Linter.RuleEntry<AstroJsxA11YNoNoninteractiveTabindex>;
   /**
    * apply `jsx-a11y/no-redundant-roles` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/no-redundant-roles/
    */
-  "astro/jsx-a11y/no-redundant-roles"?: Linter.RuleEntry<AstroJsxA11yNoRedundantRoles>;
+  "astro/jsx-a11y/no-redundant-roles"?: Linter.RuleEntry<AstroJsxA11YNoRedundantRoles>;
   /**
    * apply `jsx-a11y/no-static-element-interactions` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/no-static-element-interactions/
    */
-  "astro/jsx-a11y/no-static-element-interactions"?: Linter.RuleEntry<AstroJsxA11yNoStaticElementInteractions>;
+  "astro/jsx-a11y/no-static-element-interactions"?: Linter.RuleEntry<AstroJsxA11YNoStaticElementInteractions>;
   /**
    * apply `jsx-a11y/prefer-tag-over-role` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/prefer-tag-over-role/
    */
-  "astro/jsx-a11y/prefer-tag-over-role"?: Linter.RuleEntry<AstroJsxA11yPreferTagOverRole>;
+  "astro/jsx-a11y/prefer-tag-over-role"?: Linter.RuleEntry<AstroJsxA11YPreferTagOverRole>;
   /**
    * apply `jsx-a11y/role-has-required-aria-props` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/role-has-required-aria-props/
    */
-  "astro/jsx-a11y/role-has-required-aria-props"?: Linter.RuleEntry<AstroJsxA11yRoleHasRequiredAriaProps>;
+  "astro/jsx-a11y/role-has-required-aria-props"?: Linter.RuleEntry<AstroJsxA11YRoleHasRequiredAriaProps>;
   /**
    * apply `jsx-a11y/role-supports-aria-props` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/role-supports-aria-props/
    */
-  "astro/jsx-a11y/role-supports-aria-props"?: Linter.RuleEntry<AstroJsxA11yRoleSupportsAriaProps>;
+  "astro/jsx-a11y/role-supports-aria-props"?: Linter.RuleEntry<AstroJsxA11YRoleSupportsAriaProps>;
   /**
    * apply `jsx-a11y/scope` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/scope/
    */
-  "astro/jsx-a11y/scope"?: Linter.RuleEntry<AstroJsxA11yScope>;
+  "astro/jsx-a11y/scope"?: Linter.RuleEntry<AstroJsxA11YScope>;
   /**
    * apply `jsx-a11y/tabindex-no-positive` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/tabindex-no-positive/
    */
-  "astro/jsx-a11y/tabindex-no-positive"?: Linter.RuleEntry<AstroJsxA11yTabindexNoPositive>;
+  "astro/jsx-a11y/tabindex-no-positive"?: Linter.RuleEntry<AstroJsxA11YTabindexNoPositive>;
   /**
    * the client:only directive is missing the correct component's framework value
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/missing-client-only-directive-value/
@@ -1135,7 +1135,7 @@ export interface RuleOptions {
    */
   "func-names"?: Linter.RuleEntry<FuncNames>;
   /**
-   * Enforce the consistent use of either `function` declarations or expressions
+   * Enforce the consistent use of either `function` declarations or expressions assigned to variables
    * @see https://eslint.org/docs/latest/rules/func-style
    */
   "func-style"?: Linter.RuleEntry<FuncStyle>;
@@ -1829,199 +1829,199 @@ export interface RuleOptions {
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/accessible-emoji.md
    * @deprecated
    */
-  "jsx-a11y/accessible-emoji"?: Linter.RuleEntry<JsxA11yAccessibleEmoji>;
+  "jsx-a11y/accessible-emoji"?: Linter.RuleEntry<JsxA11YAccessibleEmoji>;
   /**
    * Enforce all elements that require alternative text have meaningful information to relay back to end user.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/alt-text.md
    */
-  "jsx-a11y/alt-text"?: Linter.RuleEntry<JsxA11yAltText>;
+  "jsx-a11y/alt-text"?: Linter.RuleEntry<JsxA11YAltText>;
   /**
    * Enforce `<a>` text to not exactly match "click here", "here", "link", or "a link".
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/anchor-ambiguous-text.md
    */
-  "jsx-a11y/anchor-ambiguous-text"?: Linter.RuleEntry<JsxA11yAnchorAmbiguousText>;
+  "jsx-a11y/anchor-ambiguous-text"?: Linter.RuleEntry<JsxA11YAnchorAmbiguousText>;
   /**
    * Enforce all anchors to contain accessible content.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/anchor-has-content.md
    */
-  "jsx-a11y/anchor-has-content"?: Linter.RuleEntry<JsxA11yAnchorHasContent>;
+  "jsx-a11y/anchor-has-content"?: Linter.RuleEntry<JsxA11YAnchorHasContent>;
   /**
    * Enforce all anchors are valid, navigable elements.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/anchor-is-valid.md
    */
-  "jsx-a11y/anchor-is-valid"?: Linter.RuleEntry<JsxA11yAnchorIsValid>;
+  "jsx-a11y/anchor-is-valid"?: Linter.RuleEntry<JsxA11YAnchorIsValid>;
   /**
    * Enforce elements with aria-activedescendant are tabbable.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/aria-activedescendant-has-tabindex.md
    */
-  "jsx-a11y/aria-activedescendant-has-tabindex"?: Linter.RuleEntry<JsxA11yAriaActivedescendantHasTabindex>;
+  "jsx-a11y/aria-activedescendant-has-tabindex"?: Linter.RuleEntry<JsxA11YAriaActivedescendantHasTabindex>;
   /**
    * Enforce all `aria-*` props are valid.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/aria-props.md
    */
-  "jsx-a11y/aria-props"?: Linter.RuleEntry<JsxA11yAriaProps>;
+  "jsx-a11y/aria-props"?: Linter.RuleEntry<JsxA11YAriaProps>;
   /**
    * Enforce ARIA state and property values are valid.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/aria-proptypes.md
    */
-  "jsx-a11y/aria-proptypes"?: Linter.RuleEntry<JsxA11yAriaProptypes>;
+  "jsx-a11y/aria-proptypes"?: Linter.RuleEntry<JsxA11YAriaProptypes>;
   /**
    * Enforce that elements with ARIA roles must use a valid, non-abstract ARIA role.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/aria-role.md
    */
-  "jsx-a11y/aria-role"?: Linter.RuleEntry<JsxA11yAriaRole>;
+  "jsx-a11y/aria-role"?: Linter.RuleEntry<JsxA11YAriaRole>;
   /**
    * Enforce that elements that do not support ARIA roles, states, and properties do not have those attributes.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/aria-unsupported-elements.md
    */
-  "jsx-a11y/aria-unsupported-elements"?: Linter.RuleEntry<JsxA11yAriaUnsupportedElements>;
+  "jsx-a11y/aria-unsupported-elements"?: Linter.RuleEntry<JsxA11YAriaUnsupportedElements>;
   /**
    * Enforce that autocomplete attributes are used correctly.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/autocomplete-valid.md
    */
-  "jsx-a11y/autocomplete-valid"?: Linter.RuleEntry<JsxA11yAutocompleteValid>;
+  "jsx-a11y/autocomplete-valid"?: Linter.RuleEntry<JsxA11YAutocompleteValid>;
   /**
    * Enforce a clickable non-interactive element has at least one keyboard event listener.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/click-events-have-key-events.md
    */
-  "jsx-a11y/click-events-have-key-events"?: Linter.RuleEntry<JsxA11yClickEventsHaveKeyEvents>;
+  "jsx-a11y/click-events-have-key-events"?: Linter.RuleEntry<JsxA11YClickEventsHaveKeyEvents>;
   /**
    * Enforce that a control (an interactive element) has a text label.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/control-has-associated-label.md
    */
-  "jsx-a11y/control-has-associated-label"?: Linter.RuleEntry<JsxA11yControlHasAssociatedLabel>;
+  "jsx-a11y/control-has-associated-label"?: Linter.RuleEntry<JsxA11YControlHasAssociatedLabel>;
   /**
    * Enforce heading (`h1`, `h2`, etc) elements contain accessible content.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/heading-has-content.md
    */
-  "jsx-a11y/heading-has-content"?: Linter.RuleEntry<JsxA11yHeadingHasContent>;
+  "jsx-a11y/heading-has-content"?: Linter.RuleEntry<JsxA11YHeadingHasContent>;
   /**
    * Enforce `<html>` element has `lang` prop.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/html-has-lang.md
    */
-  "jsx-a11y/html-has-lang"?: Linter.RuleEntry<JsxA11yHtmlHasLang>;
+  "jsx-a11y/html-has-lang"?: Linter.RuleEntry<JsxA11YHtmlHasLang>;
   /**
    * Enforce iframe elements have a title attribute.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/iframe-has-title.md
    */
-  "jsx-a11y/iframe-has-title"?: Linter.RuleEntry<JsxA11yIframeHasTitle>;
+  "jsx-a11y/iframe-has-title"?: Linter.RuleEntry<JsxA11YIframeHasTitle>;
   /**
    * Enforce `<img>` alt prop does not contain the word "image", "picture", or "photo".
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/img-redundant-alt.md
    */
-  "jsx-a11y/img-redundant-alt"?: Linter.RuleEntry<JsxA11yImgRedundantAlt>;
+  "jsx-a11y/img-redundant-alt"?: Linter.RuleEntry<JsxA11YImgRedundantAlt>;
   /**
    * Enforce that elements with interactive handlers like `onClick` must be focusable.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/interactive-supports-focus.md
    */
-  "jsx-a11y/interactive-supports-focus"?: Linter.RuleEntry<JsxA11yInteractiveSupportsFocus>;
+  "jsx-a11y/interactive-supports-focus"?: Linter.RuleEntry<JsxA11YInteractiveSupportsFocus>;
   /**
    * Enforce that a `label` tag has a text label and an associated control.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/label-has-associated-control.md
    */
-  "jsx-a11y/label-has-associated-control"?: Linter.RuleEntry<JsxA11yLabelHasAssociatedControl>;
+  "jsx-a11y/label-has-associated-control"?: Linter.RuleEntry<JsxA11YLabelHasAssociatedControl>;
   /**
    * Enforce that `<label>` elements have the `htmlFor` prop.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/label-has-for.md
    * @deprecated
    */
-  "jsx-a11y/label-has-for"?: Linter.RuleEntry<JsxA11yLabelHasFor>;
+  "jsx-a11y/label-has-for"?: Linter.RuleEntry<JsxA11YLabelHasFor>;
   /**
    * Enforce lang attribute has a valid value.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/lang.md
    */
-  "jsx-a11y/lang"?: Linter.RuleEntry<JsxA11yLang>;
+  "jsx-a11y/lang"?: Linter.RuleEntry<JsxA11YLang>;
   /**
    * Enforces that `<audio>` and `<video>` elements must have a `<track>` for captions.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/media-has-caption.md
    */
-  "jsx-a11y/media-has-caption"?: Linter.RuleEntry<JsxA11yMediaHasCaption>;
+  "jsx-a11y/media-has-caption"?: Linter.RuleEntry<JsxA11YMediaHasCaption>;
   /**
    * Enforce that `onMouseOver`/`onMouseOut` are accompanied by `onFocus`/`onBlur` for keyboard-only users.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/mouse-events-have-key-events.md
    */
-  "jsx-a11y/mouse-events-have-key-events"?: Linter.RuleEntry<JsxA11yMouseEventsHaveKeyEvents>;
+  "jsx-a11y/mouse-events-have-key-events"?: Linter.RuleEntry<JsxA11YMouseEventsHaveKeyEvents>;
   /**
    * Enforce that the `accessKey` prop is not used on any element to avoid complications with keyboard commands used by a screen reader.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-access-key.md
    */
-  "jsx-a11y/no-access-key"?: Linter.RuleEntry<JsxA11yNoAccessKey>;
+  "jsx-a11y/no-access-key"?: Linter.RuleEntry<JsxA11YNoAccessKey>;
   /**
    * Disallow `aria-hidden="true"` from being set on focusable elements.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-aria-hidden-on-focusable.md
    */
-  "jsx-a11y/no-aria-hidden-on-focusable"?: Linter.RuleEntry<JsxA11yNoAriaHiddenOnFocusable>;
+  "jsx-a11y/no-aria-hidden-on-focusable"?: Linter.RuleEntry<JsxA11YNoAriaHiddenOnFocusable>;
   /**
    * Enforce autoFocus prop is not used.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-autofocus.md
    */
-  "jsx-a11y/no-autofocus"?: Linter.RuleEntry<JsxA11yNoAutofocus>;
+  "jsx-a11y/no-autofocus"?: Linter.RuleEntry<JsxA11YNoAutofocus>;
   /**
    * Enforce distracting elements are not used.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-distracting-elements.md
    */
-  "jsx-a11y/no-distracting-elements"?: Linter.RuleEntry<JsxA11yNoDistractingElements>;
+  "jsx-a11y/no-distracting-elements"?: Linter.RuleEntry<JsxA11YNoDistractingElements>;
   /**
    * Interactive elements should not be assigned non-interactive roles.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-interactive-element-to-noninteractive-role.md
    */
-  "jsx-a11y/no-interactive-element-to-noninteractive-role"?: Linter.RuleEntry<JsxA11yNoInteractiveElementToNoninteractiveRole>;
+  "jsx-a11y/no-interactive-element-to-noninteractive-role"?: Linter.RuleEntry<JsxA11YNoInteractiveElementToNoninteractiveRole>;
   /**
    * Non-interactive elements should not be assigned mouse or keyboard event listeners.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-noninteractive-element-interactions.md
    */
-  "jsx-a11y/no-noninteractive-element-interactions"?: Linter.RuleEntry<JsxA11yNoNoninteractiveElementInteractions>;
+  "jsx-a11y/no-noninteractive-element-interactions"?: Linter.RuleEntry<JsxA11YNoNoninteractiveElementInteractions>;
   /**
    * Non-interactive elements should not be assigned interactive roles.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-noninteractive-element-to-interactive-role.md
    */
-  "jsx-a11y/no-noninteractive-element-to-interactive-role"?: Linter.RuleEntry<JsxA11yNoNoninteractiveElementToInteractiveRole>;
+  "jsx-a11y/no-noninteractive-element-to-interactive-role"?: Linter.RuleEntry<JsxA11YNoNoninteractiveElementToInteractiveRole>;
   /**
    * `tabIndex` should only be declared on interactive elements.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-noninteractive-tabindex.md
    */
-  "jsx-a11y/no-noninteractive-tabindex"?: Linter.RuleEntry<JsxA11yNoNoninteractiveTabindex>;
+  "jsx-a11y/no-noninteractive-tabindex"?: Linter.RuleEntry<JsxA11YNoNoninteractiveTabindex>;
   /**
    * Enforce usage of `onBlur` over `onChange` on select menus for accessibility.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-onchange.md
    * @deprecated
    */
-  "jsx-a11y/no-onchange"?: Linter.RuleEntry<JsxA11yNoOnchange>;
+  "jsx-a11y/no-onchange"?: Linter.RuleEntry<JsxA11YNoOnchange>;
   /**
    * Enforce explicit role property is not the same as implicit/default role property on element.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-redundant-roles.md
    */
-  "jsx-a11y/no-redundant-roles"?: Linter.RuleEntry<JsxA11yNoRedundantRoles>;
+  "jsx-a11y/no-redundant-roles"?: Linter.RuleEntry<JsxA11YNoRedundantRoles>;
   /**
    * Enforce that non-interactive, visible elements (such as `<div>`) that have click handlers use the role attribute.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-static-element-interactions.md
    */
-  "jsx-a11y/no-static-element-interactions"?: Linter.RuleEntry<JsxA11yNoStaticElementInteractions>;
+  "jsx-a11y/no-static-element-interactions"?: Linter.RuleEntry<JsxA11YNoStaticElementInteractions>;
   /**
    * Enforces using semantic DOM elements over the ARIA `role` property.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/prefer-tag-over-role.md
    */
-  "jsx-a11y/prefer-tag-over-role"?: Linter.RuleEntry<JsxA11yPreferTagOverRole>;
+  "jsx-a11y/prefer-tag-over-role"?: Linter.RuleEntry<JsxA11YPreferTagOverRole>;
   /**
    * Enforce that elements with ARIA roles must have all required attributes for that role.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/role-has-required-aria-props.md
    */
-  "jsx-a11y/role-has-required-aria-props"?: Linter.RuleEntry<JsxA11yRoleHasRequiredAriaProps>;
+  "jsx-a11y/role-has-required-aria-props"?: Linter.RuleEntry<JsxA11YRoleHasRequiredAriaProps>;
   /**
    * Enforce that elements with explicit or implicit roles defined contain only `aria-*` properties supported by that `role`.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/role-supports-aria-props.md
    */
-  "jsx-a11y/role-supports-aria-props"?: Linter.RuleEntry<JsxA11yRoleSupportsAriaProps>;
+  "jsx-a11y/role-supports-aria-props"?: Linter.RuleEntry<JsxA11YRoleSupportsAriaProps>;
   /**
    * Enforce `scope` prop is only used on `<th>` elements.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/scope.md
    */
-  "jsx-a11y/scope"?: Linter.RuleEntry<JsxA11yScope>;
+  "jsx-a11y/scope"?: Linter.RuleEntry<JsxA11YScope>;
   /**
    * Enforce `tabIndex` value is not greater than zero.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/tabindex-no-positive.md
    */
-  "jsx-a11y/tabindex-no-positive"?: Linter.RuleEntry<JsxA11yTabindexNoPositive>;
+  "jsx-a11y/tabindex-no-positive"?: Linter.RuleEntry<JsxA11YTabindexNoPositive>;
   /**
    * Enforce the consistent use of either double or single quotes in JSX attributes
    * @see https://eslint.org/docs/latest/rules/jsx-quotes
@@ -2043,6 +2043,7 @@ export interface RuleOptions {
   /**
    * Enforce position of line comments
    * @see https://eslint.org/docs/latest/rules/line-comment-position
+   * @deprecated
    */
   "line-comment-position"?: Linter.RuleEntry<LineCommentPosition>;
   /**
@@ -2124,6 +2125,7 @@ export interface RuleOptions {
   /**
    * Enforce a particular style for multiline comments
    * @see https://eslint.org/docs/latest/rules/multiline-comment-style
+   * @deprecated
    */
   "multiline-comment-style"?: Linter.RuleEntry<MultilineCommentStyle>;
   /**
@@ -2253,7 +2255,7 @@ export interface RuleOptions {
    * Disallow returning value from constructor
    * @see https://eslint.org/docs/latest/rules/no-constructor-return
    */
-  "no-constructor-return"?: Linter.RuleEntry<NoConstructorReturn>;
+  "no-constructor-return"?: Linter.RuleEntry<[]>;
   /**
    * Disallow `continue` statements
    * @see https://eslint.org/docs/latest/rules/no-continue
@@ -2496,7 +2498,7 @@ export interface RuleOptions {
    * Disallow characters which are made with multiple code points in character class syntax
    * @see https://eslint.org/docs/latest/rules/no-misleading-character-class
    */
-  "no-misleading-character-class"?: Linter.RuleEntry<[]>;
+  "no-misleading-character-class"?: Linter.RuleEntry<NoMisleadingCharacterClass>;
   /**
    * Disallow mixed binary operators
    * @see https://eslint.org/docs/latest/rules/no-mixed-operators
@@ -2589,6 +2591,7 @@ export interface RuleOptions {
   /**
    * Disallow `new` operators with the `Symbol` object
    * @see https://eslint.org/docs/latest/rules/no-new-symbol
+   * @deprecated
    */
   "no-new-symbol"?: Linter.RuleEntry<[]>;
   /**
@@ -2885,6 +2888,11 @@ export interface RuleOptions {
    * @see https://eslint.org/docs/latest/rules/no-use-before-define
    */
   "no-use-before-define"?: Linter.RuleEntry<NoUseBeforeDefine>;
+  /**
+   * Disallow variable assignments when the value is not used
+   * @see https://eslint.org/docs/latest/rules/no-useless-assignment
+   */
+  "no-useless-assignment"?: Linter.RuleEntry<[]>;
   /**
    * Disallow useless backreferences in regular expressions
    * @see https://eslint.org/docs/latest/rules/no-useless-backreference
@@ -3651,16 +3659,10 @@ export interface RuleOptions {
    */
   "require-await"?: Linter.RuleEntry<[]>;
   /**
-   * Require JSDoc comments
-   * @see https://eslint.org/docs/latest/rules/require-jsdoc
-   * @deprecated
-   */
-  "require-jsdoc"?: Linter.RuleEntry<RequireJsdoc>;
-  /**
    * Enforce the use of `u` or `v` flag on RegExp
    * @see https://eslint.org/docs/latest/rules/require-unicode-regexp
    */
-  "require-unicode-regexp"?: Linter.RuleEntry<[]>;
+  "require-unicode-regexp"?: Linter.RuleEntry<RequireUnicodeRegexp>;
   /**
    * Require generator functions to contain `yield`
    * @see https://eslint.org/docs/latest/rules/require-yield
@@ -3924,12 +3926,6 @@ export interface RuleOptions {
    * @see https://eslint.org/docs/latest/rules/use-isnan
    */
   "use-isnan"?: Linter.RuleEntry<UseIsnan>;
-  /**
-   * Enforce valid JSDoc comments
-   * @see https://eslint.org/docs/latest/rules/valid-jsdoc
-   * @deprecated
-   */
-  "valid-jsdoc"?: Linter.RuleEntry<ValidJsdoc>;
   /**
    * Enforce comparing `typeof` expressions against valid strings
    * @see https://eslint.org/docs/latest/rules/valid-typeof
@@ -6968,6 +6964,7 @@ type TypescriptEslintNoRestrictedImports =
           name: string;
           message?: string;
           importNames?: string[];
+          allowImportNames?: string[];
 
           allowTypeImports?: boolean;
         }
@@ -6981,6 +6978,7 @@ type TypescriptEslintNoRestrictedImports =
               name: string;
               message?: string;
               importNames?: string[];
+              allowImportNames?: string[];
 
               allowTypeImports?: boolean;
             }
@@ -6990,8 +6988,12 @@ type TypescriptEslintNoRestrictedImports =
           | {
               importNames?: [string, ...string[]];
 
-              group: [string, ...string[]];
+              allowImportNames?: [string, ...string[]];
+
+              group?: [string, ...string[]];
+              regex?: string;
               importNamePattern?: string;
+              allowImportNamePattern?: string;
               message?: string;
               caseSensitive?: boolean;
 
@@ -7667,7 +7669,7 @@ type ArrowSpacing =
       },
     ];
 // ----- astro/jsx-a11y/alt-text -----
-type _AstroJsxA11YAltText_AstroJsxA11YAltText =
+type AstroJsxA11YAltText =
   | []
   | [
       {
@@ -7680,7 +7682,7 @@ type _AstroJsxA11YAltText_AstroJsxA11YAltText =
       },
     ];
 // ----- astro/jsx-a11y/anchor-ambiguous-text -----
-type _AstroJsxA11YAnchorAmbiguousText_AstroJsxA11YAnchorAmbiguousText =
+type AstroJsxA11YAnchorAmbiguousText =
   | []
   | [
       {
@@ -7689,7 +7691,7 @@ type _AstroJsxA11YAnchorAmbiguousText_AstroJsxA11YAnchorAmbiguousText =
       },
     ];
 // ----- astro/jsx-a11y/anchor-has-content -----
-type _AstroJsxA11YAnchorHasContent_AstroJsxA11YAnchorHasContent =
+type AstroJsxA11YAnchorHasContent =
   | []
   | [
       {
@@ -7698,7 +7700,7 @@ type _AstroJsxA11YAnchorHasContent_AstroJsxA11YAnchorHasContent =
       },
     ];
 // ----- astro/jsx-a11y/anchor-is-valid -----
-type _AstroJsxA11YAnchorIsValid_AstroJsxA11YAnchorIsValid =
+type AstroJsxA11YAnchorIsValid =
   | []
   | [
       {
@@ -7713,16 +7715,15 @@ type _AstroJsxA11YAnchorIsValid_AstroJsxA11YAnchorIsValid =
       },
     ];
 // ----- astro/jsx-a11y/aria-activedescendant-has-tabindex -----
-type _AstroJsxA11YAriaActivedescendantHasTabindex_AstroJsxA11YAriaActivedescendantHasTabindex =
-
-    | []
-    | [
-        {
-          [k: string]: unknown | undefined;
-        },
-      ];
+type AstroJsxA11YAriaActivedescendantHasTabindex =
+  | []
+  | [
+      {
+        [k: string]: unknown | undefined;
+      },
+    ];
 // ----- astro/jsx-a11y/aria-props -----
-type _AstroJsxA11YAriaProps_AstroJsxA11YAriaProps =
+type AstroJsxA11YAriaProps =
   | []
   | [
       {
@@ -7730,7 +7731,7 @@ type _AstroJsxA11YAriaProps_AstroJsxA11YAriaProps =
       },
     ];
 // ----- astro/jsx-a11y/aria-proptypes -----
-type _AstroJsxA11YAriaProptypes_AstroJsxA11YAriaProptypes =
+type AstroJsxA11YAriaProptypes =
   | []
   | [
       {
@@ -7738,7 +7739,7 @@ type _AstroJsxA11YAriaProptypes_AstroJsxA11YAriaProptypes =
       },
     ];
 // ----- astro/jsx-a11y/aria-role -----
-type _AstroJsxA11YAriaRole_AstroJsxA11YAriaRole =
+type AstroJsxA11YAriaRole =
   | []
   | [
       {
@@ -7748,7 +7749,7 @@ type _AstroJsxA11YAriaRole_AstroJsxA11YAriaRole =
       },
     ];
 // ----- astro/jsx-a11y/aria-unsupported-elements -----
-type _AstroJsxA11YAriaUnsupportedElements_AstroJsxA11YAriaUnsupportedElements =
+type AstroJsxA11YAriaUnsupportedElements =
   | []
   | [
       {
@@ -7756,7 +7757,7 @@ type _AstroJsxA11YAriaUnsupportedElements_AstroJsxA11YAriaUnsupportedElements =
       },
     ];
 // ----- astro/jsx-a11y/autocomplete-valid -----
-type _AstroJsxA11YAutocompleteValid_AstroJsxA11YAutocompleteValid =
+type AstroJsxA11YAutocompleteValid =
   | []
   | [
       {
@@ -7765,31 +7766,29 @@ type _AstroJsxA11YAutocompleteValid_AstroJsxA11YAutocompleteValid =
       },
     ];
 // ----- astro/jsx-a11y/click-events-have-key-events -----
-type _AstroJsxA11YClickEventsHaveKeyEvents_AstroJsxA11YClickEventsHaveKeyEvents =
-
-    | []
-    | [
-        {
-          [k: string]: unknown | undefined;
-        },
-      ];
+type AstroJsxA11YClickEventsHaveKeyEvents =
+  | []
+  | [
+      {
+        [k: string]: unknown | undefined;
+      },
+    ];
 // ----- astro/jsx-a11y/control-has-associated-label -----
-type _AstroJsxA11YControlHasAssociatedLabel_AstroJsxA11YControlHasAssociatedLabel =
+type AstroJsxA11YControlHasAssociatedLabel =
+  | []
+  | [
+      {
+        labelAttributes?: string[];
+        controlComponents?: string[];
+        ignoreElements?: string[];
+        ignoreRoles?: string[];
 
-    | []
-    | [
-        {
-          labelAttributes?: string[];
-          controlComponents?: string[];
-          ignoreElements?: string[];
-          ignoreRoles?: string[];
-
-          depth?: number;
-          [k: string]: unknown | undefined;
-        },
-      ];
+        depth?: number;
+        [k: string]: unknown | undefined;
+      },
+    ];
 // ----- astro/jsx-a11y/heading-has-content -----
-type _AstroJsxA11YHeadingHasContent_AstroJsxA11YHeadingHasContent =
+type AstroJsxA11YHeadingHasContent =
   | []
   | [
       {
@@ -7798,7 +7797,7 @@ type _AstroJsxA11YHeadingHasContent_AstroJsxA11YHeadingHasContent =
       },
     ];
 // ----- astro/jsx-a11y/html-has-lang -----
-type _AstroJsxA11YHtmlHasLang_AstroJsxA11YHtmlHasLang =
+type AstroJsxA11YHtmlHasLang =
   | []
   | [
       {
@@ -7806,7 +7805,7 @@ type _AstroJsxA11YHtmlHasLang_AstroJsxA11YHtmlHasLang =
       },
     ];
 // ----- astro/jsx-a11y/iframe-has-title -----
-type _AstroJsxA11YIframeHasTitle_AstroJsxA11YIframeHasTitle =
+type AstroJsxA11YIframeHasTitle =
   | []
   | [
       {
@@ -7814,7 +7813,7 @@ type _AstroJsxA11YIframeHasTitle_AstroJsxA11YIframeHasTitle =
       },
     ];
 // ----- astro/jsx-a11y/img-redundant-alt -----
-type _AstroJsxA11YImgRedundantAlt_AstroJsxA11YImgRedundantAlt =
+type AstroJsxA11YImgRedundantAlt =
   | []
   | [
       {
@@ -7824,68 +7823,66 @@ type _AstroJsxA11YImgRedundantAlt_AstroJsxA11YImgRedundantAlt =
       },
     ];
 // ----- astro/jsx-a11y/interactive-supports-focus -----
-type _AstroJsxA11YInteractiveSupportsFocus_AstroJsxA11YInteractiveSupportsFocus =
-
-    | []
-    | [
-        {
-          tabbable?: (
-            | "button"
-            | "checkbox"
-            | "columnheader"
-            | "combobox"
-            | "grid"
-            | "gridcell"
-            | "link"
-            | "listbox"
-            | "menu"
-            | "menubar"
-            | "menuitem"
-            | "menuitemcheckbox"
-            | "menuitemradio"
-            | "option"
-            | "progressbar"
-            | "radio"
-            | "radiogroup"
-            | "row"
-            | "rowheader"
-            | "scrollbar"
-            | "searchbox"
-            | "slider"
-            | "spinbutton"
-            | "switch"
-            | "tab"
-            | "tablist"
-            | "textbox"
-            | "tree"
-            | "treegrid"
-            | "treeitem"
-            | "doc-backlink"
-            | "doc-biblioref"
-            | "doc-glossref"
-            | "doc-noteref"
-          )[];
-          [k: string]: unknown | undefined;
-        },
-      ];
+type AstroJsxA11YInteractiveSupportsFocus =
+  | []
+  | [
+      {
+        tabbable?: (
+          | "button"
+          | "checkbox"
+          | "columnheader"
+          | "combobox"
+          | "grid"
+          | "gridcell"
+          | "link"
+          | "listbox"
+          | "menu"
+          | "menubar"
+          | "menuitem"
+          | "menuitemcheckbox"
+          | "menuitemradio"
+          | "option"
+          | "progressbar"
+          | "radio"
+          | "radiogroup"
+          | "row"
+          | "rowheader"
+          | "scrollbar"
+          | "searchbox"
+          | "slider"
+          | "spinbutton"
+          | "switch"
+          | "tab"
+          | "tablist"
+          | "textbox"
+          | "tree"
+          | "treegrid"
+          | "treeitem"
+          | "doc-backlink"
+          | "doc-biblioref"
+          | "doc-glossref"
+          | "doc-noteref"
+        )[];
+        [k: string]: unknown | undefined;
+      },
+    ];
 // ----- astro/jsx-a11y/label-has-associated-control -----
-type _AstroJsxA11YLabelHasAssociatedControl_AstroJsxA11YLabelHasAssociatedControl =
+type AstroJsxA11YLabelHasAssociatedControl =
+  | []
+  | [
+      {
+        labelComponents?: string[];
+        labelAttributes?: string[];
+        controlComponents?: string[];
 
-    | []
-    | [
-        {
-          labelComponents?: string[];
-          labelAttributes?: string[];
-          controlComponents?: string[];
+        assert?: "htmlFor" | "nesting" | "both" | "either";
 
-          assert?: "htmlFor" | "nesting" | "both" | "either";
-
-          depth?: number;
-          [k: string]: unknown | undefined;
-        },
-      ];
+        depth?: number;
+        [k: string]: unknown | undefined;
+      },
+    ];
 // ----- astro/jsx-a11y/lang -----
-type _AstroJsxA11YLang_AstroJsxA11YLang =
+type AstroJsxA11YLang =
   | []
   | [
       {
@@ -7893,7 +7890,7 @@ type _AstroJsxA11YLang_AstroJsxA11YLang =
       },
     ];
 // ----- astro/jsx-a11y/media-has-caption -----
-type _AstroJsxA11YMediaHasCaption_AstroJsxA11YMediaHasCaption =
+type AstroJsxA11YMediaHasCaption =
   | []
   | [
       {
@@ -7904,19 +7901,18 @@ type _AstroJsxA11YMediaHasCaption_AstroJsxA11YMediaHasCaption =
       },
     ];
 // ----- astro/jsx-a11y/mouse-events-have-key-events -----
-type _AstroJsxA11YMouseEventsHaveKeyEvents_AstroJsxA11YMouseEventsHaveKeyEvents =
+type AstroJsxA11YMouseEventsHaveKeyEvents =
+  | []
+  | [
+      {
+        hoverInHandlers?: string[];
 
-    | []
-    | [
-        {
-          hoverInHandlers?: string[];
-
-          hoverOutHandlers?: string[];
-          [k: string]: unknown | undefined;
-        },
-      ];
+        hoverOutHandlers?: string[];
+        [k: string]: unknown | undefined;
+      },
+    ];
 // ----- astro/jsx-a11y/no-access-key -----
-type _AstroJsxA11YNoAccessKey_AstroJsxA11YNoAccessKey =
+type AstroJsxA11YNoAccessKey =
   | []
   | [
       {
@@ -7924,7 +7920,7 @@ type _AstroJsxA11YNoAccessKey_AstroJsxA11YNoAccessKey =
       },
     ];
 // ----- astro/jsx-a11y/no-aria-hidden-on-focusable -----
-type _AstroJsxA11YNoAriaHiddenOnFocusable_AstroJsxA11YNoAriaHiddenOnFocusable =
+type AstroJsxA11YNoAriaHiddenOnFocusable =
   | []
   | [
       {
@@ -7932,7 +7928,7 @@ type _AstroJsxA11YNoAriaHiddenOnFocusable_AstroJsxA11YNoAriaHiddenOnFocusable =
       },
     ];
 // ----- astro/jsx-a11y/no-autofocus -----
-type _AstroJsxA11YNoAutofocus_AstroJsxA11YNoAutofocus =
+type AstroJsxA11YNoAutofocus =
   | []
   | [
       {
@@ -7941,7 +7937,7 @@ type _AstroJsxA11YNoAutofocus_AstroJsxA11YNoAutofocus =
       },
     ];
 // ----- astro/jsx-a11y/no-distracting-elements -----
-type _AstroJsxA11YNoDistractingElements_AstroJsxA11YNoDistractingElements =
+type AstroJsxA11YNoDistractingElements =
   | []
   | [
       {
@@ -7950,47 +7946,43 @@ type _AstroJsxA11YNoDistractingElements_AstroJsxA11YNoDistractingElements =
       },
     ];
 // ----- astro/jsx-a11y/no-interactive-element-to-noninteractive-role -----
-type _AstroJsxA11YNoInteractiveElementToNoninteractiveRole_AstroJsxA11YNoInteractiveElementToNoninteractiveRole =
-
-    | []
-    | [
-        {
-          [k: string]: string[] | undefined;
-        },
-      ];
+type AstroJsxA11YNoInteractiveElementToNoninteractiveRole =
+  | []
+  | [
+      {
+        [k: string]: string[] | undefined;
+      },
+    ];
 // ----- astro/jsx-a11y/no-noninteractive-element-interactions -----
-type _AstroJsxA11YNoNoninteractiveElementInteractions_AstroJsxA11YNoNoninteractiveElementInteractions =
-
-    | []
-    | [
-        {
-          handlers?: string[];
-          [k: string]: unknown | undefined;
-        },
-      ];
+type AstroJsxA11YNoNoninteractiveElementInteractions =
+  | []
+  | [
+      {
+        handlers?: string[];
+        [k: string]: unknown | undefined;
+      },
+    ];
 // ----- astro/jsx-a11y/no-noninteractive-element-to-interactive-role -----
-type _AstroJsxA11YNoNoninteractiveElementToInteractiveRole_AstroJsxA11YNoNoninteractiveElementToInteractiveRole =
-
-    | []
-    | [
-        {
-          [k: string]: string[] | undefined;
-        },
-      ];
+type AstroJsxA11YNoNoninteractiveElementToInteractiveRole =
+  | []
+  | [
+      {
+        [k: string]: string[] | undefined;
+      },
+    ];
 // ----- astro/jsx-a11y/no-noninteractive-tabindex -----
-type _AstroJsxA11YNoNoninteractiveTabindex_AstroJsxA11YNoNoninteractiveTabindex =
+type AstroJsxA11YNoNoninteractiveTabindex =
+  | []
+  | [
+      {
+        roles?: string[];
 
-    | []
-    | [
-        {
-          roles?: string[];
-
-          tags?: string[];
-          [k: string]: unknown | undefined;
-        },
-      ];
+        tags?: string[];
+        [k: string]: unknown | undefined;
+      },
+    ];
 // ----- astro/jsx-a11y/no-redundant-roles -----
-type _AstroJsxA11YNoRedundantRoles_AstroJsxA11YNoRedundantRoles =
+type AstroJsxA11YNoRedundantRoles =
   | []
   | [
       {
@@ -7998,17 +7990,16 @@ type _AstroJsxA11YNoRedundantRoles_AstroJsxA11YNoRedundantRoles =
       },
     ];
 // ----- astro/jsx-a11y/no-static-element-interactions -----
-type _AstroJsxA11YNoStaticElementInteractions_AstroJsxA11YNoStaticElementInteractions =
-
-    | []
-    | [
-        {
-          handlers?: string[];
-          [k: string]: unknown | undefined;
-        },
-      ];
+type AstroJsxA11YNoStaticElementInteractions =
+  | []
+  | [
+      {
+        handlers?: string[];
+        [k: string]: unknown | undefined;
+      },
+    ];
 // ----- astro/jsx-a11y/prefer-tag-over-role -----
-type _AstroJsxA11YPreferTagOverRole_AstroJsxA11YPreferTagOverRole =
+type AstroJsxA11YPreferTagOverRole =
   | []
   | [
       {
@@ -8016,16 +8007,15 @@ type _AstroJsxA11YPreferTagOverRole_AstroJsxA11YPreferTagOverRole =
       },
     ];
 // ----- astro/jsx-a11y/role-has-required-aria-props -----
-type _AstroJsxA11YRoleHasRequiredAriaProps_AstroJsxA11YRoleHasRequiredAriaProps =
-
-    | []
-    | [
-        {
-          [k: string]: unknown | undefined;
-        },
-      ];
+type AstroJsxA11YRoleHasRequiredAriaProps =
+  | []
+  | [
+      {
+        [k: string]: unknown | undefined;
+      },
+    ];
 // ----- astro/jsx-a11y/role-supports-aria-props -----
-type _AstroJsxA11YRoleSupportsAriaProps_AstroJsxA11YRoleSupportsAriaProps =
+type AstroJsxA11YRoleSupportsAriaProps =
   | []
   | [
       {
@@ -8033,7 +8023,7 @@ type _AstroJsxA11YRoleSupportsAriaProps_AstroJsxA11YRoleSupportsAriaProps =
       },
     ];
 // ----- astro/jsx-a11y/scope -----
-type _AstroJsxA11YScope_AstroJsxA11YScope =
+type AstroJsxA11YScope =
   | []
   | [
       {
@@ -8041,7 +8031,7 @@ type _AstroJsxA11YScope_AstroJsxA11YScope =
       },
     ];
 // ----- astro/jsx-a11y/tabindex-no-positive -----
-type _AstroJsxA11YTabindexNoPositive_AstroJsxA11YTabindexNoPositive =
+type AstroJsxA11YTabindexNoPositive =
   | []
   | [
       {
@@ -8109,7 +8099,7 @@ type Camelcase =
         ignoreGlobals?: boolean;
         properties?: "always" | "never";
 
-        allow?: [] | [string];
+        allow?: string[];
       },
     ];
 // ----- capitalized-comments -----
@@ -8200,6 +8190,7 @@ type Complexity =
       | {
           maximum?: number;
           max?: number;
+          variant?: "classic" | "modified";
         },
     ];
 // ----- computed-property-spacing -----
@@ -8311,6 +8302,9 @@ type FuncStyle =
       "declaration" | "expression",
       {
         allowArrowFunctions?: boolean;
+        overrides?: {
+          namedExports?: "declaration" | "expression" | "ignore";
+        };
       },
     ];
 // ----- function-call-argument-newline -----
@@ -9035,7 +9029,7 @@ type JestValidTitle =
       },
     ];
 // ----- jsx-a11y/accessible-emoji -----
-type _JsxA11YAccessibleEmoji_JsxA11YAccessibleEmoji =
+type JsxA11YAccessibleEmoji =
   | []
   | [
       {
@@ -9043,7 +9037,7 @@ type _JsxA11YAccessibleEmoji_JsxA11YAccessibleEmoji =
       },
     ];
 // ----- jsx-a11y/alt-text -----
-type _JsxA11YAltText_JsxA11YAltText =
+type JsxA11YAltText =
   | []
   | [
       {
@@ -9056,7 +9050,7 @@ type _JsxA11YAltText_JsxA11YAltText =
       },
     ];
 // ----- jsx-a11y/anchor-ambiguous-text -----
-type _JsxA11YAnchorAmbiguousText_JsxA11YAnchorAmbiguousText =
+type JsxA11YAnchorAmbiguousText =
   | []
   | [
       {
@@ -9065,7 +9059,7 @@ type _JsxA11YAnchorAmbiguousText_JsxA11YAnchorAmbiguousText =
       },
     ];
 // ----- jsx-a11y/anchor-has-content -----
-type _JsxA11YAnchorHasContent_JsxA11YAnchorHasContent =
+type JsxA11YAnchorHasContent =
   | []
   | [
       {
@@ -9074,7 +9068,7 @@ type _JsxA11YAnchorHasContent_JsxA11YAnchorHasContent =
       },
     ];
 // ----- jsx-a11y/anchor-is-valid -----
-type _JsxA11YAnchorIsValid_JsxA11YAnchorIsValid =
+type JsxA11YAnchorIsValid =
   | []
   | [
       {
@@ -9089,16 +9083,15 @@ type _JsxA11YAnchorIsValid_JsxA11YAnchorIsValid =
       },
     ];
 // ----- jsx-a11y/aria-activedescendant-has-tabindex -----
-type _JsxA11YAriaActivedescendantHasTabindex_JsxA11YAriaActivedescendantHasTabindex =
-
-    | []
-    | [
-        {
-          [k: string]: unknown | undefined;
-        },
-      ];
+type JsxA11YAriaActivedescendantHasTabindex =
+  | []
+  | [
+      {
+        [k: string]: unknown | undefined;
+      },
+    ];
 // ----- jsx-a11y/aria-props -----
-type _JsxA11YAriaProps_JsxA11YAriaProps =
+type JsxA11YAriaProps =
   | []
   | [
       {
@@ -9106,7 +9099,7 @@ type _JsxA11YAriaProps_JsxA11YAriaProps =
       },
     ];
 // ----- jsx-a11y/aria-proptypes -----
-type _JsxA11YAriaProptypes_JsxA11YAriaProptypes =
+type JsxA11YAriaProptypes =
   | []
   | [
       {
@@ -9114,7 +9107,7 @@ type _JsxA11YAriaProptypes_JsxA11YAriaProptypes =
       },
     ];
 // ----- jsx-a11y/aria-role -----
-type _JsxA11YAriaRole_JsxA11YAriaRole =
+type JsxA11YAriaRole =
   | []
   | [
       {
@@ -9124,7 +9117,7 @@ type _JsxA11YAriaRole_JsxA11YAriaRole =
       },
     ];
 // ----- jsx-a11y/aria-unsupported-elements -----
-type _JsxA11YAriaUnsupportedElements_JsxA11YAriaUnsupportedElements =
+type JsxA11YAriaUnsupportedElements =
   | []
   | [
       {
@@ -9132,7 +9125,7 @@ type _JsxA11YAriaUnsupportedElements_JsxA11YAriaUnsupportedElements =
       },
     ];
 // ----- jsx-a11y/autocomplete-valid -----
-type _JsxA11YAutocompleteValid_JsxA11YAutocompleteValid =
+type JsxA11YAutocompleteValid =
   | []
   | [
       {
@@ -9141,7 +9134,7 @@ type _JsxA11YAutocompleteValid_JsxA11YAutocompleteValid =
       },
     ];
 // ----- jsx-a11y/click-events-have-key-events -----
-type _JsxA11YClickEventsHaveKeyEvents_JsxA11YClickEventsHaveKeyEvents =
+type JsxA11YClickEventsHaveKeyEvents =
   | []
   | [
       {
@@ -9149,7 +9142,7 @@ type _JsxA11YClickEventsHaveKeyEvents_JsxA11YClickEventsHaveKeyEvents =
       },
     ];
 // ----- jsx-a11y/control-has-associated-label -----
-type _JsxA11YControlHasAssociatedLabel_JsxA11YControlHasAssociatedLabel =
+type JsxA11YControlHasAssociatedLabel =
   | []
   | [
       {
@@ -9163,7 +9156,7 @@ type _JsxA11YControlHasAssociatedLabel_JsxA11YControlHasAssociatedLabel =
       },
     ];
 // ----- jsx-a11y/heading-has-content -----
-type _JsxA11YHeadingHasContent_JsxA11YHeadingHasContent =
+type JsxA11YHeadingHasContent =
   | []
   | [
       {
@@ -9172,7 +9165,7 @@ type _JsxA11YHeadingHasContent_JsxA11YHeadingHasContent =
       },
     ];
 // ----- jsx-a11y/html-has-lang -----
-type _JsxA11YHtmlHasLang_JsxA11YHtmlHasLang =
+type JsxA11YHtmlHasLang =
   | []
   | [
       {
@@ -9180,7 +9173,7 @@ type _JsxA11YHtmlHasLang_JsxA11YHtmlHasLang =
       },
     ];
 // ----- jsx-a11y/iframe-has-title -----
-type _JsxA11YIframeHasTitle_JsxA11YIframeHasTitle =
+type JsxA11YIframeHasTitle =
   | []
   | [
       {
@@ -9188,7 +9181,7 @@ type _JsxA11YIframeHasTitle_JsxA11YIframeHasTitle =
       },
     ];
 // ----- jsx-a11y/img-redundant-alt -----
-type _JsxA11YImgRedundantAlt_JsxA11YImgRedundantAlt =
+type JsxA11YImgRedundantAlt =
   | []
   | [
       {
@@ -9198,7 +9191,7 @@ type _JsxA11YImgRedundantAlt_JsxA11YImgRedundantAlt =
       },
     ];
 // ----- jsx-a11y/interactive-supports-focus -----
-type _JsxA11YInteractiveSupportsFocus_JsxA11YInteractiveSupportsFocus =
+type JsxA11YInteractiveSupportsFocus =
   | []
   | [
       {
@@ -9242,7 +9235,7 @@ type _JsxA11YInteractiveSupportsFocus_JsxA11YInteractiveSupportsFocus =
       },
     ];
 // ----- jsx-a11y/label-has-associated-control -----
-type _JsxA11YLabelHasAssociatedControl_JsxA11YLabelHasAssociatedControl =
+type JsxA11YLabelHasAssociatedControl =
   | []
   | [
       {
@@ -9257,7 +9250,7 @@ type _JsxA11YLabelHasAssociatedControl_JsxA11YLabelHasAssociatedControl =
       },
     ];
 // ----- jsx-a11y/label-has-for -----
-type _JsxA11YLabelHasFor_JsxA11YLabelHasFor =
+type JsxA11YLabelHasFor =
   | []
   | [
       {
@@ -9277,7 +9270,7 @@ type _JsxA11YLabelHasFor_JsxA11YLabelHasFor =
       },
     ];
 // ----- jsx-a11y/lang -----
-type _JsxA11YLang_JsxA11YLang =
+type JsxA11YLang =
   | []
   | [
       {
@@ -9285,7 +9278,7 @@ type _JsxA11YLang_JsxA11YLang =
       },
     ];
 // ----- jsx-a11y/media-has-caption -----
-type _JsxA11YMediaHasCaption_JsxA11YMediaHasCaption =
+type JsxA11YMediaHasCaption =
   | []
   | [
       {
@@ -9296,7 +9289,7 @@ type _JsxA11YMediaHasCaption_JsxA11YMediaHasCaption =
       },
     ];
 // ----- jsx-a11y/mouse-events-have-key-events -----
-type _JsxA11YMouseEventsHaveKeyEvents_JsxA11YMouseEventsHaveKeyEvents =
+type JsxA11YMouseEventsHaveKeyEvents =
   | []
   | [
       {
@@ -9307,7 +9300,7 @@ type _JsxA11YMouseEventsHaveKeyEvents_JsxA11YMouseEventsHaveKeyEvents =
       },
     ];
 // ----- jsx-a11y/no-access-key -----
-type _JsxA11YNoAccessKey_JsxA11YNoAccessKey =
+type JsxA11YNoAccessKey =
   | []
   | [
       {
@@ -9315,7 +9308,7 @@ type _JsxA11YNoAccessKey_JsxA11YNoAccessKey =
       },
     ];
 // ----- jsx-a11y/no-aria-hidden-on-focusable -----
-type _JsxA11YNoAriaHiddenOnFocusable_JsxA11YNoAriaHiddenOnFocusable =
+type JsxA11YNoAriaHiddenOnFocusable =
   | []
   | [
       {
@@ -9323,7 +9316,7 @@ type _JsxA11YNoAriaHiddenOnFocusable_JsxA11YNoAriaHiddenOnFocusable =
       },
     ];
 // ----- jsx-a11y/no-autofocus -----
-type _JsxA11YNoAutofocus_JsxA11YNoAutofocus =
+type JsxA11YNoAutofocus =
   | []
   | [
       {
@@ -9332,7 +9325,7 @@ type _JsxA11YNoAutofocus_JsxA11YNoAutofocus =
       },
     ];
 // ----- jsx-a11y/no-distracting-elements -----
-type _JsxA11YNoDistractingElements_JsxA11YNoDistractingElements =
+type JsxA11YNoDistractingElements =
   | []
   | [
       {
@@ -9341,35 +9334,32 @@ type _JsxA11YNoDistractingElements_JsxA11YNoDistractingElements =
       },
     ];
 // ----- jsx-a11y/no-interactive-element-to-noninteractive-role -----
-type _JsxA11YNoInteractiveElementToNoninteractiveRole_JsxA11YNoInteractiveElementToNoninteractiveRole =
-
-    | []
-    | [
-        {
-          [k: string]: string[] | undefined;
-        },
-      ];
+type JsxA11YNoInteractiveElementToNoninteractiveRole =
+  | []
+  | [
+      {
+        [k: string]: string[] | undefined;
+      },
+    ];
 // ----- jsx-a11y/no-noninteractive-element-interactions -----
-type _JsxA11YNoNoninteractiveElementInteractions_JsxA11YNoNoninteractiveElementInteractions =
-
-    | []
-    | [
-        {
-          handlers?: string[];
-          [k: string]: unknown | undefined;
-        },
-      ];
+type JsxA11YNoNoninteractiveElementInteractions =
+  | []
+  | [
+      {
+        handlers?: string[];
+        [k: string]: unknown | undefined;
+      },
+    ];
 // ----- jsx-a11y/no-noninteractive-element-to-interactive-role -----
-type _JsxA11YNoNoninteractiveElementToInteractiveRole_JsxA11YNoNoninteractiveElementToInteractiveRole =
-
-    | []
-    | [
-        {
-          [k: string]: string[] | undefined;
-        },
-      ];
+type JsxA11YNoNoninteractiveElementToInteractiveRole =
+  | []
+  | [
+      {
+        [k: string]: string[] | undefined;
+      },
+    ];
 // ----- jsx-a11y/no-noninteractive-tabindex -----
-type _JsxA11YNoNoninteractiveTabindex_JsxA11YNoNoninteractiveTabindex =
+type JsxA11YNoNoninteractiveTabindex =
   | []
   | [
       {
@@ -9380,7 +9370,7 @@ type _JsxA11YNoNoninteractiveTabindex_JsxA11YNoNoninteractiveTabindex =
       },
     ];
 // ----- jsx-a11y/no-onchange -----
-type _JsxA11YNoOnchange_JsxA11YNoOnchange =
+type JsxA11YNoOnchange =
   | []
   | [
       {
@@ -9388,7 +9378,7 @@ type _JsxA11YNoOnchange_JsxA11YNoOnchange =
       },
     ];
 // ----- jsx-a11y/no-redundant-roles -----
-type _JsxA11YNoRedundantRoles_JsxA11YNoRedundantRoles =
+type JsxA11YNoRedundantRoles =
   | []
   | [
       {
@@ -9396,7 +9386,7 @@ type _JsxA11YNoRedundantRoles_JsxA11YNoRedundantRoles =
       },
     ];
 // ----- jsx-a11y/no-static-element-interactions -----
-type _JsxA11YNoStaticElementInteractions_JsxA11YNoStaticElementInteractions =
+type JsxA11YNoStaticElementInteractions =
   | []
   | [
       {
@@ -9405,7 +9395,7 @@ type _JsxA11YNoStaticElementInteractions_JsxA11YNoStaticElementInteractions =
       },
     ];
 // ----- jsx-a11y/prefer-tag-over-role -----
-type _JsxA11YPreferTagOverRole_JsxA11YPreferTagOverRole =
+type JsxA11YPreferTagOverRole =
   | []
   | [
       {
@@ -9413,7 +9403,7 @@ type _JsxA11YPreferTagOverRole_JsxA11YPreferTagOverRole =
       },
     ];
 // ----- jsx-a11y/role-has-required-aria-props -----
-type _JsxA11YRoleHasRequiredAriaProps_JsxA11YRoleHasRequiredAriaProps =
+type JsxA11YRoleHasRequiredAriaProps =
   | []
   | [
       {
@@ -9421,7 +9411,7 @@ type _JsxA11YRoleHasRequiredAriaProps_JsxA11YRoleHasRequiredAriaProps =
       },
     ];
 // ----- jsx-a11y/role-supports-aria-props -----
-type _JsxA11YRoleSupportsAriaProps_JsxA11YRoleSupportsAriaProps =
+type JsxA11YRoleSupportsAriaProps =
   | []
   | [
       {
@@ -9429,7 +9419,7 @@ type _JsxA11YRoleSupportsAriaProps_JsxA11YRoleSupportsAriaProps =
       },
     ];
 // ----- jsx-a11y/scope -----
-type _JsxA11YScope_JsxA11YScope =
+type JsxA11YScope =
   | []
   | [
       {
@@ -9437,7 +9427,7 @@ type _JsxA11YScope_JsxA11YScope =
       },
     ];
 // ----- jsx-a11y/tabindex-no-positive -----
-type _JsxA11YTabindexNoPositive_JsxA11YTabindexNoPositive =
+type JsxA11YTabindexNoPositive =
   | []
   | [
       {
@@ -10160,13 +10150,9 @@ type NoConstantCondition =
   | []
   | [
       {
-        checkLoops?: boolean;
+        checkLoops?: "all" | "allExceptWhileTrue" | "none" | true | false;
       },
     ];
-// ----- no-constructor-return -----
-interface NoConstructorReturn {
-  [k: string]: unknown | undefined;
-}
 // ----- no-duplicate-imports -----
 type NoDuplicateImports =
   | []
@@ -10238,9 +10224,12 @@ type NoExtendNative =
 type NoExtraBooleanCast =
   | []
   | [
-      {
-        enforceForLogicalOperands?: boolean;
-      },
+      | {
+          enforceForInnerExpressions?: boolean;
+        }
+      | {
+          enforceForLogicalOperands?: boolean;
+        },
     ];
 // ----- no-extra-parens -----
 type NoExtraParens =
@@ -10270,6 +10259,7 @@ type NoFallthrough =
       {
         commentPattern?: string;
         allowEmptyCase?: boolean;
+        reportUnusedFallthroughComment?: boolean;
       },
     ];
 // ----- no-global-assign -----
@@ -10289,7 +10279,7 @@ type NoImplicitCoercion =
         number?: boolean;
         string?: boolean;
         disallowTemplateShorthand?: boolean;
-        allow?: ("~" | "!!" | "+" | "*")[];
+        allow?: ("~" | "!!" | "+" | "- -" | "-" | "*")[];
       },
     ];
 // ----- no-implicit-globals -----
@@ -10309,7 +10299,15 @@ type NoInlineComments =
       },
     ];
 // ----- no-inner-declarations -----
-type NoInnerDeclarations = [] | ["functions" | "both"];
+type NoInnerDeclarations =
+  | []
+  | ["functions" | "both"]
+  | [
+      "functions" | "both",
+      {
+        blockScopedFunctions?: "allow" | "disallow";
+      },
+    ];
 // ----- no-invalid-regexp -----
 type NoInvalidRegexp =
   | []
@@ -10358,6 +10356,14 @@ type NoMagicNumbers =
         ignoreArrayIndexes?: boolean;
         ignoreDefaultValues?: boolean;
         ignoreClassFieldInitialValues?: boolean;
+      },
+    ];
+// ----- no-misleading-character-class -----
+type NoMisleadingCharacterClass =
+  | []
+  | [
+      {
+        allowEscape?: boolean;
       },
     ];
 // ----- no-mixed-operators -----
@@ -10549,9 +10555,11 @@ type NoRestrictedExports =
   | [
       | {
           restrictedNamedExports?: string[];
+          restrictedNamedExportsPattern?: string;
         }
       | {
           restrictedNamedExports?: string[];
+          restrictedNamedExportsPattern?: string;
           restrictDefaultExports?: {
             direct?: boolean;
             named?: boolean;
@@ -10577,6 +10585,7 @@ type NoRestrictedImports =
           name: string;
           message?: string;
           importNames?: string[];
+          allowImportNames?: string[];
         }
     )[]
   | []
@@ -10588,18 +10597,19 @@ type NoRestrictedImports =
               name: string;
               message?: string;
               importNames?: string[];
+              allowImportNames?: string[];
             }
         )[];
         patterns?:
           | string[]
-          | {
-              importNames?: [string, ...string[]];
-
-              group: [string, ...string[]];
-              importNamePattern?: string;
-              message?: string;
-              caseSensitive?: boolean;
-            }[];
+          | (
+              | {
+                  [k: string]: unknown | undefined;
+                }
+              | {
+                  [k: string]: unknown | undefined;
+                }
+            )[];
       },
     ];
 // ----- no-restricted-modules -----
@@ -10783,6 +10793,8 @@ type NoUnusedVars =
           caughtErrors?: "all" | "none";
           caughtErrorsIgnorePattern?: string;
           destructuredArrayIgnorePattern?: string;
+          ignoreClassWithStaticInitBlock?: boolean;
+          reportUsedIgnorePattern?: boolean;
         },
     ];
 // ----- no-use-before-define -----
@@ -12135,18 +12147,12 @@ type RequireAtomicUpdates =
         allowProperties?: boolean;
       },
     ];
-// ----- require-jsdoc -----
-type RequireJsdoc =
+// ----- require-unicode-regexp -----
+type RequireUnicodeRegexp =
   | []
   | [
       {
-        require?: {
-          ClassDeclaration?: boolean;
-          MethodDefinition?: boolean;
-          FunctionDeclaration?: boolean;
-          ArrowFunctionExpression?: boolean;
-          FunctionExpression?: boolean;
-        };
+        requireFlag?: "u" | "v";
       },
     ];
 // ----- rest-spread-spacing -----
@@ -12442,25 +12448,6 @@ type UseIsnan =
       {
         enforceForSwitchCase?: boolean;
         enforceForIndexOf?: boolean;
-      },
-    ];
-// ----- valid-jsdoc -----
-type ValidJsdoc =
-  | []
-  | [
-      {
-        prefer?: {
-          [k: string]: string | undefined;
-        };
-        preferType?: {
-          [k: string]: string | undefined;
-        };
-        requireReturn?: boolean;
-        requireParamDescription?: boolean;
-        requireReturnDescription?: boolean;
-        matchDescription?: string;
-        requireReturnType?: boolean;
-        requireParamType?: boolean;
       },
     ];
 // ----- valid-typeof -----

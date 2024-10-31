@@ -59,7 +59,7 @@ declare module "eslint-plugin-jsx-a11y" {
 declare module "eslint-plugin-jest" {
   type Plugin = import("eslint").ESLint.Plugin;
   type Rules = import("eslint").Linter.RulesRecord;
-  type LanguageOptions = import("eslint").Linter.FlatConfig["languageOptions"];
+  type LanguageOptions = import("eslint").Linter.Config["languageOptions"];
 
   const plugin: Plugin;
 
@@ -102,7 +102,7 @@ declare module "eslint-plugin-testing-library" {
 declare module "eslint-plugin-jest-dom" {
   type Plugin = import("eslint").ESLint.Plugin;
   type Rules = import("eslint").Linter.RulesRecord;
-  type LanguageOptions = import("eslint").Linter.FlatConfig["languageOptions"];
+  type LanguageOptions = import("eslint").Linter.Config["languageOptions"];
 
   const plugin: Plugin;
 

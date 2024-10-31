@@ -47,7 +47,7 @@ const importsConfig = ({ typescript = false }: ImportsConfigOptions = {}) => {
       rules: importsRules,
     },
     ...(typescript ? [typescriptImports] : []),
-  ] satisfies Linter.FlatConfig[];
+  ] satisfies Linter.Config[];
 };
 
 export default importsConfig;

@@ -36,7 +36,7 @@ And if you're using [VS Code](https://code.visualstudio.com), make sure to enabl
 ```jsonc
 // .vscode/settings.json
 {
-  "eslint.experimental.useFlatConfig": true,
+  "eslint.useFlatConfig": true,
 }
 ```
 
