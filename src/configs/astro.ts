@@ -15,9 +15,7 @@ export const astroConfig = () => {
       name: "jimmy.codes/astro",
       plugins: {
         "astro": pluginAstro,
-        "jsx-a11y": {
-          rules: jsxA11y.rules,
-        },
+        "jsx-a11y": jsxA11y,
       },
       languageOptions: {
         globals: {

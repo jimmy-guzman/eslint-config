@@ -126,6 +126,8 @@ exports[`should create react rules 1`] = `
       ],
       "li": [
         "menuitem",
+        "menuitemradio",
+        "menuitemcheckbox",
         "option",
         "row",
         "tab",

@@ -1908,7 +1908,7 @@ export interface RuleOptions {
    */
   "jest/valid-title"?: Linter.RuleEntry<JestValidTitle>;
   /**
-   * Enforce emojis are wrapped in `<span>` and provide screenreader access.
+   * Enforce emojis are wrapped in `<span>` and provide screen reader access.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/accessible-emoji.md
    * @deprecated
    */
@@ -2025,7 +2025,7 @@ export interface RuleOptions {
    */
   "jsx-a11y/mouse-events-have-key-events"?: Linter.RuleEntry<JsxA11yMouseEventsHaveKeyEvents>;
   /**
-   * Enforce that the `accessKey` prop is not used on any element to avoid complications with keyboard commands used by a screenreader.
+   * Enforce that the `accessKey` prop is not used on any element to avoid complications with keyboard commands used by a screen reader.
    * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-access-key.md
    */
   "jsx-a11y/no-access-key"?: Linter.RuleEntry<JsxA11yNoAccessKey>;

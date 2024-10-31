@@ -24,9 +24,7 @@ const reactConfig = (
       plugins: {
         react,
         "react-hooks": reactHooks,
-        "jsx-a11y": {
-          rules: jsxA11y.rules,
-        },
+        "jsx-a11y": jsxA11y,
         "react-refresh": reactRefresh,
       },
       languageOptions: {
