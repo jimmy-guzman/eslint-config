@@ -1,9 +1,11 @@
-import { type ESLint, type Linter } from "eslint";
+import type { ESLint, Linter } from "eslint";
+
 import importX from "eslint-plugin-import-x";
 import nodeImport from "eslint-plugin-node-import";
 
+import type { TypescriptOptions } from "../types";
+
 import { importsRules } from "../rules/imports";
-import { type TypescriptOptions } from "../types";
 
 const typescriptImports = {
   name: "jimmy.codes/imports/typescript",

@@ -1,7 +1,7 @@
 import * as jestDom from "eslint-plugin-jest-dom";
 import testingLibrary from "eslint-plugin-testing-library";
 
-import { type Rules } from "../types";
+import type { Rules } from "../types";
 
 export const testingLibraryRules = {
   ...testingLibrary.configs.react.rules,

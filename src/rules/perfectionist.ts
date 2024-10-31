@@ -1,6 +1,6 @@
 import perfectionist from "eslint-plugin-perfectionist";
 
-import { type Rules } from "../types";
+import type { Rules } from "../types";
 
 export const perfectionistRules = {
   ...perfectionist.configs["recommended-natural"].rules,

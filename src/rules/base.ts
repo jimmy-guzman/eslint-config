@@ -1,6 +1,6 @@
 import eslint from "@eslint/js";
 
-import { type Rules } from "../types";
+import type { Rules } from "../types";
 
 export const baseRules = {
   ...eslint.configs.recommended.rules,

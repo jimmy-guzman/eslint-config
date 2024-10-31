@@ -1,7 +1,8 @@
 import { config, configs } from "typescript-eslint";
 
+import type { TypescriptOptions } from "../types";
+
 import { GLOB_JS, GLOB_JSX } from "../constants";
-import { type TypescriptOptions } from "../types";
 
 const typescriptConfig = (options: TypescriptOptions) => {
   return config(

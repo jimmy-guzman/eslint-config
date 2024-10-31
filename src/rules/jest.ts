@@ -1,6 +1,6 @@
 import jest from "eslint-plugin-jest";
 
-import { type Rules } from "../types";
+import type { Rules } from "../types";
 
 export const jestRules = {
   ...jest.configs["flat/recommended"].rules,

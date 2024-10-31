@@ -1,8 +1,10 @@
-import { type ESLint } from "eslint";
+import type { ESLint } from "eslint";
+
 import perfectionist from "eslint-plugin-perfectionist";
 
+import type { TypedConfigItem } from "../types";
+
 import { perfectionistRules } from "../rules/perfectionist";
-import { type TypedConfigItem } from "../types";
 
 const perfectionistConfig = () => {
   return [

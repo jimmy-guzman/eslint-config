@@ -1,7 +1,8 @@
 import globals from "globals";
 
+import type { TypedConfigItem } from "../types";
+
 import { GLOB_CJS } from "../constants";
-import { type TypedConfigItem } from "../types";
 
 export const commonjsConfig = () => {
   return [

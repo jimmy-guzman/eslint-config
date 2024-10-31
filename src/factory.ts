@@ -1,5 +1,8 @@
-import { type Linter } from "eslint";
+import type { Linter } from "eslint";
+
 import eslintConfigPrettier from "eslint-config-prettier";
+
+import type { Options, TypedConfigItem } from "./types";
 
 import { astroConfig } from "./configs/astro";
 import { commonjsConfig } from "./configs/commonjs";
@@ -11,7 +14,6 @@ import typescriptConfig from "./configs/typescript";
 import { GLOB_IGNORES } from "./constants";
 import { hasAstro, hasReact, hasTesting, hasTypescript } from "./has-dep";
 import { baseRules } from "./rules/base";
-import { type Options, type TypedConfigItem } from "./types";
 import {
   getReactOptions,
   getTestingOptions,

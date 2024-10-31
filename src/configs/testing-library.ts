@@ -1,8 +1,9 @@
 import * as jestDom from "eslint-plugin-jest-dom";
 import testingLibrary from "eslint-plugin-testing-library";
 
+import type { TypedConfigItem } from "../types";
+
 import { GLOB_E2E, GLOB_TESTS } from "../constants";
-import { type TypedConfigItem } from "../types";
 
 const testingLibraryConfig = () => {
   return [

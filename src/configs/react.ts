@@ -1,15 +1,17 @@
+import type { ESLint } from "eslint";
+
 import queryPlugin from "@tanstack/eslint-plugin-query";
-import { type ESLint } from "eslint";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import * as reactRefresh from "eslint-plugin-react-refresh";
 import globals from "globals";
 
+import type { ReactOptions, TypedConfigItem } from "../types";
+
 import { GLOB_JSX, GLOB_TSX } from "../constants";
 import { hasReactQuery } from "../has-dep";
 import { reactRules } from "../rules/react";
-import { type ReactOptions, type TypedConfigItem } from "../types";
 
 const reactConfig = (
   { utilities = [] }: ReactOptions = {},

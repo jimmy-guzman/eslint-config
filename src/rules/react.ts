@@ -1,6 +1,6 @@
 import jsxA11y from "eslint-plugin-jsx-a11y";
 
-import { type Rules } from "../types";
+import type { Rules } from "../types";
 
 export const reactRules = {
   ...jsxA11y.configs.recommended.rules,

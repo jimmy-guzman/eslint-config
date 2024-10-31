@@ -1,8 +1,4 @@
-import {
-  type ReactOptions,
-  type TestingOptions,
-  type TypescriptOptions,
-} from "./types";
+import type { ReactOptions, TestingOptions, TypescriptOptions } from "./types";
 
 export const getTypescriptOptions = (options: boolean | TypescriptOptions) => {
   return typeof options === "object"

@@ -1,8 +1,10 @@
-import { type Linter } from "eslint";
 import importX from "eslint-plugin-import-x";
+
+import type { Rules } from "../types";
 
 export const importsRules = {
   ...importX.configs.recommended.rules,
+  "import-x/consistent-type-specifier-style": ["error", "prefer-top-level"],
   "import-x/first": "error",
   // ! can't get this rule to work
   "import-x/namespace": "off",
@@ -12,4 +14,4 @@ export const importsRules = {
   "import-x/no-self-import": "error",
   "import-x/no-useless-path-segments": "error",
   "node-import/prefer-node-protocol": "error",
-} satisfies Linter.RulesRecord;
+} satisfies Rules;

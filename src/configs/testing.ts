@@ -1,9 +1,10 @@
 import jest from "eslint-plugin-jest";
 
+import type { Rules, TestingOptions } from "../types";
+
 import { ALLOWED_VITEST_FUNCS, GLOB_E2E, GLOB_TESTS } from "../constants";
 import { hasJest, hasTestingLibrary, hasVitest } from "../has-dep";
 import { jestRules } from "../rules/jest";
-import { type Rules, type TestingOptions } from "../types";
 import testingLibraryConfig from "./testing-library";
 
 const testingConfig = (

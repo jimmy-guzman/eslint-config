@@ -2,6 +2,10 @@
 
 exports[`should create imports rules 1`] = `
 {
+  "import-x/consistent-type-specifier-style": [
+    "error",
+    "prefer-top-level",
+  ],
   "import-x/default": "error",
   "import-x/export": "error",
   "import-x/first": "error",
