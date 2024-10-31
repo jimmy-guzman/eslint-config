@@ -18,11 +18,11 @@ const typescriptConfig = (options: TypescriptOptions) => {
       rules: {
         "@typescript-eslint/consistent-type-exports": [
           "error",
-          { fixMixedExportsWithInlineTypeSpecifier: true },
+          { fixMixedExportsWithInlineTypeSpecifier: false },
         ],
         "@typescript-eslint/consistent-type-imports": [
           "error",
-          { fixStyle: "inline-type-imports" },
+          { fixStyle: "separate-type-imports" },
         ],
         "@typescript-eslint/no-deprecated": "warn",
         "@typescript-eslint/no-misused-promises": [
