@@ -12,14 +12,6 @@ declare module "eslint-config-prettier" {
   export default config;
 }
 
-declare module "eslint-plugin-node-import" {
-  type Plugin = import("eslint").ESLint.Plugin;
-
-  const plugin: Plugin;
-
-  export default plugin;
-}
-
 declare module "eslint-plugin-react-hooks" {
   type Plugin = import("eslint").ESLint.Plugin;
   type Rules = import("eslint").Linter.RulesRecord;

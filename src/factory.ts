@@ -7,6 +7,7 @@ import type { Options, TypedConfigItem } from "./types";
 import { astroConfig } from "./configs/astro";
 import { commonjsConfig } from "./configs/commonjs";
 import importsConfig from "./configs/imports";
+import nodeConfig from "./configs/node";
 import perfectionistConfig from "./configs/perfectionist";
 import reactConfig from "./configs/react";
 import testingConfig from "./configs/testing";
@@ -40,6 +41,7 @@ export const jimmyDotCodes = (
   return [
     { name: "jimmy.codes/base", rules: baseRules },
     ...perfectionistConfig(),
+    ...nodeConfig(),
     ...importsConfig({ typescript: isTypescriptEnabled }),
     ...(isTypescriptEnabled
       ? typescriptConfig(getTypescriptOptions(typescript))

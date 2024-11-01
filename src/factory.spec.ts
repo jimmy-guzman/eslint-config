@@ -5,6 +5,31 @@ import { jimmyDotCodes } from "./factory";
 vi.mock("local-pkg");
 
 describe("jimmyDotCodes", () => {
+  describe("base", () => {
+    it("should create configuration w/ node", () => {
+      expect(jimmyDotCodes({ autoDetect: false })).toStrictEqual(
+        expect.arrayContaining([
+          expect.objectContaining({ name: "jimmy.codes/node" }),
+        ]),
+      );
+    });
+    it("should create configuration w/ imports", () => {
+      expect(jimmyDotCodes({ autoDetect: false })).toStrictEqual(
+        expect.arrayContaining([
+          expect.objectContaining({ name: "jimmy.codes/imports" }),
+        ]),
+      );
+    });
+    it("should create configuration w/ perfectionist", () => {
+      expect(
+        jimmyDotCodes({ autoDetect: false, typescript: true }),
+      ).toStrictEqual(
+        expect.arrayContaining([
+          expect.objectContaining({ name: "jimmy.codes/perfectionist" }),
+        ]),
+      );
+    });
+  });
   it("should create configuration w/ typescript", () => {
     expect(
       jimmyDotCodes({ autoDetect: false, typescript: true }),

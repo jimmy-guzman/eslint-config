@@ -13,5 +13,4 @@ export const importsRules = {
   "import-x/no-empty-named-blocks": "error",
   "import-x/no-self-import": "error",
   "import-x/no-useless-path-segments": "error",
-  "node-import/prefer-node-protocol": "error",
 } satisfies Rules;

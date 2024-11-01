@@ -1,7 +1,7 @@
 import type { ESLint, Linter } from "eslint";
 
 import importX from "eslint-plugin-import-x";
-import nodeImport from "eslint-plugin-node-import";
+import nodePlugin from "eslint-plugin-n";
 
 import type { TypescriptOptions } from "../types";
 
@@ -36,7 +36,7 @@ const importsConfig = ({ typescript = false }: ImportsConfigOptions = {}) => {
       plugins: {
         // TODO: remove unknown conversion
         "import-x": importX as unknown as ESLint.Plugin,
-        "node-import": nodeImport,
+        "n": nodePlugin,
       },
       rules: importsRules,
       // https://github.com/import-js/eslint-plugin-import/issues/2556#issuecomment-1419518561

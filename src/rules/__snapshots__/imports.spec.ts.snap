@@ -20,6 +20,5 @@ exports[`should create imports rules 1`] = `
   "import-x/no-self-import": "error",
   "import-x/no-unresolved": "error",
   "import-x/no-useless-path-segments": "error",
-  "node-import/prefer-node-protocol": "error",
 }
 `;
