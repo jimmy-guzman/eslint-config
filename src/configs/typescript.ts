@@ -7,8 +7,10 @@ import { GLOB_JS, GLOB_JSX } from "../constants";
 const typescriptConfig = (options: TypescriptOptions) => {
   return config(
     ...configs.strictTypeChecked,
+    ...configs.stylisticTypeChecked.filter((config) => {
+      return config.name === "typescript-eslint/stylistic-type-checked";
+    }),
     {
-      extends: [...configs.strictTypeChecked, ...configs.stylisticTypeChecked],
       languageOptions: {
         parserOptions: {
           project: options.project,
