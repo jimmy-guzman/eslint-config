@@ -2,6 +2,12 @@
 
 exports[`should create base rules 1`] = `
 {
+  "array-callback-return": [
+    "error",
+    {
+      "allowImplicit": true,
+    },
+  ],
   "arrow-body-style": [
     "error",
     "always",

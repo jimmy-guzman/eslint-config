@@ -4,6 +4,12 @@ import type { Rules } from "../types";
 
 export const baseRules = {
   ...eslint.configs.recommended.rules,
+  "array-callback-return": [
+    "error",
+    {
+      allowImplicit: true,
+    },
+  ],
   "arrow-body-style": ["error", "always"],
   "curly": ["error", "multi-or-nest", "consistent"],
   "no-console": "warn",

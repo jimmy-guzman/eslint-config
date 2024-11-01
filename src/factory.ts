@@ -12,6 +12,7 @@ import perfectionistConfig from "./configs/perfectionist";
 import reactConfig from "./configs/react";
 import testingConfig from "./configs/testing";
 import typescriptConfig from "./configs/typescript";
+import unicornConfig from "./configs/unicorn";
 import { GLOB_IGNORES } from "./constants";
 import { hasAstro, hasReact, hasTesting, hasTypescript } from "./has-dep";
 import { baseRules } from "./rules/base";
@@ -42,6 +43,7 @@ export const jimmyDotCodes = (
     { name: "jimmy.codes/base", rules: baseRules },
     ...perfectionistConfig(),
     ...nodeConfig(),
+    ...unicornConfig(),
     ...importsConfig({ typescript: isTypescriptEnabled }),
     ...(isTypescriptEnabled
       ? typescriptConfig(getTypescriptOptions(typescript))
@@ -51,6 +53,7 @@ export const jimmyDotCodes = (
     ...(isTestingEnabled
       ? testingConfig(getTestingOptions(testing), autoDetect)
       : []),
+    // TODO [2024-12-31]: rename to jimmy.codes/prettier.
     { name: "jimmy.codes/disabled", ...eslintConfigPrettier },
     ...commonjsConfig(),
     {

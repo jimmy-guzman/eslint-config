@@ -1,5 +1,3 @@
-import { jimmyDotCodes } from "./factory";
+export { jimmyDotCodes as default } from "./factory";
 
 export type * from "./types";
-
-export default jimmyDotCodes;
