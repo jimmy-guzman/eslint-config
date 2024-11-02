@@ -6,7 +6,7 @@ export const unicornRules = {
   ...eslintPluginUnicorn.configs["flat/recommended"].rules,
   "unicorn/filename-case": "off",
   "unicorn/import-style": "off",
-  "unicorn/no-abusive-eslint-disable": "off", // TODO [2024-12-31]: add https://eslint-community.github.io/eslint-plugin-eslint-comments
+  "unicorn/no-abusive-eslint-disable": "off",
   "unicorn/no-anonymous-default-export": "off",
   "unicorn/no-array-callback-reference": "off", // TODO: enable when https://github.com/sindresorhus/eslint-plugin-unicorn/issues/781 is resolved.
   "unicorn/no-array-reduce": "off",
