@@ -38,6 +38,8 @@ export const GLOB_IGNORES = [
   "**/components.d.ts",
   "**/vite.config.ts.*.mjs",
 
+  "**/*.gen.*",
+
   "!.storybook",
 ];
 
