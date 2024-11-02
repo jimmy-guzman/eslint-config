@@ -4,5 +4,6 @@ import type { Rules } from "../types";
 
 export const eslintCommentsRules = {
   ...comments.recommended.rules,
+  "@eslint-community/eslint-comments/no-unused-disable": "off",
   "@eslint-community/eslint-comments/require-description": "error",
 } satisfies Rules;

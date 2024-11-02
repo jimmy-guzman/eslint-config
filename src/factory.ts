@@ -41,7 +41,13 @@ export const jimmyDotCodes = (
   const isAstroEnabled = astro || (autoDetect && hasAstro());
 
   return [
-    { name: "jimmy.codes/base", rules: baseRules },
+    {
+      linterOptions: {
+        reportUnusedDisableDirectives: true,
+      },
+      name: "jimmy.codes/base",
+      rules: baseRules,
+    },
     ...perfectionistConfig(),
     ...nodeConfig(),
     ...unicornConfig(),

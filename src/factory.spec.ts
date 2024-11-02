@@ -6,16 +6,22 @@ vi.mock("local-pkg");
 
 describe("jimmyDotCodes", () => {
   describe("base", () => {
-    it.each(["node", "imports", "perfectionist", "unicorn", "eslint-comments"])(
-      "should create configuration w/ %s",
-      (input) => {
-        expect(jimmyDotCodes({ autoDetect: false })).toStrictEqual(
-          expect.arrayContaining([
-            expect.objectContaining({ name: `jimmy.codes/${input}` }),
-          ]),
-        );
-      },
-    );
+    it.each([
+      "node",
+      "imports",
+      "perfectionist",
+      "unicorn",
+      "eslint-comments",
+      "prettier",
+      "ignores",
+      "base",
+    ])("should create configuration w/ %s", (input) => {
+      expect(jimmyDotCodes({ autoDetect: false })).toStrictEqual(
+        expect.arrayContaining([
+          expect.objectContaining({ name: `jimmy.codes/${input}` }),
+        ]),
+      );
+    });
   });
 
   it("should create configuration w/ typescript", () => {
