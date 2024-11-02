@@ -10,6 +10,7 @@ declare module "eslint-config-prettier" {
   export default config;
 }
 
+// TODO: remove when https://github.com/facebook/react/issues/30119 is resolved.
 declare module "eslint-plugin-react-hooks" {
   import type { ESLint, Linter } from "eslint";
 
@@ -17,8 +18,11 @@ declare module "eslint-plugin-react-hooks" {
 
   interface Configs {
     recommended: {
-      plugins: string[];
-      rules: Linter.RulesRecord;
+      plugins: Record<string, ESLint.Plugin>;
+      rules: {
+        "exhaustive-deps": Linter.RuleEntry;
+        "rules-of-hooks": Linter.RuleEntry;
+      };
     };
   }
 
