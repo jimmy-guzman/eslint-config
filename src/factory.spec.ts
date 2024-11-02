@@ -6,7 +6,7 @@ vi.mock("local-pkg");
 
 describe("jimmyDotCodes", () => {
   describe("base", () => {
-    it.each(["node", "imports", "perfectionist", "unicorn"])(
+    it.each(["node", "imports", "perfectionist", "unicorn", "eslint-comments"])(
       "should create configuration w/ %s",
       (input) => {
         expect(jimmyDotCodes({ autoDetect: false })).toStrictEqual(
@@ -17,6 +17,7 @@ describe("jimmyDotCodes", () => {
       },
     );
   });
+
   it("should create configuration w/ typescript", () => {
     expect(
       jimmyDotCodes({ autoDetect: false, typescript: true }),
@@ -179,7 +180,7 @@ describe("jimmyDotCodes", () => {
 
     it("should include react-query when auto detection is enabled", () => {
       vi.mocked(isPackageExists).mockImplementation((name) => {
-        // eslint-disable-next-line jest/no-conditional-in-test
+        // eslint-disable-next-line jest/no-conditional-in-test -- this condition is only for the mock.
         return name === "react" || name === "@tanstack/react-query";
       });
 
@@ -240,7 +241,7 @@ describe("jimmyDotCodes", () => {
 
     it("should include test-library when auto detection is enabled", () => {
       vi.mocked(isPackageExists).mockImplementation((name) => {
-        // eslint-disable-next-line jest/no-conditional-in-test
+        // eslint-disable-next-line jest/no-conditional-in-test -- this condition is only for the mock.
         return name === "@testing-library/react" || name === "vitest";
       });
 

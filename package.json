@@ -47,6 +47,7 @@
   },
   "prettier": "@jimmy.codes/prettier-config",
   "dependencies": {
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
     "@eslint/js": "^9.14.0",
     "@tanstack/eslint-plugin-query": "^5.59.7",
     "@types/eslint": "9.6.1",

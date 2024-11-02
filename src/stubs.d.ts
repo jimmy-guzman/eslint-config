@@ -1,10 +1,8 @@
-/* eslint-disable @typescript-eslint/consistent-type-imports */
-
 declare module "eslint-config-prettier" {
-  type Rules = import("eslint").Linter.RulesRecord;
+  import type { Linter } from "eslint";
 
   interface Config {
-    rules: Rules;
+    rules: Linter.RulesRecord;
   }
 
   declare const config: Config;
@@ -13,107 +11,103 @@ declare module "eslint-config-prettier" {
 }
 
 declare module "eslint-plugin-react-hooks" {
-  type Plugin = import("eslint").ESLint.Plugin;
-  type Rules = import("eslint").Linter.RulesRecord;
+  import type { ESLint, Linter } from "eslint";
 
-  const plugin: Plugin;
+  const plugin: ESLint.Plugin;
 
   interface Configs {
     recommended: {
       plugins: string[];
-      rules: Rules;
+      rules: Linter.RulesRecord;
     };
   }
 
   export const configs: Configs;
-
-  export const rules: Plugin["rules"];
+  export const rules: ESLint.Plugin["rules"];
 }
 
 declare module "eslint-plugin-jsx-a11y" {
-  type Plugin = import("eslint").ESLint.Plugin;
-  type Rules = import("eslint").Linter.RulesRecord;
-
-  const plugin: Plugin;
+  import type { ESLint, Linter } from "eslint";
 
   interface Configs {
     recommended: {
       plugins: string[];
-      rules: Rules;
+      rules: Linter.RulesRecord;
     };
   }
 
   export const configs: Configs;
-
-  export const rules: Plugin["rules"];
+  export const rules: ESLint.Plugin["rules"];
 }
 
 declare module "eslint-plugin-jest" {
-  type Plugin = import("eslint").ESLint.Plugin;
-  type Rules = import("eslint").Linter.RulesRecord;
-  type LanguageOptions = import("eslint").Linter.Config["languageOptions"];
+  import type { ESLint, Linter } from "eslint";
 
-  const plugin: Plugin;
+  type LanguageOptions = Linter.Config["languageOptions"];
 
   interface Configs {
     "flat/recommended": {
       languageOptions: LanguageOptions;
       plugins: string[];
-      rules: Rules;
+      rules: Linter.RulesRecord;
     };
     "flat/style": {
       languageOptions: LanguageOptions;
       plugins: string[];
-      rules: Rules;
+      rules: Linter.RulesRecord;
     };
   }
 
   export const configs: Configs;
-
-  export const rules: Plugin["rules"];
+  export const rules: ESLint.Plugin["rules"];
 }
 
 declare module "eslint-plugin-testing-library" {
-  type Plugin = import("eslint").ESLint.Plugin;
-  type Rules = import("eslint").Linter.RulesRecord;
-
-  const plugin: Plugin;
+  import type { ESLint, Linter } from "eslint";
 
   interface Configs {
     react: {
       plugins: string[];
-      rules: Rules;
+      rules: Linter.RulesRecord;
     };
   }
 
   export const configs: Configs;
-
-  export const rules: Plugin["rules"];
+  export const rules: ESLint.Plugin["rules"];
 }
 
 declare module "eslint-plugin-jest-dom" {
-  type Plugin = import("eslint").ESLint.Plugin;
-  type Rules = import("eslint").Linter.RulesRecord;
-  type LanguageOptions = import("eslint").Linter.Config["languageOptions"];
-
-  const plugin: Plugin;
+  import type { ESLint, Linter } from "eslint";
 
   interface Configs {
     "flat/recommended": {
       plugins: string[];
-      rules: Rules;
+      rules: Linter.RulesRecord;
     };
   }
 
   export const configs: Configs;
-
-  export default Plugin;
+  export default ESLint.Plugin;
 }
 
 declare module "eslint-plugin-react-refresh" {
-  type Plugin = import("eslint").ESLint.Plugin;
+  import type { ESLint } from "eslint";
 
-  const plugin: Plugin;
+  export default ESLint.Plugin;
+}
 
-  export default plugin;
+// TODO: remove when https://github.com/eslint-community/eslint-plugin-eslint-comments/issues/214 is resolved.
+
+declare module "@eslint-community/eslint-plugin-eslint-comments/configs" {
+  import type { Linter } from "eslint";
+
+  declare namespace Configs {
+    import defaultExports = Configs;
+
+    export const recommended: Linter.Config;
+
+    export { defaultExports as default };
+  }
+
+  export = Configs;
 }

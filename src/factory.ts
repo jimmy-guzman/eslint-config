@@ -6,6 +6,7 @@ import type { Options, TypedConfigItem } from "./types";
 
 import { astroConfig } from "./configs/astro";
 import { commonjsConfig } from "./configs/commonjs";
+import eslintCommentsConfig from "./configs/eslint-comments";
 import importsConfig from "./configs/imports";
 import nodeConfig from "./configs/node";
 import perfectionistConfig from "./configs/perfectionist";
@@ -44,6 +45,7 @@ export const jimmyDotCodes = (
     ...perfectionistConfig(),
     ...nodeConfig(),
     ...unicornConfig(),
+    ...eslintCommentsConfig(),
     ...importsConfig({ typescript: isTypescriptEnabled }),
     ...(isTypescriptEnabled
       ? typescriptConfig(getTypescriptOptions(typescript))
