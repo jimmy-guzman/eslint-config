@@ -55,8 +55,7 @@ export const jimmyDotCodes = (
     ...(isTestingEnabled
       ? testingConfig(getTestingOptions(testing), autoDetect)
       : []),
-    // TODO [2024-12-31]: rename to jimmy.codes/prettier.
-    { name: "jimmy.codes/disabled", ...eslintConfigPrettier },
+    { name: "jimmy.codes/prettier", ...eslintConfigPrettier },
     ...commonjsConfig(),
     {
       ignores: [...GLOB_IGNORES, ...ignores],
