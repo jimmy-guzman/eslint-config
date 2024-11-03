@@ -19,6 +19,7 @@ export const reactRules = {
   "react/forbid-elements": "off",
   "react/forbid-foreign-prop-types": "off",
   "react/forbid-prop-types": "off",
+  "react/forward-ref-uses-ref": "error",
   "react/function-component-definition": "off", // revisit
   "react/hook-use-state": "error",
   "react/iframe-missing-sandbox": "error",
