@@ -8,6 +8,13 @@ exports[`should create imports rules 1`] = `
   ],
   "import-x/default": "error",
   "import-x/export": "error",
+  "import-x/extensions": [
+    "error",
+    "never",
+    {
+      "checkTypedImports": true,
+    },
+  ],
   "import-x/first": "error",
   "import-x/named": "error",
   "import-x/namespace": "off",

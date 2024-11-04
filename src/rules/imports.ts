@@ -5,6 +5,7 @@ import type { Rules } from "../types";
 export const importsRules = {
   ...importX.configs.recommended.rules,
   "import-x/consistent-type-specifier-style": ["error", "prefer-top-level"],
+  "import-x/extensions": ["error", "never", { checkTypedImports: true }],
   "import-x/first": "error",
   // ! can't get this rule to work
   "import-x/namespace": "off",
