@@ -10,7 +10,10 @@ export const importsRules = {
   "import-x/namespace": "off",
   "import-x/newline-after-import": "error",
   "import-x/no-absolute-path": "error",
+  "import-x/no-duplicates": "error",
   "import-x/no-empty-named-blocks": "error",
+  "import-x/no-named-as-default": "error",
+  "import-x/no-named-as-default-member": "error",
   "import-x/no-self-import": "error",
   "import-x/no-useless-path-segments": "error",
 } satisfies Rules;
