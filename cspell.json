@@ -39,6 +39,7 @@
     "TSES",
     "typecheck",
     "typegen",
+    "vinxi",
     "vitepress",
     "vitest",
     "wagoid"

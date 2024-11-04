@@ -29,6 +29,8 @@ export const GLOB_IGNORES = [
   "**/.eslint-config-inspector",
   "**/playwright-report",
   "**/.astro",
+  "**/.vinxi",
+  "**/app.config.timestamp_*.js",
 
   "**/CHANGELOG*.md",
   "**/*.min.*",
