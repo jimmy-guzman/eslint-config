@@ -11,7 +11,7 @@ export const baseRules = {
     },
   ],
   "arrow-body-style": ["error", "always"],
-  "curly": ["error", "multi-or-nest", "consistent"],
+  "curly": ["error", "all"],
   "no-console": "warn",
   "no-useless-rename": "error",
   "object-shorthand": "error",

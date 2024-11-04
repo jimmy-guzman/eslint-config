@@ -15,8 +15,7 @@ exports[`should create base rules 1`] = `
   "constructor-super": "error",
   "curly": [
     "error",
-    "multi-or-nest",
-    "consistent",
+    "all",
   ],
   "for-direction": "error",
   "getter-return": "error",
