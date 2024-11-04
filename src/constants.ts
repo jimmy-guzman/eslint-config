@@ -68,6 +68,6 @@ export const GLOB_CJS = "**/*.cjs";
 
 export const GLOB_ASTRO = "**/*.astro";
 
-export const ALLOWED_VITEST_FUNCS = ["vi.mock"];
+export const ALLOWED_VITEST_FUNCS = ["vi.mock", "describe", "expect", "it"];
 
 export const TESTING_LIBRARY_FAMILY = ["@testing-library/react"];
