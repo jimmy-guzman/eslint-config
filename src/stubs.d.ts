@@ -44,28 +44,6 @@ declare module "eslint-plugin-jsx-a11y" {
   export const rules: ESLint.Plugin["rules"];
 }
 
-declare module "eslint-plugin-jest" {
-  import type { ESLint, Linter } from "eslint";
-
-  type LanguageOptions = Linter.Config["languageOptions"];
-
-  interface Configs {
-    "flat/recommended": {
-      languageOptions: LanguageOptions;
-      plugins: string[];
-      rules: Linter.RulesRecord;
-    };
-    "flat/style": {
-      languageOptions: LanguageOptions;
-      plugins: string[];
-      rules: Linter.RulesRecord;
-    };
-  }
-
-  export const configs: Configs;
-  export const rules: ESLint.Plugin["rules"];
-}
-
 declare module "eslint-plugin-testing-library" {
   import type { ESLint, Linter } from "eslint";
 
