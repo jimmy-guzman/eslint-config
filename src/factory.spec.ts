@@ -244,7 +244,6 @@ describe("eslintConfig", () => {
 
     it("should include react-query when auto detection is enabled", async () => {
       vi.mocked(isPackageExists).mockImplementation((name) => {
-        // eslint-disable-next-line jest/no-conditional-in-test -- this condition is only for the mock.
         return name === "react" || name === "@tanstack/react-query";
       });
 
@@ -298,7 +297,6 @@ describe("eslintConfig", () => {
 
     it("should include test-library when auto detection is enabled", async () => {
       vi.mocked(isPackageExists).mockImplementation((name) => {
-        // eslint-disable-next-line jest/no-conditional-in-test -- this condition is only for the mock.
         return name === "@testing-library/react" || name === "vitest";
       });
 

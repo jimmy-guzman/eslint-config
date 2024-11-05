@@ -5,7 +5,12 @@ import { builtinRules } from "eslint/use-at-your-own-risk";
 
 import eslintConfig from "../src";
 
-const configs = await eslintConfig();
+const configs = await eslintConfig({
+  testing: {
+    // TODO: remove when framework approach is removed
+    framework: "jest",
+  },
+});
 
 const ruleDts = await flatConfigsToRulesDTS(
   [

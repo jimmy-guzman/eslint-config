@@ -16,12 +16,11 @@ export const testingConfig = async (
   const configs: TypedConfigItem[] = [];
 
   if (isVitest) {
-    const jestPlugin = await interopDefault(import("eslint-plugin-jest"));
+    const vitestPlugin = await interopDefault(import("@vitest/eslint-plugin"));
 
     configs.push({
       files: GLOB_TESTS,
-      ignores: GLOB_E2E,
-      ...jestPlugin.configs["flat/recommended"],
+      ...vitestPlugin.configs.recommended,
       name: "jimmy.codes/vitest",
       rules: await vitestRules(),
     });
