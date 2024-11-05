@@ -13,6 +13,7 @@ exports[`should create imports rules 1`] = `
     "never",
     {
       "checkTypedImports": true,
+      "svg": "always",
     },
   ],
   "import-x/first": "error",
@@ -25,7 +26,14 @@ exports[`should create imports rules 1`] = `
   "import-x/no-named-as-default": "error",
   "import-x/no-named-as-default-member": "error",
   "import-x/no-self-import": "error",
-  "import-x/no-unresolved": "error",
+  "import-x/no-unresolved": [
+    "error",
+    {
+      "ignore": [
+        "\\.svg$",
+      ],
+    },
+  ],
   "import-x/no-useless-path-segments": "error",
 }
 `;

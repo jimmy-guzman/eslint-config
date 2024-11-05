@@ -5,7 +5,11 @@ import type { Rules } from "../types";
 export const importsRules = {
   ...importX.configs.recommended.rules,
   "import-x/consistent-type-specifier-style": ["error", "prefer-top-level"],
-  "import-x/extensions": ["error", "never", { checkTypedImports: true }],
+  "import-x/extensions": [
+    "error",
+    "never",
+    { checkTypedImports: true, svg: "always" },
+  ],
   "import-x/first": "error",
   // ! can't get this rule to work
   "import-x/namespace": "off",
@@ -16,5 +20,6 @@ export const importsRules = {
   "import-x/no-named-as-default": "error",
   "import-x/no-named-as-default-member": "error",
   "import-x/no-self-import": "error",
+  "import-x/no-unresolved": ["error", { ignore: [String.raw`\.svg$`] }],
   "import-x/no-useless-path-segments": "error",
 } satisfies Rules;
