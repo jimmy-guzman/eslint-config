@@ -3,7 +3,7 @@
 
 ### Bug Fixes
 
-* 🐛 avoid stubing types for `eslint-plugin-jest` ([#64](https://github.com/jimmy-guzman/eslint-config/issues/64)) ([e644b68](https://github.com/jimmy-guzman/eslint-config/commit/e644b6809d23f6bc52033d4b38d4ca3695d9f98a))
+* 🐛 avoid stubbing types for `eslint-plugin-jest` ([#64](https://github.com/jimmy-guzman/eslint-config/issues/64)) ([e644b68](https://github.com/jimmy-guzman/eslint-config/commit/e644b6809d23f6bc52033d4b38d4ca3695d9f98a))
 
 ## [3.6.1](https://github.com/jimmy-guzman/eslint-config/compare/v3.6.0...v3.6.1) (2024-11-05)
 
@@ -108,7 +108,7 @@
 
 ### Features
 
-* ✨ prefer seperate type imports & exports ([7ed2fd2](https://github.com/jimmy-guzman/eslint-config/commit/7ed2fd23d32c8cdc6da693f8cf6e04776bf6ae00))
+* ✨ prefer separate type imports & exports ([7ed2fd2](https://github.com/jimmy-guzman/eslint-config/commit/7ed2fd23d32c8cdc6da693f8cf6e04776bf6ae00))
 
 # [3.1.0](https://github.com/jimmy-guzman/eslint-config/compare/v3.0.0...v3.1.0) (2024-10-31)
 
@@ -270,7 +270,7 @@ v9.10.0
 ### Features
 
 * ✨ add support for `**/*.cjs` files ([a05113d](https://github.com/jimmy-guzman/eslint-config/commit/a05113d6523515c22b663273d73414f52f5b2592))
-* ✨ allow namspace for `react/jsx-pascal-case` ([29a11a4](https://github.com/jimmy-guzman/eslint-config/commit/29a11a4b621d4bacb1ed986a894fc10bdbf88920))
+* ✨ allow namespace for `react/jsx-pascal-case` ([29a11a4](https://github.com/jimmy-guzman/eslint-config/commit/29a11a4b621d4bacb1ed986a894fc10bdbf88920))
 
 # [1.2.0](https://github.com/jimmy-guzman/eslint-config/compare/v1.1.0...v1.2.0) (2024-04-08)
 
