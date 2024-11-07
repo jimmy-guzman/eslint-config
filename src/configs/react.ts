@@ -13,7 +13,7 @@ import { GLOB_JSX, GLOB_TSX } from "../constants";
 import { hasReactQuery } from "../has-dep";
 import { reactRules } from "../rules/react";
 
-const reactConfig = (
+export const reactConfig = (
   { utilities = [] }: ReactOptions = {},
   autoDetect = true,
 ) => {
@@ -67,5 +67,3 @@ const reactConfig = (
       : []),
   ] satisfies TypedConfigItem[];
 };
-
-export default reactConfig;

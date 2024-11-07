@@ -4,7 +4,7 @@ import nodePlugin from "eslint-plugin-n";
 
 import { nodeRules } from "../rules/node";
 
-const nodeConfig = () => {
+export const nodeConfig = () => {
   return [
     {
       name: "jimmy.codes/node",
@@ -15,5 +15,3 @@ const nodeConfig = () => {
     },
   ] satisfies Linter.Config[];
 };
-
-export default nodeConfig;

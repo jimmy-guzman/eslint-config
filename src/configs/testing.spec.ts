@@ -1,5 +1,5 @@
 import { ALLOWED_VITEST_FUNCS } from "../constants";
-import testingConfig from "./testing";
+import { testingConfig } from "./testing";
 
 describe("testingConfig", () => {
   it("should create default config w/ vitest overrides", () => {

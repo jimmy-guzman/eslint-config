@@ -1,4 +1,4 @@
-import importsConfig from "./imports";
+import { importsConfig } from "./imports";
 
 describe("importsConfig", () => {
   it("should create config w/ flat config parsing fixes", () => {

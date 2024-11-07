@@ -2,7 +2,7 @@ import comments from "@eslint-community/eslint-plugin-eslint-comments/configs";
 
 import { eslintCommentsRules } from "../rules/eslint-comments";
 
-const eslintCommentsConfig = () => {
+export const eslintCommentsConfig = () => {
   return [
     {
       ...comments.recommended,
@@ -11,5 +11,3 @@ const eslintCommentsConfig = () => {
     },
   ];
 };
-
-export default eslintCommentsConfig;

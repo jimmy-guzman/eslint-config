@@ -1,4 +1,4 @@
-import reactConfig from "./react";
+import { reactConfig } from "./react";
 
 describe("reactConfig", () => {
   it("should create config w/ @tanstack/query rules", () => {

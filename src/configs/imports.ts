@@ -23,7 +23,9 @@ interface ImportsConfigOptions {
   typescript?: boolean | TypescriptOptions;
 }
 
-const importsConfig = ({ typescript = false }: ImportsConfigOptions = {}) => {
+export const importsConfig = ({
+  typescript = false,
+}: ImportsConfigOptions = {}) => {
   return [
     {
       languageOptions: {
@@ -49,5 +51,3 @@ const importsConfig = ({ typescript = false }: ImportsConfigOptions = {}) => {
     ...(typescript ? [typescriptImports] : []),
   ] satisfies Linter.Config[];
 };
-
-export default importsConfig;

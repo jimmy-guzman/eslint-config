@@ -6,15 +6,15 @@ import type { Options, TypedConfigItem } from "./types";
 
 import { astroConfig } from "./configs/astro";
 import { commonjsConfig } from "./configs/commonjs";
-import eslintCommentsConfig from "./configs/eslint-comments";
-import importsConfig from "./configs/imports";
+import { eslintCommentsConfig } from "./configs/eslint-comments";
+import { importsConfig } from "./configs/imports";
 import { javascriptConfig } from "./configs/javascript";
-import nodeConfig from "./configs/node";
-import perfectionistConfig from "./configs/perfectionist";
-import reactConfig from "./configs/react";
-import testingConfig from "./configs/testing";
-import typescriptConfig from "./configs/typescript";
-import unicornConfig from "./configs/unicorn";
+import { nodeConfig } from "./configs/node";
+import { perfectionistConfig } from "./configs/perfectionist";
+import { reactConfig } from "./configs/react";
+import { testingConfig } from "./configs/testing";
+import { typescriptConfig } from "./configs/typescript";
+import { unicornConfig } from "./configs/unicorn";
 import { GLOB_IGNORES } from "./constants";
 import { hasAstro, hasReact, hasTesting, hasTypescript } from "./has-dep";
 import {

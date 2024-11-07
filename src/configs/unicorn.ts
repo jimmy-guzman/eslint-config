@@ -4,7 +4,7 @@ import type { TypedConfigItem } from "../types";
 
 import { unicornRules } from "../rules/unicorn";
 
-const unicornConfig = () => {
+export const unicornConfig = () => {
   return [
     {
       ...eslintPluginUnicorn.configs["flat/recommended"],
@@ -13,5 +13,3 @@ const unicornConfig = () => {
     },
   ] satisfies TypedConfigItem[];
 };
-
-export default unicornConfig;

@@ -4,7 +4,7 @@ import type { TypescriptOptions } from "../types";
 
 import { GLOB_JS, GLOB_JSX, GLOB_TESTS } from "../constants";
 
-const typescriptConfig = (options: TypescriptOptions) => {
+export const typescriptConfig = (options: TypescriptOptions) => {
   return config(
     ...configs.strictTypeChecked,
     ...configs.stylisticTypeChecked.filter((config) => {
@@ -52,5 +52,3 @@ const typescriptConfig = (options: TypescriptOptions) => {
     },
   );
 };
-
-export default typescriptConfig;

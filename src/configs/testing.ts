@@ -7,7 +7,7 @@ import { hasJest, hasTestingLibrary, hasVitest } from "../has-dep";
 import { jestRules } from "../rules/jest";
 import testingLibraryConfig from "./testing-library";
 
-const testingConfig = (
+export const testingConfig = (
   { framework = "vitest", utilities }: TestingOptions = {},
   autoDetect = true,
 ) => {
@@ -64,5 +64,3 @@ const testingConfig = (
     ...(includeTestingLibrary ? testingLibraryConfig() : []),
   ];
 };
-
-export default testingConfig;

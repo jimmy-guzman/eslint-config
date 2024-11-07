@@ -6,7 +6,7 @@ import type { TypedConfigItem } from "../types";
 
 import { perfectionistRules } from "../rules/perfectionist";
 
-const perfectionistConfig = () => {
+export const perfectionistConfig = () => {
   return [
     {
       name: "jimmy.codes/perfectionist",
@@ -18,5 +18,3 @@ const perfectionistConfig = () => {
     },
   ] satisfies TypedConfigItem[];
 };
-
-export default perfectionistConfig;
