@@ -8905,5 +8905,19 @@ If your function does not access \`this\`, you can annotate it with \`this: void
       "@typescript-eslint/use-unknown-in-catch-callback-variable": "off",
     },
   },
+  {
+    "files": [
+      "**/__tests__/**/*.?([cm])[jt]s?(x)",
+      "**/*.spec.?([cm])[jt]s?(x)",
+      "**/*.test.?([cm])[jt]s?(x)",
+      "**/*.bench.?([cm])[jt]s?(x)",
+      "**/*.benchmark.?([cm])[jt]s?(x)",
+    ],
+    "name": "jimmy.codes/typescript/testing",
+    "rules": {
+      "@typescript-eslint/no-unsafe-argument": "off",
+      "@typescript-eslint/no-unsafe-assignment": "off",
+    },
+  },
 ]
 `;

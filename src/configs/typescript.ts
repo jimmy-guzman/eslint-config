@@ -2,7 +2,7 @@ import { config, configs } from "typescript-eslint";
 
 import type { TypescriptOptions } from "../types";
 
-import { GLOB_JS, GLOB_JSX } from "../constants";
+import { GLOB_JS, GLOB_JSX, GLOB_TESTS } from "../constants";
 
 const typescriptConfig = (options: TypescriptOptions) => {
   return config(
@@ -41,6 +41,14 @@ const typescriptConfig = (options: TypescriptOptions) => {
     {
       files: [GLOB_JS, GLOB_JSX],
       ...configs.disableTypeChecked,
+    },
+    {
+      files: GLOB_TESTS,
+      name: "jimmy.codes/typescript/testing",
+      rules: {
+        "@typescript-eslint/no-unsafe-argument": "off",
+        "@typescript-eslint/no-unsafe-assignment": "off",
+      },
     },
   );
 };
