@@ -2,7 +2,7 @@ import eslint from "@eslint/js";
 
 import type { Rules } from "../types";
 
-export const baseRules = {
+export const javascriptRules = {
   ...eslint.configs.recommended.rules,
   "array-callback-return": [
     "error",

@@ -14,7 +14,7 @@ describe("jimmyDotCodes", () => {
       "eslint-comments",
       "prettier",
       "ignores",
-      "base",
+      "javascript",
     ])("should create configuration w/ %s", (input) => {
       expect(jimmyDotCodes({ autoDetect: false })).toStrictEqual(
         expect.arrayContaining([
