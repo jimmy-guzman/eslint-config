@@ -2,8 +2,8 @@ import { ALLOWED_VITEST_FUNCS } from "../constants";
 import { testingConfig } from "./testing";
 
 describe("testingConfig", () => {
-  it("should create default config w/ vitest overrides", () => {
-    const [, vitest] = testingConfig({}, false);
+  it("should create default config w/ vitest overrides", async () => {
+    const [, vitest] = await testingConfig({}, false);
 
     expect(vitest?.rules).toStrictEqual(
       expect.objectContaining({
@@ -18,8 +18,8 @@ describe("testingConfig", () => {
     );
   });
 
-  it("should create default config w/o vitest overrides", () => {
-    const [, jest] = testingConfig({ framework: "jest" }, false);
+  it("should create default config w/o vitest overrides", async () => {
+    const [, jest] = await testingConfig({ framework: "jest" }, false);
 
     expect(jest?.rules).toStrictEqual(
       expect.not.objectContaining({

@@ -1,14 +1,18 @@
-import { reactOptions, testingOptions, typescriptOptions } from "./utils";
+import {
+  getReactOptions,
+  getTestingOptions,
+  getTypescriptOptions,
+} from "./utils";
 
 describe("getTypescriptOptions", () => {
   it("should return default options when a boolean is provided", () => {
-    expect(typescriptOptions(true)).toStrictEqual({
+    expect(getTypescriptOptions(true)).toStrictEqual({
       project: "./tsconfig.json",
     });
   });
   it("should return override options when an object is provided", () => {
     expect(
-      typescriptOptions({
+      getTypescriptOptions({
         project: "./tsconfig.eslint.json",
       }),
     ).toStrictEqual({
@@ -19,13 +23,13 @@ describe("getTypescriptOptions", () => {
 
 describe("getTestingOptions", () => {
   it("should return default options when a boolean is provided", () => {
-    expect(testingOptions(true)).toStrictEqual({
+    expect(getTestingOptions(true)).toStrictEqual({
       framework: "vitest",
     });
   });
   it("should return override options when an object is provided", () => {
     expect(
-      testingOptions({
+      getTestingOptions({
         framework: "jest",
         utilities: ["testing-library"],
       }),
@@ -38,11 +42,11 @@ describe("getTestingOptions", () => {
 
 describe("getReactOptions", () => {
   it("should return default options when a boolean is provided", () => {
-    expect(reactOptions(true)).toStrictEqual({ utilities: [] });
+    expect(getReactOptions(true)).toStrictEqual({ utilities: [] });
   });
   it("should return override options when an object is provided", () => {
     expect(
-      reactOptions({
+      getReactOptions({
         utilities: ["@tanstack/query"],
       }),
     ).toStrictEqual({

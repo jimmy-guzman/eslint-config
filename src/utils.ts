@@ -1,6 +1,6 @@
 import type { ReactOptions, TestingOptions, TypescriptOptions } from "./types";
 
-export const typescriptOptions = (options: boolean | TypescriptOptions) => {
+export const getTypescriptOptions = (options: boolean | TypescriptOptions) => {
   return typeof options === "object"
     ? options
     : {
@@ -8,7 +8,7 @@ export const typescriptOptions = (options: boolean | TypescriptOptions) => {
       };
 };
 
-export const testingOptions = (options: boolean | TestingOptions) => {
+export const getTestingOptions = (options: boolean | TestingOptions) => {
   return typeof options === "object"
     ? options
     : {
@@ -16,22 +16,16 @@ export const testingOptions = (options: boolean | TestingOptions) => {
       };
 };
 
-export const reactOptions = (options: boolean | ReactOptions) => {
+export const getReactOptions = (options: boolean | ReactOptions) => {
   return typeof options === "object" ? options : { utilities: [] };
 };
 
-export const includeTanstackQuery = (options: boolean | ReactOptions) => {
-  return (
-    typeof options === "object" &&
-    Boolean(options.utilities?.includes("@tanstack/query"))
-  );
+export const addTanstackQuery = (options: ReactOptions) => {
+  return Boolean(options.utilities?.includes("@tanstack/query"));
 };
 
-export const includeTestingLibrary = (options: boolean | TestingOptions) => {
-  return (
-    typeof options === "object" &&
-    Boolean(options.utilities?.includes("testing-library"))
-  );
+export const addTestingLibrary = (options: TestingOptions) => {
+  return Boolean(options.utilities?.includes("testing-library"));
 };
 
 /* v8 ignore start */

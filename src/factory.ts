@@ -26,10 +26,11 @@ import {
   hasTypescript,
 } from "./has-dep";
 import {
-  includeTanstackQuery,
-  includeTestingLibrary,
-  testingOptions,
-  typescriptOptions,
+  addTanstackQuery,
+  addTestingLibrary,
+  getReactOptions,
+  getTestingOptions,
+  getTypescriptOptions,
 } from "./utils";
 
 export const jimmyDotCodes = async (
@@ -44,14 +45,17 @@ export const jimmyDotCodes = async (
   }: Options = {},
   ...moreConfigs: Linter.Config[] | TypedConfigItem[]
 ) => {
+  const reactOptions = getReactOptions(react);
+  const testingOptions = getTestingOptions(testing);
+  const typescriptOptions = getTypescriptOptions(typescript);
   const isTypescriptEnabled = typescript || (autoDetect && hasTypescript());
   const isReactEnabled = react || (autoDetect && hasReact());
   const isTestingEnabled = testing || (autoDetect && hasTesting());
   const isAstroEnabled = astro || (autoDetect && hasAstro());
   const isTanstackQueryEnabled =
-    includeTanstackQuery(react) || (autoDetect && hasReactQuery());
+    addTanstackQuery(reactOptions) || (autoDetect && hasReactQuery());
   const isTestingLibraryEnabled =
-    includeTestingLibrary(testing) || (autoDetect && hasTestingLibrary());
+    addTestingLibrary(testingOptions) || (autoDetect && hasTestingLibrary());
 
   return [
     javascriptConfig(),
@@ -60,11 +64,11 @@ export const jimmyDotCodes = async (
     unicornConfig(),
     eslintCommentsConfig(),
     importsConfig({ typescript: isTypescriptEnabled }),
-    isTypescriptEnabled ? typescriptConfig(typescriptOptions(typescript)) : [],
+    isTypescriptEnabled ? typescriptConfig(typescriptOptions) : [],
     isReactEnabled ? await reactConfig() : [],
     isTanstackQueryEnabled ? await tanstackQuery() : [],
     isAstroEnabled ? await astroConfig() : [],
-    isTestingEnabled ? testingConfig(testingOptions(testing), autoDetect) : [],
+    isTestingEnabled ? await testingConfig(testingOptions, autoDetect) : [],
     isTestingLibraryEnabled ? await testingLibrary() : [],
     prettierConfig(),
     commonjsConfig(),
