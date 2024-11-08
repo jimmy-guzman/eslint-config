@@ -58,6 +58,7 @@ exports[`should create javascript rules 1`] = `
   "no-redeclare": "error",
   "no-regex-spaces": "error",
   "no-self-assign": "error",
+  "no-self-compare": "error",
   "no-setter-return": "error",
   "no-shadow-restricted-names": "error",
   "no-sparse-arrays": "error",

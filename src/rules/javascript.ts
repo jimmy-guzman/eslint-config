@@ -13,6 +13,7 @@ export const javascriptRules = {
   "arrow-body-style": ["error", "always"],
   "curly": ["error", "all"],
   "no-console": "warn",
+  "no-self-compare": "error",
   "no-useless-rename": "error",
   "object-shorthand": "error",
   "prefer-arrow-callback": "error",
