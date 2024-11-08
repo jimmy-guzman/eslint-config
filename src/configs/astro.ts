@@ -1,5 +1,3 @@
-import parserAstro from "astro-eslint-parser";
-import pluginAstro from "eslint-plugin-astro";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import globals from "globals";
 import { configs, parser as parserTs } from "typescript-eslint";
@@ -8,8 +6,13 @@ import type { TypedConfigItem } from "../types";
 
 import { GLOB_ASTRO } from "../constants";
 
-export const astroConfig = () => {
+export const astroConfig = async () => {
   const files = [GLOB_ASTRO];
+
+  const [pluginAstro, parserAstro] = await Promise.all([
+    import("eslint-plugin-astro"),
+    import("astro-eslint-parser"),
+  ]);
 
   return [
     {

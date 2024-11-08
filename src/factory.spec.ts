@@ -15,8 +15,8 @@ describe("jimmyDotCodes", () => {
       "prettier",
       "ignores",
       "javascript",
-    ])("should create configuration w/ %s", (input) => {
-      expect(jimmyDotCodes({ autoDetect: false })).toStrictEqual(
+    ])("should create configuration w/ %s", async (input) => {
+      await expect(jimmyDotCodes({ autoDetect: false })).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.objectContaining({ name: `jimmy.codes/${input}` }),
         ]),
@@ -24,10 +24,10 @@ describe("jimmyDotCodes", () => {
     });
   });
 
-  it("should create configuration w/ typescript", () => {
-    expect(
+  it("should create configuration w/ typescript", async () => {
+    await expect(
       jimmyDotCodes({ autoDetect: false, typescript: true }),
-    ).toStrictEqual(
+    ).resolves.toStrictEqual(
       expect.arrayContaining([
         expect.objectContaining({ name: "jimmy.codes/typescript" }),
         expect.objectContaining({ name: "jimmy.codes/imports/typescript" }),
@@ -35,21 +35,23 @@ describe("jimmyDotCodes", () => {
     );
   });
 
-  it("should create configuration w/ react", () => {
-    expect(jimmyDotCodes({ autoDetect: false, react: true })).toStrictEqual(
+  it("should create configuration w/ react", async () => {
+    await expect(
+      jimmyDotCodes({ autoDetect: false, react: true }),
+    ).resolves.toStrictEqual(
       expect.arrayContaining([
         expect.objectContaining({ name: "jimmy.codes/react" }),
       ]),
     );
   });
 
-  it("should create configuration w/ react & @tanstack/query", () => {
-    expect(
+  it("should create configuration w/ react & @tanstack/query", async () => {
+    await expect(
       jimmyDotCodes({
         autoDetect: false,
         react: { utilities: ["@tanstack/query"] },
       }),
-    ).toStrictEqual(
+    ).resolves.toStrictEqual(
       expect.arrayContaining([
         expect.objectContaining({ name: "jimmy.codes/react" }),
         expect.objectContaining({ name: "jimmy.codes/react/query" }),
@@ -57,10 +59,10 @@ describe("jimmyDotCodes", () => {
     );
   });
 
-  it("should create configuration w/ jest", () => {
-    expect(
+  it("should create configuration w/ jest", async () => {
+    await expect(
       jimmyDotCodes({ autoDetect: false, testing: { framework: "jest" } }),
-    ).toStrictEqual(
+    ).resolves.toStrictEqual(
       expect.arrayContaining([
         expect.objectContaining({ name: "jimmy.codes/testing" }),
         expect.objectContaining({ name: "jimmy.codes/testing/disabled" }),
@@ -70,8 +72,10 @@ describe("jimmyDotCodes", () => {
     );
   });
 
-  it("should create configuration w/ vitest", () => {
-    expect(jimmyDotCodes({ autoDetect: false, testing: true })).toStrictEqual(
+  it("should create configuration w/ vitest", async () => {
+    await expect(
+      jimmyDotCodes({ autoDetect: false, testing: true }),
+    ).resolves.toStrictEqual(
       expect.arrayContaining([
         expect.objectContaining({ name: "jimmy.codes/testing" }),
         expect.objectContaining({ name: "jimmy.codes/testing/disabled" }),
@@ -81,14 +85,14 @@ describe("jimmyDotCodes", () => {
     );
   });
 
-  it("should create configuration w/ jest & react & testing library", () => {
-    expect(
+  it("should create configuration w/ jest & react & testing library", async () => {
+    await expect(
       jimmyDotCodes({
         autoDetect: false,
         react: true,
         testing: { framework: "jest", utilities: ["testing-library"] },
       }),
-    ).toStrictEqual(
+    ).resolves.toStrictEqual(
       expect.arrayContaining([
         expect.objectContaining({ name: "jimmy.codes/testing" }),
         expect.objectContaining({ name: "jimmy.codes/testing/disabled" }),
@@ -104,14 +108,14 @@ describe("jimmyDotCodes", () => {
     );
   });
 
-  it("should create configuration w/ vitest & react & testing library", () => {
-    expect(
+  it("should create configuration w/ vitest & react & testing library", async () => {
+    await expect(
       jimmyDotCodes({
         autoDetect: false,
         react: true,
         testing: { utilities: ["testing-library"] },
       }),
-    ).toStrictEqual(
+    ).resolves.toStrictEqual(
       expect.arrayContaining([
         expect.objectContaining({ name: "jimmy.codes/testing" }),
         expect.objectContaining({ name: "jimmy.codes/testing/disabled" }),
@@ -127,8 +131,10 @@ describe("jimmyDotCodes", () => {
     );
   });
 
-  it("should create configuration w/ astro", () => {
-    expect(jimmyDotCodes({ astro: true, autoDetect: false })).toStrictEqual(
+  it("should create configuration w/ astro", async () => {
+    await expect(
+      jimmyDotCodes({ astro: true, autoDetect: false }),
+    ).resolves.toStrictEqual(
       expect.arrayContaining([
         expect.objectContaining({
           name: "jimmy.codes/astro",
@@ -144,12 +150,12 @@ describe("jimmyDotCodes", () => {
   });
 
   describe("autoDetect", () => {
-    it("should include typescript when auto detection is enabled", () => {
+    it("should include typescript when auto detection is enabled", async () => {
       vi.mocked(isPackageExists).mockImplementation((name) => {
         return name === "typescript";
       });
 
-      expect(jimmyDotCodes({ autoDetect: true })).toStrictEqual(
+      await expect(jimmyDotCodes({ autoDetect: true })).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.objectContaining({ name: "jimmy.codes/typescript" }),
           expect.not.objectContaining({ name: "jimmy.codes/testing" }),
@@ -164,12 +170,12 @@ describe("jimmyDotCodes", () => {
       );
     });
 
-    it("should include react when auto detection is enabled", () => {
+    it("should include react when auto detection is enabled", async () => {
       vi.mocked(isPackageExists).mockImplementation((name) => {
         return name === "react";
       });
 
-      expect(jimmyDotCodes({ autoDetect: true })).toStrictEqual(
+      await expect(jimmyDotCodes({ autoDetect: true })).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.not.objectContaining({ name: "jimmy.codes/typescript" }),
           expect.not.objectContaining({ name: "jimmy.codes/testing" }),
@@ -184,13 +190,13 @@ describe("jimmyDotCodes", () => {
       );
     });
 
-    it("should include react-query when auto detection is enabled", () => {
+    it("should include react-query when auto detection is enabled", async () => {
       vi.mocked(isPackageExists).mockImplementation((name) => {
         // eslint-disable-next-line jest/no-conditional-in-test -- this condition is only for the mock.
         return name === "react" || name === "@tanstack/react-query";
       });
 
-      expect(jimmyDotCodes({ autoDetect: true })).toStrictEqual(
+      await expect(jimmyDotCodes({ autoDetect: true })).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.not.objectContaining({ name: "jimmy.codes/typescript" }),
           expect.not.objectContaining({ name: "jimmy.codes/testing" }),
@@ -205,12 +211,12 @@ describe("jimmyDotCodes", () => {
       );
     });
 
-    it("should include vitest when auto detection is enabled", () => {
+    it("should include vitest when auto detection is enabled", async () => {
       vi.mocked(isPackageExists).mockImplementation((name) => {
         return name === "vitest";
       });
 
-      expect(jimmyDotCodes({ autoDetect: true })).toStrictEqual(
+      await expect(jimmyDotCodes({ autoDetect: true })).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.not.objectContaining({ name: "jimmy.codes/typescript" }),
           expect.objectContaining({ name: "jimmy.codes/testing" }),
@@ -225,12 +231,12 @@ describe("jimmyDotCodes", () => {
       );
     });
 
-    it("should include jest when auto detection is enabled", () => {
+    it("should include jest when auto detection is enabled", async () => {
       vi.mocked(isPackageExists).mockImplementation((name) => {
         return name === "jest";
       });
 
-      expect(jimmyDotCodes({ autoDetect: true })).toStrictEqual(
+      await expect(jimmyDotCodes({ autoDetect: true })).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.not.objectContaining({ name: "jimmy.codes/typescript" }),
           expect.objectContaining({ name: "jimmy.codes/testing" }),
@@ -245,13 +251,13 @@ describe("jimmyDotCodes", () => {
       );
     });
 
-    it("should include test-library when auto detection is enabled", () => {
+    it("should include test-library when auto detection is enabled", async () => {
       vi.mocked(isPackageExists).mockImplementation((name) => {
         // eslint-disable-next-line jest/no-conditional-in-test -- this condition is only for the mock.
         return name === "@testing-library/react" || name === "vitest";
       });
 
-      expect(jimmyDotCodes({ autoDetect: true })).toStrictEqual(
+      await expect(jimmyDotCodes({ autoDetect: true })).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.not.objectContaining({ name: "jimmy.codes/typescript" }),
           expect.objectContaining({ name: "jimmy.codes/testing" }),
@@ -266,12 +272,12 @@ describe("jimmyDotCodes", () => {
       );
     });
 
-    it("should include astro when auto detection is enabled", () => {
+    it("should include astro when auto detection is enabled", async () => {
       vi.mocked(isPackageExists).mockImplementation((name) => {
         return name === "astro";
       });
 
-      expect(jimmyDotCodes({ autoDetect: true })).toStrictEqual(
+      await expect(jimmyDotCodes({ autoDetect: true })).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.objectContaining({
             name: "jimmy.codes/astro",

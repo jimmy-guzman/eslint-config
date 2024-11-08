@@ -18,7 +18,7 @@ import { unicornConfig } from "./configs/unicorn";
 import { hasAstro, hasReact, hasTesting, hasTypescript } from "./has-dep";
 import { reactOptions, testingOptions, typescriptOptions } from "./utils";
 
-export const jimmyDotCodes = (
+export const jimmyDotCodes = async (
   {
     astro = false,
     autoDetect = true,
@@ -44,7 +44,7 @@ export const jimmyDotCodes = (
     importsConfig({ typescript: isTypescriptEnabled }),
     isTypescriptEnabled ? typescriptConfig(typescriptOptions(typescript)) : [],
     isReactEnabled ? reactConfig(reactOptions(react), autoDetect) : [],
-    isAstroEnabled ? astroConfig() : [],
+    isAstroEnabled ? await astroConfig() : [],
     isTestingEnabled ? testingConfig(testingOptions(testing), autoDetect) : [],
     prettierConfig(),
     commonjsConfig(),

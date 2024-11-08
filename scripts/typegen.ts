@@ -3,7 +3,9 @@ import fs from "node:fs/promises";
 import { builtinRules } from "eslint/use-at-your-own-risk";
 import { flatConfigsToRulesDTS } from "eslint-typegen/core";
 
-import config from "../src";
+import jimmyDotCodes from "../src";
+
+const configs = await jimmyDotCodes();
 
 const ruleDts = await flatConfigsToRulesDTS(
   [
@@ -15,7 +17,7 @@ const ruleDts = await flatConfigsToRulesDTS(
       },
     },
     // @ts-expect-error TODO: config types don't seem to match
-    ...config(),
+    ...configs,
   ],
   {
     includeAugmentation: false,
