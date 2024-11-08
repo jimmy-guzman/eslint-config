@@ -15,6 +15,7 @@ export const javascriptRules = {
   "no-console": "warn",
   "no-self-compare": "error",
   "no-template-curly-in-string": "error",
+  "no-unmodified-loop-condition": "error",
   "no-unreachable-loop": "error",
   "no-useless-rename": "error",
   "object-shorthand": "error",
