@@ -1,4 +1,4 @@
-import type { Linter } from "eslint";
+import type { TypedConfigItem } from "../types";
 
 import { javascriptRules } from "../rules/javascript";
 
@@ -11,5 +11,5 @@ export const javascriptConfig = () => {
       name: "jimmy.codes/javascript",
       rules: javascriptRules,
     },
-  ] satisfies Linter.Config[];
+  ] satisfies TypedConfigItem[];
 };

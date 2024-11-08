@@ -1,6 +1,6 @@
-import type { Linter } from "eslint";
-
 import nodePlugin from "eslint-plugin-n";
+
+import type { TypedConfigItem } from "../types";
 
 import { nodeRules } from "../rules/node";
 
@@ -13,5 +13,5 @@ export const nodeConfig = () => {
       },
       rules: nodeRules,
     },
-  ] satisfies Linter.Config[];
+  ] satisfies TypedConfigItem[];
 };
