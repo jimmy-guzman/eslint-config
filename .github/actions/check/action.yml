@@ -12,6 +12,10 @@ runs:
       shell: bash
       run: pnpm format
 
+    - name: 🏷️ Typegen
+      shell: bash
+      run: pnpm typegen
+
     - name: 🏷️ Type Check
       shell: bash
       run: pnpm typecheck
