@@ -1,4 +1,4 @@
-import * as jestDom from "eslint-plugin-jest-dom";
+import jestDom from "eslint-plugin-jest-dom";
 import testingLibrary from "eslint-plugin-testing-library";
 
 import type { TypedConfigItem } from "../types";

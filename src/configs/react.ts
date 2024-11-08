@@ -4,7 +4,7 @@ import queryPlugin from "@tanstack/eslint-plugin-query";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
-import * as reactRefresh from "eslint-plugin-react-refresh";
+import reactRefresh from "eslint-plugin-react-refresh";
 import globals from "globals";
 
 import type { ReactOptions, TypedConfigItem } from "../types";
