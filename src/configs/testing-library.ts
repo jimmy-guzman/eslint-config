@@ -1,11 +1,14 @@
-import jestDom from "eslint-plugin-jest-dom";
-import testingLibrary from "eslint-plugin-testing-library";
-
 import type { TypedConfigItem } from "../types";
 
 import { GLOB_E2E, GLOB_TESTS } from "../constants";
+import { interopDefault } from "../utils";
 
-export const testingLibraryConfig = () => {
+export const testingLibrary = async () => {
+  const [jestDom, testingLibrary] = await Promise.all([
+    import("eslint-plugin-jest-dom"),
+    interopDefault(import("eslint-plugin-testing-library")),
+  ]);
+
   return [
     {
       files: GLOB_TESTS,

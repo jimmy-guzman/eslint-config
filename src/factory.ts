@@ -14,7 +14,7 @@ import { prettierConfig } from "./configs/prettier";
 import { reactConfig } from "./configs/react";
 import { tanstackQuery } from "./configs/tanstack-query";
 import { testingConfig } from "./configs/testing";
-import { testingLibraryConfig } from "./configs/testing-library";
+import { testingLibrary } from "./configs/testing-library";
 import { typescriptConfig } from "./configs/typescript";
 import { unicornConfig } from "./configs/unicorn";
 import {
@@ -25,7 +25,12 @@ import {
   hasTestingLibrary,
   hasTypescript,
 } from "./has-dep";
-import { testingOptions, typescriptOptions } from "./utils";
+import {
+  includeTanstackQuery,
+  includeTestingLibrary,
+  testingOptions,
+  typescriptOptions,
+} from "./utils";
 
 export const jimmyDotCodes = async (
   {
@@ -43,16 +48,10 @@ export const jimmyDotCodes = async (
   const isReactEnabled = react || (autoDetect && hasReact());
   const isTestingEnabled = testing || (autoDetect && hasTesting());
   const isAstroEnabled = astro || (autoDetect && hasAstro());
-  const isTanstackQueryRequested =
-    typeof react === "object" &&
-    Boolean(react.utilities?.includes("@tanstack/query"));
-  const includeTanstackQuery =
-    isTanstackQueryRequested || (autoDetect && hasReactQuery());
-  const isTestingLibraryRequested =
-    typeof testing === "object" &&
-    Boolean(testing.utilities?.includes("testing-library"));
-  const includeTestingLibrary =
-    isTestingLibraryRequested || (autoDetect && hasTestingLibrary());
+  const isTanstackQueryEnabled =
+    includeTanstackQuery(react) || (autoDetect && hasReactQuery());
+  const isTestingLibraryEnabled =
+    includeTestingLibrary(testing) || (autoDetect && hasTestingLibrary());
 
   return [
     javascriptConfig(),
@@ -63,10 +62,10 @@ export const jimmyDotCodes = async (
     importsConfig({ typescript: isTypescriptEnabled }),
     isTypescriptEnabled ? typescriptConfig(typescriptOptions(typescript)) : [],
     isReactEnabled ? await reactConfig() : [],
-    includeTanstackQuery ? await tanstackQuery() : [],
+    isTanstackQueryEnabled ? await tanstackQuery() : [],
     isAstroEnabled ? await astroConfig() : [],
     isTestingEnabled ? testingConfig(testingOptions(testing), autoDetect) : [],
-    includeTestingLibrary ? testingLibraryConfig() : [],
+    isTestingLibraryEnabled ? await testingLibrary() : [],
     prettierConfig(),
     commonjsConfig(),
     ignoresConfig(ignores),

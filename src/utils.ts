@@ -20,6 +20,20 @@ export const reactOptions = (options: boolean | ReactOptions) => {
   return typeof options === "object" ? options : { utilities: [] };
 };
 
+export const includeTanstackQuery = (options: boolean | ReactOptions) => {
+  return (
+    typeof options === "object" &&
+    Boolean(options.utilities?.includes("@tanstack/query"))
+  );
+};
+
+export const includeTestingLibrary = (options: boolean | TestingOptions) => {
+  return (
+    typeof options === "object" &&
+    Boolean(options.utilities?.includes("testing-library"))
+  );
+};
+
 /* v8 ignore start */
 /**
  * Utility to safely fetch an imported `ESLint` plugin.
