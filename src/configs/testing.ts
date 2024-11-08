@@ -3,19 +3,15 @@ import jest from "eslint-plugin-jest";
 import type { Rules, TestingOptions } from "../types";
 
 import { ALLOWED_VITEST_FUNCS, GLOB_E2E, GLOB_TESTS } from "../constants";
-import { hasJest, hasTestingLibrary, hasVitest } from "../has-dep";
+import { hasJest, hasVitest } from "../has-dep";
 import { jestRules } from "../rules/jest";
-import testingLibraryConfig from "./testing-library";
 
 export const testingConfig = (
-  { framework = "vitest", utilities }: TestingOptions = {},
+  { framework = "vitest" }: TestingOptions = {},
   autoDetect = true,
 ) => {
   const isVitest = autoDetect ? hasVitest() : framework === "vitest";
   const isJest = framework === "jest" || (autoDetect && hasJest());
-  const includeTestingLibrary =
-    !!utilities?.includes("testing-library") ||
-    (autoDetect && hasTestingLibrary());
 
   return [
     {
@@ -61,6 +57,5 @@ export const testingConfig = (
         "jest/require-hook": "off",
       } satisfies Rules,
     },
-    ...(includeTestingLibrary ? testingLibraryConfig() : []),
   ];
 };

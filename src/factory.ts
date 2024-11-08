@@ -14,6 +14,7 @@ import { prettierConfig } from "./configs/prettier";
 import { reactConfig } from "./configs/react";
 import { tanstackQuery } from "./configs/tanstack-query";
 import { testingConfig } from "./configs/testing";
+import { testingLibraryConfig } from "./configs/testing-library";
 import { typescriptConfig } from "./configs/typescript";
 import { unicornConfig } from "./configs/unicorn";
 import {
@@ -21,6 +22,7 @@ import {
   hasReact,
   hasReactQuery,
   hasTesting,
+  hasTestingLibrary,
   hasTypescript,
 } from "./has-dep";
 import { testingOptions, typescriptOptions } from "./utils";
@@ -46,6 +48,11 @@ export const jimmyDotCodes = async (
     Boolean(react.utilities?.includes("@tanstack/query"));
   const includeTanstackQuery =
     isTanstackQueryRequested || (autoDetect && hasReactQuery());
+  const isTestingLibraryRequested =
+    typeof testing === "object" &&
+    Boolean(testing.utilities?.includes("testing-library"));
+  const includeTestingLibrary =
+    isTestingLibraryRequested || (autoDetect && hasTestingLibrary());
 
   return [
     javascriptConfig(),
@@ -59,6 +66,7 @@ export const jimmyDotCodes = async (
     includeTanstackQuery ? await tanstackQuery() : [],
     isAstroEnabled ? await astroConfig() : [],
     isTestingEnabled ? testingConfig(testingOptions(testing), autoDetect) : [],
+    includeTestingLibrary ? testingLibraryConfig() : [],
     prettierConfig(),
     commonjsConfig(),
     ignoresConfig(ignores),

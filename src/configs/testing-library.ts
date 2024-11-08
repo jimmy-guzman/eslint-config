@@ -5,7 +5,7 @@ import type { TypedConfigItem } from "../types";
 
 import { GLOB_E2E, GLOB_TESTS } from "../constants";
 
-const testingLibraryConfig = () => {
+export const testingLibraryConfig = () => {
   return [
     {
       files: GLOB_TESTS,
@@ -28,5 +28,3 @@ const testingLibraryConfig = () => {
     },
   ] satisfies TypedConfigItem[];
 };
-
-export default testingLibraryConfig;
