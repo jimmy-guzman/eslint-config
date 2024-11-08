@@ -4,6 +4,8 @@ import jsxA11y from "eslint-plugin-jsx-a11y";
 import globals from "globals";
 import { configs, parser as parserTs } from "typescript-eslint";
 
+import type { TypedConfigItem } from "../types";
+
 import { GLOB_ASTRO } from "../constants";
 
 export const astroConfig = () => {
@@ -46,8 +48,12 @@ export const astroConfig = () => {
     },
     {
       files,
-      ...configs.disableTypeChecked,
+      languageOptions: {
+        parserOptions:
+          configs.disableTypeChecked.languageOptions?.parserOptions,
+      },
       name: "jimmy.codes/astro/disable-type-checked",
+      rules: configs.disableTypeChecked.rules,
     },
     {
       name: "jimmy.codes/astro/imports",
@@ -55,5 +61,5 @@ export const astroConfig = () => {
         "import-x/core-modules": ["astro:content"],
       },
     },
-  ];
+  ] satisfies TypedConfigItem[];
 };

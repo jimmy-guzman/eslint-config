@@ -1,6 +1,6 @@
 import type { ReactOptions, TestingOptions, TypescriptOptions } from "./types";
 
-export const getTypescriptOptions = (options: boolean | TypescriptOptions) => {
+export const typescriptOptions = (options: boolean | TypescriptOptions) => {
   return typeof options === "object"
     ? options
     : {
@@ -8,7 +8,7 @@ export const getTypescriptOptions = (options: boolean | TypescriptOptions) => {
       };
 };
 
-export const getTestingOptions = (options: boolean | TestingOptions) => {
+export const testingOptions = (options: boolean | TestingOptions) => {
   return typeof options === "object"
     ? options
     : {
@@ -16,6 +16,6 @@ export const getTestingOptions = (options: boolean | TestingOptions) => {
       };
 };
 
-export const getReactOptions = (options: boolean | ReactOptions) => {
+export const reactOptions = (options: boolean | ReactOptions) => {
   return typeof options === "object" ? options : { utilities: [] };
 };
