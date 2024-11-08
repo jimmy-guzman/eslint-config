@@ -32,10 +32,20 @@ export const typescriptConfig = (options: TypescriptOptions) => {
           "error",
           { checksVoidReturn: { attributes: false } },
         ],
+        "@typescript-eslint/no-use-before-define": [
+          "error",
+          {
+            allowNamedExports: false,
+            classes: false,
+            functions: false,
+            variables: true,
+          },
+        ],
         "@typescript-eslint/restrict-template-expressions": [
           "error",
           { allowNumber: true },
         ],
+        "no-use-before-define": "off",
       },
     },
     {

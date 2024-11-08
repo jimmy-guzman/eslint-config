@@ -8826,12 +8826,22 @@ If your function does not access \`this\`, you can annotate it with \`this: void
           },
         },
       ],
+      "@typescript-eslint/no-use-before-define": [
+        "error",
+        {
+          "allowNamedExports": false,
+          "classes": false,
+          "functions": false,
+          "variables": true,
+        },
+      ],
       "@typescript-eslint/restrict-template-expressions": [
         "error",
         {
           "allowNumber": true,
         },
       ],
+      "no-use-before-define": "off",
     },
   },
   {
