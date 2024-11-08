@@ -1,5 +1,5 @@
 import { reactRules } from "./react";
 
-test("should create react rules", () => {
-  expect(reactRules).toMatchSnapshot();
+test("should create react rules", async () => {
+  await expect(reactRules()).resolves.toMatchSnapshot();
 });

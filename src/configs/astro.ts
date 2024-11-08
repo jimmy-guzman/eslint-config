@@ -1,17 +1,18 @@
-import jsxA11y from "eslint-plugin-jsx-a11y";
 import globals from "globals";
 import { configs, parser as parserTs } from "typescript-eslint";
 
 import type { TypedConfigItem } from "../types";
 
 import { GLOB_ASTRO } from "../constants";
+import { interopDefault } from "../utils";
 
 export const astroConfig = async () => {
   const files = [GLOB_ASTRO];
 
-  const [pluginAstro, parserAstro] = await Promise.all([
+  const [astroPlugin, astroParser, jsxA11yPlugin] = await Promise.all([
     import("eslint-plugin-astro"),
     import("astro-eslint-parser"),
+    interopDefault(import("eslint-plugin-jsx-a11y")),
   ]);
 
   return [
@@ -23,7 +24,7 @@ export const astroConfig = async () => {
           Astro: false,
           Fragment: false,
         },
-        parser: parserAstro,
+        parser: astroParser,
         parserOptions: {
           extraFileExtensions: [".astro"],
           parser: parserTs,
@@ -32,12 +33,12 @@ export const astroConfig = async () => {
       },
       name: "jimmy.codes/astro",
       plugins: {
-        "astro": pluginAstro,
-        "jsx-a11y": jsxA11y,
+        "astro": astroPlugin,
+        "jsx-a11y": jsxA11yPlugin,
       },
       processor: "astro/client-side-ts",
       rules: {
-        ...jsxA11y.configs.recommended.rules,
+        ...jsxA11yPlugin.configs.recommended.rules,
         "astro/missing-client-only-directive-value": "error",
         "astro/no-conflict-set-directives": "error",
         "astro/no-deprecated-astro-canonicalurl": "error",

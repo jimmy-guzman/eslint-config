@@ -55,7 +55,7 @@ export const jimmyDotCodes = async (
     eslintCommentsConfig(),
     importsConfig({ typescript: isTypescriptEnabled }),
     isTypescriptEnabled ? typescriptConfig(typescriptOptions(typescript)) : [],
-    isReactEnabled ? reactConfig() : [],
+    isReactEnabled ? await reactConfig() : [],
     includeTanstackQuery ? await tanstackQuery() : [],
     isAstroEnabled ? await astroConfig() : [],
     isTestingEnabled ? testingConfig(testingOptions(testing), autoDetect) : [],
