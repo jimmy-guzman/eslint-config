@@ -12,11 +12,18 @@ import { nodeConfig } from "./configs/node";
 import { perfectionistConfig } from "./configs/perfectionist";
 import { prettierConfig } from "./configs/prettier";
 import { reactConfig } from "./configs/react";
+import { tanstackQuery } from "./configs/tanstack-query";
 import { testingConfig } from "./configs/testing";
 import { typescriptConfig } from "./configs/typescript";
 import { unicornConfig } from "./configs/unicorn";
-import { hasAstro, hasReact, hasTesting, hasTypescript } from "./has-dep";
-import { reactOptions, testingOptions, typescriptOptions } from "./utils";
+import {
+  hasAstro,
+  hasReact,
+  hasReactQuery,
+  hasTesting,
+  hasTypescript,
+} from "./has-dep";
+import { testingOptions, typescriptOptions } from "./utils";
 
 export const jimmyDotCodes = async (
   {
@@ -34,6 +41,11 @@ export const jimmyDotCodes = async (
   const isReactEnabled = react || (autoDetect && hasReact());
   const isTestingEnabled = testing || (autoDetect && hasTesting());
   const isAstroEnabled = astro || (autoDetect && hasAstro());
+  const isTanstackQueryRequested =
+    typeof react === "object" &&
+    Boolean(react.utilities?.includes("@tanstack/query"));
+  const includeTanstackQuery =
+    isTanstackQueryRequested || (autoDetect && hasReactQuery());
 
   return [
     javascriptConfig(),
@@ -43,7 +55,8 @@ export const jimmyDotCodes = async (
     eslintCommentsConfig(),
     importsConfig({ typescript: isTypescriptEnabled }),
     isTypescriptEnabled ? typescriptConfig(typescriptOptions(typescript)) : [],
-    isReactEnabled ? reactConfig(reactOptions(react), autoDetect) : [],
+    isReactEnabled ? reactConfig() : [],
+    includeTanstackQuery ? await tanstackQuery() : [],
     isAstroEnabled ? await astroConfig() : [],
     isTestingEnabled ? testingConfig(testingOptions(testing), autoDetect) : [],
     prettierConfig(),
