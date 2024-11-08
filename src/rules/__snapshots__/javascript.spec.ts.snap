@@ -62,6 +62,7 @@ exports[`should create javascript rules 1`] = `
   "no-setter-return": "error",
   "no-shadow-restricted-names": "error",
   "no-sparse-arrays": "error",
+  "no-template-curly-in-string": "error",
   "no-this-before-super": "error",
   "no-undef": "error",
   "no-unexpected-multiline": "error",

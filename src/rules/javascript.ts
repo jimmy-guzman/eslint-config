@@ -14,6 +14,7 @@ export const javascriptRules = {
   "curly": ["error", "all"],
   "no-console": "warn",
   "no-self-compare": "error",
+  "no-template-curly-in-string": "error",
   "no-useless-rename": "error",
   "object-shorthand": "error",
   "prefer-arrow-callback": "error",
