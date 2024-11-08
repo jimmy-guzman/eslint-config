@@ -17,6 +17,15 @@ export const javascriptRules = {
   "no-template-curly-in-string": "error",
   "no-unmodified-loop-condition": "error",
   "no-unreachable-loop": "error",
+  "no-use-before-define": [
+    "error",
+    {
+      allowNamedExports: false,
+      classes: false,
+      functions: false,
+      variables: true,
+    },
+  ],
   "no-useless-rename": "error",
   "object-shorthand": "error",
   "prefer-arrow-callback": "error",
