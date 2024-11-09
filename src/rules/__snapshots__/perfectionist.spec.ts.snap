@@ -39,6 +39,7 @@ exports[`should create perfectionist rules 1`] = `
       },
       "environment": "node",
       "groups": [
+        "side-effect-style",
         "builtin",
         "type",
         "external",
@@ -55,6 +56,7 @@ exports[`should create perfectionist rules 1`] = `
           "index",
         ],
         "object",
+        "style",
         "unknown",
       ],
       "internalPattern": [

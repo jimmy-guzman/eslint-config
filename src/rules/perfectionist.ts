@@ -10,6 +10,7 @@ export const perfectionistRules = {
       customGroups: { type: {}, value: {} },
       environment: "node",
       groups: [
+        "side-effect-style",
         "builtin",
         "type",
         "external",
@@ -18,6 +19,7 @@ export const perfectionistRules = {
         ["parent-type", "sibling-type", "index-type"],
         ["parent", "sibling", "index"],
         "object",
+        "style",
         "unknown",
       ],
       internalPattern: ["~/**", "@/**"],
