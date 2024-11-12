@@ -27,8 +27,8 @@ importers:
         specifier: ^8.13.0
         version: 8.13.0(eslint@9.14.0(jiti@2.4.0))(typescript@5.6.3)
       astro-eslint-parser:
-        specifier: ^1.0.3
-        version: 1.0.3(typescript@5.6.3)
+        specifier: ^1.1.0
+        version: 1.1.0(typescript@5.6.3)
       eslint-config-prettier:
         specifier: ^9.1.0
         version: 9.1.0(eslint@9.14.0(jiti@2.4.0))
@@ -55,7 +55,7 @@ importers:
         version: 17.13.1(eslint@9.14.0(jiti@2.4.0))
       eslint-plugin-perfectionist:
         specifier: ^3.9.1
-        version: 3.9.1(astro-eslint-parser@1.0.3(typescript@5.6.3))(eslint@9.14.0(jiti@2.4.0))(typescript@5.6.3)
+        version: 3.9.1(astro-eslint-parser@1.1.0(typescript@5.6.3))(eslint@9.14.0(jiti@2.4.0))(typescript@5.6.3)
       eslint-plugin-react:
         specifier: ^7.37.2
         version: 7.37.2(eslint@9.14.0(jiti@2.4.0))
@@ -139,8 +139,8 @@ importers:
         specifier: 0.3.2
         version: 0.3.2(eslint@9.14.0(jiti@2.4.0))
       gitzy:
-        specifier: 5.6.0
-        version: 5.6.0
+        specifier: 5.7.0
+        version: 5.7.0
       is-ci:
         specifier: 3.0.1
         version: 3.0.1
@@ -1686,8 +1686,8 @@ packages:
   ast-types-flow@0.0.8:
     resolution: {integrity: sha512-OH/2E5Fg20h2aPrbe+QL8JZQFko0YZaF+j4mnQ7BGhfavO7OpSLa8a0y9sBwomHdSbkhTS8TQNayBfnW5DwbvQ==}
 
-  astro-eslint-parser@1.0.3:
-    resolution: {integrity: sha512-AGsGgcg7Jg9UpyCDgvl/EkdYpe1oMkFdmC2Zl+KWneoieLCtQIFjmcY8yt41gcNx4mby0w8BBJQcBmPuf8UAoQ==}
+  astro-eslint-parser@1.1.0:
+    resolution: {integrity: sha512-F6NW1RJo5pp2kPnnM97M5Ohw8zAGjv83MpxHqfAochH68n/kiXN57+hYaNUCA7XkScoVNr6yzvly3hsY34TGfQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   astro@4.16.10:
@@ -1899,9 +1899,9 @@ packages:
   comma-separated-tokens@2.0.3:
     resolution: {integrity: sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==}
 
-  commander@11.1.0:
-    resolution: {integrity: sha512-yPVavfyCcRhmorC7rWlkHn15b4wDVgVmBA7kV4QVBsF7kv/9TKJAbAXVTxvTnwP8HHKjRCJDClKbciiYS7p0DQ==}
-    engines: {node: '>=16'}
+  commander@12.1.0:
+    resolution: {integrity: sha512-Vw8qHK3bZM9y/P10u3Vib8o/DdkvA2OtPtZvD871QKjy74Wj1WSKFILMPRPSdUSx5RFK1arlJzEtA4PkFgnbuA==}
+    engines: {node: '>=18'}
 
   commitlint@19.5.0:
     resolution: {integrity: sha512-lCtwxgFulvMnCgBc8MVPlVMf+PNOqQSBhHpEnjV2JjEQEAhxjVDtC7IeuEtR+hHpGvHt6CwlLtm3uZNyEby5dQ==}
@@ -2657,8 +2657,8 @@ packages:
   github-slugger@2.0.0:
     resolution: {integrity: sha512-IaOQ9puYtjrkq7Y0Ygl9KDZnrf/aiUJYUpVf89y8kyaxbRG7Y1SrX/jaumrv81vc61+kiMempujsM3Yw7w5qcw==}
 
-  gitzy@5.6.0:
-    resolution: {integrity: sha512-1vzZATk4v5ZPue3MXzd59tBteOdfGNYvRSFyNlHMM1gnAHH16d317LGH2gCVnwIld+UKks/vqUE0WyEVZ1B86Q==}
+  gitzy@5.7.0:
+    resolution: {integrity: sha512-z69Hw93c2Bk68bemm4AFUefrbHiIOSzR0Bpqvm/5Bq7dcRfTfcm7U9TtcgX5N7J3b1DGwDKCGiYD2Tn/7PDpCg==}
     engines: {node: '>= 18'}
     hasBin: true
 
@@ -6477,7 +6477,7 @@ snapshots:
 
   ast-types-flow@0.0.8: {}
 
-  astro-eslint-parser@1.0.3(typescript@5.6.3):
+  astro-eslint-parser@1.1.0(typescript@5.6.3):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@typescript-eslint/scope-manager': 8.13.0
@@ -6772,7 +6772,7 @@ snapshots:
 
   comma-separated-tokens@2.0.3: {}
 
-  commander@11.1.0: {}
+  commander@12.1.0: {}
 
   commitlint@19.5.0(@types/node@22.9.0)(typescript@5.6.3):
     dependencies:
@@ -7269,7 +7269,7 @@ snapshots:
       '@eslint-community/eslint-utils': 4.4.1(eslint@9.14.0(jiti@2.4.0))
       '@jridgewell/sourcemap-codec': 1.5.0
       '@typescript-eslint/types': 8.13.0
-      astro-eslint-parser: 1.0.3(typescript@5.6.3)
+      astro-eslint-parser: 1.1.0(typescript@5.6.3)
       eslint: 9.14.0(jiti@2.4.0)
       eslint-compat-utils: 0.6.0(eslint@9.14.0(jiti@2.4.0))
       globals: 15.12.0
@@ -7352,7 +7352,7 @@ snapshots:
       minimatch: 9.0.5
       semver: 7.6.3
 
-  eslint-plugin-perfectionist@3.9.1(astro-eslint-parser@1.0.3(typescript@5.6.3))(eslint@9.14.0(jiti@2.4.0))(typescript@5.6.3):
+  eslint-plugin-perfectionist@3.9.1(astro-eslint-parser@1.1.0(typescript@5.6.3))(eslint@9.14.0(jiti@2.4.0))(typescript@5.6.3):
     dependencies:
       '@typescript-eslint/types': 8.13.0
       '@typescript-eslint/utils': 8.13.0(eslint@9.14.0(jiti@2.4.0))(typescript@5.6.3)
@@ -7360,7 +7360,7 @@ snapshots:
       minimatch: 9.0.5
       natural-compare-lite: 1.4.0
     optionalDependencies:
-      astro-eslint-parser: 1.0.3(typescript@5.6.3)
+      astro-eslint-parser: 1.1.0(typescript@5.6.3)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -7723,9 +7723,9 @@ snapshots:
 
   github-slugger@2.0.0: {}
 
-  gitzy@5.6.0:
+  gitzy@5.7.0:
     dependencies:
-      commander: 11.1.0
+      commander: 12.1.0
       enquirer: 2.4.1
       lilconfig: 3.1.2
       yaml: 2.6.0
