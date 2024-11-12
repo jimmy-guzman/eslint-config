@@ -7,7 +7,7 @@ exports[`typescriptConfig > should create config 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.13.0",
+          "version": "8.14.0",
         },
         "parseForESLint": [Function],
       },
@@ -759,7 +759,7 @@ exports[`typescriptConfig > should create config 1`] = `
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.13.0",
+          "version": "8.14.0",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -842,8 +842,9 @@ exports[`typescriptConfig > should create config 1`] = `
               "hasSuggestions": true,
               "messages": {
                 "await": "Unexpected \`await\` of a non-Promise (non-"Thenable") value.",
+                "awaitUsingOfNonAsyncDisposable": "Unexpected \`await using\` of a value that is not async disposable.",
                 "convertToOrdinaryFor": "Convert to an ordinary \`for...of\` loop.",
-                "forAwaitOfNonThenable": "Unexpected \`for await...of\` of a value that is not async iterable.",
+                "forAwaitOfNonAsyncIterable": "Unexpected \`for await...of\` of a value that is not async iterable.",
                 "removeAwait": "Remove unnecessary \`await\`.",
               },
               "schema": [],
@@ -4315,6 +4316,10 @@ You must still type the parameters of the function.",
                       "description": "Whether to ignore returns that start with the \`void\` operator.",
                       "type": "boolean",
                     },
+                    "ignoreVoidReturningFunctions": {
+                      "description": "Whether to ignore returns from functions with explicit \`void\` return types and functions with contextual \`void\` return types.",
+                      "type": "boolean",
+                    },
                   },
                   "type": "object",
                 },
@@ -6134,7 +6139,7 @@ You must still type the parameters of the function.",
                 "alwaysNullish": "Unnecessary conditional, left-hand side of \`??\` operator is always \`null\` or \`undefined\`.",
                 "alwaysTruthy": "Unnecessary conditional, value is always truthy.",
                 "alwaysTruthyFunc": "This callback should return a conditional, but return is always truthy.",
-                "literalBooleanExpression": "Unnecessary conditional, both sides of the expression are literal values.",
+                "literalBooleanExpression": "Unnecessary conditional, comparison is always {{trueOrFalse}}. Both sides of the comparison always have a literal type.",
                 "never": "Unnecessary conditional, value is \`never\`.",
                 "neverNullish": "Unnecessary conditional, expected left-hand side of \`??\` operator to be possibly null or undefined.",
                 "neverOptionalChain": "Unnecessary optional chain on a non-nullish value.",
