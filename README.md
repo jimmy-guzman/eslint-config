@@ -84,7 +84,7 @@ export default jimmyDotCodes({
 });
 ```
 
-Or you can turn off auto detection to enable rules based on a project's dependencies:
+Or you can turn off auto detection to disable rules based on a project's dependencies:
 
 ```js
 import jimmyDotCodes from "@jimmy.codes/eslint-config";
