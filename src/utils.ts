@@ -1,11 +1,7 @@
 import type { ReactOptions, TestingOptions, TypescriptOptions } from "./types";
 
 export const getTypescriptOptions = (options: boolean | TypescriptOptions) => {
-  return typeof options === "object"
-    ? options
-    : {
-        project: "./tsconfig.json",
-      };
+  return typeof options === "object" ? options : undefined;
 };
 
 export const getTestingOptions = (options: boolean | TestingOptions) => {

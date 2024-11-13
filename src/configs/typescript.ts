@@ -5,7 +5,7 @@ import type { TypescriptOptions } from "../types";
 import { GLOB_JS, GLOB_JSX, GLOB_TESTS } from "../constants";
 import { typescriptRules } from "../rules/typescript";
 
-export const typescriptConfig = (options: TypescriptOptions) => {
+export const typescriptConfig = (options?: TypescriptOptions) => {
   return [
     ...configs.strictTypeChecked,
     ...configs.stylisticTypeChecked.filter((config) => {
@@ -14,7 +14,9 @@ export const typescriptConfig = (options: TypescriptOptions) => {
     {
       languageOptions: {
         parserOptions: {
-          project: options.project,
+          ...(options?.project
+            ? { project: options.project }
+            : { projectService: true }),
           tsconfigRootDir: process.cwd(),
         },
       },

@@ -6,4 +6,19 @@ describe("typescriptConfig", () => {
 
     expect(typescriptConfig({ project: "/" })).toMatchSnapshot();
   });
+
+  it("should create config w/ projectService", () => {
+    vi.spyOn(process, "cwd").mockReturnValue("/");
+
+    const [_first, _second, _third, _fourth, config] = typescriptConfig();
+
+    expect(config?.languageOptions?.parserOptions).toMatchInlineSnapshot(
+      `
+      {
+        "projectService": true,
+        "tsconfigRootDir": "/",
+      }
+    `,
+    );
+  });
 });

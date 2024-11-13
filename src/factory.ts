@@ -48,7 +48,8 @@ export const jimmyDotCodes = async (
   const reactOptions = getReactOptions(react);
   const testingOptions = getTestingOptions(testing);
   const typescriptOptions = getTypescriptOptions(typescript);
-  const isTypescriptEnabled = typescript || (autoDetect && hasTypescript());
+  const isTypescriptEnabled =
+    typescript || !!typescriptOptions || (autoDetect && hasTypescript());
   const isReactEnabled = react || (autoDetect && hasReact());
   const isTestingEnabled = testing || (autoDetect && hasTesting());
   const isAstroEnabled = astro || (autoDetect && hasAstro());

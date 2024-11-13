@@ -83,6 +83,9 @@ export default jimmyDotCodes({ autoDetect: false });
 
 You can also change the project location which can be helpful for monorepos:
 
+> [!WARNING]
+> This is [not recommended nor needed since the introduction of `projectService`](https://typescript-eslint.io/getting-started/typed-linting#can-i-customize-the-tsconfig-used-for-typed-linting) which this config uses by default.
+
 ```js
 import jimmyDotCodes from "@jimmy.codes/eslint-config";
 
