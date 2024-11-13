@@ -8826,6 +8826,18 @@ If your function does not access \`this\`, you can annotate it with \`this: void
           },
         },
       ],
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          "args": "all",
+          "argsIgnorePattern": "^_",
+          "caughtErrors": "all",
+          "caughtErrorsIgnorePattern": "^_",
+          "destructuredArrayIgnorePattern": "^_",
+          "ignoreRestSiblings": true,
+          "varsIgnorePattern": "^_",
+        },
+      ],
       "@typescript-eslint/no-use-before-define": [
         "error",
         {

@@ -3,6 +3,7 @@ import { configs } from "typescript-eslint";
 import type { TypescriptOptions } from "../types";
 
 import { GLOB_JS, GLOB_JSX, GLOB_TESTS } from "../constants";
+import { typescriptRules } from "../rules/typescript";
 
 export const typescriptConfig = (options: TypescriptOptions) => {
   return [
@@ -18,35 +19,7 @@ export const typescriptConfig = (options: TypescriptOptions) => {
         },
       },
       name: "jimmy.codes/typescript",
-      rules: {
-        "@typescript-eslint/consistent-type-exports": [
-          "error",
-          { fixMixedExportsWithInlineTypeSpecifier: false },
-        ],
-        "@typescript-eslint/consistent-type-imports": [
-          "error",
-          { fixStyle: "separate-type-imports" },
-        ],
-        "@typescript-eslint/no-deprecated": "warn",
-        "@typescript-eslint/no-misused-promises": [
-          "error",
-          { checksVoidReturn: { attributes: false } },
-        ],
-        "@typescript-eslint/no-use-before-define": [
-          "error",
-          {
-            allowNamedExports: false,
-            classes: false,
-            functions: false,
-            variables: true,
-          },
-        ],
-        "@typescript-eslint/restrict-template-expressions": [
-          "error",
-          { allowNumber: true },
-        ],
-        "no-use-before-define": "off",
-      },
+      rules: typescriptRules,
     },
     {
       files: [GLOB_JS, GLOB_JSX],
