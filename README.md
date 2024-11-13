@@ -10,7 +10,8 @@
 
 ## 🛠️ Usage
 
-_For a better experience, make sure to use [@jimmy.codes/prettier-config](https://github.com/jimmy-guzman/prettier-config) as well_
+> [!NOTE]
+> For a better experience, make sure to use [@jimmy.codes/prettier-config](https://github.com/jimmy-guzman/prettier-config) as well.
 
 ### 🔨 Getting Started
 
@@ -29,18 +30,30 @@ import jimmyDotCodes from "@jimmy.codes/eslint-config";
 export default jimmyDotCodes();
 ```
 
-And if you're using [VS Code](https://code.visualstudio.com), make sure to enable [flat configuration](https://eslint.org/docs/v8.x/use/configure/configuration-files-new):
+Or if you want to use [TypeScript configuration files](https://eslint.org/docs/latest/use/configure/configuration-files#typescript-configuration-files), you can do the following:
 
-```jsonc
-// .vscode/settings.json
+Add `--flag unstable_ts_config` to your eslint script, for example:
+
+```json
 {
-  "eslint.useFlatConfig": true,
+  "scripts": {
+    "lint": "eslint --flag unstable_ts_config ."
+  }
+}
+```
+
+And add the following to your `.vscode/settings.json`:
+
+```json
+"eslint.options": {
+  "flags": ["unstable_ts_config"]
 }
 ```
 
 ### 🔧 Configuration
 
-**By default all rules are enabled based on the project's dependencies.**
+> [!NOTE]
+> By default all rules are enabled based on the project's dependencies.
 
 This package contains rules that can be enabled or disabled as follows:
 
@@ -71,7 +84,7 @@ export default jimmyDotCodes({
 });
 ```
 
-Or you can turn off auto detection to enable rules based on a project's dependencies
+Or you can turn off auto detection to enable rules based on a project's dependencies:
 
 ```js
 import jimmyDotCodes from "@jimmy.codes/eslint-config";
