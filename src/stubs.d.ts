@@ -47,16 +47,6 @@ declare module "eslint-plugin-testing-library" {
   export default plugin;
 }
 
-declare module "eslint-plugin-jest-dom" {
-  import type { ESLint, Linter } from "eslint";
-
-  const flatRecommended: Linter.Config;
-  const plugin: ESLint.Plugin;
-
-  export = { configs: { "flat/recommended": flatRecommended } };
-  export default plugin;
-}
-
 declare module "eslint-plugin-react-refresh" {
   import type { ESLint } from "eslint";
 

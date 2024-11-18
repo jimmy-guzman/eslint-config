@@ -1,6 +1,7 @@
 import type { TypedConfigItem } from "../types";
 
 import { GLOB_E2E, GLOB_TESTS } from "../constants";
+import { testingLibraryRules } from "../rules/testing-library";
 import { interopDefault } from "../utils";
 
 export const testingLibrary = async () => {
@@ -17,10 +18,7 @@ export const testingLibrary = async () => {
         "jest-dom": jestDom,
         "testing-library": testingLibrary,
       },
-      rules: {
-        ...testingLibrary.configs.react.rules,
-        ...jestDom.configs["flat/recommended"].rules,
-      },
+      rules: await testingLibraryRules(),
     },
     {
       files: GLOB_E2E,
