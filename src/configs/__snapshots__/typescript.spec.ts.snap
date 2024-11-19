@@ -7,7 +7,7 @@ exports[`typescriptConfig > should create config 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.14.0",
+          "version": "8.15.0",
         },
         "parseForESLint": [Function],
       },
@@ -103,6 +103,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "@typescript-eslint/no-unsafe-function-type": "error",
               "@typescript-eslint/no-unsafe-member-access": "error",
               "@typescript-eslint/no-unsafe-return": "error",
+              "@typescript-eslint/no-unsafe-type-assertion": "error",
               "@typescript-eslint/no-unsafe-unary-minus": "error",
               "@typescript-eslint/no-unused-expressions": "error",
               "@typescript-eslint/no-unused-vars": "error",
@@ -132,6 +133,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "@typescript-eslint/prefer-return-this-type": "error",
               "@typescript-eslint/prefer-string-starts-ends-with": "error",
               "@typescript-eslint/promise-function-async": "error",
+              "@typescript-eslint/related-getter-setter-pairs": "error",
               "@typescript-eslint/require-array-sort-compare": "error",
               "@typescript-eslint/require-await": "error",
               "@typescript-eslint/restrict-plus-operands": "error",
@@ -217,6 +219,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "@typescript-eslint/no-unsafe-enum-comparison": "off",
               "@typescript-eslint/no-unsafe-member-access": "off",
               "@typescript-eslint/no-unsafe-return": "off",
+              "@typescript-eslint/no-unsafe-type-assertion": "off",
               "@typescript-eslint/no-unsafe-unary-minus": "off",
               "@typescript-eslint/non-nullable-type-assertion-style": "off",
               "@typescript-eslint/only-throw-error": "off",
@@ -233,6 +236,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "@typescript-eslint/prefer-return-this-type": "off",
               "@typescript-eslint/prefer-string-starts-ends-with": "off",
               "@typescript-eslint/promise-function-async": "off",
+              "@typescript-eslint/related-getter-setter-pairs": "off",
               "@typescript-eslint/require-array-sort-compare": "off",
               "@typescript-eslint/require-await": "off",
               "@typescript-eslint/restrict-plus-operands": "off",
@@ -574,6 +578,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "@typescript-eslint/prefer-promise-reject-errors": "error",
               "@typescript-eslint/prefer-reduce-type-parameter": "error",
               "@typescript-eslint/prefer-return-this-type": "error",
+              "@typescript-eslint/related-getter-setter-pairs": "error",
               "@typescript-eslint/require-await": "error",
               "@typescript-eslint/restrict-plus-operands": [
                 "error",
@@ -651,6 +656,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "@typescript-eslint/prefer-promise-reject-errors": "error",
               "@typescript-eslint/prefer-reduce-type-parameter": "error",
               "@typescript-eslint/prefer-return-this-type": "error",
+              "@typescript-eslint/related-getter-setter-pairs": "error",
               "@typescript-eslint/require-await": "error",
               "@typescript-eslint/restrict-plus-operands": [
                 "error",
@@ -759,7 +765,7 @@ exports[`typescriptConfig > should create config 1`] = `
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.14.0",
+          "version": "8.15.0",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -1113,6 +1119,11 @@ exports[`typescriptConfig > should create config 1`] = `
               },
             ],
             "meta": {
+              "defaultOptions": [
+                {
+                  "treatUndefinedAsUnspecified": false,
+                },
+              ],
               "docs": {
                 "description": "Require \`return\` statements to either always or never specify values",
                 "extendsBaseRule": true,
@@ -1130,7 +1141,6 @@ exports[`typescriptConfig > should create config 1`] = `
                   "additionalProperties": false,
                   "properties": {
                     "treatUndefinedAsUnspecified": {
-                      "default": false,
                       "type": "boolean",
                     },
                   },
@@ -1358,6 +1368,15 @@ exports[`typescriptConfig > should create config 1`] = `
               },
             ],
             "meta": {
+              "defaultOptions": [
+                {
+                  "allowIndexSignaturePropertyAccess": false,
+                  "allowKeywords": true,
+                  "allowPattern": "",
+                  "allowPrivateClassPropertyAccess": false,
+                  "allowProtectedClassPropertyAccess": false,
+                },
+              ],
               "docs": {
                 "description": "Enforce dot notation whenever possible",
                 "extendsBaseRule": true,
@@ -4283,6 +4302,7 @@ You must still type the parameters of the function.",
               {
                 "ignoreArrowShorthand": false,
                 "ignoreVoidOperator": false,
+                "ignoreVoidReturningFunctions": false,
               },
             ],
             "meta": {
@@ -4443,6 +4463,11 @@ You must still type the parameters of the function.",
               },
             ],
             "meta": {
+              "defaultOptions": [
+                {
+                  "allow": [],
+                },
+              ],
               "docs": {
                 "description": "Disallow empty functions",
                 "extendsBaseRule": true,
@@ -5062,6 +5087,11 @@ You must still type the parameters of the function.",
               },
             ],
             "meta": {
+              "defaultOptions": [
+                {
+                  "capIsConstructor": true,
+                },
+              ],
               "docs": {
                 "description": "Disallow \`this\` keywords outside of classes or class-like objects",
                 "extendsBaseRule": true,
@@ -5076,7 +5106,6 @@ You must still type the parameters of the function.",
                   "additionalProperties": false,
                   "properties": {
                     "capIsConstructor": {
-                      "default": true,
                       "type": "boolean",
                     },
                   },
@@ -6469,6 +6498,24 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "type": "problem",
             },
           },
+          "no-unsafe-type-assertion": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Disallow type assertions that narrow a type",
+                "requiresTypeChecking": true,
+                "url": "https://typescript-eslint.io/rules/no-unsafe-type-assertion",
+              },
+              "messages": {
+                "unsafeOfAnyTypeAssertion": "Unsafe cast from {{type}} detected: consider using type guards or a safer cast.",
+                "unsafeToAnyTypeAssertion": "Unsafe cast to {{type}} detected: consider using a more specific type to ensure safety.",
+                "unsafeTypeAssertion": "Unsafe type assertion: type '{{type}}' is more narrow than the original type.",
+              },
+              "schema": [],
+              "type": "problem",
+            },
+          },
           "no-unsafe-unary-minus": {
             "create": [Function],
             "defaultOptions": [],
@@ -6496,6 +6543,13 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               },
             ],
             "meta": {
+              "defaultOptions": [
+                {
+                  "allowShortCircuit": false,
+                  "allowTaggedTemplates": false,
+                  "allowTernary": false,
+                },
+              ],
               "docs": {
                 "description": "Disallow unused expressions",
                 "extendsBaseRule": true,
@@ -6511,19 +6565,15 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                   "additionalProperties": false,
                   "properties": {
                     "allowShortCircuit": {
-                      "default": false,
                       "type": "boolean",
                     },
                     "allowTaggedTemplates": {
-                      "default": false,
                       "type": "boolean",
                     },
                     "allowTernary": {
-                      "default": false,
                       "type": "boolean",
                     },
                     "enforceForJSX": {
-                      "default": false,
                       "type": "boolean",
                     },
                   },
@@ -7818,6 +7868,23 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "type": "suggestion",
             },
           },
+          "related-getter-setter-pairs": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Enforce that \`get()\` types should be assignable to their equivalent \`set()\` type",
+                "recommended": "strict",
+                "requiresTypeChecking": true,
+                "url": "https://typescript-eslint.io/rules/related-getter-setter-pairs",
+              },
+              "messages": {
+                "mismatch": "\`get()\` type should be assignable to its equivalent \`set()\` type.",
+              },
+              "schema": [],
+              "type": "problem",
+            },
+          },
           "require-array-sort-compare": {
             "create": [Function],
             "defaultOptions": [
@@ -8732,6 +8799,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
       "@typescript-eslint/prefer-promise-reject-errors": "error",
       "@typescript-eslint/prefer-reduce-type-parameter": "error",
       "@typescript-eslint/prefer-return-this-type": "error",
+      "@typescript-eslint/related-getter-setter-pairs": "error",
       "@typescript-eslint/require-await": "error",
       "@typescript-eslint/restrict-plus-operands": [
         "error",
@@ -8905,6 +8973,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
       "@typescript-eslint/no-unsafe-enum-comparison": "off",
       "@typescript-eslint/no-unsafe-member-access": "off",
       "@typescript-eslint/no-unsafe-return": "off",
+      "@typescript-eslint/no-unsafe-type-assertion": "off",
       "@typescript-eslint/no-unsafe-unary-minus": "off",
       "@typescript-eslint/non-nullable-type-assertion-style": "off",
       "@typescript-eslint/only-throw-error": "off",
@@ -8921,6 +8990,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
       "@typescript-eslint/prefer-return-this-type": "off",
       "@typescript-eslint/prefer-string-starts-ends-with": "off",
       "@typescript-eslint/promise-function-async": "off",
+      "@typescript-eslint/related-getter-setter-pairs": "off",
       "@typescript-eslint/require-array-sort-compare": "off",
       "@typescript-eslint/require-await": "off",
       "@typescript-eslint/restrict-plus-operands": "off",
