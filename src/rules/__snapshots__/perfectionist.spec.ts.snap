@@ -16,6 +16,13 @@ exports[`should create perfectionist rules 1`] = `
       "type": "natural",
     },
   ],
+  "perfectionist/sort-decorators": [
+    "error",
+    {
+      "order": "asc",
+      "type": "natural",
+    },
+  ],
   "perfectionist/sort-enums": [
     "error",
     {
@@ -24,6 +31,13 @@ exports[`should create perfectionist rules 1`] = `
     },
   ],
   "perfectionist/sort-exports": [
+    "error",
+    {
+      "order": "asc",
+      "type": "natural",
+    },
+  ],
+  "perfectionist/sort-heritage-clauses": [
     "error",
     {
       "order": "asc",
@@ -60,8 +74,8 @@ exports[`should create perfectionist rules 1`] = `
         "unknown",
       ],
       "internalPattern": [
-        "~/**",
-        "@/**",
+        "^~/.*",
+        "^@/.*",
       ],
       "order": "asc",
       "type": "natural",
@@ -95,6 +109,7 @@ exports[`should create perfectionist rules 1`] = `
       "type": "natural",
     },
   ],
+  "perfectionist/sort-modules": "off",
   "perfectionist/sort-named-exports": [
     "error",
     {

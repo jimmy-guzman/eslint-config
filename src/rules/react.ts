@@ -13,6 +13,12 @@ export const reactRules = async () => {
     ...jsxA11yPlugin.configs.recommended.rules,
     ...normalizeRuleEntries(reactPlugin.configs.flat?.recommended?.rules),
     ...normalizeRuleEntries(reactPlugin.configs.flat?.["jsx-runtime"]?.rules),
+    "react-hooks/exhaustive-deps": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-refresh/only-export-components": [
+      "warn",
+      { allowConstantExport: true },
+    ],
     "react/boolean-prop-naming": "off", // revisit
     "react/button-has-type": "error",
     "react/checked-requires-onchange-or-readonly": "error",
@@ -79,11 +85,5 @@ export const reactRules = async () => {
     "react/static-property-placement": "off",
     "react/style-prop-object": "error",
     "react/void-dom-elements-no-children": "error",
-    "react-hooks/exhaustive-deps": "error",
-    "react-hooks/rules-of-hooks": "error",
-    "react-refresh/only-export-components": [
-      "warn",
-      { allowConstantExport: true },
-    ],
   } satisfies Rules;
 };

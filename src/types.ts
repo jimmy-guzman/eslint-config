@@ -37,14 +37,17 @@ export interface ReactOptions {
   utilities?: ReactUtilities[];
 }
 
-export type TypedConfigItem = {
+export type TypedConfigItem = Omit<
+  Linter.Config<Linter.RulesRecord & Rules>,
+  "plugins"
+> & {
   /**
    * An object containing a name-value mapping of plugin names to plugin objects. When `files` is specified, these plugins are only available to the matching files.
    *
    * @see [Using plugins in your configuration](https://eslint.org/docs/latest/user-guide/configuring/configuration-files-new#using-plugins-in-your-configuration)
    */
   plugins?: Record<string, unknown>;
-} & Omit<Linter.Config<Linter.RulesRecord & Rules>, "plugins">;
+};
 
 export interface Options {
   /**
