@@ -12,6 +12,7 @@ import { nodeConfig } from "./configs/node";
 import { perfectionistConfig } from "./configs/perfectionist";
 import { prettierConfig } from "./configs/prettier";
 import { reactConfig } from "./configs/react";
+import { regexpConfig } from "./configs/regexp";
 import { tanstackQuery } from "./configs/tanstack-query";
 import { testingConfig } from "./configs/testing";
 import { testingLibrary } from "./configs/testing-library";
@@ -64,6 +65,7 @@ export const jimmyDotCodes = async (
     nodeConfig(),
     unicornConfig(),
     eslintCommentsConfig(),
+    regexpConfig(),
     importsConfig({ typescript: isTypescriptEnabled }),
     isTypescriptEnabled ? typescriptConfig(typescriptOptions) : [],
     isReactEnabled ? await reactConfig() : [],

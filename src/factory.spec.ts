@@ -15,6 +15,7 @@ describe("jimmyDotCodes", () => {
       "prettier",
       "ignores",
       "javascript",
+      "regexp",
     ])("should create configuration w/ %s", async (input) => {
       await expect(jimmyDotCodes({ autoDetect: false })).resolves.toStrictEqual(
         expect.arrayContaining([
