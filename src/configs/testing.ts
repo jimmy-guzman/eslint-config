@@ -20,7 +20,7 @@ export const testingConfig = async (
       ? [
           {
             files: GLOB_TESTS,
-            name: "jimmy.codes/testing/vitest",
+            name: "jimmy.codes/vitest",
             ...jestPlugin.configs["flat/recommended"],
             rules: await vitestRules(),
           },
@@ -30,7 +30,7 @@ export const testingConfig = async (
       ? [
           {
             files: GLOB_TESTS,
-            name: "jimmy.codes/testing/jest",
+            name: "jimmy.codes/jest",
             ...jestPlugin.configs["flat/recommended"],
             rules: await jestRules(),
           },
@@ -38,7 +38,7 @@ export const testingConfig = async (
       : []),
     {
       files: GLOB_E2E,
-      name: "jimmy.codes/testing/disabled",
+      name: "jimmy.codes/e2e",
       rules: {
         "jest/expect-expect": "off",
         "jest/no-deprecated-functions": "off",
