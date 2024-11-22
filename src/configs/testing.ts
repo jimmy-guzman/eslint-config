@@ -1,8 +1,9 @@
 import type { Rules, TestingOptions } from "../types";
 
-import { ALLOWED_VITEST_FUNCS, GLOB_E2E, GLOB_TESTS } from "../constants";
+import { GLOB_E2E, GLOB_TESTS } from "../constants";
 import { hasJest, hasVitest } from "../has-dep";
 import { jestRules } from "../rules/jest";
+import { vitestRules } from "../rules/vitest";
 import { interopDefault } from "../utils";
 
 export const testingConfig = async (
@@ -26,16 +27,7 @@ export const testingConfig = async (
             files: GLOB_TESTS,
             name: "jimmy.codes/testing/vitest",
             ...jestPlugin.configs["flat/recommended"],
-            rules: {
-              ...jestRules,
-              "jest/no-deprecated-functions": "off",
-              "jest/require-hook": [
-                "error",
-                {
-                  allowedFunctionCalls: ALLOWED_VITEST_FUNCS,
-                },
-              ],
-            } satisfies Rules,
+            rules: await vitestRules(),
           },
         ]
       : []),
@@ -45,7 +37,7 @@ export const testingConfig = async (
             files: GLOB_TESTS,
             name: "jimmy.codes/testing/jest",
             ...jestPlugin.configs["flat/recommended"],
-            rules: jestRules,
+            rules: await jestRules(),
           },
         ]
       : []),
