@@ -65,7 +65,6 @@ describe("jimmyDotCodes", () => {
       jimmyDotCodes({ autoDetect: false, testing: { framework: "jest" } }),
     ).resolves.toStrictEqual(
       expect.arrayContaining([
-        expect.objectContaining({ name: "jimmy.codes/testing" }),
         expect.objectContaining({ name: "jimmy.codes/testing/disabled" }),
         expect.objectContaining({ name: "jimmy.codes/testing/jest" }),
         expect.not.objectContaining({ name: "jimmy.codes/testing/vitest" }),
@@ -78,7 +77,6 @@ describe("jimmyDotCodes", () => {
       jimmyDotCodes({ autoDetect: false, testing: true }),
     ).resolves.toStrictEqual(
       expect.arrayContaining([
-        expect.objectContaining({ name: "jimmy.codes/testing" }),
         expect.objectContaining({ name: "jimmy.codes/testing/disabled" }),
         expect.not.objectContaining({ name: "jimmy.codes/testing/jest" }),
         expect.objectContaining({ name: "jimmy.codes/testing/vitest" }),
@@ -95,7 +93,6 @@ describe("jimmyDotCodes", () => {
       }),
     ).resolves.toStrictEqual(
       expect.arrayContaining([
-        expect.objectContaining({ name: "jimmy.codes/testing" }),
         expect.objectContaining({ name: "jimmy.codes/testing/disabled" }),
         expect.objectContaining({ name: "jimmy.codes/testing/jest" }),
         expect.objectContaining({ name: "jimmy.codes/react" }),
@@ -118,7 +115,6 @@ describe("jimmyDotCodes", () => {
       }),
     ).resolves.toStrictEqual(
       expect.arrayContaining([
-        expect.objectContaining({ name: "jimmy.codes/testing" }),
         expect.objectContaining({ name: "jimmy.codes/testing/disabled" }),
         expect.objectContaining({ name: "jimmy.codes/testing/vitest" }),
         expect.objectContaining({ name: "jimmy.codes/react" }),
@@ -220,7 +216,7 @@ describe("jimmyDotCodes", () => {
       await expect(jimmyDotCodes({ autoDetect: true })).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.not.objectContaining({ name: "jimmy.codes/typescript" }),
-          expect.objectContaining({ name: "jimmy.codes/testing" }),
+
           expect.objectContaining({ name: "jimmy.codes/testing/vitest" }),
           expect.not.objectContaining({ name: "jimmy.codes/testing/jest" }),
           expect.not.objectContaining({ name: "jimmy.codes/react" }),
@@ -240,7 +236,7 @@ describe("jimmyDotCodes", () => {
       await expect(jimmyDotCodes({ autoDetect: true })).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.not.objectContaining({ name: "jimmy.codes/typescript" }),
-          expect.objectContaining({ name: "jimmy.codes/testing" }),
+
           expect.not.objectContaining({ name: "jimmy.codes/testing/vitest" }),
           expect.objectContaining({ name: "jimmy.codes/testing/jest" }),
           expect.not.objectContaining({ name: "jimmy.codes/react" }),
@@ -261,7 +257,7 @@ describe("jimmyDotCodes", () => {
       await expect(jimmyDotCodes({ autoDetect: true })).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.not.objectContaining({ name: "jimmy.codes/typescript" }),
-          expect.objectContaining({ name: "jimmy.codes/testing" }),
+
           expect.objectContaining({ name: "jimmy.codes/testing/vitest" }),
           expect.not.objectContaining({ name: "jimmy.codes/testing/jest" }),
           expect.not.objectContaining({ name: "jimmy.codes/react" }),

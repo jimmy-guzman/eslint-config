@@ -16,11 +16,6 @@ export const testingConfig = async (
   const isJest = framework === "jest" || (autoDetect && hasJest());
 
   return [
-    {
-      files: GLOB_TESTS,
-      name: "jimmy.codes/testing",
-      ...jestPlugin.configs["flat/recommended"],
-    },
     ...(isVitest
       ? [
           {
