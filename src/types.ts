@@ -4,6 +4,9 @@ import type { RuleOptions } from "./rules.gen";
 
 export type Rules = RuleOptions;
 
+/**
+ * @deprecated
+ */
 export interface TypescriptOptions {
   /**
    * Location of `tsconfig.json` used for [type aware linting](https://typescript-eslint.io/getting-started/typed-linting)
@@ -16,6 +19,9 @@ type TestingFrameworks = "jest" | "vitest";
 type TestingUtilities = "testing-library";
 type ReactUtilities = "@tanstack/query";
 
+/**
+ * @deprecated
+ */
 export interface TestingOptions {
   /**
    * Which testing framework are you using?
@@ -28,6 +34,10 @@ export interface TestingOptions {
    */
   utilities?: TestingUtilities[];
 }
+
+/**
+ * @deprecated
+ */
 
 export interface ReactOptions {
   /**
@@ -46,6 +56,7 @@ export type TypedConfigItem = Omit<
    *
    * @see [Using plugins in your configuration](https://eslint.org/docs/latest/user-guide/configuring/configuration-files-new#using-plugins-in-your-configuration)
    */
+  // TODO: add undefined
   plugins?: Record<string, unknown>;
 };
 
@@ -71,6 +82,11 @@ export interface Options {
    */
   ignores?: string[];
   /**
+   * Are Jest rules enabled?
+   * @default false
+   */
+  jest?: boolean;
+  /**
    * Are playwright rules enabled?
    * @default false
    */
@@ -81,13 +97,29 @@ export interface Options {
    */
   react?: boolean | ReactOptions;
   /**
-   * Are testing rules enabled?
+   * Are Tanstack Query rules enabled?
    * @default false
    */
+  tanstackQuery?: boolean;
+  /**
+   * Are testing rules enabled?
+   * @default false
+   * @deprecated please use {@link Options.jest}, {@link Options.vitest}, or {@link Options.testingLibrary} instead.
+   */
   testing?: boolean | TestingOptions;
+  /**
+   * Are Testing Library rules enabled?
+   * @default false
+   */
+  testingLibrary?: boolean;
   /**
    * Are TypeScript rules enabled?
    * @default false
    */
   typescript?: boolean | TypescriptOptions;
+  /**
+   * Are Vitest rules enabled?
+   * @default false
+   */
+  vitest?: boolean;
 }

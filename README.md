@@ -21,128 +21,48 @@ First install the package, by running the following:
 pnpm add -D @jimmy.codes/eslint-config
 ```
 
-Then if you want a simple configuration:
+Then all you need to in your `eslint.config.js` is:
 
-```js
-// eslint.config.mjs
+```mjs
 import eslintConfig from "@jimmy.codes/eslint-config";
 
 export default eslintConfig();
 ```
 
-Or if you want to use [TypeScript configuration files](https://eslint.org/docs/latest/use/configure/configuration-files#typescript-configuration-files), you can do the following:
-
-Add `--flag unstable_ts_config` to your eslint script, for example:
-
-```json
-{
-  "scripts": {
-    "lint": "eslint --flag unstable_ts_config ."
-  }
-}
-```
-
-And add the following to your `.vscode/settings.json`:
-
-```json
-"eslint.options": {
-  "flags": ["unstable_ts_config"]
-}
-```
+Which will enable rules based on your project dependencies.
 
 ### 🔧 Configuration
 
-> [!NOTE]
-> By default all rules are enabled based on the project's dependencies.
-
 This package contains rules that can be enabled or disabled as follows:
 
-```js
+```ts
 import eslintConfig from "@jimmy.codes/eslint-config";
 
 export default eslintConfig({
-  /**
-   * Are TypeScript rules enabled?
-   * @default false
-   */
-  typescript: true,
-  /**
-   * Are React rules enabled?
-   * @default false
-   */
-  react: true,
-  /**
-   * Are Astro rules enabled?
-   * @default false
-   */
-  astro: true,
-  /**
-   * Are testing rules enabled?
-   * @default false
-   */
-  testing: true,
+  astro: false,
+  jest: false,
+  playwright: false,
+  react: false,
+  tanstackQuery: false,
+  testingLibrary: false,
+  typescript: false,
+  vitest: false,
 });
 ```
 
 Or you can turn off auto detection to disable rules based on a project's dependencies:
 
-```js
+```ts
 import eslintConfig from "@jimmy.codes/eslint-config";
 
 export default eslintConfig({ autoDetect: false });
-```
-
-#### TypeScript
-
-You can also change the project location which can be helpful for monorepos:
-
-> [!WARNING]
-> This is [not recommended nor needed since the introduction of `projectService`](https://typescript-eslint.io/getting-started/typed-linting#can-i-customize-the-tsconfig-used-for-typed-linting) which this config uses by default.
-
-```js
-import eslintConfig from "@jimmy.codes/eslint-config";
-
-export default eslintConfig({
-  typescript: {
-    project: ["./tsconfig.eslint.json", "./packages/*/tsconfig.json"],
-  },
-});
-```
-
-#### Testing
-
-By default [vitest](https://vitest.dev) is used as the testing framework but you can override and add additional rules for utilities:
-
-```js
-import eslintConfig from "@jimmy.codes/eslint-config";
-
-export default eslintConfig({
-  testing: {
-    framework: "jest",
-    utilities: ["testing-library"],
-  },
-});
-```
-
-#### React
-
-You can add additional rules for utilities:
-
-```js
-import eslintConfig from "@jimmy.codes/eslint-config";
-
-export default eslintConfig({
-  react: {
-    utilities: ["@tanstack/query"],
-  },
-});
 ```
 
 #### Extending the Configuration
 
 You can also extend the configuration:
 
-```js
+```ts
 import eslintConfig from "@jimmy.codes/eslint-config";
 
 export default eslintConfig(
@@ -164,6 +84,8 @@ export default eslintConfig(
 );
 ```
 
+#### Ignores
+
 You can also extend what is ignored:
 
 ```ts
@@ -172,6 +94,30 @@ import eslintConfig from "@jimmy.codes/eslint-config";
 export default eslintConfig({
   ignores: ["**/*.mjs"],
 });
+```
+
+### Typescript Configuration Files
+
+If you want to use [TypeScript configuration files](https://eslint.org/docs/latest/use/configure/configuration-files#typescript-configuration-files), you can do the following:
+
+Add `--flag unstable_ts_config` to your eslint script, for example:
+
+```json
+{
+  "scripts": {
+    "lint": "eslint --flag unstable_ts_config ."
+  }
+}
+```
+
+And add the following to your `.vscode/settings.json`:
+
+```json
+{
+  "eslint.options": {
+    "flags": ["unstable_ts_config"]
+  }
+}
 ```
 
 ## ❤️ Credits

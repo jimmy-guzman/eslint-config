@@ -4,10 +4,13 @@ import { hasReactQuery, hasTestingLibrary } from "./has-dependency";
 
 export const shouldEnableTanstackQuery = (
   { utilities = [] }: ReactOptions,
+  tanstackQuery: boolean,
   autoDetect: boolean,
 ) => {
   return (
-    utilities.includes("@tanstack/query") || (autoDetect && hasReactQuery())
+    tanstackQuery ||
+    utilities.includes("@tanstack/query") ||
+    (autoDetect && hasReactQuery())
   );
 };
 

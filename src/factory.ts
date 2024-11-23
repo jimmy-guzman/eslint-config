@@ -42,23 +42,33 @@ export const eslintConfig = async (
     autoDetect = true,
     configs = [],
     ignores = [],
+    jest = false,
     playwright = false,
     react = false,
+    tanstackQuery = false,
     testing = false,
+    testingLibrary = false,
     typescript = false,
+    vitest = false,
   }: Options = {},
   ...moreConfigs: Linter.Config[] | TypedConfigItem[]
 ) => {
   const reactOptions = getReactOptions(react);
-  const testingOptions = getTestingOptions(testing);
+  const testingOptions = getTestingOptions(testing, {
+    jest,
+    testingLibrary,
+    vitest,
+  });
   const typescriptOptions = getTypescriptOptions(typescript);
   const isTypescriptEnabled =
     typescript || !!typescriptOptions || (autoDetect && hasTypescript());
   const isReactEnabled = react || (autoDetect && hasReact());
-  const isTestingEnabled = testing || (autoDetect && hasTesting());
+  const isTestingEnabled =
+    testing || jest || vitest || (autoDetect && hasTesting());
   const isAstroEnabled = astro || (autoDetect && hasAstro());
   const isTanstackQueryEnabled = shouldEnableTanstackQuery(
     reactOptions,
+    tanstackQuery,
     autoDetect,
   );
   const isTestingLibraryEnabled = shouldEnableTestingLibrary(
