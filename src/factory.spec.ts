@@ -94,7 +94,7 @@ describe("jimmyDotCodes", () => {
         expect.objectContaining({ name: "jimmy.codes/jest" }),
         expect.objectContaining({ name: "jimmy.codes/react" }),
         expect.objectContaining({
-          name: "jimmy.codes/testing/testing-library",
+          name: "jimmy.codes/testing-library",
         }),
       ]),
     );
@@ -112,7 +112,7 @@ describe("jimmyDotCodes", () => {
         expect.objectContaining({ name: "jimmy.codes/vitest" }),
         expect.objectContaining({ name: "jimmy.codes/react" }),
         expect.objectContaining({
-          name: "jimmy.codes/testing/testing-library",
+          name: "jimmy.codes/testing-library",
         }),
       ]),
     );
@@ -151,7 +151,7 @@ describe("jimmyDotCodes", () => {
           expect.not.objectContaining({ name: "jimmy.codes/react" }),
           expect.not.objectContaining({ name: "jimmy.codes/react/query" }),
           expect.not.objectContaining({
-            name: "jimmy.codes/testing/testing-library",
+            name: "jimmy.codes/testing-library",
           }),
         ]),
       );
@@ -171,7 +171,7 @@ describe("jimmyDotCodes", () => {
           expect.objectContaining({ name: "jimmy.codes/react" }),
           expect.not.objectContaining({ name: "jimmy.codes/react/query" }),
           expect.not.objectContaining({
-            name: "jimmy.codes/testing/testing-library",
+            name: "jimmy.codes/testing-library",
           }),
         ]),
       );
@@ -192,7 +192,7 @@ describe("jimmyDotCodes", () => {
           expect.objectContaining({ name: "jimmy.codes/react" }),
           expect.objectContaining({ name: "jimmy.codes/react/query" }),
           expect.not.objectContaining({
-            name: "jimmy.codes/testing/testing-library",
+            name: "jimmy.codes/testing-library",
           }),
         ]),
       );
@@ -212,7 +212,7 @@ describe("jimmyDotCodes", () => {
           expect.not.objectContaining({ name: "jimmy.codes/react" }),
           expect.not.objectContaining({ name: "jimmy.codes/react/query" }),
           expect.not.objectContaining({
-            name: "jimmy.codes/testing/testing-library",
+            name: "jimmy.codes/testing-library",
           }),
         ]),
       );
@@ -232,7 +232,7 @@ describe("jimmyDotCodes", () => {
           expect.not.objectContaining({ name: "jimmy.codes/react" }),
           expect.not.objectContaining({ name: "jimmy.codes/react/query" }),
           expect.not.objectContaining({
-            name: "jimmy.codes/testing/testing-library",
+            name: "jimmy.codes/testing-library",
           }),
         ]),
       );
@@ -253,7 +253,7 @@ describe("jimmyDotCodes", () => {
           expect.not.objectContaining({ name: "jimmy.codes/react" }),
           expect.not.objectContaining({ name: "jimmy.codes/react/query" }),
           expect.objectContaining({
-            name: "jimmy.codes/testing/testing-library",
+            name: "jimmy.codes/testing-library",
           }),
         ]),
       );

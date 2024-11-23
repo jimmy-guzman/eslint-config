@@ -14,7 +14,7 @@ export const testingLibrary = async () => {
     {
       files: GLOB_TESTS,
       ignores: GLOB_E2E,
-      name: "jimmy.codes/testing/testing-library",
+      name: "jimmy.codes/testing-library",
       plugins: {
         "jest-dom": jestDom,
         "testing-library": testingLibrary,
