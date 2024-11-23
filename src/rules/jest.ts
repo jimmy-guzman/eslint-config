@@ -15,6 +15,7 @@ export const jestRules = async () => {
         withinDescribe: "it",
       },
     ],
+    "jest/expect-expect": "error",
     "jest/no-alias-methods": "error",
     "jest/no-commented-out-tests": "error",
     "jest/no-conditional-in-test": "error",

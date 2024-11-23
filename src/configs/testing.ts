@@ -1,4 +1,4 @@
-import type { Rules, TestingOptions } from "../types";
+import type { Rules, TestingOptions, TypedConfigItem } from "../types";
 
 import { GLOB_E2E, GLOB_TESTS } from "../constants";
 import { hasJest, hasVitest } from "../has-dep";
@@ -10,32 +10,10 @@ export const testingConfig = async (
   { framework = "vitest" }: TestingOptions = {},
   autoDetect = true,
 ) => {
-  const jestPlugin = await interopDefault(import("eslint-plugin-jest"));
-
   const isVitest = autoDetect ? hasVitest() : framework === "vitest";
   const isJest = framework === "jest" || (autoDetect && hasJest());
 
-  return [
-    ...(isVitest
-      ? [
-          {
-            files: GLOB_TESTS,
-            name: "jimmy.codes/vitest",
-            ...jestPlugin.configs["flat/recommended"],
-            rules: await vitestRules(),
-          },
-        ]
-      : []),
-    ...(isJest
-      ? [
-          {
-            files: GLOB_TESTS,
-            name: "jimmy.codes/jest",
-            ...jestPlugin.configs["flat/recommended"],
-            rules: await jestRules(),
-          },
-        ]
-      : []),
+  const configs: TypedConfigItem[] = [
     {
       files: GLOB_E2E,
       name: "jimmy.codes/e2e",
@@ -46,4 +24,28 @@ export const testingConfig = async (
       } satisfies Rules,
     },
   ];
+
+  if (isVitest) {
+    const jestPlugin = await interopDefault(import("eslint-plugin-jest"));
+
+    configs.push({
+      files: GLOB_TESTS,
+      ...jestPlugin.configs["flat/recommended"],
+      name: "jimmy.codes/vitest",
+      rules: await vitestRules(),
+    });
+  }
+
+  if (isJest) {
+    const jestPlugin = await interopDefault(import("eslint-plugin-jest"));
+
+    configs.push({
+      files: GLOB_TESTS,
+      ...jestPlugin.configs["flat/recommended"],
+      name: "jimmy.codes/jest",
+      rules: await jestRules(),
+    });
+  }
+
+  return configs;
 };

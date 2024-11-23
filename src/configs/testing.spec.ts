@@ -3,7 +3,7 @@ import { testingConfig } from "./testing";
 
 describe("testingConfig", () => {
   it("should create default config w/ vitest overrides", async () => {
-    const [vitest] = await testingConfig({}, false);
+    const [, vitest] = await testingConfig({}, false);
 
     expect(vitest?.rules).toStrictEqual(
       expect.objectContaining({
