@@ -10,6 +10,7 @@ import { importsConfig } from "./configs/imports";
 import { javascriptConfig } from "./configs/javascript";
 import { nodeConfig } from "./configs/node";
 import { perfectionistConfig } from "./configs/perfectionist";
+import { playwrightConfig } from "./configs/playwright";
 import { prettierConfig } from "./configs/prettier";
 import { reactConfig } from "./configs/react";
 import { regexpConfig } from "./configs/regexp";
@@ -25,6 +26,7 @@ import {
 } from "./utils/get-options";
 import {
   hasAstro,
+  hasPlaywright,
   hasReact,
   hasTesting,
   hasTypescript,
@@ -40,6 +42,7 @@ export const jimmyDotCodes = async (
     autoDetect = true,
     configs = [],
     ignores = [],
+    playwright = false,
     react = false,
     testing = false,
     typescript = false,
@@ -62,6 +65,7 @@ export const jimmyDotCodes = async (
     testingOptions,
     autoDetect,
   );
+  const isPlaywrightEnabled = playwright || (autoDetect && hasPlaywright());
 
   return [
     javascriptConfig(),
@@ -77,6 +81,7 @@ export const jimmyDotCodes = async (
     isAstroEnabled ? await astroConfig() : [],
     isTestingEnabled ? await testingConfig(testingOptions, autoDetect) : [],
     isTestingLibraryEnabled ? await testingLibrary() : [],
+    isPlaywrightEnabled ? await playwrightConfig() : [],
     prettierConfig(),
     commonjsConfig(),
     ignoresConfig(ignores),

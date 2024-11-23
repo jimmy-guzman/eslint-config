@@ -59,9 +59,13 @@ export const GLOB_TESTS = [
   `**/*.benchmark.${GLOB_SRC_EXT}`,
 ];
 
-export const GLOB_E2E = [
+export const GLOB_PLAYWRIGHT = [
   `**/e2e/**/*.spec.${GLOB_SRC_EXT}`,
   `**/e2e/**/*.test.${GLOB_SRC_EXT}`,
+];
+
+export const GLOB_E2E = [
+  ...GLOB_PLAYWRIGHT,
   `**/cypress/**/*.spec.${GLOB_SRC_EXT}`,
   `**/cypress/**/*.test.${GLOB_SRC_EXT}`,
 ];

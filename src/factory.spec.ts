@@ -93,9 +93,7 @@ describe("jimmyDotCodes", () => {
       expect.arrayContaining([
         expect.objectContaining({ name: "jimmy.codes/jest" }),
         expect.objectContaining({ name: "jimmy.codes/react" }),
-        expect.objectContaining({
-          name: "jimmy.codes/testing-library",
-        }),
+        expect.objectContaining({ name: "jimmy.codes/testing-library" }),
       ]),
     );
   });
@@ -111,9 +109,7 @@ describe("jimmyDotCodes", () => {
       expect.arrayContaining([
         expect.objectContaining({ name: "jimmy.codes/vitest" }),
         expect.objectContaining({ name: "jimmy.codes/react" }),
-        expect.objectContaining({
-          name: "jimmy.codes/testing-library",
-        }),
+        expect.objectContaining({ name: "jimmy.codes/testing-library" }),
       ]),
     );
   });
@@ -136,6 +132,16 @@ describe("jimmyDotCodes", () => {
     );
   });
 
+  it("should create configuration w/ playwright", async () => {
+    await expect(
+      jimmyDotCodes({ autoDetect: false, playwright: true }),
+    ).resolves.toStrictEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ name: "jimmy.codes/playwright" }),
+      ]),
+    );
+  });
+
   describe("autoDetect", () => {
     it("should include typescript when auto detection is enabled", async () => {
       vi.mocked(isPackageExists).mockImplementation((name) => {
@@ -145,14 +151,11 @@ describe("jimmyDotCodes", () => {
       await expect(jimmyDotCodes({ autoDetect: true })).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.objectContaining({ name: "jimmy.codes/typescript" }),
-          expect.not.objectContaining({ name: "jimmy.codes/testing" }),
           expect.not.objectContaining({ name: "jimmy.codes/vitest" }),
           expect.not.objectContaining({ name: "jimmy.codes/jest" }),
           expect.not.objectContaining({ name: "jimmy.codes/react" }),
           expect.not.objectContaining({ name: "jimmy.codes/react/query" }),
-          expect.not.objectContaining({
-            name: "jimmy.codes/testing-library",
-          }),
+          expect.not.objectContaining({ name: "jimmy.codes/testing-library" }),
         ]),
       );
     });
@@ -165,14 +168,11 @@ describe("jimmyDotCodes", () => {
       await expect(jimmyDotCodes({ autoDetect: true })).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.not.objectContaining({ name: "jimmy.codes/typescript" }),
-          expect.not.objectContaining({ name: "jimmy.codes/testing" }),
           expect.not.objectContaining({ name: "jimmy.codes/vitest" }),
           expect.not.objectContaining({ name: "jimmy.codes/jest" }),
           expect.objectContaining({ name: "jimmy.codes/react" }),
           expect.not.objectContaining({ name: "jimmy.codes/react/query" }),
-          expect.not.objectContaining({
-            name: "jimmy.codes/testing-library",
-          }),
+          expect.not.objectContaining({ name: "jimmy.codes/testing-library" }),
         ]),
       );
     });
@@ -186,14 +186,11 @@ describe("jimmyDotCodes", () => {
       await expect(jimmyDotCodes({ autoDetect: true })).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.not.objectContaining({ name: "jimmy.codes/typescript" }),
-          expect.not.objectContaining({ name: "jimmy.codes/testing" }),
           expect.not.objectContaining({ name: "jimmy.codes/vitest" }),
           expect.not.objectContaining({ name: "jimmy.codes/jest" }),
           expect.objectContaining({ name: "jimmy.codes/react" }),
           expect.objectContaining({ name: "jimmy.codes/react/query" }),
-          expect.not.objectContaining({
-            name: "jimmy.codes/testing-library",
-          }),
+          expect.not.objectContaining({ name: "jimmy.codes/testing-library" }),
         ]),
       );
     });
@@ -211,9 +208,7 @@ describe("jimmyDotCodes", () => {
           expect.not.objectContaining({ name: "jimmy.codes/jest" }),
           expect.not.objectContaining({ name: "jimmy.codes/react" }),
           expect.not.objectContaining({ name: "jimmy.codes/react/query" }),
-          expect.not.objectContaining({
-            name: "jimmy.codes/testing-library",
-          }),
+          expect.not.objectContaining({ name: "jimmy.codes/testing-library" }),
         ]),
       );
     });
@@ -231,9 +226,7 @@ describe("jimmyDotCodes", () => {
           expect.objectContaining({ name: "jimmy.codes/jest" }),
           expect.not.objectContaining({ name: "jimmy.codes/react" }),
           expect.not.objectContaining({ name: "jimmy.codes/react/query" }),
-          expect.not.objectContaining({
-            name: "jimmy.codes/testing-library",
-          }),
+          expect.not.objectContaining({ name: "jimmy.codes/testing-library" }),
         ]),
       );
     });
@@ -275,6 +268,18 @@ describe("jimmyDotCodes", () => {
           expect.objectContaining({
             name: "jimmy.codes/astro/imports",
           }),
+        ]),
+      );
+    });
+
+    it("should include playwright when auto detection is enabled", async () => {
+      vi.mocked(isPackageExists).mockImplementation((name) => {
+        return name === "@playwright/test";
+      });
+
+      await expect(jimmyDotCodes({ autoDetect: true })).resolves.toStrictEqual(
+        expect.arrayContaining([
+          expect.objectContaining({ name: "jimmy.codes/playwright" }),
         ]),
       );
     });

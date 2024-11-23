@@ -35,3 +35,7 @@ export const hasReactQuery = () => {
 export const hasAstro = () => {
   return isPackageExists("astro");
 };
+
+export const hasPlaywright = () => {
+  return isPackageExists("@playwright/test");
+};

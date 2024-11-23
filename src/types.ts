@@ -71,14 +71,15 @@ export interface Options {
    */
   ignores?: string[];
   /**
+   * Are playwright rules enabled?
+   * @default false
+   */
+  playwright?: boolean;
+  /**
    * Are React rules enabled?
    * @default false
    */
   react?: boolean | ReactOptions;
-  /**
-   * Are Jest rules enabled?
-   * @default false
-   */
   /**
    * Are testing rules enabled?
    * @default false
