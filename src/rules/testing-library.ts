@@ -9,7 +9,7 @@ export const testingLibraryRules = async () => {
   ]);
 
   return {
-    ...testingLibrary.configs.react.rules,
+    ...testingLibrary.configs["flat/react"].rules,
     ...jestDom.configs["flat/recommended"].rules,
   } satisfies Rules;
 };

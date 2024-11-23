@@ -37,16 +37,6 @@ declare module "eslint-plugin-jsx-a11y" {
   export default plugin;
 }
 
-declare module "eslint-plugin-testing-library" {
-  import type { ESLint, Linter } from "eslint";
-
-  const react: Linter.Config;
-  const plugin: ESLint.Plugin;
-
-  export = { configs: { react } };
-  export default plugin;
-}
-
 declare module "eslint-plugin-react-refresh" {
   import type { ESLint } from "eslint";
 
