@@ -13,17 +13,7 @@ export const testingConfig = async (
   const isVitest = autoDetect ? hasVitest() : framework === "vitest";
   const isJest = framework === "jest" || (autoDetect && hasJest());
 
-  const configs: TypedConfigItem[] = [
-    {
-      files: GLOB_E2E,
-      name: "jimmy.codes/e2e",
-      rules: {
-        "jest/expect-expect": "off",
-        "jest/no-deprecated-functions": "off",
-        "jest/require-hook": "off",
-      } satisfies Rules,
-    },
-  ];
+  const configs: TypedConfigItem[] = [];
 
   if (isVitest) {
     const jestPlugin = await interopDefault(import("eslint-plugin-jest"));
@@ -46,6 +36,16 @@ export const testingConfig = async (
       rules: await jestRules(),
     });
   }
+
+  configs.push({
+    files: GLOB_E2E,
+    name: "jimmy.codes/e2e",
+    rules: {
+      "jest/expect-expect": "off",
+      "jest/no-deprecated-functions": "off",
+      "jest/require-hook": "off",
+    } satisfies Rules,
+  });
 
   return configs;
 };
