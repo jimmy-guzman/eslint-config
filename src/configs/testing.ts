@@ -1,10 +1,10 @@
 import type { Rules, TestingOptions, TypedConfigItem } from "../types";
 
 import { GLOB_E2E, GLOB_TESTS } from "../constants";
-import { hasJest, hasVitest } from "../has-dep";
 import { jestRules } from "../rules/jest";
 import { vitestRules } from "../rules/vitest";
-import { interopDefault } from "../utils";
+import { hasJest, hasVitest } from "../utils/has-dependency";
+import { interopDefault } from "../utils/interop-default";
 
 export const testingConfig = async (
   { framework = "vitest" }: TestingOptions = {},

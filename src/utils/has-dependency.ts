@@ -1,6 +1,6 @@
 import { isPackageExists } from "local-pkg";
 
-import { TESTING_LIBRARY_FAMILY } from "./constants";
+import { TESTING_LIBRARY_FAMILY } from "../constants";
 
 export const hasTypescript = () => {
   return isPackageExists("typescript");

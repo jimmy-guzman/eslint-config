@@ -4,7 +4,7 @@ import type { TypedConfigItem } from "../types";
 
 import { GLOB_JSX, GLOB_TSX } from "../constants";
 import { reactRules } from "../rules/react";
-import { interopDefault } from "../utils";
+import { interopDefault } from "../utils/interop-default";
 
 export const reactConfig = async () => {
   const [reactPlugin, jsxA11yPlugin, reactHooksPlugin, reactRefreshPlugin] =

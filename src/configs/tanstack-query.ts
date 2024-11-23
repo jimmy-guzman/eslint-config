@@ -3,7 +3,7 @@ import type { ESLint } from "eslint";
 import type { TypedConfigItem } from "../types";
 
 import { GLOB_JSX, GLOB_TSX } from "../constants";
-import { interopDefault } from "../utils";
+import { interopDefault } from "../utils/interop-default";
 
 export const tanstackQuery = async () => {
   const queryPlugin = await interopDefault(

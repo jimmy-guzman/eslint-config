@@ -19,20 +19,20 @@ import { testingLibrary } from "./configs/testing-library";
 import { typescriptConfig } from "./configs/typescript";
 import { unicornConfig } from "./configs/unicorn";
 import {
-  hasAstro,
-  hasReact,
-  hasReactQuery,
-  hasTesting,
-  hasTestingLibrary,
-  hasTypescript,
-} from "./has-dep";
-import {
-  addTanstackQuery,
-  addTestingLibrary,
   getReactOptions,
   getTestingOptions,
   getTypescriptOptions,
-} from "./utils";
+} from "./utils/get-options";
+import {
+  hasAstro,
+  hasReact,
+  hasTesting,
+  hasTypescript,
+} from "./utils/has-dependency";
+import {
+  shouldEnableTanstackQuery,
+  shouldEnableTestingLibrary,
+} from "./utils/should-enable";
 
 export const jimmyDotCodes = async (
   {
@@ -54,10 +54,14 @@ export const jimmyDotCodes = async (
   const isReactEnabled = react || (autoDetect && hasReact());
   const isTestingEnabled = testing || (autoDetect && hasTesting());
   const isAstroEnabled = astro || (autoDetect && hasAstro());
-  const isTanstackQueryEnabled =
-    addTanstackQuery(reactOptions) || (autoDetect && hasReactQuery());
-  const isTestingLibraryEnabled =
-    addTestingLibrary(testingOptions) || (autoDetect && hasTestingLibrary());
+  const isTanstackQueryEnabled = shouldEnableTanstackQuery(
+    reactOptions,
+    autoDetect,
+  );
+  const isTestingLibraryEnabled = shouldEnableTestingLibrary(
+    testingOptions,
+    autoDetect,
+  );
 
   return [
     javascriptConfig(),

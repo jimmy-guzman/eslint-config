@@ -1,6 +1,6 @@
 import type { Rules } from "../types";
 
-import { interopDefault } from "../utils";
+import { interopDefault } from "../utils/interop-default";
 
 export const testingLibraryRules = async () => {
   const [jestDom, testingLibrary] = await Promise.all([

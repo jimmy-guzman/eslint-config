@@ -4,7 +4,7 @@ import { configs, parser as parserTs } from "typescript-eslint";
 import type { TypedConfigItem } from "../types";
 
 import { GLOB_ASTRO } from "../constants";
-import { interopDefault } from "../utils";
+import { interopDefault } from "../utils/interop-default";
 
 export const astroConfig = async () => {
   const files = [GLOB_ASTRO];

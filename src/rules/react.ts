@@ -1,6 +1,6 @@
 import type { Rules } from "../types";
 
-import { interopDefault } from "../utils";
+import { interopDefault } from "../utils/interop-default";
 import { normalizeRuleEntries } from "../utils/normalize-rule-entries";
 
 export const reactRules = async () => {

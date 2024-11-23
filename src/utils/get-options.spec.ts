@@ -2,7 +2,7 @@ import {
   getReactOptions,
   getTestingOptions,
   getTypescriptOptions,
-} from "./utils";
+} from "./get-options";
 
 describe("getTypescriptOptions", () => {
   it("should return undefined when a boolean is provided", () => {
