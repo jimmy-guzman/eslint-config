@@ -13,19 +13,13 @@ export const testingLibrary = async () => {
   return [
     {
       files: GLOB_TESTS,
+      ignores: GLOB_E2E,
       name: "jimmy.codes/testing/testing-library",
       plugins: {
         "jest-dom": jestDom,
         "testing-library": testingLibrary,
       },
       rules: await testingLibraryRules(),
-    },
-    {
-      files: GLOB_E2E,
-      name: "jimmy.codes/testing/testing-library/disabled",
-      rules: {
-        "testing-library/prefer-screen-queries": "off",
-      },
     },
   ] satisfies TypedConfigItem[];
 };

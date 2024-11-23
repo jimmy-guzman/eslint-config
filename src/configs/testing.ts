@@ -1,4 +1,4 @@
-import type { Rules, TestingOptions, TypedConfigItem } from "../types";
+import type { TestingOptions, TypedConfigItem } from "../types";
 
 import { GLOB_E2E, GLOB_TESTS } from "../constants";
 import { jestRules } from "../rules/jest";
@@ -20,6 +20,7 @@ export const testingConfig = async (
 
     configs.push({
       files: GLOB_TESTS,
+      ignores: GLOB_E2E,
       ...jestPlugin.configs["flat/recommended"],
       name: "jimmy.codes/vitest",
       rules: await vitestRules(),
@@ -31,21 +32,12 @@ export const testingConfig = async (
 
     configs.push({
       files: GLOB_TESTS,
+      ignores: GLOB_E2E,
       ...jestPlugin.configs["flat/recommended"],
       name: "jimmy.codes/jest",
       rules: await jestRules(),
     });
   }
-
-  configs.push({
-    files: GLOB_E2E,
-    name: "jimmy.codes/e2e",
-    rules: {
-      "jest/expect-expect": "off",
-      "jest/no-deprecated-functions": "off",
-      "jest/require-hook": "off",
-    } satisfies Rules,
-  });
 
   return configs;
 };

@@ -33,10 +33,4 @@ describe("testingConfig", () => {
       }),
     );
   });
-
-  it("should create e2e config last", async () => {
-    const configs = await testingConfig({ framework: "jest" }, false);
-
-    expect(configs.at(-1)?.name).toBe("jimmy.codes/e2e");
-  });
 });
