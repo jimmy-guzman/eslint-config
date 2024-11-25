@@ -14,9 +14,9 @@ import { playwrightConfig } from "./configs/playwright";
 import { prettierConfig } from "./configs/prettier";
 import { reactConfig } from "./configs/react";
 import { regexpConfig } from "./configs/regexp";
-import { tanstackQuery } from "./configs/tanstack-query";
+import { tanstackQueryConfig } from "./configs/tanstack-query";
 import { testingConfig } from "./configs/testing";
-import { testingLibrary } from "./configs/testing-library";
+import { testingLibraryConfig } from "./configs/testing-library";
 import { typescriptConfig } from "./configs/typescript";
 import { unicornConfig } from "./configs/unicorn";
 import {
@@ -36,7 +36,7 @@ import {
   shouldEnableTestingLibrary,
 } from "./utils/should-enable";
 
-export const jimmyDotCodes = async (
+export const eslintConfig = async (
   {
     astro = false,
     autoDetect = true,
@@ -77,10 +77,10 @@ export const jimmyDotCodes = async (
     importsConfig({ typescript: isTypescriptEnabled }),
     isTypescriptEnabled ? typescriptConfig(typescriptOptions) : [],
     isReactEnabled ? await reactConfig() : [],
-    isTanstackQueryEnabled ? await tanstackQuery() : [],
+    isTanstackQueryEnabled ? await tanstackQueryConfig() : [],
     isAstroEnabled ? await astroConfig() : [],
     isTestingEnabled ? await testingConfig(testingOptions, autoDetect) : [],
-    isTestingLibraryEnabled ? await testingLibrary() : [],
+    isTestingLibraryEnabled ? await testingLibraryConfig() : [],
     isPlaywrightEnabled ? await playwrightConfig() : [],
     prettierConfig(),
     commonjsConfig(),

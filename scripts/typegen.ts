@@ -3,9 +3,9 @@ import fs from "node:fs/promises";
 import { flatConfigsToRulesDTS } from "eslint-typegen/core";
 import { builtinRules } from "eslint/use-at-your-own-risk";
 
-import jimmyDotCodes from "../src";
+import eslintConfig from "../src";
 
-const configs = await jimmyDotCodes();
+const configs = await eslintConfig();
 
 const ruleDts = await flatConfigsToRulesDTS(
   [

@@ -1,3 +1,3 @@
-import jimmyDotCodes from "./src";
+import eslintConfig from "./src";
 
-export default jimmyDotCodes();
+export default eslintConfig();

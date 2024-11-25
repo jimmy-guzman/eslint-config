@@ -1,10 +1,10 @@
 import { isPackageExists } from "local-pkg";
 
-import { jimmyDotCodes } from "./factory";
+import { eslintConfig } from "./factory";
 
 vi.mock("local-pkg");
 
-describe("jimmyDotCodes", () => {
+describe("eslintConfig", () => {
   describe("base", () => {
     it.each([
       "node",
@@ -17,7 +17,7 @@ describe("jimmyDotCodes", () => {
       "javascript",
       "regexp",
     ])("should create configuration w/ %s", async (input) => {
-      await expect(jimmyDotCodes({ autoDetect: false })).resolves.toStrictEqual(
+      await expect(eslintConfig({ autoDetect: false })).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.objectContaining({ name: `jimmy.codes/${input}` }),
         ]),
@@ -27,7 +27,7 @@ describe("jimmyDotCodes", () => {
 
   it("should create configuration w/ typescript", async () => {
     await expect(
-      jimmyDotCodes({ autoDetect: false, typescript: true }),
+      eslintConfig({ autoDetect: false, typescript: true }),
     ).resolves.toStrictEqual(
       expect.arrayContaining([
         expect.objectContaining({ name: "jimmy.codes/typescript" }),
@@ -38,7 +38,7 @@ describe("jimmyDotCodes", () => {
 
   it("should create configuration w/ react", async () => {
     await expect(
-      jimmyDotCodes({ autoDetect: false, react: true }),
+      eslintConfig({ autoDetect: false, react: true }),
     ).resolves.toStrictEqual(
       expect.arrayContaining([
         expect.objectContaining({ name: "jimmy.codes/react" }),
@@ -48,7 +48,7 @@ describe("jimmyDotCodes", () => {
 
   it("should create configuration w/ react & @tanstack/query", async () => {
     await expect(
-      jimmyDotCodes({
+      eslintConfig({
         autoDetect: false,
         react: { utilities: ["@tanstack/query"] },
       }),
@@ -62,7 +62,7 @@ describe("jimmyDotCodes", () => {
 
   it("should create configuration w/ jest", async () => {
     await expect(
-      jimmyDotCodes({ autoDetect: false, testing: { framework: "jest" } }),
+      eslintConfig({ autoDetect: false, testing: { framework: "jest" } }),
     ).resolves.toStrictEqual(
       expect.arrayContaining([
         expect.objectContaining({ name: "jimmy.codes/jest" }),
@@ -73,7 +73,7 @@ describe("jimmyDotCodes", () => {
 
   it("should create configuration w/ vitest", async () => {
     await expect(
-      jimmyDotCodes({ autoDetect: false, testing: true }),
+      eslintConfig({ autoDetect: false, testing: true }),
     ).resolves.toStrictEqual(
       expect.arrayContaining([
         expect.not.objectContaining({ name: "jimmy.codes/jest" }),
@@ -84,7 +84,7 @@ describe("jimmyDotCodes", () => {
 
   it("should create configuration w/ jest & react & testing library", async () => {
     await expect(
-      jimmyDotCodes({
+      eslintConfig({
         autoDetect: false,
         react: true,
         testing: { framework: "jest", utilities: ["testing-library"] },
@@ -100,7 +100,7 @@ describe("jimmyDotCodes", () => {
 
   it("should create configuration w/ vitest & react & testing library", async () => {
     await expect(
-      jimmyDotCodes({
+      eslintConfig({
         autoDetect: false,
         react: true,
         testing: { utilities: ["testing-library"] },
@@ -116,7 +116,7 @@ describe("jimmyDotCodes", () => {
 
   it("should create configuration w/ astro", async () => {
     await expect(
-      jimmyDotCodes({ astro: true, autoDetect: false }),
+      eslintConfig({ astro: true, autoDetect: false }),
     ).resolves.toStrictEqual(
       expect.arrayContaining([
         expect.objectContaining({
@@ -134,7 +134,7 @@ describe("jimmyDotCodes", () => {
 
   it("should create configuration w/ playwright", async () => {
     await expect(
-      jimmyDotCodes({ autoDetect: false, playwright: true }),
+      eslintConfig({ autoDetect: false, playwright: true }),
     ).resolves.toStrictEqual(
       expect.arrayContaining([
         expect.objectContaining({ name: "jimmy.codes/playwright" }),
@@ -148,7 +148,7 @@ describe("jimmyDotCodes", () => {
         return name === "typescript";
       });
 
-      await expect(jimmyDotCodes({ autoDetect: true })).resolves.toStrictEqual(
+      await expect(eslintConfig({ autoDetect: true })).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.objectContaining({ name: "jimmy.codes/typescript" }),
           expect.not.objectContaining({ name: "jimmy.codes/vitest" }),
@@ -165,7 +165,7 @@ describe("jimmyDotCodes", () => {
         return name === "react";
       });
 
-      await expect(jimmyDotCodes({ autoDetect: true })).resolves.toStrictEqual(
+      await expect(eslintConfig({ autoDetect: true })).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.not.objectContaining({ name: "jimmy.codes/typescript" }),
           expect.not.objectContaining({ name: "jimmy.codes/vitest" }),
@@ -183,7 +183,7 @@ describe("jimmyDotCodes", () => {
         return name === "react" || name === "@tanstack/react-query";
       });
 
-      await expect(jimmyDotCodes({ autoDetect: true })).resolves.toStrictEqual(
+      await expect(eslintConfig({ autoDetect: true })).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.not.objectContaining({ name: "jimmy.codes/typescript" }),
           expect.not.objectContaining({ name: "jimmy.codes/vitest" }),
@@ -200,7 +200,7 @@ describe("jimmyDotCodes", () => {
         return name === "vitest";
       });
 
-      await expect(jimmyDotCodes({ autoDetect: true })).resolves.toStrictEqual(
+      await expect(eslintConfig({ autoDetect: true })).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.not.objectContaining({ name: "jimmy.codes/typescript" }),
 
@@ -218,7 +218,7 @@ describe("jimmyDotCodes", () => {
         return name === "jest";
       });
 
-      await expect(jimmyDotCodes({ autoDetect: true })).resolves.toStrictEqual(
+      await expect(eslintConfig({ autoDetect: true })).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.not.objectContaining({ name: "jimmy.codes/typescript" }),
 
@@ -237,7 +237,7 @@ describe("jimmyDotCodes", () => {
         return name === "@testing-library/react" || name === "vitest";
       });
 
-      await expect(jimmyDotCodes({ autoDetect: true })).resolves.toStrictEqual(
+      await expect(eslintConfig({ autoDetect: true })).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.not.objectContaining({ name: "jimmy.codes/typescript" }),
 
@@ -257,7 +257,7 @@ describe("jimmyDotCodes", () => {
         return name === "astro";
       });
 
-      await expect(jimmyDotCodes({ autoDetect: true })).resolves.toStrictEqual(
+      await expect(eslintConfig({ autoDetect: true })).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.objectContaining({
             name: "jimmy.codes/astro",
@@ -277,7 +277,7 @@ describe("jimmyDotCodes", () => {
         return name === "@playwright/test";
       });
 
-      await expect(jimmyDotCodes({ autoDetect: true })).resolves.toStrictEqual(
+      await expect(eslintConfig({ autoDetect: true })).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.objectContaining({ name: "jimmy.codes/playwright" }),
         ]),

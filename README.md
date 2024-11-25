@@ -25,9 +25,9 @@ Then if you want a simple configuration:
 
 ```js
 // eslint.config.mjs
-import jimmyDotCodes from "@jimmy.codes/eslint-config";
+import eslintConfig from "@jimmy.codes/eslint-config";
 
-export default jimmyDotCodes();
+export default eslintConfig();
 ```
 
 Or if you want to use [TypeScript configuration files](https://eslint.org/docs/latest/use/configure/configuration-files#typescript-configuration-files), you can do the following:
@@ -58,9 +58,9 @@ And add the following to your `.vscode/settings.json`:
 This package contains rules that can be enabled or disabled as follows:
 
 ```js
-import jimmyDotCodes from "@jimmy.codes/eslint-config";
+import eslintConfig from "@jimmy.codes/eslint-config";
 
-export default jimmyDotCodes({
+export default eslintConfig({
   /**
    * Are TypeScript rules enabled?
    * @default false
@@ -87,9 +87,9 @@ export default jimmyDotCodes({
 Or you can turn off auto detection to disable rules based on a project's dependencies:
 
 ```js
-import jimmyDotCodes from "@jimmy.codes/eslint-config";
+import eslintConfig from "@jimmy.codes/eslint-config";
 
-export default jimmyDotCodes({ autoDetect: false });
+export default eslintConfig({ autoDetect: false });
 ```
 
 #### TypeScript
@@ -100,9 +100,9 @@ You can also change the project location which can be helpful for monorepos:
 > This is [not recommended nor needed since the introduction of `projectService`](https://typescript-eslint.io/getting-started/typed-linting#can-i-customize-the-tsconfig-used-for-typed-linting) which this config uses by default.
 
 ```js
-import jimmyDotCodes from "@jimmy.codes/eslint-config";
+import eslintConfig from "@jimmy.codes/eslint-config";
 
-export default jimmyDotCodes({
+export default eslintConfig({
   typescript: {
     project: ["./tsconfig.eslint.json", "./packages/*/tsconfig.json"],
   },
@@ -114,9 +114,9 @@ export default jimmyDotCodes({
 By default [vitest](https://vitest.dev) is used as the testing framework but you can override and add additional rules for utilities:
 
 ```js
-import jimmyDotCodes from "@jimmy.codes/eslint-config";
+import eslintConfig from "@jimmy.codes/eslint-config";
 
-export default jimmyDotCodes({
+export default eslintConfig({
   testing: {
     framework: "jest",
     utilities: ["testing-library"],
@@ -129,9 +129,9 @@ export default jimmyDotCodes({
 You can add additional rules for utilities:
 
 ```js
-import jimmyDotCodes from "@jimmy.codes/eslint-config";
+import eslintConfig from "@jimmy.codes/eslint-config";
 
-export default jimmyDotCodes({
+export default eslintConfig({
   react: {
     utilities: ["@tanstack/query"],
   },
@@ -143,9 +143,9 @@ export default jimmyDotCodes({
 You can also extend the configuration:
 
 ```js
-import jimmyDotCodes from "@jimmy.codes/eslint-config";
+import eslintConfig from "@jimmy.codes/eslint-config";
 
-export default jimmyDotCodes(
+export default eslintConfig(
   {
     configs: [
       {
@@ -167,9 +167,9 @@ export default jimmyDotCodes(
 You can also extend what is ignored:
 
 ```ts
-import jimmyDotCodes from "@jimmy.codes/eslint-config";
+import eslintConfig from "@jimmy.codes/eslint-config";
 
-export default jimmyDotCodes({
+export default eslintConfig({
   ignores: ["**/*.mjs"],
 });
 ```
