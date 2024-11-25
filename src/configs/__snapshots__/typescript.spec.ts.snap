@@ -7,7 +7,7 @@ exports[`typescriptConfig > should create config 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.15.0",
+          "version": "8.16.0",
         },
         "parseForESLint": [Function],
       },
@@ -765,7 +765,7 @@ exports[`typescriptConfig > should create config 1`] = `
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.15.0",
+          "version": "8.16.0",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -4253,6 +4253,7 @@ You must still type the parameters of the function.",
                 "url": "https://typescript-eslint.io/rules/no-base-to-string",
               },
               "messages": {
+                "baseArrayJoin": "Using \`join()\` for {{name}} {{certainty}} use Object's default stringification format ('[object Object]') when stringified.",
                 "baseToString": "'{{name}}' {{certainty}} use Object's default stringification format ('[object Object]') when stringified.",
               },
               "schema": [
