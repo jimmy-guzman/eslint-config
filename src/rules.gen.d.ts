@@ -4736,6 +4736,76 @@ export interface RuleOptions {
    */
   'spaced-comment'?: Linter.RuleEntry<SpacedComment>
   /**
+   * Interactions should be awaited
+   * @see https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/await-interactions.md
+   */
+  'storybook/await-interactions'?: Linter.RuleEntry<[]>
+  /**
+   * Pass a context when invoking play function of another story
+   * @see https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/context-in-play-function.md
+   */
+  'storybook/context-in-play-function'?: Linter.RuleEntry<[]>
+  /**
+   * The component property should be set
+   * @see https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/csf-component.md
+   */
+  'storybook/csf-component'?: Linter.RuleEntry<[]>
+  /**
+   * Story files should have a default export
+   * @see https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/default-exports.md
+   */
+  'storybook/default-exports'?: Linter.RuleEntry<[]>
+  /**
+   * Deprecated hierarchy separator in title property
+   * @see https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/hierarchy-separator.md
+   */
+  'storybook/hierarchy-separator'?: Linter.RuleEntry<[]>
+  /**
+   * Meta should only have inline properties
+   * @see https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/meta-inline-properties.md
+   */
+  'storybook/meta-inline-properties'?: Linter.RuleEntry<StorybookMetaInlineProperties>
+  /**
+   * A story should not have a redundant name property
+   * @see https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/no-redundant-story-name.md
+   */
+  'storybook/no-redundant-story-name'?: Linter.RuleEntry<[]>
+  /**
+   * storiesOf is deprecated and should not be used
+   * @see https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/no-stories-of.md
+   */
+  'storybook/no-stories-of'?: Linter.RuleEntry<[]>
+  /**
+   * Do not define a title in meta
+   * @see https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/no-title-property-in-meta.md
+   */
+  'storybook/no-title-property-in-meta'?: Linter.RuleEntry<[]>
+  /**
+   * This rule identifies storybook addons that are invalid because they are either not installed or contain a typo in their name.
+   * @see https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/no-uninstalled-addons.md
+   */
+  'storybook/no-uninstalled-addons'?: Linter.RuleEntry<StorybookNoUninstalledAddons>
+  /**
+   * Stories should use PascalCase
+   * @see https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/prefer-pascal-case.md
+   */
+  'storybook/prefer-pascal-case'?: Linter.RuleEntry<[]>
+  /**
+   * A story file must contain at least one story export
+   * @see https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/story-exports.md
+   */
+  'storybook/story-exports'?: Linter.RuleEntry<[]>
+  /**
+   * Use expect from `@storybook/test` or `@storybook/jest`
+   * @see https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/use-storybook-expect.md
+   */
+  'storybook/use-storybook-expect'?: Linter.RuleEntry<[]>
+  /**
+   * Do not use testing-library directly on stories
+   * @see https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/use-storybook-testing-library.md
+   */
+  'storybook/use-storybook-testing-library'?: Linter.RuleEntry<[]>
+  /**
    * Require or disallow strict mode directives
    * @see https://eslint.org/docs/latest/rules/strict
    */
@@ -10395,6 +10465,16 @@ type SpacedComment = []|[("always" | "never")]|[("always" | "never"), {
     markers?: string[]
     balanced?: boolean
   }
+}]
+// ----- storybook/meta-inline-properties -----
+type StorybookMetaInlineProperties = []|[{
+  csfVersion?: number
+}]
+// ----- storybook/no-uninstalled-addons -----
+type StorybookNoUninstalledAddons = []|[{
+  packageJsonLocation?: string
+  ignore?: string[]
+  [k: string]: unknown | undefined
 }]
 // ----- strict -----
 type Strict = []|[("never" | "global" | "function" | "safe")]

@@ -68,6 +68,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "0.4.14",
     "eslint-plugin-regexp": "^2.7.0",
+    "eslint-plugin-storybook": "0.11.1",
     "eslint-plugin-testing-library": "^7.0.0",
     "eslint-plugin-unicorn": "^56.0.1",
     "globals": "^15.12.0",
@@ -105,6 +106,7 @@
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "semantic-release": "24.2.0",
+    "storybook": "8.4.5",
     "tsx": "4.19.2",
     "typescript": "5.7.2",
     "vitest": "2.1.5"

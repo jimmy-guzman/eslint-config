@@ -97,6 +97,11 @@ export interface Options {
    */
   react?: boolean | ReactOptions;
   /**
+   * Are Storybook rules enabled?
+   * @default false
+   */
+  storybook?: boolean;
+  /**
    * Are Tanstack Query rules enabled?
    * @default false
    */

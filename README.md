@@ -43,6 +43,7 @@ export default eslintConfig({
   jest: false,
   playwright: false,
   react: false,
+  storybook: false,
   tanstackQuery: false,
   testingLibrary: false,
   typescript: false,

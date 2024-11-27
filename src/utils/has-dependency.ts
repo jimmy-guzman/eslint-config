@@ -39,3 +39,7 @@ export const hasAstro = () => {
 export const hasPlaywright = () => {
   return isPackageExists("@playwright/test");
 };
+
+export const hasStorybook = () => {
+  return isPackageExists("storybook");
+};

@@ -189,6 +189,15 @@ describe("eslintConfig", () => {
     expect(configs.at(7)?.name).toBe("jimmy.codes/react/query");
   });
 
+  it("should create configuration w/ storybook", async () => {
+    const configs = await eslintConfig({
+      autoDetect: false,
+      storybook: true,
+    });
+
+    expect(configs.at(7)?.name).toBe("jimmy.codes/storybook/setup");
+  });
+
   describe("autoDetect", () => {
     it("should include typescript when auto detection is enabled", async () => {
       vi.mocked(isPackageExists).mockImplementation((name) => {
@@ -329,6 +338,18 @@ describe("eslintConfig", () => {
           expect.objectContaining({ name: "jimmy.codes/playwright" }),
         ]),
       );
+    });
+
+    it("should include storybook when auto detection is enabled", async () => {
+      vi.mocked(isPackageExists).mockImplementation((name) => {
+        return name === "storybook";
+      });
+
+      const configs = await eslintConfig({
+        autoDetect: true,
+      });
+
+      expect(configs.at(7)?.name).toBe("jimmy.codes/storybook/setup");
     });
   });
 });

@@ -14,6 +14,7 @@ import { playwrightConfig } from "./configs/playwright";
 import { prettierConfig } from "./configs/prettier";
 import { reactConfig } from "./configs/react";
 import { regexpConfig } from "./configs/regexp";
+import { storybookConfig } from "./configs/storybook";
 import { tanstackQueryConfig } from "./configs/tanstack-query";
 import { testingConfig } from "./configs/testing";
 import { testingLibraryConfig } from "./configs/testing-library";
@@ -28,6 +29,7 @@ import {
   hasAstro,
   hasPlaywright,
   hasReact,
+  hasStorybook,
   hasTesting,
   hasTypescript,
 } from "./utils/has-dependency";
@@ -45,6 +47,7 @@ export const eslintConfig = async (
     jest = false,
     playwright = false,
     react = false,
+    storybook = false,
     tanstackQuery = false,
     testing = false,
     testingLibrary = false,
@@ -76,6 +79,7 @@ export const eslintConfig = async (
     autoDetect,
   );
   const isPlaywrightEnabled = playwright || (autoDetect && hasPlaywright());
+  const isStorybookEnabled = storybook || (autoDetect && hasStorybook());
 
   return [
     javascriptConfig(),
@@ -92,6 +96,7 @@ export const eslintConfig = async (
     isTestingEnabled ? await testingConfig(testingOptions, autoDetect) : [],
     isTestingLibraryEnabled ? await testingLibraryConfig() : [],
     isPlaywrightEnabled ? await playwrightConfig() : [],
+    isStorybookEnabled ? await storybookConfig() : [],
     prettierConfig(),
     commonjsConfig(),
     ignoresConfig(ignores),
