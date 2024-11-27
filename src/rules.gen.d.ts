@@ -3703,6 +3703,10 @@ export interface RuleOptions {
    */
   'radix'?: Linter.RuleEntry<Radix>
   /**
+   * Surfaces diagnostics from React Forget
+   */
+  'react-compiler/react-compiler'?: Linter.RuleEntry<ReactCompilerReactCompiler>
+  /**
    * verifies the list of dependencies for Hooks like useEffect and similar
    * @see https://github.com/facebook/react/issues/14920
    */
@@ -9787,6 +9791,10 @@ type Quotes = []|[("single" | "double" | "backtick")]|[("single" | "double" | "b
 })]
 // ----- radix -----
 type Radix = []|[("always" | "as-needed")]
+// ----- react-compiler/react-compiler -----
+type ReactCompilerReactCompiler = []|[{
+  [k: string]: unknown | undefined
+}]
 // ----- react-hooks/exhaustive-deps -----
 type ReactHooksExhaustiveDeps = []|[{
   additionalHooks?: string

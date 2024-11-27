@@ -13,6 +13,7 @@ export const reactRules = async () => {
     ...jsxA11yPlugin.configs.recommended.rules,
     ...normalizeRuleEntries(reactPlugin.configs.flat?.recommended?.rules),
     ...normalizeRuleEntries(reactPlugin.configs.flat?.["jsx-runtime"]?.rules),
+    "react-compiler/react-compiler": "error",
     "react-hooks/exhaustive-deps": "error",
     "react-hooks/rules-of-hooks": "error",
     "react-refresh/only-export-components": [

@@ -7,13 +7,19 @@ import { reactRules } from "../rules/react";
 import { interopDefault } from "../utils/interop-default";
 
 export const reactConfig = async () => {
-  const [reactPlugin, jsxA11yPlugin, reactHooksPlugin, reactRefreshPlugin] =
-    await Promise.all([
-      interopDefault(import("eslint-plugin-react")),
-      interopDefault(import("eslint-plugin-jsx-a11y")),
-      import("eslint-plugin-react-hooks"),
-      import("eslint-plugin-react-refresh"),
-    ]);
+  const [
+    reactPlugin,
+    jsxA11yPlugin,
+    reactHooksPlugin,
+    reactRefreshPlugin,
+    reactCompilerPlugin,
+  ] = await Promise.all([
+    interopDefault(import("eslint-plugin-react")),
+    interopDefault(import("eslint-plugin-jsx-a11y")),
+    import("eslint-plugin-react-hooks"),
+    import("eslint-plugin-react-refresh"),
+    interopDefault(import("eslint-plugin-react-compiler")),
+  ]);
 
   return [
     {
@@ -33,6 +39,7 @@ export const reactConfig = async () => {
       plugins: {
         "jsx-a11y": jsxA11yPlugin,
         "react": reactPlugin,
+        "react-compiler": reactCompilerPlugin,
         "react-hooks": reactHooksPlugin,
         "react-refresh": reactRefreshPlugin,
       },
