@@ -1,11 +1,9 @@
 import { configs } from "typescript-eslint";
 
-import type { TypescriptOptions } from "../types";
-
 import { GLOB_JS, GLOB_JSX, GLOB_TESTS } from "../constants";
 import { typescriptRules } from "../rules/typescript";
 
-export const typescriptConfig = (options?: TypescriptOptions) => {
+export const typescriptConfig = () => {
   return [
     ...configs.strictTypeChecked,
     ...configs.stylisticTypeChecked.filter((config) => {
@@ -14,9 +12,7 @@ export const typescriptConfig = (options?: TypescriptOptions) => {
     {
       languageOptions: {
         parserOptions: {
-          ...(options?.project
-            ? { project: options.project }
-            : { projectService: true }),
+          projectService: true,
           tsconfigRootDir: process.cwd(),
         },
       },

@@ -7,209 +7,134 @@ vi.mock("local-pkg");
 describe("eslintConfig", () => {
   describe("base", () => {
     it.each([
-      "node",
-      "imports",
-      "perfectionist",
-      "unicorn",
-      "eslint-comments",
-      "prettier",
-      "ignores",
-      "javascript",
-      "regexp",
-      "jsdoc",
-    ])("should create configuration w/ %s", async (input) => {
+      ["node"],
+      ["imports"],
+      ["perfectionist"],
+      ["unicorn"],
+      ["eslint-comments"],
+      ["prettier"],
+      ["ignores"],
+      ["javascript"],
+      ["regexp"],
+      ["jsdoc"],
+    ])("should include %s in the base configuration", async (configName) => {
       await expect(eslintConfig({ autoDetect: false })).resolves.toStrictEqual(
         expect.arrayContaining([
-          expect.objectContaining({ name: `jimmy.codes/${input}` }),
+          expect.objectContaining({ name: `jimmy.codes/${configName}` }),
         ]),
       );
     });
   });
 
-  it("should create configuration w/ typescript", async () => {
-    await expect(
-      eslintConfig({ autoDetect: false, typescript: true }),
-    ).resolves.toStrictEqual(
-      expect.arrayContaining([
-        expect.objectContaining({ name: "jimmy.codes/typescript" }),
-        expect.objectContaining({ name: "jimmy.codes/imports/typescript" }),
-      ]),
+  describe("feature configurations", () => {
+    it.each([
+      [
+        "typescript",
+        { typescript: true },
+        ["jimmy.codes/typescript", "jimmy.codes/imports/typescript"],
+      ],
+      ["react", { react: true }, ["jimmy.codes/react"]],
+      ["jest", { jest: true }, ["jimmy.codes/jest"]],
+      ["vitest", { vitest: true }, ["jimmy.codes/vitest"]],
+      ["playwright", { playwright: true }, ["jimmy.codes/playwright"]],
+      ["storybook", { storybook: true }, ["jimmy.codes/storybook/setup"]],
+      ["nextjs", { nextjs: true }, ["jimmy.codes/nextjs"]],
+      ["tanstackQuery", { tanstackQuery: true }, ["jimmy.codes/react/query"]],
+      [
+        "testingLibrary",
+        { testingLibrary: true },
+        ["jimmy.codes/testing-library"],
+      ],
+    ])(
+      "should include %s configuration",
+      async (_, options, expectedConfigs) => {
+        const matchers = expectedConfigs.map((name) => {
+          return expect.objectContaining({ name }) as unknown;
+        });
+
+        await expect(
+          eslintConfig({ autoDetect: false, ...options }),
+        ).resolves.toStrictEqual(expect.arrayContaining(matchers));
+      },
     );
-  });
 
-  it("should create configuration w/ react", async () => {
-    await expect(
-      eslintConfig({ autoDetect: false, react: true }),
-    ).resolves.toStrictEqual(
-      expect.arrayContaining([
-        expect.objectContaining({ name: "jimmy.codes/react" }),
-      ]),
-    );
-  });
-
-  it("should create configuration w/ react & @tanstack/query (deprecated)", async () => {
-    await expect(
-      eslintConfig({
-        autoDetect: false,
-        react: { utilities: ["@tanstack/query"] },
-      }),
-    ).resolves.toStrictEqual(
-      expect.arrayContaining([
-        expect.objectContaining({ name: "jimmy.codes/react" }),
-        expect.objectContaining({ name: "jimmy.codes/react/query" }),
-      ]),
-    );
-  });
-
-  it("should create configuration w/ jest", async () => {
-    const configs = await eslintConfig({ autoDetect: false, jest: true });
-
-    expect(configs.at(8)?.name).toBe("jimmy.codes/jest");
-  });
-
-  it("should create configuration w/ jest (deprecated)", async () => {
-    await expect(
-      eslintConfig({ autoDetect: false, testing: { framework: "jest" } }),
-    ).resolves.toStrictEqual(
-      expect.arrayContaining([
-        expect.objectContaining({ name: "jimmy.codes/jest" }),
-        expect.not.objectContaining({ name: "jimmy.codes/vitest" }),
-      ]),
-    );
-  });
-
-  it("should create configuration w/ vitest", async () => {
-    const configs = await eslintConfig({ autoDetect: false, vitest: true });
-
-    expect(configs.at(8)?.name).toBe("jimmy.codes/vitest");
-  });
-
-  it("should create configuration w/ vitest (deprecated)", async () => {
-    await expect(
-      eslintConfig({ autoDetect: false, testing: true }),
-    ).resolves.toStrictEqual(
-      expect.arrayContaining([
-        expect.not.objectContaining({ name: "jimmy.codes/jest" }),
-        expect.objectContaining({ name: "jimmy.codes/vitest" }),
-      ]),
-    );
-  });
-
-  it("should create configuration w/ jest & react & testing library", async () => {
-    const configs = await eslintConfig({
-      autoDetect: false,
-      jest: true,
-      react: true,
-      testingLibrary: true,
-    });
-
-    expect(configs.at(8)?.name).toBe("jimmy.codes/react");
-    expect(configs.at(9)?.name).toBe("jimmy.codes/jest");
-    expect(configs.at(10)?.name).toBe("jimmy.codes/testing-library");
-  });
-
-  it("should create configuration w/ jest & react & testing library (deprecated)", async () => {
-    await expect(
-      eslintConfig({
-        autoDetect: false,
-        react: true,
-        testing: { framework: "jest", utilities: ["testing-library"] },
-      }),
-    ).resolves.toStrictEqual(
-      expect.arrayContaining([
-        expect.objectContaining({ name: "jimmy.codes/jest" }),
-        expect.objectContaining({ name: "jimmy.codes/react" }),
-        expect.objectContaining({ name: "jimmy.codes/testing-library" }),
-      ]),
-    );
-  });
-
-  it("should create configuration w/ vitest & react & testing library", async () => {
-    const configs = await eslintConfig({
-      autoDetect: false,
-      react: true,
-      testingLibrary: true,
-      vitest: true,
-    });
-
-    expect(configs.at(8)?.name).toBe("jimmy.codes/react");
-    expect(configs.at(9)?.name).toBe("jimmy.codes/vitest");
-    expect(configs.at(10)?.name).toBe("jimmy.codes/testing-library");
-  });
-
-  it("should create configuration w/ vitest & react & testing library (deprecated)", async () => {
-    await expect(
-      eslintConfig({
-        autoDetect: false,
-        react: true,
-        testing: { utilities: ["testing-library"] },
-      }),
-    ).resolves.toStrictEqual(
-      expect.arrayContaining([
-        expect.objectContaining({ name: "jimmy.codes/vitest" }),
-        expect.objectContaining({ name: "jimmy.codes/react" }),
-        expect.objectContaining({ name: "jimmy.codes/testing-library" }),
-      ]),
-    );
-  });
-
-  it("should create configuration w/ astro", async () => {
-    await expect(
-      eslintConfig({ astro: true, autoDetect: false }),
-    ).resolves.toStrictEqual(
-      expect.arrayContaining([
-        expect.objectContaining({
-          name: "jimmy.codes/astro",
+    it("should include multiple configurations together", async () => {
+      await expect(
+        eslintConfig({
+          autoDetect: false,
+          jest: true,
+          react: true,
+          testingLibrary: true,
         }),
-        expect.objectContaining({
-          name: "jimmy.codes/astro/disable-type-checked",
+      ).resolves.toStrictEqual(
+        expect.arrayContaining([
+          expect.objectContaining({ name: "jimmy.codes/react" }),
+          expect.objectContaining({ name: "jimmy.codes/jest" }),
+          expect.objectContaining({ name: "jimmy.codes/testing-library" }),
+        ]),
+      );
+    });
+
+    it("should include vitest & react & testing library together", async () => {
+      await expect(
+        eslintConfig({
+          autoDetect: false,
+          react: true,
+          testingLibrary: true,
+          vitest: true,
         }),
-        expect.objectContaining({
-          name: "jimmy.codes/astro/imports",
-        }),
-      ]),
-    );
-  });
-
-  it("should create configuration w/ playwright", async () => {
-    await expect(
-      eslintConfig({ autoDetect: false, playwright: true }),
-    ).resolves.toStrictEqual(
-      expect.arrayContaining([
-        expect.objectContaining({ name: "jimmy.codes/playwright" }),
-      ]),
-    );
-  });
-
-  it("should create configuration w/ tanstackQuery", async () => {
-    const configs = await eslintConfig({
-      autoDetect: false,
-      tanstackQuery: true,
+      ).resolves.toStrictEqual(
+        expect.arrayContaining([
+          expect.objectContaining({ name: "jimmy.codes/react" }),
+          expect.objectContaining({ name: "jimmy.codes/vitest" }),
+          expect.objectContaining({ name: "jimmy.codes/testing-library" }),
+        ]),
+      );
     });
 
-    expect(configs.at(8)?.name).toBe("jimmy.codes/react/query");
-  });
-
-  it("should create configuration w/ storybook", async () => {
-    const configs = await eslintConfig({
-      autoDetect: false,
-      storybook: true,
+    it("should include astro configurations", async () => {
+      await expect(
+        eslintConfig({ astro: true, autoDetect: false }),
+      ).resolves.toStrictEqual(
+        expect.arrayContaining([
+          expect.objectContaining({ name: "jimmy.codes/astro" }),
+          expect.objectContaining({
+            name: "jimmy.codes/astro/disable-type-checked",
+          }),
+          expect.objectContaining({ name: "jimmy.codes/astro/imports" }),
+        ]),
+      );
     });
-
-    expect(configs.at(8)?.name).toBe("jimmy.codes/storybook/setup");
-  });
-
-  it("should create configuration w/ nextjs", async () => {
-    const configs = await eslintConfig({
-      autoDetect: false,
-      nextjs: true,
-    });
-
-    expect(configs.at(8)?.name).toBe("jimmy.codes/nextjs");
   });
 
   describe("autoDetect", () => {
-    it("should include typescript when auto detection is enabled", async () => {
+    it.each([
+      ["typescript", "jimmy.codes/typescript"],
+      ["react", "jimmy.codes/react"],
+      ["@tanstack/react-query", "jimmy.codes/react/query"],
+      ["vitest", "jimmy.codes/vitest"],
+      ["jest", "jimmy.codes/jest"],
+      ["@testing-library/react", "jimmy.codes/testing-library"],
+      ["astro", "jimmy.codes/astro"],
+      ["@playwright/test", "jimmy.codes/playwright"],
+      ["storybook", "jimmy.codes/storybook/setup"],
+      ["next", "jimmy.codes/nextjs"],
+    ])(
+      "should include %s when auto detection is enabled",
+      async (pkg, configName) => {
+        vi.mocked(isPackageExists).mockImplementation((name) => {
+          return name === pkg;
+        });
+
+        await expect(eslintConfig({ autoDetect: true })).resolves.toStrictEqual(
+          expect.arrayContaining([
+            expect.objectContaining({ name: configName }),
+          ]),
+        );
+      },
+    );
+
+    it("should exclude unrelated configs when auto detection is enabled", async () => {
       vi.mocked(isPackageExists).mockImplementation((name) => {
         return name === "typescript";
       });
@@ -224,152 +149,6 @@ describe("eslintConfig", () => {
           expect.not.objectContaining({ name: "jimmy.codes/testing-library" }),
         ]),
       );
-    });
-
-    it("should include react when auto detection is enabled", async () => {
-      vi.mocked(isPackageExists).mockImplementation((name) => {
-        return name === "react";
-      });
-
-      await expect(eslintConfig({ autoDetect: true })).resolves.toStrictEqual(
-        expect.arrayContaining([
-          expect.not.objectContaining({ name: "jimmy.codes/typescript" }),
-          expect.not.objectContaining({ name: "jimmy.codes/vitest" }),
-          expect.not.objectContaining({ name: "jimmy.codes/jest" }),
-          expect.objectContaining({ name: "jimmy.codes/react" }),
-          expect.not.objectContaining({ name: "jimmy.codes/react/query" }),
-          expect.not.objectContaining({ name: "jimmy.codes/testing-library" }),
-        ]),
-      );
-    });
-
-    it("should include react-query when auto detection is enabled", async () => {
-      vi.mocked(isPackageExists).mockImplementation((name) => {
-        return name === "react" || name === "@tanstack/react-query";
-      });
-
-      await expect(eslintConfig({ autoDetect: true })).resolves.toStrictEqual(
-        expect.arrayContaining([
-          expect.not.objectContaining({ name: "jimmy.codes/typescript" }),
-          expect.not.objectContaining({ name: "jimmy.codes/vitest" }),
-          expect.not.objectContaining({ name: "jimmy.codes/jest" }),
-          expect.objectContaining({ name: "jimmy.codes/react" }),
-          expect.objectContaining({ name: "jimmy.codes/react/query" }),
-          expect.not.objectContaining({ name: "jimmy.codes/testing-library" }),
-        ]),
-      );
-    });
-
-    it("should include vitest when auto detection is enabled", async () => {
-      vi.mocked(isPackageExists).mockImplementation((name) => {
-        return name === "vitest";
-      });
-
-      await expect(eslintConfig({ autoDetect: true })).resolves.toStrictEqual(
-        expect.arrayContaining([
-          expect.not.objectContaining({ name: "jimmy.codes/typescript" }),
-
-          expect.objectContaining({ name: "jimmy.codes/vitest" }),
-          expect.not.objectContaining({ name: "jimmy.codes/jest" }),
-          expect.not.objectContaining({ name: "jimmy.codes/react" }),
-          expect.not.objectContaining({ name: "jimmy.codes/react/query" }),
-          expect.not.objectContaining({ name: "jimmy.codes/testing-library" }),
-        ]),
-      );
-    });
-
-    it("should include jest when auto detection is enabled", async () => {
-      vi.mocked(isPackageExists).mockImplementation((name) => {
-        return name === "jest";
-      });
-
-      await expect(eslintConfig({ autoDetect: true })).resolves.toStrictEqual(
-        expect.arrayContaining([
-          expect.not.objectContaining({ name: "jimmy.codes/typescript" }),
-
-          expect.not.objectContaining({ name: "jimmy.codes/vitest" }),
-          expect.objectContaining({ name: "jimmy.codes/jest" }),
-          expect.not.objectContaining({ name: "jimmy.codes/react" }),
-          expect.not.objectContaining({ name: "jimmy.codes/react/query" }),
-          expect.not.objectContaining({ name: "jimmy.codes/testing-library" }),
-        ]),
-      );
-    });
-
-    it("should include test-library when auto detection is enabled", async () => {
-      vi.mocked(isPackageExists).mockImplementation((name) => {
-        return name === "@testing-library/react" || name === "vitest";
-      });
-
-      await expect(eslintConfig({ autoDetect: true })).resolves.toStrictEqual(
-        expect.arrayContaining([
-          expect.not.objectContaining({ name: "jimmy.codes/typescript" }),
-
-          expect.objectContaining({ name: "jimmy.codes/vitest" }),
-          expect.not.objectContaining({ name: "jimmy.codes/jest" }),
-          expect.not.objectContaining({ name: "jimmy.codes/react" }),
-          expect.not.objectContaining({ name: "jimmy.codes/react/query" }),
-          expect.objectContaining({
-            name: "jimmy.codes/testing-library",
-          }),
-        ]),
-      );
-    });
-
-    it("should include astro when auto detection is enabled", async () => {
-      vi.mocked(isPackageExists).mockImplementation((name) => {
-        return name === "astro";
-      });
-
-      await expect(eslintConfig({ autoDetect: true })).resolves.toStrictEqual(
-        expect.arrayContaining([
-          expect.objectContaining({
-            name: "jimmy.codes/astro",
-          }),
-          expect.objectContaining({
-            name: "jimmy.codes/astro/disable-type-checked",
-          }),
-          expect.objectContaining({
-            name: "jimmy.codes/astro/imports",
-          }),
-        ]),
-      );
-    });
-
-    it("should include playwright when auto detection is enabled", async () => {
-      vi.mocked(isPackageExists).mockImplementation((name) => {
-        return name === "@playwright/test";
-      });
-
-      await expect(eslintConfig({ autoDetect: true })).resolves.toStrictEqual(
-        expect.arrayContaining([
-          expect.objectContaining({ name: "jimmy.codes/playwright" }),
-        ]),
-      );
-    });
-
-    it("should include storybook when auto detection is enabled", async () => {
-      vi.mocked(isPackageExists).mockImplementation((name) => {
-        return name === "storybook";
-      });
-
-      const configs = await eslintConfig({
-        autoDetect: true,
-      });
-
-      expect(configs.at(8)?.name).toBe("jimmy.codes/storybook/setup");
-    });
-
-    it("should include nextjs when auto detection is enabled", async () => {
-      vi.mocked(isPackageExists).mockImplementation((name) => {
-        return name === "next";
-      });
-
-      const configs = await eslintConfig({
-        autoDetect: true,
-      });
-
-      expect(configs.at(8)?.name).toBe("jimmy.codes/nextjs");
     });
   });
 });

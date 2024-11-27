@@ -18,10 +18,6 @@ export const hasJest = () => {
   return isPackageExists("jest");
 };
 
-export const hasTesting = () => {
-  return hasVitest() || hasJest();
-};
-
 export const hasTestingLibrary = () => {
   return TESTING_LIBRARY_FAMILY.some((pkg) => {
     return isPackageExists(pkg);

@@ -9201,7 +9201,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
   {
     "languageOptions": {
       "parserOptions": {
-        "project": "/",
+        "projectService": true,
         "tsconfigRootDir": "/",
       },
     },

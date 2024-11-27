@@ -6,7 +6,7 @@
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://semantic-release.gitbook.io/semantic-release)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square&logo=prettier)](https://github.com/prettier/prettier)
 
-> 🔍 another opinionated [eslint](https://eslint.org) config
+> 🔍 Another opinionated [ESLint](https://eslint.org) config
 
 ## 🛠️ Usage
 
@@ -15,13 +15,13 @@
 
 ### 🔨 Getting Started
 
-First install the package, by running the following:
+First, install the package:
 
 ```
 pnpm add -D @jimmy.codes/eslint-config
 ```
 
-Then all you need to in your `eslint.config.js` is:
+Then, in your `eslint.config.js`, simply add:
 
 ```mjs
 import eslintConfig from "@jimmy.codes/eslint-config";
@@ -29,11 +29,19 @@ import eslintConfig from "@jimmy.codes/eslint-config";
 export default eslintConfig();
 ```
 
-Which will enable rules based on your project dependencies.
+This automatically applies rules based on your installed dependencies.
 
 ### 🔧 Configuration
 
-This package contains rules that can be enabled or disabled as follows:
+By default, this config automatically enables rules based on your installed dependencies (e.g., `react`, `vitest`). Set `autoDetect: false` to disable this behavior.
+
+```ts
+import eslintConfig from "@jimmy.codes/eslint-config";
+
+export default eslintConfig({ autoDetect: false });
+```
+
+You can also manually enable or disable specific rule sets:
 
 ```ts
 import eslintConfig from "@jimmy.codes/eslint-config";
@@ -52,17 +60,9 @@ export default eslintConfig({
 });
 ```
 
-Or you can turn off auto detection to disable rules based on a project's dependencies:
+#### Extending/Overriding the Configuration
 
-```ts
-import eslintConfig from "@jimmy.codes/eslint-config";
-
-export default eslintConfig({ autoDetect: false });
-```
-
-#### Extending/overriding the Configuration
-
-You can also extend or override the configuration:
+You can extend or override the configuration using the `overrides` option:
 
 ```ts
 import eslintConfig from "@jimmy.codes/eslint-config";
@@ -85,7 +85,7 @@ export default eslintConfig({
 });
 ```
 
-Or pass configs as additional arguments:
+Alternatively, you can pass additional configurations as separate arguments:
 
 ```ts
 import eslintConfig from "@jimmy.codes/eslint-config";
@@ -107,7 +107,9 @@ export default eslintConfig(
 );
 ```
 
-#### Ignores
+> This approach is useful if you prefer to separate rule overrides into multiple objects instead of nesting them inside `overrides`.
+
+#### Ignoring Files
 
 You can also extend what is ignored:
 
