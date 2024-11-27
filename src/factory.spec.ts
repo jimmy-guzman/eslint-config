@@ -46,52 +46,16 @@ describe("eslintConfig", () => {
     );
   });
 
-  it("should create configuration w/ react & @tanstack/query (deprecated)", async () => {
-    await expect(
-      eslintConfig({
-        autoDetect: false,
-        react: { utilities: ["@tanstack/query"] },
-      }),
-    ).resolves.toStrictEqual(
-      expect.arrayContaining([
-        expect.objectContaining({ name: "jimmy.codes/react" }),
-        expect.objectContaining({ name: "jimmy.codes/react/query" }),
-      ]),
-    );
-  });
-
   it("should create configuration w/ jest", async () => {
     const configs = await eslintConfig({ autoDetect: false, jest: true });
 
     expect(configs.at(7)?.name).toBe("jimmy.codes/jest");
   });
 
-  it("should create configuration w/ jest (deprecated)", async () => {
-    await expect(
-      eslintConfig({ autoDetect: false, testing: { framework: "jest" } }),
-    ).resolves.toStrictEqual(
-      expect.arrayContaining([
-        expect.objectContaining({ name: "jimmy.codes/jest" }),
-        expect.not.objectContaining({ name: "jimmy.codes/vitest" }),
-      ]),
-    );
-  });
-
   it("should create configuration w/ vitest", async () => {
     const configs = await eslintConfig({ autoDetect: false, vitest: true });
 
     expect(configs.at(7)?.name).toBe("jimmy.codes/vitest");
-  });
-
-  it("should create configuration w/ vitest (deprecated)", async () => {
-    await expect(
-      eslintConfig({ autoDetect: false, testing: true }),
-    ).resolves.toStrictEqual(
-      expect.arrayContaining([
-        expect.not.objectContaining({ name: "jimmy.codes/jest" }),
-        expect.objectContaining({ name: "jimmy.codes/vitest" }),
-      ]),
-    );
   });
 
   it("should create configuration w/ jest & react & testing library", async () => {
@@ -107,22 +71,6 @@ describe("eslintConfig", () => {
     expect(configs.at(9)?.name).toBe("jimmy.codes/testing-library");
   });
 
-  it("should create configuration w/ jest & react & testing library (deprecated)", async () => {
-    await expect(
-      eslintConfig({
-        autoDetect: false,
-        react: true,
-        testing: { framework: "jest", utilities: ["testing-library"] },
-      }),
-    ).resolves.toStrictEqual(
-      expect.arrayContaining([
-        expect.objectContaining({ name: "jimmy.codes/jest" }),
-        expect.objectContaining({ name: "jimmy.codes/react" }),
-        expect.objectContaining({ name: "jimmy.codes/testing-library" }),
-      ]),
-    );
-  });
-
   it("should create configuration w/ vitest & react & testing library", async () => {
     const configs = await eslintConfig({
       autoDetect: false,
@@ -134,22 +82,6 @@ describe("eslintConfig", () => {
     expect(configs.at(7)?.name).toBe("jimmy.codes/react");
     expect(configs.at(8)?.name).toBe("jimmy.codes/vitest");
     expect(configs.at(9)?.name).toBe("jimmy.codes/testing-library");
-  });
-
-  it("should create configuration w/ vitest & react & testing library (deprecated)", async () => {
-    await expect(
-      eslintConfig({
-        autoDetect: false,
-        react: true,
-        testing: { utilities: ["testing-library"] },
-      }),
-    ).resolves.toStrictEqual(
-      expect.arrayContaining([
-        expect.objectContaining({ name: "jimmy.codes/vitest" }),
-        expect.objectContaining({ name: "jimmy.codes/react" }),
-        expect.objectContaining({ name: "jimmy.codes/testing-library" }),
-      ]),
-    );
   });
 
   it("should create configuration w/ astro", async () => {
