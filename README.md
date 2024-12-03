@@ -59,25 +59,46 @@ import eslintConfig from "@jimmy.codes/eslint-config";
 export default eslintConfig({ autoDetect: false });
 ```
 
-#### Extending the Configuration
+#### Extending/overriding the Configuration
 
-You can also extend the configuration:
+You can also extend or override the configuration:
+
+```ts
+import eslintConfig from "@jimmy.codes/eslint-config";
+
+export default eslintConfig({
+  overrides: [
+    {
+      files: ["**/*.js"],
+      rules: {
+        "prefer-spread": "error",
+      },
+    },
+    {
+      files: ["**/*.ts"],
+      rules: {
+        "prefer-const": "error",
+      },
+    },
+  ],
+});
+```
+
+Or pass configs as additional arguments:
 
 ```ts
 import eslintConfig from "@jimmy.codes/eslint-config";
 
 export default eslintConfig(
+  {},
   {
-    configs: [
-      {
-        files: ["**/*.js"],
-        rules: {
-          "prefer-spread": "error",
-        },
-      },
-    ],
+    files: ["**/*.js"],
+    rules: {
+      "prefer-spread": "error",
+    },
   },
   {
+    files: ["**/*.ts"],
     rules: {
       "prefer-const": "error",
     },
@@ -97,7 +118,7 @@ export default eslintConfig({
 });
 ```
 
-### Typescript Configuration Files
+### TypeScript Configuration Files
 
 If you want to use [TypeScript configuration files](https://eslint.org/docs/latest/use/configure/configuration-files#typescript-configuration-files), you can do the following:
 

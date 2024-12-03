@@ -73,6 +73,7 @@ export interface Options {
   autoDetect?: boolean;
   /**
    * Additional configs to either extend or overrides configurations
+   * @deprecated please use {@link Options.configs} instead.
    * @default []
    */
   configs?: Linter.Config[] | TypedConfigItem[];
@@ -86,6 +87,11 @@ export interface Options {
    * @default false
    */
   jest?: boolean;
+  /**
+   * Additional configs to either extend or overrides configurations
+   * @default []
+   */
+  overrides?: Linter.Config[] | TypedConfigItem[];
   /**
    * Are playwright rules enabled?
    * @default false

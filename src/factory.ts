@@ -45,6 +45,7 @@ export const eslintConfig = async (
     configs = [],
     ignores = [],
     jest = false,
+    overrides = [],
     playwright = false,
     react = false,
     storybook = false,
@@ -54,7 +55,7 @@ export const eslintConfig = async (
     typescript = false,
     vitest = false,
   }: Options = {},
-  ...moreConfigs: Linter.Config[] | TypedConfigItem[]
+  ...moreOverrides: Linter.Config[] | TypedConfigItem[]
 ) => {
   const reactOptions = getReactOptions(react);
   const testingOptions = getTestingOptions(testing, {
@@ -101,6 +102,7 @@ export const eslintConfig = async (
     commonjsConfig(),
     ignoresConfig(ignores),
     configs,
-    moreConfigs,
+    overrides,
+    moreOverrides,
   ].flat();
 };
