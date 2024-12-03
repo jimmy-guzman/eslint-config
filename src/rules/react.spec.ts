@@ -37,4 +37,17 @@ describe("reactRules", () => {
       ]
     `);
   });
+
+  it("should only enable allowConstantExport for vite", async () => {
+    vi.mocked(isPackageExists).mockImplementation((name) => {
+      return name === "vite";
+    });
+
+    const rules = await reactRules();
+
+    const allowConstantExport =
+      rules["react-refresh/only-export-components"][1].allowConstantExport;
+
+    expect(allowConstantExport).toBeTruthy();
+  });
 });

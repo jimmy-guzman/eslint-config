@@ -47,3 +47,7 @@ export const hasStorybook = () => {
 export const hasNext = () => {
   return isPackageExists("next");
 };
+
+export const hasVite = () => {
+  return isPackageExists("vite");
+};

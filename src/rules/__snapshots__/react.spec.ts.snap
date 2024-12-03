@@ -194,7 +194,7 @@ exports[`reactRules > should create react rules 1`] = `
   "react-refresh/only-export-components": [
     "warn",
     {
-      "allowConstantExport": true,
+      "allowConstantExport": undefined,
       "allowExportNames": [],
     },
   ],

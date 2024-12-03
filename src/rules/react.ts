@@ -1,6 +1,6 @@
 import type { Rules } from "../types";
 
-import { hasNext } from "../utils/has-dependency";
+import { hasNext, hasVite } from "../utils/has-dependency";
 import { interopDefault } from "../utils/interop-default";
 import { normalizeRuleEntries } from "../utils/normalize-rule-entries";
 
@@ -26,6 +26,7 @@ export const reactRules = async () => {
     interopDefault(import("eslint-plugin-jsx-a11y")),
   ]);
   const isUsingNext = hasNext();
+  const isUsingVite = hasVite();
 
   return {
     ...jsxA11yPlugin.configs.recommended.rules,
@@ -37,7 +38,7 @@ export const reactRules = async () => {
     "react-refresh/only-export-components": [
       "warn",
       {
-        allowConstantExport: true,
+        allowConstantExport: isUsingVite,
         allowExportNames: isUsingNext ? nextAllowedExportNames : [],
       },
     ],
