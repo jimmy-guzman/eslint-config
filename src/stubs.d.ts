@@ -37,14 +37,6 @@ declare module "eslint-plugin-jsx-a11y" {
   export default plugin;
 }
 
-declare module "eslint-plugin-react-refresh" {
-  import type { ESLint } from "eslint";
-
-  const plugin: ESLint.Plugin;
-
-  export default plugin;
-}
-
 // TODO: remove when https://github.com/eslint-community/eslint-plugin-eslint-comments/issues/214 is resolved.
 declare module "@eslint-community/eslint-plugin-eslint-comments/configs" {
   import type { Linter } from "eslint";

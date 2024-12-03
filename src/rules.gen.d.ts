@@ -9802,9 +9802,10 @@ type ReactHooksExhaustiveDeps = []|[{
 }]
 // ----- react-refresh/only-export-components -----
 type ReactRefreshOnlyExportComponents = []|[{
-  allowConstantExport?: boolean
-  checkJS?: boolean
   allowExportNames?: string[]
+  allowConstantExport?: boolean
+  customHOCs?: string[]
+  checkJS?: boolean
 }]
 // ----- react/boolean-prop-naming -----
 type ReactBooleanPropNaming = []|[{
