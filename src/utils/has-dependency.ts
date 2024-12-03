@@ -43,3 +43,7 @@ export const hasPlaywright = () => {
 export const hasStorybook = () => {
   return isPackageExists("storybook");
 };
+
+export const hasNext = () => {
+  return isPackageExists("next");
+};

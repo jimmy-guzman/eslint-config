@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`should create react rules 1`] = `
+exports[`reactRules > should create react rules 1`] = `
 {
   "jsx-a11y/alt-text": "error",
   "jsx-a11y/anchor-ambiguous-text": "off",
@@ -195,6 +195,7 @@ exports[`should create react rules 1`] = `
     "warn",
     {
       "allowConstantExport": true,
+      "allowExportNames": [],
     },
   ],
   "react/boolean-prop-naming": "off",

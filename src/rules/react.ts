@@ -1,13 +1,31 @@
 import type { Rules } from "../types";
 
+import { hasNext } from "../utils/has-dependency";
 import { interopDefault } from "../utils/interop-default";
 import { normalizeRuleEntries } from "../utils/normalize-rule-entries";
+
+const nextAllowedExportNames = [
+  "dynamic",
+  "dynamicParams",
+  "revalidate",
+  "fetchCache",
+  "runtime",
+  "preferredRegion",
+  "maxDuration",
+  "config",
+  "generateStaticParams",
+  "metadata",
+  "generateMetadata",
+  "viewport",
+  "generateViewport",
+];
 
 export const reactRules = async () => {
   const [reactPlugin, jsxA11yPlugin] = await Promise.all([
     interopDefault(import("eslint-plugin-react")),
     interopDefault(import("eslint-plugin-jsx-a11y")),
   ]);
+  const isUsingNext = hasNext();
 
   return {
     ...jsxA11yPlugin.configs.recommended.rules,
@@ -18,7 +36,10 @@ export const reactRules = async () => {
     "react-hooks/rules-of-hooks": "error",
     "react-refresh/only-export-components": [
       "warn",
-      { allowConstantExport: true },
+      {
+        allowConstantExport: true,
+        allowExportNames: isUsingNext ? nextAllowedExportNames : [],
+      },
     ],
     "react/boolean-prop-naming": "off", // revisit
     "react/button-has-type": "error",
