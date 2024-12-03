@@ -2463,7 +2463,7 @@ export interface RuleOptions {
    */
   'no-class-assign'?: Linter.RuleEntry<[]>
   /**
-   * Disallow comparing against -0
+   * Disallow comparing against `-0`
    * @see https://eslint.org/docs/latest/rules/no-compare-neg-zero
    */
   'no-compare-neg-zero'?: Linter.RuleEntry<[]>
@@ -10428,6 +10428,7 @@ type SortKeys = []|[("asc" | "desc")]|[("asc" | "desc"), {
   natural?: boolean
   minKeys?: number
   allowLineSeparatedGroups?: boolean
+  ignoreComputedKeys?: boolean
 }]
 // ----- sort-vars -----
 type SortVars = []|[{
