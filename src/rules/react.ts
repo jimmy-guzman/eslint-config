@@ -25,7 +25,7 @@ export const reactRules = async () => {
     interopDefault(import("eslint-plugin-react")),
     interopDefault(import("eslint-plugin-jsx-a11y")),
   ]);
-  const isUsingNext = hasNext();
+  const isUsingNextjs = hasNext();
   const isUsingVite = hasVite();
 
   return {
@@ -39,7 +39,7 @@ export const reactRules = async () => {
       "warn",
       {
         allowConstantExport: isUsingVite,
-        allowExportNames: isUsingNext ? nextAllowedExportNames : [],
+        allowExportNames: isUsingNextjs ? nextAllowedExportNames : [],
       },
     ],
     "react/boolean-prop-naming": "off", // revisit

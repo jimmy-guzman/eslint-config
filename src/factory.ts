@@ -8,6 +8,7 @@ import { eslintCommentsConfig } from "./configs/eslint-comments";
 import { ignoresConfig } from "./configs/ignores";
 import { importsConfig } from "./configs/imports";
 import { javascriptConfig } from "./configs/javascript";
+import { nextjsConfig } from "./configs/nextjs";
 import { nodeConfig } from "./configs/node";
 import { perfectionistConfig } from "./configs/perfectionist";
 import { playwrightConfig } from "./configs/playwright";
@@ -27,6 +28,7 @@ import {
 } from "./utils/get-options";
 import {
   hasAstro,
+  hasNext,
   hasPlaywright,
   hasReact,
   hasStorybook,
@@ -45,6 +47,7 @@ export const eslintConfig = async (
     configs = [],
     ignores = [],
     jest = false,
+    nextjs = false,
     overrides = [],
     playwright = false,
     react = false,
@@ -81,6 +84,7 @@ export const eslintConfig = async (
   );
   const isPlaywrightEnabled = playwright || (autoDetect && hasPlaywright());
   const isStorybookEnabled = storybook || (autoDetect && hasStorybook());
+  const isNextjsEnabled = nextjs || (autoDetect && hasNext());
 
   return [
     javascriptConfig(),
@@ -98,6 +102,7 @@ export const eslintConfig = async (
     isTestingLibraryEnabled ? await testingLibraryConfig() : [],
     isPlaywrightEnabled ? await playwrightConfig() : [],
     isStorybookEnabled ? await storybookConfig() : [],
+    isNextjsEnabled ? await nextjsConfig() : [],
     prettierConfig(),
     commonjsConfig(),
     ignoresConfig(ignores),

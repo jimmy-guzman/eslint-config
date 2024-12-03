@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should create nextjs rules 1`] = `
+{
+  "@next/next/no-html-link-for-pages": "error",
+  "@next/next/no-sync-scripts": "error",
+}
+`;

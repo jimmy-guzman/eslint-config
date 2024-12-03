@@ -88,6 +88,11 @@ export interface Options {
    */
   jest?: boolean;
   /**
+   * Are Next.js rules enabled?
+   * @default false
+   */
+  nextjs?: boolean;
+  /**
    * Additional configs to either extend or overrides configurations
    * @default []
    */

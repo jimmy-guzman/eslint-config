@@ -41,6 +41,7 @@ import eslintConfig from "@jimmy.codes/eslint-config";
 export default eslintConfig({
   astro: false,
   jest: false,
+  nextjs: false,
   playwright: false,
   react: false,
   storybook: false,

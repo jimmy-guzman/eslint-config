@@ -70,6 +70,8 @@ export const GLOB_E2E = [
   `**/cypress/**/*.test.${GLOB_SRC_EXT}`,
 ];
 
+export const GLOB_NEXTJS = [GLOB_JS, GLOB_JSX, GLOB_TS, GLOB_TSX];
+
 export const GLOB_CJS = "**/*.cjs";
 
 export const GLOB_ASTRO = "**/*.astro";

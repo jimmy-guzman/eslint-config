@@ -198,6 +198,15 @@ describe("eslintConfig", () => {
     expect(configs.at(7)?.name).toBe("jimmy.codes/storybook/setup");
   });
 
+  it("should create configuration w/ nextjs", async () => {
+    const configs = await eslintConfig({
+      autoDetect: false,
+      nextjs: true,
+    });
+
+    expect(configs.at(7)?.name).toBe("jimmy.codes/nextjs");
+  });
+
   describe("autoDetect", () => {
     it("should include typescript when auto detection is enabled", async () => {
       vi.mocked(isPackageExists).mockImplementation((name) => {
@@ -350,6 +359,18 @@ describe("eslintConfig", () => {
       });
 
       expect(configs.at(7)?.name).toBe("jimmy.codes/storybook/setup");
+    });
+
+    it("should include nextjs when auto detection is enabled", async () => {
+      vi.mocked(isPackageExists).mockImplementation((name) => {
+        return name === "next";
+      });
+
+      const configs = await eslintConfig({
+        autoDetect: true,
+      });
+
+      expect(configs.at(7)?.name).toBe("jimmy.codes/nextjs");
     });
   });
 });

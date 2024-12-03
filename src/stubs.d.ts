@@ -53,3 +53,14 @@ declare module "eslint-plugin-react-compiler" {
 
   export default plugin;
 }
+
+declare module "@next/eslint-plugin-next" {
+  import type { ESLint, Linter } from "eslint";
+
+  const recommended: Linter.Config;
+  const coreWebVitals: Linter.Config;
+  const plugin: ESLint.Plugin;
+
+  export = { configs: { "core-web-vitals": coreWebVitals, recommended } };
+  export default plugin;
+}
