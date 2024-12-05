@@ -1,3 +1,4 @@
+import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 import importX from "eslint-plugin-import-x";
 import nodePlugin from "eslint-plugin-n";
 
@@ -5,16 +6,26 @@ import type { TypedConfigItem, TypescriptOptions } from "../types";
 
 import { importsRules } from "../rules/imports";
 
-const typescriptImports = {
-  name: "jimmy.codes/imports/typescript",
-  rules: importX.configs.typescript.rules,
-  settings: {
-    ...importX.configs.typescript.settings,
-    "import-x/resolver": {
-      ...importX.configs.typescript.settings["import-x/resolver"],
-      typescript: true,
+const importsTypescriptConfig = () => {
+  const { rules, settings } = importX.configs.typescript;
+
+  return [
+    {
+      name: "jimmy.codes/imports/typescript",
+      rules,
+      settings: {
+        "import-x/extensions": settings["import-x/extensions"],
+        "import-x/external-module-folders":
+          settings["import-x/external-module-folders"],
+        "import-x/parsers": settings["import-x/parsers"],
+        "import-x/resolver-next": [
+          createTypeScriptImportResolver({
+            alwaysTryTypes: true,
+          }),
+        ],
+      },
     },
-  },
+  ];
 };
 
 interface ImportsConfigOptions {
@@ -33,6 +44,6 @@ export const importsConfig = ({
       },
       rules: importsRules,
     },
-    ...(typescript ? [typescriptImports] : []),
-  ] satisfies TypedConfigItem[];
+    ...(typescript ? importsTypescriptConfig() : []),
+  ] as const satisfies TypedConfigItem[];
 };
