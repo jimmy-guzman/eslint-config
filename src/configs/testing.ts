@@ -20,6 +20,7 @@ export const testingConfig = async (
 
     configs.push({
       files: GLOB_TESTS,
+      ignores: GLOB_E2E,
       ...vitestPlugin.configs.recommended,
       name: "jimmy.codes/vitest",
       rules: await vitestRules(),
