@@ -16,6 +16,7 @@ describe("eslintConfig", () => {
       "ignores",
       "javascript",
       "regexp",
+      "jsdoc",
     ])("should create configuration w/ %s", async (input) => {
       await expect(eslintConfig({ autoDetect: false })).resolves.toStrictEqual(
         expect.arrayContaining([
@@ -63,7 +64,7 @@ describe("eslintConfig", () => {
   it("should create configuration w/ jest", async () => {
     const configs = await eslintConfig({ autoDetect: false, jest: true });
 
-    expect(configs.at(7)?.name).toBe("jimmy.codes/jest");
+    expect(configs.at(8)?.name).toBe("jimmy.codes/jest");
   });
 
   it("should create configuration w/ jest (deprecated)", async () => {
@@ -80,7 +81,7 @@ describe("eslintConfig", () => {
   it("should create configuration w/ vitest", async () => {
     const configs = await eslintConfig({ autoDetect: false, vitest: true });
 
-    expect(configs.at(7)?.name).toBe("jimmy.codes/vitest");
+    expect(configs.at(8)?.name).toBe("jimmy.codes/vitest");
   });
 
   it("should create configuration w/ vitest (deprecated)", async () => {
@@ -102,9 +103,9 @@ describe("eslintConfig", () => {
       testingLibrary: true,
     });
 
-    expect(configs.at(7)?.name).toBe("jimmy.codes/react");
-    expect(configs.at(8)?.name).toBe("jimmy.codes/jest");
-    expect(configs.at(9)?.name).toBe("jimmy.codes/testing-library");
+    expect(configs.at(8)?.name).toBe("jimmy.codes/react");
+    expect(configs.at(9)?.name).toBe("jimmy.codes/jest");
+    expect(configs.at(10)?.name).toBe("jimmy.codes/testing-library");
   });
 
   it("should create configuration w/ jest & react & testing library (deprecated)", async () => {
@@ -131,9 +132,9 @@ describe("eslintConfig", () => {
       vitest: true,
     });
 
-    expect(configs.at(7)?.name).toBe("jimmy.codes/react");
-    expect(configs.at(8)?.name).toBe("jimmy.codes/vitest");
-    expect(configs.at(9)?.name).toBe("jimmy.codes/testing-library");
+    expect(configs.at(8)?.name).toBe("jimmy.codes/react");
+    expect(configs.at(9)?.name).toBe("jimmy.codes/vitest");
+    expect(configs.at(10)?.name).toBe("jimmy.codes/testing-library");
   });
 
   it("should create configuration w/ vitest & react & testing library (deprecated)", async () => {
@@ -186,7 +187,7 @@ describe("eslintConfig", () => {
       tanstackQuery: true,
     });
 
-    expect(configs.at(7)?.name).toBe("jimmy.codes/react/query");
+    expect(configs.at(8)?.name).toBe("jimmy.codes/react/query");
   });
 
   it("should create configuration w/ storybook", async () => {
@@ -195,7 +196,7 @@ describe("eslintConfig", () => {
       storybook: true,
     });
 
-    expect(configs.at(7)?.name).toBe("jimmy.codes/storybook/setup");
+    expect(configs.at(8)?.name).toBe("jimmy.codes/storybook/setup");
   });
 
   it("should create configuration w/ nextjs", async () => {
@@ -204,7 +205,7 @@ describe("eslintConfig", () => {
       nextjs: true,
     });
 
-    expect(configs.at(7)?.name).toBe("jimmy.codes/nextjs");
+    expect(configs.at(8)?.name).toBe("jimmy.codes/nextjs");
   });
 
   describe("autoDetect", () => {
@@ -356,7 +357,7 @@ describe("eslintConfig", () => {
         autoDetect: true,
       });
 
-      expect(configs.at(7)?.name).toBe("jimmy.codes/storybook/setup");
+      expect(configs.at(8)?.name).toBe("jimmy.codes/storybook/setup");
     });
 
     it("should include nextjs when auto detection is enabled", async () => {
@@ -368,7 +369,7 @@ describe("eslintConfig", () => {
         autoDetect: true,
       });
 
-      expect(configs.at(7)?.name).toBe("jimmy.codes/nextjs");
+      expect(configs.at(8)?.name).toBe("jimmy.codes/nextjs");
     });
   });
 });

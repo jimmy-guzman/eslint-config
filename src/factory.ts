@@ -8,6 +8,7 @@ import { eslintCommentsConfig } from "./configs/eslint-comments";
 import { ignoresConfig } from "./configs/ignores";
 import { importsConfig } from "./configs/imports";
 import { javascriptConfig } from "./configs/javascript";
+import { jsdocConfig } from "./configs/jsdoc";
 import { nextjsConfig } from "./configs/nextjs";
 import { nodeConfig } from "./configs/node";
 import { perfectionistConfig } from "./configs/perfectionist";
@@ -93,6 +94,7 @@ export const eslintConfig = async (
     unicornConfig(),
     eslintCommentsConfig(),
     regexpConfig(),
+    jsdocConfig(),
     importsConfig({ typescript: isTypescriptEnabled }),
     isTypescriptEnabled ? typescriptConfig(typescriptOptions) : [],
     isReactEnabled ? await reactConfig() : [],

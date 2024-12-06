@@ -53,7 +53,6 @@ export type TypedConfigItem = Omit<
 > & {
   /**
    * An object containing a name-value mapping of plugin names to plugin objects. When `files` is specified, these plugins are only available to the matching files.
-   *
    * @see [Using plugins in your configuration](https://eslint.org/docs/latest/user-guide/configuring/configuration-files-new#using-plugins-in-your-configuration)
    */
   // TODO: add undefined
@@ -74,6 +73,7 @@ export interface Options {
   /**
    * Additional configs to either extend or overrides configurations
    * @deprecated please use {@link Options.configs} instead.
+   *
    * @default []
    */
   configs?: Linter.Config[] | TypedConfigItem[];
@@ -120,6 +120,7 @@ export interface Options {
   /**
    * Are testing rules enabled?
    * @default false
+   *
    * @deprecated please use {@link Options.jest}, {@link Options.vitest}, or {@link Options.testingLibrary} instead.
    */
   testing?: boolean | TestingOptions;
