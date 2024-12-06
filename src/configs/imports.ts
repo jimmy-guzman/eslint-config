@@ -2,7 +2,7 @@ import { createTypeScriptImportResolver } from "eslint-import-resolver-typescrip
 import importX from "eslint-plugin-import-x";
 import nodePlugin from "eslint-plugin-n";
 
-import type { TypedConfigItem, TypescriptOptions } from "../types";
+import type { TypedConfigItem } from "../types";
 
 import { importsRules } from "../rules/imports";
 
@@ -29,7 +29,7 @@ const importsTypescriptConfig = () => {
 };
 
 interface ImportsConfigOptions {
-  typescript?: boolean | TypescriptOptions;
+  typescript?: boolean;
 }
 
 export const importsConfig = ({

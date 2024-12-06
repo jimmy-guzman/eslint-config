@@ -1,4 +1,4 @@
-import type { TestingOptions, TypedConfigItem } from "../types";
+import type { TypedConfigItem } from "../types";
 
 import { GLOB_E2E, GLOB_TESTS } from "../constants";
 import { jestRules } from "../rules/jest";
@@ -7,11 +7,11 @@ import { hasJest, hasVitest } from "../utils/has-dependency";
 import { interopDefault } from "../utils/interop-default";
 
 export const testingConfig = async (
-  { framework = "vitest" }: TestingOptions = {},
-  autoDetect = true,
+  { jest = false, vitest = false }: { jest?: boolean; vitest?: boolean },
+  autoDetect?: boolean,
 ) => {
-  const isVitest = autoDetect ? hasVitest() : framework === "vitest";
-  const isJest = framework === "jest" || (autoDetect && hasJest());
+  const isVitest = vitest || (autoDetect && hasVitest());
+  const isJest = jest || (autoDetect && hasJest());
 
   const configs: TypedConfigItem[] = [];
 

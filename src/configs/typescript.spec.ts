@@ -4,7 +4,7 @@ describe("typescriptConfig", () => {
   it("should create config", () => {
     vi.spyOn(process, "cwd").mockReturnValue("/");
 
-    expect(typescriptConfig({ project: "/" })).toMatchSnapshot();
+    expect(typescriptConfig()).toMatchSnapshot();
   });
 
   it("should create config w/ projectService", () => {

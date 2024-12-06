@@ -22,29 +22,21 @@ import { testingLibraryConfig } from "./configs/testing-library";
 import { typescriptConfig } from "./configs/typescript";
 import { unicornConfig } from "./configs/unicorn";
 import {
-  getReactOptions,
-  getTestingOptions,
-  getTypescriptOptions,
-} from "./utils/get-options";
-import {
   hasAstro,
   hasNext,
   hasPlaywright,
   hasReact,
+  hasReactQuery,
   hasStorybook,
   hasTesting,
+  hasTestingLibrary,
   hasTypescript,
 } from "./utils/has-dependency";
-import {
-  shouldEnableTanstackQuery,
-  shouldEnableTestingLibrary,
-} from "./utils/should-enable";
 
 export const eslintConfig = async (
   {
     astro = false,
     autoDetect = true,
-    configs = [],
     ignores = [],
     jest = false,
     nextjs = false,
@@ -53,35 +45,20 @@ export const eslintConfig = async (
     react = false,
     storybook = false,
     tanstackQuery = false,
-    testing = false,
     testingLibrary = false,
     typescript = false,
     vitest = false,
   }: Options = {},
   ...moreOverrides: Linter.Config[] | TypedConfigItem[]
 ) => {
-  const reactOptions = getReactOptions(react);
-  const testingOptions = getTestingOptions(testing, {
-    jest,
-    testingLibrary,
-    vitest,
-  });
-  const typescriptOptions = getTypescriptOptions(typescript);
-  const isTypescriptEnabled =
-    typescript || !!typescriptOptions || (autoDetect && hasTypescript());
+  const isTypescriptEnabled = typescript || (autoDetect && hasTypescript());
   const isReactEnabled = react || (autoDetect && hasReact());
-  const isTestingEnabled =
-    testing || jest || vitest || (autoDetect && hasTesting());
+  const isTestingEnabled = jest || vitest || (autoDetect && hasTesting());
   const isAstroEnabled = astro || (autoDetect && hasAstro());
-  const isTanstackQueryEnabled = shouldEnableTanstackQuery(
-    reactOptions,
-    tanstackQuery,
-    autoDetect,
-  );
-  const isTestingLibraryEnabled = shouldEnableTestingLibrary(
-    testingOptions,
-    autoDetect,
-  );
+  const isTanstackQueryEnabled =
+    tanstackQuery || (autoDetect && hasReactQuery());
+  const isTestingLibraryEnabled =
+    testingLibrary || (autoDetect && hasTestingLibrary());
   const isPlaywrightEnabled = playwright || (autoDetect && hasPlaywright());
   const isStorybookEnabled = storybook || (autoDetect && hasStorybook());
   const isNextjsEnabled = nextjs || (autoDetect && hasNext());
@@ -94,11 +71,11 @@ export const eslintConfig = async (
     eslintCommentsConfig(),
     regexpConfig(),
     importsConfig({ typescript: isTypescriptEnabled }),
-    isTypescriptEnabled ? typescriptConfig(typescriptOptions) : [],
+    isTypescriptEnabled ? typescriptConfig() : [],
     isReactEnabled ? await reactConfig() : [],
     isTanstackQueryEnabled ? await tanstackQueryConfig() : [],
     isAstroEnabled ? await astroConfig() : [],
-    isTestingEnabled ? await testingConfig(testingOptions, autoDetect) : [],
+    isTestingEnabled ? await testingConfig({ jest, vitest }, autoDetect) : [],
     isTestingLibraryEnabled ? await testingLibraryConfig() : [],
     isPlaywrightEnabled ? await playwrightConfig() : [],
     isStorybookEnabled ? await storybookConfig() : [],
@@ -106,7 +83,6 @@ export const eslintConfig = async (
     prettierConfig(),
     commonjsConfig(),
     ignoresConfig(ignores),
-    configs,
     overrides,
     moreOverrides,
   ].flat();
