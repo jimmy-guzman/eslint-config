@@ -9252,6 +9252,10 @@ type PerfectionistSortArrayIncludes = []|[{
 // ----- perfectionist/sort-classes -----
 type PerfectionistSortClasses = []|[{
   
+  ignoreCallbackDependenciesPatterns?: string[]
+  
+  partitionByComment?: (string[] | boolean | string)
+  
   customGroups?: ({
     
     groupName?: string
@@ -9261,11 +9265,11 @@ type PerfectionistSortClasses = []|[{
     order?: ("desc" | "asc")
     anyOf?: {
       
-      modifiers?: ("async" | "protected" | "private" | "public" | "static" | "abstract" | "override" | "readonly" | "decorated" | "declare" | "optional")[]
-      
       elementValuePattern?: string
       
       decoratorNamePattern?: string
+      
+      modifiers?: ("async" | "protected" | "private" | "public" | "static" | "abstract" | "override" | "readonly" | "decorated" | "declare" | "optional")[]
       
       selector?: ("accessor-property" | "index-signature" | "constructor" | "static-block" | "get-method" | "set-method" | "function-property" | "property" | "method")
       
@@ -9279,20 +9283,16 @@ type PerfectionistSortClasses = []|[{
     
     order?: ("desc" | "asc")
     
-    modifiers?: ("async" | "protected" | "private" | "public" | "static" | "abstract" | "override" | "readonly" | "decorated" | "declare" | "optional")[]
-    
     elementValuePattern?: string
     
     decoratorNamePattern?: string
+    
+    modifiers?: ("async" | "protected" | "private" | "public" | "static" | "abstract" | "override" | "readonly" | "decorated" | "declare" | "optional")[]
     
     selector?: ("accessor-property" | "index-signature" | "constructor" | "static-block" | "get-method" | "set-method" | "function-property" | "property" | "method")
     
     elementNamePattern?: string
   })[]
-  
-  ignoreCallbackDependenciesPatterns?: string[]
-  
-  partitionByComment?: (string[] | boolean | string)
   
   partitionByNewLine?: boolean
   
@@ -9456,18 +9456,45 @@ type PerfectionistSortInterfaces = []|[{
   ignorePattern?: string[]
   
   partitionByComment?: (string[] | boolean | string)
+  customGroups?: ({
+    [k: string]: (string | string[]) | undefined
+  } | ({
+    
+    groupName?: string
+    
+    type?: ("alphabetical" | "line-length" | "natural" | "unsorted")
+    
+    order?: ("desc" | "asc")
+    anyOf?: {
+      
+      modifiers?: ("optional" | "required" | "multiline")[]
+      
+      selector?: ("index-signature" | "member" | "method" | "multiline" | "property")
+      
+      elementNamePattern?: string
+    }[]
+  } | {
+    
+    groupName?: string
+    
+    type?: ("alphabetical" | "line-length" | "natural" | "unsorted")
+    
+    order?: ("desc" | "asc")
+    
+    modifiers?: ("optional" | "required" | "multiline")[]
+    
+    selector?: ("index-signature" | "member" | "method" | "multiline" | "property")
+    
+    elementNamePattern?: string
+  })[])
   
-  groupKind?: ("mixed" | "optional-first" | "required-first")
+  groupKind?: ("mixed" | "required-first" | "optional-first")
   
   partitionByNewLine?: boolean
   
   specialCharacters?: ("remove" | "trim" | "keep")
   
   newlinesBetween?: ("ignore" | "always" | "never")
-  
-  customGroups?: {
-    [k: string]: (string | string[]) | undefined
-  }
   
   ignoreCase?: boolean
   
@@ -9541,6 +9568,8 @@ type PerfectionistSortMaps = []|[{
 // ----- perfectionist/sort-modules -----
 type PerfectionistSortModules = []|[{
   
+  partitionByComment?: (string[] | boolean | string)
+  
   customGroups?: ({
     
     groupName?: string
@@ -9550,11 +9579,9 @@ type PerfectionistSortModules = []|[{
     order?: ("desc" | "asc")
     anyOf?: {
       
-      modifiers?: ("async" | "declare" | "decorated" | "default" | "export")[]
-      
-      elementValuePattern?: string
-      
       decoratorNamePattern?: string
+      
+      modifiers?: ("async" | "declare" | "decorated" | "default" | "export")[]
       
       selector?: ("enum" | "function" | "interface" | "type" | "class")
       
@@ -9568,18 +9595,14 @@ type PerfectionistSortModules = []|[{
     
     order?: ("desc" | "asc")
     
-    modifiers?: ("async" | "declare" | "decorated" | "default" | "export")[]
-    
-    elementValuePattern?: string
-    
     decoratorNamePattern?: string
+    
+    modifiers?: ("async" | "declare" | "decorated" | "default" | "export")[]
     
     selector?: ("enum" | "function" | "interface" | "type" | "class")
     
     elementNamePattern?: string
   })[]
-  
-  partitionByComment?: (string[] | boolean | string)
   
   partitionByNewLine?: boolean
   
@@ -9640,7 +9663,40 @@ type PerfectionistSortNamedImports = []|[{
 // ----- perfectionist/sort-object-types -----
 type PerfectionistSortObjectTypes = []|[{
   
+  ignorePattern?: string[]
+  
   partitionByComment?: (string[] | boolean | string)
+  customGroups?: ({
+    [k: string]: (string | string[]) | undefined
+  } | ({
+    
+    groupName?: string
+    
+    type?: ("alphabetical" | "line-length" | "natural" | "unsorted")
+    
+    order?: ("desc" | "asc")
+    anyOf?: {
+      
+      modifiers?: ("optional" | "required" | "multiline")[]
+      
+      selector?: ("index-signature" | "member" | "method" | "multiline" | "property")
+      
+      elementNamePattern?: string
+    }[]
+  } | {
+    
+    groupName?: string
+    
+    type?: ("alphabetical" | "line-length" | "natural" | "unsorted")
+    
+    order?: ("desc" | "asc")
+    
+    modifiers?: ("optional" | "required" | "multiline")[]
+    
+    selector?: ("index-signature" | "member" | "method" | "multiline" | "property")
+    
+    elementNamePattern?: string
+  })[])
   
   groupKind?: ("mixed" | "required-first" | "optional-first")
   
@@ -9649,10 +9705,6 @@ type PerfectionistSortObjectTypes = []|[{
   specialCharacters?: ("remove" | "trim" | "keep")
   
   newlinesBetween?: ("ignore" | "always" | "never")
-  
-  customGroups?: {
-    [k: string]: (string | string[]) | undefined
-  }
   
   ignoreCase?: boolean
   
