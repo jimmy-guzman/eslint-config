@@ -14,7 +14,6 @@ exports[`should create vitest rules 1`] = `
   "vitest/no-commented-out-tests": "error",
   "vitest/no-conditional-in-test": "error",
   "vitest/no-disabled-tests": "warn",
-  "vitest/no-done-callback": "error",
   "vitest/no-duplicate-hooks": "error",
   "vitest/no-focused-tests": "error",
   "vitest/no-hooks": "off",

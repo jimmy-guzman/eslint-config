@@ -20,7 +20,6 @@ export const vitestRules = async () => {
     // "vitest/no-confusing-set-timeout": "error", // missing
     // "vitest/no-deprecated-functions": "error",  // missing
     "vitest/no-disabled-tests": "warn",
-    "vitest/no-done-callback": "error",
     "vitest/no-duplicate-hooks": "error",
     // "vitest/no-export": "error", // missing
     "vitest/no-focused-tests": "error",
@@ -57,7 +56,6 @@ export const vitestRules = async () => {
     "vitest/require-to-throw-message": "error",
     "vitest/require-top-level-describe": "off",
     // "vitest/unbound-method": "off", // requires typescript, missing https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/unbound-method.md
-    "vitest/valid-describe-callback": "error",
     "vitest/valid-expect": "error",
     "vitest/valid-expect-in-promise": "error",
     "vitest/valid-title": "error",
