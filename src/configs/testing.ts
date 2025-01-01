@@ -18,11 +18,13 @@ export const testingConfig = async (
   if (isVitest) {
     const vitestPlugin = await interopDefault(import("@vitest/eslint-plugin"));
 
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument -- rules is properly typed
     configs.push({
       files: GLOB_TESTS,
       ignores: GLOB_E2E,
       ...vitestPlugin.configs.recommended,
       name: "jimmy.codes/vitest",
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- rules is properly typed
       rules: await vitestRules(),
     });
   }
