@@ -7,7 +7,7 @@ exports[`typescriptConfig > should create config 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.17.0",
+          "version": "8.19.0",
         },
         "parseForESLint": [Function],
       },
@@ -765,7 +765,7 @@ exports[`typescriptConfig > should create config 1`] = `
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.17.0",
+          "version": "8.19.0",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -1094,8 +1094,10 @@ exports[`typescriptConfig > should create config 1`] = `
                 "url": "https://typescript-eslint.io/rules/consistent-indexed-object-style",
               },
               "fixable": "code",
+              "hasSuggestions": true,
               "messages": {
                 "preferIndexSignature": "An index signature is preferred over a record.",
+                "preferIndexSignatureSuggestion": "Change into an index signature instead of a record.",
                 "preferRecord": "A record is preferred over an index signature.",
               },
               "schema": [
@@ -1214,9 +1216,6 @@ exports[`typescriptConfig > should create config 1`] = `
                           "type": "string",
                         },
                       },
-                      "required": [
-                        "assertionStyle",
-                      ],
                       "type": "object",
                     },
                   ],
@@ -6169,7 +6168,7 @@ You must still type the parameters of the function.",
                 "alwaysNullish": "Unnecessary conditional, left-hand side of \`??\` operator is always \`null\` or \`undefined\`.",
                 "alwaysTruthy": "Unnecessary conditional, value is always truthy.",
                 "alwaysTruthyFunc": "This callback should return a conditional, but return is always truthy.",
-                "literalBooleanExpression": "Unnecessary conditional, comparison is always {{trueOrFalse}}. Both sides of the comparison always have a literal type.",
+                "comparisonBetweenLiteralTypes": "Unnecessary conditional, comparison is always {{trueOrFalse}}, since \`{{left}} {{operator}} {{right}}\` is {{trueOrFalse}}.",
                 "never": "Unnecessary conditional, value is \`never\`.",
                 "neverNullish": "Unnecessary conditional, expected left-hand side of \`??\` operator to be possibly null or undefined.",
                 "neverOptionalChain": "Unnecessary optional chain on a non-nullish value.",
@@ -6509,9 +6508,11 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                 "url": "https://typescript-eslint.io/rules/no-unsafe-type-assertion",
               },
               "messages": {
-                "unsafeOfAnyTypeAssertion": "Unsafe cast from {{type}} detected: consider using type guards or a safer cast.",
-                "unsafeToAnyTypeAssertion": "Unsafe cast to {{type}} detected: consider using a more specific type to ensure safety.",
+                "unsafeOfAnyTypeAssertion": "Unsafe assertion from {{type}} detected: consider using type guards or a safer assertion.",
+                "unsafeToAnyTypeAssertion": "Unsafe assertion to {{type}} detected: consider using a more specific type to ensure safety.",
+                "unsafeToUnconstrainedTypeAssertion": "Unsafe type assertion: '{{type}}' could be instantiated with an arbitrary type which could be unrelated to the original type.",
                 "unsafeTypeAssertion": "Unsafe type assertion: type '{{type}}' is more narrow than the original type.",
+                "unsafeTypeAssertionAssignableToConstraint": "Unsafe type assertion: the original type is assignable to the constraint of type '{{type}}', but '{{type}}' could be instantiated with a different subtype of its constraint.",
               },
               "schema": [],
               "type": "problem",
@@ -6842,7 +6843,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
             "defaultOptions": [],
             "meta": {
               "docs": {
-                "description": "Enforce non-null assertions over explicit type casts",
+                "description": "Enforce non-null assertions over explicit type assertions",
                 "recommended": "stylistic",
                 "requiresTypeChecking": true,
                 "url": "https://typescript-eslint.io/rules/non-nullable-type-assertion-style",
@@ -7712,14 +7713,14 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
             "defaultOptions": [],
             "meta": {
               "docs": {
-                "description": "Enforce using type parameter when calling \`Array#reduce\` instead of casting",
+                "description": "Enforce using type parameter when calling \`Array#reduce\` instead of using a type assertion",
                 "recommended": "strict",
                 "requiresTypeChecking": true,
                 "url": "https://typescript-eslint.io/rules/prefer-reduce-type-parameter",
               },
               "fixable": "code",
               "messages": {
-                "preferTypeParameter": "Unnecessary cast: Array#reduce accepts a type parameter for the default value.",
+                "preferTypeParameter": "Unnecessary assertion: Array#reduce accepts a type parameter for the default value.",
               },
               "schema": [],
               "type": "problem",
@@ -8382,7 +8383,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "fixable": "code",
               "hasSuggestions": true,
               "messages": {
-                "conditionErrorAny": "Unexpected any value in conditional. An explicit comparison or type cast is required.",
+                "conditionErrorAny": "Unexpected any value in conditional. An explicit comparison or type conversion is required.",
                 "conditionErrorNullableBoolean": "Unexpected nullable boolean value in conditional. Please handle the nullish case explicitly.",
                 "conditionErrorNullableEnum": "Unexpected nullable enum value in conditional. Please handle the nullish/zero/NaN cases explicitly.",
                 "conditionErrorNullableNumber": "Unexpected nullable number value in conditional. Please handle the nullish/zero/NaN cases explicitly.",
@@ -8393,7 +8394,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                 "conditionErrorObject": "Unexpected object value in conditional. The condition is always true.",
                 "conditionErrorOther": "Unexpected value in conditional. A boolean expression is required.",
                 "conditionErrorString": "Unexpected string value in conditional. An explicit empty string check is required.",
-                "conditionFixCastBoolean": "Explicitly cast value to a boolean (\`Boolean(value)\`)",
+                "conditionFixCastBoolean": "Explicitly convert value to a boolean (\`Boolean(value)\`)",
                 "conditionFixCompareEmptyString": "Change condition to check for empty string (\`value !== ""\`)",
                 "conditionFixCompareFalse": "Change condition to check if false (\`value === false\`)",
                 "conditionFixCompareNaN": "Change condition to check for NaN (\`!Number.isNaN(value)\`)",
@@ -8404,7 +8405,10 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                 "conditionFixDefaultEmptyString": "Explicitly treat nullish value the same as an empty string (\`value ?? ""\`)",
                 "conditionFixDefaultFalse": "Explicitly treat nullish value the same as false (\`value ?? false\`)",
                 "conditionFixDefaultZero": "Explicitly treat nullish value the same as 0 (\`value ?? 0\`)",
+                "explicitBooleanReturnType": "Add an explicit \`boolean\` return type annotation.",
                 "noStrictNullCheck": "This rule requires the \`strictNullChecks\` compiler option to be turned on to function correctly.",
+                "predicateCannotBeAsync": "Predicate function should not be 'async'; expected a boolean return type.",
+                "predicateReturnsNonBoolean": "Predicate function should return a boolean.",
               },
               "schema": [
                 {
@@ -8485,6 +8489,10 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                     "considerDefaultExhaustiveForUnions": {
                       "description": "If 'true', the 'default' clause is used to determine whether the switch statement is exhaustive for union type",
                       "type": "boolean",
+                    },
+                    "defaultCaseCommentPattern": {
+                      "description": "Regular expression for a comment that can indicate an intentionally omitted default case.",
+                      "type": "string",
                     },
                     "requireDefaultForNonUnion": {
                       "description": "If 'true', require a 'default' clause for switches on non-union types.",

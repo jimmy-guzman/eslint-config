@@ -642,7 +642,7 @@ export interface RuleOptions {
    */
   '@typescript-eslint/no-wrapper-object-types'?: Linter.RuleEntry<[]>
   /**
-   * Enforce non-null assertions over explicit type casts
+   * Enforce non-null assertions over explicit type assertions
    * @see https://typescript-eslint.io/rules/non-nullable-type-assertion-style
    */
   '@typescript-eslint/non-nullable-type-assertion-style'?: Linter.RuleEntry<[]>
@@ -727,7 +727,7 @@ export interface RuleOptions {
    */
   '@typescript-eslint/prefer-readonly-parameter-types'?: Linter.RuleEntry<TypescriptEslintPreferReadonlyParameterTypes>
   /**
-   * Enforce using type parameter when calling `Array#reduce` instead of casting
+   * Enforce using type parameter when calling `Array#reduce` instead of using a type assertion
    * @see https://typescript-eslint.io/rules/prefer-reduce-type-parameter
    */
   '@typescript-eslint/prefer-reduce-type-parameter'?: Linter.RuleEntry<[]>
@@ -6485,7 +6485,7 @@ type TypescriptEslintConsistentTypeAssertions = []|[({
   assertionStyle: "never"
 } | {
   
-  assertionStyle: ("as" | "angle-bracket")
+  assertionStyle?: ("as" | "angle-bracket")
   
   objectLiteralTypeAssertions?: ("allow" | "allow-as-parameter" | "never")
 })]
@@ -7518,6 +7518,8 @@ type TypescriptEslintSwitchExhaustivenessCheck = []|[{
   allowDefaultCaseForExhaustiveSwitch?: boolean
   
   considerDefaultExhaustiveForUnions?: boolean
+  
+  defaultCaseCommentPattern?: string
   
   requireDefaultForNonUnion?: boolean
 }]
