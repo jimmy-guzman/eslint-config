@@ -8,8 +8,5 @@
     "typescript",
     "typescriptreact",
     "astro"
-  ],
-  "eslint.options": {
-    "flags": ["unstable_ts_config"]
-  }
+  ]
 }

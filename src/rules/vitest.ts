@@ -5,9 +5,7 @@ import { interopDefault } from "../utils/interop-default";
 export const vitestRules = async () => {
   const vitestPlugin = await interopDefault(import("@vitest/eslint-plugin"));
 
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-return -- rules is properly typed
   return {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- rules is properly typed
     ...vitestPlugin.configs.recommended.rules,
     "vitest/consistent-test-it": [
       "error",

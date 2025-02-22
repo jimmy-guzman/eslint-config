@@ -119,30 +119,6 @@ export default eslintConfig({
 });
 ```
 
-### TypeScript Configuration Files
-
-If you want to use [TypeScript configuration files](https://eslint.org/docs/latest/use/configure/configuration-files#typescript-configuration-files), you can do the following:
-
-Add `--flag unstable_ts_config` to your eslint script, for example:
-
-```json
-{
-  "scripts": {
-    "lint": "eslint --flag unstable_ts_config ."
-  }
-}
-```
-
-And add the following to your `.vscode/settings.json`:
-
-```json
-{
-  "eslint.options": {
-    "flags": ["unstable_ts_config"]
-  }
-}
-```
-
 ## ❤️ Credits
 
 - [@antfu/eslint-config](https://github.com/antfu/eslint-config) by [Anthony Fu](https://antfu.me)
