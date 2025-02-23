@@ -45,6 +45,11 @@ describe("importsConfig", () => {
         "import-x/resolver-next": [
           {
             "interfaceVersion": 3,
+            "name": "eslint-plugin-import-x built-in node resolver",
+            "resolve": [Function],
+          },
+          {
+            "interfaceVersion": 3,
             "name": "eslint-import-resolver-typescript",
             "resolve": [Function],
           },

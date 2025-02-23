@@ -8,6 +8,7 @@ import { importsRules } from "../rules/imports";
 
 const importsTypescriptConfig = () => {
   const { rules, settings } = importX.configs.typescript;
+  const { createNodeResolver } = importX;
 
   return [
     {
@@ -19,6 +20,7 @@ const importsTypescriptConfig = () => {
           settings["import-x/external-module-folders"],
         "import-x/parsers": settings["import-x/parsers"],
         "import-x/resolver-next": [
+          createNodeResolver(),
           createTypeScriptImportResolver({
             alwaysTryTypes: true,
           }),
