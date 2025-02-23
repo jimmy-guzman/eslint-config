@@ -19,6 +19,7 @@ export const playwrightRules = async () => {
     "playwright/no-nested-step": "error",
     "playwright/no-page-pause": "error",
     "playwright/no-skipped-test": "error",
+    "playwright/no-slowed-test": "error",
     "playwright/no-useless-await": "error",
     "playwright/no-useless-not": "error",
     "playwright/no-wait-for-selector": "error",

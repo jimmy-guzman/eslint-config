@@ -3874,6 +3874,11 @@ export interface RuleOptions {
    */
   'playwright/no-skipped-test'?: Linter.RuleEntry<PlaywrightNoSkippedTest>
   /**
+   * Prevent usage of the `.slow()` slow test annotation.
+   * @see https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/no-slowed-test.md
+   */
+  'playwright/no-slowed-test'?: Linter.RuleEntry<PlaywrightNoSlowedTest>
+  /**
    * Disallow using `expect` outside of `test` blocks
    * @see https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/no-standalone-expect.md
    */
@@ -3905,7 +3910,7 @@ export interface RuleOptions {
   'playwright/no-wait-for-timeout'?: Linter.RuleEntry<[]>
   /**
    * Suggest using the built-in comparison matchers
-   * @see https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/prefer-comparision-matcher.md
+   * @see https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/prefer-comparison-matcher.md
    */
   'playwright/prefer-comparison-matcher'?: Linter.RuleEntry<[]>
   /**
@@ -12079,6 +12084,10 @@ type PlaywrightNoRestrictedMatchers = []|[{
 }]
 // ----- playwright/no-skipped-test -----
 type PlaywrightNoSkippedTest = []|[{
+  allowConditional?: boolean
+}]
+// ----- playwright/no-slowed-test -----
+type PlaywrightNoSlowedTest = []|[{
   allowConditional?: boolean
 }]
 // ----- playwright/prefer-lowercase-title -----
