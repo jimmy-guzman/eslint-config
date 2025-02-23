@@ -6,16 +6,27 @@
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://semantic-release.gitbook.io/semantic-release)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square&logo=prettier)](https://github.com/prettier/prettier)
 
-> 🔍 Another opinionated [ESLint](https://eslint.org) config
+> 🔍 A pragmatic and opinionated [ESLint](https://eslint.org) config for modern development.
+
+## 🚀 Philosophy
+
+A strict yet ergonomic ESLint config that ensures **clean, maintainable, and modern** JavaScript and TypeScript codebases.
+
+- **🛡️ Prevent Bugs** – Enforce safe patterns and strict error handling.
+- **🌟 Modern JavaScript** – Prefer concise, expressive, and maintainable syntax.
+- **⚡ Performance & Maintainability** – Eliminate redundancy and enforce efficient patterns.
+- **🧹 Consistency** – Keep code structured, readable, and free of clutter.
+- **🧪 Reliable Testing** – Enforce best practices for Vitest, Jest, Playwright, and Testing Library.
+- **⚛️ Optimized React** – Ensure predictable rendering, hook safety, and component clarity.
 
 ## 🛠️ Usage
 
-> [!NOTE]
-> For a better experience, make sure to use [@jimmy.codes/prettier-config](https://github.com/jimmy-guzman/prettier-config) as well.
+> [!NOTE]  
+> For a better experience, use [@jimmy.codes/prettier-config](https://github.com/jimmy-guzman/prettier-config) as well.
 
 ### 🔨 Getting Started
 
-First, install the package:
+Install the package:
 
 ```
 pnpm add -D @jimmy.codes/eslint-config
@@ -29,11 +40,12 @@ import eslintConfig from "@jimmy.codes/eslint-config";
 export default eslintConfig();
 ```
 
-This automatically applies rules based on your installed dependencies.
+This automatically applies rules **based on your installed dependencies**.
 
 ### 🔧 Configuration
 
-By default, this config automatically enables rules based on your installed dependencies (e.g., `react`, `vitest`). Set `autoDetect: false` to disable this behavior.
+By default, this config **auto-detects** relevant rules based on your dependencies (`react`, `vitest`, etc.).  
+To disable this behavior:
 
 ```ts
 import eslintConfig from "@jimmy.codes/eslint-config";
@@ -41,7 +53,9 @@ import eslintConfig from "@jimmy.codes/eslint-config";
 export default eslintConfig({ autoDetect: false });
 ```
 
-You can also manually enable or disable specific rule sets:
+#### **Manually Enable/Disable Rule Sets**
+
+You can explicitly enable or disable rule sets:
 
 ```ts
 import eslintConfig from "@jimmy.codes/eslint-config";
@@ -60,9 +74,9 @@ export default eslintConfig({
 });
 ```
 
-#### Extending/Overriding the Configuration
+#### **Extending/Overriding the Configuration**
 
-You can extend or override the configuration using the `overrides` option:
+Use the `overrides` option:
 
 ```ts
 import eslintConfig from "@jimmy.codes/eslint-config";
@@ -85,7 +99,7 @@ export default eslintConfig({
 });
 ```
 
-Alternatively, you can pass additional configurations as separate arguments:
+Alternatively, pass multiple configurations as separate arguments:
 
 ```ts
 import eslintConfig from "@jimmy.codes/eslint-config";
@@ -107,11 +121,9 @@ export default eslintConfig(
 );
 ```
 
-> This approach is useful if you prefer to separate rule overrides into multiple objects instead of nesting them inside `overrides`.
+#### **Ignoring Files**
 
-#### Ignoring Files
-
-You can also extend what is ignored:
+Extend ignored files:
 
 ```ts
 import eslintConfig from "@jimmy.codes/eslint-config";
@@ -121,7 +133,13 @@ export default eslintConfig({
 });
 ```
 
+## 💬 Want to Contribute or Suggest Changes?
+
+PRs and discussions are welcome! Open an issue if you have suggestions.
+
 ## ❤️ Credits
 
+This config is inspired by:
+
 - [@antfu/eslint-config](https://github.com/antfu/eslint-config) by [Anthony Fu](https://antfu.me)
-- [@pvtnbr/eslint-config](https://github.com/privatenumber/eslint-config) by [Hiroki Osame](https://hirok.io/)
+- [@pvtnbr/eslint-config](https://github.com/privatenumber/eslint-config) by [Hiroki Osame](https://hirok.io)
