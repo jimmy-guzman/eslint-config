@@ -24,7 +24,9 @@ jobs:
         uses: ./.github/actions/check
 
       - name: 🚀 Publish
+        uses: cycjimmy/semantic-release-action@v4
+        with:
+          semantic_version: latest
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: pnpm exec semantic-release --branches main
