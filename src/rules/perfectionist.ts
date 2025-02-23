@@ -27,7 +27,7 @@ export const perfectionistRules = {
       type: "natural",
     },
   ],
-  // TODO: [>=4.0.0] enable perfectionist/sort-modules
+  // TODO: enable perfectionist/sort-modules
   // "perfectionist/sort-modules": [
   //    "error",
   //    {
