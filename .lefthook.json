@@ -12,11 +12,6 @@
         "glob": "*.{md,json,yml,ts}",
         "run": "pnpm exec prettier --write {staged_files}",
         "stage_fixed": true
-      },
-      "sort-package-json": {
-        "glob": "{,**/}package.json",
-        "run": "pnpm dlx sort-package-json {staged_files}",
-        "stage_fixed": true
       }
     }
   },

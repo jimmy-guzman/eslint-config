@@ -16,8 +16,8 @@ describe("reactRules", () => {
 
     const rules = await reactRules();
 
-    const allowExportNames =
-      rules["react-refresh/only-export-components"][1].allowExportNames;
+    const { allowExportNames } =
+      rules["react-refresh/only-export-components"][1];
 
     expect(allowExportNames).toMatchInlineSnapshot(`
       [
@@ -45,8 +45,8 @@ describe("reactRules", () => {
 
     const rules = await reactRules();
 
-    const allowConstantExport =
-      rules["react-refresh/only-export-components"][1].allowConstantExport;
+    const { allowConstantExport } =
+      rules["react-refresh/only-export-components"][1];
 
     expect(allowConstantExport).toBe(true);
   });
