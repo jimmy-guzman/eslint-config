@@ -47,6 +47,7 @@ export const vitestRules = async () => {
     "vitest/prefer-mock-promise-shorthand": "error",
     "vitest/prefer-snapshot-hint": "error",
     "vitest/prefer-spy-on": "off",
+    "vitest/prefer-strict-boolean-matchers": "error",
     "vitest/prefer-strict-equal": "error",
     "vitest/prefer-to-be": "error",
     "vitest/prefer-to-contain": "error",

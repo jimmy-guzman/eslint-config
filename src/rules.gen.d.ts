@@ -6313,6 +6313,11 @@ export interface RuleOptions {
    */
   'vitest/prefer-spy-on'?: Linter.RuleEntry<[]>
   /**
+   * enforce using `toBe(true)` and `toBe(false)` over matchers that coerce types to boolean
+   * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-strict-boolean-matchers.md
+   */
+  'vitest/prefer-strict-boolean-matchers'?: Linter.RuleEntry<[]>
+  /**
    * enforce strict equal over equal
    * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-strict-equal.md
    */
@@ -6367,6 +6372,11 @@ export interface RuleOptions {
    * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/require-local-test-context-for-concurrent-snapshots.md
    */
   'vitest/require-local-test-context-for-concurrent-snapshots'?: Linter.RuleEntry<[]>
+  /**
+   * enforce using type parameters with vitest mock functions
+   * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/require-mock-type-parameters.md
+   */
+  'vitest/require-mock-type-parameters'?: Linter.RuleEntry<VitestRequireMockTypeParameters>
   /**
    * require toThrow() to be called with an error message
    * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/require-to-throw-message.md
@@ -12326,6 +12336,10 @@ type VitestPreferSnapshotHint = []|[("always" | "multi")]
 // ----- vitest/require-hook -----
 type VitestRequireHook = []|[{
   allowedFunctionCalls?: string[]
+}]
+// ----- vitest/require-mock-type-parameters -----
+type VitestRequireMockTypeParameters = []|[{
+  checkImportFunctions?: boolean
 }]
 // ----- vitest/require-top-level-describe -----
 type VitestRequireTopLevelDescribe = []|[{
