@@ -48,6 +48,6 @@ describe("reactRules", () => {
     const allowConstantExport =
       rules["react-refresh/only-export-components"][1].allowConstantExport;
 
-    expect(allowConstantExport).toBeTruthy();
+    expect(allowConstantExport).toBe(true);
   });
 });
