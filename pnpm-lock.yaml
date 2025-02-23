@@ -12,7 +12,7 @@ importers:
         specifier: ^4.4.1
         version: 4.4.1(eslint@9.21.0(jiti@2.4.2))
       '@eslint/js':
-        specifier: ^9.17.0
+        specifier: ^9.21.0
         version: 9.21.0
       '@next/eslint-plugin-next':
         specifier: ^15.1.7
@@ -96,8 +96,8 @@ importers:
         specifier: ^15.14.0
         version: 15.14.0
       local-pkg:
-        specifier: 0.5.1
-        version: 0.5.1
+        specifier: ^1.0.0
+        version: 1.0.0
       typescript-eslint:
         specifier: ^8.24.1
         version: 8.24.1(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3)
@@ -2924,8 +2924,8 @@ packages:
     resolution: {integrity: sha512-OfCBkGEw4nN6JLtgRidPX6QxjBQGQf72q3si2uvqyFEMbycSFFHwAZeXx6cJgFM9wmLrf9zBwCP3Ivqa+LLZPw==}
     engines: {node: '>=6'}
 
-  local-pkg@0.5.1:
-    resolution: {integrity: sha512-9rrA30MRRP3gBD3HTGnC6cDFpaE1kVDWxWgqWJUN0RvDNAo+Nz/9GxB+nHOH0ifbVFy0hSA1V6vFDvnx54lTEQ==}
+  local-pkg@1.0.0:
+    resolution: {integrity: sha512-bbgPw/wmroJsil/GgL4qjDzs5YLTBMQ99weRsok1XCDccQeehbHA/I1oRvk2NPtr7KGZgT/Y5tPRnAtMqeG2Kg==}
     engines: {node: '>=14'}
 
   locate-path@5.0.0:
@@ -7480,7 +7480,7 @@ snapshots:
       pify: 4.0.1
       strip-bom: 3.0.0
 
-  local-pkg@0.5.1:
+  local-pkg@1.0.0:
     dependencies:
       mlly: 1.7.4
       pkg-types: 1.3.1
