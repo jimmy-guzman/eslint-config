@@ -326,7 +326,7 @@ export interface RuleOptions {
    * Disallow using code marked as `@deprecated`
    * @see https://typescript-eslint.io/rules/no-deprecated
    */
-  '@typescript-eslint/no-deprecated'?: Linter.RuleEntry<[]>
+  '@typescript-eslint/no-deprecated'?: Linter.RuleEntry<TypescriptEslintNoDeprecated>
   /**
    * Disallow duplicate class members
    * @see https://typescript-eslint.io/rules/no-dupe-class-members
@@ -389,7 +389,7 @@ export interface RuleOptions {
    */
   '@typescript-eslint/no-for-in-array'?: Linter.RuleEntry<[]>
   /**
-   * Disallow the use of `eval()`-like methods
+   * Disallow the use of `eval()`-like functions
    * @see https://typescript-eslint.io/rules/no-implied-eval
    */
   '@typescript-eslint/no-implied-eval'?: Linter.RuleEntry<[]>
@@ -444,6 +444,11 @@ export interface RuleOptions {
    * @see https://typescript-eslint.io/rules/no-misused-promises
    */
   '@typescript-eslint/no-misused-promises'?: Linter.RuleEntry<TypescriptEslintNoMisusedPromises>
+  /**
+   * Disallow using the spread operator when it might cause unexpected behavior
+   * @see https://typescript-eslint.io/rules/no-misused-spread
+   */
+  '@typescript-eslint/no-misused-spread'?: Linter.RuleEntry<TypescriptEslintNoMisusedSpread>
   /**
    * Disallow enums from having both number and string members
    * @see https://typescript-eslint.io/rules/no-mixed-enums
@@ -6485,6 +6490,8 @@ type TypescriptEslintConsistentTypeAssertions = []|[({
   assertionStyle: "never"
 } | {
   
+  arrayLiteralTypeAssertions?: ("allow" | "allow-as-parameter" | "never")
+  
   assertionStyle?: ("as" | "angle-bracket")
   
   objectLiteralTypeAssertions?: ("allow" | "allow-as-parameter" | "never")
@@ -6941,6 +6948,22 @@ type TypescriptEslintNoConfusingVoidExpression = []|[{
   
   ignoreVoidReturningFunctions?: boolean
 }]
+// ----- @typescript-eslint/no-deprecated -----
+type TypescriptEslintNoDeprecated = []|[{
+  
+  allow?: (string | {
+    from: "file"
+    name: (string | [string, ...(string)[]])
+    path?: string
+  } | {
+    from: "lib"
+    name: (string | [string, ...(string)[]])
+  } | {
+    from: "package"
+    name: (string | [string, ...(string)[]])
+    package: string
+  })[]
+}]
 // ----- @typescript-eslint/no-duplicate-type-constituents -----
 type TypescriptEslintNoDuplicateTypeConstituents = []|[{
   
@@ -7082,6 +7105,22 @@ type TypescriptEslintNoMisusedPromises = []|[{
     variables?: boolean
   })
 }]
+// ----- @typescript-eslint/no-misused-spread -----
+type TypescriptEslintNoMisusedSpread = []|[{
+  
+  allow?: (string | {
+    from: "file"
+    name: (string | [string, ...(string)[]])
+    path?: string
+  } | {
+    from: "lib"
+    name: (string | [string, ...(string)[]])
+  } | {
+    from: "package"
+    name: (string | [string, ...(string)[]])
+    package: string
+  })[]
+}]
 // ----- @typescript-eslint/no-namespace -----
 type TypescriptEslintNoNamespace = []|[{
   
@@ -7157,7 +7196,7 @@ type TypescriptEslintNoShadow = []|[{
   
   builtinGlobals?: boolean
   
-  hoist?: ("all" | "functions" | "never")
+  hoist?: ("all" | "functions" | "functions-and-types" | "never" | "types")
   
   ignoreFunctionTypeParameterNameValueShadow?: boolean
   
@@ -7197,11 +7236,13 @@ type TypescriptEslintNoUnnecessaryBooleanLiteralCompare = []|[{
   allowComparingNullableBooleansToFalse?: boolean
   
   allowComparingNullableBooleansToTrue?: boolean
+  
+  allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing?: boolean
 }]
 // ----- @typescript-eslint/no-unnecessary-condition -----
 type TypescriptEslintNoUnnecessaryCondition = []|[{
   
-  allowConstantLoopConditions?: boolean
+  allowConstantLoopConditions?: (boolean | ("always" | "never" | "only-allowed-literals"))
   
   allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing?: boolean
   

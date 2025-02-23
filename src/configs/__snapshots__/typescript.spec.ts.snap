@@ -7,7 +7,7 @@ exports[`typescriptConfig > should create config 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.19.0",
+          "version": "8.24.1",
         },
         "parseForESLint": [Function],
       },
@@ -74,6 +74,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "@typescript-eslint/no-meaningless-void-operator": "error",
               "@typescript-eslint/no-misused-new": "error",
               "@typescript-eslint/no-misused-promises": "error",
+              "@typescript-eslint/no-misused-spread": "error",
               "@typescript-eslint/no-mixed-enums": "error",
               "@typescript-eslint/no-namespace": "error",
               "@typescript-eslint/no-non-null-asserted-nullish-coalescing": "error",
@@ -204,6 +205,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "@typescript-eslint/no-implied-eval": "off",
               "@typescript-eslint/no-meaningless-void-operator": "off",
               "@typescript-eslint/no-misused-promises": "off",
+              "@typescript-eslint/no-misused-spread": "off",
               "@typescript-eslint/no-mixed-enums": "off",
               "@typescript-eslint/no-redundant-type-constituents": "off",
               "@typescript-eslint/no-unnecessary-boolean-literal-compare": "off",
@@ -543,6 +545,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "@typescript-eslint/no-meaningless-void-operator": "error",
               "@typescript-eslint/no-misused-new": "error",
               "@typescript-eslint/no-misused-promises": "error",
+              "@typescript-eslint/no-misused-spread": "error",
               "@typescript-eslint/no-mixed-enums": "error",
               "@typescript-eslint/no-namespace": "error",
               "@typescript-eslint/no-non-null-asserted-nullish-coalescing": "error",
@@ -637,6 +640,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "@typescript-eslint/no-implied-eval": "error",
               "@typescript-eslint/no-meaningless-void-operator": "error",
               "@typescript-eslint/no-misused-promises": "error",
+              "@typescript-eslint/no-misused-spread": "error",
               "@typescript-eslint/no-mixed-enums": "error",
               "@typescript-eslint/no-redundant-type-constituents": "error",
               "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
@@ -765,7 +769,7 @@ exports[`typescriptConfig > should create config 1`] = `
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.19.0",
+          "version": "8.24.1",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -1027,7 +1031,7 @@ exports[`typescriptConfig > should create config 1`] = `
                       "type": "array",
                     },
                     "ignoreClassesThatImplementAnInterface": {
-                      "description": "Makes the rule ignore class members that are defined within a class that \`implements\` a type",
+                      "description": "Whether to ignore class members that are defined within a class that \`implements\` a type.",
                       "oneOf": [
                         {
                           "description": "Ignore all classes that implement an interface",
@@ -1043,7 +1047,7 @@ exports[`typescriptConfig > should create config 1`] = `
                       ],
                     },
                     "ignoreOverrideMethods": {
-                      "description": "Ignore members marked with the \`override\` modifier",
+                      "description": "Whether to ignore members marked with the \`override\` modifier.",
                       "type": "boolean",
                     },
                   },
@@ -1156,6 +1160,7 @@ exports[`typescriptConfig > should create config 1`] = `
             "create": [Function],
             "defaultOptions": [
               {
+                "arrayLiteralTypeAssertions": "allow",
                 "assertionStyle": "as",
                 "objectLiteralTypeAssertions": "allow",
               },
@@ -1172,8 +1177,11 @@ exports[`typescriptConfig > should create config 1`] = `
                 "angle-bracket": "Use '<{{cast}}>' instead of 'as {{cast}}'.",
                 "as": "Use 'as {{cast}}' instead of '<{{cast}}>'.",
                 "never": "Do not use any type assertions.",
+                "replaceArrayTypeAssertionWithAnnotation": "Use const x: {{cast}} = [ ... ] instead.",
+                "replaceArrayTypeAssertionWithSatisfies": "Use const x = [ ... ] satisfies {{cast}} instead.",
                 "replaceObjectTypeAssertionWithAnnotation": "Use const x: {{cast}} = { ... } instead.",
                 "replaceObjectTypeAssertionWithSatisfies": "Use const x = { ... } satisfies {{cast}} instead.",
+                "unexpectedArrayTypeAssertion": "Always prefer const x: T[] = [ ... ].",
                 "unexpectedObjectTypeAssertion": "Always prefer const x: T = { ... }.",
               },
               "schema": [
@@ -1198,6 +1206,15 @@ exports[`typescriptConfig > should create config 1`] = `
                     {
                       "additionalProperties": false,
                       "properties": {
+                        "arrayLiteralTypeAssertions": {
+                          "description": "Whether to always prefer type declarations for array literals used as variable initializers, rather than type assertions.",
+                          "enum": [
+                            "allow",
+                            "allow-as-parameter",
+                            "never",
+                          ],
+                          "type": "string",
+                        },
                         "assertionStyle": {
                           "description": "The expected assertion style to enforce.",
                           "enum": [
@@ -4349,7 +4366,11 @@ You must still type the parameters of the function.",
           },
           "no-deprecated": {
             "create": [Function],
-            "defaultOptions": [],
+            "defaultOptions": [
+              {
+                "allow": [],
+              },
+            ],
             "meta": {
               "docs": {
                 "description": "Disallow using code marked as \`@deprecated\`",
@@ -4361,7 +4382,125 @@ You must still type the parameters of the function.",
                 "deprecated": "\`{{name}}\` is deprecated.",
                 "deprecatedWithReason": "\`{{name}}\` is deprecated. {{reason}}",
               },
-              "schema": [],
+              "schema": [
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "allow": {
+                      "description": "Type specifiers that can be allowed.",
+                      "items": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                          },
+                          {
+                            "additionalProperties": false,
+                            "properties": {
+                              "from": {
+                                "enum": [
+                                  "file",
+                                ],
+                                "type": "string",
+                              },
+                              "name": {
+                                "oneOf": [
+                                  {
+                                    "type": "string",
+                                  },
+                                  {
+                                    "items": {
+                                      "type": "string",
+                                    },
+                                    "minItems": 1,
+                                    "type": "array",
+                                    "uniqueItems": true,
+                                  },
+                                ],
+                              },
+                              "path": {
+                                "type": "string",
+                              },
+                            },
+                            "required": [
+                              "from",
+                              "name",
+                            ],
+                            "type": "object",
+                          },
+                          {
+                            "additionalProperties": false,
+                            "properties": {
+                              "from": {
+                                "enum": [
+                                  "lib",
+                                ],
+                                "type": "string",
+                              },
+                              "name": {
+                                "oneOf": [
+                                  {
+                                    "type": "string",
+                                  },
+                                  {
+                                    "items": {
+                                      "type": "string",
+                                    },
+                                    "minItems": 1,
+                                    "type": "array",
+                                    "uniqueItems": true,
+                                  },
+                                ],
+                              },
+                            },
+                            "required": [
+                              "from",
+                              "name",
+                            ],
+                            "type": "object",
+                          },
+                          {
+                            "additionalProperties": false,
+                            "properties": {
+                              "from": {
+                                "enum": [
+                                  "package",
+                                ],
+                                "type": "string",
+                              },
+                              "name": {
+                                "oneOf": [
+                                  {
+                                    "type": "string",
+                                  },
+                                  {
+                                    "items": {
+                                      "type": "string",
+                                    },
+                                    "minItems": 1,
+                                    "type": "array",
+                                    "uniqueItems": true,
+                                  },
+                                ],
+                              },
+                              "package": {
+                                "type": "string",
+                              },
+                            },
+                            "required": [
+                              "from",
+                              "name",
+                              "package",
+                            ],
+                            "type": "object",
+                          },
+                        ],
+                      },
+                      "type": "array",
+                    },
+                  },
+                  "type": "object",
+                },
+              ],
               "type": "problem",
             },
           },
@@ -5012,7 +5151,7 @@ You must still type the parameters of the function.",
             "defaultOptions": [],
             "meta": {
               "docs": {
-                "description": "Disallow the use of \`eval()\`-like methods",
+                "description": "Disallow the use of \`eval()\`-like functions",
                 "extendsBaseRule": true,
                 "recommended": "recommended",
                 "requiresTypeChecking": true,
@@ -5421,6 +5560,156 @@ You must still type the parameters of the function.",
                           "type": "object",
                         },
                       ],
+                    },
+                  },
+                  "type": "object",
+                },
+              ],
+              "type": "problem",
+            },
+          },
+          "no-misused-spread": {
+            "create": [Function],
+            "defaultOptions": [
+              {
+                "allow": [],
+              },
+            ],
+            "meta": {
+              "docs": {
+                "description": "Disallow using the spread operator when it might cause unexpected behavior",
+                "recommended": "strict",
+                "requiresTypeChecking": true,
+                "url": "https://typescript-eslint.io/rules/no-misused-spread",
+              },
+              "messages": {
+                "noArraySpreadInObject": "Using the spread operator on an array in an object will result in a list of indices.",
+                "noClassDeclarationSpreadInObject": "Using the spread operator on class declarations will spread only their static properties, and will lose their class prototype.",
+                "noClassInstanceSpreadInObject": "Using the spread operator on class instances will lose their class prototype.",
+                "noFunctionSpreadInObject": "Using the spread operator on a function without additional properties can cause unexpected behavior. Did you forget to call the function?",
+                "noIterableSpreadInObject": "Using the spread operator on an Iterable in an object can cause unexpected behavior.",
+                "noMapSpreadInObject": "Using the spread operator on a Map in an object will result in an empty object. Did you mean to use \`Object.fromEntries(map)\` instead?",
+                "noPromiseSpreadInObject": "Using the spread operator on Promise in an object can cause unexpected behavior. Did you forget to await the promise?",
+                "noStringSpread": "Using the spread operator on a string can mishandle special characters, as can \`.split("")\`.
+- \`...\` produces Unicode code points, which will decompose complex emojis into individual emojis
+- .split("") produces UTF-16 code units, which breaks rich characters in many languages
+Consider using \`Intl.Segmenter\` for locale-aware string decomposition.
+Otherwise, if you don't need to preserve emojis or other non-Ascii characters, disable this lint rule on this line or configure the 'allow' rule option.",
+              },
+              "schema": [
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "allow": {
+                      "description": "An array of type specifiers that are known to be safe to spread.",
+                      "items": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                          },
+                          {
+                            "additionalProperties": false,
+                            "properties": {
+                              "from": {
+                                "enum": [
+                                  "file",
+                                ],
+                                "type": "string",
+                              },
+                              "name": {
+                                "oneOf": [
+                                  {
+                                    "type": "string",
+                                  },
+                                  {
+                                    "items": {
+                                      "type": "string",
+                                    },
+                                    "minItems": 1,
+                                    "type": "array",
+                                    "uniqueItems": true,
+                                  },
+                                ],
+                              },
+                              "path": {
+                                "type": "string",
+                              },
+                            },
+                            "required": [
+                              "from",
+                              "name",
+                            ],
+                            "type": "object",
+                          },
+                          {
+                            "additionalProperties": false,
+                            "properties": {
+                              "from": {
+                                "enum": [
+                                  "lib",
+                                ],
+                                "type": "string",
+                              },
+                              "name": {
+                                "oneOf": [
+                                  {
+                                    "type": "string",
+                                  },
+                                  {
+                                    "items": {
+                                      "type": "string",
+                                    },
+                                    "minItems": 1,
+                                    "type": "array",
+                                    "uniqueItems": true,
+                                  },
+                                ],
+                              },
+                            },
+                            "required": [
+                              "from",
+                              "name",
+                            ],
+                            "type": "object",
+                          },
+                          {
+                            "additionalProperties": false,
+                            "properties": {
+                              "from": {
+                                "enum": [
+                                  "package",
+                                ],
+                                "type": "string",
+                              },
+                              "name": {
+                                "oneOf": [
+                                  {
+                                    "type": "string",
+                                  },
+                                  {
+                                    "items": {
+                                      "type": "string",
+                                    },
+                                    "minItems": 1,
+                                    "type": "array",
+                                    "uniqueItems": true,
+                                  },
+                                ],
+                              },
+                              "package": {
+                                "type": "string",
+                              },
+                            },
+                            "required": [
+                              "from",
+                              "name",
+                              "package",
+                            ],
+                            "type": "object",
+                          },
+                        ],
+                      },
+                      "type": "array",
                     },
                   },
                   "type": "object",
@@ -5918,7 +6207,7 @@ You must still type the parameters of the function.",
               {
                 "allow": [],
                 "builtinGlobals": false,
-                "hoist": "functions",
+                "hoist": "functions-and-types",
                 "ignoreFunctionTypeParameterNameValueShadow": true,
                 "ignoreOnInitialization": false,
                 "ignoreTypeValueShadow": true,
@@ -5954,7 +6243,9 @@ You must still type the parameters of the function.",
                       "enum": [
                         "all",
                         "functions",
+                        "functions-and-types",
                         "never",
+                        "types",
                       ],
                       "type": "string",
                     },
@@ -6109,6 +6400,7 @@ You must still type the parameters of the function.",
               {
                 "allowComparingNullableBooleansToFalse": true,
                 "allowComparingNullableBooleansToTrue": true,
+                "allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": false,
               },
             ],
             "meta": {
@@ -6125,6 +6417,7 @@ You must still type the parameters of the function.",
                 "comparingNullableToTrueNegated": "This expression unnecessarily compares a nullable boolean value to true instead of negating it.",
                 "direct": "This expression unnecessarily compares a boolean value to a boolean instead of using it directly.",
                 "negated": "This expression unnecessarily compares a boolean value to a boolean instead of negating it.",
+                "noStrictNullCheck": "This rule requires the \`strictNullChecks\` compiler option to be turned on to function correctly.",
               },
               "schema": [
                 {
@@ -6138,6 +6431,10 @@ You must still type the parameters of the function.",
                       "description": "Whether to allow comparisons between nullable boolean variables and \`true\`.",
                       "type": "boolean",
                     },
+                    "allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": {
+                      "description": "Unless this is set to \`true\`, the rule will error on every file whose \`tsconfig.json\` does _not_ have the \`strictNullChecks\` compiler option (or \`strict\`) set to \`true\`.",
+                      "type": "boolean",
+                    },
                   },
                   "type": "object",
                 },
@@ -6149,7 +6446,7 @@ You must still type the parameters of the function.",
             "create": [Function],
             "defaultOptions": [
               {
-                "allowConstantLoopConditions": false,
+                "allowConstantLoopConditions": "never",
                 "allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": false,
                 "checkTypePredicates": false,
               },
@@ -6182,7 +6479,19 @@ You must still type the parameters of the function.",
                   "properties": {
                     "allowConstantLoopConditions": {
                       "description": "Whether to ignore constant loop conditions, such as \`while (true)\`.",
-                      "type": "boolean",
+                      "oneOf": [
+                        {
+                          "type": "boolean",
+                        },
+                        {
+                          "enum": [
+                            "always",
+                            "never",
+                            "only-allowed-literals",
+                          ],
+                          "type": "string",
+                        },
+                      ],
                     },
                     "allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": {
                       "description": "Whether to not error when running with a tsconfig that has strictNullChecks turned.",
@@ -8219,7 +8528,6 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
             "meta": {
               "docs": {
                 "description": "Enforce consistent awaiting of returned promises",
-                "extendsBaseRule": "no-return-await",
                 "recommended": {
                   "strict": [
                     "error-handling-correctness-only",
@@ -8380,7 +8688,6 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                 "requiresTypeChecking": true,
                 "url": "https://typescript-eslint.io/rules/strict-boolean-expressions",
               },
-              "fixable": "code",
               "hasSuggestions": true,
               "messages": {
                 "conditionErrorAny": "Unexpected any value in conditional. An explicit comparison or type conversion is required.",
@@ -8395,6 +8702,8 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                 "conditionErrorOther": "Unexpected value in conditional. A boolean expression is required.",
                 "conditionErrorString": "Unexpected string value in conditional. An explicit empty string check is required.",
                 "conditionFixCastBoolean": "Explicitly convert value to a boolean (\`Boolean(value)\`)",
+                "conditionFixCompareArrayLengthNonzero": "Change condition to check array's length (\`value.length > 0\`)",
+                "conditionFixCompareArrayLengthZero": "Change condition to check array's length (\`value.length === 0\`)",
                 "conditionFixCompareEmptyString": "Change condition to check for empty string (\`value !== ""\`)",
                 "conditionFixCompareFalse": "Change condition to check if false (\`value === false\`)",
                 "conditionFixCompareNaN": "Change condition to check for NaN (\`!Number.isNaN(value)\`)",
@@ -8783,6 +9092,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
       "@typescript-eslint/no-meaningless-void-operator": "error",
       "@typescript-eslint/no-misused-new": "error",
       "@typescript-eslint/no-misused-promises": "error",
+      "@typescript-eslint/no-misused-spread": "error",
       "@typescript-eslint/no-mixed-enums": "error",
       "@typescript-eslint/no-namespace": "error",
       "@typescript-eslint/no-non-null-asserted-nullish-coalescing": "error",
@@ -8977,6 +9287,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
       "@typescript-eslint/no-implied-eval": "off",
       "@typescript-eslint/no-meaningless-void-operator": "off",
       "@typescript-eslint/no-misused-promises": "off",
+      "@typescript-eslint/no-misused-spread": "off",
       "@typescript-eslint/no-mixed-enums": "off",
       "@typescript-eslint/no-redundant-type-constituents": "off",
       "@typescript-eslint/no-unnecessary-boolean-literal-compare": "off",
