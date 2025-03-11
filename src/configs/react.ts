@@ -18,7 +18,7 @@ export const reactConfig = async () => {
     interopDefault(import("eslint-plugin-jsx-a11y")),
     import("eslint-plugin-react-hooks"),
     interopDefault(import("eslint-plugin-react-refresh")),
-    interopDefault(import("eslint-plugin-react-compiler")),
+    import("eslint-plugin-react-compiler"),
   ]);
 
   return [
