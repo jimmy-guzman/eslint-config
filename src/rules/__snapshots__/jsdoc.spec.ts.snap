@@ -66,6 +66,7 @@ exports[`should create jsdoc rules 1`] = `
     "always",
     {
       "applyToEndTag": false,
+      "startLines": 1,
     },
   ],
   "jsdoc/text-escaping": "off",

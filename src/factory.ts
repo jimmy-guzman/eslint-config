@@ -38,6 +38,7 @@ import {
 
 /**
  * Generates an ESLint configuration based on the provided options.
+ *
  * @returns The resolved ESLint configuration.
  *
  * @example
