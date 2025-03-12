@@ -1,6 +1,6 @@
 import { isPackageExists } from "local-pkg";
 
-import { eslintConfig } from "./factory";
+import { defineConfig } from "./factory";
 
 vi.mock("local-pkg");
 
@@ -18,7 +18,7 @@ describe("eslintConfig", () => {
       ["regexp"],
       ["jsdoc"],
     ])("should include %s in the base configuration", async (configName) => {
-      await expect(eslintConfig({ autoDetect: false })).resolves.toStrictEqual(
+      await expect(defineConfig({ autoDetect: false })).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.objectContaining({ name: `jimmy.codes/${configName}` }),
         ]),
@@ -53,14 +53,14 @@ describe("eslintConfig", () => {
         });
 
         await expect(
-          eslintConfig({ autoDetect: false, ...options }),
+          defineConfig({ autoDetect: false, ...options }),
         ).resolves.toStrictEqual(expect.arrayContaining(matchers));
       },
     );
 
     it("should include multiple configurations together", async () => {
       await expect(
-        eslintConfig({
+        defineConfig({
           autoDetect: false,
           jest: true,
           react: true,
@@ -77,7 +77,7 @@ describe("eslintConfig", () => {
 
     it("should include vitest & react & testing library together", async () => {
       await expect(
-        eslintConfig({
+        defineConfig({
           autoDetect: false,
           react: true,
           testingLibrary: true,
@@ -94,7 +94,7 @@ describe("eslintConfig", () => {
 
     it("should include astro configurations", async () => {
       await expect(
-        eslintConfig({ astro: true, autoDetect: false }),
+        defineConfig({ astro: true, autoDetect: false }),
       ).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.objectContaining({ name: "jimmy.codes/astro" }),
@@ -126,7 +126,7 @@ describe("eslintConfig", () => {
           return name === pkg;
         });
 
-        await expect(eslintConfig({ autoDetect: true })).resolves.toStrictEqual(
+        await expect(defineConfig({ autoDetect: true })).resolves.toStrictEqual(
           expect.arrayContaining([
             expect.objectContaining({ name: configName }),
           ]),
@@ -139,7 +139,7 @@ describe("eslintConfig", () => {
         return name === "typescript";
       });
 
-      await expect(eslintConfig({ autoDetect: true })).resolves.toStrictEqual(
+      await expect(defineConfig({ autoDetect: true })).resolves.toStrictEqual(
         expect.arrayContaining([
           expect.objectContaining({ name: "jimmy.codes/typescript" }),
           expect.not.objectContaining({ name: "jimmy.codes/vitest" }),

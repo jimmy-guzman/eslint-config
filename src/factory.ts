@@ -36,7 +36,16 @@ import {
   hasVitest,
 } from "./utils/has-dependency";
 
-export const eslintConfig = async (
+/**
+ * Generates an ESLint configuration based on the provided options.
+ * @returns The resolved ESLint configuration.
+ *
+ * @example
+ * import { defineConfig } from "@jimmy.codes/eslint-config";
+ *
+ * export default defineConfig();
+ */
+export const defineConfig = async (
   {
     astro = false,
     autoDetect = true,

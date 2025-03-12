@@ -35,9 +35,9 @@ pnpm add -D @jimmy.codes/eslint-config
 Then, in your `eslint.config.js`, simply add:
 
 ```mjs
-import eslintConfig from "@jimmy.codes/eslint-config";
+import { defineConfig } from "@jimmy.codes/eslint-config";
 
-export default eslintConfig();
+export default defineConfig();
 ```
 
 This automatically applies rules **based on your installed dependencies**.
@@ -48,9 +48,9 @@ By default, this config **auto-detects** relevant rules based on your dependenci
 To disable this behavior:
 
 ```ts
-import eslintConfig from "@jimmy.codes/eslint-config";
+import { defineConfig } from "@jimmy.codes/eslint-config";
 
-export default eslintConfig({ autoDetect: false });
+export default defineConfig({ autoDetect: false });
 ```
 
 #### **Manually Enable/Disable Rule Sets**
@@ -58,9 +58,9 @@ export default eslintConfig({ autoDetect: false });
 You can explicitly enable or disable rule sets:
 
 ```ts
-import eslintConfig from "@jimmy.codes/eslint-config";
+import { defineConfig } from "@jimmy.codes/eslint-config";
 
-export default eslintConfig({
+export default defineConfig({
   astro: false,
   jest: false,
   nextjs: false,
@@ -79,9 +79,9 @@ export default eslintConfig({
 Use the `overrides` option:
 
 ```ts
-import eslintConfig from "@jimmy.codes/eslint-config";
+import { defineConfig } from "@jimmy.codes/eslint-config";
 
-export default eslintConfig({
+export default defineConfig({
   overrides: [
     {
       files: ["**/*.js"],
@@ -102,9 +102,9 @@ export default eslintConfig({
 Alternatively, pass multiple configurations as separate arguments:
 
 ```ts
-import eslintConfig from "@jimmy.codes/eslint-config";
+import { defineConfig } from "@jimmy.codes/eslint-config";
 
-export default eslintConfig(
+export default defineConfig(
   {},
   {
     files: ["**/*.js"],
@@ -126,9 +126,9 @@ export default eslintConfig(
 Extend ignored files:
 
 ```ts
-import eslintConfig from "@jimmy.codes/eslint-config";
+import { defineConfig } from "@jimmy.codes/eslint-config";
 
-export default eslintConfig({
+export default defineConfig({
   ignores: ["**/*.mjs"],
 });
 ```
