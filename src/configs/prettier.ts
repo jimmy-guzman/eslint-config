@@ -1,9 +1,9 @@
-import eslintConfigPrettier from "eslint-config-prettier";
+import eslintConfigPrettier from "eslint-config-prettier/flat";
 
 import type { TypedConfigItem } from "../types";
 
 export const prettierConfig = () => {
   return [
-    { name: "jimmy.codes/prettier", ...eslintConfigPrettier },
+    { ...eslintConfigPrettier, name: "jimmy.codes/prettier" },
   ] satisfies TypedConfigItem[];
 };
