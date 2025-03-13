@@ -1,7 +1,7 @@
 {
   "name": "@jimmy.codes/eslint-config",
   "version": "4.3.1",
-  "description": "another opinionated eslint config",
+  "description": "A pragmatic and opinionated ESLint config for modern development.",
   "keywords": [
     "eslint",
     "eslint-config",
