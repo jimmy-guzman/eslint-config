@@ -109,8 +109,8 @@ export const defineConfig = async (
   return [
     ...baseConfigs,
     ...featureConfigs,
-    prettierConfig(),
     commonjsConfig(),
+    prettierConfig(),
     ignoresConfig(ignores),
     overrides,
     moreOverrides,
