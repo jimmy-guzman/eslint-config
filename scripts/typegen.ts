@@ -3,9 +3,9 @@ import fs from "node:fs/promises";
 import { flatConfigsToRulesDTS } from "eslint-typegen/core";
 import { builtinRules } from "eslint/use-at-your-own-risk";
 
-import eslintConfig from "../src";
+import { defineConfig } from "../src";
 
-const configs = await eslintConfig({
+const configs = await defineConfig({
   jest: true,
 });
 

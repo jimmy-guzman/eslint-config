@@ -1,3 +1,3 @@
-export { defineConfig as default, defineConfig } from "./factory";
+export { defineConfig } from "./factory";
 
 export type * from "./types";
