@@ -8,16 +8,25 @@
 
 > 🔍 A pragmatic and opinionated [ESLint](https://eslint.org) config for modern development.
 
-## 🚀 Philosophy
+## **✨ Features**
+
+- **📡 Auto-detects your stack** – Supports React, TypeScript, Astro, Next.js, Vitest, Jest, Playwright, Storybook, and TanStack Query.
+- **⚡ Efficient & lightweight** – Dynamically imports configs for better performance.
+- **🛠️ Works out of the box** – No manual setup required for most projects.
+- **🎛️ Fully customizable** – Override, extend, or disable rules to fit your needs.
+- **🔄 Always up to date** – Evolves with the latest ESLint, TypeScript, and framework best practices.
+
+---
+
+## **🚀 Philosophy**
 
 A strict yet ergonomic ESLint config that ensures **clean, maintainable, and modern** JavaScript and TypeScript codebases.
 
-- **🛡️ Prevent Bugs** – Enforce safe patterns and strict error handling.
-- **🌟 Modern JavaScript** – Prefer concise, expressive, and maintainable syntax.
-- **⚡ Performance & Maintainability** – Eliminate redundancy and enforce efficient patterns.
-- **🧹 Consistency** – Keep code structured, readable, and free of clutter.
-- **🧪 Reliable Testing** – Enforce best practices for Vitest, Jest, Playwright, and Testing Library.
-- **⚛️ Optimized React** – Ensure predictable rendering, hook safety, and component clarity.
+- **🛡️ Code safety first** – Enforce patterns that prevent runtime errors and unexpected behavior.
+- **📜 Embrace modern JavaScript** – Prefer maintainable, expressive, and future-proof code.
+- **⚙️ Optimized for performance** – Loads only relevant configs to keep linting fast.
+- **📏 Consistency without rigidity** – Prioritizes structure and readability over personal opinions.
+- **🧪 Built for testing** – Enforces best practices for Vitest, Jest, Playwright, and Testing Library.
 
 ## 🛠️ Usage
 
@@ -28,11 +37,11 @@ A strict yet ergonomic ESLint config that ensures **clean, maintainable, and mod
 
 Install the package:
 
-```
+```sh
 pnpm add -D @jimmy.codes/eslint-config
 ```
 
-Then, in your `eslint.config.js`, simply add:
+Then, in your `eslint.config.ts`, simply add:
 
 ```mjs
 import { defineConfig } from "@jimmy.codes/eslint-config";
@@ -133,9 +142,13 @@ export default defineConfig({
 });
 ```
 
+---
+
 ## 💬 Want to Contribute or Suggest Changes?
 
 PRs and discussions are welcome! Open an issue if you have suggestions.
+
+---
 
 ## ❤️ Credits
 
