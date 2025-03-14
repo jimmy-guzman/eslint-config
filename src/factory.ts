@@ -93,22 +93,22 @@ export const defineConfig = async (
     importsConfig({ typescript: isTypescriptEnabled }),
   ];
 
-  const featureConfigs = [
-    isTypescriptEnabled && typescriptConfig(),
-    isReactEnabled && (await reactConfig()),
-    isTanstackQueryEnabled && (await tanstackQueryConfig()),
-    isAstroEnabled && (await astroConfig()),
-    isJestEnabled && (await jestConfig()),
-    isVitestEnabled && (await vitestConfig()),
-    isTestingLibraryEnabled && (await testingLibraryConfig()),
-    isPlaywrightEnabled && (await playwrightConfig()),
-    isStorybookEnabled && (await storybookConfig()),
-    isNextjsEnabled && (await nextjsConfig()),
-  ].filter(Boolean);
+  const featureConfigs = await Promise.all([
+    isTypescriptEnabled ? typescriptConfig() : null,
+    isReactEnabled ? reactConfig() : null,
+    isTanstackQueryEnabled ? tanstackQueryConfig() : null,
+    isAstroEnabled ? astroConfig() : null,
+    isJestEnabled ? jestConfig() : null,
+    isVitestEnabled ? vitestConfig() : null,
+    isTestingLibraryEnabled ? testingLibraryConfig() : null,
+    isPlaywrightEnabled ? playwrightConfig() : null,
+    isStorybookEnabled ? storybookConfig() : null,
+    isNextjsEnabled ? nextjsConfig() : null,
+  ]);
 
   return [
     ...baseConfigs,
-    ...featureConfigs,
+    ...featureConfigs.filter(Boolean),
     commonjsConfig(),
     prettierConfig(),
     ignoresConfig(ignores),

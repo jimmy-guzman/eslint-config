@@ -1,5 +1,5 @@
-import index from "./index";
+import { defineConfig } from "./index";
 
 test("should create default configuration", () => {
-  expect(index).toStrictEqual(expect.any(Function));
+  expect(defineConfig).toStrictEqual(expect.any(Function));
 });

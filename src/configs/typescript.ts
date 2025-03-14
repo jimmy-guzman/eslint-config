@@ -1,9 +1,9 @@
-import { configs } from "typescript-eslint";
-
 import { GLOB_JS, GLOB_JSX, GLOB_TESTS } from "../constants";
 import { typescriptRules } from "../rules/typescript";
 
-export const typescriptConfig = () => {
+export const typescriptConfig = async () => {
+  const { configs } = await import("typescript-eslint");
+
   return [
     ...configs.strictTypeChecked,
     ...configs.stylisticTypeChecked.filter((config) => {

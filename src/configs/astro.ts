@@ -1,5 +1,4 @@
 import globals from "globals";
-import { configs, parser as parserTs } from "typescript-eslint";
 
 import type { TypedConfigItem } from "../types";
 
@@ -8,6 +7,8 @@ import { interopDefault } from "../utils/interop-default";
 
 export const astroConfig = async () => {
   const files = [GLOB_ASTRO];
+
+  const { configs, parser: parserTs } = await import("typescript-eslint");
 
   const [astroPlugin, astroParser, jsxA11yPlugin] = await Promise.all([
     import("eslint-plugin-astro"),
