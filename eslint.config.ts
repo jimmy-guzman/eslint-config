@@ -1,3 +1,3 @@
-import { defineConfig } from "./src";
+import { defineConfig } from "./src/factory";
 
 export default defineConfig();

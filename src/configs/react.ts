@@ -6,7 +6,7 @@ import { GLOB_JSX, GLOB_TSX } from "../constants";
 import { reactRules } from "../rules/react";
 import { interopDefault } from "../utils/interop-default";
 
-export const reactConfig = async () => {
+export default async function reactConfig() {
   const [
     reactPlugin,
     jsxA11yPlugin,
@@ -51,4 +51,4 @@ export const reactConfig = async () => {
       },
     },
   ] satisfies TypedConfigItem[];
-};
+}

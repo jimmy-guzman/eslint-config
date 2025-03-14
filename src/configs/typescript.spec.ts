@@ -1,4 +1,4 @@
-import { typescriptConfig } from "./typescript";
+import typescriptConfig from "./typescript";
 
 describe("typescriptConfig", () => {
   it("should create config", async () => {

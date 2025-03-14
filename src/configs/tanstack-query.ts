@@ -5,7 +5,7 @@ import type { TypedConfigItem } from "../types";
 import { GLOB_JSX, GLOB_TSX } from "../constants";
 import { interopDefault } from "../utils/interop-default";
 
-export const tanstackQueryConfig = async () => {
+export default async function tanstackQueryConfig() {
   const queryPlugin = await interopDefault(
     import("@tanstack/eslint-plugin-query"),
   );
@@ -25,4 +25,4 @@ export const tanstackQueryConfig = async () => {
       },
     },
   ] satisfies TypedConfigItem[];
-};
+}

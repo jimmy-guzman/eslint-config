@@ -3,7 +3,7 @@ import type { Rules } from "../types";
 import { interopDefault } from "../utils/interop-default";
 import { warningAsErrors } from "../utils/warnings-as-errors";
 
-export const storybookConfig = async () => {
+export default async function storybookConfig() {
   const { configs } = await interopDefault(import("eslint-plugin-storybook"));
 
   const [setup, storiesConfig, mainConfig] = configs["flat/recommended"];
@@ -30,4 +30,4 @@ export const storybookConfig = async () => {
       } satisfies Rules,
     },
   ];
-};
+}

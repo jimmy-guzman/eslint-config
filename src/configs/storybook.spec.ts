@@ -1,4 +1,4 @@
-import { storybookConfig } from "./storybook";
+import storybookConfig from "./storybook";
 
 describe("storybook", () => {
   it("should create stories rules", async () => {

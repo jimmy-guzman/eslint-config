@@ -2,27 +2,17 @@ import type { Linter } from "eslint";
 
 import type { Options, TypedConfigItem } from "./types";
 
-import { astroConfig } from "./configs/astro";
 import { commonjsConfig } from "./configs/commonjs";
 import { eslintCommentsConfig } from "./configs/eslint-comments";
 import { ignoresConfig } from "./configs/ignores";
 import { importsConfig } from "./configs/imports";
 import { javascriptConfig } from "./configs/javascript";
-import { jestConfig } from "./configs/jest";
 import { jsdocConfig } from "./configs/jsdoc";
-import { nextjsConfig } from "./configs/nextjs";
 import { nodeConfig } from "./configs/node";
 import { perfectionistConfig } from "./configs/perfectionist";
-import { playwrightConfig } from "./configs/playwright";
 import { prettierConfig } from "./configs/prettier";
-import { reactConfig } from "./configs/react";
 import { regexpConfig } from "./configs/regexp";
-import { storybookConfig } from "./configs/storybook";
-import { tanstackQueryConfig } from "./configs/tanstack-query";
-import { testingLibraryConfig } from "./configs/testing-library";
-import { typescriptConfig } from "./configs/typescript";
 import { unicornConfig } from "./configs/unicorn";
-import { vitestConfig } from "./configs/vitest";
 import {
   hasAstro,
   hasJest,
@@ -35,6 +25,7 @@ import {
   hasTypescript,
   hasVitest,
 } from "./utils/has-dependency";
+import { unwrap } from "./utils/unwrap";
 
 /**
  * Generates an ESLint configuration based on the provided options.
@@ -94,24 +85,24 @@ export const defineConfig = async (
   ];
 
   const featureConfigs = await Promise.all([
-    isTypescriptEnabled ? typescriptConfig() : null,
-    isReactEnabled ? reactConfig() : null,
-    isTanstackQueryEnabled ? tanstackQueryConfig() : null,
-    isAstroEnabled ? astroConfig() : null,
-    isJestEnabled ? jestConfig() : null,
-    isVitestEnabled ? vitestConfig() : null,
-    isTestingLibraryEnabled ? testingLibraryConfig() : null,
-    isPlaywrightEnabled ? playwrightConfig() : null,
-    isStorybookEnabled ? storybookConfig() : null,
-    isNextjsEnabled ? nextjsConfig() : null,
+    isTypescriptEnabled && unwrap(import("./configs/typescript")),
+    isReactEnabled && unwrap(import("./configs/react")),
+    isTanstackQueryEnabled && unwrap(import("./configs/tanstack-query")),
+    isAstroEnabled && unwrap(import("./configs/astro")),
+    isJestEnabled && unwrap(import("./configs/jest")),
+    isVitestEnabled && unwrap(import("./configs/vitest")),
+    isTestingLibraryEnabled && unwrap(import("./configs/testing-library")),
+    isPlaywrightEnabled && unwrap(import("./configs/playwright")),
+    isStorybookEnabled && unwrap(import("./configs/storybook")),
+    isNextjsEnabled && unwrap(import("./configs/nextjs")),
   ]);
 
   return [
     ...baseConfigs,
     ...featureConfigs.filter(Boolean),
     commonjsConfig(),
-    prettierConfig(),
     ignoresConfig(ignores),
+    prettierConfig(),
     overrides,
     moreOverrides,
   ].flat();

@@ -2,7 +2,7 @@ import { GLOB_PLAYWRIGHT } from "../constants";
 import { playwrightRules } from "../rules/playwright";
 import { interopDefault } from "../utils/interop-default";
 
-export const playwrightConfig = async () => {
+export default async function playwrightConfig() {
   const playwrightPlugin = await interopDefault(
     import("eslint-plugin-playwright"),
   );
@@ -15,4 +15,4 @@ export const playwrightConfig = async () => {
       rules: await playwrightRules(),
     },
   ];
-};
+}

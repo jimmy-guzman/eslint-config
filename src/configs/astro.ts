@@ -5,7 +5,7 @@ import type { TypedConfigItem } from "../types";
 import { GLOB_ASTRO } from "../constants";
 import { interopDefault } from "../utils/interop-default";
 
-export const astroConfig = async () => {
+export default async function astroConfig() {
   const files = [GLOB_ASTRO];
 
   const { configs, parser: parserTs } = await import("typescript-eslint");
@@ -67,4 +67,4 @@ export const astroConfig = async () => {
       },
     },
   ] satisfies TypedConfigItem[];
-};
+}

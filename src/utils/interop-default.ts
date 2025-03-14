@@ -1,4 +1,3 @@
-/* v8 ignore start */
 /**
  * Utility to safely fetch an imported `ESLint` plugin.
  *
@@ -14,6 +13,5 @@ export const interopDefault = async <T>(
   const resolved = await module;
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-explicit-any -- idk
-  return (resolved as any).default ?? resolved;
+  return (resolved as any)?.default ?? resolved;
 };
-/* v8 ignore stop */

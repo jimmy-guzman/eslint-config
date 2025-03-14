@@ -4,7 +4,7 @@ import { GLOB_E2E, GLOB_TESTS } from "../constants";
 import { vitestRules } from "../rules/vitest";
 import { interopDefault } from "../utils/interop-default";
 
-export const vitestConfig = async () => {
+export default async function vitestConfig() {
   const vitestPlugin = await interopDefault(import("@vitest/eslint-plugin"));
 
   return [
@@ -16,4 +16,4 @@ export const vitestConfig = async () => {
       rules: await vitestRules(),
     },
   ] satisfies TypedConfigItem[];
-};
+}

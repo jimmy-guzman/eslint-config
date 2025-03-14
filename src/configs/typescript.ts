@@ -1,7 +1,7 @@
 import { GLOB_JS, GLOB_JSX, GLOB_TESTS } from "../constants";
 import { typescriptRules } from "../rules/typescript";
 
-export const typescriptConfig = async () => {
+export default async function typescriptConfig() {
   const { configs } = await import("typescript-eslint");
 
   return [
@@ -32,4 +32,4 @@ export const typescriptConfig = async () => {
       },
     },
   ];
-};
+}
