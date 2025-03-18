@@ -18,11 +18,7 @@ const importsTypescriptConfig = () => {
         "import-x/external-module-folders":
           settings["import-x/external-module-folders"],
         "import-x/parsers": settings["import-x/parsers"],
-        "import-x/resolver-next": [
-          createTypeScriptImportResolver({
-            alwaysTryTypes: true,
-          }),
-        ],
+        "import-x/resolver-next": [createTypeScriptImportResolver()],
       },
     },
   ];
