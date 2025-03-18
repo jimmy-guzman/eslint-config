@@ -5199,7 +5199,7 @@ export interface RuleOptions {
    */
   'storybook/story-exports'?: Linter.RuleEntry<[]>
   /**
-   * Use expect from `@storybook/test` or `@storybook/jest`
+   * Use expect from `@storybook/test`, `storybook/test` or `@storybook/jest`
    * @see https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/use-storybook-expect.md
    */
   'storybook/use-storybook-expect'?: Linter.RuleEntry<[]>
@@ -6585,6 +6585,8 @@ type TypescriptEslintExplicitModuleBoundaryTypes = []|[{
   
   allowHigherOrderFunctions?: boolean
   
+  allowOverloadFunctions?: boolean
+  
   allowTypedFunctionExpressions?: boolean
 }]
 // ----- @typescript-eslint/init-declarations -----
@@ -7616,6 +7618,8 @@ type TypescriptEslintUnboundMethod = []|[{
 type TypescriptEslintUnifiedSignatures = []|[{
   
   ignoreDifferentlyNamedParameters?: boolean
+  
+  ignoreOverloadsWithDifferentJSDoc?: boolean
 }]
 // ----- accessor-pairs -----
 type AccessorPairs = []|[{
