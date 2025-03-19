@@ -39,7 +39,11 @@ describe("eslintConfig", () => {
       ["playwright", { playwright: true }, ["jimmy.codes/playwright"]],
       ["storybook", { storybook: true }, ["jimmy.codes/storybook/setup"]],
       ["nextjs", { nextjs: true }, ["jimmy.codes/nextjs"]],
-      ["tanstackQuery", { tanstackQuery: true }, ["jimmy.codes/react/query"]],
+      [
+        "tanstackQuery",
+        { tanstackQuery: true },
+        ["jimmy.codes/tanstack/react-query"],
+      ],
       [
         "testingLibrary",
         { testingLibrary: true },
@@ -111,7 +115,7 @@ describe("eslintConfig", () => {
     it.each([
       ["typescript", "jimmy.codes/typescript"],
       ["react", "jimmy.codes/react"],
-      ["@tanstack/react-query", "jimmy.codes/react/query"],
+      ["@tanstack/react-query", "jimmy.codes/tanstack/react-query"],
       ["vitest", "jimmy.codes/vitest"],
       ["jest", "jimmy.codes/jest"],
       ["@testing-library/react", "jimmy.codes/testing-library"],

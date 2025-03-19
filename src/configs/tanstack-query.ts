@@ -1,5 +1,3 @@
-import type { ESLint } from "eslint";
-
 import type { TypedConfigItem } from "../types";
 
 import { GLOB_JSX, GLOB_TSX } from "../constants";
@@ -13,14 +11,15 @@ export default async function tanstackQueryConfig() {
   return [
     {
       files: [GLOB_JSX, GLOB_TSX],
-      name: "jimmy.codes/react/query",
+      name: "jimmy.codes/tanstack/react-query",
       plugins: {
-        // TODO: remove unknown conversion when Plugin type is exported by @tanstack/query
-        "@tanstack/query": queryPlugin as unknown as ESLint.Plugin,
+        "@tanstack/query": queryPlugin,
       },
       rules: {
         "@tanstack/query/exhaustive-deps": "error",
-        "@tanstack/query/no-rest-destructuring": "warn",
+        "@tanstack/query/infinite-query-property-order": "error",
+        "@tanstack/query/no-rest-destructuring": "error",
+        "@tanstack/query/no-unstable-deps": "error",
         "@tanstack/query/stable-query-client": "error",
       },
     },

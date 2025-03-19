@@ -55,23 +55,20 @@ export const defineConfig = async (
   }: Options = {},
   ...moreOverrides: Linter.Config[] | TypedConfigItem[]
 ) => {
-  const resolveFlag = (explicit: boolean, detector: () => boolean) => {
+  const getFlag = (explicit: boolean, detector: () => boolean) => {
     return explicit || (autoDetect && detector());
   };
 
-  const isTypescriptEnabled = resolveFlag(typescript, hasTypescript);
-  const isReactEnabled = resolveFlag(react, hasReact);
-  const isAstroEnabled = resolveFlag(astro, hasAstro);
-  const isTanstackQueryEnabled = resolveFlag(tanstackQuery, hasReactQuery);
-  const isTestingLibraryEnabled = resolveFlag(
-    testingLibrary,
-    hasTestingLibrary,
-  );
-  const isPlaywrightEnabled = resolveFlag(playwright, hasPlaywright);
-  const isStorybookEnabled = resolveFlag(storybook, hasStorybook);
-  const isNextjsEnabled = resolveFlag(nextjs, hasNext);
-  const isJestEnabled = resolveFlag(jest, hasJest);
-  const isVitestEnabled = resolveFlag(vitest, hasVitest);
+  const isTypescriptEnabled = getFlag(typescript, hasTypescript);
+  const isReactEnabled = getFlag(react, hasReact);
+  const isAstroEnabled = getFlag(astro, hasAstro);
+  const isTanstackQueryEnabled = getFlag(tanstackQuery, hasReactQuery);
+  const isTestingLibraryEnabled = getFlag(testingLibrary, hasTestingLibrary);
+  const isPlaywrightEnabled = getFlag(playwright, hasPlaywright);
+  const isStorybookEnabled = getFlag(storybook, hasStorybook);
+  const isNextjsEnabled = getFlag(nextjs, hasNext);
+  const isJestEnabled = getFlag(jest, hasJest);
+  const isVitestEnabled = getFlag(vitest, hasVitest);
 
   const baseConfigs = [
     javascriptConfig(),
