@@ -2,7 +2,20 @@
 
 exports[`should create node rules 1`] = `
 {
+  "n/handle-callback-err": [
+    "error",
+    "^(err|error)$",
+  ],
+  "n/no-deprecated-api": "error",
+  "n/no-exports-assign": "error",
+  "n/no-new-require": "error",
+  "n/no-path-concat": "error",
   "n/no-process-exit": "off",
+  "n/prefer-global/console": [
+    "error",
+    "always",
+  ],
   "n/prefer-node-protocol": "error",
+  "n/process-exit-as-throw": "error",
 }
 `;
