@@ -12,6 +12,7 @@ import { nodeConfig } from "./configs/node";
 import { perfectionistConfig } from "./configs/perfectionist";
 import { prettierConfig } from "./configs/prettier";
 import { regexpConfig } from "./configs/regexp";
+import stylisticConfig from "./configs/stylistic";
 import { unicornConfig } from "./configs/unicorn";
 import {
   hasAstro,
@@ -79,6 +80,7 @@ export const defineConfig = async (
     regexpConfig(),
     jsdocConfig(),
     importsConfig({ typescript: isTypescriptEnabled }),
+    stylisticConfig(),
   ];
 
   const featureConfigs = await Promise.all([

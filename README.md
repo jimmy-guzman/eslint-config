@@ -3,45 +3,37 @@
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/jimmy-guzman/eslint-config/cd.yml?style=flat-square&logo=github-actions)
 [![version](https://img.shields.io/npm/v/@jimmy.codes/eslint-config.svg?logo=npm&style=flat-square)](https://www.npmjs.com/package/@jimmy.codes/eslint-config)
 [![downloads](https://img.shields.io/npm/dm/@jimmy.codes/eslint-config.svg?logo=npm&style=flat-square)](http://www.npmtrends.com/@jimmy.codes/eslint-config)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://semantic-release.gitbook.io/semantic-release)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square&logo=prettier)](https://github.com/prettier/prettier)
 
-> 🔍 A pragmatic and opinionated [ESLint](https://eslint.org) config for modern development.
+> A simple, modern ESLint config that covers most use cases.
 
-## **✨ Features**
+## **Why Use This?**
 
-- **📡 Auto-detects your stack** – Supports React, TypeScript, Astro, Next.js, Vitest, Jest, Playwright, Storybook, and TanStack Query.
-- **⚡ Efficient & lightweight** – Dynamically imports configs for better performance.
-- **🛠️ Works out of the box** – No manual setup required for most projects.
-- **🎛️ Fully customizable** – Override, extend, or disable rules to fit your needs.
-- **🔄 Always up to date** – Evolves with the latest ESLint, TypeScript, and framework best practices.
+A strict-but-practical ESLint config that **doesn’t require much thought**. It works out of the box, adapts to your stack, and enforces good patterns without getting in the way.
+
+- **Auto-detects dependencies** – Handles React, TypeScript, Astro, Next.js, Vitest, Jest, Playwright, Storybook, and TanStack Query.
+- **Prevents real issues** – Focuses on rules that actually matter.
+- **Fast & lightweight** – Loads only what’s needed, so it won’t slow you down.
+- **No setup needed** – Install it, import it, done.
+- **Customizable** – Turn off what you don’t need.
+- **Works with tests** – Supports Vitest, Jest, Playwright, and Testing Library.
+- **Encourages modern JS** – Keeps things clean and readable.
 
 ---
 
-## **🚀 Philosophy**
-
-A strict yet ergonomic ESLint config that ensures **clean, maintainable, and modern** JavaScript and TypeScript codebases.
-
-- **🛡️ Code safety first** – Enforce patterns that prevent runtime errors and unexpected behavior.
-- **📜 Embrace modern JavaScript** – Prefer maintainable, expressive, and future-proof code.
-- **⚙️ Optimized for performance** – Loads only relevant configs to keep linting fast.
-- **📏 Consistency without rigidity** – Prioritizes structure and readability over personal opinions.
-- **🧪 Built for testing** – Enforces best practices for Vitest, Jest, Playwright, and Testing Library.
-
-## 🛠️ Usage
+## Installation & Usage
 
 > [!NOTE]  
-> For a better experience, use [@jimmy.codes/prettier-config](https://github.com/jimmy-guzman/prettier-config) as well.
+> Works best with [@jimmy.codes/prettier-config](https://github.com/jimmy-guzman/prettier-config).
 
-### 🔨 Getting Started
-
-Install the package:
+### Install
 
 ```sh
 pnpm add -D @jimmy.codes/eslint-config
 ```
 
-Then, in your `eslint.config.ts`, simply add:
+### Basic Setup
+
+Add this to `eslint.config.ts`:
 
 ```mjs
 import { defineConfig } from "@jimmy.codes/eslint-config";
@@ -49,12 +41,13 @@ import { defineConfig } from "@jimmy.codes/eslint-config";
 export default defineConfig();
 ```
 
-This automatically applies rules **based on your installed dependencies**.
+It’ll auto-configure based on your installed dependencies.
 
-### 🔧 Configuration
+---
 
-By default, this config **auto-detects** relevant rules based on your dependencies (`react`, `vitest`, etc.).  
-To disable this behavior:
+## Customization
+
+### Disable Auto-Detection
 
 ```ts
 import { defineConfig } from "@jimmy.codes/eslint-config";
@@ -62,9 +55,7 @@ import { defineConfig } from "@jimmy.codes/eslint-config";
 export default defineConfig({ autoDetect: false });
 ```
 
-#### **Manually Enable/Disable Rule Sets**
-
-You can explicitly enable or disable rule sets:
+### Enable/Disable Rule Sets
 
 ```ts
 import { defineConfig } from "@jimmy.codes/eslint-config";
@@ -83,9 +74,7 @@ export default defineConfig({
 });
 ```
 
-#### **Extending/Overriding the Configuration**
-
-Use the `overrides` option:
+### Override Specific Rules
 
 ```ts
 import { defineConfig } from "@jimmy.codes/eslint-config";
@@ -108,51 +97,17 @@ export default defineConfig({
 });
 ```
 
-Alternatively, pass multiple configurations as separate arguments:
+---
 
-```ts
-import { defineConfig } from "@jimmy.codes/eslint-config";
+## Contributing
 
-export default defineConfig(
-  {},
-  {
-    files: ["**/*.js"],
-    rules: {
-      "prefer-spread": "error",
-    },
-  },
-  {
-    files: ["**/*.ts"],
-    rules: {
-      "prefer-const": "error",
-    },
-  },
-);
-```
-
-#### **Ignoring Files**
-
-Extend ignored files:
-
-```ts
-import { defineConfig } from "@jimmy.codes/eslint-config";
-
-export default defineConfig({
-  ignores: ["**/*.mjs"],
-});
-```
+PRs and issues welcome.
 
 ---
 
-## 💬 Want to Contribute or Suggest Changes?
+## Credits
 
-PRs and discussions are welcome! Open an issue if you have suggestions.
-
----
-
-## ❤️ Credits
-
-This config is inspired by:
+Inspired by:
 
 - [@antfu/eslint-config](https://github.com/antfu/eslint-config) by [Anthony Fu](https://antfu.me)
 - [@pvtnbr/eslint-config](https://github.com/privatenumber/eslint-config) by [Hiroki Osame](https://hirok.io)

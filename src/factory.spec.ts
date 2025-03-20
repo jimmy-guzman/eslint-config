@@ -17,6 +17,7 @@ describe("eslintConfig", () => {
       ["javascript"],
       ["regexp"],
       ["jsdoc"],
+      ["stylistic"],
     ])("should include %s in the base configuration", async (configName) => {
       await expect(defineConfig({ autoDetect: false })).resolves.toStrictEqual(
         expect.arrayContaining([

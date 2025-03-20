@@ -7,7 +7,7 @@ exports[`typescriptConfig > should create config 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.26.1",
+          "version": "8.27.0",
         },
         "parseForESLint": [Function],
       },
@@ -769,7 +769,7 @@ exports[`typescriptConfig > should create config 1`] = `
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.26.1",
+          "version": "8.27.0",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -4665,7 +4665,18 @@ You must still type the parameters of the function.",
               },
             ],
             "meta": {
-              "deprecated": true,
+              "deprecated": {
+                "deprecatedSince": "8.0.0",
+                "replacedBy": [
+                  {
+                    "rule": {
+                      "name": "@typescript-eslint/no-empty-object-type",
+                      "url": "https://typescript-eslint.io/rules/no-empty-object-type",
+                    },
+                  },
+                ],
+                "url": "https://github.com/typescript-eslint/typescript-eslint/pull/8977",
+              },
               "docs": {
                 "description": "Disallow the declaration of empty interfaces",
                 "url": "https://typescript-eslint.io/rules/no-empty-interface",
@@ -5334,7 +5345,18 @@ You must still type the parameters of the function.",
             "create": [Function],
             "defaultOptions": [],
             "meta": {
-              "deprecated": true,
+              "deprecated": {
+                "deprecatedSince": "8.0.0",
+                "replacedBy": [
+                  {
+                    "rule": {
+                      "name": "no-loss-of-precision",
+                      "url": "https://eslint.org/docs/latest/rules/no-loss-of-precision",
+                    },
+                  },
+                ],
+                "url": "https://github.com/typescript-eslint/typescript-eslint/pull/8832",
+              },
               "docs": {
                 "description": "Disallow literal numbers that lose precision",
                 "extendsBaseRule": true,
@@ -6331,7 +6353,18 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               },
             ],
             "meta": {
-              "deprecated": true,
+              "deprecated": {
+                "deprecatedSince": "6.0.0",
+                "replacedBy": [
+                  {
+                    "rule": {
+                      "name": "@typescript-eslint/consistent-type-definitions",
+                      "url": "https://typescript-eslint.io/rules/consistent-type-definitions",
+                    },
+                  },
+                ],
+                "url": "https://github.com/typescript-eslint/typescript-eslint/pull/6229",
+              },
               "docs": {
                 "description": "Disallow type aliases",
                 "url": "https://typescript-eslint.io/rules/no-type-alias",
@@ -7109,7 +7142,18 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               },
             ],
             "meta": {
-              "deprecated": true,
+              "deprecated": {
+                "deprecatedSince": "8.0.0",
+                "replacedBy": [
+                  {
+                    "rule": {
+                      "name": "@typescript-eslint/no-require-imports",
+                      "url": "https://typescript-eslint.io/rules/no-require-imports",
+                    },
+                  },
+                ],
+                "url": "https://github.com/typescript-eslint/typescript-eslint/pull/8334",
+              },
               "docs": {
                 "description": "Disallow \`require\` statements except in import statements",
                 "url": "https://typescript-eslint.io/rules/no-var-requires",
@@ -8121,7 +8165,18 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
             "create": [Function],
             "defaultOptions": [],
             "meta": {
-              "deprecated": true,
+              "deprecated": {
+                "deprecatedSince": "7.11.0",
+                "replacedBy": [
+                  {
+                    "rule": {
+                      "name": "@typescript-eslint/ban-ts-comment",
+                      "url": "https://typescript-eslint.io/rules/ban-ts-comment",
+                    },
+                  },
+                ],
+                "url": "https://github.com/typescript-eslint/typescript-eslint/pull/9081",
+              },
               "docs": {
                 "description": "Enforce using \`@ts-expect-error\` over \`@ts-ignore\`",
                 "url": "https://typescript-eslint.io/rules/prefer-ts-expect-error",
@@ -8615,7 +8670,32 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               },
             ],
             "meta": {
-              "deprecated": true,
+              "deprecated": {
+                "deprecatedSince": "7.13.0",
+                "replacedBy": [
+                  {
+                    "plugin": {
+                      "name": "eslint-plugin-perfectionist",
+                      "url": "https://perfectionist.dev",
+                    },
+                    "rule": {
+                      "name": "perfectionist/sort-intersection-types",
+                      "url": "https://perfectionist.dev/rules/sort-intersection-types",
+                    },
+                  },
+                  {
+                    "plugin": {
+                      "name": "eslint-plugin-perfectionist",
+                      "url": "https://perfectionist.dev",
+                    },
+                    "rule": {
+                      "name": "perfectionist/sort-union-types",
+                      "url": "https://perfectionist.dev/rules/sort-union-types",
+                    },
+                  },
+                ],
+                "url": "https://github.com/typescript-eslint/typescript-eslint/pull/9253",
+              },
               "docs": {
                 "description": "Enforce constituents of a type union/intersection to be sorted alphabetically",
                 "url": "https://typescript-eslint.io/rules/sort-type-constituents",
