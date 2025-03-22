@@ -1,7 +1,7 @@
 import type { Rules } from "../types";
 
 import { interopDefault } from "../utils/interop-default";
-import { warningAsErrors } from "../utils/warnings-as-errors";
+import { upwarn } from "../utils/upwarn";
 
 export default async function storybookConfig() {
   const { configs } = await interopDefault(import("eslint-plugin-storybook"));
@@ -17,7 +17,7 @@ export default async function storybookConfig() {
       files: storiesConfig?.files,
       name: "jimmy.codes/storybook/stories-rules",
       rules: {
-        ...warningAsErrors(storiesConfig?.rules),
+        ...upwarn(storiesConfig?.rules),
         "import-x/no-anonymous-default-export": "off",
         "unicorn/no-anonymous-default-export": "off",
       } satisfies Rules,

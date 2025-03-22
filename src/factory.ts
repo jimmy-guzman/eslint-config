@@ -79,7 +79,7 @@ export const defineConfig = async (
     eslintCommentsConfig(),
     regexpConfig(),
     jsdocConfig(),
-    importsConfig({ typescript: isTypescriptEnabled }),
+    importsConfig({ isTypescriptEnabled }),
     stylisticConfig(),
   ];
 

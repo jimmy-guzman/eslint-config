@@ -25,11 +25,11 @@ const importsTypescriptConfig = () => {
 };
 
 interface ImportsConfigOptions {
-  typescript?: boolean;
+  isTypescriptEnabled?: boolean;
 }
 
 export const importsConfig = ({
-  typescript = false,
+  isTypescriptEnabled = false,
 }: ImportsConfigOptions = {}) => {
   return [
     {
@@ -40,6 +40,6 @@ export const importsConfig = ({
       },
       rules: importsRules,
     },
-    ...(typescript ? importsTypescriptConfig() : []),
+    ...(isTypescriptEnabled ? importsTypescriptConfig() : []),
   ] as const satisfies TypedConfigItem[];
 };

@@ -1,20 +1,20 @@
-import { warningAsErrors } from "./warnings-as-errors";
+import { upwarn } from "./upwarn";
 
-describe("warningAsErrors", () => {
+describe("upwarn", () => {
   it("should return empty object when no rules", () => {
-    const ruleEntries = warningAsErrors();
+    const ruleEntries = upwarn();
 
     expect(ruleEntries).toMatchInlineSnapshot(`{}`);
   });
 
   it("should return empty object when empty rules", () => {
-    const ruleEntries = warningAsErrors({});
+    const ruleEntries = upwarn({});
 
     expect(ruleEntries).toMatchInlineSnapshot(`{}`);
   });
 
   it("should change warnings to errors", () => {
-    const ruleEntries = warningAsErrors({
+    const ruleEntries = upwarn({
       "react/forbid-prop-types": "warn",
       "react/jsx-uses-react": "error",
       "react/react-in-jsx-scope": "warn",

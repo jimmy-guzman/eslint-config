@@ -50,4 +50,12 @@ describe("reactRules", () => {
 
     expect(allowConstantExport).toBe(true);
   });
+
+  it("should enable recommended TypeScript rules", async () => {
+    vi.mocked(isPackageExists).mockImplementation((name) => {
+      return name === "typescript";
+    });
+
+    await expect(reactRules()).resolves.toMatchSnapshot();
+  });
 });

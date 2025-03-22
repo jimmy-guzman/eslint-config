@@ -14,12 +14,14 @@ export default async function reactConfig() {
     reactRefreshPlugin,
     reactCompilerPlugin,
   ] = await Promise.all([
-    interopDefault(import("eslint-plugin-react")),
+    interopDefault(import("@eslint-react/eslint-plugin")),
     interopDefault(import("eslint-plugin-jsx-a11y")),
     import("eslint-plugin-react-hooks"),
     interopDefault(import("eslint-plugin-react-refresh")),
     import("eslint-plugin-react-compiler"),
   ]);
+
+  const reactPlugins = reactPlugin.configs.all.plugins;
 
   return [
     {
@@ -37,8 +39,11 @@ export default async function reactConfig() {
       },
       name: "jimmy.codes/react",
       plugins: {
+        "@eslint-react": reactPlugins["@eslint-react"],
+        "@eslint-react/dom": reactPlugins["@eslint-react/dom"],
+        "@eslint-react/hooks-extra": reactPlugins["@eslint-react/hooks-extra"],
+        "@eslint-react/web-api": reactPlugins["@eslint-react/web-api"],
         "jsx-a11y": jsxA11yPlugin,
-        "react": reactPlugin,
         "react-compiler": reactCompilerPlugin,
         "react-hooks": reactHooksPlugin,
         "react-refresh": reactRefreshPlugin,

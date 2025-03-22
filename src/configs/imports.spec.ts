@@ -9,14 +9,14 @@ describe("importsConfig", () => {
   });
 
   it("should contain typescript config when enabled", () => {
-    const [base, typescript] = importsConfig({ typescript: true });
+    const [base, typescript] = importsConfig({ isTypescriptEnabled: true });
 
     expect(base.name).toBe("jimmy.codes/imports");
     expect(typescript?.name).toBe("jimmy.codes/imports/typescript");
   });
 
   it("should contain typescript settings config when enabled", () => {
-    const [_base, typescript] = importsConfig({ typescript: true });
+    const [_base, typescript] = importsConfig({ isTypescriptEnabled: true });
 
     expect(typescript?.settings).toMatchInlineSnapshot(`
       {
