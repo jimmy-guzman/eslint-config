@@ -13,6 +13,7 @@ describe("storybook", () => {
         "storybook/context-in-play-function": "error",
         "storybook/default-exports": "error",
         "storybook/hierarchy-separator": "error",
+        "storybook/meta-satisfies-type": "error",
         "storybook/no-redundant-story-name": "error",
         "storybook/prefer-pascal-case": "error",
         "storybook/story-exports": "error",

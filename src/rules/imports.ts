@@ -1,9 +1,9 @@
-import importX from "eslint-plugin-import-x";
+import { configs } from "eslint-plugin-import-x";
 
 import type { Rules } from "../types";
 
 export const importsRules = {
-  ...importX.configs.recommended.rules,
+  ...configs.recommended.rules,
   "import-x/consistent-type-specifier-style": ["error", "prefer-top-level"],
   "import-x/extensions": [
     "error",

@@ -19,6 +19,7 @@ export default async function storybookConfig() {
       rules: {
         ...upwarn(storiesConfig?.rules),
         "import-x/no-anonymous-default-export": "off",
+        "storybook/meta-satisfies-type": "error",
         "unicorn/no-anonymous-default-export": "off",
       } satisfies Rules,
     },

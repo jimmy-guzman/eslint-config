@@ -1,5 +1,5 @@
 import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
-import importX from "eslint-plugin-import-x";
+import importX, { configs } from "eslint-plugin-import-x";
 import nodePlugin from "eslint-plugin-n";
 
 import type { TypedConfigItem } from "../types";
@@ -7,7 +7,7 @@ import type { TypedConfigItem } from "../types";
 import { importsRules } from "../rules/imports";
 
 const importsTypescriptConfig = () => {
-  const { rules, settings } = importX.configs.typescript;
+  const { rules, settings } = configs.typescript;
 
   return [
     {

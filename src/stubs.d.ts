@@ -17,6 +17,7 @@ declare module "@eslint-community/eslint-plugin-eslint-comments/configs" {
   export = { recommended };
 }
 
+// TODO: remove if/when https://github.com/vercel/next.js/discussions/74957 is implemented.
 declare module "@next/eslint-plugin-next" {
   import type { ESLint, Linter } from "eslint";
 
