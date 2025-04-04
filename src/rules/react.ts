@@ -44,6 +44,7 @@ export const reactRules = async () => {
     "@eslint-react/hooks-extra/prefer-use-state-lazy-initialization": "error",
     "@eslint-react/no-children-prop": "error",
     "@eslint-react/no-complex-conditional-rendering": "error",
+    "@eslint-react/no-useless-fragment": "error",
     "@eslint-react/prefer-react-namespace-import": "error",
     "@eslint-react/prefer-shorthand-boolean": "error",
     "@eslint-react/prefer-shorthand-fragment": "error",

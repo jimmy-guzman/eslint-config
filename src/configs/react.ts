@@ -42,6 +42,8 @@ export default async function reactConfig() {
         "@eslint-react": reactPlugins["@eslint-react"],
         "@eslint-react/dom": reactPlugins["@eslint-react/dom"],
         "@eslint-react/hooks-extra": reactPlugins["@eslint-react/hooks-extra"],
+        "@eslint-react/naming-convention":
+          reactPlugins["@eslint-react/naming-convention"],
         "@eslint-react/web-api": reactPlugins["@eslint-react/web-api"],
         "jsx-a11y": jsxA11yPlugin,
         "react-compiler": reactCompilerPlugin,

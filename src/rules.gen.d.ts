@@ -205,14 +205,49 @@ export interface RuleOptions {
   '@eslint-react/hooks-extra/prefer-use-state-lazy-initialization'?: Linter.RuleEntry<[]>
   /**
    * Disallow duplicate props in JSX elements.
-   * @see https://eslint-react.xyz/docs/rules/no-duplicate-jsx-props
+   * @see https://eslint-react.xyz/docs/rules/jsx-no-duplicate-props
    */
   '@eslint-react/jsx-no-duplicate-props'?: Linter.RuleEntry<[]>
   /**
-   * Marks variables used in JSX as used.
-   * @see https://eslint-react.xyz/docs/rules/use-jsx-vars
+   * Disallow undefined variables in JSX.
+   * @see https://eslint-react.xyz/docs/rules/jsx-no-undef
+   */
+  '@eslint-react/jsx-no-undef'?: Linter.RuleEntry<[]>
+  /**
+   * Marks React variables as used when JSX is used in the file.
+   * @see https://eslint-react.xyz/docs/rules/jsx-uses-react
+   */
+  '@eslint-react/jsx-uses-react'?: Linter.RuleEntry<[]>
+  /**
+   * Marks variables used in JSX elements as used.
+   * @see https://eslint-react.xyz/docs/rules/jsx-uses-vars
    */
   '@eslint-react/jsx-uses-vars'?: Linter.RuleEntry<[]>
+  /**
+   * Enforces naming conventions for components.
+   * @see https://eslint-react.xyz/docs/rules/naming-convention-component-name
+   */
+  '@eslint-react/naming-convention/component-name'?: Linter.RuleEntry<EslintReactNamingConventionComponentName>
+  /**
+   * Enforces context name to be a valid component name with the suffix `Context`.
+   * @see https://eslint-react.xyz/docs/rules/naming-convention-context-name
+   */
+  '@eslint-react/naming-convention/context-name'?: Linter.RuleEntry<[]>
+  /**
+   * Enforces consistent file naming conventions.
+   * @see https://eslint-react.xyz/docs/rules/naming-convention-filename
+   */
+  '@eslint-react/naming-convention/filename'?: Linter.RuleEntry<EslintReactNamingConventionFilename>
+  /**
+   * Enforces consistent file naming conventions.
+   * @see https://eslint-react.xyz/docs/rules/naming-convention-filename-extension
+   */
+  '@eslint-react/naming-convention/filename-extension'?: Linter.RuleEntry<EslintReactNamingConventionFilenameExtension>
+  /**
+   * Enforces destructuring and symmetric naming of `useState` hook value and setter.
+   * @see https://eslint-react.xyz/docs/rules/naming-convention-use-state
+   */
+  '@eslint-react/naming-convention/use-state'?: Linter.RuleEntry<[]>
   /**
    * Disallow accessing `this.state` inside `setState` calls.
    * @see https://eslint-react.xyz/docs/rules/no-access-state-in-setstate
@@ -315,7 +350,7 @@ export interface RuleOptions {
   '@eslint-react/no-direct-mutation-state'?: Linter.RuleEntry<[]>
   /**
    * Disallow duplicate props in JSX elements.
-   * @see https://eslint-react.xyz/docs/rules/no-duplicate-jsx-props
+   * @see https://eslint-react.xyz/docs/rules/jsx-no-duplicate-props
    */
   '@eslint-react/no-duplicate-jsx-props'?: Linter.RuleEntry<[]>
   /**
@@ -469,8 +504,8 @@ export interface RuleOptions {
    */
   '@eslint-react/prefer-shorthand-fragment'?: Linter.RuleEntry<[]>
   /**
-   * Marks variables used in JSX as used.
-   * @see https://eslint-react.xyz/docs/rules/use-jsx-vars
+   * Marks variables used in JSX elements as used.
+   * @see https://eslint-react.xyz/docs/rules/jsx-uses-vars
    */
   '@eslint-react/use-jsx-vars'?: Linter.RuleEntry<[]>
   /**
@@ -6806,6 +6841,26 @@ type EslintReactDomNoUnknownProperty = []|[{
   ignore?: string[]
   requireDataLowercase?: boolean
 }]
+// ----- @eslint-react/naming-convention/component-name -----
+type EslintReactNamingConventionComponentName = []|[(("PascalCase" | "CONSTANT_CASE") | {
+  allowAllCaps?: boolean
+  allowLeadingUnderscore?: boolean
+  allowNamespace?: boolean
+  excepts?: string[]
+  rule?: ("PascalCase" | "CONSTANT_CASE")
+})]
+// ----- @eslint-react/naming-convention/filename -----
+type EslintReactNamingConventionFilename = []|[(("PascalCase" | "camelCase" | "kebab-case" | "snake_case") | {
+  excepts?: string[]
+  extensions?: string[]
+  rule?: ("PascalCase" | "camelCase" | "kebab-case" | "snake_case")
+})]
+// ----- @eslint-react/naming-convention/filename-extension -----
+type EslintReactNamingConventionFilenameExtension = []|[(("always" | "as-needed") | {
+  allow?: ("always" | "as-needed")
+  extensions?: string[]
+  ignoreFilesWithoutCode?: boolean
+})]
 // ----- @eslint-react/no-useless-fragment -----
 type EslintReactNoUselessFragment = []|[{
   
