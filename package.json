@@ -102,13 +102,13 @@
     "storybook": "8.6.12",
     "tsup": "8.4.0",
     "tsx": "4.19.3",
-    "typescript": "5.8.2",
+    "typescript": "5.8.3",
     "vitest": "3.1.1"
   },
   "peerDependencies": {
     "eslint": "^9.10.0"
   },
-  "packageManager": "pnpm@9.15.4",
+  "packageManager": "pnpm@10.7.1",
   "engines": {
     "node": ">= 20"
   },

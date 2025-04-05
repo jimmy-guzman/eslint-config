@@ -1,0 +1,8 @@
+onlyBuiltDependencies:
+  - esbuild
+  - lefthook
+  - sharp
+autoInstallPeers: false
+color: always
+engineStrict: true
+savePrefix: ""
