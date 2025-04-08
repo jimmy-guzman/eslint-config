@@ -45,5 +45,13 @@ export const jestRules = async () => {
     "jest/require-to-throw-message": "error",
     "jest/require-top-level-describe": "off",
     "jest/unbound-method": "off", // requires typescript
+    "jest/valid-title": [
+      "error",
+      {
+        mustMatch: {
+          it: "^should",
+        },
+      },
+    ],
   } satisfies Rules;
 };

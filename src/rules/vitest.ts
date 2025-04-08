@@ -59,6 +59,13 @@ export const vitestRules = async () => {
     // "vitest/unbound-method": "off", // requires typescript, missing https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/unbound-method.md
     "vitest/valid-expect": "error",
     "vitest/valid-expect-in-promise": "error",
-    "vitest/valid-title": "error",
+    "vitest/valid-title": [
+      "error",
+      {
+        mustMatch: {
+          it: "^should",
+        },
+      },
+    ],
   } satisfies Rules;
 };

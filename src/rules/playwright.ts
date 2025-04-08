@@ -24,5 +24,13 @@ export const playwrightRules = async () => {
     "playwright/no-useless-not": "error",
     "playwright/no-wait-for-selector": "error",
     "playwright/no-wait-for-timeout": "error",
+    "playwright/valid-title": [
+      "error",
+      {
+        mustMatch: {
+          it: "^should",
+        },
+      },
+    ],
   } satisfies Rules;
 };

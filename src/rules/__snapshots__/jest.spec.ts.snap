@@ -57,6 +57,13 @@ exports[`should create jest rules 1`] = `
   "jest/valid-describe-callback": "error",
   "jest/valid-expect": "error",
   "jest/valid-expect-in-promise": "error",
-  "jest/valid-title": "error",
+  "jest/valid-title": [
+    "error",
+    {
+      "mustMatch": {
+        "it": "^should",
+      },
+    },
+  ],
 }
 `;
