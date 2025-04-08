@@ -12,10 +12,7 @@ export const unicornRules = {
   "unicorn/no-array-reduce": "off",
   "unicorn/no-null": "off",
   "unicorn/no-process-exit": "off",
-  "unicorn/no-useless-undefined": [
-    "error",
-    { checkArguments: false, checkArrowFunctionBody: false },
-  ],
+  "unicorn/no-useless-undefined": "off",
   "unicorn/prefer-node-protocol": "off",
   "unicorn/prevent-abbreviations": "off",
 } satisfies Rules;
