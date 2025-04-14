@@ -214,7 +214,7 @@ export interface RuleOptions {
    */
   '@eslint-react/jsx-no-undef'?: Linter.RuleEntry<[]>
   /**
-   * Marks React variables as used when JSX is used in the file.
+   * Marks React variables as used when JSX is used.
    * @see https://eslint-react.xyz/docs/rules/jsx-uses-react
    */
   '@eslint-react/jsx-uses-react'?: Linter.RuleEntry<[]>
@@ -289,7 +289,7 @@ export interface RuleOptions {
    */
   '@eslint-react/no-children-to-array'?: Linter.RuleEntry<[]>
   /**
-   * Disallow class components.
+   * Disallow class components except for error boundaries.
    * @see https://eslint-react.xyz/docs/rules/no-class-component
    */
   '@eslint-react/no-class-component'?: Linter.RuleEntry<[]>
@@ -389,6 +389,11 @@ export interface RuleOptions {
    */
   '@eslint-react/no-missing-key'?: Linter.RuleEntry<[]>
   /**
+   * Prevents incorrect usage of `captureOwnerStack`.
+   * @see https://eslint-react.xyz/docs/rules/no-misused-capture-owner-stack
+   */
+  '@eslint-react/no-misused-capture-owner-stack'?: Linter.RuleEntry<[]>
+  /**
    * Disallow nesting component definitions inside other components.
    * @see https://eslint-react.xyz/docs/rules/no-nested-component-definitions
    */
@@ -398,6 +403,11 @@ export interface RuleOptions {
    * @see https://eslint-react.xyz/docs/rules/no-nested-component-definitions
    */
   '@eslint-react/no-nested-components'?: Linter.RuleEntry<[]>
+  /**
+   * Disallow nesting lazy component declarations inside other components.
+   * @see https://eslint-react.xyz/docs/rules/no-nested-component-definitions
+   */
+  '@eslint-react/no-nested-lazy-component-declarations'?: Linter.RuleEntry<[]>
   /**
    * Disallow `propTypes` in favor of TypeScript or another type-checking solution.
    * @see https://eslint-react.xyz/docs/rules/no-prop-types
@@ -414,7 +424,7 @@ export interface RuleOptions {
    */
   '@eslint-react/no-set-state-in-component-did-mount'?: Linter.RuleEntry<[]>
   /**
-   * Disallows calling `this.setState` in `componentDidUpdate` outside of functions, such as callbacks.
+   * Disallow calling `this.setState` in `componentDidUpdate` outside of functions, such as callbacks.
    * @see https://eslint-react.xyz/docs/rules/no-set-state-in-component-did-update
    */
   '@eslint-react/no-set-state-in-component-did-update'?: Linter.RuleEntry<[]>
@@ -424,7 +434,7 @@ export interface RuleOptions {
    */
   '@eslint-react/no-set-state-in-component-will-update'?: Linter.RuleEntry<[]>
   /**
-   * Disallow deprecated string `refs`.
+   * Replaces string refs with callback refs.
    * @see https://eslint-react.xyz/docs/rules/no-string-refs
    */
   '@eslint-react/no-string-refs'?: Linter.RuleEntry<[]>
