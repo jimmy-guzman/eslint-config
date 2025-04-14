@@ -20,6 +20,7 @@ export default async function tanstackQueryConfig() {
         "@tanstack/query/infinite-query-property-order": "error",
         "@tanstack/query/no-rest-destructuring": "error",
         "@tanstack/query/no-unstable-deps": "error",
+        "@tanstack/query/no-void-query-fn": "error",
         "@tanstack/query/stable-query-client": "error",
       },
     },
