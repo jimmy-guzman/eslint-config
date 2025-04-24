@@ -7,7 +7,7 @@ exports[`typescriptConfig > should create config 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.30.1",
+          "version": "8.31.0",
         },
         "parseForESLint": [Function],
       },
@@ -293,7 +293,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.30.1",
+                    "version": "8.31.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -498,7 +498,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.30.1",
+                  "version": "8.31.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -619,7 +619,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.30.1",
+                    "version": "8.31.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -699,7 +699,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.30.1",
+                    "version": "8.31.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -806,7 +806,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.30.1",
+                    "version": "8.31.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -890,7 +890,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.30.1",
+                    "version": "8.31.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1128,7 +1128,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.30.1",
+                    "version": "8.31.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1250,7 +1250,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.30.1",
+                    "version": "8.31.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1321,7 +1321,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.30.1",
+                    "version": "8.31.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1401,7 +1401,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.30.1",
+                    "version": "8.31.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1944,7 +1944,7 @@ exports[`typescriptConfig > should create config 1`] = `
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.30.1",
+          "version": "8.31.0",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -7814,6 +7814,10 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
                 {
                   "additionalProperties": false,
                   "properties": {
+                    "checkLiteralConstAssertions": {
+                      "description": "Whether to check literal const assertions.",
+                      "type": "boolean",
+                    },
                     "typesToIgnore": {
                       "description": "A list of type names to ignore.",
                       "items": {

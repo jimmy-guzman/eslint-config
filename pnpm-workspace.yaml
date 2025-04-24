@@ -2,7 +2,12 @@ onlyBuiltDependencies:
   - esbuild
   - lefthook
   - sharp
+  - unrs-resolver
+
 autoInstallPeers: false
+
 color: always
+
 engineStrict: true
+
 savePrefix: ""
