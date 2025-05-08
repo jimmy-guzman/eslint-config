@@ -14,6 +14,7 @@ export const typescriptRules = {
     "error",
     { checksVoidReturn: { attributes: false } },
   ],
+  "@typescript-eslint/no-unnecessary-type-conversion": "error",
   "@typescript-eslint/no-unused-vars": [
     "error",
     // https://typescript-eslint.io/rules/no-unused-vars/#benefits-over-typescript
