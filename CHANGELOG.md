@@ -1,3 +1,11 @@
+# [5.13.0](https://github.com/jimmy-guzman/eslint-config/compare/v5.12.0...v5.13.0) (2025-05-08)
+
+
+### Features
+
+* ✨ bump deps to latest ([4452cf2](https://github.com/jimmy-guzman/eslint-config/commit/4452cf2b4e25160b33be5fa05d7c70f0f1492cc1))
+* ✨ enable typescript-eslint/no-unnecessary-type-conversion ([90c29a7](https://github.com/jimmy-guzman/eslint-config/commit/90c29a78cdc3d7a439ac7e2ad1efbd52dc09e6ce))
+
 # [5.12.0](https://github.com/jimmy-guzman/eslint-config/compare/v5.11.0...v5.12.0) (2025-04-25)
 
 
