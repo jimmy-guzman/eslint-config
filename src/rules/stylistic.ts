@@ -1,6 +1,7 @@
 import type { Rules } from "../types";
 
 export const stylisticRules = {
+  "@stylistic/jsx/jsx-curly-brace-presence": ["error", "never"],
   "@stylistic/object-curly-newline": [
     "error",
     {

@@ -864,6 +864,107 @@ export interface RuleOptions {
    */
   '@stylistic/jsx-wrap-multilines'?: Linter.RuleEntry<StylisticJsxWrapMultilines>
   /**
+   * Enforce or disallow spaces inside of curly braces in JSX attributes and expressions
+   * @see https://eslint.style/rules/jsx/jsx-child-element-spacing
+   */
+  '@stylistic/jsx/jsx-child-element-spacing'?: Linter.RuleEntry<[]>
+  /**
+   * Enforce closing bracket location in JSX
+   * @see https://eslint.style/rules/jsx/jsx-closing-bracket-location
+   */
+  '@stylistic/jsx/jsx-closing-bracket-location'?: Linter.RuleEntry<StylisticJsxJsxClosingBracketLocation>
+  /**
+   * Enforce closing tag location for multiline JSX
+   * @see https://eslint.style/rules/jsx/jsx-closing-tag-location
+   */
+  '@stylistic/jsx/jsx-closing-tag-location'?: Linter.RuleEntry<StylisticJsxJsxClosingTagLocation>
+  /**
+   * Disallow unnecessary JSX expressions when literals alone are sufficient or enforce JSX expressions on literals in JSX children or attributes
+   * @see https://eslint.style/rules/jsx/jsx-curly-brace-presence
+   */
+  '@stylistic/jsx/jsx-curly-brace-presence'?: Linter.RuleEntry<StylisticJsxJsxCurlyBracePresence>
+  /**
+   * Enforce consistent linebreaks in curly braces in JSX attributes and expressions
+   * @see https://eslint.style/rules/jsx/jsx-curly-newline
+   */
+  '@stylistic/jsx/jsx-curly-newline'?: Linter.RuleEntry<StylisticJsxJsxCurlyNewline>
+  /**
+   * Enforce or disallow spaces inside of curly braces in JSX attributes and expressions
+   * @see https://eslint.style/rules/jsx/jsx-curly-spacing
+   */
+  '@stylistic/jsx/jsx-curly-spacing'?: Linter.RuleEntry<StylisticJsxJsxCurlySpacing>
+  /**
+   * Enforce or disallow spaces around equal signs in JSX attributes
+   * @see https://eslint.style/rules/jsx/jsx-equals-spacing
+   */
+  '@stylistic/jsx/jsx-equals-spacing'?: Linter.RuleEntry<StylisticJsxJsxEqualsSpacing>
+  /**
+   * Enforce proper position of the first property in JSX
+   * @see https://eslint.style/rules/jsx/jsx-first-prop-new-line
+   */
+  '@stylistic/jsx/jsx-first-prop-new-line'?: Linter.RuleEntry<StylisticJsxJsxFirstPropNewLine>
+  /**
+   * Enforce line breaks before and after JSX elements when they are used as arguments to a function.
+   * @see https://eslint.style/rules/jsx/jsx-function-call-newline
+   */
+  '@stylistic/jsx/jsx-function-call-newline'?: Linter.RuleEntry<StylisticJsxJsxFunctionCallNewline>
+  /**
+   * Enforce JSX indentation. Deprecated, use `indent` rule instead.
+   * @see https://eslint.style/rules/jsx/jsx-indent
+   * @deprecated
+   */
+  '@stylistic/jsx/jsx-indent'?: Linter.RuleEntry<StylisticJsxJsxIndent>
+  /**
+   * Enforce props indentation in JSX
+   * @see https://eslint.style/rules/jsx/jsx-indent-props
+   */
+  '@stylistic/jsx/jsx-indent-props'?: Linter.RuleEntry<StylisticJsxJsxIndentProps>
+  /**
+   * Enforce maximum of props on a single line in JSX
+   * @see https://eslint.style/rules/jsx/jsx-max-props-per-line
+   */
+  '@stylistic/jsx/jsx-max-props-per-line'?: Linter.RuleEntry<StylisticJsxJsxMaxPropsPerLine>
+  /**
+   * Require or prevent a new line after jsx elements and expressions.
+   * @see https://eslint.style/rules/jsx/jsx-newline
+   */
+  '@stylistic/jsx/jsx-newline'?: Linter.RuleEntry<StylisticJsxJsxNewline>
+  /**
+   * Require one JSX element per line
+   * @see https://eslint.style/rules/jsx/jsx-one-expression-per-line
+   */
+  '@stylistic/jsx/jsx-one-expression-per-line'?: Linter.RuleEntry<StylisticJsxJsxOneExpressionPerLine>
+  /**
+   * Enforce PascalCase for user-defined JSX components
+   * @see https://eslint.style/rules/jsx/jsx-pascal-case
+   */
+  '@stylistic/jsx/jsx-pascal-case'?: Linter.RuleEntry<StylisticJsxJsxPascalCase>
+  /**
+   * Disallow multiple spaces between inline JSX props
+   * @see https://eslint.style/rules/jsx/jsx-props-no-multi-spaces
+   */
+  '@stylistic/jsx/jsx-props-no-multi-spaces'?: Linter.RuleEntry<[]>
+  /**
+   * Disallow extra closing tags for components without children
+   * @see https://eslint.style/rules/jsx/jsx-self-closing-comp
+   */
+  '@stylistic/jsx/jsx-self-closing-comp'?: Linter.RuleEntry<StylisticJsxJsxSelfClosingComp>
+  /**
+   * Enforce props alphabetical sorting
+   * @see https://eslint.style/rules/jsx/jsx-sort-props
+   */
+  '@stylistic/jsx/jsx-sort-props'?: Linter.RuleEntry<StylisticJsxJsxSortProps>
+  /**
+   * Enforce whitespace in and around the JSX opening and closing brackets
+   * @see https://eslint.style/rules/jsx/jsx-tag-spacing
+   */
+  '@stylistic/jsx/jsx-tag-spacing'?: Linter.RuleEntry<StylisticJsxJsxTagSpacing>
+  /**
+   * Disallow missing parentheses around multiline JSX
+   * @see https://eslint.style/rules/jsx/jsx-wrap-multilines
+   */
+  '@stylistic/jsx/jsx-wrap-multilines'?: Linter.RuleEntry<StylisticJsxJsxWrapMultilines>
+  /**
    * Enforce consistent spacing between property names and type annotations in types and interfaces
    * @see https://eslint.style/rules/ts/key-spacing
    */
@@ -7289,6 +7390,130 @@ type StylisticJsxTagSpacing = []|[{
 }]
 // ----- @stylistic/jsx-wrap-multilines -----
 type StylisticJsxWrapMultilines = []|[{
+  declaration?: ((true | false | "ignore" | "parens" | "parens-new-line") | (true | false | "ignore" | "parens" | "parens-new-line"))
+  assignment?: ((true | false | "ignore" | "parens" | "parens-new-line") | (true | false | "ignore" | "parens" | "parens-new-line"))
+  return?: ((true | false | "ignore" | "parens" | "parens-new-line") | (true | false | "ignore" | "parens" | "parens-new-line"))
+  arrow?: ((true | false | "ignore" | "parens" | "parens-new-line") | (true | false | "ignore" | "parens" | "parens-new-line"))
+  condition?: ((true | false | "ignore" | "parens" | "parens-new-line") | (true | false | "ignore" | "parens" | "parens-new-line"))
+  logical?: ((true | false | "ignore" | "parens" | "parens-new-line") | (true | false | "ignore" | "parens" | "parens-new-line"))
+  prop?: ((true | false | "ignore" | "parens" | "parens-new-line") | (true | false | "ignore" | "parens" | "parens-new-line"))
+  propertyValue?: ((true | false | "ignore" | "parens" | "parens-new-line") | (true | false | "ignore" | "parens" | "parens-new-line"))
+}]
+// ----- @stylistic/jsx/jsx-closing-bracket-location -----
+type StylisticJsxJsxClosingBracketLocation = []|[(("after-props" | "props-aligned" | "tag-aligned" | "line-aligned") | {
+  location?: ("after-props" | "props-aligned" | "tag-aligned" | "line-aligned")
+} | {
+  nonEmpty?: (("after-props" | "props-aligned" | "tag-aligned" | "line-aligned") | false)
+  selfClosing?: (("after-props" | "props-aligned" | "tag-aligned" | "line-aligned") | false)
+})]
+// ----- @stylistic/jsx/jsx-closing-tag-location -----
+type StylisticJsxJsxClosingTagLocation = []|[("tag-aligned" | "line-aligned")]
+// ----- @stylistic/jsx/jsx-curly-brace-presence -----
+type StylisticJsxJsxCurlyBracePresence = []|[({
+  props?: ("always" | "never" | "ignore")
+  children?: ("always" | "never" | "ignore")
+  propElementValues?: ("always" | "never" | "ignore")
+} | ("always" | "never" | "ignore"))]
+// ----- @stylistic/jsx/jsx-curly-newline -----
+type StylisticJsxJsxCurlyNewline = []|[(("consistent" | "never") | {
+  singleline?: ("consistent" | "require" | "forbid")
+  multiline?: ("consistent" | "require" | "forbid")
+})]
+// ----- @stylistic/jsx/jsx-curly-spacing -----
+type StylisticJsxJsxCurlySpacing = []|[((_StylisticJsxJsxCurlySpacing_BasicConfig & {
+  attributes?: _StylisticJsxJsxCurlySpacingBasicConfigOrBoolean
+  children?: _StylisticJsxJsxCurlySpacingBasicConfigOrBoolean
+  [k: string]: unknown | undefined
+}) | ("always" | "never"))]|[((_StylisticJsxJsxCurlySpacing_BasicConfig & {
+  attributes?: _StylisticJsxJsxCurlySpacingBasicConfigOrBoolean
+  children?: _StylisticJsxJsxCurlySpacingBasicConfigOrBoolean
+  [k: string]: unknown | undefined
+}) | ("always" | "never")), {
+  allowMultiline?: boolean
+  spacing?: {
+    objectLiterals?: ("always" | "never")
+    [k: string]: unknown | undefined
+  }
+}]
+type _StylisticJsxJsxCurlySpacingBasicConfigOrBoolean = (_StylisticJsxJsxCurlySpacing_BasicConfig | boolean)
+interface _StylisticJsxJsxCurlySpacing_BasicConfig {
+  when?: ("always" | "never")
+  allowMultiline?: boolean
+  spacing?: {
+    objectLiterals?: ("always" | "never")
+    [k: string]: unknown | undefined
+  }
+  [k: string]: unknown | undefined
+}
+// ----- @stylistic/jsx/jsx-equals-spacing -----
+type StylisticJsxJsxEqualsSpacing = []|[("always" | "never")]
+// ----- @stylistic/jsx/jsx-first-prop-new-line -----
+type StylisticJsxJsxFirstPropNewLine = []|[("always" | "never" | "multiline" | "multiline-multiprop" | "multiprop")]
+// ----- @stylistic/jsx/jsx-function-call-newline -----
+type StylisticJsxJsxFunctionCallNewline = []|[("always" | "multiline")]
+// ----- @stylistic/jsx/jsx-indent -----
+type StylisticJsxJsxIndent = []|[("tab" | number)]|[("tab" | number), {
+  checkAttributes?: boolean
+  indentLogicalExpressions?: boolean
+}]
+// ----- @stylistic/jsx/jsx-indent-props -----
+type StylisticJsxJsxIndentProps = []|[(("tab" | "first") | number | {
+  indentMode?: (("tab" | "first") | number)
+  ignoreTernaryOperator?: boolean
+  [k: string]: unknown | undefined
+})]
+// ----- @stylistic/jsx/jsx-max-props-per-line -----
+type StylisticJsxJsxMaxPropsPerLine = []|[({
+  maximum?: {
+    single?: number
+    multi?: number
+    [k: string]: unknown | undefined
+  }
+} | {
+  maximum?: number
+  when?: ("always" | "multiline")
+})]
+// ----- @stylistic/jsx/jsx-newline -----
+type StylisticJsxJsxNewline = []|[{
+  prevent?: boolean
+  allowMultilines?: boolean
+}]
+// ----- @stylistic/jsx/jsx-one-expression-per-line -----
+type StylisticJsxJsxOneExpressionPerLine = []|[{
+  allow?: ("none" | "literal" | "single-child" | "single-line" | "non-jsx")
+}]
+// ----- @stylistic/jsx/jsx-pascal-case -----
+type StylisticJsxJsxPascalCase = []|[{
+  allowAllCaps?: boolean
+  allowLeadingUnderscore?: boolean
+  allowNamespace?: boolean
+  ignore?: string[]
+}]
+// ----- @stylistic/jsx/jsx-self-closing-comp -----
+type StylisticJsxJsxSelfClosingComp = []|[{
+  component?: boolean
+  html?: boolean
+}]
+// ----- @stylistic/jsx/jsx-sort-props -----
+type StylisticJsxJsxSortProps = []|[{
+  callbacksLast?: boolean
+  shorthandFirst?: boolean
+  shorthandLast?: boolean
+  multiline?: ("ignore" | "first" | "last")
+  ignoreCase?: boolean
+  noSortAlphabetically?: boolean
+  reservedFirst?: (unknown[] | boolean)
+  locale?: string
+}]
+// ----- @stylistic/jsx/jsx-tag-spacing -----
+type StylisticJsxJsxTagSpacing = []|[{
+  closingSlash?: ("always" | "never" | "allow")
+  beforeSelfClosing?: ("always" | "proportional-always" | "never" | "allow")
+  afterOpening?: ("always" | "allow-multiline" | "never" | "allow")
+  beforeClosing?: ("always" | "proportional-always" | "never" | "allow")
+}]
+// ----- @stylistic/jsx/jsx-wrap-multilines -----
+type StylisticJsxJsxWrapMultilines = []|[{
   declaration?: ((true | false | "ignore" | "parens" | "parens-new-line") | (true | false | "ignore" | "parens" | "parens-new-line"))
   assignment?: ((true | false | "ignore" | "parens" | "parens-new-line") | (true | false | "ignore" | "parens" | "parens-new-line"))
   return?: ((true | false | "ignore" | "parens" | "parens-new-line") | (true | false | "ignore" | "parens" | "parens-new-line"))
