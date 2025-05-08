@@ -8107,6 +8107,9 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                     "enforceForJSX": {
                       "type": "boolean",
                     },
+                    "ignoreDirectives": {
+                      "type": "boolean",
+                    },
                   },
                   "type": "object",
                 },

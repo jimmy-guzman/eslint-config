@@ -1,3 +1,13 @@
 import { defineConfig } from "./src/factory";
 
-export default defineConfig();
+export default defineConfig({
+  astro: true,
+  nextjs: true,
+  playwright: true,
+  react: true,
+  storybook: true,
+  tanstackQuery: true,
+  testingLibrary: true,
+  typescript: true,
+  vitest: true,
+});

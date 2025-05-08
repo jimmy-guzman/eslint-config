@@ -4370,7 +4370,7 @@ export interface RuleOptions {
    * Disallow identifiers from shadowing restricted names
    * @see https://eslint.org/docs/latest/rules/no-shadow-restricted-names
    */
-  'no-shadow-restricted-names'?: Linter.RuleEntry<[]>
+  'no-shadow-restricted-names'?: Linter.RuleEntry<NoShadowRestrictedNames>
   /**
    * Disallow spacing between function identifiers and their applications (deprecated)
    * @see https://eslint.org/docs/latest/rules/no-spaced-func
@@ -8862,6 +8862,7 @@ type TypescriptEslintNoUnusedExpressions = []|[{
   allowTernary?: boolean
   allowTaggedTemplates?: boolean
   enforceForJSX?: boolean
+  ignoreDirectives?: boolean
 }]
 // ----- @typescript-eslint/no-unused-vars -----
 type TypescriptEslintNoUnusedVars = []|[(("all" | "local") | {
@@ -11774,6 +11775,10 @@ type NoShadow = []|[{
   allow?: string[]
   ignoreOnInitialization?: boolean
 }]
+// ----- no-shadow-restricted-names -----
+type NoShadowRestrictedNames = []|[{
+  reportGlobalThis?: boolean
+}]
 // ----- no-sync -----
 type NoSync = []|[{
   allowAtRootLevel?: boolean
@@ -11825,6 +11830,7 @@ type NoUnusedExpressions = []|[{
   allowTernary?: boolean
   allowTaggedTemplates?: boolean
   enforceForJSX?: boolean
+  ignoreDirectives?: boolean
 }]
 // ----- no-unused-vars -----
 type NoUnusedVars = []|[(("all" | "local") | {
