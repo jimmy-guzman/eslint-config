@@ -6,7 +6,16 @@ import { builtinRules } from "eslint/use-at-your-own-risk";
 import { defineConfig } from "../src";
 
 const configs = await defineConfig({
+  astro: true,
   jest: true,
+  nextjs: true,
+  playwright: true,
+  react: true,
+  storybook: true,
+  tanstackQuery: true,
+  testingLibrary: true,
+  typescript: true,
+  vitest: true,
 });
 
 const ruleDts = await flatConfigsToRulesDTS(
