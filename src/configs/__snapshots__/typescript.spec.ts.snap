@@ -10539,6 +10539,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
           },
         },
       ],
+      "@typescript-eslint/no-unnecessary-type-conversion": "error",
       "@typescript-eslint/no-unused-vars": [
         "error",
         {
