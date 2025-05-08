@@ -1,3 +1,10 @@
+# [5.14.0](https://github.com/jimmy-guzman/eslint-config/compare/v5.13.0...v5.14.0) (2025-05-08)
+
+
+### Features
+
+* ✨ enable `@stylistic/jsx/jsx-curly-brace-presence` ([#173](https://github.com/jimmy-guzman/eslint-config/issues/173)) ([87244f0](https://github.com/jimmy-guzman/eslint-config/commit/87244f0a5a0a3af06aca2e3b776fa872ec47a3f1))
+
 # [5.13.0](https://github.com/jimmy-guzman/eslint-config/compare/v5.12.0...v5.13.0) (2025-05-08)
 
 
