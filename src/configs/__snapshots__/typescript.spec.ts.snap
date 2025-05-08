@@ -7,7 +7,7 @@ exports[`typescriptConfig > should create config 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.31.0",
+          "version": "8.32.0",
         },
         "parseForESLint": [Function],
       },
@@ -95,6 +95,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "@typescript-eslint/no-unnecessary-type-arguments": "error",
               "@typescript-eslint/no-unnecessary-type-assertion": "error",
               "@typescript-eslint/no-unnecessary-type-constraint": "error",
+              "@typescript-eslint/no-unnecessary-type-conversion": "error",
               "@typescript-eslint/no-unnecessary-type-parameters": "error",
               "@typescript-eslint/no-unsafe-argument": "error",
               "@typescript-eslint/no-unsafe-assignment": "error",
@@ -214,6 +215,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "@typescript-eslint/no-unnecessary-template-expression": "off",
               "@typescript-eslint/no-unnecessary-type-arguments": "off",
               "@typescript-eslint/no-unnecessary-type-assertion": "off",
+              "@typescript-eslint/no-unnecessary-type-conversion": "off",
               "@typescript-eslint/no-unnecessary-type-parameters": "off",
               "@typescript-eslint/no-unsafe-argument": "off",
               "@typescript-eslint/no-unsafe-assignment": "off",
@@ -293,7 +295,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.31.0",
+                    "version": "8.32.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -413,6 +415,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "@typescript-eslint/no-unnecessary-type-arguments": "error",
                 "@typescript-eslint/no-unnecessary-type-assertion": "error",
                 "@typescript-eslint/no-unnecessary-type-constraint": "error",
+                "@typescript-eslint/no-unnecessary-type-conversion": "error",
                 "@typescript-eslint/no-unnecessary-type-parameters": "error",
                 "@typescript-eslint/no-unsafe-argument": "error",
                 "@typescript-eslint/no-unsafe-assignment": "error",
@@ -498,7 +501,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.31.0",
+                  "version": "8.32.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -543,6 +546,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "@typescript-eslint/no-unnecessary-template-expression": "off",
               "@typescript-eslint/no-unnecessary-type-arguments": "off",
               "@typescript-eslint/no-unnecessary-type-assertion": "off",
+              "@typescript-eslint/no-unnecessary-type-conversion": "off",
               "@typescript-eslint/no-unnecessary-type-parameters": "off",
               "@typescript-eslint/no-unsafe-argument": "off",
               "@typescript-eslint/no-unsafe-assignment": "off",
@@ -619,7 +623,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.31.0",
+                    "version": "8.32.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -699,7 +703,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.31.0",
+                    "version": "8.32.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -806,7 +810,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.31.0",
+                    "version": "8.32.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -890,7 +894,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.31.0",
+                    "version": "8.32.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1128,7 +1132,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.31.0",
+                    "version": "8.32.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1250,7 +1254,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.31.0",
+                    "version": "8.32.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1321,7 +1325,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.31.0",
+                    "version": "8.32.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1401,7 +1405,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.31.0",
+                    "version": "8.32.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1944,7 +1948,7 @@ exports[`typescriptConfig > should create config 1`] = `
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.31.0",
+          "version": "8.32.0",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -7675,7 +7679,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
                 "requiresTypeChecking": true,
                 "url": "https://typescript-eslint.io/rules/no-unnecessary-condition",
               },
-              "fixable": "code",
+              "hasSuggestions": true,
               "messages": {
                 "alwaysFalsy": "Unnecessary conditional, value is always falsy.",
                 "alwaysFalsyFunc": "This callback should return a conditional, but return is always falsy.",
@@ -7688,6 +7692,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
                 "neverOptionalChain": "Unnecessary optional chain on a non-nullish value.",
                 "noOverlapBooleanExpression": "Unnecessary conditional, the types have no overlap.",
                 "noStrictNullCheck": "This rule requires the \`strictNullChecks\` compiler option to be turned on to function correctly.",
+                "suggestRemoveOptionalChain": "Remove unnecessary optional chain",
                 "typeGuardAlreadyIsType": "Unnecessary conditional, expression already has the type being checked by the {{typeGuardOrAssertionFunction}}.",
               },
               "schema": [
@@ -7845,6 +7850,26 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               "messages": {
                 "removeUnnecessaryConstraint": "Remove the unnecessary \`{{constraint}}\` constraint.",
                 "unnecessaryConstraint": "Constraining the generic type \`{{name}}\` to \`{{constraint}}\` does nothing and is unnecessary.",
+              },
+              "schema": [],
+              "type": "suggestion",
+            },
+          },
+          "no-unnecessary-type-conversion": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Disallow conversion idioms when they do not change the type or value of the expression",
+                "requiresTypeChecking": true,
+                "url": "https://typescript-eslint.io/rules/no-unnecessary-type-conversion",
+              },
+              "fixable": "code",
+              "hasSuggestions": true,
+              "messages": {
+                "suggestRemove": "Remove the type conversion.",
+                "suggestSatisfies": "Instead, assert that the value satisfies the {{type}} type.",
+                "unnecessaryTypeConversion": "{{violation}} does not change the type or value of the {{type}}.",
               },
               "schema": [],
               "type": "suggestion",
@@ -8404,6 +8429,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
             "defaultOptions": [
               {
                 "allow": [],
+                "allowRethrowing": true,
                 "allowThrowingAny": true,
                 "allowThrowingUnknown": true,
               },
@@ -8534,6 +8560,10 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                         ],
                       },
                       "type": "array",
+                    },
+                    "allowRethrowing": {
+                      "description": "Whether to allow rethrowing caught values that are not \`Error\` objects.",
+                      "type": "boolean",
                     },
                     "allowThrowingAny": {
                       "description": "Whether to always allow throwing values typed as \`any\`.",
@@ -10577,6 +10607,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
       "@typescript-eslint/no-unnecessary-template-expression": "off",
       "@typescript-eslint/no-unnecessary-type-arguments": "off",
       "@typescript-eslint/no-unnecessary-type-assertion": "off",
+      "@typescript-eslint/no-unnecessary-type-conversion": "off",
       "@typescript-eslint/no-unnecessary-type-parameters": "off",
       "@typescript-eslint/no-unsafe-argument": "off",
       "@typescript-eslint/no-unsafe-assignment": "off",
