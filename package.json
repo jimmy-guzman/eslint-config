@@ -1,11 +1,20 @@
 {
   "name": "@jimmy.codes/eslint-config",
   "version": "5.15.0",
-  "description": "A pragmatic and opinionated ESLint config for modern development.",
+  "description": "A simple, modern ESLint config that covers most use cases.",
   "keywords": [
     "eslint",
     "eslint-config",
-    "eslintconfig"
+    "typescript",
+    "react",
+    "nextjs",
+    "astro",
+    "vitest",
+    "tanstack-query",
+    "react-compiler",
+    "modern",
+    "opinionated",
+    "testing"
   ],
   "repository": {
     "type": "git",
