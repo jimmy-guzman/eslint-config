@@ -3,7 +3,7 @@ import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import type { Rules } from "../types";
 
 export const unicornRules = {
-  ...eslintPluginUnicorn.configs["flat/recommended"].rules,
+  ...eslintPluginUnicorn.configs.recommended.rules,
   "unicorn/filename-case": "off",
   "unicorn/import-style": "off",
   "unicorn/no-abusive-eslint-disable": "off",

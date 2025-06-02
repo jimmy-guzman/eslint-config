@@ -7,7 +7,7 @@ import { unicornRules } from "../rules/unicorn";
 export const unicornConfig = () => {
   return [
     {
-      ...eslintPluginUnicorn.configs["flat/recommended"],
+      ...eslintPluginUnicorn.configs.recommended,
       name: "jimmy.codes/unicorn",
       rules: unicornRules,
     },
