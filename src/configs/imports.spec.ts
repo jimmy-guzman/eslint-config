@@ -4,14 +4,14 @@ describe("importsConfig", () => {
   it("should only contain base config", () => {
     const [base, typescript] = importsConfig();
 
-    expect(base.name).toBe("jimmy.codes/imports");
+    expect(base?.name).toBe("jimmy.codes/imports");
     expect(typescript?.name).toBeUndefined();
   });
 
   it("should contain typescript config when enabled", () => {
     const [base, typescript] = importsConfig({ isTypescriptEnabled: true });
 
-    expect(base.name).toBe("jimmy.codes/imports");
+    expect(base?.name).toBe("jimmy.codes/imports");
     expect(typescript?.name).toBe("jimmy.codes/imports/typescript");
   });
 

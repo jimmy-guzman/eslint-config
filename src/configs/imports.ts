@@ -1,12 +1,12 @@
 import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
-import importX, { configs } from "eslint-plugin-import-x";
+import { configs, importX } from "eslint-plugin-import-x";
 import nodePlugin from "eslint-plugin-n";
 
 import type { TypedConfigItem } from "../types";
 
 import { importsRules } from "../rules/imports";
 
-const importsTypescriptConfig = () => {
+const importsTypescriptConfig = (): TypedConfigItem[] => {
   const { rules, settings } = configs.typescript;
 
   return [
@@ -30,7 +30,7 @@ interface ImportsConfigOptions {
 
 export const importsConfig = ({
   isTypescriptEnabled = false,
-}: ImportsConfigOptions = {}) => {
+}: ImportsConfigOptions = {}): TypedConfigItem[] => {
   return [
     {
       name: "jimmy.codes/imports",
@@ -41,5 +41,5 @@ export const importsConfig = ({
       rules: importsRules,
     },
     ...(isTypescriptEnabled ? importsTypescriptConfig() : []),
-  ] as const satisfies TypedConfigItem[];
+  ];
 };

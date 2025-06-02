@@ -7,7 +7,7 @@ exports[`typescriptConfig > should create config 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.32.0",
+          "version": "8.33.1",
         },
         "parseForESLint": [Function],
       },
@@ -144,7 +144,6 @@ exports[`typescriptConfig > should create config 1`] = `
               "@typescript-eslint/strict-boolean-expressions": "error",
               "@typescript-eslint/switch-exhaustiveness-check": "error",
               "@typescript-eslint/triple-slash-reference": "error",
-              "@typescript-eslint/typedef": "error",
               "@typescript-eslint/unbound-method": "error",
               "@typescript-eslint/unified-signatures": "error",
               "@typescript-eslint/use-unknown-in-catch-callback-variable": "error",
@@ -295,7 +294,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.0",
+                    "version": "8.33.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -464,7 +463,6 @@ exports[`typescriptConfig > should create config 1`] = `
                 "@typescript-eslint/strict-boolean-expressions": "error",
                 "@typescript-eslint/switch-exhaustiveness-check": "error",
                 "@typescript-eslint/triple-slash-reference": "error",
-                "@typescript-eslint/typedef": "error",
                 "@typescript-eslint/unbound-method": "error",
                 "@typescript-eslint/unified-signatures": "error",
                 "@typescript-eslint/use-unknown-in-catch-callback-variable": "error",
@@ -501,7 +499,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.32.0",
+                  "version": "8.33.1",
                 },
                 "parseForESLint": [Function],
               },
@@ -623,7 +621,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.0",
+                    "version": "8.33.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -703,7 +701,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.0",
+                    "version": "8.33.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -810,7 +808,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.0",
+                    "version": "8.33.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -894,7 +892,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.0",
+                    "version": "8.33.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1132,7 +1130,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.0",
+                    "version": "8.33.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1254,7 +1252,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.0",
+                    "version": "8.33.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1325,7 +1323,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.0",
+                    "version": "8.33.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1405,7 +1403,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.32.0",
+                    "version": "8.33.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1948,7 +1946,7 @@ exports[`typescriptConfig > should create config 1`] = `
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.32.0",
+          "version": "8.33.1",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -7868,7 +7866,6 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
                 "requiresTypeChecking": true,
                 "url": "https://typescript-eslint.io/rules/no-unnecessary-type-conversion",
               },
-              "fixable": "code",
               "hasSuggestions": true,
               "messages": {
                 "suggestRemove": "Remove the type conversion.",
@@ -10193,6 +10190,10 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               },
             ],
             "meta": {
+              "deprecated": {
+                "deprecatedSince": "8.33.0",
+                "message": "This is an old rule that is no longer recommended for use.",
+              },
               "docs": {
                 "description": "Require type annotations in certain places",
                 "url": "https://typescript-eslint.io/rules/typedef",
