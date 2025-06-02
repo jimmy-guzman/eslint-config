@@ -1,5 +1,4 @@
 import stylisticPlugin from "@stylistic/eslint-plugin";
-import stylisticJsx from "@stylistic/eslint-plugin-jsx";
 
 import type { TypedConfigItem } from "../types";
 
@@ -11,7 +10,6 @@ export default function stylisticConfig() {
       name: "jimmy.codes/stylistic",
       plugins: {
         "@stylistic": stylisticPlugin,
-        "@stylistic/jsx": stylisticJsx,
       },
       rules: stylisticRules,
     },

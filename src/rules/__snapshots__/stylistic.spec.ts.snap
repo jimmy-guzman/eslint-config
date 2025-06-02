@@ -2,7 +2,7 @@
 
 exports[`should create stylistic rules 1`] = `
 {
-  "@stylistic/jsx/jsx-curly-brace-presence": [
+  "@stylistic/jsx-curly-brace-presence": [
     "error",
     "never",
   ],
