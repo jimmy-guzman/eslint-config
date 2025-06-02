@@ -1,3 +1,19 @@
+# [5.15.0](https://github.com/jimmy-guzman/eslint-config/compare/v5.14.0...v5.15.0) (2025-06-02)
+
+
+### Bug Fixes
+
+* 🐛 drop deprecated `@stylistic/eslint-plugin-jsx` ([fce74fc](https://github.com/jimmy-guzman/eslint-config/commit/fce74fcf4dd63f5274b5f2ca1bc34a50472eef36))
+* 🐛 drop use of unicorn's deprecated flat/recommended ([437a40e](https://github.com/jimmy-guzman/eslint-config/commit/437a40ece4b2a9d01672c5ce229445f95d6275a8))
+
+
+### Features
+
+* ✨ add support for node v24 ([7765f08](https://github.com/jimmy-guzman/eslint-config/commit/7765f081089b4481154969f124429c2f3fef2243))
+* ✨ bump `dependencies` to latest ([a7f5d7f](https://github.com/jimmy-guzman/eslint-config/commit/a7f5d7f645546d0c986d43c635dd4089d5ad4f93))
+* ✨ bump `eslint-plugin-unicorn` to v59.0.1 ([b745586](https://github.com/jimmy-guzman/eslint-config/commit/b745586e79cccf30fbd0c1b292b6d019307ef40a))
+* ✨ enable `n/no-top-level-await` ([037491a](https://github.com/jimmy-guzman/eslint-config/commit/037491ab4d8ff405242a6ba65289d21d6a30b72b)), closes [#177](https://github.com/jimmy-guzman/eslint-config/issues/177)
+
 # [5.14.0](https://github.com/jimmy-guzman/eslint-config/compare/v5.13.0...v5.14.0) (2025-05-08)
 
 
