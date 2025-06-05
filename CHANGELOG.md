@@ -1,3 +1,16 @@
+# [5.16.0](https://github.com/jimmy-guzman/eslint-config/compare/v5.15.0...v5.16.0) (2025-06-05)
+
+
+### Bug Fixes
+
+* 🐛 remove extra @eslint-react/* deps ([ce8d129](https://github.com/jimmy-guzman/eslint-config/commit/ce8d129d7d9dc6b5b3e59b879bee561de5a74d14))
+
+
+### Features
+
+* ✨ bump `dependencies` to latest ([11e127e](https://github.com/jimmy-guzman/eslint-config/commit/11e127edb971700923d7c4a207b4eeb53147f137))
+* ✨ enable `no-unassigned-vars` ([af5fa03](https://github.com/jimmy-guzman/eslint-config/commit/af5fa03fcf7c06c83676fbf1b0ed9ddc19f0f1e7)), closes [#174](https://github.com/jimmy-guzman/eslint-config/issues/174)
+
 # [5.15.0](https://github.com/jimmy-guzman/eslint-config/compare/v5.14.0...v5.15.0) (2025-06-02)
 
 
