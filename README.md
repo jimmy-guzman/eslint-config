@@ -120,7 +120,7 @@ This config includes the following plugins:
 | [`eslint-plugin-jsdoc`](https://github.com/gajus/eslint-plugin-jsdoc)                                                 | JSDoc comment rules                |
 | [`eslint-plugin-jsx-a11y`](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)                                      | Accessibility in JSX               |
 | [`eslint-plugin-n`](https://github.com/eslint-community/eslint-plugin-n)                                              | Node.js-specific rules             |
-| [`eslint-plugin-perfectionist`](https://github.com/azat-io/eslint-plugin-perfectionist)                               | Sorting and consistency            |
+| [`eslint-plugin-perfectionist`](https://perfectionist.dev)                                                            | Sorting and consistency            |
 | [`eslint-plugin-playwright`](https://github.com/playwright-community/eslint-plugin-playwright)                        | Playwright testing support         |
 | [`eslint-plugin-react-compiler`](https://www.npmjs.com/package/eslint-plugin-react-compiler)                          | React Compiler rules               |
 | [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks)                                | Enforce React Hooks rules          |
