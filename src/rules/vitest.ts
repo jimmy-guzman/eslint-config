@@ -14,6 +14,7 @@ export const vitestRules = async () => {
         withinDescribe: "it",
       },
     ],
+    "vitest/consistent-vitest-vi": "error",
     "vitest/no-alias-methods": "error",
     "vitest/no-commented-out-tests": "error",
     "vitest/no-conditional-in-test": "error",
