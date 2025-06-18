@@ -1,3 +1,12 @@
+# [5.17.0](https://github.com/jimmy-guzman/eslint-config/compare/v5.16.0...v5.17.0) (2025-06-18)
+
+
+### Features
+
+* ✨ bump `dependencies` to latest ([a48b5b7](https://github.com/jimmy-guzman/eslint-config/commit/a48b5b7c9e58087ce6cfc844f78e1d2a9cc9f970))
+* ✨ enable `testing-library/no-test-id-queries` ([a3f51b3](https://github.com/jimmy-guzman/eslint-config/commit/a3f51b3d734cb6b81b8d141bbfb0b7dd1beef9ef))
+* ✨ enable `vitest/consistent-vitest-vi` ([ff61abe](https://github.com/jimmy-guzman/eslint-config/commit/ff61abe9ef6e27fc6f6121560887f642b6dfadff))
+
 # [5.16.0](https://github.com/jimmy-guzman/eslint-config/compare/v5.15.0...v5.16.0) (2025-06-05)
 
 
