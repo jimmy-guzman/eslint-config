@@ -2364,233 +2364,233 @@ export interface RuleOptions {
   'implicit-arrow-linebreak'?: Linter.RuleEntry<ImplicitArrowLinebreak>
   /**
    * Enforce or ban the use of inline type-only markers for named imports.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/consistent-type-specifier-style.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/consistent-type-specifier-style.md
    */
   'import-x/consistent-type-specifier-style'?: Linter.RuleEntry<ImportXConsistentTypeSpecifierStyle>
   /**
    * Ensure a default export is present, given a default import.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/default.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/default.md
    */
   'import-x/default'?: Linter.RuleEntry<[]>
   /**
    * Enforce a leading comment with the webpackChunkName for dynamic imports.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/dynamic-import-chunkname.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/dynamic-import-chunkname.md
    */
   'import-x/dynamic-import-chunkname'?: Linter.RuleEntry<ImportXDynamicImportChunkname>
   /**
    * Forbid any invalid exports, i.e. re-export of the same name.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/export.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/export.md
    */
   'import-x/export'?: Linter.RuleEntry<[]>
   /**
    * Ensure all exports appear after other statements.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/exports-last.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/exports-last.md
    */
   'import-x/exports-last'?: Linter.RuleEntry<[]>
   /**
    * Ensure consistent use of file extension within the import path.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/extensions.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/extensions.md
    */
   'import-x/extensions'?: Linter.RuleEntry<ImportXExtensions>
   /**
    * Ensure all imports appear before other statements.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/first.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/first.md
    */
   'import-x/first'?: Linter.RuleEntry<ImportXFirst>
   /**
    * Prefer named exports to be grouped together in a single export declaration.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/group-exports.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/group-exports.md
    */
   'import-x/group-exports'?: Linter.RuleEntry<[]>
   /**
    * Replaced by `import-x/first`.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/imports-first.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/imports-first.md
    * @deprecated
    */
   'import-x/imports-first'?: Linter.RuleEntry<ImportXImportsFirst>
   /**
    * Enforce the maximum number of dependencies a module can have.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/max-dependencies.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/max-dependencies.md
    */
   'import-x/max-dependencies'?: Linter.RuleEntry<ImportXMaxDependencies>
   /**
    * Ensure named imports correspond to a named export in the remote file.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/named.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/named.md
    */
   'import-x/named'?: Linter.RuleEntry<ImportXNamed>
   /**
    * Ensure imported namespaces contain dereferenced properties as they are dereferenced.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/namespace.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/namespace.md
    */
   'import-x/namespace'?: Linter.RuleEntry<ImportXNamespace>
   /**
    * Enforce a newline after import statements.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/newline-after-import.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/newline-after-import.md
    */
   'import-x/newline-after-import'?: Linter.RuleEntry<ImportXNewlineAfterImport>
   /**
    * Forbid import of modules using absolute paths.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-absolute-path.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-absolute-path.md
    */
   'import-x/no-absolute-path'?: Linter.RuleEntry<ImportXNoAbsolutePath>
   /**
    * Forbid AMD `require` and `define` calls.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-amd.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-amd.md
    */
   'import-x/no-amd'?: Linter.RuleEntry<[]>
   /**
    * Forbid anonymous values as default exports.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-anonymous-default-export.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-anonymous-default-export.md
    */
   'import-x/no-anonymous-default-export'?: Linter.RuleEntry<ImportXNoAnonymousDefaultExport>
   /**
    * Forbid CommonJS `require` calls and `module.exports` or `exports.*`.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-commonjs.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-commonjs.md
    */
   'import-x/no-commonjs'?: Linter.RuleEntry<ImportXNoCommonjs>
   /**
    * Forbid a module from importing a module with a dependency path back to itself.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-cycle.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-cycle.md
    */
   'import-x/no-cycle'?: Linter.RuleEntry<ImportXNoCycle>
   /**
    * Forbid default exports.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-default-export.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-default-export.md
    */
   'import-x/no-default-export'?: Linter.RuleEntry<[]>
   /**
    * Forbid imported names marked with `@deprecated` documentation tag.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-deprecated.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-deprecated.md
    */
   'import-x/no-deprecated'?: Linter.RuleEntry<[]>
   /**
    * Forbid repeated import of the same module in multiple places.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-duplicates.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-duplicates.md
    */
   'import-x/no-duplicates'?: Linter.RuleEntry<ImportXNoDuplicates>
   /**
    * Forbid `require()` calls with expressions.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-dynamic-require.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-dynamic-require.md
    */
   'import-x/no-dynamic-require'?: Linter.RuleEntry<ImportXNoDynamicRequire>
   /**
    * Forbid empty named import blocks.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-empty-named-blocks.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-empty-named-blocks.md
    */
   'import-x/no-empty-named-blocks'?: Linter.RuleEntry<[]>
   /**
    * Forbid the use of extraneous packages.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-extraneous-dependencies.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-extraneous-dependencies.md
    */
   'import-x/no-extraneous-dependencies'?: Linter.RuleEntry<ImportXNoExtraneousDependencies>
   /**
    * Forbid import statements with CommonJS module.exports.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-import-module-exports.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-import-module-exports.md
    */
   'import-x/no-import-module-exports'?: Linter.RuleEntry<ImportXNoImportModuleExports>
   /**
    * Forbid importing the submodules of other modules.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-internal-modules.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-internal-modules.md
    */
   'import-x/no-internal-modules'?: Linter.RuleEntry<ImportXNoInternalModules>
   /**
    * Forbid the use of mutable exports with `var` or `let`.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-mutable-exports.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-mutable-exports.md
    */
   'import-x/no-mutable-exports'?: Linter.RuleEntry<[]>
   /**
    * Forbid use of exported name as identifier of default export.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-named-as-default.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-named-as-default.md
    */
   'import-x/no-named-as-default'?: Linter.RuleEntry<[]>
   /**
    * Forbid use of exported name as property of default export.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-named-as-default-member.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-named-as-default-member.md
    */
   'import-x/no-named-as-default-member'?: Linter.RuleEntry<[]>
   /**
    * Forbid named default exports.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-named-default.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-named-default.md
    */
   'import-x/no-named-default'?: Linter.RuleEntry<[]>
   /**
    * Forbid named exports.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-named-export.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-named-export.md
    */
   'import-x/no-named-export'?: Linter.RuleEntry<[]>
   /**
    * Forbid namespace (a.k.a. "wildcard" `*`) imports.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-namespace.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-namespace.md
    */
   'import-x/no-namespace'?: Linter.RuleEntry<ImportXNoNamespace>
   /**
    * Forbid Node.js builtin modules.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-nodejs-modules.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-nodejs-modules.md
    */
   'import-x/no-nodejs-modules'?: Linter.RuleEntry<ImportXNoNodejsModules>
   /**
    * Forbid importing packages through relative paths.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-relative-packages.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-relative-packages.md
    */
   'import-x/no-relative-packages'?: Linter.RuleEntry<ImportXNoRelativePackages>
   /**
    * Forbid importing modules from parent directories.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-relative-parent-imports.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-relative-parent-imports.md
    */
   'import-x/no-relative-parent-imports'?: Linter.RuleEntry<ImportXNoRelativeParentImports>
   /**
    * Forbid importing a default export by a different name.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-rename-default.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-rename-default.md
    */
   'import-x/no-rename-default'?: Linter.RuleEntry<ImportXNoRenameDefault>
   /**
    * Enforce which files can be imported in a given folder.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-restricted-paths.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-restricted-paths.md
    */
   'import-x/no-restricted-paths'?: Linter.RuleEntry<ImportXNoRestrictedPaths>
   /**
    * Forbid a module from importing itself.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-self-import.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-self-import.md
    */
   'import-x/no-self-import'?: Linter.RuleEntry<[]>
   /**
    * Forbid unassigned imports.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-unassigned-import.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-unassigned-import.md
    */
   'import-x/no-unassigned-import'?: Linter.RuleEntry<ImportXNoUnassignedImport>
   /**
    * Ensure imports point to a file/module that can be resolved.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-unresolved.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-unresolved.md
    */
   'import-x/no-unresolved'?: Linter.RuleEntry<ImportXNoUnresolved>
   /**
    * Forbid modules without exports, or exports without matching import in another module.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-unused-modules.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-unused-modules.md
    */
   'import-x/no-unused-modules'?: Linter.RuleEntry<ImportXNoUnusedModules>
   /**
    * Forbid unnecessary path segments in import and require statements.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-useless-path-segments.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-useless-path-segments.md
    */
   'import-x/no-useless-path-segments'?: Linter.RuleEntry<ImportXNoUselessPathSegments>
   /**
    * Forbid webpack loader syntax in imports.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/no-webpack-loader-syntax.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/no-webpack-loader-syntax.md
    */
   'import-x/no-webpack-loader-syntax'?: Linter.RuleEntry<[]>
   /**
    * Enforce a convention in module import order.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/order.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/order.md
    */
   'import-x/order'?: Linter.RuleEntry<ImportXOrder>
   /**
    * Prefer a default export if module exports a single name or multiple names.
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/prefer-default-export.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/prefer-default-export.md
    */
   'import-x/prefer-default-export'?: Linter.RuleEntry<ImportXPreferDefaultExport>
   /**
    * Forbid potentially ambiguous parse goal (`script` vs. `module`).
-   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.1/docs/rules/unambiguous.md
+   * @see https://github.com/un-ts/eslint-plugin-import-x/blob/v4.15.2/docs/rules/unambiguous.md
    */
   'import-x/unambiguous'?: Linter.RuleEntry<[]>
   /**
@@ -2667,312 +2667,317 @@ export interface RuleOptions {
   'jest-dom/prefer-to-have-value'?: Linter.RuleEntry<[]>
   /**
    * Enforce `test` and `it` usage conventions
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/consistent-test-it.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/consistent-test-it.md
    */
   'jest/consistent-test-it'?: Linter.RuleEntry<JestConsistentTestIt>
   /**
    * Enforce assertion to be made in a test body
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/expect-expect.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/expect-expect.md
    */
   'jest/expect-expect'?: Linter.RuleEntry<JestExpectExpect>
   /**
    * Enforces a maximum number assertion calls in a test body
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/max-expects.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/max-expects.md
    */
   'jest/max-expects'?: Linter.RuleEntry<JestMaxExpects>
   /**
    * Enforces a maximum depth to nested describe calls
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/max-nested-describe.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/max-nested-describe.md
    */
   'jest/max-nested-describe'?: Linter.RuleEntry<JestMaxNestedDescribe>
   /**
    * Disallow alias methods
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/no-alias-methods.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/no-alias-methods.md
    */
   'jest/no-alias-methods'?: Linter.RuleEntry<[]>
   /**
    * Disallow commented out tests
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/no-commented-out-tests.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/no-commented-out-tests.md
    */
   'jest/no-commented-out-tests'?: Linter.RuleEntry<[]>
   /**
    * Disallow calling `expect` conditionally
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/no-conditional-expect.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/no-conditional-expect.md
    */
   'jest/no-conditional-expect'?: Linter.RuleEntry<[]>
   /**
    * Disallow conditional logic in tests
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/no-conditional-in-test.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/no-conditional-in-test.md
    */
   'jest/no-conditional-in-test'?: Linter.RuleEntry<[]>
   /**
    * Disallow confusing usages of jest.setTimeout
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/no-confusing-set-timeout.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/no-confusing-set-timeout.md
    */
   'jest/no-confusing-set-timeout'?: Linter.RuleEntry<[]>
   /**
    * Disallow use of deprecated functions
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/no-deprecated-functions.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/no-deprecated-functions.md
    */
   'jest/no-deprecated-functions'?: Linter.RuleEntry<[]>
   /**
    * Disallow disabled tests
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/no-disabled-tests.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/no-disabled-tests.md
    */
   'jest/no-disabled-tests'?: Linter.RuleEntry<[]>
   /**
    * Disallow using a callback in asynchronous tests and hooks
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/no-done-callback.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/no-done-callback.md
    */
   'jest/no-done-callback'?: Linter.RuleEntry<[]>
   /**
    * Disallow duplicate setup and teardown hooks
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/no-duplicate-hooks.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/no-duplicate-hooks.md
    */
   'jest/no-duplicate-hooks'?: Linter.RuleEntry<[]>
   /**
    * Disallow using `exports` in files containing tests
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/no-export.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/no-export.md
    */
   'jest/no-export'?: Linter.RuleEntry<[]>
   /**
    * Disallow focused tests
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/no-focused-tests.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/no-focused-tests.md
    */
   'jest/no-focused-tests'?: Linter.RuleEntry<[]>
   /**
    * Disallow setup and teardown hooks
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/no-hooks.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/no-hooks.md
    */
   'jest/no-hooks'?: Linter.RuleEntry<JestNoHooks>
   /**
    * Disallow identical titles
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/no-identical-title.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/no-identical-title.md
    */
   'jest/no-identical-title'?: Linter.RuleEntry<[]>
   /**
    * Disallow string interpolation inside snapshots
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/no-interpolation-in-snapshots.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/no-interpolation-in-snapshots.md
    */
   'jest/no-interpolation-in-snapshots'?: Linter.RuleEntry<[]>
   /**
    * Disallow Jasmine globals
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/no-jasmine-globals.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/no-jasmine-globals.md
    */
   'jest/no-jasmine-globals'?: Linter.RuleEntry<[]>
   /**
    * Disallow large snapshots
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/no-large-snapshots.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/no-large-snapshots.md
    */
   'jest/no-large-snapshots'?: Linter.RuleEntry<JestNoLargeSnapshots>
   /**
    * Disallow manually importing from `__mocks__`
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/no-mocks-import.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/no-mocks-import.md
    */
   'jest/no-mocks-import'?: Linter.RuleEntry<[]>
   /**
    * Disallow specific `jest.` methods
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/no-restricted-jest-methods.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/no-restricted-jest-methods.md
    */
   'jest/no-restricted-jest-methods'?: Linter.RuleEntry<JestNoRestrictedJestMethods>
   /**
    * Disallow specific matchers & modifiers
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/no-restricted-matchers.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/no-restricted-matchers.md
    */
   'jest/no-restricted-matchers'?: Linter.RuleEntry<JestNoRestrictedMatchers>
   /**
    * Disallow using `expect` outside of `it` or `test` blocks
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/no-standalone-expect.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/no-standalone-expect.md
    */
   'jest/no-standalone-expect'?: Linter.RuleEntry<JestNoStandaloneExpect>
   /**
    * Require using `.only` and `.skip` over `f` and `x`
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/no-test-prefixes.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/no-test-prefixes.md
    */
   'jest/no-test-prefixes'?: Linter.RuleEntry<[]>
   /**
    * Disallow explicitly returning from tests
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/no-test-return-statement.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/no-test-return-statement.md
    */
   'jest/no-test-return-statement'?: Linter.RuleEntry<[]>
   /**
    * Disallow using `jest.mock()` factories without an explicit type parameter
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/no-untyped-mock-factory.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/no-untyped-mock-factory.md
    */
   'jest/no-untyped-mock-factory'?: Linter.RuleEntry<[]>
   /**
    * Enforce padding around `afterAll` blocks
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/padding-around-after-all-blocks.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/padding-around-after-all-blocks.md
    */
   'jest/padding-around-after-all-blocks'?: Linter.RuleEntry<[]>
   /**
    * Enforce padding around `afterEach` blocks
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/padding-around-after-each-blocks.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/padding-around-after-each-blocks.md
    */
   'jest/padding-around-after-each-blocks'?: Linter.RuleEntry<[]>
   /**
    * Enforce padding around Jest functions
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/padding-around-all.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/padding-around-all.md
    */
   'jest/padding-around-all'?: Linter.RuleEntry<[]>
   /**
    * Enforce padding around `beforeAll` blocks
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/padding-around-before-all-blocks.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/padding-around-before-all-blocks.md
    */
   'jest/padding-around-before-all-blocks'?: Linter.RuleEntry<[]>
   /**
    * Enforce padding around `beforeEach` blocks
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/padding-around-before-each-blocks.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/padding-around-before-each-blocks.md
    */
   'jest/padding-around-before-each-blocks'?: Linter.RuleEntry<[]>
   /**
    * Enforce padding around `describe` blocks
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/padding-around-describe-blocks.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/padding-around-describe-blocks.md
    */
   'jest/padding-around-describe-blocks'?: Linter.RuleEntry<[]>
   /**
    * Enforce padding around `expect` groups
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/padding-around-expect-groups.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/padding-around-expect-groups.md
    */
   'jest/padding-around-expect-groups'?: Linter.RuleEntry<[]>
   /**
    * Enforce padding around `test` and `it` blocks
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/padding-around-test-blocks.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/padding-around-test-blocks.md
    */
   'jest/padding-around-test-blocks'?: Linter.RuleEntry<[]>
   /**
    * Suggest using `toBeCalledWith()` or `toHaveBeenCalledWith()`
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/prefer-called-with.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/prefer-called-with.md
    */
   'jest/prefer-called-with'?: Linter.RuleEntry<[]>
   /**
    * Suggest using the built-in comparison matchers
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/prefer-comparison-matcher.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/prefer-comparison-matcher.md
    */
   'jest/prefer-comparison-matcher'?: Linter.RuleEntry<[]>
   /**
    * Prefer using `.each` rather than manual loops
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/prefer-each.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/prefer-each.md
    */
   'jest/prefer-each'?: Linter.RuleEntry<[]>
   /**
+   * Prefer having the last statement in a test be an assertion
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/prefer-ending-with-an-expect.md
+   */
+  'jest/prefer-ending-with-an-expect'?: Linter.RuleEntry<JestPreferEndingWithAnExpect>
+  /**
    * Suggest using the built-in equality matchers
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/prefer-equality-matcher.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/prefer-equality-matcher.md
    */
   'jest/prefer-equality-matcher'?: Linter.RuleEntry<[]>
   /**
    * Suggest using `expect.assertions()` OR `expect.hasAssertions()`
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/prefer-expect-assertions.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/prefer-expect-assertions.md
    */
   'jest/prefer-expect-assertions'?: Linter.RuleEntry<JestPreferExpectAssertions>
   /**
    * Prefer `await expect(...).resolves` over `expect(await ...)` syntax
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/prefer-expect-resolves.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/prefer-expect-resolves.md
    */
   'jest/prefer-expect-resolves'?: Linter.RuleEntry<[]>
   /**
    * Prefer having hooks in a consistent order
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/prefer-hooks-in-order.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/prefer-hooks-in-order.md
    */
   'jest/prefer-hooks-in-order'?: Linter.RuleEntry<[]>
   /**
    * Suggest having hooks before any test cases
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/prefer-hooks-on-top.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/prefer-hooks-on-top.md
    */
   'jest/prefer-hooks-on-top'?: Linter.RuleEntry<[]>
   /**
    * Prefer importing Jest globals
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/prefer-importing-jest-globals.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/prefer-importing-jest-globals.md
    */
   'jest/prefer-importing-jest-globals'?: Linter.RuleEntry<JestPreferImportingJestGlobals>
   /**
    * Prefer `jest.mocked()` over `fn as jest.Mock`
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/prefer-jest-mocked.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/prefer-jest-mocked.md
    */
   'jest/prefer-jest-mocked'?: Linter.RuleEntry<[]>
   /**
    * Enforce lowercase test names
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/prefer-lowercase-title.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/prefer-lowercase-title.md
    */
   'jest/prefer-lowercase-title'?: Linter.RuleEntry<JestPreferLowercaseTitle>
   /**
    * Prefer mock resolved/rejected shorthands for promises
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/prefer-mock-promise-shorthand.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/prefer-mock-promise-shorthand.md
    */
   'jest/prefer-mock-promise-shorthand'?: Linter.RuleEntry<[]>
   /**
    * Prefer including a hint with external snapshots
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/prefer-snapshot-hint.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/prefer-snapshot-hint.md
    */
   'jest/prefer-snapshot-hint'?: Linter.RuleEntry<JestPreferSnapshotHint>
   /**
    * Suggest using `jest.spyOn()`
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/prefer-spy-on.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/prefer-spy-on.md
    */
   'jest/prefer-spy-on'?: Linter.RuleEntry<[]>
   /**
    * Suggest using `toStrictEqual()`
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/prefer-strict-equal.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/prefer-strict-equal.md
    */
   'jest/prefer-strict-equal'?: Linter.RuleEntry<[]>
   /**
    * Suggest using `toBe()` for primitive literals
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/prefer-to-be.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/prefer-to-be.md
    */
   'jest/prefer-to-be'?: Linter.RuleEntry<[]>
   /**
    * Suggest using `toContain()`
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/prefer-to-contain.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/prefer-to-contain.md
    */
   'jest/prefer-to-contain'?: Linter.RuleEntry<[]>
   /**
    * Suggest using `toHaveLength()`
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/prefer-to-have-length.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/prefer-to-have-length.md
    */
   'jest/prefer-to-have-length'?: Linter.RuleEntry<[]>
   /**
    * Suggest using `test.todo`
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/prefer-todo.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/prefer-todo.md
    */
   'jest/prefer-todo'?: Linter.RuleEntry<[]>
   /**
    * Require setup and teardown code to be within a hook
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/require-hook.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/require-hook.md
    */
   'jest/require-hook'?: Linter.RuleEntry<JestRequireHook>
   /**
    * Require a message for `toThrow()`
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/require-to-throw-message.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/require-to-throw-message.md
    */
   'jest/require-to-throw-message'?: Linter.RuleEntry<[]>
   /**
    * Require test cases and hooks to be inside a `describe` block
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/require-top-level-describe.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/require-top-level-describe.md
    */
   'jest/require-top-level-describe'?: Linter.RuleEntry<JestRequireTopLevelDescribe>
   /**
    * Enforce unbound methods are called with their expected scope
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/unbound-method.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/unbound-method.md
    */
   'jest/unbound-method'?: Linter.RuleEntry<JestUnboundMethod>
   /**
    * Enforce valid `describe()` callback
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/valid-describe-callback.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/valid-describe-callback.md
    */
   'jest/valid-describe-callback'?: Linter.RuleEntry<[]>
   /**
    * Enforce valid `expect()` usage
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/valid-expect.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/valid-expect.md
    */
   'jest/valid-expect'?: Linter.RuleEntry<JestValidExpect>
   /**
    * Require promises that have expectations in their chain to be valid
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/valid-expect-in-promise.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/valid-expect-in-promise.md
    */
   'jest/valid-expect-in-promise'?: Linter.RuleEntry<[]>
   /**
    * Enforce valid titles
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.12.0/docs/rules/valid-title.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v28.14.0/docs/rules/valid-title.md
    */
   'jest/valid-title'?: Linter.RuleEntry<JestValidTitle>
   /**
@@ -6570,6 +6575,11 @@ export interface RuleOptions {
    */
   'vitest/consistent-test-it'?: Linter.RuleEntry<VitestConsistentTestIt>
   /**
+   * enforce using vitest or vi but not both
+   * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/consistent-vitest-vi.md
+   */
+  'vitest/consistent-vitest-vi'?: Linter.RuleEntry<VitestConsistentVitestVi>
+  /**
    * enforce having expectation in test body
    * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/expect-expect.md
    */
@@ -6646,6 +6656,11 @@ export interface RuleOptions {
    */
   'vitest/no-import-node-test'?: Linter.RuleEntry<[]>
   /**
+   * disallow importing Vitest globals
+   * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-importing-vitest-globals.md
+   */
+  'vitest/no-importing-vitest-globals'?: Linter.RuleEntry<[]>
+  /**
    * disallow string interpolation in snapshots
    * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-interpolation-in-snapshots.md
    */
@@ -6676,7 +6691,7 @@ export interface RuleOptions {
    */
   'vitest/no-standalone-expect'?: Linter.RuleEntry<VitestNoStandaloneExpect>
   /**
-   * Disallow using the `f` and `x` prefixes in favour of `.only` and `.skip`
+   * disallow using the `f` and `x` prefixes in favour of `.only` and `.skip`
    * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-test-prefixes.md
    */
   'vitest/no-test-prefixes'?: Linter.RuleEntry<[]>
@@ -6770,6 +6785,11 @@ export interface RuleOptions {
    * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-hooks-on-top.md
    */
   'vitest/prefer-hooks-on-top'?: Linter.RuleEntry<[]>
+  /**
+   * enforce importing Vitest globals
+   * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-importing-vitest-globals.md
+   */
+  'vitest/prefer-importing-vitest-globals'?: Linter.RuleEntry<[]>
   /**
    * enforce lowercase titles
    * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-lowercase-title.md
@@ -10069,6 +10089,11 @@ type JestNoRestrictedMatchers = []|[{
 type JestNoStandaloneExpect = []|[{
   additionalTestBlockFunctions?: string[]
 }]
+// ----- jest/prefer-ending-with-an-expect -----
+type JestPreferEndingWithAnExpect = []|[{
+  assertFunctionNames?: string[]
+  additionalTestBlockFunctions?: string[]
+}]
 // ----- jest/prefer-expect-assertions -----
 type JestPreferExpectAssertions = []|[{
   onlyFunctionsWithAsyncKeyword?: boolean
@@ -12124,8 +12149,7 @@ type PerfectionistSortArrayIncludes = {
   groupKind?: ("mixed" | "literals-first" | "spreads-first")
   
   customGroups?: ({
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -12156,8 +12180,7 @@ type PerfectionistSortArrayIncludes = {
       } | string))
     }[]
   } | {
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -12240,12 +12263,10 @@ type PerfectionistSortArrayIncludes = {
   })
   
   partitionByNewLine?: boolean
-  
-  newlinesBetween?: ("ignore" | "always" | "never")
+  newlinesBetween?: (("ignore" | "always" | "never") | number)
   
   groups?: (string | string[] | {
-    
-    newlinesBetween?: ("ignore" | "always" | "never")
+    newlinesBetween?: (("ignore" | "always" | "never") | number)
     
     commentAbove?: string
   })[]
@@ -12273,8 +12294,7 @@ type PerfectionistSortClasses = []|[{
   type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
   
   customGroups?: ({
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -12331,8 +12351,7 @@ type PerfectionistSortClasses = []|[{
       } | string))
     }[]
   } | {
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -12438,12 +12457,10 @@ type PerfectionistSortClasses = []|[{
   })
   
   partitionByNewLine?: boolean
-  
-  newlinesBetween?: ("ignore" | "always" | "never")
+  newlinesBetween?: (("ignore" | "always" | "never") | number)
   
   groups?: (string | string[] | {
-    
-    newlinesBetween?: ("ignore" | "always" | "never")
+    newlinesBetween?: (("ignore" | "always" | "never") | number)
     
     commentAbove?: string
   })[]
@@ -12522,8 +12539,7 @@ type PerfectionistSortDecorators = []|[{
   }
   
   groups?: (string | string[] | {
-    
-    newlinesBetween?: ("ignore" | "always" | "never")
+    newlinesBetween?: (("ignore" | "always" | "never") | number)
     
     commentAbove?: string
   })[]
@@ -12552,8 +12568,7 @@ type PerfectionistSortEnums = []|[{
   customGroups?: ({
     [k: string]: (string | string[]) | undefined
   } | ({
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -12594,8 +12609,7 @@ type PerfectionistSortEnums = []|[{
       } | string))
     }[]
   } | {
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -12677,12 +12691,10 @@ type PerfectionistSortEnums = []|[{
   })
   
   partitionByNewLine?: boolean
-  
-  newlinesBetween?: ("ignore" | "always" | "never")
+  newlinesBetween?: (("ignore" | "always" | "never") | number)
   
   groups?: (string | string[] | {
-    
-    newlinesBetween?: ("ignore" | "always" | "never")
+    newlinesBetween?: (("ignore" | "always" | "never") | number)
     
     commentAbove?: string
   })[]
@@ -12712,8 +12724,7 @@ type PerfectionistSortExports = {
   groupKind?: ("mixed" | "values-first" | "types-first")
   
   customGroups?: ({
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -12746,8 +12757,7 @@ type PerfectionistSortExports = {
       } | string))
     }[]
   } | {
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -12817,12 +12827,10 @@ type PerfectionistSortExports = {
   })
   
   partitionByNewLine?: boolean
-  
-  newlinesBetween?: ("ignore" | "always" | "never")
+  newlinesBetween?: (("ignore" | "always" | "never") | number)
   
   groups?: (string | string[] | {
-    
-    newlinesBetween?: ("ignore" | "always" | "never")
+    newlinesBetween?: (("ignore" | "always" | "never") | number)
     
     commentAbove?: string
   })[]
@@ -12854,8 +12862,7 @@ type PerfectionistSortHeritageClauses = []|[{
   }
   
   groups?: (string | string[] | {
-    
-    newlinesBetween?: ("ignore" | "always" | "never")
+    newlinesBetween?: (("ignore" | "always" | "never") | number)
     
     commentAbove?: string
   })[]
@@ -12891,8 +12898,7 @@ type PerfectionistSortImports = {
       [k: string]: (string | string[]) | undefined
     }
   } | ({
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -12937,8 +12943,7 @@ type PerfectionistSortImports = {
       } | string))
     }[]
   } | {
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -13034,8 +13039,7 @@ type PerfectionistSortImports = {
   })
   
   partitionByNewLine?: boolean
-  
-  newlinesBetween?: ("ignore" | "always" | "never")
+  newlinesBetween?: (("ignore" | "always" | "never") | number)
   
   internalPattern?: (({
     
@@ -13050,8 +13054,7 @@ type PerfectionistSortImports = {
   } | string))
   
   groups?: (string | string[] | {
-    
-    newlinesBetween?: ("ignore" | "always" | "never")
+    newlinesBetween?: (("ignore" | "always" | "never") | number)
     
     commentAbove?: string
   })[]
@@ -13081,8 +13084,7 @@ type PerfectionistSortInterfaces = {
   customGroups?: ({
     [k: string]: (string | string[]) | undefined
   } | ({
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -13129,8 +13131,7 @@ type PerfectionistSortInterfaces = {
       sortBy?: ("name" | "value")
     }[]
   } | {
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -13243,8 +13244,7 @@ type PerfectionistSortInterfaces = {
   })
   
   partitionByNewLine?: boolean
-  
-  newlinesBetween?: ("ignore" | "always" | "never")
+  newlinesBetween?: (("ignore" | "always" | "never") | number)
   
   ignorePattern?: (({
     
@@ -13260,8 +13260,7 @@ type PerfectionistSortInterfaces = {
   sortBy?: ("name" | "value")
   
   groups?: (string | string[] | {
-    
-    newlinesBetween?: ("ignore" | "always" | "never")
+    newlinesBetween?: (("ignore" | "always" | "never") | number)
     
     commentAbove?: string
   })[]
@@ -13289,8 +13288,7 @@ type PerfectionistSortIntersectionTypes = {
   type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
   
   customGroups?: ({
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -13321,8 +13319,7 @@ type PerfectionistSortIntersectionTypes = {
       } | string))
     }[]
   } | {
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -13390,12 +13387,10 @@ type PerfectionistSortIntersectionTypes = {
   })
   
   partitionByNewLine?: boolean
-  
-  newlinesBetween?: ("ignore" | "always" | "never")
+  newlinesBetween?: (("ignore" | "always" | "never") | number)
   
   groups?: (string | string[] | {
-    
-    newlinesBetween?: ("ignore" | "always" | "never")
+    newlinesBetween?: (("ignore" | "always" | "never") | number)
     
     commentAbove?: string
   })[]
@@ -13424,8 +13419,7 @@ type PerfectionistSortJsxProps = {
   customGroups?: ({
     [k: string]: (string | string[]) | undefined
   } | ({
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -13470,8 +13464,7 @@ type PerfectionistSortJsxProps = {
       } | string))
     }[]
   } | {
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -13543,8 +13536,7 @@ type PerfectionistSortJsxProps = {
   }
   
   partitionByNewLine?: boolean
-  
-  newlinesBetween?: ("ignore" | "always" | "never")
+  newlinesBetween?: (("ignore" | "always" | "never") | number)
   
   ignorePattern?: (({
     
@@ -13559,8 +13551,7 @@ type PerfectionistSortJsxProps = {
   } | string))
   
   groups?: (string | string[] | {
-    
-    newlinesBetween?: ("ignore" | "always" | "never")
+    newlinesBetween?: (("ignore" | "always" | "never") | number)
     
     commentAbove?: string
   })[]
@@ -13588,8 +13579,7 @@ type PerfectionistSortMaps = {
   type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
   
   customGroups?: ({
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -13618,8 +13608,7 @@ type PerfectionistSortMaps = {
       } | string))
     }[]
   } | {
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -13700,12 +13689,10 @@ type PerfectionistSortMaps = {
   })
   
   partitionByNewLine?: boolean
-  
-  newlinesBetween?: ("ignore" | "always" | "never")
+  newlinesBetween?: (("ignore" | "always" | "never") | number)
   
   groups?: (string | string[] | {
-    
-    newlinesBetween?: ("ignore" | "always" | "never")
+    newlinesBetween?: (("ignore" | "always" | "never") | number)
     
     commentAbove?: string
   })[]
@@ -13733,8 +13720,7 @@ type PerfectionistSortModules = []|[{
   type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
   
   customGroups?: ({
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -13779,8 +13765,7 @@ type PerfectionistSortModules = []|[{
       } | string))
     }[]
   } | {
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -13862,12 +13847,10 @@ type PerfectionistSortModules = []|[{
   })
   
   partitionByNewLine?: boolean
-  
-  newlinesBetween?: ("ignore" | "always" | "never")
+  newlinesBetween?: (("ignore" | "always" | "never") | number)
   
   groups?: (string | string[] | {
-    
-    newlinesBetween?: ("ignore" | "always" | "never")
+    newlinesBetween?: (("ignore" | "always" | "never") | number)
     
     commentAbove?: string
   })[]
@@ -13899,8 +13882,7 @@ type PerfectionistSortNamedExports = {
   ignoreAlias?: boolean
   
   customGroups?: ({
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -13933,8 +13915,7 @@ type PerfectionistSortNamedExports = {
       } | string))
     }[]
   } | {
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -14004,12 +13985,10 @@ type PerfectionistSortNamedExports = {
   })
   
   partitionByNewLine?: boolean
-  
-  newlinesBetween?: ("ignore" | "always" | "never")
+  newlinesBetween?: (("ignore" | "always" | "never") | number)
   
   groups?: (string | string[] | {
-    
-    newlinesBetween?: ("ignore" | "always" | "never")
+    newlinesBetween?: (("ignore" | "always" | "never") | number)
     
     commentAbove?: string
   })[]
@@ -14041,8 +14020,7 @@ type PerfectionistSortNamedImports = {
   ignoreAlias?: boolean
   
   customGroups?: ({
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -14075,8 +14053,7 @@ type PerfectionistSortNamedImports = {
       } | string))
     }[]
   } | {
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -14146,12 +14123,10 @@ type PerfectionistSortNamedImports = {
   })
   
   partitionByNewLine?: boolean
-  
-  newlinesBetween?: ("ignore" | "always" | "never")
+  newlinesBetween?: (("ignore" | "always" | "never") | number)
   
   groups?: (string | string[] | {
-    
-    newlinesBetween?: ("ignore" | "always" | "never")
+    newlinesBetween?: (("ignore" | "always" | "never") | number)
     
     commentAbove?: string
   })[]
@@ -14181,8 +14156,7 @@ type PerfectionistSortObjectTypes = {
   customGroups?: ({
     [k: string]: (string | string[]) | undefined
   } | ({
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -14229,8 +14203,7 @@ type PerfectionistSortObjectTypes = {
       sortBy?: ("name" | "value")
     }[]
   } | {
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -14343,8 +14316,7 @@ type PerfectionistSortObjectTypes = {
   })
   
   partitionByNewLine?: boolean
-  
-  newlinesBetween?: ("ignore" | "always" | "never")
+  newlinesBetween?: (("ignore" | "always" | "never") | number)
   
   ignorePattern?: (({
     
@@ -14360,8 +14332,7 @@ type PerfectionistSortObjectTypes = {
   sortBy?: ("name" | "value")
   
   groups?: (string | string[] | {
-    
-    newlinesBetween?: ("ignore" | "always" | "never")
+    newlinesBetween?: (("ignore" | "always" | "never") | number)
     
     commentAbove?: string
   })[]
@@ -14395,8 +14366,7 @@ type PerfectionistSortObjects = {
   customGroups?: ({
     [k: string]: (string | string[]) | undefined
   } | ({
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -14441,8 +14411,7 @@ type PerfectionistSortObjects = {
       } | string))
     }[]
   } | {
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -14557,8 +14526,7 @@ type PerfectionistSortObjects = {
   })
   
   partitionByNewLine?: boolean
-  
-  newlinesBetween?: ("ignore" | "always" | "never")
+  newlinesBetween?: (("ignore" | "always" | "never") | number)
   
   ignorePattern?: (({
     
@@ -14573,8 +14541,7 @@ type PerfectionistSortObjects = {
   } | string))
   
   groups?: (string | string[] | {
-    
-    newlinesBetween?: ("ignore" | "always" | "never")
+    newlinesBetween?: (("ignore" | "always" | "never") | number)
     
     commentAbove?: string
   })[]
@@ -14604,8 +14571,7 @@ type PerfectionistSortSets = {
   groupKind?: ("mixed" | "literals-first" | "spreads-first")
   
   customGroups?: ({
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -14636,8 +14602,7 @@ type PerfectionistSortSets = {
       } | string))
     }[]
   } | {
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -14720,12 +14685,10 @@ type PerfectionistSortSets = {
   })
   
   partitionByNewLine?: boolean
-  
-  newlinesBetween?: ("ignore" | "always" | "never")
+  newlinesBetween?: (("ignore" | "always" | "never") | number)
   
   groups?: (string | string[] | {
-    
-    newlinesBetween?: ("ignore" | "always" | "never")
+    newlinesBetween?: (("ignore" | "always" | "never") | number)
     
     commentAbove?: string
   })[]
@@ -14775,8 +14738,7 @@ type PerfectionistSortUnionTypes = {
   type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
   
   customGroups?: ({
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -14807,8 +14769,7 @@ type PerfectionistSortUnionTypes = {
       } | string))
     }[]
   } | {
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -14876,12 +14837,10 @@ type PerfectionistSortUnionTypes = {
   })
   
   partitionByNewLine?: boolean
-  
-  newlinesBetween?: ("ignore" | "always" | "never")
+  newlinesBetween?: (("ignore" | "always" | "never") | number)
   
   groups?: (string | string[] | {
-    
-    newlinesBetween?: ("ignore" | "always" | "never")
+    newlinesBetween?: (("ignore" | "always" | "never") | number)
     
     commentAbove?: string
   })[]
@@ -14909,8 +14868,7 @@ type PerfectionistSortVariableDeclarations = []|[{
   type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
   
   customGroups?: ({
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -14941,8 +14899,7 @@ type PerfectionistSortVariableDeclarations = []|[{
       } | string))
     }[]
   } | {
-    
-    newlinesInside?: ("always" | "never")
+    newlinesInside?: (("always" | "never") | number)
     
     fallbackSort?: {
       
@@ -15010,12 +14967,10 @@ type PerfectionistSortVariableDeclarations = []|[{
   })
   
   partitionByNewLine?: boolean
-  
-  newlinesBetween?: ("ignore" | "always" | "never")
+  newlinesBetween?: (("ignore" | "always" | "never") | number)
   
   groups?: (string | string[] | {
-    
-    newlinesBetween?: ("ignore" | "always" | "never")
+    newlinesBetween?: (("ignore" | "always" | "never") | number)
     
     commentAbove?: string
   })[]
@@ -15696,6 +15651,10 @@ type VitestConsistentTestFilename = []|[{
 type VitestConsistentTestIt = []|[{
   fn?: ("test" | "it")
   withinDescribe?: ("test" | "it")
+}]
+// ----- vitest/consistent-vitest-vi -----
+type VitestConsistentVitestVi = []|[{
+  fn?: ("vi" | "vitest")
 }]
 // ----- vitest/expect-expect -----
 type VitestExpectExpect = []|[{
