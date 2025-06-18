@@ -11,5 +11,6 @@ export const testingLibraryRules = async () => {
   return {
     ...testingLibrary.configs["flat/react"].rules,
     ...jestDom.configs["flat/recommended"].rules,
+    "testing-library/no-test-id-queries": "error",
   } satisfies Rules;
 };
