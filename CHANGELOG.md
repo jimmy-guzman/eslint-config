@@ -1,3 +1,10 @@
+# [5.18.0](https://github.com/jimmy-guzman/eslint-config/compare/v5.17.0...v5.18.0) (2025-06-21)
+
+
+### Features
+
+* ✨ bump `eslint-plugin-jest` bump to v29.0.1 ([#186](https://github.com/jimmy-guzman/eslint-config/issues/186)) ([88514d7](https://github.com/jimmy-guzman/eslint-config/commit/88514d7d4a71586afb4482031f1e3003df2826b4))
+
 # [5.17.0](https://github.com/jimmy-guzman/eslint-config/compare/v5.16.0...v5.17.0) (2025-06-18)
 
 
