@@ -31,6 +31,8 @@ export const GLOB_IGNORES = [
   "**/.astro",
   "**/.vinxi",
   "**/app.config.timestamp_*.js",
+  "**/.tanstack",
+  "**/.nitro",
 
   "**/CHANGELOG*.md",
   "**/*.min.*",
