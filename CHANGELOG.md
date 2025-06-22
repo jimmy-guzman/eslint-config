@@ -1,3 +1,10 @@
+## [5.18.1](https://github.com/jimmy-guzman/eslint-config/compare/v5.18.0...v5.18.1) (2025-06-22)
+
+
+### Bug Fixes
+
+* 🐛 add missing `**/.tanstack` and `**/.nitro` ([#188](https://github.com/jimmy-guzman/eslint-config/issues/188)) ([6a36479](https://github.com/jimmy-guzman/eslint-config/commit/6a364794b211796e9a89c180a303e94f0fcdc7de))
+
 # [5.18.0](https://github.com/jimmy-guzman/eslint-config/compare/v5.17.0...v5.18.0) (2025-06-21)
 
 
