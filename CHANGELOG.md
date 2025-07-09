@@ -1,3 +1,13 @@
+# [5.19.0](https://github.com/jimmy-guzman/eslint-config/compare/v5.18.1...v5.19.0) (2025-07-09)
+
+
+### Features
+
+* ✨ bump all deps to latest ([6b355a9](https://github.com/jimmy-guzman/eslint-config/commit/6b355a960b8efb6c754ab7b8718f219855d35c07))
+* ✨ enable `@tanstack/query/mutation-property-order` ([59ece31](https://github.com/jimmy-guzman/eslint-config/commit/59ece3123d5b2f4f3d17a15fccca8219d3142e50))
+* ✨ enable `vitest/prefer-called-once` ([92bd388](https://github.com/jimmy-guzman/eslint-config/commit/92bd388407d5135432acd3a650e292fdd36cb8b7))
+* ✨ enable `vitest/warn-todo` ([0ae8484](https://github.com/jimmy-guzman/eslint-config/commit/0ae848457424872cc55213264bd66348f8aa6fb8))
+
 ## [5.18.1](https://github.com/jimmy-guzman/eslint-config/compare/v5.18.0...v5.18.1) (2025-06-22)
 
 
