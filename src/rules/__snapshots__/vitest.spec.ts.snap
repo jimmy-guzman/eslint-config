@@ -28,6 +28,8 @@ exports[`should create vitest rules 1`] = `
   "vitest/no-standalone-expect": "error",
   "vitest/no-test-prefixes": "error",
   "vitest/no-test-return-statement": "error",
+  "vitest/prefer-called-once": "error",
+  "vitest/prefer-called-times": "off",
   "vitest/prefer-called-with": "error",
   "vitest/prefer-comparison-matcher": "error",
   "vitest/prefer-each": "error",

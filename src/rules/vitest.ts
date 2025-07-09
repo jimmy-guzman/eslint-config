@@ -31,6 +31,8 @@ export const vitestRules = async () => {
     "vitest/no-standalone-expect": "error",
     "vitest/no-test-prefixes": "error",
     "vitest/no-test-return-statement": "error",
+    "vitest/prefer-called-once": "error",
+    "vitest/prefer-called-times": "off",
     // "vitest/no-untyped-mock-factory": "off", // requires typescript
     "vitest/prefer-called-with": "error",
     "vitest/prefer-comparison-matcher": "error",
