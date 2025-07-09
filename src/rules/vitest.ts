@@ -18,16 +18,12 @@ export const vitestRules = async () => {
     "vitest/no-alias-methods": "error",
     "vitest/no-commented-out-tests": "error",
     "vitest/no-conditional-in-test": "error",
-    // "vitest/no-confusing-set-timeout": "error", // missing
-    // "vitest/no-deprecated-functions": "error",  // missing
     "vitest/no-disabled-tests": "warn",
     "vitest/no-duplicate-hooks": "error",
-    // "vitest/no-export": "error", // missing
     "vitest/no-focused-tests": "error",
     "vitest/no-hooks": "off",
     "vitest/no-identical-title": "error",
     "vitest/no-interpolation-in-snapshots": "error",
-    // "vitest/no-jasmine-globals": "error",  // missing
     "vitest/no-large-snapshots": "off",
     "vitest/no-mocks-import": "error",
     "vitest/no-restricted-matchers": "off",
@@ -68,5 +64,6 @@ export const vitestRules = async () => {
         },
       },
     ],
+    "vitest/warn-todo": "warn",
   } satisfies Rules;
 };
