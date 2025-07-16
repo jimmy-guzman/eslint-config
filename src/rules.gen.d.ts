@@ -574,7 +574,7 @@ export interface RuleOptions {
    */
   '@next/next/no-assign-module-variable'?: Linter.RuleEntry<[]>
   /**
-   * Prevent client components from being async functions.
+   * Prevent Client Components from being async functions.
    * @see https://nextjs.org/docs/messages/no-async-client-component
    */
   '@next/next/no-async-client-component'?: Linter.RuleEntry<[]>
@@ -3885,7 +3885,7 @@ export interface RuleOptions {
    */
   'no-console'?: Linter.RuleEntry<NoConsole>
   /**
-   * Disallow reassigning `const` variables
+   * Disallow reassigning `const`, `using`, and `await using` variables
    * @see https://eslint.org/docs/latest/rules/no-const-assign
    */
   'no-const-assign'?: Linter.RuleEntry<[]>
@@ -7220,10 +7220,12 @@ type StylisticIndent = []|[("tab" | number)]|[("tab" | number), {
   FunctionDeclaration?: {
     parameters?: (number | ("first" | "off"))
     body?: number
+    returnType?: number
   }
   FunctionExpression?: {
     parameters?: (number | ("first" | "off"))
     body?: number
+    returnType?: number
   }
   StaticBlock?: {
     body?: number
@@ -7264,31 +7266,52 @@ type StylisticJsxCurlyNewline = []|[(("consistent" | "never") | {
   multiline?: ("consistent" | "require" | "forbid")
 })]
 // ----- @stylistic/jsx-curly-spacing -----
-type StylisticJsxCurlySpacing = []|[((_StylisticJsxCurlySpacing_BasicConfig & {
-  attributes?: _StylisticJsxCurlySpacingBasicConfigOrBoolean
-  children?: _StylisticJsxCurlySpacingBasicConfigOrBoolean
-  [k: string]: unknown | undefined
-}) | ("always" | "never"))]|[((_StylisticJsxCurlySpacing_BasicConfig & {
-  attributes?: _StylisticJsxCurlySpacingBasicConfigOrBoolean
-  children?: _StylisticJsxCurlySpacingBasicConfigOrBoolean
-  [k: string]: unknown | undefined
-}) | ("always" | "never")), {
-  allowMultiline?: boolean
-  spacing?: {
-    objectLiterals?: ("always" | "never")
-    [k: string]: unknown | undefined
-  }
-}]
-type _StylisticJsxCurlySpacingBasicConfigOrBoolean = (_StylisticJsxCurlySpacing_BasicConfig | boolean)
-interface _StylisticJsxCurlySpacing_BasicConfig {
+type StylisticJsxCurlySpacing = []|[({
   when?: ("always" | "never")
   allowMultiline?: boolean
   spacing?: {
     objectLiterals?: ("always" | "never")
-    [k: string]: unknown | undefined
   }
-  [k: string]: unknown | undefined
-}
+  attributes?: ({
+    when?: ("always" | "never")
+    allowMultiline?: boolean
+    spacing?: {
+      objectLiterals?: ("always" | "never")
+    }
+  } | boolean)
+  children?: ({
+    when?: ("always" | "never")
+    allowMultiline?: boolean
+    spacing?: {
+      objectLiterals?: ("always" | "never")
+    }
+  } | boolean)
+} | ("always" | "never"))]|[({
+  when?: ("always" | "never")
+  allowMultiline?: boolean
+  spacing?: {
+    objectLiterals?: ("always" | "never")
+  }
+  attributes?: ({
+    when?: ("always" | "never")
+    allowMultiline?: boolean
+    spacing?: {
+      objectLiterals?: ("always" | "never")
+    }
+  } | boolean)
+  children?: ({
+    when?: ("always" | "never")
+    allowMultiline?: boolean
+    spacing?: {
+      objectLiterals?: ("always" | "never")
+    }
+  } | boolean)
+} | ("always" | "never")), {
+  allowMultiline?: boolean
+  spacing?: {
+    objectLiterals?: ("always" | "never")
+  }
+}]
 // ----- @stylistic/jsx-equals-spacing -----
 type StylisticJsxEqualsSpacing = []|[("always" | "never")]
 // ----- @stylistic/jsx-first-prop-new-line -----
@@ -7304,14 +7327,12 @@ type StylisticJsxIndent = []|[("tab" | number)]|[("tab" | number), {
 type StylisticJsxIndentProps = []|[(("tab" | "first") | number | {
   indentMode?: (("tab" | "first") | number)
   ignoreTernaryOperator?: boolean
-  [k: string]: unknown | undefined
 })]
 // ----- @stylistic/jsx-max-props-per-line -----
 type StylisticJsxMaxPropsPerLine = []|[({
   maximum?: {
     single?: number
     multi?: number
-    [k: string]: unknown | undefined
   }
 } | {
   maximum?: number
@@ -7658,6 +7679,10 @@ type StylisticKeywordSpacing = []|[{
       before?: boolean
       after?: boolean
     }
+    accessor?: {
+      before?: boolean
+      after?: boolean
+    }
     as?: {
       before?: boolean
       after?: boolean
@@ -7872,11 +7897,11 @@ interface _StylisticMemberDelimiterStyle_DelimiterConfig {
 // ----- @stylistic/multiline-comment-style -----
 type StylisticMultilineCommentStyle = ([]|[("starred-block" | "bare-block")] | []|["separate-lines"]|["separate-lines", {
   checkJSDoc?: boolean
+  checkExclamation?: boolean
 }])
 // ----- @stylistic/multiline-ternary -----
 type StylisticMultilineTernary = []|[("always" | "always-multiline" | "never")]|[("always" | "always-multiline" | "never"), {
   ignoreJSX?: boolean
-  [k: string]: unknown | undefined
 }]
 // ----- @stylistic/new-parens -----
 type StylisticNewParens = []|[("always" | "never")]
@@ -10313,8 +10338,8 @@ type JsdocMatchName = []|[{
     context?: string
     disallowName?: string
     message?: string
+    replacement?: string
     tags?: string[]
-    [k: string]: unknown | undefined
   }[]
 }]
 // ----- jsdoc/multiline-blocks -----
@@ -10388,7 +10413,6 @@ type JsdocRequireAsteriskPrefix = []|[("always" | "never" | "any")]|[("always" |
     always?: string[]
     any?: string[]
     never?: string[]
-    [k: string]: unknown | undefined
   }
 }]
 // ----- jsdoc/require-description -----
@@ -10598,7 +10622,6 @@ type JsdocSortTags = []|[{
   reportTagGroupSpacing?: boolean
   tagSequence?: {
     tags?: string[]
-    [k: string]: unknown | undefined
   }[]
 }]
 // ----- jsdoc/tag-lines -----
