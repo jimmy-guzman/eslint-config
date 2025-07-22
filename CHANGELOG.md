@@ -1,3 +1,16 @@
+# [6.0.0](https://github.com/jimmy-guzman/eslint-config/compare/v5.20.0...v6.0.0) (2025-07-22)
+
+
+### Features
+
+* ✨ bump `eslint-plugin-unicorn` to v60 ([5198020](https://github.com/jimmy-guzman/eslint-config/commit/5198020c89d8fc80bfb8a338e3c6def8fdcac5d0))
+* ✨ bump deps to latest minor ([4d11382](https://github.com/jimmy-guzman/eslint-config/commit/4d113822929644718d3efac6bcceb0498bddfd2d))
+
+
+### BREAKING CHANGES
+
+* 💥 Require node version 20.10.0 & above
+
 # [5.20.0](https://github.com/jimmy-guzman/eslint-config/compare/v5.19.0...v5.20.0) (2025-07-17)
 
 
