@@ -8,6 +8,7 @@ export default defineConfig({
         ...(configDefaults.coverage.exclude ?? []),
         "fixtures/**",
         "scripts/**",
+        "tsdown.config.ts",
       ],
       thresholds: { 100: true },
     },
