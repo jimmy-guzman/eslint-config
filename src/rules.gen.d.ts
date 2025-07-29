@@ -4896,7 +4896,7 @@ export interface RuleOptions {
    */
   'playwright/no-standalone-expect'?: Linter.RuleEntry<[]>
   /**
-   * Prevent unsafe variable references in page.evaluate()
+   * Prevent unsafe variable references in page.evaluate() and page.addInitScript()
    * @see https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/no-unsafe-references.md
    */
   'playwright/no-unsafe-references'?: Linter.RuleEntry<[]>
@@ -4910,6 +4910,11 @@ export interface RuleOptions {
    * @see https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/no-useless-not.md
    */
   'playwright/no-useless-not'?: Linter.RuleEntry<[]>
+  /**
+   * Prevent usage of page.waitForNavigation()
+   * @see https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/no-wait-for-navigation.md
+   */
+  'playwright/no-wait-for-navigation'?: Linter.RuleEntry<[]>
   /**
    * Prevent usage of page.waitForSelector()
    * @see https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/no-wait-for-selector.md
@@ -5020,6 +5025,10 @@ export interface RuleOptions {
    * @see https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/valid-expect-in-promise.md
    */
   'playwright/valid-expect-in-promise'?: Linter.RuleEntry<[]>
+  /**
+   * Enforce valid tag format in Playwright test blocks
+   */
+  'playwright/valid-test-tags'?: Linter.RuleEntry<PlaywrightValidTestTags>
   /**
    * Enforce valid titles
    * @see https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/valid-title.md
@@ -8066,11 +8075,12 @@ type StylisticPaddedBlocks = []|[(("always" | "never" | "start" | "end") | {
 }]
 // ----- @stylistic/padding-line-between-statements -----
 type _StylisticPaddingLineBetweenStatementsPaddingType = ("any" | "never" | "always")
-type _StylisticPaddingLineBetweenStatementsStatementType = (("*" | "block-like" | "exports" | "require" | "directive" | "expression" | "iife" | "multiline-block-like" | "multiline-expression" | "multiline-const" | "multiline-export" | "multiline-let" | "multiline-using" | "multiline-var" | "singleline-const" | "singleline-export" | "singleline-let" | "singleline-using" | "singleline-var" | "block" | "empty" | "function" | "ts-method" | "break" | "case" | "class" | "const" | "continue" | "debugger" | "default" | "do" | "export" | "for" | "if" | "import" | "let" | "return" | "switch" | "throw" | "try" | "using" | "var" | "while" | "with" | "cjs-export" | "cjs-import" | "enum" | "interface" | "type" | "function-overload") | [("*" | "block-like" | "exports" | "require" | "directive" | "expression" | "iife" | "multiline-block-like" | "multiline-expression" | "multiline-const" | "multiline-export" | "multiline-let" | "multiline-using" | "multiline-var" | "singleline-const" | "singleline-export" | "singleline-let" | "singleline-using" | "singleline-var" | "block" | "empty" | "function" | "ts-method" | "break" | "case" | "class" | "const" | "continue" | "debugger" | "default" | "do" | "export" | "for" | "if" | "import" | "let" | "return" | "switch" | "throw" | "try" | "using" | "var" | "while" | "with" | "cjs-export" | "cjs-import" | "enum" | "interface" | "type" | "function-overload"), ...(("*" | "block-like" | "exports" | "require" | "directive" | "expression" | "iife" | "multiline-block-like" | "multiline-expression" | "multiline-const" | "multiline-export" | "multiline-let" | "multiline-using" | "multiline-var" | "singleline-const" | "singleline-export" | "singleline-let" | "singleline-using" | "singleline-var" | "block" | "empty" | "function" | "ts-method" | "break" | "case" | "class" | "const" | "continue" | "debugger" | "default" | "do" | "export" | "for" | "if" | "import" | "let" | "return" | "switch" | "throw" | "try" | "using" | "var" | "while" | "with" | "cjs-export" | "cjs-import" | "enum" | "interface" | "type" | "function-overload"))[]])
+type _StylisticPaddingLineBetweenStatementsStatementOption = (_StylisticPaddingLineBetweenStatementsStatementType | [_StylisticPaddingLineBetweenStatementsStatementType, ...(_StylisticPaddingLineBetweenStatementsStatementType)[]])
+type _StylisticPaddingLineBetweenStatementsStatementType = ("*" | "exports" | "require" | "directive" | "iife" | "block" | "empty" | "function" | "ts-method" | "break" | "case" | "class" | "continue" | "debugger" | "default" | "do" | "for" | "if" | "import" | "return" | "switch" | "throw" | "try" | "while" | "with" | "cjs-export" | "cjs-import" | "enum" | "interface" | "type" | "function-overload" | "block-like" | "singleline-block-like" | "multiline-block-like" | "expression" | "singleline-expression" | "multiline-expression" | "export" | "singleline-export" | "multiline-export" | "var" | "singleline-var" | "multiline-var" | "let" | "singleline-let" | "multiline-let" | "const" | "singleline-const" | "multiline-const" | "using" | "singleline-using" | "multiline-using")
 type StylisticPaddingLineBetweenStatements = {
   blankLine: _StylisticPaddingLineBetweenStatementsPaddingType
-  prev: _StylisticPaddingLineBetweenStatementsStatementType
-  next: _StylisticPaddingLineBetweenStatementsStatementType
+  prev: _StylisticPaddingLineBetweenStatementsStatementOption
+  next: _StylisticPaddingLineBetweenStatementsStatementOption
 }[]
 // ----- @stylistic/quote-props -----
 type StylisticQuoteProps = ([]|[("always" | "as-needed" | "consistent" | "consistent-as-needed")] | []|[("always" | "as-needed" | "consistent" | "consistent-as-needed")]|[("always" | "as-needed" | "consistent" | "consistent-as-needed"), {
@@ -9359,6 +9369,7 @@ type AccessorPairs = []|[{
   getWithoutSet?: boolean
   setWithoutGet?: boolean
   enforceForClassMembers?: boolean
+  enforceForTSTypes?: boolean
 }]
 // ----- array-bracket-newline -----
 type ArrayBracketNewline = []|[(("always" | "never" | "consistent") | {
@@ -9758,7 +9769,9 @@ type GetterReturn = []|[{
   allowImplicit?: boolean
 }]
 // ----- grouped-accessor-pairs -----
-type GroupedAccessorPairs = []|[("anyOrder" | "getBeforeSet" | "setBeforeGet")]
+type GroupedAccessorPairs = []|[("anyOrder" | "getBeforeSet" | "setBeforeGet")]|[("anyOrder" | "getBeforeSet" | "setBeforeGet"), {
+  enforceForTSTypes?: boolean
+}]
 // ----- handle-callback-err -----
 type HandleCallbackErr = []|[string]
 // ----- id-blacklist -----
@@ -12054,6 +12067,7 @@ type NoUnusedVars = []|[(("all" | "local") | {
   caughtErrorsIgnorePattern?: string
   destructuredArrayIgnorePattern?: string
   ignoreClassWithStaticInitBlock?: boolean
+  ignoreUsingDeclarations?: boolean
   reportUsedIgnorePattern?: boolean
 })]
 // ----- no-use-before-define -----
@@ -15097,6 +15111,17 @@ type PlaywrightValidExpect = []|[{
   maxArgs?: number
   minArgs?: number
 }]
+// ----- playwright/valid-test-tags -----
+type PlaywrightValidTestTags = []|[{
+  allowedTags?: (string | {
+    source?: string
+    [k: string]: unknown | undefined
+  })[]
+  disallowedTags?: (string | {
+    source?: string
+    [k: string]: unknown | undefined
+  })[]
+}]
 // ----- playwright/valid-title -----
 type PlaywrightValidTitle = []|[{
   disallowedWords?: string[]
@@ -15448,17 +15473,14 @@ type TestingLibraryNoDomImport = []|[string]
 // ----- testing-library/no-node-access -----
 type TestingLibraryNoNodeAccess = []|[{
   allowContainerFirstChild?: boolean
-  [k: string]: unknown | undefined
 }]
 // ----- testing-library/no-render-in-lifecycle -----
 type TestingLibraryNoRenderInLifecycle = []|[{
   allowTestingFrameworkSetupHook?: ("beforeEach" | "beforeAll")
-  [k: string]: unknown | undefined
 }]
 // ----- testing-library/no-unnecessary-act -----
 type TestingLibraryNoUnnecessaryAct = []|[{
   isStrict?: boolean
-  [k: string]: unknown | undefined
 }]
 // ----- testing-library/prefer-explicit-assert -----
 type TestingLibraryPreferExplicitAssert = []|[{
@@ -15475,13 +15497,11 @@ type TestingLibraryPreferQueryMatchers = []|[{
   validEntries?: {
     query?: ("get" | "query")
     matcher?: string
-    [k: string]: unknown | undefined
   }[]
 }]
 // ----- testing-library/prefer-user-event -----
 type TestingLibraryPreferUserEvent = []|[{
   allowedMethods?: unknown[]
-  [k: string]: unknown | undefined
 }]
 // ----- unicode-bom -----
 type UnicodeBom = []|[("always" | "never")]
