@@ -1,3 +1,10 @@
+# [6.1.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.0.0...v6.1.0) (2025-07-29)
+
+
+### Features
+
+* ✨ enable `playwright/no-wait-for-navigation` ([#197](https://github.com/jimmy-guzman/eslint-config/issues/197)) ([2e5c91e](https://github.com/jimmy-guzman/eslint-config/commit/2e5c91e924eeda42d5d370b5563ebbfa41d5a06a))
+
 # [6.0.0](https://github.com/jimmy-guzman/eslint-config/compare/v5.20.0...v6.0.0) (2025-07-22)
 
 
