@@ -7,7 +7,7 @@ exports[`typescriptConfig > should create config 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.38.0",
+          "version": "8.39.0",
         },
         "parseForESLint": [Function],
       },
@@ -294,7 +294,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.38.0",
+                    "version": "8.39.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -499,7 +499,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.38.0",
+                  "version": "8.39.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -621,7 +621,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.38.0",
+                    "version": "8.39.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -701,7 +701,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.38.0",
+                    "version": "8.39.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -808,7 +808,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.38.0",
+                    "version": "8.39.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -892,7 +892,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.38.0",
+                    "version": "8.39.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1060,6 +1060,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "@typescript-eslint/no-unnecessary-type-arguments": "error",
                 "@typescript-eslint/no-unnecessary-type-assertion": "error",
                 "@typescript-eslint/no-unnecessary-type-constraint": "error",
+                "@typescript-eslint/no-unnecessary-type-conversion": "error",
                 "@typescript-eslint/no-unnecessary-type-parameters": "error",
                 "@typescript-eslint/no-unsafe-argument": "error",
                 "@typescript-eslint/no-unsafe-assignment": "error",
@@ -1130,7 +1131,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.38.0",
+                    "version": "8.39.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1197,6 +1198,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "@typescript-eslint/no-unnecessary-template-expression": "error",
                 "@typescript-eslint/no-unnecessary-type-arguments": "error",
                 "@typescript-eslint/no-unnecessary-type-assertion": "error",
+                "@typescript-eslint/no-unnecessary-type-conversion": "error",
                 "@typescript-eslint/no-unnecessary-type-parameters": "error",
                 "@typescript-eslint/no-unsafe-argument": "error",
                 "@typescript-eslint/no-unsafe-assignment": "error",
@@ -1252,7 +1254,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.38.0",
+                    "version": "8.39.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1323,7 +1325,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.38.0",
+                    "version": "8.39.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1403,7 +1405,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.38.0",
+                    "version": "8.39.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1737,6 +1739,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "@typescript-eslint/no-unnecessary-type-arguments": "error",
               "@typescript-eslint/no-unnecessary-type-assertion": "error",
               "@typescript-eslint/no-unnecessary-type-constraint": "error",
+              "@typescript-eslint/no-unnecessary-type-conversion": "error",
               "@typescript-eslint/no-unnecessary-type-parameters": "error",
               "@typescript-eslint/no-unsafe-argument": "error",
               "@typescript-eslint/no-unsafe-assignment": "error",
@@ -1825,6 +1828,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "@typescript-eslint/no-unnecessary-template-expression": "error",
               "@typescript-eslint/no-unnecessary-type-arguments": "error",
               "@typescript-eslint/no-unnecessary-type-assertion": "error",
+              "@typescript-eslint/no-unnecessary-type-conversion": "error",
               "@typescript-eslint/no-unnecessary-type-parameters": "error",
               "@typescript-eslint/no-unsafe-argument": "error",
               "@typescript-eslint/no-unsafe-assignment": "error",
@@ -1946,7 +1950,7 @@ exports[`typescriptConfig > should create config 1`] = `
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.38.0",
+          "version": "8.39.0",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -7868,6 +7872,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
             "meta": {
               "docs": {
                 "description": "Disallow conversion idioms when they do not change the type or value of the expression",
+                "recommended": "strict",
                 "requiresTypeChecking": true,
                 "url": "https://typescript-eslint.io/rules/no-unnecessary-type-conversion",
               },
@@ -7938,6 +7943,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                 "unsafeArrayPatternFromTuple": "Unsafe array destructuring of a tuple element with an {{sender}} value.",
                 "unsafeArraySpread": "Unsafe spread of an {{sender}} value in an array.",
                 "unsafeAssignment": "Unsafe assignment of type {{sender}} to a variable of type {{receiver}}.",
+                "unsafeObjectPattern": "Unsafe object destructuring of a property with an {{sender}} value.",
               },
               "schema": [],
               "type": "problem",
@@ -10430,6 +10436,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
       "@typescript-eslint/no-unnecessary-type-arguments": "error",
       "@typescript-eslint/no-unnecessary-type-assertion": "error",
       "@typescript-eslint/no-unnecessary-type-constraint": "error",
+      "@typescript-eslint/no-unnecessary-type-conversion": "error",
       "@typescript-eslint/no-unnecessary-type-parameters": "error",
       "@typescript-eslint/no-unsafe-argument": "error",
       "@typescript-eslint/no-unsafe-assignment": "error",
