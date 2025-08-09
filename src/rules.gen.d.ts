@@ -15128,11 +15128,9 @@ type PlaywrightValidExpect = []|[{
 type PlaywrightValidTestTags = []|[{
   allowedTags?: (string | {
     source?: string
-    [k: string]: unknown | undefined
   })[]
   disallowedTags?: (string | {
     source?: string
-    [k: string]: unknown | undefined
   })[]
 }]
 // ----- playwright/valid-title -----
