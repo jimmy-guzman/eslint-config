@@ -1,3 +1,18 @@
+# [6.2.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.1.0...v6.2.0) (2025-08-09)
+
+
+### Bug Fixes
+
+* 🐛 drop deprecated `@eslint-react/eslint-plugin` rules ([584c531](https://github.com/jimmy-guzman/eslint-config/commit/584c53131dd8d3fedef4fee4c24c3d76a008c439))
+
+
+### Features
+
+* ✨ bump deps to latest ([e09e88b](https://github.com/jimmy-guzman/eslint-config/commit/e09e88bb7e096c83562b0231b2fd2d006aa927fe))
+* ✨ enable `@typescript-eslint/no-useless-empty-export` ([0cd3559](https://github.com/jimmy-guzman/eslint-config/commit/0cd35599504777e201a70bfde8f5beb66fd5d313))
+* ✨ get stricter when it comes to react ([00dd0cf](https://github.com/jimmy-guzman/eslint-config/commit/00dd0cfc85c44b98ab20f7fe5461e30f32e0339d))
+* ✨ mostly support `typescript` v5.9 ([081bb4d](https://github.com/jimmy-guzman/eslint-config/commit/081bb4d95078ae5d638fbd328a8c00e72ac085ff))
+
 # [6.1.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.0.0...v6.1.0) (2025-07-29)
 
 
