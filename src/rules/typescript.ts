@@ -1,5 +1,9 @@
 import type { Rules } from "../types";
 
+const disabledEslintRules = {
+  "no-use-before-define": "off",
+} satisfies Rules;
+
 export const typescriptRules = {
   "@typescript-eslint/consistent-type-exports": [
     "error",
@@ -17,7 +21,6 @@ export const typescriptRules = {
   "@typescript-eslint/no-unnecessary-type-conversion": "error",
   "@typescript-eslint/no-unused-vars": [
     "error",
-    // https://typescript-eslint.io/rules/no-unused-vars/#benefits-over-typescript
     {
       args: "all",
       argsIgnorePattern: "^_",
@@ -37,9 +40,10 @@ export const typescriptRules = {
       variables: true,
     },
   ],
+  "@typescript-eslint/no-useless-empty-export": "error",
   "@typescript-eslint/restrict-template-expressions": [
     "error",
     { allowNumber: true },
   ],
-  "no-use-before-define": "off",
+  ...disabledEslintRules,
 } satisfies Rules;

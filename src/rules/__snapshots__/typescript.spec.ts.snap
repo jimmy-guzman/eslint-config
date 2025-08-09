@@ -45,6 +45,7 @@ exports[`should create typescript rules 1`] = `
       "variables": true,
     },
   ],
+  "@typescript-eslint/no-useless-empty-export": "error",
   "@typescript-eslint/restrict-template-expressions": [
     "error",
     {

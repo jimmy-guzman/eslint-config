@@ -10580,6 +10580,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
           "variables": true,
         },
       ],
+      "@typescript-eslint/no-useless-empty-export": "error",
       "@typescript-eslint/restrict-template-expressions": [
         "error",
         {
