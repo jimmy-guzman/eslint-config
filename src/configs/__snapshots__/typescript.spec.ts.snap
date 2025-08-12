@@ -7,7 +7,7 @@ exports[`typescriptConfig > should create config 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.39.0",
+          "version": "8.39.1",
         },
         "parseForESLint": [Function],
       },
@@ -294,7 +294,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.39.0",
+                    "version": "8.39.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -499,7 +499,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.39.0",
+                  "version": "8.39.1",
                 },
                 "parseForESLint": [Function],
               },
@@ -621,7 +621,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.39.0",
+                    "version": "8.39.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -701,7 +701,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.39.0",
+                    "version": "8.39.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -808,7 +808,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.39.0",
+                    "version": "8.39.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -892,7 +892,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.39.0",
+                    "version": "8.39.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1131,7 +1131,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.39.0",
+                    "version": "8.39.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1254,7 +1254,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.39.0",
+                    "version": "8.39.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1325,7 +1325,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.39.0",
+                    "version": "8.39.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1405,7 +1405,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.39.0",
+                    "version": "8.39.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1950,7 +1950,7 @@ exports[`typescriptConfig > should create config 1`] = `
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.39.0",
+          "version": "8.39.1",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -2104,7 +2104,6 @@ exports[`typescriptConfig > should create config 1`] = `
                   "additionalProperties": false,
                   "properties": {
                     "minimumDescriptionLength": {
-                      "default": 3,
                       "description": "A minimum character length for descriptions when \`allow-with-description\` is enabled.",
                       "type": "number",
                     },
@@ -2200,7 +2199,6 @@ exports[`typescriptConfig > should create config 1`] = `
                   "additionalProperties": false,
                   "properties": {
                     "enforceForClassFields": {
-                      "default": true,
                       "description": "Enforces that functions used as instance field initializers utilize \`this\`.",
                       "type": "boolean",
                     },
@@ -2592,27 +2590,22 @@ exports[`typescriptConfig > should create config 1`] = `
                   "additionalProperties": false,
                   "properties": {
                     "allowIndexSignaturePropertyAccess": {
-                      "default": false,
                       "description": "Whether to allow accessing properties matching an index signature with array notation.",
                       "type": "boolean",
                     },
                     "allowKeywords": {
-                      "default": true,
                       "description": "Whether to allow keywords such as ["class"]\`.",
                       "type": "boolean",
                     },
                     "allowPattern": {
-                      "default": "",
                       "description": "Regular expression of names to allow.",
                       "type": "string",
                     },
                     "allowPrivateClassPropertyAccess": {
-                      "default": false,
                       "description": "Whether to allow accessing class members marked as \`private\` with array notation.",
                       "type": "boolean",
                     },
                     "allowProtectedClassPropertyAccess": {
-                      "default": false,
                       "description": "Whether to allow accessing class members marked as \`protected\` with array notation.",
                       "type": "boolean",
                     },
@@ -6672,7 +6665,6 @@ You must still type the parameters of the function.",
                   "additionalProperties": false,
                   "properties": {
                     "checkNever": {
-                      "default": false,
                       "description": "Whether to suggest removing \`void\` when the argument has type \`never\`.",
                       "type": "boolean",
                     },
