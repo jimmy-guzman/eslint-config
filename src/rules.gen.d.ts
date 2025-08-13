@@ -347,6 +347,11 @@ export interface RuleOptions {
    */
   '@eslint-react/no-duplicate-key'?: Linter.RuleEntry<[]>
   /**
+   * Disallow certain props on components.
+   * @see https://eslint-react.xyz/docs/rules/no-forbidden-props
+   */
+  '@eslint-react/no-forbidden-props'?: Linter.RuleEntry<EslintReactNoForbiddenProps>
+  /**
    * Replaces usages of `forwardRef` with passing `ref` as a prop.
    * @see https://eslint-react.xyz/docs/rules/no-forward-ref
    */
@@ -7017,6 +7022,17 @@ type EslintReactNamingConventionFilenameExtension = []|[(("always" | "as-needed"
   extensions?: string[]
   ignoreFilesWithoutCode?: boolean
 })]
+// ----- @eslint-react/no-forbidden-props -----
+type EslintReactNoForbiddenProps = []|[{
+  forbid?: (string | {
+    excludedNodes?: string[]
+    prop: string
+  } | {
+    includedNodes?: string[]
+    prop: string
+  })[]
+  [k: string]: unknown | undefined
+}]
 // ----- @eslint-react/no-useless-fragment -----
 type EslintReactNoUselessFragment = []|[{
   
