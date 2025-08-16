@@ -6,17 +6,18 @@
 
 > A simple, modern ESLint config that covers most use cases.
 
-## **Why Use This?**
+## Why Use This?
 
-A strict-but-practical ESLint config that **doesn’t require much thought**. It works out of the box, adapts to your stack, and enforces good patterns without getting in the way.
+A strict but practical ESLint config that works out of the box, adapts to your stack, and enforces good patterns without getting in the way. It catches real bugs, reduces ambiguity, and keeps your codebase consistent.
 
-- **Auto-detects dependencies** – Handles React, TypeScript, Astro, Next.js, Vitest, Jest, Playwright, Storybook, and TanStack Query.
-- **Prevents real issues** – Focuses on rules that actually matter.
-- **Fast & lightweight** – Loads only what’s needed, so it won’t slow you down.
-- **No setup needed** – Install it, import it, done.
-- **Customizable** – Turn off what you don’t need.
-- **Works with tests** – Supports Vitest, Jest, Playwright, and Testing Library.
-- **Encourages modern JS** – Keeps things clean and readable.
+- Auto-detects your stack: React, TypeScript, Astro, Next.js, Vitest, Jest, Playwright, Storybook, and TanStack Query.
+- Prevents real issues: Prioritizes rules that catch bugs and unsafe patterns.
+- Prevents confusion: Flags ambiguous code, confusing promise usage, shadowed variables, and unused exports.
+- Enforces consistency: Standardizes imports, naming, coding style, and testing conventions.
+- Fast and lightweight: Loads only what your project needs.
+- Zero-config start: Install it, extend it, done.
+- Customizable: Turn off or override rules per project or file.
+- Test-ready: Works with Vitest, Jest, Playwright, and Testing Library.
 
 ---
 
