@@ -15,9 +15,13 @@ export const additionalRules = {
   "curly": ["error", "all"], // Enforce `{}` around all control statements (avoids accidental bugs)
   "default-case": "error", // Require `default` case in switch statements (prevents unintended fallthrough)
   "default-case-last": "error", // Ensure the `default` case is the last one in `switch`
+  "eqeqeq": "error", // Enforce strict equality (`===` and `!==`) over abstract equality (`==` and `!=`)
   "no-console": "warn", // Allow logging in development, but should be reviewed for production builds
+  "no-div-regex": "error",
+  "no-else-return": "error", // Disallow `else` blocks after `return` statements in `if` blocks
   "no-implicit-coercion": "error", // Prevents shorthand type conversions (e.g., `!!value`, `+var`)
   "no-implicit-globals": "error", // Prevents defining variables in the global scope
+  "no-lonely-if": "error", // Disallow `if` statements that are the only statement in a block
   "no-loop-func": "error", // Disallow function declarations inside loops (prevents scoping issues)
   "no-magic-numbers": ["error", { ignore: [0, 1, -1, 2] }], // Helps catch unexplained numbers while allowing common values
   "no-new-wrappers": "error", // Prevents `new String()`, `new Number()`, etc. (use literals instead)
@@ -28,6 +32,7 @@ export const additionalRules = {
   "no-throw-literal": "error", // Prevents throwing non-error objects (e.g., `throw "error"` should be `throw new Error("error")`)
   "no-unassigned-vars": "error", // Disallow let or var variables that are read but never assigned
   "no-unmodified-loop-condition": "error", // Ensures loop conditions change, preventing infinite loops
+  "no-unneeded-ternary": "error", // Disallow ternary operators when simpler alternatives exist
   "no-unreachable-loop": "error", // Prevents loops that can never execute
   "no-use-before-define": [
     "error",

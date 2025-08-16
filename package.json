@@ -65,7 +65,7 @@
     "eslint-plugin-import-x": "^4.16.1",
     "eslint-plugin-jest": "^29.0.1",
     "eslint-plugin-jest-dom": "^5.5.0",
-    "eslint-plugin-jsdoc": "^54.0.0",
+    "eslint-plugin-jsdoc": "^54.1.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-n": "^17.21.3",
     "eslint-plugin-perfectionist": "^4.15.0",
@@ -83,7 +83,7 @@
   },
   "devDependencies": {
     "@commitlint/config-conventional": "19.8.1",
-    "@eslint/config-inspector": "1.1.0",
+    "@eslint/config-inspector": "1.2.0",
     "@jimmy.codes/prettier-config": "1.6.0",
     "@total-typescript/ts-reset": "0.6.1",
     "@types/node": "22.15.30",
