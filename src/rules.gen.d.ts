@@ -116,6 +116,11 @@ export interface RuleOptions {
    */
   '@eslint-react/dom/no-script-url'?: Linter.RuleEntry<[]>
   /**
+   * Disallows the use of string style prop.
+   * @see https://eslint-react.xyz/docs/rules/dom-no-string-style-prop
+   */
+  '@eslint-react/dom/no-string-style-prop'?: Linter.RuleEntry<[]>
+  /**
    * Disallow unknown `DOM` property.
    * @see https://eslint-react.xyz/docs/rules/dom-no-unknown-property
    */

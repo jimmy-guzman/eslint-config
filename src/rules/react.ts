@@ -36,6 +36,7 @@ export const reactRules = async () => {
   return {
     ...jsxA11yPlugin.configs.recommended.rules,
     ...upwarn(reactPluginRules),
+    "@eslint-react/dom/no-string-style-prop": "error",
     "@eslint-react/hooks-extra/no-direct-set-state-in-use-effect": "error",
     "@eslint-react/hooks-extra/no-direct-set-state-in-use-layout-effect":
       "error",
