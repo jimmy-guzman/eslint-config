@@ -1,3 +1,11 @@
+# [6.3.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.2.2...v6.3.0) (2025-08-16)
+
+
+### Features
+
+* ✨ enable 5 more JavaScript rules ([149db6d](https://github.com/jimmy-guzman/eslint-config/commit/149db6df3e6f78769b2e2204e5e34861e4e8cbb3))
+* ✨ enable react `no-string-style-prop` ([52cbb5e](https://github.com/jimmy-guzman/eslint-config/commit/52cbb5e8235361326a1bcf9426e8b6c6aa7590ae))
+
 ## [6.2.2](https://github.com/jimmy-guzman/eslint-config/compare/v6.2.1...v6.2.2) (2025-08-13)
 
 
