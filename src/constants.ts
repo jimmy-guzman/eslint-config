@@ -50,7 +50,8 @@ export const GLOB_IGNORES = [
 export const GLOB_JS = "**/*.?([cm])js";
 export const GLOB_JSX = "**/*.?([cm])jsx";
 
-export const GLOB_TS = "**/*.?([cm])ts";
+const GLOB_TS = "**/*.?([cm])ts";
+
 export const GLOB_TSX = "**/*.?([cm])tsx";
 
 export const GLOB_TESTS = [
@@ -77,7 +78,5 @@ export const GLOB_NEXTJS = [GLOB_JS, GLOB_JSX, GLOB_TS, GLOB_TSX];
 export const GLOB_CJS = "**/*.cjs";
 
 export const GLOB_ASTRO = "**/*.astro";
-
-export const ALLOWED_VITEST_FUNCS = ["vi.mock", "describe", "expect", "it"];
 
 export const TESTING_LIBRARY_FAMILY = ["@testing-library/react"];

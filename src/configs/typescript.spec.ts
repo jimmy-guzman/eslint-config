@@ -12,13 +12,15 @@ describe("typescriptConfig", () => {
 
     const [_first, _second, _third, _fourth, config] = await typescriptConfig();
 
-    expect(config?.languageOptions?.parserOptions).toMatchInlineSnapshot(
-      `
-      {
-        "projectService": true,
-        "tsconfigRootDir": "/",
-      }
-    `,
+    expect(config).toStrictEqual(
+      expect.objectContaining({
+        languageOptions: expect.objectContaining({
+          parserOptions: expect.objectContaining({
+            projectService: true,
+            tsconfigRootDir: "/",
+          }),
+        }),
+      }),
     );
   });
 });

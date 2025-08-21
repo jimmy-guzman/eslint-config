@@ -8,7 +8,9 @@ import { interopDefault } from "../utils/interop-default";
 export default async function astroConfig() {
   const files = [GLOB_ASTRO];
 
-  const { configs, parser: parserTs } = await import("typescript-eslint");
+  const { configs: tsConfigs, parser: tsParser } = await import(
+    "typescript-eslint"
+  );
 
   const [astroPlugin, astroParser, jsxA11yPlugin] = await Promise.all([
     import("eslint-plugin-astro"),
@@ -28,7 +30,7 @@ export default async function astroConfig() {
         parser: astroParser,
         parserOptions: {
           extraFileExtensions: [".astro"],
-          parser: parserTs,
+          parser: tsParser,
         },
         sourceType: "module",
       },
@@ -54,11 +56,14 @@ export default async function astroConfig() {
     {
       files,
       languageOptions: {
-        parserOptions:
-          configs.disableTypeChecked.languageOptions?.parserOptions,
+        parserOptions: {
+          program: null,
+          project: false,
+          projectService: false,
+        },
       },
       name: "jimmy.codes/astro/disable-type-checked",
-      rules: configs.disableTypeChecked.rules,
+      rules: tsConfigs.disableTypeChecked.rules,
     },
     {
       name: "jimmy.codes/astro/imports",
