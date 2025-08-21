@@ -1,4 +1,4 @@
-import { GLOB_NEXTJS } from "../constants";
+import { GLOB_NEXTJS } from "../globs";
 import { nextjsRules } from "../rules/nextjs";
 import { interopDefault } from "../utils/interop-default";
 

@@ -4,18 +4,18 @@ import type { RuleOptions } from "./rules.gen";
 
 export type Rules = RuleOptions;
 
-export type TypedConfigItem = Omit<
-  Linter.Config<Linter.RulesRecord & Rules>,
-  "plugins"
-> & {
-  /**
-   * An object containing a name-value mapping of plugin names to plugin objects. When `files` is specified, these plugins are only available to the matching files.
-   *
-   * @see [Using plugins in your configuration](https://eslint.org/docs/latest/user-guide/configuring/configuration-files-new#using-plugins-in-your-configuration)
-   */
-  // TODO: add undefined
+type Base = Linter.Config<Linter.RulesRecord & Rules>;
+type MaybeReadonly<T> = Readonly<T> | T;
+type Override<T, R> = Omit<T, keyof R> & R;
+type Prettify<T> = { [K in keyof T]: T[K] } & {};
+
+interface LinterConfigOverrides {
+  files?: MaybeReadonly<Base["files"]>;
+  ignores?: MaybeReadonly<Base["ignores"]>;
   plugins?: Record<string, unknown>;
-};
+}
+
+export type TypedConfigItem = Prettify<Override<Base, LinterConfigOverrides>>;
 
 export interface Options {
   /**

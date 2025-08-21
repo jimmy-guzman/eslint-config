@@ -24,7 +24,14 @@
   "sideEffects": false,
   "type": "module",
   "exports": {
-    ".": "./dist/index.js"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./globs": {
+      "types": "./dist/globs.d.ts",
+      "default": "./dist/globs.js"
+    }
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

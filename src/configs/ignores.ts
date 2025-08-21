@@ -1,6 +1,6 @@
 import type { TypedConfigItem } from "../types";
 
-import { GLOB_IGNORES } from "../constants";
+import { GLOB_IGNORES } from "../globs";
 
 export const ignoresConfig = (ignores: string[]) => {
   return [

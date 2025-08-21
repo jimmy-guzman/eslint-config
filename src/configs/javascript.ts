@@ -1,6 +1,6 @@
 import type { TypedConfigItem } from "../types";
 
-import { GLOB_TESTS } from "../constants";
+import { GLOB_TESTS } from "../globs";
 import { javascriptRules } from "../rules/javascript";
 
 export const javascriptConfig = () => {

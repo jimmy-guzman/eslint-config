@@ -2,7 +2,7 @@ import globals from "globals";
 
 import type { TypedConfigItem } from "../types";
 
-import { GLOB_JSX, GLOB_TSX } from "../constants";
+import { GLOB_JSX, GLOB_TSX } from "../globs";
 import { reactRules } from "../rules/react";
 import { interopDefault } from "../utils/interop-default";
 

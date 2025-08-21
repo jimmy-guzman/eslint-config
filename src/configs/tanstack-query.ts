@@ -1,6 +1,6 @@
 import type { TypedConfigItem } from "../types";
 
-import { GLOB_JSX, GLOB_TSX } from "../constants";
+import { GLOB_JSX, GLOB_TSX } from "../globs";
 import { interopDefault } from "../utils/interop-default";
 
 export default async function tanstackQueryConfig() {
