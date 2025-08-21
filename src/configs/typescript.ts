@@ -22,6 +22,13 @@ export default async function typescriptConfig() {
     {
       files: [GLOB_JS, GLOB_JSX],
       ...configs.disableTypeChecked,
+      languageOptions: {
+        parserOptions: {
+          program: null,
+          project: false,
+          projectService: false,
+        },
+      },
     },
     {
       files: GLOB_TESTS,

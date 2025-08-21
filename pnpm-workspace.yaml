@@ -1,13 +1,14 @@
-onlyBuiltDependencies:
-  - esbuild
-  - lefthook
-  - sharp
-  - unrs-resolver
-
 autoInstallPeers: false
 
 color: always
 
 engineStrict: true
+
+onlyBuiltDependencies:
+  - esbuild
+  - lefthook
+  - oxc-resolver
+  - sharp
+  - unrs-resolver
 
 savePrefix: ""

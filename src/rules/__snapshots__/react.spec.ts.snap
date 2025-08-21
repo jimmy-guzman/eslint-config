@@ -351,6 +351,7 @@ exports[`reactRules > should enable recommended TypeScript rules 1`] = `
   "@eslint-react/no-unstable-context-value": "error",
   "@eslint-react/no-unstable-default-props": "error",
   "@eslint-react/no-unused-class-component-members": "error",
+  "@eslint-react/no-unused-props": "error",
   "@eslint-react/no-unused-state": "error",
   "@eslint-react/no-use-context": "error",
   "@eslint-react/no-useless-forward-ref": "error",
