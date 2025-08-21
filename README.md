@@ -10,14 +10,14 @@
 
 A strict but practical ESLint config that works out of the box, adapts to your stack, and enforces good patterns without getting in the way. It catches real bugs, reduces ambiguity, and keeps your codebase consistent.
 
-- Auto-detects your stack: React, TypeScript, Astro, Next.js, Vitest, Jest, Playwright, Storybook, and TanStack Query.
-- Prevents real issues: Prioritizes rules that catch bugs and unsafe patterns.
-- Prevents confusion: Flags ambiguous code, confusing promise usage, shadowed variables, and unused exports.
-- Enforces consistency: Standardizes imports, naming, coding style, and testing conventions.
-- Fast and lightweight: Loads only what your project needs.
-- Zero-config start: Install it, extend it, done.
-- Customizable: Turn off or override rules per project or file.
-- Test-ready: Works with Vitest, Jest, Playwright, and Testing Library.
+- **Auto-detects your stack**: React, TypeScript, Astro, Next.js, Vitest, Jest, Playwright, Storybook, and TanStack Query.
+- **Prevents real issues**: Prioritizes rules that catch bugs and unsafe patterns.
+- **Prevents confusion**: Flags ambiguous code, confusing promise usage, shadowed variables, and unused exports.
+- **Enforces consistency**: Standardizes imports, naming, coding style, and testing conventions.
+- **Fast and lightweight**: Loads only what your project needs.
+- **Zero-config start**: Install it, extend it, done.
+- **Customizable**: Turn off or override rules per project or file.
+- **Test-ready**: Works with Vitest, Jest, Playwright, and Testing Library.
 
 ---
 
@@ -36,7 +36,7 @@ pnpm add -D @jimmy.codes/eslint-config
 
 Add this to `eslint.config.ts`:
 
-```mjs
+```ts
 import { defineConfig } from "@jimmy.codes/eslint-config";
 
 export default defineConfig();
@@ -90,6 +90,29 @@ export default defineConfig({
     },
     {
       files: ["**/*.ts"],
+      rules: {
+        "prefer-const": "error",
+      },
+    },
+  ],
+});
+```
+
+Or you can import [globs](src/globs.ts) for overrides instead of writing your own:
+
+```ts
+import { GLOB_JS, GLOB_TS } from "@jimmy.codes/eslint-config/globs";
+
+export default defineConfig({
+  overrides: [
+    {
+      files: [GLOB_JS],
+      rules: {
+        "prefer-spread": "error",
+      },
+    },
+    {
+      files: [GLOB_TS],
       rules: {
         "prefer-const": "error",
       },

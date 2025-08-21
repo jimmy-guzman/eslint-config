@@ -2,7 +2,7 @@ import globals from "globals";
 
 import type { TypedConfigItem } from "../types";
 
-import { GLOB_ASTRO } from "../constants";
+import { GLOB_ASTRO } from "../globs";
 import { interopDefault } from "../utils/interop-default";
 
 export default async function astroConfig() {

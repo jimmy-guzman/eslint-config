@@ -1,4 +1,4 @@
-import { GLOB_PLAYWRIGHT } from "../constants";
+import { GLOB_PLAYWRIGHT } from "../globs";
 import { playwrightRules } from "../rules/playwright";
 import { interopDefault } from "../utils/interop-default";
 

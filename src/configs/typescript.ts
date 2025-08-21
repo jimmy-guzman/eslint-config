@@ -1,4 +1,4 @@
-import { GLOB_JS, GLOB_JSX, GLOB_TESTS } from "../constants";
+import { GLOB_JS, GLOB_JSX, GLOB_TESTS } from "../globs";
 import { typescriptRules } from "../rules/typescript";
 
 export default async function typescriptConfig() {

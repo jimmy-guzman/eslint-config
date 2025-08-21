@@ -1,6 +1,6 @@
 import type { TypedConfigItem } from "../types";
 
-import { GLOB_E2E, GLOB_TESTS } from "../constants";
+import { GLOB_E2E, GLOB_TESTS } from "../globs";
 import { testingLibraryRules } from "../rules/testing-library";
 import { interopDefault } from "../utils/interop-default";
 
