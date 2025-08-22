@@ -1,3 +1,11 @@
+# [6.4.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.3.0...v6.4.0) (2025-08-22)
+
+
+### Features
+
+* ✨ bump deps ([7001d0d](https://github.com/jimmy-guzman/eslint-config/commit/7001d0d8d5fa60e025694247b6370074e5e195b1))
+* ✨ expose internal globs for easier overrides ([cb96381](https://github.com/jimmy-guzman/eslint-config/commit/cb96381e52280bca198c52e5af8315da7dbe9530))
+
 # [6.3.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.2.2...v6.3.0) (2025-08-16)
 
 
