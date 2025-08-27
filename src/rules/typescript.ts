@@ -45,5 +45,6 @@ export const typescriptRules = {
     "error",
     { allowNumber: true },
   ],
+  "@typescript-eslint/switch-exhaustiveness-check": "error",
   ...disabledEslintRules,
 } satisfies Rules;

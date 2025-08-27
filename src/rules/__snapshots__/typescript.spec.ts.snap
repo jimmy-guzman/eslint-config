@@ -52,6 +52,7 @@ exports[`should create typescript rules 1`] = `
       "allowNumber": true,
     },
   ],
+  "@typescript-eslint/switch-exhaustiveness-check": "error",
   "no-use-before-define": "off",
 }
 `;

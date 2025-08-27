@@ -10579,6 +10579,7 @@ If your function does not access \`this\`, you can annotate it with \`this: void
           "allowNumber": true,
         },
       ],
+      "@typescript-eslint/switch-exhaustiveness-check": "error",
       "no-use-before-define": "off",
     },
   },
