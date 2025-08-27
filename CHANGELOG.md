@@ -1,3 +1,11 @@
+# [6.5.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.4.0...v6.5.0) (2025-08-27)
+
+
+### Features
+
+* ✨ add support for respecting .gitignore files ([655a33c](https://github.com/jimmy-guzman/eslint-config/commit/655a33c9b608e9d2cda74789860ddef7e38cfaeb))
+* ✨ enable `@eslint-react/no-unnecessary-key` ([d253dce](https://github.com/jimmy-guzman/eslint-config/commit/d253dceefe237ed45113a1ff6348561cde807277))
+
 # [6.4.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.3.0...v6.4.0) (2025-08-22)
 
 
