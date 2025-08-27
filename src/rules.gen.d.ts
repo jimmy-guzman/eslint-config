@@ -398,7 +398,7 @@ export interface RuleOptions {
   '@eslint-react/no-nested-component-definitions'?: Linter.RuleEntry<[]>
   /**
    * Disallow nesting lazy component declarations inside other components.
-   * @see https://eslint-react.xyz/docs/rules/no-nested-component-definitions
+   * @see https://eslint-react.xyz/docs/rules/no-nested-lazy-component-declarations
    */
   '@eslint-react/no-nested-lazy-component-declarations'?: Linter.RuleEntry<[]>
   /**
@@ -431,6 +431,11 @@ export interface RuleOptions {
    * @see https://eslint-react.xyz/docs/rules/no-string-refs
    */
   '@eslint-react/no-string-refs'?: Linter.RuleEntry<[]>
+  /**
+   * Prevents the use of unnecessary `key` props on JSX elements when rendering lists.
+   * @see https://eslint-react.xyz/docs/rules/no-unnecessary-key
+   */
+  '@eslint-react/no-unnecessary-key'?: Linter.RuleEntry<[]>
   /**
    * Disallow unnecessary usage of `useCallback`.
    * @see https://eslint-react.xyz/docs/rules/no-unnecessary-use-callback
