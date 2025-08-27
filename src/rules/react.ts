@@ -48,6 +48,7 @@ export const reactRules = async () => {
     "@eslint-react/no-children-prop": "error",
     "@eslint-react/no-class-component": "error",
     "@eslint-react/no-missing-context-display-name": "error",
+    "@eslint-react/no-unnecessary-key": "error",
     "@eslint-react/no-unnecessary-use-callback": "error",
     "@eslint-react/no-unnecessary-use-memo": "error",
     "@eslint-react/no-useless-fragment": "error",
