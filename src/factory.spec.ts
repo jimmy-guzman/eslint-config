@@ -156,4 +156,24 @@ describe("eslintConfig", () => {
       );
     });
   });
+
+  describe("gitignore", () => {
+    it("should respect .gitignore files when enabled", async () => {
+      await expect(defineConfig({ gitignore: true })).resolves.toStrictEqual(
+        expect.arrayContaining([
+          expect.objectContaining({ name: "gitignore" }),
+        ]),
+      );
+    });
+
+    it("should NOT respect .gitignore files when disabled", async () => {
+      await expect(
+        defineConfig({ gitignore: false }),
+      ).resolves.not.toStrictEqual(
+        expect.arrayContaining([
+          expect.objectContaining({ name: "gitignore" }),
+        ]),
+      );
+    });
+  });
 });

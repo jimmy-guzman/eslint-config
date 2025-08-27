@@ -32,6 +32,12 @@ export interface Options {
    */
   autoDetect?: boolean;
   /**
+   * Respect `.gitignore` files as ignore patterns.
+   *
+   * @default false
+   */
+  gitignore?: boolean;
+  /**
    * Glob patterns for files that should be ignored.
    * Matches ESLint's ignore patterns.
    *
