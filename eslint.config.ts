@@ -2,6 +2,7 @@ import { defineConfig } from "./src/factory";
 
 export default defineConfig({
   astro: true,
+  gitignore: true,
   nextjs: true,
   playwright: true,
   react: true,

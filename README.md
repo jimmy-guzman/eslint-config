@@ -123,6 +123,20 @@ export default defineConfig({
 
 ---
 
+## Enable Git Ignore Support
+
+Allows you to respect `.gitignore` files as ignore patterns.
+
+```ts
+import { defineConfig } from "@jimmy.codes/eslint-config";
+
+export default defineConfig({
+  gitignore: true,
+});
+```
+
+---
+
 ## Plugins Used
 
 This config includes the following plugins:

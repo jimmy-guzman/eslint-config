@@ -1,5 +1,7 @@
 import type { Linter } from "eslint";
 
+import gitignoreConfig from "eslint-config-flat-gitignore";
+
 import type { Options, TypedConfigItem } from "./types";
 
 import { commonjsConfig } from "./configs/commonjs";
@@ -42,6 +44,7 @@ export const defineConfig = async (
   {
     astro = false,
     autoDetect = true,
+    gitignore = false,
     ignores = [],
     jest = false,
     nextjs = false,
@@ -97,10 +100,11 @@ export const defineConfig = async (
   ]);
 
   return [
+    ...(gitignore ? [gitignoreConfig({ strict: false })] : []),
+    ignoresConfig(ignores),
     ...baseConfigs,
     ...featureConfigs.filter(Boolean),
     commonjsConfig(),
-    ignoresConfig(ignores),
     prettierConfig(),
     overrides,
     moreOverrides,
