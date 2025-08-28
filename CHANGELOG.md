@@ -1,3 +1,10 @@
+# [6.6.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.5.0...v6.6.0) (2025-08-28)
+
+
+### Features
+
+* ✨ enable `switch-exhaustiveness-check` ([#206](https://github.com/jimmy-guzman/eslint-config/issues/206)) ([9e56a41](https://github.com/jimmy-guzman/eslint-config/commit/9e56a412c2af4d4b94dd8bebd6569daca1e43576))
+
 # [6.5.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.4.0...v6.5.0) (2025-08-27)
 
 
