@@ -41,6 +41,7 @@ export const vitestRules = async () => {
     "vitest/prefer-equality-matcher": "error",
     "vitest/prefer-expect-assertions": "off",
     "vitest/prefer-expect-resolves": "error",
+    "vitest/prefer-expect-type-of": "error",
     "vitest/prefer-hooks-in-order": "error",
     "vitest/prefer-hooks-on-top": "error",
     "vitest/prefer-lowercase-title": "off",
