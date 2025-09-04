@@ -1,3 +1,10 @@
+# [6.8.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.7.0...v6.8.0) (2025-09-04)
+
+
+### Features
+
+* ✨ enable more jest/vitest/palywright rules ([41acd31](https://github.com/jimmy-guzman/eslint-config/commit/41acd314e596238acdc7f017b1bbc53367c962f9))
+
 # [6.7.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.6.0...v6.7.0) (2025-09-04)
 
 
