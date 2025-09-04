@@ -1,3 +1,11 @@
+# [6.7.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.6.0...v6.7.0) (2025-09-04)
+
+
+### Features
+
+* ✨ bump deps ([4a2f2a1](https://github.com/jimmy-guzman/eslint-config/commit/4a2f2a1ed7734eb8fc5b571a39ec075107e223b7))
+* ✨ enable vitest/hoisted-apis-on-top ([c4a7019](https://github.com/jimmy-guzman/eslint-config/commit/c4a7019925f26f48ddba36e90d0ef39d0fec7676)), closes [#208](https://github.com/jimmy-guzman/eslint-config/issues/208)
+
 # [6.6.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.5.0...v6.6.0) (2025-08-28)
 
 
