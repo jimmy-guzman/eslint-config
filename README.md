@@ -10,14 +10,12 @@
 
 A strict but practical ESLint config that works out of the box, adapts to your stack, and enforces good patterns without getting in the way. It catches real bugs, reduces ambiguity, and keeps your codebase consistent.
 
-- **Auto-detects your stack**: React, TypeScript, Astro, Next.js, Vitest, Jest, Playwright, Storybook, and TanStack Query.
+- **Auto-detects your stack**: React, TypeScript, Astro, Next.js, Vitest, Jest, Testing Library, Playwright, Storybook, and TanStack Query.
+- **Zero-config start**: Install it, extend it, done.
 - **Prevents real issues**: Prioritizes rules that catch bugs and unsafe patterns.
 - **Prevents confusion**: Flags ambiguous code, confusing promise usage, shadowed variables, and unused exports.
 - **Enforces consistency**: Standardizes imports, naming, coding style, and testing conventions.
-- **Fast and lightweight**: Loads only what your project needs.
-- **Zero-config start**: Install it, extend it, done.
-- **Customizable**: Turn off or override rules per project or file.
-- **Test-ready**: Works with Vitest, Jest, Playwright, and Testing Library.
+- **Flexible**: Easily customize or disable any part of the config.
 
 ---
 
