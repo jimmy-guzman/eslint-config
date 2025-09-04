@@ -32,6 +32,7 @@ export const vitestRules = async () => {
     "vitest/no-standalone-expect": "error",
     "vitest/no-test-prefixes": "error",
     "vitest/no-test-return-statement": "error",
+    "vitest/padding-around-all": "error",
     "vitest/prefer-called-once": "error",
     "vitest/prefer-called-times": "off",
     // "vitest/no-untyped-mock-factory": "off", // requires typescript
@@ -54,6 +55,7 @@ export const vitestRules = async () => {
     "vitest/prefer-to-contain": "error",
     "vitest/prefer-to-have-length": "error",
     "vitest/prefer-todo": "warn",
+    "vitest/prefer-vi-mocked": "error",
     "vitest/require-hook": "error",
     "vitest/require-to-throw-message": "error",
     "vitest/require-top-level-describe": "off",

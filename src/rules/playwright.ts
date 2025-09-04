@@ -24,6 +24,12 @@ export const playwrightRules = async () => {
     "playwright/no-useless-not": "error",
     "playwright/no-wait-for-selector": "error",
     "playwright/no-wait-for-timeout": "error",
+    "playwright/prefer-strict-equal": "error",
+    "playwright/prefer-to-be": "error",
+    "playwright/prefer-to-contain": "error",
+    "playwright/prefer-to-have-count": "error",
+    "playwright/prefer-to-have-length": "error",
+    "playwright/require-to-throw-message": "error",
     "playwright/valid-title": "off",
   } satisfies Rules;
 };

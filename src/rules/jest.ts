@@ -27,6 +27,7 @@ export const jestRules = async () => {
     "jest/no-restricted-matchers": "off",
     "jest/no-test-return-statement": "error",
     "jest/no-untyped-mock-factory": "off", // requires typescript
+    "jest/padding-around-all": "error",
     "jest/prefer-called-with": "error",
     "jest/prefer-comparison-matcher": "error",
     "jest/prefer-each": "error",
@@ -35,6 +36,7 @@ export const jestRules = async () => {
     "jest/prefer-expect-resolves": "error",
     "jest/prefer-hooks-in-order": "error",
     "jest/prefer-hooks-on-top": "error",
+    "jest/prefer-jest-mocked": "error",
     "jest/prefer-lowercase-title": "off",
     "jest/prefer-mock-promise-shorthand": "error",
     "jest/prefer-snapshot-hint": "error",
