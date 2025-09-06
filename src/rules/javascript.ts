@@ -68,10 +68,11 @@ export const additionalRules = {
   "prefer-rest-params": "error", // Use `...args` instead of `arguments`
   "prefer-spread": "error", // Use `[...arr]` instead of `arr.concat()`
   "prefer-template": "error", // Use template literals instead of string concatenation
+  "preserve-caught-error": "error", // Ensures `catch` clauses preserve the original error (e.g., `catch (e) { throw e; }`)
   "radix": "error", // Require a radix argument in `parseInt`
   "require-await": "error", // Disallows async functions without `await` (prevents unnecessary `async`)
   "strict": ["error", "safe"], // Enforces `"use strict"` only where needed (safe mode)
-  "symbol-description": "error", // Requires descriptions when creating `Symbol()`
+  "symbol-description": "error", // Requires descriptions when creating `Symbol()`,
 } satisfies Rules;
 
 export const javascriptRules = {
