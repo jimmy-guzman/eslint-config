@@ -1,3 +1,11 @@
+# [6.9.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.8.0...v6.9.0) (2025-09-06)
+
+
+### Features
+
+* ✨ enable new unicorn rules ([3df9a54](https://github.com/jimmy-guzman/eslint-config/commit/3df9a54f857c8c4c1575175be674d6f8a67db621)), closes [#212](https://github.com/jimmy-guzman/eslint-config/issues/212) [#213](https://github.com/jimmy-guzman/eslint-config/issues/213) [#214](https://github.com/jimmy-guzman/eslint-config/issues/214) [#215](https://github.com/jimmy-guzman/eslint-config/issues/215)
+* ✨ enable preserve-caught-error ([1e0f98a](https://github.com/jimmy-guzman/eslint-config/commit/1e0f98a2e663710efaa70d3463d26864daa8aa5e)), closes [#211](https://github.com/jimmy-guzman/eslint-config/issues/211)
+
 # [6.8.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.7.0...v6.8.0) (2025-09-04)
 
 
