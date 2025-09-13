@@ -44,6 +44,7 @@ exports[`should create jsdoc rules 1`] = `
   "jsdoc/require-file-overview": "off",
   "jsdoc/require-hyphen-before-param-description": "off",
   "jsdoc/require-jsdoc": "off",
+  "jsdoc/require-next-type": "error",
   "jsdoc/require-param": "off",
   "jsdoc/require-param-description": "error",
   "jsdoc/require-param-name": "error",
@@ -58,8 +59,10 @@ exports[`should create jsdoc rules 1`] = `
   "jsdoc/require-returns-type": "off",
   "jsdoc/require-template": "off",
   "jsdoc/require-throws": "off",
+  "jsdoc/require-throws-type": "error",
   "jsdoc/require-yields": "error",
   "jsdoc/require-yields-check": "error",
+  "jsdoc/require-yields-type": "error",
   "jsdoc/sort-tags": "off",
   "jsdoc/tag-lines": [
     "error",
@@ -70,6 +73,7 @@ exports[`should create jsdoc rules 1`] = `
     },
   ],
   "jsdoc/text-escaping": "off",
+  "jsdoc/type-formatting": "off",
   "jsdoc/valid-types": "error",
 }
 `;
