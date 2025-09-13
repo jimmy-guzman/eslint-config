@@ -1,3 +1,11 @@
+# [6.10.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.9.0...v6.10.0) (2025-09-13)
+
+
+### Features
+
+* ✨ bump deps to latest ([48bec6d](https://github.com/jimmy-guzman/eslint-config/commit/48bec6d9c2021e8df9ace035ee6ce7bf58f6e7b2))
+* ✨ enable playwright/no-commented-out-tests ([09f54bd](https://github.com/jimmy-guzman/eslint-config/commit/09f54bdfea7a5beaf18236da7fc8b87190a6fac7))
+
 # [6.9.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.8.0...v6.9.0) (2025-09-06)
 
 
