@@ -7,7 +7,7 @@ exports[`typescriptConfig > should create config 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.42.0",
+          "version": "8.43.0",
         },
         "parseForESLint": [Function],
       },
@@ -294,7 +294,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.42.0",
+                    "version": "8.43.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -499,7 +499,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.42.0",
+                  "version": "8.43.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -621,7 +621,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.42.0",
+                    "version": "8.43.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -701,7 +701,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.42.0",
+                    "version": "8.43.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -808,7 +808,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.42.0",
+                    "version": "8.43.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -892,7 +892,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.42.0",
+                    "version": "8.43.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1131,7 +1131,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.42.0",
+                    "version": "8.43.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1254,7 +1254,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.42.0",
+                    "version": "8.43.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1325,7 +1325,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.42.0",
+                    "version": "8.43.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1405,7 +1405,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.42.0",
+                    "version": "8.43.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1950,7 +1950,7 @@ exports[`typescriptConfig > should create config 1`] = `
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.42.0",
+          "version": "8.43.0",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -2542,6 +2542,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "docs": {
                 "description": "Enforce default parameters to be last",
                 "extendsBaseRule": true,
+                "frozen": true,
                 "url": "https://typescript-eslint.io/rules/default-param-last",
               },
               "messages": {
@@ -2575,6 +2576,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "docs": {
                 "description": "Enforce dot notation whenever possible",
                 "extendsBaseRule": true,
+                "frozen": true,
                 "recommended": "stylistic",
                 "requiresTypeChecking": true,
                 "url": "https://typescript-eslint.io/rules/dot-notation",
@@ -2847,6 +2849,7 @@ You must still type the parameters of the function.",
               "docs": {
                 "description": "Require or disallow initialization in variable declarations",
                 "extendsBaseRule": true,
+                "frozen": true,
                 "url": "https://typescript-eslint.io/rules/init-declarations",
               },
               "hasSuggestions": undefined,
@@ -3066,6 +3069,7 @@ You must still type the parameters of the function.",
             "meta": {
               "docs": {
                 "description": "Require a consistent member declaration order",
+                "frozen": true,
                 "url": "https://typescript-eslint.io/rules/member-ordering",
               },
               "messages": {
@@ -3479,6 +3483,7 @@ You must still type the parameters of the function.",
             "meta": {
               "docs": {
                 "description": "Enforce naming conventions for everything across a codebase",
+                "frozen": true,
                 "requiresTypeChecking": true,
                 "url": "https://typescript-eslint.io/rules/naming-convention",
               },
@@ -6569,6 +6574,7 @@ You must still type the parameters of the function.",
               "docs": {
                 "description": "Disallow magic numbers",
                 "extendsBaseRule": true,
+                "frozen": true,
                 "url": "https://typescript-eslint.io/rules/no-magic-numbers",
               },
               "messages": {
@@ -8681,6 +8687,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "docs": {
                 "description": "Require destructuring from arrays and/or objects",
                 "extendsBaseRule": true,
+                "frozen": true,
                 "requiresTypeChecking": true,
                 "url": "https://typescript-eslint.io/rules/prefer-destructuring",
               },

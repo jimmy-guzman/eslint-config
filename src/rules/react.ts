@@ -38,8 +38,6 @@ export const reactRules = async () => {
     ...upwarn(reactPluginRules),
     "@eslint-react/dom/no-string-style-prop": "error",
     "@eslint-react/hooks-extra/no-direct-set-state-in-use-effect": "error",
-    "@eslint-react/hooks-extra/no-direct-set-state-in-use-layout-effect":
-      "error",
     "@eslint-react/jsx-key-before-spread": "error",
     "@eslint-react/jsx-shorthand-boolean": "error",
     "@eslint-react/jsx-shorthand-fragment": "error",
