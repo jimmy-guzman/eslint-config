@@ -11,6 +11,7 @@ export const playwrightRules = async () => {
     ...playwrightPlugin.configs["flat/recommended"].rules,
     "playwright/expect-expect": "error",
     "playwright/max-nested-describe": "error",
+    "playwright/no-commented-out-tests": "error",
     "playwright/no-conditional-expect": "error",
     "playwright/no-conditional-in-test": "error",
     "playwright/no-element-handle": "error",
