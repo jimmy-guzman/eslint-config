@@ -7,7 +7,7 @@ exports[`typescriptConfig > should create config 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.43.0",
+          "version": "8.44.1",
         },
         "parseForESLint": [Function],
       },
@@ -294,7 +294,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.43.0",
+                    "version": "8.44.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -499,7 +499,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.43.0",
+                  "version": "8.44.1",
                 },
                 "parseForESLint": [Function],
               },
@@ -621,7 +621,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.43.0",
+                    "version": "8.44.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -701,7 +701,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.43.0",
+                    "version": "8.44.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -808,7 +808,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.43.0",
+                    "version": "8.44.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -892,7 +892,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.43.0",
+                    "version": "8.44.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1131,7 +1131,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.43.0",
+                    "version": "8.44.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1254,7 +1254,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.43.0",
+                    "version": "8.44.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1325,7 +1325,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.43.0",
+                    "version": "8.44.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1405,7 +1405,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.43.0",
+                    "version": "8.44.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1950,7 +1950,7 @@ exports[`typescriptConfig > should create config 1`] = `
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.43.0",
+          "version": "8.44.1",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -2036,6 +2036,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "awaitUsingOfNonAsyncDisposable": "Unexpected \`await using\` of a value that is not async disposable.",
                 "convertToOrdinaryFor": "Convert to an ordinary \`for...of\` loop.",
                 "forAwaitOfNonAsyncIterable": "Unexpected \`for await...of\` of a value that is not async iterable.",
+                "invalidPromiseAggregatorInput": "Unexpected iterable of non-Promise (non-"Thenable") values passed to promise aggregator.",
                 "removeAwait": "Remove unnecessary \`await\`.",
               },
               "schema": [],
