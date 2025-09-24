@@ -3077,6 +3077,11 @@ export interface RuleOptions {
    */
   'jsdoc/no-undefined-types'?: Linter.RuleEntry<JsdocNoUndefinedTypes>
   /**
+   * Prefer `@import` tags to inline `import()` statements.
+   * @see https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/prefer-import-tag.md#repos-sticky-header
+   */
+  'jsdoc/prefer-import-tag'?: Linter.RuleEntry<JsdocPreferImportTag>
+  /**
    * Reports use of `any` or `*` type
    * @see https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/reject-any-type.md#repos-sticky-header
    */
@@ -10599,6 +10604,15 @@ type JsdocNoUndefinedTypes = []|[{
   disableReporting?: boolean
   
   markVariablesAsUsed?: boolean
+}]
+// ----- jsdoc/prefer-import-tag -----
+type JsdocPreferImportTag = []|[{
+  
+  enableFixer?: boolean
+  
+  exemptTypedefs?: boolean
+  
+  outputType?: ("named-import" | "namespaced-import")
 }]
 // ----- jsdoc/require-asterisk-prefix -----
 type JsdocRequireAsteriskPrefix = []|[("always" | "never" | "any")]|[("always" | "never" | "any"), {
