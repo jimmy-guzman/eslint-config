@@ -37,6 +37,7 @@ exports[`should create jsdoc rules 1`] = `
   "jsdoc/no-restricted-syntax": "off",
   "jsdoc/no-types": "error",
   "jsdoc/no-undefined-types": "off",
+  "jsdoc/prefer-import-tag": "error",
   "jsdoc/reject-any-type": "error",
   "jsdoc/reject-function-type": "error",
   "jsdoc/require-asterisk-prefix": "off",
