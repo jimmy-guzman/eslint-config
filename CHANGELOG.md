@@ -1,3 +1,12 @@
+# [6.11.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.10.0...v6.11.0) (2025-09-24)
+
+
+### Features
+
+* ✨ bump deps ([c5c11f0](https://github.com/jimmy-guzman/eslint-config/commit/c5c11f08da85baabd2b7fd059a47e81d47c21b90))
+* ✨ enable `jsdoc/prefer-import-tag` ([9fe9ff6](https://github.com/jimmy-guzman/eslint-config/commit/9fe9ff6ae2dec215b74e1698ba58651e951495fc))
+* ✨ enable `jsdoc/require-*-description` ([65c219a](https://github.com/jimmy-guzman/eslint-config/commit/65c219a7cf0b7533c77413f3bf4f2e8e55b4bfc6))
+
 # [6.10.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.9.0...v6.10.0) (2025-09-13)
 
 
