@@ -1,3 +1,10 @@
+# [6.12.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.11.0...v6.12.0) (2025-09-29)
+
+
+### Features
+
+* ✨ enable `jsdoc/require-template-description` ([#223](https://github.com/jimmy-guzman/eslint-config/issues/223)) ([6e783fc](https://github.com/jimmy-guzman/eslint-config/commit/6e783fc41023837a241bc925641d7325d24cdd33))
+
 # [6.11.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.10.0...v6.11.0) (2025-09-24)
 
 
