@@ -63,6 +63,7 @@ exports[`should create jsdoc rules 1`] = `
   "jsdoc/require-returns-type": "off",
   "jsdoc/require-tags": "off",
   "jsdoc/require-template": "off",
+  "jsdoc/require-template-description": "error",
   "jsdoc/require-throws": "off",
   "jsdoc/require-throws-description": "error",
   "jsdoc/require-throws-type": "error",
