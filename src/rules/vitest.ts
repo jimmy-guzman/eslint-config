@@ -38,6 +38,7 @@ export const vitestRules = async () => {
     // "vitest/no-untyped-mock-factory": "off", // requires typescript
     "vitest/prefer-called-with": "error",
     "vitest/prefer-comparison-matcher": "error",
+    "vitest/prefer-describe-function-title": "off", // blocked by https://github.com/vitest-dev/eslint-plugin-vitest/issues/692
     "vitest/prefer-each": "error",
     "vitest/prefer-equality-matcher": "error",
     "vitest/prefer-expect-assertions": "off",

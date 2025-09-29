@@ -429,7 +429,7 @@ export interface RuleOptions {
    */
   '@eslint-react/no-unused-class-component-members'?: Linter.RuleEntry<[]>
   /**
-   * Warns about unused component prop declarations.
+   * Warns component props that are defined but never used.
    * @see https://eslint-react.xyz/docs/rules/no-unused-props
    */
   '@eslint-react/no-unused-props'?: Linter.RuleEntry<[]>
@@ -3206,6 +3206,11 @@ export interface RuleOptions {
    * @see https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-template.md#repos-sticky-header
    */
   'jsdoc/require-template'?: Linter.RuleEntry<JsdocRequireTemplate>
+  /**
+   * Requires a description for `@template` tags
+   * @see https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-template-description.md#repos-sticky-header
+   */
+  'jsdoc/require-template-description'?: Linter.RuleEntry<[]>
   /**
    * Requires that throw statements are documented with `@throws` tags.
    * @see https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-throws.md#repos-sticky-header
@@ -10379,6 +10384,8 @@ type JsdocCheckTagNames = []|[{
   
   enableFixer?: boolean
   
+  inlineTags?: string[]
+  
   jsxTags?: boolean
   
   typed?: boolean
@@ -10598,6 +10605,8 @@ type JsdocNoTypes = []|[{
 }]
 // ----- jsdoc/no-undefined-types -----
 type JsdocNoUndefinedTypes = []|[{
+  
+  checkUsedTypedefs?: boolean
   
   definedTypes?: string[]
   

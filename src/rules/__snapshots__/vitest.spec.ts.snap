@@ -34,6 +34,7 @@ exports[`should create vitest rules 1`] = `
   "vitest/prefer-called-times": "off",
   "vitest/prefer-called-with": "error",
   "vitest/prefer-comparison-matcher": "error",
+  "vitest/prefer-describe-function-title": "off",
   "vitest/prefer-each": "error",
   "vitest/prefer-equality-matcher": "error",
   "vitest/prefer-expect-assertions": "off",
