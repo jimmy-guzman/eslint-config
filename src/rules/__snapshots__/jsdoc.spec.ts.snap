@@ -21,6 +21,7 @@ exports[`should create jsdoc rules 1`] = `
   "jsdoc/check-values": "error",
   "jsdoc/convert-to-jsdoc-comments": "off",
   "jsdoc/empty-tags": "error",
+  "jsdoc/escape-inline-tags": "error",
   "jsdoc/implements-on-classes": "error",
   "jsdoc/imports-as-dependencies": "off",
   "jsdoc/informative-docs": "off",
