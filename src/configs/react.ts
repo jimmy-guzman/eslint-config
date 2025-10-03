@@ -16,7 +16,7 @@ export default async function reactConfig(): Promise<TypedConfigItem[]> {
   ] = await Promise.all([
     interopDefault(import("@eslint-react/eslint-plugin")),
     interopDefault(import("eslint-plugin-jsx-a11y")),
-    import("eslint-plugin-react-hooks"),
+    interopDefault(import("eslint-plugin-react-hooks")),
     import("eslint-plugin-react-refresh"),
     import("eslint-plugin-react-compiler"),
   ]);
