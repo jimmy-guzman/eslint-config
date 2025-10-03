@@ -37,6 +37,7 @@ export const reactRules = async () => {
     ...jsxA11yPlugin.flatConfigs.recommended.rules,
     ...upwarn(reactPluginRules),
     "@eslint-react/dom/no-string-style-prop": "error",
+    "@eslint-react/hooks-extra/no-direct-set-state-in-use-effect": "off", // Handled by react-hooks/set-state-in-effect
     "@eslint-react/jsx-key-before-spread": "error",
     "@eslint-react/jsx-shorthand-boolean": "error",
     "@eslint-react/jsx-shorthand-fragment": "error",
@@ -60,7 +61,7 @@ export const reactRules = async () => {
     "react-hooks/purity": "error",
     "react-hooks/refs": "error",
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/set-state-in-effect": "error", // might conflict with @eslint-react/hooks-extra/no-direct-set-state-in-use-effect
+    "react-hooks/set-state-in-effect": "error",
     "react-hooks/set-state-in-render": "error",
     "react-hooks/static-components": "error",
     "react-hooks/unsupported-syntax": "error",
