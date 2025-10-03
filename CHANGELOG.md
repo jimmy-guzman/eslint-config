@@ -1,3 +1,10 @@
+# [6.13.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.12.0...v6.13.0) (2025-10-03)
+
+
+### Features
+
+* ✨ enable new react-hooks v6 rules ([#224](https://github.com/jimmy-guzman/eslint-config/issues/224)) ([951226e](https://github.com/jimmy-guzman/eslint-config/commit/951226e5eccdedcb0f8115f4730789a8ce15f5ec))
+
 # [6.12.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.11.0...v6.12.0) (2025-09-29)
 
 
