@@ -1,3 +1,10 @@
+## [6.13.1](https://github.com/jimmy-guzman/eslint-config/compare/v6.13.0...v6.13.1) (2025-10-03)
+
+
+### Bug Fixes
+
+* 🐛 disable conflicting react hooks rule ([#225](https://github.com/jimmy-guzman/eslint-config/issues/225)) ([6212ee0](https://github.com/jimmy-guzman/eslint-config/commit/6212ee08669ec62222489dfb5b82e762cc2a4df2))
+
 # [6.13.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.12.0...v6.13.0) (2025-10-03)
 
 
