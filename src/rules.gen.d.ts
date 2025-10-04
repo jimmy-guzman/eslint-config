@@ -5212,7 +5212,6 @@ export interface RuleOptions {
    * Validates against deriving values from state in an effect
    */
   'react-hooks/no-deriving-state-in-effects'?: Linter.RuleEntry<ReactHooksNoDerivingStateInEffects>
-  'react-hooks/no-unused-directives'?: Linter.RuleEntry<ReactHooksNoUnusedDirectives>
   /**
    * Validates that existing manual memoized is preserved by the compiler. React Compiler will only compile components and hooks if its inference [matches or exceeds the existing manual memoization](https://react.dev/learn/react-compiler/introduction#what-should-i-do-about-usememo-usecallback-and-reactmemo)
    */
@@ -15750,10 +15749,6 @@ type ReactHooksMemoizedEffectDependencies = []|[{
 }]
 // ----- react-hooks/no-deriving-state-in-effects -----
 type ReactHooksNoDerivingStateInEffects = []|[{
-  [k: string]: unknown | undefined
-}]
-// ----- react-hooks/no-unused-directives -----
-type ReactHooksNoUnusedDirectives = []|[{
   [k: string]: unknown | undefined
 }]
 // ----- react-hooks/preserve-manual-memoization -----
