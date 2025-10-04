@@ -1,3 +1,10 @@
+## [6.13.2](https://github.com/jimmy-guzman/eslint-config/compare/v6.13.1...v6.13.2) (2025-10-04)
+
+
+### Bug Fixes
+
+* 🐛 bump deps to get `react-hooks` fixes ([fc2eb0d](https://github.com/jimmy-guzman/eslint-config/commit/fc2eb0d4c7c490ad80c5fa9daa691672e4ae683c))
+
 ## [6.13.1](https://github.com/jimmy-guzman/eslint-config/compare/v6.13.0...v6.13.1) (2025-10-03)
 
 
