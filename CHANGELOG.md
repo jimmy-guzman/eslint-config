@@ -1,3 +1,10 @@
+## [6.13.3](https://github.com/jimmy-guzman/eslint-config/compare/v6.13.2...v6.13.3) (2025-10-05)
+
+
+### Bug Fixes
+
+* 🐛 bump `@vitest/eslint-plugin` to v1.3.16 ([#226](https://github.com/jimmy-guzman/eslint-config/issues/226)) ([23af2a5](https://github.com/jimmy-guzman/eslint-config/commit/23af2a5e1dae15f30153f79d4f425ee16bc9bf22))
+
 ## [6.13.2](https://github.com/jimmy-guzman/eslint-config/compare/v6.13.1...v6.13.2) (2025-10-04)
 
 
