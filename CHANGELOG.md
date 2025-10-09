@@ -1,3 +1,10 @@
+# [6.14.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.13.3...v6.14.0) (2025-10-09)
+
+
+### Features
+
+* ✨ enable `react-hooks/void-use-memo` ([#227](https://github.com/jimmy-guzman/eslint-config/issues/227)) ([ce2ee7c](https://github.com/jimmy-guzman/eslint-config/commit/ce2ee7c56647ac14c9d157b8c21b4d816267ae93))
+
 ## [6.13.3](https://github.com/jimmy-guzman/eslint-config/compare/v6.13.2...v6.13.3) (2025-10-05)
 
 
