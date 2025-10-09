@@ -66,6 +66,7 @@ export const reactRules = async () => {
     "react-hooks/static-components": "error",
     "react-hooks/unsupported-syntax": "error",
     "react-hooks/use-memo": "error",
+    "react-hooks/void-use-memo": "error",
     "react-refresh/only-export-components": [
       "warn",
       {
