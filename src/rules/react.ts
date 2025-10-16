@@ -30,13 +30,16 @@ export const reactRules = async () => {
   const isUsingTypesScript = hasTypescript();
 
   const reactPluginRules = isUsingTypesScript
-    ? reactConfigs["recommended-type-checked"].rules
+    ? reactConfigs["strict-type-checked"].rules
     : reactConfigs.recommended.rules;
 
   return {
     ...jsxA11yPlugin.flatConfigs.recommended.rules,
     ...upwarn(reactPluginRules),
+    "@eslint-react/dom/no-missing-button-type": "error" as const,
+    "@eslint-react/dom/no-missing-iframe-sandbox": "error" as const,
     "@eslint-react/dom/no-string-style-prop": "error",
+    "@eslint-react/dom/no-unsafe-target-blank": "error" as const,
     "@eslint-react/hooks-extra/no-direct-set-state-in-use-effect": "off", // Handled by react-hooks/set-state-in-effect
     "@eslint-react/jsx-key-before-spread": "error",
     "@eslint-react/jsx-shorthand-boolean": "error",
@@ -48,6 +51,9 @@ export const reactRules = async () => {
     "@eslint-react/no-unnecessary-key": "error",
     "@eslint-react/no-unnecessary-use-callback": "error",
     "@eslint-react/no-unnecessary-use-memo": "error",
+    "@eslint-react/no-unstable-context-value": "error" as const,
+    "@eslint-react/no-unstable-default-props": "error" as const,
+    "@eslint-react/no-unused-state": "error" as const,
     "@eslint-react/no-useless-fragment": "error",
     "@eslint-react/prefer-namespace-import": "error",
     "react-compiler/react-compiler": "error",
