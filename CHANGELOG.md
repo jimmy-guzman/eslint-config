@@ -1,3 +1,10 @@
+## [6.14.2](https://github.com/jimmy-guzman/eslint-config/compare/v6.14.1...v6.14.2) (2025-10-17)
+
+
+### Bug Fixes
+
+* 🐛 disable too restrictive `no-magic-numbers` ([#229](https://github.com/jimmy-guzman/eslint-config/issues/229)) ([d6fed8e](https://github.com/jimmy-guzman/eslint-config/commit/d6fed8ed302c7b6f6bcbd0f3fa060e65474b0580))
+
 ## [6.14.1](https://github.com/jimmy-guzman/eslint-config/compare/v6.14.0...v6.14.1) (2025-10-16)
 
 
