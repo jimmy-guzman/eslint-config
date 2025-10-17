@@ -23,7 +23,7 @@ export const additionalRules = {
   "no-implicit-globals": "error", // Prevents defining variables in the global scope
   "no-lonely-if": "error", // Disallow `if` statements that are the only statement in a block
   "no-loop-func": "error", // Disallow function declarations inside loops (prevents scoping issues)
-  "no-magic-numbers": ["error", { ignore: [0, 1, -1, 2] }], // Helps catch unexplained numbers while allowing common values
+  "no-magic-numbers": "off", // Too restrictive for general use
   "no-new-wrappers": "error", // Prevents `new String()`, `new Number()`, etc. (use literals instead)
   "no-param-reassign": ["error", { props: true }], // Disallow reassigning function parameters but allow modifying object properties
   "no-promise-executor-return": "error", // Ensures `new Promise` executors always return something
