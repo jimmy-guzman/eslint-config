@@ -13,15 +13,21 @@ export default async function reactConfig(): Promise<TypedConfigItem[]> {
     reactHooksPlugin,
     reactRefreshPlugin,
     reactCompilerPlugin,
+    reactHooksExtraPlugin,
+    reactDomPlugin,
+    reactWebApiPlugin,
+    reactNamingConventionPlugin,
   ] = await Promise.all([
     interopDefault(import("@eslint-react/eslint-plugin")),
     interopDefault(import("eslint-plugin-jsx-a11y")),
     interopDefault(import("eslint-plugin-react-hooks")),
-    import("eslint-plugin-react-refresh"),
-    import("eslint-plugin-react-compiler"),
+    interopDefault(import("eslint-plugin-react-refresh")),
+    interopDefault(import("eslint-plugin-react-compiler")),
+    interopDefault(import("eslint-plugin-react-hooks-extra")),
+    interopDefault(import("eslint-plugin-react-dom")),
+    interopDefault(import("eslint-plugin-react-web-api")),
+    interopDefault(import("eslint-plugin-react-naming-convention")),
   ]);
-
-  const reactPlugins = reactPlugin.configs.all.plugins;
 
   return [
     {
@@ -39,12 +45,11 @@ export default async function reactConfig(): Promise<TypedConfigItem[]> {
       },
       name: "jimmy.codes/react",
       plugins: {
-        "@eslint-react": reactPlugins["@eslint-react"],
-        "@eslint-react/dom": reactPlugins["@eslint-react/dom"],
-        "@eslint-react/hooks-extra": reactPlugins["@eslint-react/hooks-extra"],
-        "@eslint-react/naming-convention":
-          reactPlugins["@eslint-react/naming-convention"],
-        "@eslint-react/web-api": reactPlugins["@eslint-react/web-api"],
+        "@eslint-react": reactPlugin,
+        "@eslint-react/dom": reactDomPlugin,
+        "@eslint-react/hooks-extra": reactHooksExtraPlugin,
+        "@eslint-react/naming-convention": reactNamingConventionPlugin,
+        "@eslint-react/web-api": reactWebApiPlugin,
         "jsx-a11y": jsxA11yPlugin,
         "react-compiler": reactCompilerPlugin,
         "react-hooks": reactHooksPlugin,
