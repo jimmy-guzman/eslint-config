@@ -1,3 +1,10 @@
+## [6.14.3](https://github.com/jimmy-guzman/eslint-config/compare/v6.14.2...v6.14.3) (2025-10-19)
+
+
+### Bug Fixes
+
+* 🐛 re-allow minor updates for `@eslint-react/eslint-plugin` ([#230](https://github.com/jimmy-guzman/eslint-config/issues/230)) ([92aaad1](https://github.com/jimmy-guzman/eslint-config/commit/92aaad11a5395b6c61c2d3b98f1f0e40196c129f))
+
 ## [6.14.2](https://github.com/jimmy-guzman/eslint-config/compare/v6.14.1...v6.14.2) (2025-10-17)
 
 
