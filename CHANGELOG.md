@@ -1,3 +1,16 @@
+# [6.15.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.14.3...v6.15.0) (2025-10-27)
+
+
+### Bug Fixes
+
+* 🐛 disable `allowElseIf` in "no-else-return" ([df57816](https://github.com/jimmy-guzman/eslint-config/commit/df5781645c39496e638f3df72579c8582ed0b810))
+
+
+### Features
+
+* ✨ bump deps ([ae051bc](https://github.com/jimmy-guzman/eslint-config/commit/ae051bc1ba284fa7cfe0acd912b0891022ebeb80))
+* ✨ enable "astro/no-unsafe-inline-scripts" ([6d696bd](https://github.com/jimmy-guzman/eslint-config/commit/6d696bd241714e8b71888f0958289e7f450300b3))
+
 ## [6.14.3](https://github.com/jimmy-guzman/eslint-config/compare/v6.14.2...v6.14.3) (2025-10-19)
 
 
