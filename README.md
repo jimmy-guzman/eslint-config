@@ -16,6 +16,8 @@ A strict but practical ESLint config that works out of the box, adapts to your s
 - **Prevents confusion**: Flags ambiguous code, confusing promise usage, shadowed variables, and unused exports.
 - **Enforces consistency**: Standardizes imports, naming, coding style, and testing conventions.
 - **Flexible**: Easily customize or disable any part of the config.
+- **Favors recommended**: Where possible, builds on top of official recommended rulesets from plugins.
+- **Maintained**: Regularly updated to keep up with best practices, new tools, language features and new rules
 
 ---
 
