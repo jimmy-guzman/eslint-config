@@ -1,3 +1,10 @@
+# [6.16.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.15.0...v6.16.0) (2025-11-02)
+
+
+### Features
+
+* ✨ bump deps ([#234](https://github.com/jimmy-guzman/eslint-config/issues/234)) ([82a06db](https://github.com/jimmy-guzman/eslint-config/commit/82a06dbf8f80a6e40462fae9366ff92c51e45769))
+
 # [6.15.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.14.3...v6.15.0) (2025-10-27)
 
 
