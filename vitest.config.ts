@@ -1,16 +1,10 @@
-import { configDefaults, defineConfig } from "vitest/config";
+import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   test: {
     clearMocks: true,
     coverage: {
-      exclude: [
-        ...(configDefaults.coverage.exclude ?? []),
-        "fixtures/**",
-        "scripts/**",
-        "{tsdown,knip}.config.ts",
-      ],
-      thresholds: { 100: true },
+      thresholds: { 100: true, autoUpdate: true },
     },
     globals: true,
     mockReset: true,

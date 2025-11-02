@@ -144,6 +144,11 @@ export interface RuleOptions {
    */
   '@eslint-react/hooks-extra/no-direct-set-state-in-use-effect'?: Linter.RuleEntry<[]>
   /**
+   * Prevents dollar signs from being inserted as text nodes before expressions.
+   * @see https://eslint-react.xyz/docs/rules/jsx-dollar
+   */
+  '@eslint-react/jsx-dollar'?: Linter.RuleEntry<[]>
+  /**
    * Enforces that the 'key' prop is placed before the spread prop in JSX elements.
    * @see https://eslint-react.xyz/docs/rules/jsx-key-before-spread
    */
@@ -4947,6 +4952,11 @@ export interface RuleOptions {
    */
   'playwright/no-unsafe-references'?: Linter.RuleEntry<[]>
   /**
+   * Disallow usage of page locators that are not used
+   * @see https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/no-unused-locators.md
+   */
+  'playwright/no-unused-locators'?: Linter.RuleEntry<[]>
+  /**
    * Disallow unnecessary awaits for Playwright methods
    * @see https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/no-useless-await.md
    */
@@ -5072,7 +5082,7 @@ export interface RuleOptions {
    */
   'playwright/valid-expect-in-promise'?: Linter.RuleEntry<[]>
   /**
-   * Enforce valid tag format in Playwright test blocks
+   * Enforce valid tag format in Playwright test blocks and titles
    */
   'playwright/valid-test-tags'?: Linter.RuleEntry<PlaywrightValidTestTags>
   /**
