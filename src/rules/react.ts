@@ -41,6 +41,7 @@ export const reactRules = async () => {
     "@eslint-react/dom/no-string-style-prop": "error",
     "@eslint-react/dom/no-unsafe-target-blank": "error" as const,
     "@eslint-react/hooks-extra/no-direct-set-state-in-use-effect": "off", // Handled by react-hooks/set-state-in-effect
+    "@eslint-react/jsx-dollar": "off", // Seems a bit too aggressive
     "@eslint-react/jsx-key-before-spread": "error",
     "@eslint-react/jsx-shorthand-boolean": "error",
     "@eslint-react/jsx-shorthand-fragment": "error",
