@@ -1,3 +1,10 @@
+## [6.16.1](https://github.com/jimmy-guzman/eslint-config/compare/v6.16.0...v6.16.1) (2025-11-03)
+
+
+### Bug Fixes
+
+* 🐛 bump `eslint` to v9.39.1 ([#235](https://github.com/jimmy-guzman/eslint-config/issues/235)) ([8b26982](https://github.com/jimmy-guzman/eslint-config/commit/8b269822d91f04a1c1b9c0633caa7533e5267ff1))
+
 # [6.16.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.15.0...v6.16.0) (2025-11-02)
 
 
