@@ -1,3 +1,10 @@
+## [6.16.2](https://github.com/jimmy-guzman/eslint-config/compare/v6.16.1...v6.16.2) (2025-11-05)
+
+
+### Bug Fixes
+
+* 🐛 use `.mjs` extension for better `node` support ([#236](https://github.com/jimmy-guzman/eslint-config/issues/236)) ([3996c4e](https://github.com/jimmy-guzman/eslint-config/commit/3996c4e85210362b03129ba4b1f305f11e988b10))
+
 ## [6.16.1](https://github.com/jimmy-guzman/eslint-config/compare/v6.16.0...v6.16.1) (2025-11-03)
 
 
