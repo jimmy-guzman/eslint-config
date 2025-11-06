@@ -1832,6 +1832,16 @@ export interface RuleOptions {
    */
   'arrow-spacing'?: Linter.RuleEntry<ArrowSpacing>
   /**
+   * Enforce consistent arrow function return style based on length, multiline expressions, JSX usage, and export context
+   * @see https://github.com/christopher-buss/eslint-plugin-arrow-return-style-x/blob/v1.2.6/src/rules/arrow-return-style/documentation.md
+   */
+  'arrow-style/arrow-return-style'?: Linter.RuleEntry<ArrowStyleArrowReturnStyle>
+  /**
+   * Disallow anonymous arrow functions as export default declarations
+   * @see https://github.com/christopher-buss/eslint-plugin-arrow-return-style-x/blob/v1.2.6/src/rules/no-export-default-arrow/documentation.md
+   */
+  'arrow-style/no-export-default-arrow'?: Linter.RuleEntry<[]>
+  /**
    * apply `jsx-a11y/alt-text` rule to Astro components
    * @see https://ota-meshi.github.io/eslint-plugin-astro/rules/jsx-a11y/alt-text/
    */
@@ -9741,6 +9751,24 @@ type ArrowParens = []|[("always" | "as-needed")]|[("always" | "as-needed"), {
 type ArrowSpacing = []|[{
   before?: boolean
   after?: boolean
+}]
+// ----- arrow-style/arrow-return-style -----
+type ArrowStyleArrowReturnStyle = []|[{
+  
+  jsxAlwaysUseExplicitReturn?: boolean
+  
+  maxLen?: number
+  
+  maxObjectProperties?: number
+  
+  namedExportsAlwaysUseExplicitReturn?: boolean
+  
+  objectReturnStyle?: ("always-explicit" | "complex-explicit" | "off")
+  
+  usePrettier?: (boolean | {
+    [k: string]: unknown | undefined
+  } | null)
+  [k: string]: unknown | undefined
 }]
 // ----- astro/jsx-a11y/alt-text -----
 type AstroJsxA11YAltText = []|[{

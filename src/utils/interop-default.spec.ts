@@ -10,9 +10,7 @@ describe("interopDefault", () => {
 
   it("should return the default export if it's a function", async () => {
     const importedModule = Promise.resolve({
-      default: () => {
-        return "called";
-      },
+      default: () => "called",
     });
 
     const result = await interopDefault(importedModule);
