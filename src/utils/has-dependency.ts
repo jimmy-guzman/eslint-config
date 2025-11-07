@@ -17,9 +17,7 @@ export const hasJest = () => {
 };
 
 export const hasTestingLibrary = () => {
-  return ["@testing-library/react"].some((pkg) => {
-    return isPackageExists(pkg);
-  });
+  return ["@testing-library/react"].some((pkg) => isPackageExists(pkg));
 };
 
 export const hasReactQuery = () => {

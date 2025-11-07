@@ -1,3 +1,5 @@
+import arrowReturnStylePlugin from "eslint-plugin-arrow-return-style-x";
+
 import type { TypedConfigItem } from "../types";
 
 import { GLOB_TESTS } from "../globs";
@@ -10,6 +12,9 @@ export const javascriptConfig = () => {
         reportUnusedDisableDirectives: true,
       },
       name: "jimmy.codes/javascript",
+      plugins: {
+        "arrow-style": arrowReturnStylePlugin,
+      },
       rules: javascriptRules,
     },
     {

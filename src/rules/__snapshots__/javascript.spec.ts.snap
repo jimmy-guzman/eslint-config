@@ -8,10 +8,16 @@ exports[`should create javascript rules 1`] = `
       "allowImplicit": true,
     },
   ],
-  "arrow-body-style": [
+  "arrow-body-style": "off",
+  "arrow-style/arrow-return-style": [
     "error",
-    "always",
+    {
+      "jsxAlwaysUseExplicitReturn": true,
+      "namedExportsAlwaysUseExplicitReturn": true,
+      "usePrettier": true,
+    },
   ],
+  "arrow-style/no-export-default-arrow": "error",
   "class-methods-use-this": "error",
   "consistent-return": "error",
   "constructor-super": "error",
