@@ -1,3 +1,10 @@
+## [6.17.1](https://github.com/jimmy-guzman/eslint-config/compare/v6.17.0...v6.17.1) (2025-11-07)
+
+
+### Bug Fixes
+
+* 🐛 avoid `arrow-style` & `prettier` conflicts ([#238](https://github.com/jimmy-guzman/eslint-config/issues/238)) ([85b277a](https://github.com/jimmy-guzman/eslint-config/commit/85b277ae8a9b8dbe39a5ae9dd89e5492a7e4c744))
+
 # [6.17.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.16.2...v6.17.0) (2025-11-07)
 
 
