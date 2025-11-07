@@ -10,9 +10,7 @@ describe("reactRules", () => {
   });
 
   it("should add allowExportNames for nextjs", async () => {
-    vi.mocked(isPackageExists).mockImplementation((name) => {
-      return name === "next";
-    });
+    vi.mocked(isPackageExists).mockImplementation((name) => name === "next");
 
     const rules = await reactRules();
 
@@ -39,9 +37,7 @@ describe("reactRules", () => {
   });
 
   it("should only enable allowConstantExport for vite", async () => {
-    vi.mocked(isPackageExists).mockImplementation((name) => {
-      return name === "vite";
-    });
+    vi.mocked(isPackageExists).mockImplementation((name) => name === "vite");
 
     const rules = await reactRules();
 

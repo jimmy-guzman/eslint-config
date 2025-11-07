@@ -14,7 +14,8 @@ exports[`should create javascript rules 1`] = `
     {
       "jsxAlwaysUseExplicitReturn": true,
       "namedExportsAlwaysUseExplicitReturn": true,
-      "usePrettier": true,
+      "objectReturnStyle": "off",
+      "usePrettier": false,
     },
   ],
   "arrow-style/no-export-default-arrow": "error",
