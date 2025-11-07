@@ -127,9 +127,7 @@ describe("eslintConfig", () => {
     ])(
       "should include %s when auto detection is enabled",
       async (pkg, configName) => {
-        vi.mocked(isPackageExists).mockImplementation((name) => {
-          return name === pkg;
-        });
+        vi.mocked(isPackageExists).mockImplementation((name) => name === pkg);
 
         await expect(defineConfig({ autoDetect: true })).resolves.toStrictEqual(
           expect.arrayContaining([

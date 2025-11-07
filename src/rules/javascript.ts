@@ -15,7 +15,8 @@ export const additionalRules = {
     {
       jsxAlwaysUseExplicitReturn: true,
       namedExportsAlwaysUseExplicitReturn: true,
-      usePrettier: true,
+      objectReturnStyle: "off",
+      usePrettier: false,
     },
   ],
   "arrow-style/no-export-default-arrow": "error",
