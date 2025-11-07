@@ -9,7 +9,7 @@ export const additionalRules = {
       allowImplicit: true, // Allow implicit return for flexibility while enforcing return consistency
     },
   ],
-  "arrow-body-style": "off", // Were using arrow-style/arrow-return-style
+  "arrow-body-style": "off", // We're using arrow-style/arrow-return-style
   "arrow-style/arrow-return-style": [
     "error",
     {
