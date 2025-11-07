@@ -1,3 +1,10 @@
+# [6.17.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.16.2...v6.17.0) (2025-11-07)
+
+
+### Features
+
+* ✨ add `arrow-style` for smarter `arrow-body-style` ([#237](https://github.com/jimmy-guzman/eslint-config/issues/237)) ([a5f0ad3](https://github.com/jimmy-guzman/eslint-config/commit/a5f0ad37c4a747174331ade0e045431aa962e908))
+
 ## [6.16.2](https://github.com/jimmy-guzman/eslint-config/compare/v6.16.1...v6.16.2) (2025-11-05)
 
 
