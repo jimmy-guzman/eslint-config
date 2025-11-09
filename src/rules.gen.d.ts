@@ -7134,6 +7134,11 @@ export interface RuleOptions {
    */
   'vitest/prefer-vi-mocked'?: Linter.RuleEntry<[]>
   /**
+   * ensure that every `expect.poll` call is awaited
+   * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/require-awaited-expect-poll.md
+   */
+  'vitest/require-awaited-expect-poll'?: Linter.RuleEntry<[]>
+  /**
    * require setup and teardown to be within a hook
    * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/require-hook.md
    */
@@ -16578,7 +16583,8 @@ type VitestNoFocusedTests = []|[{
 }]
 // ----- vitest/no-hooks -----
 type VitestNoHooks = []|[{
-  allow?: unknown[]
+  
+  allow?: ("beforeAll" | "beforeEach" | "afterAll" | "afterEach")[]
 }]
 // ----- vitest/no-large-snapshots -----
 type VitestNoLargeSnapshots = []|[{
