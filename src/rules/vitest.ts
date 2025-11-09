@@ -57,6 +57,7 @@ export const vitestRules = async () => {
     "vitest/prefer-to-have-length": "error",
     "vitest/prefer-todo": "warn",
     "vitest/prefer-vi-mocked": "error",
+    "vitest/require-awaited-expect-poll": "error",
     "vitest/require-hook": "error",
     "vitest/require-to-throw-message": "error",
     "vitest/require-top-level-describe": "off",
