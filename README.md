@@ -151,6 +151,7 @@ This config includes the following plugins:
 | [`@tanstack/eslint-plugin-query`](https://tanstack.com/query/latest/docs/eslint/eslint-plugin-query)                  | TanStack Query rules               |
 | [`@vitest/eslint-plugin`](https://github.com/vitest-dev/eslint-plugin-vitest)                                         | Vitest support                     |
 | [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier)                                        | Disable formatting conflicts       |
+| [`eslint-plugin-arrow-return-style-x`](https://github.com/christopher-buss/eslint-plugin-arrow-return-style-x)        | Arrow function return style        |
 | [`eslint-plugin-astro`](https://ota-meshi.github.io/eslint-plugin-astro/)                                             | Astro framework support            |
 | [`eslint-plugin-import-x`](https://github.com/un-ts/eslint-plugin-import-x)                                           | Import order and hygiene           |
 | [`eslint-plugin-jest`](https://github.com/jest-community/eslint-plugin-jest)                                          | Jest support                       |
