@@ -1,3 +1,15 @@
+# [6.18.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.17.1...v6.18.0) (2025-11-10)
+
+
+### Bug Fixes
+
+* 🐛 bump `@eslint-react/eslint-plugin` ([581d4a7](https://github.com/jimmy-guzman/eslint-config/commit/581d4a7daecb0a88c5f9502f8908f33b87578008))
+
+
+### Features
+
+* ✨ enable `vitest/require-awaited-expect-poll` ([1bee01b](https://github.com/jimmy-guzman/eslint-config/commit/1bee01b1070472bf4a88072731f0a0bc26e5649f))
+
 ## [6.17.1](https://github.com/jimmy-guzman/eslint-config/compare/v6.17.0...v6.17.1) (2025-11-07)
 
 
