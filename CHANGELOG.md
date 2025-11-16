@@ -1,3 +1,10 @@
+# [6.19.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.18.0...v6.19.0) (2025-11-16)
+
+
+### Features
+
+* ✨ enable & normalize strict react rules ([#241](https://github.com/jimmy-guzman/eslint-config/issues/241)) ([1a29072](https://github.com/jimmy-guzman/eslint-config/commit/1a29072e197d8635d3ccc5e604bdedc72f9ca0e9))
+
 # [6.18.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.17.1...v6.18.0) (2025-11-10)
 
 
