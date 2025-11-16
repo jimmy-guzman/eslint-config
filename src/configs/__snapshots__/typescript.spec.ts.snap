@@ -7,7 +7,7 @@ exports[`typescriptConfig > should create config 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.46.3",
+          "version": "8.46.4",
         },
         "parseForESLint": [Function],
       },
@@ -294,7 +294,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.46.3",
+                    "version": "8.46.4",
                   },
                   "parseForESLint": [Function],
                 },
@@ -499,7 +499,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.46.3",
+                  "version": "8.46.4",
                 },
                 "parseForESLint": [Function],
               },
@@ -621,7 +621,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.46.3",
+                    "version": "8.46.4",
                   },
                   "parseForESLint": [Function],
                 },
@@ -701,7 +701,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.46.3",
+                    "version": "8.46.4",
                   },
                   "parseForESLint": [Function],
                 },
@@ -808,7 +808,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.46.3",
+                    "version": "8.46.4",
                   },
                   "parseForESLint": [Function],
                 },
@@ -892,7 +892,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.46.3",
+                    "version": "8.46.4",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1131,7 +1131,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.46.3",
+                    "version": "8.46.4",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1254,7 +1254,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.46.3",
+                    "version": "8.46.4",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1325,7 +1325,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.46.3",
+                    "version": "8.46.4",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1405,7 +1405,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.46.3",
+                    "version": "8.46.4",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1950,7 +1950,7 @@ exports[`typescriptConfig > should create config 1`] = `
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.46.3",
+          "version": "8.46.4",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -6734,7 +6734,7 @@ You must still type the parameters of the function.",
               "messages": {
                 "conditional": "Expected non-Promise value in a boolean conditional.",
                 "predicate": "Expected a non-Promise value to be returned.",
-                "spread": "Expected a non-Promise value to be spreaded in an object.",
+                "spread": "Expected a non-Promise value to be spread in an object.",
                 "voidReturnArgument": "Promise returned in function argument where a void return was expected.",
                 "voidReturnAttribute": "Promise-returning function provided to attribute where a void return was expected.",
                 "voidReturnInheritedMethod": "Promise-returning method provided where a void return was expected by extended/implemented type '{{ heritageTypeName }}'.",

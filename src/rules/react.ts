@@ -21,9 +21,20 @@ const nextAllowedExportNames = [
 ];
 
 export const reactRules = async () => {
-  const [{ configs: reactConfigs }, jsxA11yPlugin] = await Promise.all([
-    interopDefault(import("@eslint-react/eslint-plugin")),
+  const [
+    { configs: reactConfigs },
+    { flatConfigs: jsxA11yConfigs },
+    { configs: reactDomConfigs },
+    { configs: reactHooksExtraConfigs },
+    { configs: reactWebApiConfigs },
+    { configs: reactNamingConventionConfigs },
+  ] = await Promise.all([
+    interopDefault(import("eslint-plugin-react-x")),
     interopDefault(import("eslint-plugin-jsx-a11y")),
+    interopDefault(import("eslint-plugin-react-dom")),
+    interopDefault(import("eslint-plugin-react-hooks-extra")),
+    interopDefault(import("eslint-plugin-react-web-api")),
+    interopDefault(import("eslint-plugin-react-naming-convention")),
   ]);
   const isUsingNextjs = hasNext();
   const isUsingVite = hasVite();
@@ -31,33 +42,32 @@ export const reactRules = async () => {
 
   const reactPluginRules = isUsingTypesScript
     ? reactConfigs["strict-type-checked"].rules
-    : reactConfigs.recommended.rules;
+    : reactConfigs.strict.rules;
+
+  const reactDomPluginRules = isUsingTypesScript
+    ? ({
+        ...reactDomConfigs.strict.rules,
+        "react-dom/no-string-style-prop": "off",
+        "react-dom/no-unknown-property": "off",
+      } satisfies Rules)
+    : ({
+        ...reactDomConfigs.strict.rules,
+        "react-dom/no-string-style-prop": "error",
+        "react-dom/no-unknown-property": [
+          "error",
+          { requireDataLowercase: true },
+        ],
+      } satisfies Rules);
 
   return {
-    ...jsxA11yPlugin.flatConfigs.recommended.rules,
+    ...jsxA11yConfigs.recommended.rules,
     ...upwarn(reactPluginRules),
-    "@eslint-react/dom/no-missing-button-type": "error" as const,
-    "@eslint-react/dom/no-missing-iframe-sandbox": "error" as const,
-    "@eslint-react/dom/no-string-style-prop": "error",
-    "@eslint-react/dom/no-unsafe-target-blank": "error" as const,
-    "@eslint-react/hooks-extra/no-direct-set-state-in-use-effect": "off", // Handled by react-hooks/set-state-in-effect
-    "@eslint-react/jsx-dollar": "off", // Seems a bit too aggressive
-    "@eslint-react/jsx-key-before-spread": "error",
-    "@eslint-react/jsx-shorthand-boolean": "error",
-    "@eslint-react/jsx-shorthand-fragment": "error",
-    "@eslint-react/naming-convention/component-name": "error",
-    "@eslint-react/no-children-prop": "error",
-    "@eslint-react/no-class-component": "error",
-    "@eslint-react/no-missing-context-display-name": "error",
-    "@eslint-react/no-unnecessary-key": "error",
-    "@eslint-react/no-unnecessary-use-callback": "error",
-    "@eslint-react/no-unnecessary-use-memo": "error",
-    "@eslint-react/no-unstable-context-value": "error" as const,
-    "@eslint-react/no-unstable-default-props": "error" as const,
-    "@eslint-react/no-unused-state": "error" as const,
-    "@eslint-react/no-useless-fragment": "error",
-    "@eslint-react/prefer-namespace-import": "error",
+    ...upwarn(reactDomPluginRules),
+    ...upwarn(reactHooksExtraConfigs.recommended.rules),
+    ...upwarn(reactWebApiConfigs.recommended.rules),
+    ...upwarn(reactNamingConventionConfigs.recommended.rules),
     "react-compiler/react-compiler": "error",
+    "react-hooks-extra/no-direct-set-state-in-use-effect": "off", // Handled by react-hooks/set-state-in-effect
     "react-hooks/component-hook-factories": "error",
     "react-hooks/error-boundaries": "error",
     "react-hooks/exhaustive-deps": "error",
@@ -74,6 +84,7 @@ export const reactRules = async () => {
     "react-hooks/unsupported-syntax": "error",
     "react-hooks/use-memo": "error",
     "react-hooks/void-use-memo": "error",
+    "react-naming-convention/component-name": "error",
     "react-refresh/only-export-components": [
       "warn",
       {
@@ -81,5 +92,10 @@ export const reactRules = async () => {
         allowExportNames: isUsingNextjs ? nextAllowedExportNames : [],
       },
     ],
+    "react-x/jsx-dollar": "off", // Seems a bit too aggressive
+    "react-x/jsx-shorthand-boolean": "error",
+    "react-x/jsx-shorthand-fragment": "error",
+    "react-x/no-missing-context-display-name": "error",
+    "react-x/prefer-namespace-import": "error",
   } satisfies Rules;
 };
