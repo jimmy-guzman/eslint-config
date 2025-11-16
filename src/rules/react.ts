@@ -67,9 +67,6 @@ export const reactRules = async () => {
     ...upwarn(reactWebApiConfigs.recommended.rules),
     ...upwarn(reactNamingConventionConfigs.recommended.rules),
     "react-compiler/react-compiler": "error",
-    "react-dom/no-missing-button-type": "error" as const,
-    "react-dom/no-missing-iframe-sandbox": "error" as const,
-    "react-dom/no-unsafe-target-blank": "error" as const,
     "react-hooks-extra/no-direct-set-state-in-use-effect": "off", // Handled by react-hooks/set-state-in-effect
     "react-hooks/component-hook-factories": "error",
     "react-hooks/error-boundaries": "error",
@@ -96,19 +93,9 @@ export const reactRules = async () => {
       },
     ],
     "react-x/jsx-dollar": "off", // Seems a bit too aggressive
-    "react-x/jsx-key-before-spread": "error",
     "react-x/jsx-shorthand-boolean": "error",
     "react-x/jsx-shorthand-fragment": "error",
-    "react-x/no-children-prop": "error",
-    "react-x/no-class-component": "error",
     "react-x/no-missing-context-display-name": "error",
-    "react-x/no-unnecessary-key": "error",
-    "react-x/no-unnecessary-use-callback": "error",
-    "react-x/no-unnecessary-use-memo": "error",
-    "react-x/no-unstable-context-value": "error" as const,
-    "react-x/no-unstable-default-props": "error" as const,
-    "react-x/no-unused-state": "error" as const,
-    "react-x/no-useless-fragment": "error",
     "react-x/prefer-namespace-import": "error",
   } satisfies Rules;
 };
