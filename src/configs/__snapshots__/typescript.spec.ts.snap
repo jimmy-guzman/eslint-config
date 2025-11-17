@@ -7,7 +7,7 @@ exports[`typescriptConfig > should create config 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.46.4",
+          "version": "8.47.0",
         },
         "parseForESLint": [Function],
       },
@@ -108,6 +108,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "@typescript-eslint/no-unsafe-type-assertion": "error",
               "@typescript-eslint/no-unsafe-unary-minus": "error",
               "@typescript-eslint/no-unused-expressions": "error",
+              "@typescript-eslint/no-unused-private-class-members": "error",
               "@typescript-eslint/no-unused-vars": "error",
               "@typescript-eslint/no-use-before-define": "error",
               "@typescript-eslint/no-useless-constructor": "error",
@@ -166,6 +167,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "no-shadow": "off",
               "no-throw-literal": "off",
               "no-unused-expressions": "off",
+              "no-unused-private-class-members": "off",
               "no-unused-vars": "off",
               "no-use-before-define": "off",
               "no-useless-constructor": "off",
@@ -294,7 +296,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.46.4",
+                    "version": "8.47.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -427,6 +429,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "@typescript-eslint/no-unsafe-type-assertion": "error",
                 "@typescript-eslint/no-unsafe-unary-minus": "error",
                 "@typescript-eslint/no-unused-expressions": "error",
+                "@typescript-eslint/no-unused-private-class-members": "error",
                 "@typescript-eslint/no-unused-vars": "error",
                 "@typescript-eslint/no-use-before-define": "error",
                 "@typescript-eslint/no-useless-constructor": "error",
@@ -485,6 +488,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "no-shadow": "off",
                 "no-throw-literal": "off",
                 "no-unused-expressions": "off",
+                "no-unused-private-class-members": "off",
                 "no-unused-vars": "off",
                 "no-use-before-define": "off",
                 "no-useless-constructor": "off",
@@ -499,7 +503,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.46.4",
+                  "version": "8.47.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -621,7 +625,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.46.4",
+                    "version": "8.47.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -701,7 +705,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.46.4",
+                    "version": "8.47.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -808,7 +812,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.46.4",
+                    "version": "8.47.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -892,7 +896,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.46.4",
+                    "version": "8.47.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1131,7 +1135,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.46.4",
+                    "version": "8.47.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1254,7 +1258,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.46.4",
+                    "version": "8.47.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1325,7 +1329,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.46.4",
+                    "version": "8.47.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1405,7 +1409,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.46.4",
+                    "version": "8.47.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1950,7 +1954,7 @@ exports[`typescriptConfig > should create config 1`] = `
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.46.4",
+          "version": "8.47.0",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -8186,6 +8190,23 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "type": "suggestion",
             },
           },
+          "no-unused-private-class-members": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Disallow unused private class members",
+                "extendsBaseRule": true,
+                "requiresTypeChecking": false,
+                "url": "https://typescript-eslint.io/rules/no-unused-private-class-members",
+              },
+              "messages": {
+                "unusedPrivateClassMember": "Private class member '{{classMemberName}}' is defined but never used.",
+              },
+              "schema": [],
+              "type": "problem",
+            },
+          },
           "no-unused-vars": {
             "create": [Function],
             "defaultOptions": [
@@ -10600,6 +10621,7 @@ If a function does not access \`this\`, it can be annotated with \`this: void\`.
         },
       ],
       "@typescript-eslint/no-unnecessary-type-conversion": "error",
+      "@typescript-eslint/no-unused-private-class-members": "error",
       "@typescript-eslint/no-unused-vars": [
         "error",
         {
@@ -10629,6 +10651,7 @@ If a function does not access \`this\`, it can be annotated with \`this: void\`.
         },
       ],
       "@typescript-eslint/switch-exhaustiveness-check": "error",
+      "no-unused-private-class-members": "off",
       "no-use-before-define": "off",
     },
   },
