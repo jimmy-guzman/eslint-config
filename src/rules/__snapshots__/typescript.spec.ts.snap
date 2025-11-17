@@ -24,6 +24,7 @@ exports[`should create typescript rules 1`] = `
     },
   ],
   "@typescript-eslint/no-unnecessary-type-conversion": "error",
+  "@typescript-eslint/no-unused-private-class-members": "error",
   "@typescript-eslint/no-unused-vars": [
     "error",
     {
@@ -53,6 +54,7 @@ exports[`should create typescript rules 1`] = `
     },
   ],
   "@typescript-eslint/switch-exhaustiveness-check": "error",
+  "no-unused-private-class-members": "off",
   "no-use-before-define": "off",
 }
 `;

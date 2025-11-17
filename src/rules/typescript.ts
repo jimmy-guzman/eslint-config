@@ -1,10 +1,12 @@
 import type { Rules } from "../types";
 
 const disabledEslintRules = {
+  "no-unused-private-class-members": "off",
   "no-use-before-define": "off",
 } satisfies Rules;
 
 export const typescriptRules = {
+  ...disabledEslintRules,
   "@typescript-eslint/consistent-type-exports": [
     "error",
     { fixMixedExportsWithInlineTypeSpecifier: false },
@@ -19,6 +21,7 @@ export const typescriptRules = {
     { checksVoidReturn: { attributes: false } },
   ],
   "@typescript-eslint/no-unnecessary-type-conversion": "error",
+  "@typescript-eslint/no-unused-private-class-members": "error",
   "@typescript-eslint/no-unused-vars": [
     "error",
     {
@@ -46,5 +49,4 @@ export const typescriptRules = {
     { allowNumber: true },
   ],
   "@typescript-eslint/switch-exhaustiveness-check": "error",
-  ...disabledEslintRules,
 } satisfies Rules;
