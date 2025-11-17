@@ -1,3 +1,10 @@
+# [6.20.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.19.0...v6.20.0) (2025-11-17)
+
+
+### Features
+
+* ✨ enable ts's no-unused-private-class-members ([#242](https://github.com/jimmy-guzman/eslint-config/issues/242)) ([eed8fe5](https://github.com/jimmy-guzman/eslint-config/commit/eed8fe5afd9c8b82522b7fe53e4b8bee6a09bf91))
+
 # [6.19.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.18.0...v6.19.0) (2025-11-16)
 
 
