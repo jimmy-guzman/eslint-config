@@ -14,6 +14,7 @@ exports[`should create vitest rules 1`] = `
   "vitest/hoisted-apis-on-top": "error",
   "vitest/no-alias-methods": "error",
   "vitest/no-commented-out-tests": "error",
+  "vitest/no-conditional-expect": "error",
   "vitest/no-conditional-in-test": "error",
   "vitest/no-disabled-tests": "warn",
   "vitest/no-duplicate-hooks": "error",
