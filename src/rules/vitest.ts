@@ -7,6 +7,15 @@ export const vitestRules = async () => {
 
   return {
     ...vitestPlugin.configs.recommended.rules,
+    "vitest/consistent-each-for": [
+      "error",
+      {
+        describe: "each",
+        it: "each",
+        suite: "each",
+        test: "each",
+      },
+    ],
     "vitest/consistent-test-it": [
       "error",
       {
