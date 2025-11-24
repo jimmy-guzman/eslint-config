@@ -1,3 +1,15 @@
+# [6.21.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.20.0...v6.21.0) (2025-11-24)
+
+
+### Bug Fixes
+
+* 🐛 enable missing `vitest/no-conditional-expect` ([f361405](https://github.com/jimmy-guzman/eslint-config/commit/f361405fb2c886af23a4ab424af46221c0002675))
+
+
+### Features
+
+* ✨ enable `vitest/consistent-each-for` ([a6252f8](https://github.com/jimmy-guzman/eslint-config/commit/a6252f81fc5927b880103654d285bf853e3109e6)), closes [#243](https://github.com/jimmy-guzman/eslint-config/issues/243)
+
 # [6.20.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.19.0...v6.20.0) (2025-11-17)
 
 
