@@ -17,19 +17,12 @@ export const vitestRules = async () => {
     "vitest/consistent-vitest-vi": "error",
     "vitest/hoisted-apis-on-top": "error",
     "vitest/no-alias-methods": "error",
-    "vitest/no-commented-out-tests": "error",
     "vitest/no-conditional-in-test": "error",
-    "vitest/no-disabled-tests": "warn",
     "vitest/no-duplicate-hooks": "error",
-    "vitest/no-focused-tests": "error",
     "vitest/no-hooks": "off",
-    "vitest/no-identical-title": "error",
-    "vitest/no-interpolation-in-snapshots": "error",
     "vitest/no-large-snapshots": "off",
-    "vitest/no-mocks-import": "error",
     "vitest/no-restricted-matchers": "off",
     "vitest/no-restricted-vi-methods": "off",
-    "vitest/no-standalone-expect": "error",
     "vitest/no-test-prefixes": "error",
     "vitest/no-test-return-statement": "error",
     "vitest/padding-around-all": "error",
@@ -62,8 +55,6 @@ export const vitestRules = async () => {
     "vitest/require-to-throw-message": "error",
     "vitest/require-top-level-describe": "off",
     // "vitest/unbound-method": "off", // requires typescript, missing https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/unbound-method.md
-    "vitest/valid-expect": "error",
-    "vitest/valid-expect-in-promise": "error",
     "vitest/valid-title": [
       "error",
       {
