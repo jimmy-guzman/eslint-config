@@ -42,7 +42,7 @@ import { defineConfig } from "@jimmy.codes/eslint-config";
 export default defineConfig();
 ```
 
-It’ll auto-configure based on your installed dependencies.
+It'll auto-configure based on your installed dependencies.
 
 ---
 
@@ -74,6 +74,30 @@ export default defineConfig({
   vitest: false,
 });
 ```
+
+### Vitest Configuration
+
+Vitest also supports some configuration options. If options are provided then Vitest support is enabled.
+
+#### Configure Vitest Globals
+
+Control how [Vitest globals configuration](https://vitest.dev/config/globals.html) (`describe`, `it`, `expect`, etc.) are handled:
+
+```ts
+import { defineConfig } from "@jimmy.codes/eslint-config";
+
+export default defineConfig({
+  vitest: {
+    globals: "explicit", // Require explicit imports from 'vitest'
+  },
+});
+```
+
+Options:
+
+- `'explicit'`: Require explicit imports from `'vitest'`
+- `'implicit'`: Use implicit global APIs (vitest config `globals: true`)
+- `'either'`: Allow both styles (default)
 
 ### Override Specific Rules
 

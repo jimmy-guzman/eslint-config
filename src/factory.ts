@@ -16,6 +16,7 @@ import { prettierConfig } from "./configs/prettier";
 import { regexpConfig } from "./configs/regexp";
 import stylisticConfig from "./configs/stylistic";
 import { unicornConfig } from "./configs/unicorn";
+import { createFeatured } from "./utils/create-featured";
 import {
   hasAstro,
   hasJest,
@@ -59,20 +60,18 @@ export const defineConfig = async (
   }: Options = {},
   ...moreOverrides: Linter.Config[] | TypedConfigItem[]
 ) => {
-  const getFlag = (explicit: boolean, detector: () => boolean) => {
-    return explicit || (autoDetect && detector());
-  };
+  const featured = createFeatured(autoDetect);
 
-  const isTypescriptEnabled = getFlag(typescript, hasTypescript);
-  const isReactEnabled = getFlag(react, hasReact);
-  const isAstroEnabled = getFlag(astro, hasAstro);
-  const isTanstackQueryEnabled = getFlag(tanstackQuery, hasReactQuery);
-  const isTestingLibraryEnabled = getFlag(testingLibrary, hasTestingLibrary);
-  const isPlaywrightEnabled = getFlag(playwright, hasPlaywright);
-  const isStorybookEnabled = getFlag(storybook, hasStorybook);
-  const isNextjsEnabled = getFlag(nextjs, hasNext);
-  const isJestEnabled = getFlag(jest, hasJest);
-  const isVitestEnabled = getFlag(vitest, hasVitest);
+  const isTypescriptEnabled = featured(typescript, hasTypescript);
+  const isReactEnabled = featured(react, hasReact);
+  const isAstroEnabled = featured(astro, hasAstro);
+  const isTanstackQueryEnabled = featured(tanstackQuery, hasReactQuery);
+  const isTestingLibraryEnabled = featured(testingLibrary, hasTestingLibrary);
+  const isPlaywrightEnabled = featured(playwright, hasPlaywright);
+  const isStorybookEnabled = featured(storybook, hasStorybook);
+  const isNextjsEnabled = featured(nextjs, hasNext);
+  const isJestEnabled = featured(jest, hasJest);
+  const isVitestEnabled = featured(vitest, hasVitest);
 
   const baseConfigs = [
     javascriptConfig(),
@@ -92,7 +91,7 @@ export const defineConfig = async (
     isTanstackQueryEnabled && unwrap(import("./configs/tanstack-query")),
     isAstroEnabled && unwrap(import("./configs/astro")),
     isJestEnabled && unwrap(import("./configs/jest")),
-    isVitestEnabled && unwrap(import("./configs/vitest")),
+    isVitestEnabled && unwrap(import("./configs/vitest"), vitest),
     isTestingLibraryEnabled && unwrap(import("./configs/testing-library")),
     isPlaywrightEnabled && unwrap(import("./configs/playwright")),
     isStorybookEnabled && unwrap(import("./configs/storybook")),
