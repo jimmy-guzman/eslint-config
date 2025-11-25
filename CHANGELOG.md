@@ -1,3 +1,10 @@
+# [6.22.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.21.0...v6.22.0) (2025-11-25)
+
+
+### Features
+
+* ✨ allow configuring `vitest` globals ([#246](https://github.com/jimmy-guzman/eslint-config/issues/246)) ([3a3df39](https://github.com/jimmy-guzman/eslint-config/commit/3a3df39ade41bec6c2113292b43d9588b293a14f)), closes [#184](https://github.com/jimmy-guzman/eslint-config/issues/184)
+
 # [6.21.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.20.0...v6.21.0) (2025-11-24)
 
 
