@@ -17,6 +17,21 @@ interface LinterConfigOverrides {
 
 export type TypedConfigItem = Prettify<Override<Base, LinterConfigOverrides>>;
 
+export interface VitestOptions {
+  /**
+   * How to handle Vitest global APIs (describe, it, expect, etc.).
+   *
+   * - 'explicit': Require explicit imports from 'vitest'
+   * - 'implicit': Use implicit global APIs (vitest config globals: true)
+   * - 'either': Allow both styles (default)
+   *
+   * @see https://vitest.dev/config/globals.html
+   *
+   * @default 'either'
+   */
+  globals?: "either" | "explicit" | "implicit";
+}
+
 export interface Options {
   /**
    * Are astro rules enabled?
@@ -104,5 +119,5 @@ export interface Options {
    *
    * @default false
    */
-  vitest?: boolean;
+  vitest?: boolean | VitestOptions;
 }

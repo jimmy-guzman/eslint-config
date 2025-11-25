@@ -10,5 +10,7 @@ export default defineConfig({
   tanstackQuery: true,
   testingLibrary: true,
   typescript: true,
-  vitest: true,
+  vitest: {
+    globals: "implicit",
+  },
 });

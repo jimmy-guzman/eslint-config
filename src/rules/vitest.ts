@@ -1,8 +1,8 @@
-import type { Rules } from "../types";
+import type { Rules, VitestOptions } from "../types";
 
 import { interopDefault } from "../utils/interop-default";
 
-export const vitestRules = async () => {
+export const vitestRules = async (options?: VitestOptions) => {
   const vitestPlugin = await interopDefault(import("@vitest/eslint-plugin"));
 
   return {
@@ -29,6 +29,8 @@ export const vitestRules = async () => {
     "vitest/no-conditional-in-test": "error",
     "vitest/no-duplicate-hooks": "error",
     "vitest/no-hooks": "off",
+    "vitest/no-importing-vitest-globals":
+      options?.globals === "implicit" ? "error" : "off",
     "vitest/no-large-snapshots": "off",
     "vitest/no-restricted-matchers": "off",
     "vitest/no-restricted-vi-methods": "off",
@@ -48,6 +50,8 @@ export const vitestRules = async () => {
     "vitest/prefer-expect-type-of": "error",
     "vitest/prefer-hooks-in-order": "error",
     "vitest/prefer-hooks-on-top": "error",
+    "vitest/prefer-importing-vitest-globals":
+      options?.globals === "explicit" ? "error" : "off",
     "vitest/prefer-lowercase-title": "off",
     "vitest/prefer-mock-promise-shorthand": "error",
     "vitest/prefer-snapshot-hint": "error",

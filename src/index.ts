@@ -1,3 +1,3 @@
 export { defineConfig } from "./factory";
 
-export type * from "./types";
+export type { Options, TypedConfigItem, VitestOptions } from "./types";
