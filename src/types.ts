@@ -30,6 +30,12 @@ export interface VitestOptions {
    * @default 'either'
    */
   globals?: "either" | "explicit" | "implicit";
+  /**
+   * Indicate whether [Vitest's type testing utilities](https://vitest.dev/guide/testing-types.html) (`expectTypeOf`, `assertType`) are being used
+   *
+   * @default false
+   */
+  typecheck?: boolean;
 }
 
 export interface Options {

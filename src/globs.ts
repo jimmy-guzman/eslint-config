@@ -17,6 +17,13 @@ export const GLOB_TESTS = [
   `**/*.benchmark.${GLOB_SRC_EXT}`,
 ] as const;
 
+export const GLOB_TYPE_TESTS = [
+  `**/*.test-d.${GLOB_TS}`,
+  `**/*.test-d.${GLOB_TSX}`,
+  `**/*.spec-d.${GLOB_TS}`,
+  `**/*.spec-d.${GLOB_TSX}`,
+] as const;
+
 export const GLOB_PLAYWRIGHT = [
   `**/e2e/**/*.spec.${GLOB_SRC_EXT}`,
   `**/e2e/**/*.test.${GLOB_SRC_EXT}`,
