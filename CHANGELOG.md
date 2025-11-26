@@ -1,3 +1,10 @@
+# [6.23.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.22.0...v6.23.0) (2025-11-26)
+
+
+### Features
+
+* ✨ add support for `vitest`'s typechecking ([#247](https://github.com/jimmy-guzman/eslint-config/issues/247)) ([9b33ec9](https://github.com/jimmy-guzman/eslint-config/commit/9b33ec975bf76b25215579327a8e8ea020e88462))
+
 # [6.22.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.21.0...v6.22.0) (2025-11-25)
 
 
