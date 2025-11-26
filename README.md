@@ -103,7 +103,7 @@ Options:
 
 Indicate whether [Vitest's type testing utilities](https://vitest.dev/guide/testing-types.html) (`expectTypeOf`, `assertType`) are being used:
 
-````ts
+```ts
 import { defineConfig } from "@jimmy.codes/eslint-config";
 
 export default defineConfig({
@@ -111,6 +111,7 @@ export default defineConfig({
     typecheck: true,
   },
 });
+```
 
 ### Override Specific Rules
 
@@ -133,7 +134,7 @@ export default defineConfig({
     },
   ],
 });
-````
+```
 
 Or you can import [globs](src/globs.ts) for overrides instead of writing your own:
 
