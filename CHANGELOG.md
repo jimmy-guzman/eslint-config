@@ -1,3 +1,10 @@
+# [6.24.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.23.0...v6.24.0) (2025-11-26)
+
+
+### Features
+
+* ✨ add support TypeScript's `erasableSyntaxOnly` ([#248](https://github.com/jimmy-guzman/eslint-config/issues/248)) ([ae2499b](https://github.com/jimmy-guzman/eslint-config/commit/ae2499b881696c36ee6abf68d62d9dc10629446a))
+
 # [6.23.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.22.0...v6.23.0) (2025-11-26)
 
 
