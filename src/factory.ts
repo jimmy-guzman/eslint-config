@@ -86,7 +86,7 @@ export const defineConfig = async (
   ];
 
   const featureConfigs = await Promise.all([
-    isTypescriptEnabled && unwrap(import("./configs/typescript")),
+    isTypescriptEnabled && unwrap(import("./configs/typescript"), typescript),
     isReactEnabled && unwrap(import("./configs/react")),
     isTanstackQueryEnabled && unwrap(import("./configs/tanstack-query")),
     isAstroEnabled && unwrap(import("./configs/astro")),

@@ -9,7 +9,9 @@ export default defineConfig({
   storybook: true,
   tanstackQuery: true,
   testingLibrary: true,
-  typescript: true,
+  typescript: {
+    erasableSyntaxOnly: true,
+  },
   vitest: {
     globals: "implicit",
   },

@@ -75,20 +75,38 @@ export default defineConfig({
 });
 ```
 
+### TypeScript Configuration
+
+TypeScript also supports some configuration options. If options are provided then TypeScript support is enabled.
+
+#### Configure Erasable Syntax Only
+
+Enable rules scoped to TypeScript’s new erasable syntax only mode (TypeScript 5.8+):
+
+```ts
+import { defineConfig } from "@jimmy.codes/eslint-config";
+
+export default defineConfig({
+  typescript: {
+    erasableSyntaxOnly: true,
+  },
+});
+```
+
 ### Vitest Configuration
 
 Vitest also supports some configuration options. If options are provided then Vitest support is enabled.
 
 #### Configure Vitest Globals
 
-Control how [Vitest globals configuration](https://vitest.dev/config/globals.html) (`describe`, `it`, `expect`, etc.) are handled:
+Control how [Vitest globals configuration](https://vitest.dev/config/globals.html) are handled:
 
 ```ts
 import { defineConfig } from "@jimmy.codes/eslint-config";
 
 export default defineConfig({
   vitest: {
-    globals: "explicit", // Require explicit imports from 'vitest'
+    globals: "explicit",
   },
 });
 ```
@@ -101,7 +119,7 @@ Options:
 
 #### Configure Type Testing
 
-Indicate whether [Vitest's type testing utilities](https://vitest.dev/guide/testing-types.html) (`expectTypeOf`, `assertType`) are being used:
+Indicate whether [Vitest's type testing utilities](https://vitest.dev/guide/testing-types.html) are being used:
 
 ```ts
 import { defineConfig } from "@jimmy.codes/eslint-config";

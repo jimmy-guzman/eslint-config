@@ -19,23 +19,30 @@ export type TypedConfigItem = Prettify<Override<Base, LinterConfigOverrides>>;
 
 export interface VitestOptions {
   /**
-   * How to handle Vitest global APIs (describe, it, expect, etc.).
+   * How to handle [Vitest global APIs](https://vitest.dev/config/globals.html).
    *
    * - 'explicit': Require explicit imports from 'vitest'
    * - 'implicit': Use implicit global APIs (vitest config globals: true)
    * - 'either': Allow both styles (default)
    *
-   * @see https://vitest.dev/config/globals.html
-   *
    * @default 'either'
    */
   globals?: "either" | "explicit" | "implicit";
   /**
-   * Indicate whether [Vitest's type testing utilities](https://vitest.dev/guide/testing-types.html) (`expectTypeOf`, `assertType`) are being used
+   * Indicate whether [Vitest's type testing utilities](https://vitest.dev/guide/testing-types.html) are being used.
    *
    * @default false
    */
   typecheck?: boolean;
+}
+
+export interface TypeScriptOptions {
+  /**
+   * Enable rules for [erasable syntax only](https://devblogs.microsoft.com/typescript/announcing-typescript-5-8-beta/#the---erasablesyntaxonly-option).
+   *
+   * @default false
+   */
+  erasableSyntaxOnly?: boolean;
 }
 
 export interface Options {
@@ -119,7 +126,7 @@ export interface Options {
    *
    * @default false
    */
-  typescript?: boolean;
+  typescript?: boolean | TypeScriptOptions;
   /**
    * Are Vitest rules enabled?
    *
