@@ -14,8 +14,12 @@ const configs = await defineConfig({
   storybook: true,
   tanstackQuery: true,
   testingLibrary: true,
-  typescript: true,
-  vitest: true,
+  typescript: {
+    erasableSyntaxOnly: true,
+  },
+  vitest: {
+    globals: "implicit",
+  },
 });
 
 const ruleDts = await flatConfigsToRulesDTS(
