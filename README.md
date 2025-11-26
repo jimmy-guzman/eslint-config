@@ -99,6 +99,20 @@ Options:
 - `'implicit'`: Use implicit global APIs (vitest config `globals: true`)
 - `'either'`: Allow both styles (default)
 
+#### Configure Type Testing
+
+Indicate whether [Vitest's type testing utilities](https://vitest.dev/guide/testing-types.html) (`expectTypeOf`, `assertType`) are being used:
+
+```ts
+import { defineConfig } from "@jimmy.codes/eslint-config";
+
+export default defineConfig({
+  vitest: {
+    typecheck: true,
+  },
+});
+```
+
 ### Override Specific Rules
 
 ```ts

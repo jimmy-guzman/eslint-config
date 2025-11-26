@@ -1,11 +1,13 @@
 const GLOB_SRC_EXT = "?([cm])[jt]s?(x)";
+const GLOB_TS_EXT = "?([cm])ts";
+const GLOB_TSX_EXT = "?([cm])tsx";
 
 export const GLOB_JS = "**/*.?([cm])js";
 export const GLOB_JSX = "**/*.?([cm])jsx";
 export const GLOB_CJS = "**/*.cjs";
 
-export const GLOB_TS = "**/*.?([cm])ts";
-export const GLOB_TSX = "**/*.?([cm])tsx";
+export const GLOB_TS = `**/*.${GLOB_TS_EXT}`;
+export const GLOB_TSX = `**/*.${GLOB_TSX_EXT}`;
 
 export const GLOB_ASTRO = "**/*.astro";
 
@@ -15,6 +17,13 @@ export const GLOB_TESTS = [
   `**/*.test.${GLOB_SRC_EXT}`,
   `**/*.bench.${GLOB_SRC_EXT}`,
   `**/*.benchmark.${GLOB_SRC_EXT}`,
+] as const;
+
+export const GLOB_TYPE_TESTS = [
+  `**/*.test-d.${GLOB_TS_EXT}`,
+  `**/*.test-d.${GLOB_TSX_EXT}`,
+  `**/*.spec-d.${GLOB_TS_EXT}`,
+  `**/*.spec-d.${GLOB_TSX_EXT}`,
 ] as const;
 
 export const GLOB_PLAYWRIGHT = [
