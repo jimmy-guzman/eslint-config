@@ -81,7 +81,7 @@ TypeScript also supports some configuration options. If options are provided the
 
 #### Configure Erasable Syntax Only
 
-Enable rules scoped to TypeScript’s new erasable syntax only mode (TypeScript 5.8+):
+Enable rules scoped to [TypeScript's new erasable syntax only mode (TypeScript 5.8+)](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-8.html#the---erasablesyntaxonly-option):
 
 ```ts
 import { defineConfig } from "@jimmy.codes/eslint-config";
@@ -130,6 +130,71 @@ export default defineConfig({
   },
 });
 ```
+
+### Framework-Specific Rule Overrides
+
+Many framework integrations support rule overrides, allowing you to fine-tune specific rules without affecting your entire config:
+
+```ts
+import { defineConfig } from "@jimmy.codes/eslint-config";
+
+export default defineConfig({
+  react: {
+    overrides: {
+      "react-x/no-array-index-key": "warn",
+      "jsx-a11y/anchor-is-valid": "off",
+    },
+  },
+  playwright: {
+    overrides: {
+      "playwright/no-focused-test": "error",
+    },
+  },
+  jest: {
+    overrides: {
+      "jest/expect-expect": "off",
+    },
+  },
+  testingLibrary: {
+    overrides: {
+      "testing-library/prefer-screen-queries": "warn",
+    },
+  },
+  nextjs: {
+    overrides: {
+      "@next/next/no-img-element": "off",
+    },
+  },
+  storybook: {
+    overrides: {
+      "storybook/no-uninstalled-addons": "warn",
+    },
+  },
+  tanstackQuery: {
+    overrides: {
+      "@tanstack/query/exhaustive-deps": "error",
+    },
+  },
+  astro: {
+    overrides: {
+      "astro/no-set-html-directive": "off",
+    },
+  },
+  vitest: {
+    overrides: {
+      "vitest/no-conditional-expect": "warn",
+    },
+  },
+  typescript: {
+    overrides: {
+      "@typescript-eslint/explicit-function-return-type": "error",
+    },
+  },
+});
+```
+
+> [!TIP]
+> Framework-specific overrides are scoped to only rules with the appropriate plugin prefix (e.g., `vitest/*` for Vitest, `react-x/*` for React). For broader rule overrides across specific file patterns, use the `overrides` array.
 
 ### Override Specific Rules
 

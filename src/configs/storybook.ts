@@ -1,9 +1,13 @@
-import type { Rules } from "../types";
+import type { Rules, StorybookOptions } from "../types";
 
+import { extractOptions } from "../utils/extract-options";
 import { interopDefault } from "../utils/interop-default";
 import { upwarn } from "../utils/upwarn";
 
-export default async function storybookConfig() {
+export default async function storybookConfig(
+  options: boolean | StorybookOptions,
+) {
+  const extractedOptions = extractOptions(options);
   const { configs } = await interopDefault(import("eslint-plugin-storybook"));
 
   const [setup, storiesConfig, mainConfig] = configs["flat/recommended"];
@@ -21,6 +25,7 @@ export default async function storybookConfig() {
         "import-x/no-anonymous-default-export": "off",
         "storybook/meta-satisfies-type": "error",
         "unicorn/no-anonymous-default-export": "off",
+        ...extractedOptions?.overrides,
       } satisfies Rules,
     },
     {

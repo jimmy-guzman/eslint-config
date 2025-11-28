@@ -1,3 +1,16 @@
 export { defineConfig } from "./factory";
 
-export type { Options, TypedConfigItem, VitestOptions } from "./types";
+export type {
+  AstroOptions,
+  JestOptions,
+  NextJSOptions,
+  Options,
+  PlaywrightOptions,
+  ReactOptions,
+  StorybookOptions,
+  TanstackQueryOptions as TanStackQueryOptions,
+  TestingLibraryOptions,
+  TypedConfigItem,
+  TypeScriptOptions,
+  VitestOptions,
+} from "./types";
