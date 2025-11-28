@@ -180,6 +180,16 @@ export default defineConfig({
       "astro/no-set-html-directive": "off",
     },
   },
+  vitest: {
+    overrides: {
+      "vitest/no-conditional-expect": "warn",
+    },
+  },
+  typescript: {
+    overrides: {
+      "@typescript-eslint/explicit-function-return-type": "error",
+    },
+  },
 });
 ```
 
