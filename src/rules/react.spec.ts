@@ -14,24 +14,29 @@ describe("reactRules", () => {
 
     const rules = await reactRules();
 
-    const { allowExportNames } =
-      rules["react-refresh/only-export-components"][1];
+    const allowExportNames = rules["react-refresh/only-export-components"];
 
     expect(allowExportNames).toMatchInlineSnapshot(`
       [
-        "dynamic",
-        "dynamicParams",
-        "revalidate",
-        "fetchCache",
-        "runtime",
-        "preferredRegion",
-        "maxDuration",
-        "config",
-        "generateStaticParams",
-        "metadata",
-        "generateMetadata",
-        "viewport",
-        "generateViewport",
+        "warn",
+        {
+          "allowConstantExport": false,
+          "allowExportNames": [
+            "dynamic",
+            "dynamicParams",
+            "revalidate",
+            "fetchCache",
+            "runtime",
+            "preferredRegion",
+            "maxDuration",
+            "config",
+            "generateStaticParams",
+            "metadata",
+            "generateMetadata",
+            "viewport",
+            "generateViewport",
+          ],
+        },
       ]
     `);
   });
@@ -41,10 +46,17 @@ describe("reactRules", () => {
 
     const rules = await reactRules();
 
-    const { allowConstantExport } =
-      rules["react-refresh/only-export-components"][1];
+    const allowExportNames = rules["react-refresh/only-export-components"];
 
-    expect(allowConstantExport).toBe(true);
+    expect(allowExportNames).toMatchInlineSnapshot(`
+      [
+        "warn",
+        {
+          "allowConstantExport": true,
+          "allowExportNames": [],
+        },
+      ]
+    `);
   });
 
   it("should enable recommended TypeScript rules", async () => {

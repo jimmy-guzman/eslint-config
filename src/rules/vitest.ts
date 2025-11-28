@@ -77,5 +77,6 @@ export const vitestRules = async (options?: VitestOptions) => {
       },
     ],
     "vitest/warn-todo": "warn",
+    ...options?.overrides,
   } satisfies Rules;
 };

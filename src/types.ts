@@ -8,6 +8,15 @@ type Base = Linter.Config<Linter.RulesRecord & Rules>;
 type MaybeReadonly<T> = Readonly<T> | T;
 type Override<T, R> = Omit<T, keyof R> & R;
 type Prettify<T> = { [K in keyof T]: T[K] } & {};
+type ExtractPrefix<T> = T extends `${infer Prefix}/${infer Rest}`
+  ? Rest extends `${string}/${string}`
+    ? `${Prefix}/${ExtractPrefix<Rest>}`
+    : Prefix
+  : never;
+type ValidPrefixes<T> = ExtractPrefix<keyof T>;
+type RulesWithPrefix<T, Prefix extends ValidPrefixes<T>> = {
+  [K in keyof T as K extends `${Prefix}${string}` ? K : never]: T[K];
+};
 
 interface LinterConfigOverrides {
   files?: MaybeReadonly<Base["files"]>;
@@ -29,6 +38,10 @@ export interface VitestOptions {
    */
   globals?: "either" | "explicit" | "implicit";
   /**
+   * Additional rules to override Vitest defaults.
+   */
+  overrides?: RulesWithPrefix<RuleOptions, "vitest">;
+  /**
    * Indicate whether [Vitest's type testing utilities](https://vitest.dev/guide/testing-types.html) are being used.
    *
    * @default false
@@ -43,6 +56,80 @@ export interface TypeScriptOptions {
    * @default false
    */
   erasableSyntaxOnly?: boolean;
+  /**
+   * Additional rules to override TypeScript defaults.
+   */
+  overrides?: RulesWithPrefix<
+    RuleOptions,
+    "@typescript-eslint" | "erasable-syntax-only"
+  >;
+}
+
+export interface AstroOptions {
+  /**
+   * Additional rules to override Astro defaults.
+   */
+  overrides?: RulesWithPrefix<RuleOptions, "astro" | "jsx-a11y">;
+}
+
+export interface JestOptions {
+  /**
+   * Additional rules to override Jest defaults.
+   */
+  overrides?: RulesWithPrefix<RuleOptions, "jest">;
+}
+
+export interface NextJSOptions {
+  /**
+   * Additional rules to override Next.js defaults.
+   */
+  overrides?: RulesWithPrefix<RuleOptions, "@next/next">;
+}
+
+export interface PlaywrightOptions {
+  /**
+   * Additional rules to override Playwright defaults.
+   */
+  overrides?: RulesWithPrefix<RuleOptions, "playwright">;
+}
+
+export interface ReactOptions {
+  /**
+   * Additional rules to override React defaults.
+   */
+  overrides?: RulesWithPrefix<
+    RuleOptions,
+    | "jsx-a11y"
+    | "react-compiler"
+    | "react-dom"
+    | "react-hooks"
+    | "react-hooks-extra"
+    | "react-naming-convention"
+    | "react-refresh"
+    | "react-web-api"
+    | "react-x"
+  >;
+}
+
+export interface StorybookOptions {
+  /**
+   * Additional rules to override Storybook defaults.
+   */
+  overrides?: RulesWithPrefix<RuleOptions, "storybook">;
+}
+
+export interface TanstackQueryOptions {
+  /**
+   * Additional rules to override TanStack Query defaults.
+   */
+  overrides?: RulesWithPrefix<RuleOptions, "@tanstack/query">;
+}
+
+export interface TestingLibraryOptions {
+  /**
+   * Additional rules to override Testing Library defaults.
+   */
+  overrides?: RulesWithPrefix<RuleOptions, "jest-dom" | "testing-library">;
 }
 
 export interface Options {
@@ -51,7 +138,7 @@ export interface Options {
    *
    * @default false
    */
-  astro?: boolean;
+  astro?: AstroOptions | boolean;
   /**
    * Automatically enables rules based on installed dependencies.
    * For example, if `react` is installed, React-specific rules will be applied.
@@ -77,13 +164,13 @@ export interface Options {
    *
    * @default false
    */
-  jest?: boolean;
+  jest?: boolean | JestOptions;
   /**
    * Are Next.js rules enabled?
    *
    * @default false
    */
-  nextjs?: boolean;
+  nextjs?: boolean | NextJSOptions;
   /**
    * Additional configs to extend or override rules.
    * Accepts ESLint configuration objects.
@@ -96,31 +183,31 @@ export interface Options {
    *
    * @default false
    */
-  playwright?: boolean;
+  playwright?: boolean | PlaywrightOptions;
   /**
    * Are React rules enabled?
    *
    * @default false
    */
-  react?: boolean;
+  react?: boolean | ReactOptions;
   /**
    * Are Storybook rules enabled?
    *
    * @default false
    */
-  storybook?: boolean;
+  storybook?: boolean | StorybookOptions;
   /**
    * Are TanStack Query rules enabled?
    *
    * @default false
    */
-  tanstackQuery?: boolean;
+  tanstackQuery?: boolean | TanstackQueryOptions;
   /**
    * Are Testing Library rules enabled?
    *
    * @default false
    */
-  testingLibrary?: boolean;
+  testingLibrary?: boolean | TestingLibraryOptions;
   /**
    * Are TypeScript rules enabled?
    *

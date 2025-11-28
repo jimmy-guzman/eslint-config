@@ -1,8 +1,8 @@
-import type { Rules } from "../types";
+import type { JestOptions, Rules } from "../types";
 
 import { interopDefault } from "../utils/interop-default";
 
-export const jestRules = async () => {
+export const jestRules = async (options?: JestOptions) => {
   const jestPlugin = await interopDefault(import("eslint-plugin-jest"));
 
   return {
@@ -55,5 +55,6 @@ export const jestRules = async () => {
         },
       },
     ],
+    ...options?.overrides,
   } satisfies Rules;
 };

@@ -87,15 +87,17 @@ export const defineConfig = async (
 
   const featureConfigs = await Promise.all([
     isTypescriptEnabled && unwrap(import("./configs/typescript"), typescript),
-    isReactEnabled && unwrap(import("./configs/react")),
-    isTanstackQueryEnabled && unwrap(import("./configs/tanstack-query")),
-    isAstroEnabled && unwrap(import("./configs/astro")),
-    isJestEnabled && unwrap(import("./configs/jest")),
+    isReactEnabled && unwrap(import("./configs/react"), react),
+    isTanstackQueryEnabled &&
+      unwrap(import("./configs/tanstack-query"), tanstackQuery),
+    isAstroEnabled && unwrap(import("./configs/astro"), astro),
+    isJestEnabled && unwrap(import("./configs/jest"), jest),
     isVitestEnabled && unwrap(import("./configs/vitest"), vitest),
-    isTestingLibraryEnabled && unwrap(import("./configs/testing-library")),
-    isPlaywrightEnabled && unwrap(import("./configs/playwright")),
-    isStorybookEnabled && unwrap(import("./configs/storybook")),
-    isNextjsEnabled && unwrap(import("./configs/nextjs")),
+    isTestingLibraryEnabled &&
+      unwrap(import("./configs/testing-library"), testingLibrary),
+    isPlaywrightEnabled && unwrap(import("./configs/playwright"), playwright),
+    isStorybookEnabled && unwrap(import("./configs/storybook"), storybook),
+    isNextjsEnabled && unwrap(import("./configs/nextjs"), nextjs),
   ]);
 
   return [
