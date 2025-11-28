@@ -1,10 +1,13 @@
-import type { TypedConfigItem } from "../types";
+import type { JestOptions, TypedConfigItem } from "../types";
 
 import { GLOB_E2E, GLOB_TESTS } from "../globs";
 import { jestRules } from "../rules/jest";
+import { extractOptions } from "../utils/extract-options";
 import { interopDefault } from "../utils/interop-default";
 
-export default async function jestConfig() {
+export default async function jestConfig(options: boolean | JestOptions) {
+  const extractedOptions = extractOptions(options);
+
   const jestPlugin = await interopDefault(import("eslint-plugin-jest"));
 
   return [
@@ -13,7 +16,7 @@ export default async function jestConfig() {
       ignores: GLOB_E2E,
       ...jestPlugin.configs["flat/recommended"],
       name: "jimmy.codes/jest",
-      rules: await jestRules(),
+      rules: await jestRules(extractedOptions),
     },
   ] satisfies TypedConfigItem[];
 }

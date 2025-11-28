@@ -1,4 +1,4 @@
-import type { Rules } from "../types";
+import type { ReactOptions, Rules } from "../types";
 
 import { hasNext, hasTypescript, hasVite } from "../utils/has-dependency";
 import { interopDefault } from "../utils/interop-default";
@@ -20,7 +20,7 @@ const nextAllowedExportNames = [
   "generateViewport",
 ];
 
-export const reactRules = async () => {
+export const reactRules = async (options?: ReactOptions) => {
   const [
     { configs: reactConfigs },
     { flatConfigs: jsxA11yConfigs },
@@ -97,5 +97,6 @@ export const reactRules = async () => {
     "react-x/jsx-shorthand-fragment": "error",
     "react-x/no-missing-context-display-name": "error",
     "react-x/prefer-namespace-import": "error",
+    ...options?.overrides,
   } satisfies Rules;
 };

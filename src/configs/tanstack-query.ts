@@ -1,9 +1,14 @@
-import type { TypedConfigItem } from "../types";
+import type { TanstackQueryOptions, TypedConfigItem } from "../types";
 
 import { GLOB_JSX, GLOB_TSX } from "../globs";
+import { extractOptions } from "../utils/extract-options";
 import { interopDefault } from "../utils/interop-default";
 
-export default async function tanstackQueryConfig() {
+export default async function tanstackQueryConfig(
+  options: boolean | TanstackQueryOptions,
+) {
+  const extractedOptions = extractOptions(options);
+
   const queryPlugin = await interopDefault(
     import("@tanstack/eslint-plugin-query"),
   );
@@ -23,6 +28,7 @@ export default async function tanstackQueryConfig() {
         "@tanstack/query/no-unstable-deps": "error",
         "@tanstack/query/no-void-query-fn": "error",
         "@tanstack/query/stable-query-client": "error",
+        ...extractedOptions?.overrides,
       },
     },
   ] satisfies TypedConfigItem[];

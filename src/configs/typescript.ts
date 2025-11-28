@@ -24,7 +24,7 @@ export default async function typescriptConfig(
         },
       },
       name: "jimmy.codes/typescript",
-      rules: typescriptRules,
+      rules: typescriptRules(extractedOptions),
     },
     {
       files: [GLOB_JS, GLOB_JSX],

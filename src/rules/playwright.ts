@@ -1,8 +1,8 @@
-import type { Rules } from "../types";
+import type { PlaywrightOptions, Rules } from "../types";
 
 import { interopDefault } from "../utils/interop-default";
 
-export const playwrightRules = async () => {
+export const playwrightRules = async (options?: PlaywrightOptions) => {
   const playwrightPlugin = await interopDefault(
     import("eslint-plugin-playwright"),
   );
@@ -32,5 +32,6 @@ export const playwrightRules = async () => {
     "playwright/prefer-to-have-length": "error",
     "playwright/require-to-throw-message": "error",
     "playwright/valid-title": "off",
+    ...options?.overrides,
   } satisfies Rules;
 };
