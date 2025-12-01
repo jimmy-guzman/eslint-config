@@ -1,3 +1,10 @@
+## [6.24.1](https://github.com/jimmy-guzman/eslint-config/compare/v6.24.0...v6.24.1) (2025-12-01)
+
+
+### Performance Improvements
+
+* ⚡️load TypeScript plugin in parallel for astro ([#250](https://github.com/jimmy-guzman/eslint-config/issues/250)) ([25a5346](https://github.com/jimmy-guzman/eslint-config/commit/25a534606382a91d98ef4853981e36d81b6a4540))
+
 # [6.24.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.23.0...v6.24.0) (2025-11-26)
 
 
