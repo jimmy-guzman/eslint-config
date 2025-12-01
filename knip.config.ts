@@ -8,6 +8,5 @@ export default {
     "commitlint",
     "@types/eslint",
     "@types/react",
-    "@typescript-eslint/parser",
   ],
 } satisfies KnipConfig;

@@ -15776,6 +15776,7 @@ type PerfectionistSortVariableDeclarations = []|[{
 // ----- playwright/expect-expect -----
 type PlaywrightExpectExpect = []|[{
   assertFunctionNames?: []|[string]
+  assertFunctionPatterns?: []|[string]
 }]
 // ----- playwright/max-expects -----
 type PlaywrightMaxExpects = []|[{
