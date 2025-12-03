@@ -1,3 +1,10 @@
+# [6.25.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.24.1...v6.25.0) (2025-12-03)
+
+
+### Features
+
+* ✨ add overrides per option support ([#249](https://github.com/jimmy-guzman/eslint-config/issues/249)) ([bbb772a](https://github.com/jimmy-guzman/eslint-config/commit/bbb772a5bde8757a7ba81b5c3e90e426a85f5a4f))
+
 ## [6.24.1](https://github.com/jimmy-guzman/eslint-config/compare/v6.24.0...v6.24.1) (2025-12-01)
 
 
