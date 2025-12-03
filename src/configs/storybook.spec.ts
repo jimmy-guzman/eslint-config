@@ -2,8 +2,14 @@ import storybookConfig from "./storybook";
 
 describe("storybook", () => {
   it("should create stories rules", async () => {
-    const [_setup, storiesConfig] = await storybookConfig();
+    const [_setup, storiesConfig] = await storybookConfig(true);
 
+    expect(storiesConfig?.files).toMatchInlineSnapshot(`
+      [
+        "**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)",
+        "**/*.story.@(ts|tsx|js|jsx|mjs|cjs)",
+      ]
+    `);
     expect(storiesConfig?.rules).toMatchInlineSnapshot(`
       {
         "import-x/no-anonymous-default-export": "off",
@@ -25,8 +31,13 @@ describe("storybook", () => {
   });
 
   it("should create main rules", async () => {
-    const [_setup, _storiesConfig, mainConfig] = await storybookConfig();
+    const [_setup, _storiesConfig, mainConfig] = await storybookConfig(true);
 
+    expect(mainConfig?.files).toMatchInlineSnapshot(`
+      [
+        ".storybook/main.@(js|cjs|mjs|ts)",
+      ]
+    `);
     expect(mainConfig?.rules).toMatchInlineSnapshot(`
       {
         "storybook/no-uninstalled-addons": "error",

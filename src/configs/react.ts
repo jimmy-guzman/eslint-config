@@ -1,12 +1,16 @@
 import globals from "globals";
 
-import type { TypedConfigItem } from "../types";
+import type { ReactOptions, TypedConfigItem } from "../types";
 
 import { GLOB_JSX, GLOB_TSX } from "../globs";
 import { reactRules } from "../rules/react";
+import { extractOptions } from "../utils/extract-options";
 import { interopDefault } from "../utils/interop-default";
 
-export default async function reactConfig(): Promise<TypedConfigItem[]> {
+export default async function reactConfig(
+  options: boolean | ReactOptions,
+): Promise<TypedConfigItem[]> {
+  const extractedOptions = extractOptions(options);
   const [
     reactPlugin,
     jsxA11yPlugin,
@@ -55,7 +59,7 @@ export default async function reactConfig(): Promise<TypedConfigItem[]> {
         "react-web-api": reactWebApiPlugin,
         "react-x": reactPlugin,
       },
-      rules: await reactRules(),
+      rules: await reactRules(extractedOptions),
       settings: {
         react: {
           version: "detect",

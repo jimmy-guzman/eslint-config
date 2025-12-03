@@ -1,10 +1,15 @@
-import type { TypedConfigItem } from "../types";
+import type { TestingLibraryOptions, TypedConfigItem } from "../types";
 
 import { GLOB_E2E, GLOB_TESTS } from "../globs";
 import { testingLibraryRules } from "../rules/testing-library";
+import { extractOptions } from "../utils/extract-options";
 import { interopDefault } from "../utils/interop-default";
 
-export default async function testingLibraryConfig() {
+export default async function testingLibraryConfig(
+  options: boolean | TestingLibraryOptions,
+) {
+  const extractedOptions = extractOptions(options);
+
   const [jestDom, testingLibrary] = await Promise.all([
     import("eslint-plugin-jest-dom"),
     interopDefault(import("eslint-plugin-testing-library")),
@@ -19,7 +24,7 @@ export default async function testingLibraryConfig() {
         "jest-dom": jestDom,
         "testing-library": testingLibrary,
       },
-      rules: await testingLibraryRules(),
+      rules: await testingLibraryRules(extractedOptions),
     },
   ] satisfies TypedConfigItem[];
 }

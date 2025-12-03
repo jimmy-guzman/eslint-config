@@ -1,11 +1,13 @@
 import globals from "globals";
 
-import type { TypedConfigItem } from "../types";
+import type { AstroOptions, TypedConfigItem } from "../types";
 
 import { GLOB_ASTRO } from "../globs";
+import { extractOptions } from "../utils/extract-options";
 import { interopDefault } from "../utils/interop-default";
 
-export default async function astroConfig() {
+export default async function astroConfig(options: AstroOptions | boolean) {
+  const extractedOptions = extractOptions(options);
   const files = [GLOB_ASTRO];
 
   const [tsPlugin, astroPlugin, astroParser, jsxA11yPlugin] = await Promise.all(
@@ -51,6 +53,7 @@ export default async function astroConfig() {
         "astro/no-unsafe-inline-scripts": "error",
         "astro/no-unused-define-vars-in-style": "error",
         "astro/valid-compile": "error",
+        ...extractedOptions?.overrides,
       },
     },
     {
