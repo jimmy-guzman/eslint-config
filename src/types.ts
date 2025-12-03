@@ -134,7 +134,10 @@ export interface TestingLibraryOptions {
 
 export interface Options {
   /**
-   * Are astro rules enabled?
+   * Are Astro rules enabled?
+   *
+   * Pass `true` to enable with defaults, or an `AstroOptions` object
+   * to enable and customize overrides.
    *
    * @default false
    */
@@ -162,11 +165,17 @@ export interface Options {
   /**
    * Are Jest rules enabled?
    *
+   * Pass `true` to enable with defaults, or an `JestOptions` object
+   * to enable and customize overrides.
+   *
    * @default false
    */
   jest?: boolean | JestOptions;
   /**
    * Are Next.js rules enabled?
+   *
+   * Pass `true` to enable with defaults, or a `NextJSOptions` object
+   * to enable and customize overrides.
    *
    * @default false
    */
@@ -181,11 +190,17 @@ export interface Options {
   /**
    * Are playwright rules enabled?
    *
+   * Pass `true` to enable with defaults, or a `PlaywrightOptions` object
+   * to enable and customize overrides.
+   *
    * @default false
    */
   playwright?: boolean | PlaywrightOptions;
   /**
    * Are React rules enabled?
+   *
+   * Pass `true` to enable with defaults, or a `ReactOptions` object
+   * to enable and customize overrides.
    *
    * @default false
    */
@@ -193,11 +208,17 @@ export interface Options {
   /**
    * Are Storybook rules enabled?
    *
+   * Pass `true` to enable with defaults, or a `StorybookOptions` object
+   * to enable and customize overrides.
+   *
    * @default false
    */
   storybook?: boolean | StorybookOptions;
   /**
    * Are TanStack Query rules enabled?
+   *
+   * Pass `true` to enable with defaults, or a `TanstackQueryOptions` object
+   * to enable and customize overrides.
    *
    * @default false
    */
@@ -205,17 +226,26 @@ export interface Options {
   /**
    * Are Testing Library rules enabled?
    *
+   * Pass `true` to enable with defaults, or a `TestingLibraryOptions` object
+   * to enable and customize overrides.
+   *
    * @default false
    */
   testingLibrary?: boolean | TestingLibraryOptions;
   /**
    * Are TypeScript rules enabled?
    *
+   * Pass `true` to enable with defaults, or a `TypeScriptOptions` object
+   * to enable and customize overrides.
+   *
    * @default false
    */
   typescript?: boolean | TypeScriptOptions;
   /**
    * Are Vitest rules enabled?
+   *
+   * Pass `true` to enable with defaults, or a `VitestOptions` object
+   * to enable and customize overrides.
    *
    * @default false
    */
