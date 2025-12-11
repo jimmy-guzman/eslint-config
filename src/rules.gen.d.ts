@@ -16095,6 +16095,8 @@ type ReactXNoUnstableDefaultProps = []|[{
 // ----- react-x/no-useless-fragment -----
 type ReactXNoUselessFragment = []|[{
   
+  allowEmptyFragment?: boolean
+  
   allowExpressions?: boolean
 }]
 // ----- regexp/hexadecimal-escape -----
