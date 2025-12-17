@@ -26,6 +26,7 @@ export const jestRules = async (options?: JestOptions) => {
     "jest/no-restricted-jest-methods": "off",
     "jest/no-restricted-matchers": "off",
     "jest/no-test-return-statement": "error",
+    "jest/no-unneeded-async-expect-function": "error",
     "jest/no-untyped-mock-factory": "off", // requires typescript
     "jest/padding-around-all": "error",
     "jest/prefer-called-with": "error",
@@ -42,6 +43,8 @@ export const jestRules = async (options?: JestOptions) => {
     "jest/prefer-snapshot-hint": "error",
     "jest/prefer-spy-on": "off",
     "jest/prefer-strict-equal": "error",
+    "jest/prefer-to-have-been-called": "error",
+    "jest/prefer-to-have-been-called-times": "error",
     "jest/prefer-todo": "warn",
     "jest/require-hook": "error",
     "jest/require-to-throw-message": "error",
