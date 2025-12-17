@@ -2,27 +2,27 @@ import type { Linter } from "eslint";
 
 import type { RuleOptions } from "./rules.gen";
 
-export type Rules = RuleOptions;
-
 type Base = Linter.Config<Linter.RulesRecord & Rules>;
-type MaybeReadonly<T> = Readonly<T> | T;
-type Override<T, R> = Omit<T, keyof R> & R;
-type Prettify<T> = { [K in keyof T]: T[K] } & {};
 type ExtractPrefix<T> = T extends `${infer Prefix}/${infer Rest}`
   ? Rest extends `${string}/${string}`
     ? `${Prefix}/${ExtractPrefix<Rest>}`
     : Prefix
   : never;
-type ValidPrefixes<T> = ExtractPrefix<keyof T>;
+type MaybeReadonly<T> = Readonly<T> | T;
+type Override<T, R> = Omit<T, keyof R> & R;
+type Prettify<T> = { [K in keyof T]: T[K] } & {};
 type RulesWithPrefix<T, Prefix extends ValidPrefixes<T>> = {
   [K in keyof T as K extends `${Prefix}${string}` ? K : never]: T[K];
 };
+type ValidPrefixes<T> = ExtractPrefix<keyof T>;
 
 interface LinterConfigOverrides {
   files?: MaybeReadonly<Base["files"]>;
   ignores?: MaybeReadonly<Base["ignores"]>;
   plugins?: Record<string, unknown>;
 }
+
+export type Rules = RuleOptions;
 
 export type TypedConfigItem = Prettify<Override<Base, LinterConfigOverrides>>;
 

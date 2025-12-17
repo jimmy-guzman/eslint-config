@@ -7,7 +7,7 @@ exports[`typescriptConfig > should create config 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.49.0",
+          "version": "8.50.0",
         },
         "parseForESLint": [Function],
       },
@@ -112,6 +112,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "@typescript-eslint/no-unused-vars": "error",
               "@typescript-eslint/no-use-before-define": "error",
               "@typescript-eslint/no-useless-constructor": "error",
+              "@typescript-eslint/no-useless-default-assignment": "error",
               "@typescript-eslint/no-useless-empty-export": "error",
               "@typescript-eslint/no-wrapper-object-types": "error",
               "@typescript-eslint/non-nullable-type-assertion-style": "error",
@@ -226,6 +227,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "@typescript-eslint/no-unsafe-return": "off",
               "@typescript-eslint/no-unsafe-type-assertion": "off",
               "@typescript-eslint/no-unsafe-unary-minus": "off",
+              "@typescript-eslint/no-useless-default-assignment": "off",
               "@typescript-eslint/non-nullable-type-assertion-style": "off",
               "@typescript-eslint/only-throw-error": "off",
               "@typescript-eslint/prefer-destructuring": "off",
@@ -296,7 +298,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.49.0",
+                    "version": "8.50.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -433,6 +435,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "@typescript-eslint/no-unused-vars": "error",
                 "@typescript-eslint/no-use-before-define": "error",
                 "@typescript-eslint/no-useless-constructor": "error",
+                "@typescript-eslint/no-useless-default-assignment": "error",
                 "@typescript-eslint/no-useless-empty-export": "error",
                 "@typescript-eslint/no-wrapper-object-types": "error",
                 "@typescript-eslint/non-nullable-type-assertion-style": "error",
@@ -503,7 +506,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.49.0",
+                  "version": "8.50.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -558,6 +561,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "@typescript-eslint/no-unsafe-return": "off",
               "@typescript-eslint/no-unsafe-type-assertion": "off",
               "@typescript-eslint/no-unsafe-unary-minus": "off",
+              "@typescript-eslint/no-useless-default-assignment": "off",
               "@typescript-eslint/non-nullable-type-assertion-style": "off",
               "@typescript-eslint/only-throw-error": "off",
               "@typescript-eslint/prefer-destructuring": "off",
@@ -625,7 +629,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.49.0",
+                    "version": "8.50.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -705,7 +709,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.49.0",
+                    "version": "8.50.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -812,7 +816,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.49.0",
+                    "version": "8.50.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -896,7 +900,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.49.0",
+                    "version": "8.50.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1078,6 +1082,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "@typescript-eslint/no-unused-expressions": "error",
                 "@typescript-eslint/no-unused-vars": "error",
                 "@typescript-eslint/no-useless-constructor": "error",
+                "@typescript-eslint/no-useless-default-assignment": "error",
                 "@typescript-eslint/no-wrapper-object-types": "error",
                 "@typescript-eslint/only-throw-error": "error",
                 "@typescript-eslint/prefer-as-const": "error",
@@ -1135,7 +1140,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.49.0",
+                    "version": "8.50.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1211,6 +1216,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "@typescript-eslint/no-unsafe-member-access": "error",
                 "@typescript-eslint/no-unsafe-return": "error",
                 "@typescript-eslint/no-unsafe-unary-minus": "error",
+                "@typescript-eslint/no-useless-default-assignment": "error",
                 "@typescript-eslint/only-throw-error": "error",
                 "@typescript-eslint/prefer-promise-reject-errors": "error",
                 "@typescript-eslint/prefer-reduce-type-parameter": "error",
@@ -1258,7 +1264,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.49.0",
+                    "version": "8.50.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1329,7 +1335,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.49.0",
+                    "version": "8.50.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1409,7 +1415,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.49.0",
+                    "version": "8.50.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1757,6 +1763,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "@typescript-eslint/no-unused-expressions": "error",
               "@typescript-eslint/no-unused-vars": "error",
               "@typescript-eslint/no-useless-constructor": "error",
+              "@typescript-eslint/no-useless-default-assignment": "error",
               "@typescript-eslint/no-wrapper-object-types": "error",
               "@typescript-eslint/only-throw-error": "error",
               "@typescript-eslint/prefer-as-const": "error",
@@ -1841,6 +1848,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "@typescript-eslint/no-unsafe-member-access": "error",
               "@typescript-eslint/no-unsafe-return": "error",
               "@typescript-eslint/no-unsafe-unary-minus": "error",
+              "@typescript-eslint/no-useless-default-assignment": "error",
               "@typescript-eslint/only-throw-error": "error",
               "@typescript-eslint/prefer-promise-reject-errors": "error",
               "@typescript-eslint/prefer-reduce-type-parameter": "error",
@@ -1954,7 +1962,7 @@ exports[`typescriptConfig > should create config 1`] = `
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.49.0",
+          "version": "8.50.0",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -8395,6 +8403,25 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "type": "problem",
             },
           },
+          "no-useless-default-assignment": {
+            "create": [Function],
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Disallow default values that will never be used",
+                "recommended": "strict",
+                "requiresTypeChecking": true,
+                "url": "https://typescript-eslint.io/rules/no-useless-default-assignment",
+              },
+              "fixable": "code",
+              "messages": {
+                "uselessDefaultAssignment": "Default value is useless because the {{ type }} is not optional.",
+                "uselessUndefined": "Default value is useless because it is undefined. Optional {{ type }}s are already undefined by default.",
+              },
+              "schema": [],
+              "type": "suggestion",
+            },
+          },
           "no-useless-empty-export": {
             "create": [Function],
             "defaultOptions": [],
@@ -10512,6 +10539,7 @@ If a function does not access \`this\`, it can be annotated with \`this: void\`.
       "@typescript-eslint/no-unused-expressions": "error",
       "@typescript-eslint/no-unused-vars": "error",
       "@typescript-eslint/no-useless-constructor": "error",
+      "@typescript-eslint/no-useless-default-assignment": "error",
       "@typescript-eslint/no-wrapper-object-types": "error",
       "@typescript-eslint/only-throw-error": "error",
       "@typescript-eslint/prefer-as-const": "error",
@@ -10703,6 +10731,7 @@ If a function does not access \`this\`, it can be annotated with \`this: void\`.
       "@typescript-eslint/no-unsafe-return": "off",
       "@typescript-eslint/no-unsafe-type-assertion": "off",
       "@typescript-eslint/no-unsafe-unary-minus": "off",
+      "@typescript-eslint/no-useless-default-assignment": "off",
       "@typescript-eslint/non-nullable-type-assertion-style": "off",
       "@typescript-eslint/only-throw-error": "off",
       "@typescript-eslint/prefer-destructuring": "off",
