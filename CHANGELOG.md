@@ -1,3 +1,10 @@
+# [6.27.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.26.0...v6.27.0) (2025-12-17)
+
+
+### Features
+
+* ✨ `eslint-plugin-perfectionist` v5 ([#252](https://github.com/jimmy-guzman/eslint-config/issues/252)) ([b7aeafc](https://github.com/jimmy-guzman/eslint-config/commit/b7aeafc4e9771cfb50fdc028d681a8fdc63a3641))
+
 # [6.26.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.25.0...v6.26.0) (2025-12-11)
 
 
