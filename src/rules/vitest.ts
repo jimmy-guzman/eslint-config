@@ -36,6 +36,7 @@ export const vitestRules = async (options?: VitestOptions) => {
     "vitest/no-restricted-vi-methods": "off",
     "vitest/no-test-prefixes": "error",
     "vitest/no-test-return-statement": "error",
+    "vitest/no-unneeded-async-expect-function": "error",
     "vitest/padding-around-all": "error",
     "vitest/prefer-called-once": "error",
     "vitest/prefer-called-times": "off",

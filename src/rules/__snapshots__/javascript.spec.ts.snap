@@ -26,6 +26,8 @@ exports[`should create javascript rules 1`] = `
     "error",
     "all",
   ],
+  "de-morgan/no-negated-conjunction": "error",
+  "de-morgan/no-negated-disjunction": "error",
   "default-case": "error",
   "default-case-last": "error",
   "eqeqeq": "error",

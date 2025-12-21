@@ -40,6 +40,7 @@ exports[`should create vitest rules 1`] = `
   "vitest/no-standalone-expect": "error",
   "vitest/no-test-prefixes": "error",
   "vitest/no-test-return-statement": "error",
+  "vitest/no-unneeded-async-expect-function": "error",
   "vitest/padding-around-all": "error",
   "vitest/prefer-called-exactly-once-with": "error",
   "vitest/prefer-called-once": "error",

@@ -1,4 +1,5 @@
 import arrowReturnStylePlugin from "eslint-plugin-arrow-return-style-x";
+import deMorganPlugin from "eslint-plugin-de-morgan";
 
 import type { TypedConfigItem } from "../types";
 
@@ -14,6 +15,7 @@ export const javascriptConfig = () => {
       name: "jimmy.codes/javascript",
       plugins: {
         "arrow-style": arrowReturnStylePlugin,
+        "de-morgan": deMorganPlugin,
       },
       rules: javascriptRules,
     },

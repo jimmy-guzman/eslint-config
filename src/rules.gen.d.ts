@@ -64,7 +64,7 @@ export interface RuleOptions {
    */
   '@next/next/inline-script-id'?: Linter.RuleEntry<[]>
   /**
-   * Prefer `next/script` component when using the inline script for Google Analytics.
+   * Prefer `@next/third-parties/google` when using the inline script for Google Analytics and Tag Manager.
    * @see https://nextjs.org/docs/messages/next-script-for-ga
    */
   '@next/next/next-script-for-ga'?: Linter.RuleEntry<[]>
@@ -1753,6 +1753,16 @@ export interface RuleOptions {
    * @see https://eslint.org/docs/latest/rules/curly
    */
   'curly'?: Linter.RuleEntry<Curly>
+  /**
+   * Transforms the negation of a conjunction !(A && B) into the equivalent !A || !B according to De Morgan’s law
+   * @see https://github.com/azat-io/eslint-plugin-de-morgan/blob/main/docs/no-negated-conjunction.md
+   */
+  'de-morgan/no-negated-conjunction'?: Linter.RuleEntry<[]>
+  /**
+   * Transforms the negation of a disjunction !(A || B) into the equivalent !A && !B according to De Morgan’s law
+   * @see https://github.com/azat-io/eslint-plugin-de-morgan/blob/main/docs/no-negated-disjunction.md
+   */
+  'de-morgan/no-negated-disjunction'?: Linter.RuleEntry<[]>
   /**
    * Require `default` cases in `switch` statements
    * @see https://eslint.org/docs/latest/rules/default-case
@@ -7024,6 +7034,11 @@ export interface RuleOptions {
    * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-test-return-statement.md
    */
   'vitest/no-test-return-statement'?: Linter.RuleEntry<[]>
+  /**
+   * Disallow unnecessary async function wrapper for expected promises
+   * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-unneeded-async-expect-function.md
+   */
+  'vitest/no-unneeded-async-expect-function'?: Linter.RuleEntry<[]>
   /**
    * Enforce padding around `afterAll` blocks
    * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-after-all-blocks.md
