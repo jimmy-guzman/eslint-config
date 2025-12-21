@@ -1,4 +1,5 @@
 import eslint from "@eslint/js";
+import { configs as deMorganConfigs } from "eslint-plugin-de-morgan";
 
 import type { Rules } from "../types";
 
@@ -88,4 +89,5 @@ export const additionalRules = {
 export const javascriptRules = {
   ...eslint.configs.recommended.rules,
   ...additionalRules,
+  ...deMorganConfigs.recommended.rules,
 } satisfies Rules;
