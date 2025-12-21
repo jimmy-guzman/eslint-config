@@ -1,3 +1,10 @@
+# [6.28.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.27.0...v6.28.0) (2025-12-21)
+
+
+### Features
+
+* ✨ add de-morgan plugin for simpler booleans ([#253](https://github.com/jimmy-guzman/eslint-config/issues/253)) ([56a71b7](https://github.com/jimmy-guzman/eslint-config/commit/56a71b78c8c9680da2df47735ba3f915168f4ec3))
+
 # [6.27.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.26.0...v6.27.0) (2025-12-17)
 
 
