@@ -2228,337 +2228,357 @@ export interface RuleOptions {
   'jest-dom/prefer-to-have-value'?: Linter.RuleEntry<[]>
   /**
    * Enforce `test` and `it` usage conventions
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/consistent-test-it.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/consistent-test-it.md
    */
   'jest/consistent-test-it'?: Linter.RuleEntry<JestConsistentTestIt>
   /**
    * Enforce assertion to be made in a test body
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/expect-expect.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/expect-expect.md
    */
   'jest/expect-expect'?: Linter.RuleEntry<JestExpectExpect>
   /**
    * Enforces a maximum number assertion calls in a test body
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/max-expects.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/max-expects.md
    */
   'jest/max-expects'?: Linter.RuleEntry<JestMaxExpects>
   /**
    * Enforces a maximum depth to nested describe calls
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/max-nested-describe.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/max-nested-describe.md
    */
   'jest/max-nested-describe'?: Linter.RuleEntry<JestMaxNestedDescribe>
   /**
    * Disallow alias methods
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/no-alias-methods.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-alias-methods.md
    */
   'jest/no-alias-methods'?: Linter.RuleEntry<[]>
   /**
    * Disallow commented out tests
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/no-commented-out-tests.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-commented-out-tests.md
    */
   'jest/no-commented-out-tests'?: Linter.RuleEntry<[]>
   /**
    * Disallow calling `expect` conditionally
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/no-conditional-expect.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-conditional-expect.md
    */
   'jest/no-conditional-expect'?: Linter.RuleEntry<[]>
   /**
    * Disallow conditional logic in tests
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/no-conditional-in-test.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-conditional-in-test.md
    */
   'jest/no-conditional-in-test'?: Linter.RuleEntry<[]>
   /**
    * Disallow confusing usages of jest.setTimeout
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/no-confusing-set-timeout.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-confusing-set-timeout.md
    */
   'jest/no-confusing-set-timeout'?: Linter.RuleEntry<[]>
   /**
    * Disallow use of deprecated functions
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/no-deprecated-functions.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-deprecated-functions.md
    */
   'jest/no-deprecated-functions'?: Linter.RuleEntry<[]>
   /**
    * Disallow disabled tests
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/no-disabled-tests.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-disabled-tests.md
    */
   'jest/no-disabled-tests'?: Linter.RuleEntry<[]>
   /**
    * Disallow using a callback in asynchronous tests and hooks
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/no-done-callback.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-done-callback.md
    */
   'jest/no-done-callback'?: Linter.RuleEntry<[]>
   /**
    * Disallow duplicate setup and teardown hooks
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/no-duplicate-hooks.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-duplicate-hooks.md
    */
   'jest/no-duplicate-hooks'?: Linter.RuleEntry<[]>
   /**
+   * Disallow using equality matchers on error types
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-error-equal.md
+   */
+  'jest/no-error-equal'?: Linter.RuleEntry<[]>
+  /**
    * Disallow using `exports` in files containing tests
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/no-export.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-export.md
    */
   'jest/no-export'?: Linter.RuleEntry<[]>
   /**
    * Disallow focused tests
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/no-focused-tests.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-focused-tests.md
    */
   'jest/no-focused-tests'?: Linter.RuleEntry<[]>
   /**
    * Disallow setup and teardown hooks
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/no-hooks.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-hooks.md
    */
   'jest/no-hooks'?: Linter.RuleEntry<JestNoHooks>
   /**
    * Disallow identical titles
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/no-identical-title.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-identical-title.md
    */
   'jest/no-identical-title'?: Linter.RuleEntry<[]>
   /**
    * Disallow string interpolation inside snapshots
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/no-interpolation-in-snapshots.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-interpolation-in-snapshots.md
    */
   'jest/no-interpolation-in-snapshots'?: Linter.RuleEntry<[]>
   /**
    * Disallow Jasmine globals
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/no-jasmine-globals.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-jasmine-globals.md
    */
   'jest/no-jasmine-globals'?: Linter.RuleEntry<[]>
   /**
    * Disallow large snapshots
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/no-large-snapshots.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-large-snapshots.md
    */
   'jest/no-large-snapshots'?: Linter.RuleEntry<JestNoLargeSnapshots>
   /**
    * Disallow manually importing from `__mocks__`
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/no-mocks-import.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-mocks-import.md
    */
   'jest/no-mocks-import'?: Linter.RuleEntry<[]>
   /**
    * Disallow specific `jest.` methods
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/no-restricted-jest-methods.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-restricted-jest-methods.md
    */
   'jest/no-restricted-jest-methods'?: Linter.RuleEntry<JestNoRestrictedJestMethods>
   /**
    * Disallow specific matchers & modifiers
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/no-restricted-matchers.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-restricted-matchers.md
    */
   'jest/no-restricted-matchers'?: Linter.RuleEntry<JestNoRestrictedMatchers>
   /**
    * Disallow using `expect` outside of `it` or `test` blocks
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/no-standalone-expect.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-standalone-expect.md
    */
   'jest/no-standalone-expect'?: Linter.RuleEntry<JestNoStandaloneExpect>
   /**
    * Require using `.only` and `.skip` over `f` and `x`
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/no-test-prefixes.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-test-prefixes.md
    */
   'jest/no-test-prefixes'?: Linter.RuleEntry<[]>
   /**
    * Disallow explicitly returning from tests
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/no-test-return-statement.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-test-return-statement.md
    */
   'jest/no-test-return-statement'?: Linter.RuleEntry<[]>
   /**
+   * Disallow unnecessary assertions based on types
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-unnecessary-assertion.md
+   */
+  'jest/no-unnecessary-assertion'?: Linter.RuleEntry<[]>
+  /**
    * Disallow unnecessary async function wrapper for expected promises
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/no-unneeded-async-expect-function.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-unneeded-async-expect-function.md
    */
   'jest/no-unneeded-async-expect-function'?: Linter.RuleEntry<[]>
   /**
    * Disallow using `jest.mock()` factories without an explicit type parameter
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/no-untyped-mock-factory.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/no-untyped-mock-factory.md
    */
   'jest/no-untyped-mock-factory'?: Linter.RuleEntry<[]>
   /**
    * Enforce padding around `afterAll` blocks
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/padding-around-after-all-blocks.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/padding-around-after-all-blocks.md
    */
   'jest/padding-around-after-all-blocks'?: Linter.RuleEntry<[]>
   /**
    * Enforce padding around `afterEach` blocks
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/padding-around-after-each-blocks.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/padding-around-after-each-blocks.md
    */
   'jest/padding-around-after-each-blocks'?: Linter.RuleEntry<[]>
   /**
    * Enforce padding around Jest functions
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/padding-around-all.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/padding-around-all.md
    */
   'jest/padding-around-all'?: Linter.RuleEntry<[]>
   /**
    * Enforce padding around `beforeAll` blocks
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/padding-around-before-all-blocks.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/padding-around-before-all-blocks.md
    */
   'jest/padding-around-before-all-blocks'?: Linter.RuleEntry<[]>
   /**
    * Enforce padding around `beforeEach` blocks
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/padding-around-before-each-blocks.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/padding-around-before-each-blocks.md
    */
   'jest/padding-around-before-each-blocks'?: Linter.RuleEntry<[]>
   /**
    * Enforce padding around `describe` blocks
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/padding-around-describe-blocks.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/padding-around-describe-blocks.md
    */
   'jest/padding-around-describe-blocks'?: Linter.RuleEntry<[]>
   /**
    * Enforce padding around `expect` groups
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/padding-around-expect-groups.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/padding-around-expect-groups.md
    */
   'jest/padding-around-expect-groups'?: Linter.RuleEntry<[]>
   /**
    * Enforce padding around `test` and `it` blocks
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/padding-around-test-blocks.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/padding-around-test-blocks.md
    */
   'jest/padding-around-test-blocks'?: Linter.RuleEntry<[]>
   /**
    * Suggest using `toHaveBeenCalledWith()`
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/prefer-called-with.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/prefer-called-with.md
    */
   'jest/prefer-called-with'?: Linter.RuleEntry<[]>
   /**
    * Suggest using the built-in comparison matchers
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/prefer-comparison-matcher.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/prefer-comparison-matcher.md
    */
   'jest/prefer-comparison-matcher'?: Linter.RuleEntry<[]>
   /**
    * Prefer using `.each` rather than manual loops
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/prefer-each.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/prefer-each.md
    */
   'jest/prefer-each'?: Linter.RuleEntry<[]>
   /**
    * Prefer having the last statement in a test be an assertion
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/prefer-ending-with-an-expect.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/prefer-ending-with-an-expect.md
    */
   'jest/prefer-ending-with-an-expect'?: Linter.RuleEntry<JestPreferEndingWithAnExpect>
   /**
    * Suggest using the built-in equality matchers
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/prefer-equality-matcher.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/prefer-equality-matcher.md
    */
   'jest/prefer-equality-matcher'?: Linter.RuleEntry<[]>
   /**
    * Suggest using `expect.assertions()` OR `expect.hasAssertions()`
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/prefer-expect-assertions.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/prefer-expect-assertions.md
    */
   'jest/prefer-expect-assertions'?: Linter.RuleEntry<JestPreferExpectAssertions>
   /**
    * Prefer `await expect(...).resolves` over `expect(await ...)` syntax
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/prefer-expect-resolves.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/prefer-expect-resolves.md
    */
   'jest/prefer-expect-resolves'?: Linter.RuleEntry<[]>
   /**
    * Prefer having hooks in a consistent order
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/prefer-hooks-in-order.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/prefer-hooks-in-order.md
    */
   'jest/prefer-hooks-in-order'?: Linter.RuleEntry<[]>
   /**
    * Suggest having hooks before any test cases
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/prefer-hooks-on-top.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/prefer-hooks-on-top.md
    */
   'jest/prefer-hooks-on-top'?: Linter.RuleEntry<[]>
   /**
    * Prefer importing Jest globals
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/prefer-importing-jest-globals.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/prefer-importing-jest-globals.md
    */
   'jest/prefer-importing-jest-globals'?: Linter.RuleEntry<JestPreferImportingJestGlobals>
   /**
    * Prefer `jest.mocked()` over `fn as jest.Mock`
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/prefer-jest-mocked.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/prefer-jest-mocked.md
    */
   'jest/prefer-jest-mocked'?: Linter.RuleEntry<[]>
   /**
    * Enforce lowercase test names
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/prefer-lowercase-title.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/prefer-lowercase-title.md
    */
   'jest/prefer-lowercase-title'?: Linter.RuleEntry<JestPreferLowercaseTitle>
   /**
    * Prefer mock resolved/rejected shorthands for promises
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/prefer-mock-promise-shorthand.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/prefer-mock-promise-shorthand.md
    */
   'jest/prefer-mock-promise-shorthand'?: Linter.RuleEntry<[]>
   /**
+   * Prefer mock return shorthands
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/prefer-mock-return-shorthand.md
+   */
+  'jest/prefer-mock-return-shorthand'?: Linter.RuleEntry<[]>
+  /**
    * Prefer including a hint with external snapshots
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/prefer-snapshot-hint.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/prefer-snapshot-hint.md
    */
   'jest/prefer-snapshot-hint'?: Linter.RuleEntry<JestPreferSnapshotHint>
   /**
    * Suggest using `jest.spyOn()`
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/prefer-spy-on.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/prefer-spy-on.md
    */
   'jest/prefer-spy-on'?: Linter.RuleEntry<[]>
   /**
    * Suggest using `toStrictEqual()`
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/prefer-strict-equal.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/prefer-strict-equal.md
    */
   'jest/prefer-strict-equal'?: Linter.RuleEntry<[]>
   /**
    * Suggest using `toBe()` for primitive literals
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/prefer-to-be.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/prefer-to-be.md
    */
   'jest/prefer-to-be'?: Linter.RuleEntry<[]>
   /**
    * Suggest using `toContain()`
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/prefer-to-contain.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/prefer-to-contain.md
    */
   'jest/prefer-to-contain'?: Linter.RuleEntry<[]>
   /**
    * Suggest using `toHaveBeenCalled`
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/prefer-to-have-been-called.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/prefer-to-have-been-called.md
    */
   'jest/prefer-to-have-been-called'?: Linter.RuleEntry<[]>
   /**
    * Suggest using `toHaveBeenCalledTimes()`
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/prefer-to-have-been-called-times.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/prefer-to-have-been-called-times.md
    */
   'jest/prefer-to-have-been-called-times'?: Linter.RuleEntry<[]>
   /**
    * Suggest using `toHaveLength()`
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/prefer-to-have-length.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/prefer-to-have-length.md
    */
   'jest/prefer-to-have-length'?: Linter.RuleEntry<[]>
   /**
    * Suggest using `test.todo`
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/prefer-todo.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/prefer-todo.md
    */
   'jest/prefer-todo'?: Linter.RuleEntry<[]>
   /**
    * Require setup and teardown code to be within a hook
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/require-hook.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/require-hook.md
    */
   'jest/require-hook'?: Linter.RuleEntry<JestRequireHook>
   /**
    * Require a message for `toThrow()`
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/require-to-throw-message.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/require-to-throw-message.md
    */
   'jest/require-to-throw-message'?: Linter.RuleEntry<[]>
   /**
    * Require test cases and hooks to be inside a `describe` block
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/require-top-level-describe.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/require-top-level-describe.md
    */
   'jest/require-top-level-describe'?: Linter.RuleEntry<JestRequireTopLevelDescribe>
   /**
    * Enforce unbound methods are called with their expected scope
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/unbound-method.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/unbound-method.md
    */
   'jest/unbound-method'?: Linter.RuleEntry<JestUnboundMethod>
   /**
    * Enforce valid `describe()` callback
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/valid-describe-callback.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/valid-describe-callback.md
    */
   'jest/valid-describe-callback'?: Linter.RuleEntry<[]>
   /**
    * Enforce valid `expect()` usage
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/valid-expect.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/valid-expect.md
    */
   'jest/valid-expect'?: Linter.RuleEntry<JestValidExpect>
   /**
    * Require promises that have expectations in their chain to be valid
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/valid-expect-in-promise.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/valid-expect-in-promise.md
    */
   'jest/valid-expect-in-promise'?: Linter.RuleEntry<[]>
   /**
+   * Require that `resolve` and `reject` modifiers are present (and only) for promise-like types
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/valid-expect-with-promise.md
+   */
+  'jest/valid-expect-with-promise'?: Linter.RuleEntry<[]>
+  /**
    * Disallow mocking of non-existing module paths
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/valid-mock-module-path.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/valid-mock-module-path.md
    */
   'jest/valid-mock-module-path'?: Linter.RuleEntry<JestValidMockModulePath>
   /**
    * Enforce valid titles
-   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.5.0/docs/rules/valid-title.md
+   * @see https://github.com/jest-community/eslint-plugin-jest/blob/v29.11.0/docs/rules/valid-title.md
    */
   'jest/valid-title'?: Linter.RuleEntry<JestValidTitle>
   /**
@@ -5054,7 +5074,7 @@ export interface RuleOptions {
    * Enforces destructuring and symmetric naming of `useState` hook value and setter.
    * @see https://eslint-react.xyz/docs/rules/naming-convention-use-state
    */
-  'react-naming-convention/use-state'?: Linter.RuleEntry<[]>
+  'react-naming-convention/use-state'?: Linter.RuleEntry<ReactNamingConventionUseState>
   'react-refresh/only-export-components'?: Linter.RuleEntry<ReactRefreshOnlyExportComponents>
   /**
    * Prevents leaked `addEventListener` in a component or custom Hook.
@@ -7148,7 +7168,7 @@ export interface RuleOptions {
    * prefer dynamic import in mock
    * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-import-in-mock.md
    */
-  'vitest/prefer-import-in-mock'?: Linter.RuleEntry<[]>
+  'vitest/prefer-import-in-mock'?: Linter.RuleEntry<VitestPreferImportInMock>
   /**
    * enforce importing Vitest globals
    * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-importing-vitest-globals.md
@@ -7164,6 +7184,11 @@ export interface RuleOptions {
    * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-mock-promise-shorthand.md
    */
   'vitest/prefer-mock-promise-shorthand'?: Linter.RuleEntry<[]>
+  /**
+   * Prefer mock return shorthands
+   * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-mock-return-shorthand.md
+   */
+  'vitest/prefer-mock-return-shorthand'?: Linter.RuleEntry<[]>
   /**
    * enforce including a hint with external snapshots
    * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-snapshot-hint.md
@@ -7210,6 +7235,11 @@ export interface RuleOptions {
    */
   'vitest/prefer-to-contain'?: Linter.RuleEntry<[]>
   /**
+   * Suggest using `toHaveBeenCalledTimes()`
+   * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-have-been-called-times.md
+   */
+  'vitest/prefer-to-have-been-called-times'?: Linter.RuleEntry<[]>
+  /**
    * enforce using toHaveLength()
    * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-have-length.md
    */
@@ -7234,11 +7264,6 @@ export interface RuleOptions {
    * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/require-hook.md
    */
   'vitest/require-hook'?: Linter.RuleEntry<VitestRequireHook>
-  /**
-   * require usage of import in vi.mock()
-   * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/require-import-vi-mock.md
-   */
-  'vitest/require-import-vi-mock'?: Linter.RuleEntry<[]>
   /**
    * require local Test Context for concurrent snapshot tests
    * @see https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/require-local-test-context-for-concurrent-snapshots.md
@@ -13006,7 +13031,7 @@ type PerfectionistSortArrayIncludes = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     anyOf: {
@@ -13037,7 +13062,7 @@ type PerfectionistSortArrayIncludes = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     
@@ -13055,6 +13080,7 @@ type PerfectionistSortArrayIncludes = {
     
     selector?: ("literal" | "spread")
   })[]
+  newlinesInside?: (("ignore" | number) | "newlinesBetween")
   
   groups?: (string | [string, ...(string)[]] | {
     newlinesBetween: ("ignore" | number)
@@ -13064,7 +13090,7 @@ type PerfectionistSortArrayIncludes = {
     commentAbove?: string
     
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
   })[]
@@ -13158,7 +13184,7 @@ type PerfectionistSortClasses = []|[{
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     anyOf: {
@@ -13215,7 +13241,7 @@ type PerfectionistSortClasses = []|[{
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     
@@ -13259,6 +13285,7 @@ type PerfectionistSortClasses = []|[{
       flags?: string
     } | string))
   })[]
+  newlinesInside?: (("ignore" | number) | "newlinesBetween")
   
   groups?: (string | [string, ...(string)[]] | {
     newlinesBetween: ("ignore" | number)
@@ -13268,7 +13295,7 @@ type PerfectionistSortClasses = []|[{
     commentAbove?: string
     
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
   })[]
@@ -13359,7 +13386,7 @@ type PerfectionistSortDecorators = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     anyOf: {
@@ -13388,7 +13415,7 @@ type PerfectionistSortDecorators = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     
@@ -13404,6 +13431,7 @@ type PerfectionistSortDecorators = {
       flags?: string
     } | string))
   })[]
+  newlinesInside?: (("ignore" | number) | "newlinesBetween")
   
   groups?: (string | [string, ...(string)[]] | {
     newlinesBetween: ("ignore" | number)
@@ -13413,7 +13441,7 @@ type PerfectionistSortDecorators = {
     commentAbove?: string
     
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
   })[]
@@ -13502,7 +13530,7 @@ type PerfectionistSortEnums = []|[{
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     anyOf: {
@@ -13543,7 +13571,7 @@ type PerfectionistSortEnums = []|[{
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     
@@ -13571,6 +13599,7 @@ type PerfectionistSortEnums = []|[{
       flags?: string
     } | string))
   })[]
+  newlinesInside?: (("ignore" | number) | "newlinesBetween")
   
   groups?: (string | [string, ...(string)[]] | {
     newlinesBetween: ("ignore" | number)
@@ -13580,7 +13609,7 @@ type PerfectionistSortEnums = []|[{
     commentAbove?: string
     
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
   })[]
@@ -13661,7 +13690,7 @@ type PerfectionistSortExportAttributes = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     anyOf: {
@@ -13690,7 +13719,7 @@ type PerfectionistSortExportAttributes = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     
@@ -13706,6 +13735,7 @@ type PerfectionistSortExportAttributes = {
       flags?: string
     } | string))
   })[]
+  newlinesInside?: (("ignore" | number) | "newlinesBetween")
   
   groups?: (string | [string, ...(string)[]] | {
     newlinesBetween: ("ignore" | number)
@@ -13715,7 +13745,7 @@ type PerfectionistSortExportAttributes = {
     commentAbove?: string
     
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
   })[]
@@ -13794,7 +13824,7 @@ type PerfectionistSortExports = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     anyOf: {
@@ -13827,7 +13857,7 @@ type PerfectionistSortExports = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     
@@ -13847,6 +13877,7 @@ type PerfectionistSortExports = {
     
     selector?: "export"
   })[]
+  newlinesInside?: (("ignore" | number) | "newlinesBetween")
   
   groups?: (string | [string, ...(string)[]] | {
     newlinesBetween: ("ignore" | number)
@@ -13856,7 +13887,7 @@ type PerfectionistSortExports = {
     commentAbove?: string
     
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
   })[]
@@ -13935,7 +13966,7 @@ type PerfectionistSortHeritageClauses = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     anyOf: {
@@ -13964,7 +13995,7 @@ type PerfectionistSortHeritageClauses = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     
@@ -13980,6 +14011,7 @@ type PerfectionistSortHeritageClauses = {
       flags?: string
     } | string))
   })[]
+  newlinesInside?: (("ignore" | number) | "newlinesBetween")
   
   groups?: (string | [string, ...(string)[]] | {
     newlinesBetween: ("ignore" | number)
@@ -13989,7 +14021,7 @@ type PerfectionistSortHeritageClauses = {
     commentAbove?: string
     
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
   })[]
@@ -14068,7 +14100,7 @@ type PerfectionistSortImportAttributes = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     anyOf: {
@@ -14097,7 +14129,7 @@ type PerfectionistSortImportAttributes = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     
@@ -14113,6 +14145,7 @@ type PerfectionistSortImportAttributes = {
       flags?: string
     } | string))
   })[]
+  newlinesInside?: (("ignore" | number) | "newlinesBetween")
   
   groups?: (string | [string, ...(string)[]] | {
     newlinesBetween: ("ignore" | number)
@@ -14122,7 +14155,7 @@ type PerfectionistSortImportAttributes = {
     commentAbove?: string
     
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
   })[]
@@ -14201,7 +14234,7 @@ type PerfectionistSortImports = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted" | "type-import-first")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     anyOf: {
@@ -14234,7 +14267,7 @@ type PerfectionistSortImports = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted" | "type-import-first")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     
@@ -14254,6 +14287,7 @@ type PerfectionistSortImports = {
     
     selector?: ("side-effect-style" | "tsconfig-path" | "side-effect" | "external" | "internal" | "builtin" | "sibling" | "subpath" | "import" | "parent" | "index" | "style" | "type")
   })[]
+  newlinesInside?: (("ignore" | number) | "newlinesBetween")
   
   groups?: (string | [string, ...(string)[]] | {
     newlinesBetween: ("ignore" | number)
@@ -14263,7 +14297,7 @@ type PerfectionistSortImports = {
     commentAbove?: string
     
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted" | "type-import-first")
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
   })[]
@@ -14368,7 +14402,7 @@ type PerfectionistSortInterfaces = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     anyOf: {
@@ -14415,7 +14449,7 @@ type PerfectionistSortInterfaces = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     
@@ -14448,6 +14482,7 @@ type PerfectionistSortInterfaces = {
     } | string))
     sortBy?: ("name" | "value")
   })[]
+  newlinesInside?: (("ignore" | number) | "newlinesBetween")
   
   groups?: (string | [string, ...(string)[]] | {
     newlinesBetween: ("ignore" | number)
@@ -14457,7 +14492,7 @@ type PerfectionistSortInterfaces = {
     commentAbove?: string
     
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
   })[]
@@ -14582,7 +14617,7 @@ type PerfectionistSortIntersectionTypes = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     anyOf: {
@@ -14613,7 +14648,7 @@ type PerfectionistSortIntersectionTypes = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     
@@ -14631,6 +14666,7 @@ type PerfectionistSortIntersectionTypes = {
     
     selector?: ("intersection" | "conditional" | "function" | "operator" | "keyword" | "literal" | "nullish" | "import" | "object" | "named" | "tuple" | "union")
   })[]
+  newlinesInside?: (("ignore" | number) | "newlinesBetween")
   
   groups?: (string | [string, ...(string)[]] | {
     newlinesBetween: ("ignore" | number)
@@ -14640,7 +14676,7 @@ type PerfectionistSortIntersectionTypes = {
     commentAbove?: string
     
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
   })[]
@@ -14719,7 +14755,7 @@ type PerfectionistSortJsxProps = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     anyOf: {
@@ -14764,7 +14800,7 @@ type PerfectionistSortJsxProps = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     
@@ -14796,6 +14832,7 @@ type PerfectionistSortJsxProps = {
       flags?: string
     } | string))
   })[]
+  newlinesInside?: (("ignore" | number) | "newlinesBetween")
   
   groups?: (string | [string, ...(string)[]] | {
     newlinesBetween: ("ignore" | number)
@@ -14805,7 +14842,7 @@ type PerfectionistSortJsxProps = {
     commentAbove?: string
     
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
   })[]
@@ -14874,7 +14911,7 @@ type PerfectionistSortMaps = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     anyOf: {
@@ -14903,7 +14940,7 @@ type PerfectionistSortMaps = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     
@@ -14919,6 +14956,7 @@ type PerfectionistSortMaps = {
       flags?: string
     } | string))
   })[]
+  newlinesInside?: (("ignore" | number) | "newlinesBetween")
   
   groups?: (string | [string, ...(string)[]] | {
     newlinesBetween: ("ignore" | number)
@@ -14928,7 +14966,7 @@ type PerfectionistSortMaps = {
     commentAbove?: string
     
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
   })[]
@@ -15022,7 +15060,7 @@ type PerfectionistSortModules = []|[{
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     anyOf: {
@@ -15067,7 +15105,7 @@ type PerfectionistSortModules = []|[{
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     
@@ -15099,6 +15137,7 @@ type PerfectionistSortModules = []|[{
       flags?: string
     } | string))
   })[]
+  newlinesInside?: (("ignore" | number) | "newlinesBetween")
   
   groups?: (string | [string, ...(string)[]] | {
     newlinesBetween: ("ignore" | number)
@@ -15108,7 +15147,7 @@ type PerfectionistSortModules = []|[{
     commentAbove?: string
     
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
   })[]
@@ -15187,7 +15226,7 @@ type PerfectionistSortNamedExports = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     anyOf: {
@@ -15220,7 +15259,7 @@ type PerfectionistSortNamedExports = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     
@@ -15240,6 +15279,7 @@ type PerfectionistSortNamedExports = {
     
     selector?: "export"
   })[]
+  newlinesInside?: (("ignore" | number) | "newlinesBetween")
   
   groups?: (string | [string, ...(string)[]] | {
     newlinesBetween: ("ignore" | number)
@@ -15249,7 +15289,7 @@ type PerfectionistSortNamedExports = {
     commentAbove?: string
     
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
   })[]
@@ -15330,7 +15370,7 @@ type PerfectionistSortNamedImports = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     anyOf: {
@@ -15363,7 +15403,7 @@ type PerfectionistSortNamedImports = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     
@@ -15383,6 +15423,7 @@ type PerfectionistSortNamedImports = {
     
     selector?: "import"
   })[]
+  newlinesInside?: (("ignore" | number) | "newlinesBetween")
   
   groups?: (string | [string, ...(string)[]] | {
     newlinesBetween: ("ignore" | number)
@@ -15392,7 +15433,7 @@ type PerfectionistSortNamedImports = {
     commentAbove?: string
     
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
   })[]
@@ -15475,7 +15516,7 @@ type PerfectionistSortObjectTypes = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     anyOf: {
@@ -15522,7 +15563,7 @@ type PerfectionistSortObjectTypes = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     
@@ -15555,6 +15596,7 @@ type PerfectionistSortObjectTypes = {
     } | string))
     sortBy?: ("name" | "value")
   })[]
+  newlinesInside?: (("ignore" | number) | "newlinesBetween")
   
   groups?: (string | [string, ...(string)[]] | {
     newlinesBetween: ("ignore" | number)
@@ -15564,7 +15606,7 @@ type PerfectionistSortObjectTypes = {
     commentAbove?: string
     
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
   })[]
@@ -15689,7 +15731,7 @@ type PerfectionistSortObjects = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     anyOf: {
@@ -15734,7 +15776,7 @@ type PerfectionistSortObjects = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     
@@ -15766,6 +15808,7 @@ type PerfectionistSortObjects = {
       flags?: string
     } | string))
   })[]
+  newlinesInside?: (("ignore" | number) | "newlinesBetween")
   
   groups?: (string | [string, ...(string)[]] | {
     newlinesBetween: ("ignore" | number)
@@ -15775,7 +15818,7 @@ type PerfectionistSortObjects = {
     commentAbove?: string
     
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
   })[]
@@ -15917,7 +15960,7 @@ type PerfectionistSortSets = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     anyOf: {
@@ -15948,7 +15991,7 @@ type PerfectionistSortSets = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     
@@ -15966,6 +16009,7 @@ type PerfectionistSortSets = {
     
     selector?: ("literal" | "spread")
   })[]
+  newlinesInside?: (("ignore" | number) | "newlinesBetween")
   
   groups?: (string | [string, ...(string)[]] | {
     newlinesBetween: ("ignore" | number)
@@ -15975,7 +16019,7 @@ type PerfectionistSortSets = {
     commentAbove?: string
     
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
   })[]
@@ -16091,7 +16135,7 @@ type PerfectionistSortUnionTypes = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     anyOf: {
@@ -16122,7 +16166,7 @@ type PerfectionistSortUnionTypes = {
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     
@@ -16140,6 +16184,7 @@ type PerfectionistSortUnionTypes = {
     
     selector?: ("intersection" | "conditional" | "function" | "operator" | "keyword" | "literal" | "nullish" | "import" | "object" | "named" | "tuple" | "union")
   })[]
+  newlinesInside?: (("ignore" | number) | "newlinesBetween")
   
   groups?: (string | [string, ...(string)[]] | {
     newlinesBetween: ("ignore" | number)
@@ -16149,7 +16194,7 @@ type PerfectionistSortUnionTypes = {
     commentAbove?: string
     
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
   })[]
@@ -16228,7 +16273,7 @@ type PerfectionistSortVariableDeclarations = []|[{
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     anyOf: {
@@ -16259,7 +16304,7 @@ type PerfectionistSortVariableDeclarations = []|[{
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
     
     groupName: string
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
     
@@ -16277,6 +16322,7 @@ type PerfectionistSortVariableDeclarations = []|[{
     
     selector?: ("initialized" | "uninitialized")
   })[]
+  newlinesInside?: (("ignore" | number) | "newlinesBetween")
   
   groups?: (string | [string, ...(string)[]] | {
     newlinesBetween: ("ignore" | number)
@@ -16286,7 +16332,7 @@ type PerfectionistSortVariableDeclarations = []|[{
     commentAbove?: string
     
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted")
-    newlinesInside?: number
+    newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
   })[]
@@ -16625,6 +16671,11 @@ type ReactNamingConventionFilenameExtension = []|[(("always" | "as-needed") | {
   extensions?: string[]
   ignoreFilesWithoutCode?: boolean
 })]
+// ----- react-naming-convention/use-state -----
+type ReactNamingConventionUseState = []|[{
+  enforceAssignment?: boolean
+  enforceSetterName?: boolean
+}]
 // ----- react-refresh/only-export-components -----
 type ReactRefreshOnlyExportComponents = []|[{
   allowExportNames?: string[]
@@ -17250,6 +17301,10 @@ type VitestPreferExpectAssertions = []|[{
   onlyFunctionsWithAsyncKeyword?: boolean
   onlyFunctionsWithExpectInLoop?: boolean
   onlyFunctionsWithExpectInCallback?: boolean
+}]
+// ----- vitest/prefer-import-in-mock -----
+type VitestPreferImportInMock = []|[{
+  fixable?: boolean
 }]
 // ----- vitest/prefer-lowercase-title -----
 type VitestPreferLowercaseTitle = []|[{

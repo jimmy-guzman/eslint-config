@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`should create perfectionist rules 1`] = `
+exports[`perfectionistRules > should create perfectionist rules 1`] = `
 {
   "perfectionist/sort-array-includes": [
     "error",

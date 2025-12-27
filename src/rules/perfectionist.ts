@@ -2,8 +2,15 @@ import { configs } from "eslint-plugin-perfectionist";
 
 import type { Rules } from "../types";
 
+// This is due to https://github.com/azat-io/eslint-plugin-perfectionist/issues/655
+const recommendedNaturalConfig = configs?.["recommended-natural"];
+const recommendedNaturalRules =
+  recommendedNaturalConfig && "rules" in recommendedNaturalConfig
+    ? recommendedNaturalConfig.rules
+    : {};
+
 export const perfectionistRules = {
-  ...configs["recommended-natural"].rules,
+  ...recommendedNaturalRules,
   "perfectionist/sort-imports": [
     "error",
     {
