@@ -1,3 +1,10 @@
+# [6.29.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.28.0...v6.29.0) (2025-12-27)
+
+
+### Features
+
+* ✨ enable `prefer-mock-return-shorthand` ([#254](https://github.com/jimmy-guzman/eslint-config/issues/254)) ([fd1fd2e](https://github.com/jimmy-guzman/eslint-config/commit/fd1fd2ef90f7298033d0985befb76b4fb0dc6602))
+
 # [6.28.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.27.0...v6.28.0) (2025-12-21)
 
 
