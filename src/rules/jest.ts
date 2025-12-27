@@ -21,11 +21,13 @@ export const jestRules = async (options?: JestOptions) => {
     "jest/no-conditional-in-test": "error",
     "jest/no-confusing-set-timeout": "error",
     "jest/no-duplicate-hooks": "error",
+    "jest/no-error-equal": "off", // requires typescript
     "jest/no-hooks": "off",
     "jest/no-large-snapshots": "off",
     "jest/no-restricted-jest-methods": "off",
     "jest/no-restricted-matchers": "off",
     "jest/no-test-return-statement": "error",
+    "jest/no-unnecessary-assertion": "off", // requires typescript
     "jest/no-unneeded-async-expect-function": "error",
     "jest/no-untyped-mock-factory": "off", // requires typescript
     "jest/padding-around-all": "error",
@@ -40,6 +42,7 @@ export const jestRules = async (options?: JestOptions) => {
     "jest/prefer-jest-mocked": "error",
     "jest/prefer-lowercase-title": "off",
     "jest/prefer-mock-promise-shorthand": "error",
+    "jest/prefer-mock-return-shorthand": "error",
     "jest/prefer-snapshot-hint": "error",
     "jest/prefer-spy-on": "off",
     "jest/prefer-strict-equal": "error",
@@ -50,6 +53,7 @@ export const jestRules = async (options?: JestOptions) => {
     "jest/require-to-throw-message": "error",
     "jest/require-top-level-describe": "off",
     "jest/unbound-method": "off", // requires typescript
+    "jest/valid-expect-with-promise": "off", // requires typescript
     "jest/valid-title": [
       "error",
       {

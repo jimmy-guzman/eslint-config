@@ -7,7 +7,7 @@ exports[`typescriptConfig > should create config 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.50.0",
+          "version": "8.50.1",
         },
         "parseForESLint": [Function],
       },
@@ -298,7 +298,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.50.0",
+                    "version": "8.50.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -506,7 +506,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.50.0",
+                  "version": "8.50.1",
                 },
                 "parseForESLint": [Function],
               },
@@ -629,7 +629,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.50.0",
+                    "version": "8.50.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -709,7 +709,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.50.0",
+                    "version": "8.50.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -816,7 +816,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.50.0",
+                    "version": "8.50.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -900,7 +900,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.50.0",
+                    "version": "8.50.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1140,7 +1140,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.50.0",
+                    "version": "8.50.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1264,7 +1264,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.50.0",
+                    "version": "8.50.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1335,7 +1335,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.50.0",
+                    "version": "8.50.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1415,7 +1415,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.50.0",
+                    "version": "8.50.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1962,7 +1962,7 @@ exports[`typescriptConfig > should create config 1`] = `
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.50.0",
+          "version": "8.50.1",
         },
         "rules": {
           "adjacent-overload-signatures": {

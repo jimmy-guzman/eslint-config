@@ -19,6 +19,7 @@ exports[`should create jest rules 1`] = `
   "jest/no-disabled-tests": "warn",
   "jest/no-done-callback": "error",
   "jest/no-duplicate-hooks": "error",
+  "jest/no-error-equal": "off",
   "jest/no-export": "error",
   "jest/no-focused-tests": "error",
   "jest/no-hooks": "off",
@@ -32,6 +33,7 @@ exports[`should create jest rules 1`] = `
   "jest/no-standalone-expect": "error",
   "jest/no-test-prefixes": "error",
   "jest/no-test-return-statement": "error",
+  "jest/no-unnecessary-assertion": "off",
   "jest/no-unneeded-async-expect-function": "error",
   "jest/no-untyped-mock-factory": "off",
   "jest/padding-around-all": "error",
@@ -46,6 +48,7 @@ exports[`should create jest rules 1`] = `
   "jest/prefer-jest-mocked": "error",
   "jest/prefer-lowercase-title": "off",
   "jest/prefer-mock-promise-shorthand": "error",
+  "jest/prefer-mock-return-shorthand": "error",
   "jest/prefer-snapshot-hint": "error",
   "jest/prefer-spy-on": "off",
   "jest/prefer-strict-equal": "error",
@@ -62,6 +65,7 @@ exports[`should create jest rules 1`] = `
   "jest/valid-describe-callback": "error",
   "jest/valid-expect": "error",
   "jest/valid-expect-in-promise": "error",
+  "jest/valid-expect-with-promise": "off",
   "jest/valid-title": [
     "error",
     {
