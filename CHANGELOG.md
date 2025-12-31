@@ -1,3 +1,10 @@
+# [6.30.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.29.0...v6.30.0) (2025-12-31)
+
+
+### Features
+
+* ✨ improve padding line between statements ([#255](https://github.com/jimmy-guzman/eslint-config/issues/255)) ([089efea](https://github.com/jimmy-guzman/eslint-config/commit/089efeaaf06e8dc8dc9130e50d6eaba43b3b711e))
+
 # [6.29.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.28.0...v6.29.0) (2025-12-27)
 
 
