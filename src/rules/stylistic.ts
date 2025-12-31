@@ -45,5 +45,40 @@ export const stylisticRules = {
       next: "function",
       prev: "*",
     },
+    {
+      blankLine: "any",
+      next: "const",
+      prev: "const",
+    },
+    {
+      blankLine: "any",
+      next: "let",
+      prev: "let",
+    },
+    {
+      blankLine: "any",
+      next: "var",
+      prev: "var",
+    },
+    {
+      blankLine: "always",
+      next: ["let", "var"],
+      prev: "const",
+    },
+    {
+      blankLine: "always",
+      next: ["const", "var"],
+      prev: "let",
+    },
+    {
+      blankLine: "always",
+      next: ["const", "let"],
+      prev: "var",
+    },
+    {
+      blankLine: "always",
+      next: "if",
+      prev: "if",
+    },
   ],
 } satisfies Rules;
