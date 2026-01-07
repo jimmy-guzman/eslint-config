@@ -28,6 +28,16 @@ exports[`should create stylistic rules 1`] = `
     },
     {
       "blankLine": "always",
+      "next": "break",
+      "prev": "*",
+    },
+    {
+      "blankLine": "always",
+      "next": "throw",
+      "prev": "*",
+    },
+    {
+      "blankLine": "always",
       "next": "*",
       "prev": [
         "const",
@@ -47,6 +57,30 @@ exports[`should create stylistic rules 1`] = `
         "let",
         "var",
       ],
+    },
+    {
+      "blankLine": "always",
+      "next": [
+        "let",
+        "var",
+      ],
+      "prev": "const",
+    },
+    {
+      "blankLine": "always",
+      "next": [
+        "const",
+        "var",
+      ],
+      "prev": "let",
+    },
+    {
+      "blankLine": "always",
+      "next": [
+        "const",
+        "let",
+      ],
+      "prev": "var",
     },
     {
       "blankLine": "always",
@@ -64,47 +98,13 @@ exports[`should create stylistic rules 1`] = `
       "prev": "*",
     },
     {
-      "blankLine": "any",
-      "next": "const",
-      "prev": "const",
-    },
-    {
-      "blankLine": "any",
-      "next": "let",
-      "prev": "let",
-    },
-    {
-      "blankLine": "any",
-      "next": "var",
-      "prev": "var",
-    },
-    {
-      "blankLine": "always",
-      "next": [
-        "let",
-        "var",
-      ],
-      "prev": "const",
-    },
-    {
-      "blankLine": "always",
-      "next": [
-        "const",
-        "var",
-      ],
-      "prev": "let",
-    },
-    {
-      "blankLine": "always",
-      "next": [
-        "const",
-        "let",
-      ],
-      "prev": "var",
-    },
-    {
       "blankLine": "always",
       "next": "if",
+      "prev": "if",
+    },
+    {
+      "blankLine": "always",
+      "next": "*",
       "prev": "if",
     },
   ],
