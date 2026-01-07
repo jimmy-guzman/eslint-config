@@ -7,7 +7,7 @@ exports[`typescriptConfig > should create config 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.50.1",
+          "version": "8.52.0",
         },
         "parseForESLint": [Function],
       },
@@ -298,7 +298,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.50.1",
+                    "version": "8.52.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -506,7 +506,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.50.1",
+                  "version": "8.52.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -629,7 +629,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.50.1",
+                    "version": "8.52.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -709,7 +709,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.50.1",
+                    "version": "8.52.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -816,7 +816,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.50.1",
+                    "version": "8.52.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -900,7 +900,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.50.1",
+                    "version": "8.52.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1140,7 +1140,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.50.1",
+                    "version": "8.52.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1264,7 +1264,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.50.1",
+                    "version": "8.52.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1335,7 +1335,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.50.1",
+                    "version": "8.52.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1415,7 +1415,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.50.1",
+                    "version": "8.52.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1962,7 +1962,8 @@ exports[`typescriptConfig > should create config 1`] = `
         },
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
-          "version": "8.50.1",
+          "namespace": "@typescript-eslint",
+          "version": "8.52.0",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -1980,6 +1981,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "schema": [],
               "type": "suggestion",
             },
+            "name": "adjacent-overload-signatures",
           },
           "array-type": {
             "create": [Function],
@@ -2031,6 +2033,7 @@ exports[`typescriptConfig > should create config 1`] = `
               ],
               "type": "suggestion",
             },
+            "name": "array-type",
           },
           "await-thenable": {
             "create": [Function],
@@ -2054,6 +2057,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "schema": [],
               "type": "problem",
             },
+            "name": "await-thenable",
           },
           "ban-ts-comment": {
             "create": [Function],
@@ -2142,6 +2146,7 @@ exports[`typescriptConfig > should create config 1`] = `
               ],
               "type": "problem",
             },
+            "name": "ban-ts-comment",
           },
           "ban-tslint-comment": {
             "create": [Function],
@@ -2159,6 +2164,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "schema": [],
               "type": "suggestion",
             },
+            "name": "ban-tslint-comment",
           },
           "class-literal-property-style": {
             "create": [Function],
@@ -2190,6 +2196,7 @@ exports[`typescriptConfig > should create config 1`] = `
               ],
               "type": "problem",
             },
+            "name": "class-literal-property-style",
           },
           "class-methods-use-this": {
             "create": [Function],
@@ -2252,6 +2259,7 @@ exports[`typescriptConfig > should create config 1`] = `
               ],
               "type": "suggestion",
             },
+            "name": "class-methods-use-this",
           },
           "consistent-generic-constructors": {
             "create": [Function],
@@ -2281,6 +2289,7 @@ exports[`typescriptConfig > should create config 1`] = `
               ],
               "type": "suggestion",
             },
+            "name": "consistent-generic-constructors",
           },
           "consistent-indexed-object-style": {
             "create": [Function],
@@ -2312,6 +2321,7 @@ exports[`typescriptConfig > should create config 1`] = `
               ],
               "type": "suggestion",
             },
+            "name": "consistent-indexed-object-style",
           },
           "consistent-return": {
             "create": [Function],
@@ -2351,6 +2361,7 @@ exports[`typescriptConfig > should create config 1`] = `
               ],
               "type": "suggestion",
             },
+            "name": "consistent-return",
           },
           "consistent-type-assertions": {
             "create": [Function],
@@ -2436,6 +2447,7 @@ exports[`typescriptConfig > should create config 1`] = `
               ],
               "type": "suggestion",
             },
+            "name": "consistent-type-assertions",
           },
           "consistent-type-definitions": {
             "create": [Function],
@@ -2465,6 +2477,7 @@ exports[`typescriptConfig > should create config 1`] = `
               ],
               "type": "suggestion",
             },
+            "name": "consistent-type-definitions",
           },
           "consistent-type-exports": {
             "create": [Function],
@@ -2499,6 +2512,7 @@ exports[`typescriptConfig > should create config 1`] = `
               ],
               "type": "suggestion",
             },
+            "name": "consistent-type-exports",
           },
           "consistent-type-imports": {
             "create": [Function],
@@ -2551,6 +2565,7 @@ exports[`typescriptConfig > should create config 1`] = `
               ],
               "type": "suggestion",
             },
+            "name": "consistent-type-imports",
           },
           "default-param-last": {
             "create": [Function],
@@ -2568,6 +2583,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "schema": [],
               "type": "suggestion",
             },
+            "name": "default-param-last",
           },
           "dot-notation": {
             "create": [Function],
@@ -2634,6 +2650,7 @@ exports[`typescriptConfig > should create config 1`] = `
               ],
               "type": "suggestion",
             },
+            "name": "dot-notation",
           },
           "explicit-function-return-type": {
             "create": [Function],
@@ -2702,6 +2719,7 @@ exports[`typescriptConfig > should create config 1`] = `
               ],
               "type": "problem",
             },
+            "name": "explicit-function-return-type",
           },
           "explicit-member-accessibility": {
             "create": [Function],
@@ -2797,6 +2815,7 @@ exports[`typescriptConfig > should create config 1`] = `
               ],
               "type": "problem",
             },
+            "name": "explicit-member-accessibility",
           },
           "explicit-module-boundary-types": {
             "create": [Function],
@@ -2861,6 +2880,7 @@ You must still type the parameters of the function.",
               ],
               "type": "problem",
             },
+            "name": "explicit-module-boundary-types",
           },
           "init-declarations": {
             "create": [Function],
@@ -2918,6 +2938,7 @@ You must still type the parameters of the function.",
               },
               "type": "suggestion",
             },
+            "name": "init-declarations",
           },
           "max-params": {
             "create": [Function],
@@ -2960,6 +2981,7 @@ You must still type the parameters of the function.",
               ],
               "type": "suggestion",
             },
+            "name": "max-params",
           },
           "member-ordering": {
             "create": [Function],
@@ -3445,6 +3467,7 @@ You must still type the parameters of the function.",
               ],
               "type": "suggestion",
             },
+            "name": "member-ordering",
           },
           "method-signature-style": {
             "create": [Function],
@@ -3473,6 +3496,7 @@ You must still type the parameters of the function.",
               ],
               "type": "suggestion",
             },
+            "name": "method-signature-style",
           },
           "naming-convention": {
             "create": [Function],
@@ -5423,6 +5447,7 @@ You must still type the parameters of the function.",
               },
               "type": "suggestion",
             },
+            "name": "naming-convention",
           },
           "no-array-constructor": {
             "create": [Function],
@@ -5441,6 +5466,7 @@ You must still type the parameters of the function.",
               "schema": [],
               "type": "suggestion",
             },
+            "name": "no-array-constructor",
           },
           "no-array-delete": {
             "create": [Function],
@@ -5460,6 +5486,7 @@ You must still type the parameters of the function.",
               "schema": [],
               "type": "problem",
             },
+            "name": "no-array-delete",
           },
           "no-base-to-string": {
             "create": [Function],
@@ -5506,6 +5533,7 @@ You must still type the parameters of the function.",
               ],
               "type": "suggestion",
             },
+            "name": "no-base-to-string",
           },
           "no-confusing-non-null-assertion": {
             "create": [Function],
@@ -5529,6 +5557,7 @@ You must still type the parameters of the function.",
               "schema": [],
               "type": "problem",
             },
+            "name": "no-confusing-non-null-assertion",
           },
           "no-confusing-void-expression": {
             "create": [Function],
@@ -5580,6 +5609,7 @@ You must still type the parameters of the function.",
               ],
               "type": "problem",
             },
+            "name": "no-confusing-void-expression",
           },
           "no-deprecated": {
             "create": [Function],
@@ -5720,6 +5750,7 @@ You must still type the parameters of the function.",
               ],
               "type": "problem",
             },
+            "name": "no-deprecated",
           },
           "no-dupe-class-members": {
             "create": [Function],
@@ -5737,6 +5768,7 @@ You must still type the parameters of the function.",
               "schema": [],
               "type": "problem",
             },
+            "name": "no-dupe-class-members",
           },
           "no-duplicate-enum-values": {
             "create": [Function],
@@ -5754,6 +5786,7 @@ You must still type the parameters of the function.",
               "schema": [],
               "type": "problem",
             },
+            "name": "no-duplicate-enum-values",
           },
           "no-duplicate-type-constituents": {
             "create": [Function],
@@ -5793,6 +5826,7 @@ You must still type the parameters of the function.",
               ],
               "type": "suggestion",
             },
+            "name": "no-duplicate-type-constituents",
           },
           "no-dynamic-delete": {
             "create": [Function],
@@ -5803,13 +5837,13 @@ You must still type the parameters of the function.",
                 "recommended": "strict",
                 "url": "https://typescript-eslint.io/rules/no-dynamic-delete",
               },
-              "fixable": "code",
               "messages": {
                 "dynamicDelete": "Do not delete dynamically computed property keys.",
               },
               "schema": [],
               "type": "suggestion",
             },
+            "name": "no-dynamic-delete",
           },
           "no-empty-function": {
             "create": [Function],
@@ -5869,6 +5903,7 @@ You must still type the parameters of the function.",
               ],
               "type": "suggestion",
             },
+            "name": "no-empty-function",
           },
           "no-empty-interface": {
             "create": [Function],
@@ -5917,6 +5952,7 @@ You must still type the parameters of the function.",
               ],
               "type": "suggestion",
             },
+            "name": "no-empty-interface",
           },
           "no-empty-object-type": {
             "create": [Function],
@@ -5978,6 +6014,7 @@ You must still type the parameters of the function.",
               ],
               "type": "suggestion",
             },
+            "name": "no-empty-object-type",
           },
           "no-explicit-any": {
             "create": [Function],
@@ -6019,6 +6056,7 @@ You must still type the parameters of the function.",
               ],
               "type": "suggestion",
             },
+            "name": "no-explicit-any",
           },
           "no-extra-non-null-assertion": {
             "create": [Function],
@@ -6036,6 +6074,7 @@ You must still type the parameters of the function.",
               "schema": [],
               "type": "problem",
             },
+            "name": "no-extra-non-null-assertion",
           },
           "no-extraneous-class": {
             "create": [Function],
@@ -6084,6 +6123,7 @@ You must still type the parameters of the function.",
               ],
               "type": "suggestion",
             },
+            "name": "no-extraneous-class",
           },
           "no-floating-promises": {
             "create": [Function],
@@ -6358,6 +6398,7 @@ You must still type the parameters of the function.",
               ],
               "type": "problem",
             },
+            "name": "no-floating-promises",
           },
           "no-for-in-array": {
             "create": [Function],
@@ -6375,6 +6416,7 @@ You must still type the parameters of the function.",
               "schema": [],
               "type": "problem",
             },
+            "name": "no-for-in-array",
           },
           "no-implied-eval": {
             "create": [Function],
@@ -6394,6 +6436,7 @@ You must still type the parameters of the function.",
               "schema": [],
               "type": "suggestion",
             },
+            "name": "no-implied-eval",
           },
           "no-import-type-side-effects": {
             "create": [Function],
@@ -6410,6 +6453,7 @@ You must still type the parameters of the function.",
               "schema": [],
               "type": "problem",
             },
+            "name": "no-import-type-side-effects",
           },
           "no-inferrable-types": {
             "create": [Function],
@@ -6447,6 +6491,7 @@ You must still type the parameters of the function.",
               ],
               "type": "suggestion",
             },
+            "name": "no-inferrable-types",
           },
           "no-invalid-this": {
             "create": [Function],
@@ -6483,6 +6528,7 @@ You must still type the parameters of the function.",
               ],
               "type": "suggestion",
             },
+            "name": "no-invalid-this",
           },
           "no-invalid-void-type": {
             "create": [Function],
@@ -6537,6 +6583,7 @@ You must still type the parameters of the function.",
               ],
               "type": "problem",
             },
+            "name": "no-invalid-void-type",
           },
           "no-loop-func": {
             "create": [Function],
@@ -6554,6 +6601,7 @@ You must still type the parameters of the function.",
               "schema": [],
               "type": "suggestion",
             },
+            "name": "no-loop-func",
           },
           "no-loss-of-precision": {
             "create": [Function],
@@ -6583,6 +6631,7 @@ You must still type the parameters of the function.",
               "schema": [],
               "type": "problem",
             },
+            "name": "no-loss-of-precision",
           },
           "no-magic-numbers": {
             "create": [Function],
@@ -6674,6 +6723,7 @@ You must still type the parameters of the function.",
               ],
               "type": "suggestion",
             },
+            "name": "no-magic-numbers",
           },
           "no-meaningless-void-operator": {
             "create": [Function],
@@ -6709,6 +6759,7 @@ You must still type the parameters of the function.",
               ],
               "type": "suggestion",
             },
+            "name": "no-meaningless-void-operator",
           },
           "no-misused-new": {
             "create": [Function],
@@ -6726,6 +6777,7 @@ You must still type the parameters of the function.",
               "schema": [],
               "type": "problem",
             },
+            "name": "no-misused-new",
           },
           "no-misused-promises": {
             "create": [Function],
@@ -6812,6 +6864,7 @@ You must still type the parameters of the function.",
               ],
               "type": "problem",
             },
+            "name": "no-misused-promises",
           },
           "no-misused-spread": {
             "create": [Function],
@@ -6965,6 +7018,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               ],
               "type": "problem",
             },
+            "name": "no-misused-spread",
           },
           "no-mixed-enums": {
             "create": [Function],
@@ -6982,6 +7036,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               "schema": [],
               "type": "problem",
             },
+            "name": "no-mixed-enums",
           },
           "no-namespace": {
             "create": [Function],
@@ -7018,6 +7073,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               ],
               "type": "suggestion",
             },
+            "name": "no-namespace",
           },
           "no-non-null-asserted-nullish-coalescing": {
             "create": [Function],
@@ -7036,6 +7092,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               "schema": [],
               "type": "problem",
             },
+            "name": "no-non-null-asserted-nullish-coalescing",
           },
           "no-non-null-asserted-optional-chain": {
             "create": [Function],
@@ -7054,6 +7111,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               "schema": [],
               "type": "problem",
             },
+            "name": "no-non-null-asserted-optional-chain",
           },
           "no-non-null-assertion": {
             "create": [Function],
@@ -7072,6 +7130,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               "schema": [],
               "type": "problem",
             },
+            "name": "no-non-null-assertion",
           },
           "no-redeclare": {
             "create": [Function],
@@ -7110,6 +7169,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               ],
               "type": "suggestion",
             },
+            "name": "no-redeclare",
           },
           "no-redundant-type-constituents": {
             "create": [Function],
@@ -7131,6 +7191,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               "schema": [],
               "type": "suggestion",
             },
+            "name": "no-redundant-type-constituents",
           },
           "no-require-imports": {
             "create": [Function],
@@ -7170,6 +7231,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               ],
               "type": "problem",
             },
+            "name": "no-require-imports",
           },
           "no-restricted-imports": {
             "create": [Function],
@@ -7375,6 +7437,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               },
               "type": "suggestion",
             },
+            "name": "no-restricted-imports",
           },
           "no-restricted-types": {
             "create": [Function],
@@ -7448,6 +7511,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               ],
               "type": "suggestion",
             },
+            "name": "no-restricted-types",
           },
           "no-shadow": {
             "create": [Function],
@@ -7515,6 +7579,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               ],
               "type": "suggestion",
             },
+            "name": "no-shadow",
           },
           "no-this-alias": {
             "create": [Function],
@@ -7555,6 +7620,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               ],
               "type": "suggestion",
             },
+            "name": "no-this-alias",
           },
           "no-type-alias": {
             "create": [Function],
@@ -7652,6 +7718,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               ],
               "type": "suggestion",
             },
+            "name": "no-type-alias",
           },
           "no-unnecessary-boolean-literal-compare": {
             "create": [Function],
@@ -7700,6 +7767,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               ],
               "type": "suggestion",
             },
+            "name": "no-unnecessary-boolean-literal-compare",
           },
           "no-unnecessary-condition": {
             "create": [Function],
@@ -7769,6 +7837,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               ],
               "type": "suggestion",
             },
+            "name": "no-unnecessary-condition",
           },
           "no-unnecessary-parameter-property-assignment": {
             "create": [Function],
@@ -7784,6 +7853,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               "schema": [],
               "type": "suggestion",
             },
+            "name": "no-unnecessary-parameter-property-assignment",
           },
           "no-unnecessary-qualifier": {
             "create": [Function],
@@ -7801,6 +7871,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               "schema": [],
               "type": "suggestion",
             },
+            "name": "no-unnecessary-qualifier",
           },
           "no-unnecessary-template-expression": {
             "create": [Function],
@@ -7819,6 +7890,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               "schema": [],
               "type": "suggestion",
             },
+            "name": "no-unnecessary-template-expression",
           },
           "no-unnecessary-type-arguments": {
             "create": [Function],
@@ -7837,6 +7909,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               "schema": [],
               "type": "suggestion",
             },
+            "name": "no-unnecessary-type-arguments",
           },
           "no-unnecessary-type-assertion": {
             "create": [Function],
@@ -7876,6 +7949,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               ],
               "type": "suggestion",
             },
+            "name": "no-unnecessary-type-assertion",
           },
           "no-unnecessary-type-constraint": {
             "create": [Function],
@@ -7894,6 +7968,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               "schema": [],
               "type": "suggestion",
             },
+            "name": "no-unnecessary-type-constraint",
           },
           "no-unnecessary-type-conversion": {
             "create": [Function],
@@ -7914,6 +7989,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               "schema": [],
               "type": "suggestion",
             },
+            "name": "no-unnecessary-type-conversion",
           },
           "no-unnecessary-type-parameters": {
             "create": [Function],
@@ -7933,6 +8009,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               "schema": [],
               "type": "problem",
             },
+            "name": "no-unnecessary-type-parameters",
           },
           "no-unsafe-argument": {
             "create": [Function],
@@ -7953,6 +8030,7 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               "schema": [],
               "type": "problem",
             },
+            "name": "no-unsafe-argument",
           },
           "no-unsafe-assignment": {
             "create": [Function],
@@ -7977,6 +8055,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "schema": [],
               "type": "problem",
             },
+            "name": "no-unsafe-assignment",
           },
           "no-unsafe-call": {
             "create": [Function],
@@ -7998,6 +8077,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "schema": [],
               "type": "problem",
             },
+            "name": "no-unsafe-call",
           },
           "no-unsafe-declaration-merging": {
             "create": [Function],
@@ -8015,6 +8095,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "schema": [],
               "type": "problem",
             },
+            "name": "no-unsafe-declaration-merging",
           },
           "no-unsafe-enum-comparison": {
             "create": [Function],
@@ -8035,6 +8116,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "schema": [],
               "type": "suggestion",
             },
+            "name": "no-unsafe-enum-comparison",
           },
           "no-unsafe-function-type": {
             "create": [Function],
@@ -8052,6 +8134,7 @@ Prefer explicitly defining any function parameters and return type.",
               "schema": [],
               "type": "problem",
             },
+            "name": "no-unsafe-function-type",
           },
           "no-unsafe-member-access": {
             "create": [Function],
@@ -8087,6 +8170,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               ],
               "type": "problem",
             },
+            "name": "no-unsafe-member-access",
           },
           "no-unsafe-return": {
             "create": [Function],
@@ -8107,6 +8191,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "schema": [],
               "type": "problem",
             },
+            "name": "no-unsafe-return",
           },
           "no-unsafe-type-assertion": {
             "create": [Function],
@@ -8127,6 +8212,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "schema": [],
               "type": "problem",
             },
+            "name": "no-unsafe-type-assertion",
           },
           "no-unsafe-unary-minus": {
             "create": [Function],
@@ -8144,6 +8230,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "schema": [],
               "type": "problem",
             },
+            "name": "no-unsafe-unary-minus",
           },
           "no-unused-expressions": {
             "create": [Function],
@@ -8197,6 +8284,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               ],
               "type": "suggestion",
             },
+            "name": "no-unused-expressions",
           },
           "no-unused-private-class-members": {
             "create": [Function],
@@ -8214,6 +8302,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "schema": [],
               "type": "problem",
             },
+            "name": "no-unused-private-class-members",
           },
           "no-unused-vars": {
             "create": [Function],
@@ -8311,6 +8400,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               ],
               "type": "problem",
             },
+            "name": "no-unused-vars",
           },
           "no-use-before-define": {
             "create": [Function],
@@ -8383,6 +8473,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               ],
               "type": "problem",
             },
+            "name": "no-use-before-define",
           },
           "no-useless-constructor": {
             "create": [Function],
@@ -8402,6 +8493,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "schema": [],
               "type": "problem",
             },
+            "name": "no-useless-constructor",
           },
           "no-useless-default-assignment": {
             "create": [Function],
@@ -8415,12 +8507,14 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               },
               "fixable": "code",
               "messages": {
+                "preferOptionalSyntax": "Using \`= undefined\` to make a parameter optional adds unnecessary runtime logic. Use the \`?\` optional syntax instead.",
                 "uselessDefaultAssignment": "Default value is useless because the {{ type }} is not optional.",
                 "uselessUndefined": "Default value is useless because it is undefined. Optional {{ type }}s are already undefined by default.",
               },
               "schema": [],
               "type": "suggestion",
             },
+            "name": "no-useless-default-assignment",
           },
           "no-useless-empty-export": {
             "create": [Function],
@@ -8438,6 +8532,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "schema": [],
               "type": "suggestion",
             },
+            "name": "no-useless-empty-export",
           },
           "no-var-requires": {
             "create": [Function],
@@ -8486,6 +8581,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               ],
               "type": "problem",
             },
+            "name": "no-var-requires",
           },
           "no-wrapper-object-types": {
             "create": [Function],
@@ -8503,6 +8599,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "schema": [],
               "type": "problem",
             },
+            "name": "no-wrapper-object-types",
           },
           "non-nullable-type-assertion-style": {
             "create": [Function],
@@ -8521,6 +8618,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "schema": [],
               "type": "suggestion",
             },
+            "name": "non-nullable-type-assertion-style",
           },
           "only-throw-error": {
             "create": [Function],
@@ -8677,6 +8775,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               ],
               "type": "problem",
             },
+            "name": "only-throw-error",
           },
           "parameter-properties": {
             "create": [Function],
@@ -8734,6 +8833,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               ],
               "type": "problem",
             },
+            "name": "parameter-properties",
           },
           "prefer-as-const": {
             "create": [Function],
@@ -8754,6 +8854,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "schema": [],
               "type": "suggestion",
             },
+            "name": "prefer-as-const",
           },
           "prefer-destructuring": {
             "create": [Function],
@@ -8847,6 +8948,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               ],
               "type": "suggestion",
             },
+            "name": "prefer-destructuring",
           },
           "prefer-enum-initializers": {
             "create": [Function],
@@ -8864,6 +8966,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "schema": [],
               "type": "suggestion",
             },
+            "name": "prefer-enum-initializers",
           },
           "prefer-find": {
             "create": [Function],
@@ -8883,6 +8986,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "schema": [],
               "type": "suggestion",
             },
+            "name": "prefer-find",
           },
           "prefer-for-of": {
             "create": [Function],
@@ -8899,6 +9003,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "schema": [],
               "type": "suggestion",
             },
+            "name": "prefer-for-of",
           },
           "prefer-function-type": {
             "create": [Function],
@@ -8917,6 +9022,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "schema": [],
               "type": "suggestion",
             },
+            "name": "prefer-function-type",
           },
           "prefer-includes": {
             "create": [Function],
@@ -8936,6 +9042,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "schema": [],
               "type": "suggestion",
             },
+            "name": "prefer-includes",
           },
           "prefer-literal-enum-member": {
             "create": [Function],
@@ -8969,6 +9076,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               ],
               "type": "suggestion",
             },
+            "name": "prefer-literal-enum-member",
           },
           "prefer-namespace-keyword": {
             "create": [Function],
@@ -8986,6 +9094,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "schema": [],
               "type": "suggestion",
             },
+            "name": "prefer-namespace-keyword",
           },
           "prefer-nullish-coalescing": {
             "create": [Function],
@@ -9089,6 +9198,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               ],
               "type": "suggestion",
             },
+            "name": "prefer-nullish-coalescing",
           },
           "prefer-optional-chain": {
             "create": [Function],
@@ -9159,6 +9269,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               ],
               "type": "suggestion",
             },
+            "name": "prefer-optional-chain",
           },
           "prefer-promise-reject-errors": {
             "create": [Function],
@@ -9202,6 +9313,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               ],
               "type": "suggestion",
             },
+            "name": "prefer-promise-reject-errors",
           },
           "prefer-readonly": {
             "create": [Function],
@@ -9234,6 +9346,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               ],
               "type": "suggestion",
             },
+            "name": "prefer-readonly",
           },
           "prefer-readonly-parameter-types": {
             "create": [Function],
@@ -9387,6 +9500,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               ],
               "type": "suggestion",
             },
+            "name": "prefer-readonly-parameter-types",
           },
           "prefer-reduce-type-parameter": {
             "create": [Function],
@@ -9405,6 +9519,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "schema": [],
               "type": "problem",
             },
+            "name": "prefer-reduce-type-parameter",
           },
           "prefer-regexp-exec": {
             "create": [Function],
@@ -9423,6 +9538,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "schema": [],
               "type": "suggestion",
             },
+            "name": "prefer-regexp-exec",
           },
           "prefer-return-this-type": {
             "create": [Function],
@@ -9441,6 +9557,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "schema": [],
               "type": "suggestion",
             },
+            "name": "prefer-return-this-type",
           },
           "prefer-string-starts-ends-with": {
             "create": [Function],
@@ -9479,6 +9596,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               ],
               "type": "suggestion",
             },
+            "name": "prefer-string-starts-ends-with",
           },
           "prefer-ts-expect-error": {
             "create": [Function],
@@ -9510,6 +9628,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "schema": [],
               "type": "problem",
             },
+            "name": "prefer-ts-expect-error",
           },
           "promise-function-async": {
             "create": [Function],
@@ -9571,6 +9690,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               ],
               "type": "suggestion",
             },
+            "name": "promise-function-async",
           },
           "related-getter-setter-pairs": {
             "create": [Function],
@@ -9588,6 +9708,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "schema": [],
               "type": "problem",
             },
+            "name": "related-getter-setter-pairs",
           },
           "require-array-sort-compare": {
             "create": [Function],
@@ -9619,6 +9740,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               ],
               "type": "problem",
             },
+            "name": "require-array-sort-compare",
           },
           "require-await": {
             "create": [Function],
@@ -9639,6 +9761,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               "schema": [],
               "type": "suggestion",
             },
+            "name": "require-await",
           },
           "restrict-plus-operands": {
             "create": [Function],
@@ -9709,6 +9832,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               ],
               "type": "problem",
             },
+            "name": "restrict-plus-operands",
           },
           "restrict-template-expressions": {
             "create": [Function],
@@ -9902,6 +10026,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               ],
               "type": "problem",
             },
+            "name": "restrict-template-expressions",
           },
           "return-await": {
             "create": [Function],
@@ -9965,6 +10090,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               ],
               "type": "problem",
             },
+            "name": "return-await",
           },
           "sort-type-constituents": {
             "create": [Function],
@@ -10074,6 +10200,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               ],
               "type": "suggestion",
             },
+            "name": "sort-type-constituents",
           },
           "strict-boolean-expressions": {
             "create": [Function],
@@ -10172,6 +10299,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               ],
               "type": "suggestion",
             },
+            "name": "strict-boolean-expressions",
           },
           "switch-exhaustiveness-check": {
             "create": [Function],
@@ -10220,6 +10348,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               ],
               "type": "suggestion",
             },
+            "name": "switch-exhaustiveness-check",
           },
           "triple-slash-reference": {
             "create": [Function],
@@ -10274,6 +10403,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               ],
               "type": "suggestion",
             },
+            "name": "triple-slash-reference",
           },
           "typedef": {
             "create": [Function],
@@ -10344,6 +10474,7 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
               ],
               "type": "suggestion",
             },
+            "name": "typedef",
           },
           "unbound-method": {
             "create": [Function],
@@ -10380,6 +10511,7 @@ If a function does not access \`this\`, it can be annotated with \`this: void\`.
               ],
               "type": "problem",
             },
+            "name": "unbound-method",
           },
           "unified-signatures": {
             "create": [Function],
@@ -10418,6 +10550,7 @@ If a function does not access \`this\`, it can be annotated with \`this: void\`.
               ],
               "type": "suggestion",
             },
+            "name": "unified-signatures",
           },
           "use-unknown-in-catch-callback-variable": {
             "create": [Function],
@@ -10442,6 +10575,7 @@ If a function does not access \`this\`, it can be annotated with \`this: void\`.
               "schema": [],
               "type": "suggestion",
             },
+            "name": "use-unknown-in-catch-callback-variable",
           },
         },
       },

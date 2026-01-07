@@ -230,6 +230,7 @@ exports[`reactRules > should create react rules 1`] = `
   "react-hooks/void-use-memo": "error",
   "react-naming-convention/component-name": "error",
   "react-naming-convention/context-name": "error",
+  "react-naming-convention/ref-name": "error",
   "react-naming-convention/use-state": "error",
   "react-refresh/only-export-components": [
     "warn",
@@ -527,6 +528,7 @@ exports[`reactRules > should enable recommended TypeScript rules 1`] = `
   "react-hooks/void-use-memo": "error",
   "react-naming-convention/component-name": "error",
   "react-naming-convention/context-name": "error",
+  "react-naming-convention/ref-name": "error",
   "react-naming-convention/use-state": "error",
   "react-refresh/only-export-components": [
     "warn",
