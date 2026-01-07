@@ -1,3 +1,15 @@
+# [6.31.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.30.0...v6.31.0) (2026-01-07)
+
+
+### Bug Fixes
+
+* 🐛 padding-line-between-statements covers more ([0bc16fb](https://github.com/jimmy-guzman/eslint-config/commit/0bc16fbdcc010739a8f3539090de60ff252a7af2))
+
+
+### Features
+
+* ✨ bump deps ([b116a66](https://github.com/jimmy-guzman/eslint-config/commit/b116a6697d61595b541c552193a5a64c3fdcdb31))
+
 # [6.30.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.29.0...v6.30.0) (2025-12-31)
 
 
