@@ -1,4 +1,4 @@
-import type { TypeScriptOptions } from "../types";
+import type { TypedConfigItem, TypeScriptOptions } from "../types";
 
 import { GLOB_JS, GLOB_JSX, GLOB_TESTS } from "../globs";
 import { typescriptRules } from "../rules/typescript";
@@ -7,7 +7,7 @@ import { interopDefault } from "../utils/interop-default";
 
 export default async function typescriptConfig(
   options: boolean | TypeScriptOptions,
-) {
+): Promise<TypedConfigItem[]> {
   const { configs } = await import("typescript-eslint");
   const extractedOptions = extractOptions(options);
 
@@ -41,8 +41,8 @@ export default async function typescriptConfig(
       files: GLOB_TESTS,
       name: "jimmy.codes/typescript/testing",
       rules: {
-        "@typescript-eslint/no-unsafe-argument": "off",
-        "@typescript-eslint/no-unsafe-assignment": "off",
+        "@typescript-eslint/no-unsafe-argument": "off" as const,
+        "@typescript-eslint/no-unsafe-assignment": "off" as const,
       },
     },
     ...(extractedOptions?.erasableSyntaxOnly
@@ -55,10 +55,10 @@ export default async function typescriptConfig(
               ),
             },
             rules: {
-              "erasable-syntax-only/enums": "error",
-              "erasable-syntax-only/import-aliases": "error",
-              "erasable-syntax-only/namespaces": "error",
-              "erasable-syntax-only/parameter-properties": "error",
+              "erasable-syntax-only/enums": "error" as const,
+              "erasable-syntax-only/import-aliases": "error" as const,
+              "erasable-syntax-only/namespaces": "error" as const,
+              "erasable-syntax-only/parameter-properties": "error" as const,
             },
           },
         ]

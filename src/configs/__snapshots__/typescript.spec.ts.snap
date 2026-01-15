@@ -7,7 +7,7 @@ exports[`typescriptConfig > should create config 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.52.0",
+          "version": "8.53.0",
         },
         "parseForESLint": [Function],
       },
@@ -144,6 +144,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "@typescript-eslint/restrict-template-expressions": "error",
               "@typescript-eslint/return-await": "error",
               "@typescript-eslint/strict-boolean-expressions": "error",
+              "@typescript-eslint/strict-void-return": "error",
               "@typescript-eslint/switch-exhaustiveness-check": "error",
               "@typescript-eslint/triple-slash-reference": "error",
               "@typescript-eslint/unbound-method": "error",
@@ -250,6 +251,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "@typescript-eslint/restrict-template-expressions": "off",
               "@typescript-eslint/return-await": "off",
               "@typescript-eslint/strict-boolean-expressions": "off",
+              "@typescript-eslint/strict-void-return": "off",
               "@typescript-eslint/switch-exhaustiveness-check": "off",
               "@typescript-eslint/unbound-method": "off",
               "@typescript-eslint/use-unknown-in-catch-callback-variable": "off",
@@ -298,7 +300,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.52.0",
+                    "version": "8.53.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -467,6 +469,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "@typescript-eslint/restrict-template-expressions": "error",
                 "@typescript-eslint/return-await": "error",
                 "@typescript-eslint/strict-boolean-expressions": "error",
+                "@typescript-eslint/strict-void-return": "error",
                 "@typescript-eslint/switch-exhaustiveness-check": "error",
                 "@typescript-eslint/triple-slash-reference": "error",
                 "@typescript-eslint/unbound-method": "error",
@@ -506,7 +509,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.52.0",
+                  "version": "8.53.0",
                 },
                 "parseForESLint": [Function],
               },
@@ -584,6 +587,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "@typescript-eslint/restrict-template-expressions": "off",
               "@typescript-eslint/return-await": "off",
               "@typescript-eslint/strict-boolean-expressions": "off",
+              "@typescript-eslint/strict-void-return": "off",
               "@typescript-eslint/switch-exhaustiveness-check": "off",
               "@typescript-eslint/unbound-method": "off",
               "@typescript-eslint/use-unknown-in-catch-callback-variable": "off",
@@ -629,7 +633,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.52.0",
+                    "version": "8.53.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -709,7 +713,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.52.0",
+                    "version": "8.53.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -816,7 +820,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.52.0",
+                    "version": "8.53.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -900,7 +904,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.52.0",
+                    "version": "8.53.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1140,7 +1144,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.52.0",
+                    "version": "8.53.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1264,7 +1268,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.52.0",
+                    "version": "8.53.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1335,7 +1339,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.52.0",
+                    "version": "8.53.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1415,7 +1419,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.52.0",
+                    "version": "8.53.0",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1963,7 +1967,7 @@ exports[`typescriptConfig > should create config 1`] = `
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
           "namespace": "@typescript-eslint",
-          "version": "8.52.0",
+          "version": "8.53.0",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -8068,11 +8072,15 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                 "url": "https://typescript-eslint.io/rules/no-unsafe-call",
               },
               "messages": {
-                "unsafeCall": "Unsafe call of a(n) {{type}} typed value.",
-                "unsafeCallThis": "Unsafe call of a(n) {{type}} typed value. \`this\` is typed as {{type}}.
+                "errorCall": "Unsafe call of a type that could not be resolved.",
+                "errorCallThis": "Unsafe call of a \`this\` type that could not be resolved.",
+                "errorNew": "Unsafe construction of a type that could not be resolved.",
+                "errorTemplateTag": "Unsafe use of a template tag whose type could not be resolved.",
+                "unsafeCall": "Unsafe call of {{type}} typed value.",
+                "unsafeCallThis": "Unsafe call of {{type}} typed value. \`this\` is typed as {{type}}.
 You can try to fix this by turning on the \`noImplicitThis\` compiler option, or adding a \`this\` parameter to the function.",
-                "unsafeNew": "Unsafe construction of a(n) {{type}} typed value.",
-                "unsafeTemplateTag": "Unsafe use of a(n) {{type}} typed template tag.",
+                "unsafeNew": "Unsafe construction of {{type}} typed value.",
+                "unsafeTemplateTag": "Unsafe use of {{type}} typed template tag.",
               },
               "schema": [],
               "type": "problem",
@@ -8151,8 +8159,12 @@ Prefer explicitly defining any function parameters and return type.",
                 "url": "https://typescript-eslint.io/rules/no-unsafe-member-access",
               },
               "messages": {
-                "unsafeComputedMemberAccess": "Computed name {{property}} resolves to an {{type}} value.",
-                "unsafeMemberExpression": "Unsafe member access {{property}} on an {{type}} value.",
+                "errorComputedMemberAccess": "The type of computed name {{property}} cannot be resolved.",
+                "errorMemberExpression": "Unsafe member access {{property}} on a type that cannot be resolved.",
+                "errorThisMemberExpression": "Unsafe member access {{property}}. The type of \`this\` cannot be resolved.
+You can try to fix this by turning on the \`noImplicitThis\` compiler option, or adding a \`this\` parameter to the function.",
+                "unsafeComputedMemberAccess": "Computed name {{property}} resolves to an \`any\` value.",
+                "unsafeMemberExpression": "Unsafe member access {{property}} on an \`any\` value.",
                 "unsafeThisMemberExpression": "Unsafe member access {{property}} on an \`any\` value. \`this\` is typed as \`any\`.
 You can try to fix this by turning on the \`noImplicitThis\` compiler option, or adding a \`this\` parameter to the function.",
               },
@@ -8316,7 +8328,11 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                 "recommended": "recommended",
                 "url": "https://typescript-eslint.io/rules/no-unused-vars",
               },
+              "fixable": "code",
+              "hasSuggestions": true,
               "messages": {
+                "removeUnusedImportDeclaration": "Remove unused import declaration.",
+                "removeUnusedVar": "Remove unused variable "{{varName}}".",
                 "unusedVar": "'{{varName}}' is {{action}} but never used{{additional}}.",
                 "usedIgnoredVar": "'{{varName}}' is marked as ignored but is used{{additional}}.",
                 "usedOnlyAsType": "'{{varName}}' is {{action}} but only used as a type{{additional}}.",
@@ -8363,6 +8379,17 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
                         "destructuredArrayIgnorePattern": {
                           "description": "Regular expressions of destructured array variable names to not check for usage.",
                           "type": "string",
+                        },
+                        "enableAutofixRemoval": {
+                          "additionalProperties": false,
+                          "description": "Configurable automatic fixes for different types of unused variables.",
+                          "properties": {
+                            "imports": {
+                              "description": "Whether to enable automatic removal of unused imports.",
+                              "type": "boolean",
+                            },
+                          },
+                          "type": "object",
                         },
                         "ignoreClassWithStaticInitBlock": {
                           "description": "Whether to ignore classes with at least one static initialization block.",
@@ -10301,6 +10328,40 @@ You can try to fix this by turning on the \`noImplicitThis\` compiler option, or
             },
             "name": "strict-boolean-expressions",
           },
+          "strict-void-return": {
+            "create": [Function],
+            "defaultOptions": [
+              {
+                "allowReturnAny": false,
+              },
+            ],
+            "meta": {
+              "docs": {
+                "description": "Disallow passing a value-returning function in a position accepting a void function",
+                "requiresTypeChecking": true,
+                "url": "https://typescript-eslint.io/rules/strict-void-return",
+              },
+              "messages": {
+                "asyncFunc": "Async function used in a context where a void function is expected.",
+                "nonVoidFunc": "Value-returning function used in a context where a void function is expected.",
+                "nonVoidReturn": "Value returned in a context where a void return is expected.",
+              },
+              "schema": [
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "allowReturnAny": {
+                      "description": "Whether to allow functions returning \`any\` to be used in place expecting a \`void\` function.",
+                      "type": "boolean",
+                    },
+                  },
+                  "type": "object",
+                },
+              ],
+              "type": "problem",
+            },
+            "name": "strict-void-return",
+          },
           "switch-exhaustiveness-check": {
             "create": [Function],
             "defaultOptions": [
@@ -10888,6 +10949,7 @@ If a function does not access \`this\`, it can be annotated with \`this: void\`.
       "@typescript-eslint/restrict-template-expressions": "off",
       "@typescript-eslint/return-await": "off",
       "@typescript-eslint/strict-boolean-expressions": "off",
+      "@typescript-eslint/strict-void-return": "off",
       "@typescript-eslint/switch-exhaustiveness-check": "off",
       "@typescript-eslint/unbound-method": "off",
       "@typescript-eslint/use-unknown-in-catch-callback-variable": "off",

@@ -1,4 +1,4 @@
-import type { PlaywrightOptions } from "../types";
+import type { PlaywrightOptions, TypedConfigItem } from "../types";
 
 import { GLOB_PLAYWRIGHT } from "../globs";
 import { playwrightRules } from "../rules/playwright";
@@ -7,7 +7,7 @@ import { interopDefault } from "../utils/interop-default";
 
 export default async function playwrightConfig(
   options: boolean | PlaywrightOptions,
-) {
+): Promise<TypedConfigItem[]> {
   const extractedOptions = extractOptions(options);
 
   const playwrightPlugin = await interopDefault(

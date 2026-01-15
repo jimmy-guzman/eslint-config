@@ -1,11 +1,13 @@
-import type { NextJSOptions } from "../types";
+import type { NextJSOptions, TypedConfigItem } from "../types";
 
 import { GLOB_NEXTJS } from "../globs";
 import { nextjsRules } from "../rules/nextjs";
 import { extractOptions } from "../utils/extract-options";
 import { interopDefault } from "../utils/interop-default";
 
-export default async function nextjsConfig(options: boolean | NextJSOptions) {
+export default async function nextjsConfig(
+  options: boolean | NextJSOptions,
+): Promise<TypedConfigItem[]> {
   const extractedOptions = extractOptions(options);
 
   const nextjsPlugin = await interopDefault(import("@next/eslint-plugin-next"));
