@@ -80,5 +80,15 @@ export const stylisticRules = {
       next: "*",
       prev: "if",
     },
+    {
+      blankLine: "always",
+      next: "expression",
+      prev: "*",
+    },
+    {
+      blankLine: "any",
+      next: "expression",
+      prev: "expression",
+    },
   ],
 } satisfies Rules;
