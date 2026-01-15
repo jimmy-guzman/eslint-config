@@ -1,3 +1,10 @@
+## [6.31.1](https://github.com/jimmy-guzman/eslint-config/compare/v6.31.0...v6.31.1) (2026-01-15)
+
+
+### Bug Fixes
+
+* 🐛 add blank line before expressions ([#259](https://github.com/jimmy-guzman/eslint-config/issues/259)) ([7617a3e](https://github.com/jimmy-guzman/eslint-config/commit/7617a3ee527102baf961cd1cff400d944b8b052e))
+
 # [6.31.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.30.0...v6.31.0) (2026-01-07)
 
 
