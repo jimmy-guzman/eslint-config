@@ -6,7 +6,7 @@ import type { TypedConfigItem } from "../types";
 
 import { importsRules } from "../rules/imports";
 
-const importsTypescriptConfig = (): TypedConfigItem[] => {
+const importsTypescriptConfig = () => {
   const { rules, settings } = configs.typescript;
 
   return [
@@ -21,7 +21,7 @@ const importsTypescriptConfig = (): TypedConfigItem[] => {
         "import-x/resolver-next": [createTypeScriptImportResolver()],
       },
     },
-  ];
+  ] satisfies TypedConfigItem[];
 };
 
 interface ImportsConfigOptions {
@@ -30,7 +30,7 @@ interface ImportsConfigOptions {
 
 export const importsConfig = ({
   isTypescriptEnabled = false,
-}: ImportsConfigOptions = {}): TypedConfigItem[] => {
+}: ImportsConfigOptions = {}) => {
   return [
     {
       name: "jimmy.codes/imports",
@@ -41,5 +41,5 @@ export const importsConfig = ({
       rules: importsRules,
     },
     ...(isTypescriptEnabled ? importsTypescriptConfig() : []),
-  ];
+  ] satisfies TypedConfigItem[];
 };

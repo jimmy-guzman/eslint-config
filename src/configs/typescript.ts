@@ -7,7 +7,7 @@ import { interopDefault } from "../utils/interop-default";
 
 export default async function typescriptConfig(
   options: boolean | TypeScriptOptions,
-): Promise<TypedConfigItem[]> {
+) {
   const { configs } = await import("typescript-eslint");
   const extractedOptions = extractOptions(options);
 
@@ -63,5 +63,5 @@ export default async function typescriptConfig(
           },
         ]
       : []),
-  ];
+  ] satisfies TypedConfigItem[];
 }

@@ -7,7 +7,7 @@ import { interopDefault } from "../utils/interop-default";
 
 export default async function playwrightConfig(
   options: boolean | PlaywrightOptions,
-): Promise<TypedConfigItem[]> {
+) {
   const extractedOptions = extractOptions(options);
 
   const playwrightPlugin = await interopDefault(
@@ -21,5 +21,5 @@ export default async function playwrightConfig(
       name: "jimmy.codes/playwright",
       rules: await playwrightRules(extractedOptions),
     },
-  ];
+  ] satisfies TypedConfigItem[];
 }

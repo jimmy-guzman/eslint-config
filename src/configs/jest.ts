@@ -5,9 +5,7 @@ import { jestRules } from "../rules/jest";
 import { extractOptions } from "../utils/extract-options";
 import { interopDefault } from "../utils/interop-default";
 
-export default async function jestConfig(
-  options: boolean | JestOptions,
-): Promise<TypedConfigItem[]> {
+export default async function jestConfig(options: boolean | JestOptions) {
   const extractedOptions = extractOptions(options);
 
   const jestPlugin = await interopDefault(import("eslint-plugin-jest"));
@@ -20,5 +18,5 @@ export default async function jestConfig(
       name: "jimmy.codes/jest",
       rules: await jestRules(extractedOptions),
     },
-  ];
+  ] satisfies TypedConfigItem[];
 }

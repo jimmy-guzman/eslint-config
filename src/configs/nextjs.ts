@@ -5,9 +5,7 @@ import { nextjsRules } from "../rules/nextjs";
 import { extractOptions } from "../utils/extract-options";
 import { interopDefault } from "../utils/interop-default";
 
-export default async function nextjsConfig(
-  options: boolean | NextJSOptions,
-): Promise<TypedConfigItem[]> {
+export default async function nextjsConfig(options: boolean | NextJSOptions) {
   const extractedOptions = extractOptions(options);
 
   const nextjsPlugin = await interopDefault(import("@next/eslint-plugin-next"));
@@ -21,5 +19,5 @@ export default async function nextjsConfig(
       },
       rules: await nextjsRules(extractedOptions),
     },
-  ];
+  ] satisfies TypedConfigItem[];
 }

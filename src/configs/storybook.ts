@@ -6,7 +6,7 @@ import { upwarn } from "../utils/upwarn";
 
 export default async function storybookConfig(
   options: boolean | StorybookOptions,
-): Promise<TypedConfigItem[]> {
+) {
   const extractedOptions = extractOptions(options);
   const { configs } = await interopDefault(import("eslint-plugin-storybook"));
 
@@ -35,5 +35,5 @@ export default async function storybookConfig(
         ...mainConfig?.rules,
       },
     },
-  ];
+  ] satisfies TypedConfigItem[];
 }

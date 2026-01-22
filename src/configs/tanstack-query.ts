@@ -6,7 +6,7 @@ import { interopDefault } from "../utils/interop-default";
 
 export default async function tanstackQueryConfig(
   options: boolean | TanstackQueryOptions,
-): Promise<TypedConfigItem[]> {
+) {
   const extractedOptions = extractOptions(options);
 
   const queryPlugin = await interopDefault(
@@ -31,5 +31,5 @@ export default async function tanstackQueryConfig(
         ...extractedOptions?.overrides,
       },
     },
-  ];
+  ] satisfies TypedConfigItem[];
 }

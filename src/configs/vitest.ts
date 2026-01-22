@@ -5,9 +5,7 @@ import { vitestRules } from "../rules/vitest";
 import { extractOptions } from "../utils/extract-options";
 import { interopDefault } from "../utils/interop-default";
 
-export default async function vitestConfig(
-  options: boolean | VitestOptions,
-): Promise<TypedConfigItem[]> {
+export default async function vitestConfig(options: boolean | VitestOptions) {
   const vitestPlugin = await interopDefault(import("@vitest/eslint-plugin"));
   const extractedOptions = extractOptions(options);
 
@@ -27,5 +25,5 @@ export default async function vitestConfig(
         },
       },
     },
-  ];
+  ] satisfies TypedConfigItem[];
 }

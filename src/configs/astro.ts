@@ -6,9 +6,7 @@ import { GLOB_ASTRO } from "../globs";
 import { extractOptions } from "../utils/extract-options";
 import { interopDefault } from "../utils/interop-default";
 
-export default async function astroConfig(
-  options: AstroOptions | boolean,
-): Promise<TypedConfigItem[]> {
+export default async function astroConfig(options: AstroOptions | boolean) {
   const extractedOptions = extractOptions(options);
   const files = [GLOB_ASTRO];
 
@@ -76,5 +74,5 @@ export default async function astroConfig(
         "import-x/core-modules": ["astro:content"],
       },
     },
-  ];
+  ] satisfies TypedConfigItem[];
 }

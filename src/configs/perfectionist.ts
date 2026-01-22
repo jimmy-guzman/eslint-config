@@ -4,7 +4,7 @@ import type { TypedConfigItem } from "../types";
 
 import { perfectionistRules } from "../rules/perfectionist";
 
-export const perfectionistConfig = (): TypedConfigItem[] => {
+export const perfectionistConfig = () => {
   return [
     {
       name: "jimmy.codes/perfectionist",
@@ -13,5 +13,5 @@ export const perfectionistConfig = (): TypedConfigItem[] => {
       },
       rules: perfectionistRules,
     },
-  ];
+  ] satisfies TypedConfigItem[];
 };

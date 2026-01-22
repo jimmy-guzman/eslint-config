@@ -1,5 +1,7 @@
 import { recommended } from "@eslint-community/eslint-plugin-eslint-comments/configs";
 
+import type { TypedConfigItem } from "../types";
+
 import { eslintCommentsRules } from "../rules/eslint-comments";
 
 export const eslintCommentsConfig = () => {
@@ -9,5 +11,5 @@ export const eslintCommentsConfig = () => {
       name: "jimmy.codes/eslint-comments",
       rules: eslintCommentsRules,
     },
-  ];
+  ] satisfies TypedConfigItem[];
 };

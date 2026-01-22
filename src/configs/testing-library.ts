@@ -7,7 +7,7 @@ import { interopDefault } from "../utils/interop-default";
 
 export default async function testingLibraryConfig(
   options: boolean | TestingLibraryOptions,
-): Promise<TypedConfigItem[]> {
+) {
   const extractedOptions = extractOptions(options);
 
   const [jestDom, testingLibrary] = await Promise.all([
@@ -26,5 +26,5 @@ export default async function testingLibraryConfig(
       },
       rules: await testingLibraryRules(extractedOptions),
     },
-  ];
+  ] satisfies TypedConfigItem[];
 }
