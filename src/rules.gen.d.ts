@@ -5253,7 +5253,7 @@ export interface RuleOptions {
    */
   'react-x/no-direct-mutation-state'?: Linter.RuleEntry<[]>
   /**
-   * Disallows duplicate 'key' on elements in the same array or a list of 'children'.
+   * Prevents duplicate 'key' props on sibling elements when rendering lists.
    * @see https://eslint-react.xyz/docs/rules/no-duplicate-key
    */
   'react-x/no-duplicate-key'?: Linter.RuleEntry<[]>
@@ -11483,6 +11483,8 @@ type JsdocTypeFormatting = []|[{
   
   objectFieldSeparatorTrailingPunctuation?: boolean
   
+  objectTypeBracketSpacing?: string
+  
   parameterDefaultValueSpacing?: string
   
   postMethodNameSpacing?: string
@@ -13786,6 +13788,8 @@ type PerfectionistSortEnums = []|[{
   
   sortByValue?: ("always" | "ifNumericEnum" | "never")
   
+  useExperimentalDependencyDetection?: boolean
+  
   partitionByComment?: (boolean | (({
     
     pattern: string
@@ -14604,6 +14608,8 @@ type PerfectionistSortImports = {
   sortSideEffects?: boolean
   
   environment?: ("node" | "bun")
+  
+  useExperimentalDependencyDetection?: boolean
   
   partitionByComment?: (boolean | (({
     
@@ -15600,6 +15606,8 @@ type PerfectionistSortModules = []|[{
   })[]
   newlinesBetween?: ("ignore" | number)
   
+  useExperimentalDependencyDetection?: boolean
+  
   partitionByComment?: (boolean | (({
     
     pattern: string
@@ -16241,6 +16249,7 @@ type PerfectionistSortObjects = {
     type: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted" | "subgroup-order")
     
     order?: ("asc" | "desc")
+    sortBy?: ("name" | "value")
   }
   
   type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted" | "subgroup-order")
@@ -16254,6 +16263,7 @@ type PerfectionistSortObjects = {
   locales?: (string | string[])
   
   order?: ("asc" | "desc")
+  sortBy?: ("name" | "value")
   
   customGroups?: ({
     
@@ -16262,6 +16272,7 @@ type PerfectionistSortObjects = {
       type: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted" | "subgroup-order")
       
       order?: ("asc" | "desc")
+      sortBy?: ("name" | "value")
     }
     
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted" | "subgroup-order")
@@ -16270,6 +16281,7 @@ type PerfectionistSortObjects = {
     newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
+    sortBy?: ("name" | "value")
     
     anyOf: [{
       
@@ -16337,6 +16349,7 @@ type PerfectionistSortObjects = {
       type: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted" | "subgroup-order")
       
       order?: ("asc" | "desc")
+      sortBy?: ("name" | "value")
     }
     
     type?: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted" | "subgroup-order")
@@ -16345,6 +16358,7 @@ type PerfectionistSortObjects = {
     newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
+    sortBy?: ("name" | "value")
     
     elementNamePattern?: (({
       
@@ -16386,6 +16400,7 @@ type PerfectionistSortObjects = {
       type: ("alphabetical" | "natural" | "line-length" | "custom" | "unsorted" | "subgroup-order")
       
       order?: ("asc" | "desc")
+      sortBy?: ("name" | "value")
     }
     
     commentAbove?: string
@@ -16394,6 +16409,7 @@ type PerfectionistSortObjects = {
     newlinesInside?: ("ignore" | number)
     
     order?: ("asc" | "desc")
+    sortBy?: ("name" | "value")
   })[]
   newlinesBetween?: ("ignore" | number)
   
@@ -16459,6 +16475,8 @@ type PerfectionistSortObjects = {
   }
   
   styledComponents?: boolean
+  
+  useExperimentalDependencyDetection?: boolean
   
   partitionByComment?: (boolean | (({
     
@@ -16979,6 +16997,8 @@ type PerfectionistSortVariableDeclarations = []|[{
     order?: ("asc" | "desc")
   })[]
   newlinesBetween?: ("ignore" | number)
+  
+  useExperimentalDependencyDetection?: boolean
   
   partitionByComment?: (boolean | (({
     

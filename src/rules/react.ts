@@ -98,6 +98,7 @@ export const reactRules = async (options?: ReactOptions) => {
     "react-x/no-duplicate-key": "error",
     "react-x/no-missing-context-display-name": "error",
     "react-x/no-unnecessary-key": "error",
+    "react-x/no-unnecessary-use-ref": "error",
     "react-x/prefer-namespace-import": "error",
     ...options?.overrides,
   } satisfies Rules;
