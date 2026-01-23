@@ -1,4 +1,4 @@
-import type { PlaywrightOptions } from "../types";
+import type { PlaywrightOptions, TypedConfigItem } from "../types";
 
 import { GLOB_PLAYWRIGHT } from "../globs";
 import { playwrightRules } from "../rules/playwright";
@@ -21,5 +21,5 @@ export default async function playwrightConfig(
       name: "jimmy.codes/playwright",
       rules: await playwrightRules(extractedOptions),
     },
-  ];
+  ] satisfies TypedConfigItem[];
 }

@@ -9,6 +9,7 @@ export const playwrightRules = async (options?: PlaywrightOptions) => {
 
   return {
     ...playwrightPlugin.configs["flat/recommended"].rules,
+    "playwright/consistent-spacing-between-blocks": "error",
     "playwright/expect-expect": "error",
     "playwright/max-nested-describe": "error",
     "playwright/no-commented-out-tests": "error",

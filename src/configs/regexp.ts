@@ -1,5 +1,7 @@
 import * as regexpPlugin from "eslint-plugin-regexp";
 
+import type { TypedConfigItem } from "../types";
+
 import { regexpRules } from "../rules/regexp";
 
 export const regexpConfig = () => {
@@ -9,5 +11,5 @@ export const regexpConfig = () => {
       plugins: { regexp: regexpPlugin },
       rules: regexpRules,
     },
-  ];
+  ] satisfies TypedConfigItem[];
 };

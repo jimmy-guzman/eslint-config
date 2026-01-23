@@ -59,7 +59,7 @@ export const defineConfig = async (
     vitest = false,
   }: Options = {},
   ...moreOverrides: Linter.Config[] | TypedConfigItem[]
-) => {
+): Promise<TypedConfigItem[]> => {
   const featured = createFeatured(autoDetect);
 
   const isTypescriptEnabled = featured(typescript, hasTypescript);
@@ -85,7 +85,7 @@ export const defineConfig = async (
     stylisticConfig(),
   ];
 
-  const featureConfigs = await Promise.all([
+  const featureConfigs = (await Promise.all([
     isTypescriptEnabled && unwrap(import("./configs/typescript"), typescript),
     isReactEnabled && unwrap(import("./configs/react"), react),
     isTanstackQueryEnabled &&
@@ -98,7 +98,7 @@ export const defineConfig = async (
     isPlaywrightEnabled && unwrap(import("./configs/playwright"), playwright),
     isStorybookEnabled && unwrap(import("./configs/storybook"), storybook),
     isNextjsEnabled && unwrap(import("./configs/nextjs"), nextjs),
-  ]);
+  ])) as TypedConfigItem[]; // this type assertion is needed due to a TS limitation with conditional types and Promise.all
 
   return [
     ...(gitignore ? [gitignoreConfig({ strict: false })] : []),

@@ -7,9 +7,7 @@ import { reactRules } from "../rules/react";
 import { extractOptions } from "../utils/extract-options";
 import { interopDefault } from "../utils/interop-default";
 
-export default async function reactConfig(
-  options: boolean | ReactOptions,
-): Promise<TypedConfigItem[]> {
+export default async function reactConfig(options: boolean | ReactOptions) {
   const extractedOptions = extractOptions(options);
   const [
     reactPlugin,
@@ -66,5 +64,5 @@ export default async function reactConfig(
         },
       },
     },
-  ];
+  ] satisfies TypedConfigItem[];
 }

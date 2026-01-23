@@ -1,4 +1,4 @@
-import type { Rules, StorybookOptions } from "../types";
+import type { StorybookOptions, TypedConfigItem } from "../types";
 
 import { extractOptions } from "../utils/extract-options";
 import { interopDefault } from "../utils/interop-default";
@@ -26,14 +26,14 @@ export default async function storybookConfig(
         "storybook/meta-satisfies-type": "error",
         "unicorn/no-anonymous-default-export": "off",
         ...extractedOptions?.overrides,
-      } satisfies Rules,
+      },
     },
     {
       files: mainConfig?.files,
       name: "jimmy.codes/storybook/main-rules",
       rules: {
         ...mainConfig?.rules,
-      } satisfies Rules,
+      },
     },
-  ];
+  ] satisfies TypedConfigItem[];
 }

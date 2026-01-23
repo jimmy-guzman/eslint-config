@@ -95,7 +95,10 @@ export const reactRules = async (options?: ReactOptions) => {
     "react-x/jsx-dollar": "off", // Seems a bit too aggressive
     "react-x/jsx-shorthand-boolean": "error",
     "react-x/jsx-shorthand-fragment": "error",
+    "react-x/no-duplicate-key": "error",
     "react-x/no-missing-context-display-name": "error",
+    "react-x/no-unnecessary-key": "error",
+    "react-x/no-unnecessary-use-ref": "error",
     "react-x/prefer-namespace-import": "error",
     ...options?.overrides,
   } satisfies Rules;

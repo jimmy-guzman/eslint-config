@@ -18,38 +18,35 @@ describe("importsConfig", () => {
   it("should contain typescript settings config when enabled", () => {
     const [_base, typescript] = importsConfig({ isTypescriptEnabled: true });
 
-    expect(typescript?.settings).toMatchInlineSnapshot(`
-      {
-        "import-x/extensions": [
-          ".ts",
-          ".tsx",
-          ".cts",
-          ".mts",
-          ".js",
-          ".jsx",
-          ".cjs",
-          ".mjs",
-        ],
-        "import-x/external-module-folders": [
-          "node_modules",
-          "node_modules/@types",
-        ],
-        "import-x/parsers": {
-          "@typescript-eslint/parser": [
+    expect(typescript).toStrictEqual(
+      expect.objectContaining({
+        settings: {
+          "import-x/extensions": [
             ".ts",
             ".tsx",
             ".cts",
             ".mts",
+            ".js",
+            ".jsx",
+            ".cjs",
+            ".mjs",
+          ],
+          "import-x/external-module-folders": [
+            "node_modules",
+            "node_modules/@types",
+          ],
+          "import-x/parsers": {
+            "@typescript-eslint/parser": [".ts", ".tsx", ".cts", ".mts"],
+          },
+          "import-x/resolver-next": [
+            {
+              interfaceVersion: 3,
+              name: "eslint-import-resolver-typescript",
+              resolve: expect.any(Function),
+            },
           ],
         },
-        "import-x/resolver-next": [
-          {
-            "interfaceVersion": 3,
-            "name": "eslint-import-resolver-typescript",
-            "resolve": [Function],
-          },
-        ],
-      }
-    `);
+      }),
+    );
   });
 });

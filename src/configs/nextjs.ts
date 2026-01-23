@@ -1,4 +1,4 @@
-import type { NextJSOptions } from "../types";
+import type { NextJSOptions, TypedConfigItem } from "../types";
 
 import { GLOB_NEXTJS } from "../globs";
 import { nextjsRules } from "../rules/nextjs";
@@ -19,5 +19,5 @@ export default async function nextjsConfig(options: boolean | NextJSOptions) {
       },
       rules: await nextjsRules(extractedOptions),
     },
-  ];
+  ] satisfies TypedConfigItem[];
 }
