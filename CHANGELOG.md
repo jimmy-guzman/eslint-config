@@ -1,3 +1,16 @@
+# [7.0.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.31.1...v7.0.0) (2026-01-23)
+
+
+### Features
+
+* ✨ bump deps ([#257](https://github.com/jimmy-guzman/eslint-config/issues/257)) ([fbbb9f1](https://github.com/jimmy-guzman/eslint-config/commit/fbbb9f109895738023c2fab0b10f2e7ab942a818))
+
+
+### BREAKING CHANGES
+
+* 💥 `node` requires at least v20.19.0 & `eslint` now
+requires v9.38.0
+
 ## [6.31.1](https://github.com/jimmy-guzman/eslint-config/compare/v6.31.0...v6.31.1) (2026-01-15)
 
 
