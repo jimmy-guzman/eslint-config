@@ -1,3 +1,10 @@
+# [7.1.0](https://github.com/jimmy-guzman/eslint-config/compare/v7.0.0...v7.1.0) (2026-02-03)
+
+
+### Features
+
+* ✨ add experimental rsc eslint rule ([#260](https://github.com/jimmy-guzman/eslint-config/issues/260)) ([bc43ee4](https://github.com/jimmy-guzman/eslint-config/commit/bc43ee4fef69cbfe235e43373058b04e5ba06dce))
+
 # [7.0.0](https://github.com/jimmy-guzman/eslint-config/compare/v6.31.1...v7.0.0) (2026-01-23)
 
 
