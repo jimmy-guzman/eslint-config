@@ -28,6 +28,7 @@ export const reactRules = async (options?: ReactOptions) => {
     { configs: reactHooksExtraConfigs },
     { configs: reactWebApiConfigs },
     { configs: reactNamingConventionConfigs },
+    { configs: reactRscConfigs },
   ] = await Promise.all([
     interopDefault(import("eslint-plugin-react-x")),
     interopDefault(import("eslint-plugin-jsx-a11y")),
@@ -35,6 +36,7 @@ export const reactRules = async (options?: ReactOptions) => {
     interopDefault(import("eslint-plugin-react-hooks-extra")),
     interopDefault(import("eslint-plugin-react-web-api")),
     interopDefault(import("eslint-plugin-react-naming-convention")),
+    interopDefault(import("eslint-plugin-react-rsc")),
   ]);
   const isUsingNextjs = hasNext();
   const isUsingVite = hasVite();
@@ -66,6 +68,7 @@ export const reactRules = async (options?: ReactOptions) => {
     ...upwarn(reactHooksExtraConfigs.recommended.rules),
     ...upwarn(reactWebApiConfigs.recommended.rules),
     ...upwarn(reactNamingConventionConfigs.recommended.rules),
+    ...upwarn(reactRscConfigs.recommended.rules),
     "react-compiler/react-compiler": "error",
     "react-hooks-extra/no-direct-set-state-in-use-effect": "off", // Handled by react-hooks/set-state-in-effect
     "react-hooks/component-hook-factories": "error",

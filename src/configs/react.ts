@@ -19,6 +19,7 @@ export default async function reactConfig(options: boolean | ReactOptions) {
     reactDomPlugin,
     reactWebApiPlugin,
     reactNamingConventionPlugin,
+    reactRscPlugin,
   ] = await Promise.all([
     interopDefault(import("eslint-plugin-react-x")),
     interopDefault(import("eslint-plugin-jsx-a11y")),
@@ -29,6 +30,7 @@ export default async function reactConfig(options: boolean | ReactOptions) {
     interopDefault(import("eslint-plugin-react-dom")),
     interopDefault(import("eslint-plugin-react-web-api")),
     interopDefault(import("eslint-plugin-react-naming-convention")),
+    interopDefault(import("eslint-plugin-react-rsc")),
   ]);
 
   return [
@@ -54,6 +56,7 @@ export default async function reactConfig(options: boolean | ReactOptions) {
         "react-hooks-extra": reactHooksExtraPlugin,
         "react-naming-convention": reactNamingConventionPlugin,
         "react-refresh": reactRefreshPlugin,
+        "react-rsc": reactRscPlugin,
         "react-web-api": reactWebApiPlugin,
         "react-x": reactPlugin,
       },
