@@ -272,7 +272,6 @@ exports[`reactRules > should create react rules 1`] = `
   "react-x/no-direct-mutation-state": "error",
   "react-x/no-duplicate-key": "error",
   "react-x/no-forward-ref": "error",
-  "react-x/no-implicit-key": "error",
   "react-x/no-missing-context-display-name": "error",
   "react-x/no-missing-key": "error",
   "react-x/no-misused-capture-owner-stack": "error",

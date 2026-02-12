@@ -20,6 +20,7 @@ exports[`should create unicorn rules 1`] = `
   "unicorn/explicit-length-check": "error",
   "unicorn/filename-case": "off",
   "unicorn/import-style": "off",
+  "unicorn/isolated-functions": "error",
   "unicorn/new-for-builtins": "error",
   "unicorn/no-abusive-eslint-disable": "off",
   "unicorn/no-accessor-recursion": "error",
