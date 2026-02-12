@@ -1,3 +1,10 @@
+# [7.2.0](https://github.com/jimmy-guzman/eslint-config/compare/v7.1.0...v7.2.0) (2026-02-12)
+
+
+### Features
+
+* ✨ bump deps ([#261](https://github.com/jimmy-guzman/eslint-config/issues/261)) ([4ff89f3](https://github.com/jimmy-guzman/eslint-config/commit/4ff89f3ecbeb73a722f0f55c561dd7c63c041c66))
+
 # [7.1.0](https://github.com/jimmy-guzman/eslint-config/compare/v7.0.0...v7.1.0) (2026-02-03)
 
 
