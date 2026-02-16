@@ -1,3 +1,10 @@
+# [7.3.0](https://github.com/jimmy-guzman/eslint-config/compare/v7.2.0...v7.3.0) (2026-02-16)
+
+
+### Features
+
+* ✨ enable node prefer global rules ([#262](https://github.com/jimmy-guzman/eslint-config/issues/262)) ([ccf97f9](https://github.com/jimmy-guzman/eslint-config/commit/ccf97f9fbde508e23e6dc45c4b99e18d107ee17a))
+
 # [7.2.0](https://github.com/jimmy-guzman/eslint-config/compare/v7.1.0...v7.2.0) (2026-02-12)
 
 
