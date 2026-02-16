@@ -17,7 +17,39 @@ exports[`should create node rules 1`] = `
       "ignoreBin": true,
     },
   ],
+  "n/prefer-global/buffer": [
+    "error",
+    "always",
+  ],
   "n/prefer-global/console": [
+    "error",
+    "always",
+  ],
+  "n/prefer-global/crypto": [
+    "error",
+    "never",
+  ],
+  "n/prefer-global/process": [
+    "error",
+    "always",
+  ],
+  "n/prefer-global/text-decoder": [
+    "error",
+    "never",
+  ],
+  "n/prefer-global/text-encoder": [
+    "error",
+    "never",
+  ],
+  "n/prefer-global/timers": [
+    "error",
+    "always",
+  ],
+  "n/prefer-global/url": [
+    "error",
+    "always",
+  ],
+  "n/prefer-global/url-search-params": [
     "error",
     "always",
   ],
