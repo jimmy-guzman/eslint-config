@@ -4548,6 +4548,11 @@ export interface RuleOptions {
    */
   'playwright/no-duplicate-hooks'?: Linter.RuleEntry<[]>
   /**
+   * Disallow multiple `test.slow()` calls in the same test
+   * @see https://github.com/mskelton/eslint-plugin-playwright/tree/main/docs/rules/no-duplicate-slow.md
+   */
+  'playwright/no-duplicate-slow'?: Linter.RuleEntry<[]>
+  /**
    * The use of ElementHandle is discouraged, use Locator instead
    * @see https://github.com/mskelton/eslint-plugin-playwright/tree/main/docs/rules/no-element-handle.md
    */
@@ -4612,6 +4617,11 @@ export interface RuleOptions {
    * @see https://github.com/mskelton/eslint-plugin-playwright/tree/main/docs/rules/no-restricted-matchers.md
    */
   'playwright/no-restricted-matchers'?: Linter.RuleEntry<PlaywrightNoRestrictedMatchers>
+  /**
+   * Disallows the usage of specific roles in getByRole()
+   * @see https://github.com/mskelton/eslint-plugin-playwright/tree/main/docs/rules/no-restricted-roles.md
+   */
+  'playwright/no-restricted-roles'?: Linter.RuleEntry<PlaywrightNoRestrictedRoles>
   /**
    * Prevent usage of the `.skip()` skip test annotation.
    * @see https://github.com/mskelton/eslint-plugin-playwright/tree/main/docs/rules/no-skipped-test.md
@@ -4737,6 +4747,16 @@ export interface RuleOptions {
    * @see https://github.com/mskelton/eslint-plugin-playwright/tree/main/docs/rules/require-soft-assertions.md
    */
   'playwright/require-soft-assertions'?: Linter.RuleEntry<[]>
+  /**
+   * Require test blocks to have tags
+   * @see https://github.com/mskelton/eslint-plugin-playwright/tree/main/docs/rules/require-tags.md
+   */
+  'playwright/require-tags'?: Linter.RuleEntry<[]>
+  /**
+   * Require a timeout option for `toPass()`
+   * @see https://github.com/mskelton/eslint-plugin-playwright/tree/main/docs/rules/require-to-pass-timeout.md
+   */
+  'playwright/require-to-pass-timeout'?: Linter.RuleEntry<[]>
   /**
    * Require a message for `toThrow()`
    * @see https://github.com/mskelton/eslint-plugin-playwright/tree/main/docs/rules/require-to-throw-message.md
@@ -11460,6 +11480,8 @@ type JsdocTagLines = []|[("always" | "any" | "never")]|[("always" | "any" | "nev
   
   startLines?: (number | null)
   
+  startLinesWithNoTags?: number
+  
   tags?: {
     [k: string]: {
       count?: number
@@ -17132,6 +17154,11 @@ type PlaywrightNoRestrictedLocators = []|[(string | {
 type PlaywrightNoRestrictedMatchers = []|[{
   [k: string]: (string | null) | undefined
 }]
+// ----- playwright/no-restricted-roles -----
+type PlaywrightNoRestrictedRoles = []|[(string | {
+  message?: string
+  role: string
+})[]]
 // ----- playwright/no-skipped-test -----
 type PlaywrightNoSkippedTest = []|[{
   allowConditional?: boolean
