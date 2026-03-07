@@ -1,6 +1,7 @@
 import type { PlaywrightOptions, Rules } from "../types";
 
 import { interopDefault } from "../utils/interop-default";
+import { upwarn } from "../utils/upwarn";
 
 export const playwrightRules = async (options?: PlaywrightOptions) => {
   const playwrightPlugin = await interopDefault(
@@ -8,14 +9,13 @@ export const playwrightRules = async (options?: PlaywrightOptions) => {
   );
 
   return {
-    ...playwrightPlugin.configs["flat/recommended"].rules,
+    ...upwarn(playwrightPlugin.configs["flat/recommended"].rules),
     "playwright/consistent-spacing-between-blocks": "error",
     "playwright/expect-expect": "error",
     "playwright/max-nested-describe": "error",
     "playwright/no-commented-out-tests": "error",
     "playwright/no-conditional-expect": "error",
     "playwright/no-conditional-in-test": "error",
-    "playwright/no-duplicate-slow": "error",
     "playwright/no-element-handle": "error",
     "playwright/no-eval": "error",
     "playwright/no-force-option": "error",
@@ -30,8 +30,6 @@ export const playwrightRules = async (options?: PlaywrightOptions) => {
     "playwright/prefer-strict-equal": "error",
     "playwright/prefer-to-be": "error",
     "playwright/prefer-to-contain": "error",
-    "playwright/prefer-to-have-count": "error",
-    "playwright/prefer-to-have-length": "error",
     "playwright/require-to-pass-timeout": "error",
     "playwright/require-to-throw-message": "error",
     "playwright/valid-title": "off",
