@@ -1,3 +1,10 @@
+# [7.5.0](https://github.com/jimmy-guzman/eslint-config/compare/v7.4.0...v7.5.0) (2026-03-07)
+
+
+### Features
+
+* ✨ add new playwright rules ([#265](https://github.com/jimmy-guzman/eslint-config/issues/265)) ([099fe4b](https://github.com/jimmy-guzman/eslint-config/commit/099fe4b8a71be94ca82d997cfaab1d8abeb62c8f))
+
 # [7.4.0](https://github.com/jimmy-guzman/eslint-config/compare/v7.3.0...v7.4.0) (2026-02-18)
 
 
