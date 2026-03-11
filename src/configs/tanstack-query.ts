@@ -2,14 +2,14 @@ import type { TanstackQueryOptions, TypedConfigItem } from "../types";
 
 import { GLOB_JSX, GLOB_TSX } from "../globs";
 import { extractOptions } from "../utils/extract-options";
-import { interopDefault } from "../utils/interop-default";
+import { unwrapDefault } from "../utils/interop-default";
 
 export default async function tanstackQueryConfig(
   options: boolean | TanstackQueryOptions,
 ) {
   const extractedOptions = extractOptions(options);
 
-  const queryPlugin = await interopDefault(
+  const queryPlugin = await unwrapDefault(
     import("@tanstack/eslint-plugin-query"),
   );
 

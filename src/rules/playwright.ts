@@ -1,10 +1,10 @@
 import type { PlaywrightOptions, Rules } from "../types";
 
-import { interopDefault } from "../utils/interop-default";
+import { unwrapDefault } from "../utils/interop-default";
 import { upwarn } from "../utils/upwarn";
 
 export const playwrightRules = async (options?: PlaywrightOptions) => {
-  const playwrightPlugin = await interopDefault(
+  const playwrightPlugin = await unwrapDefault(
     import("eslint-plugin-playwright"),
   );
 

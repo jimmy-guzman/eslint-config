@@ -1,9 +1,9 @@
-import { interopDefault } from "./interop-default";
+import { unwrapDefault } from "./interop-default";
 
-describe("interopDefault", () => {
+describe("unwrapDefault", () => {
   it("should return the default export if present", async () => {
     const importedModule = Promise.resolve({ default: "defaultValue" });
-    const result = await interopDefault(importedModule);
+    const result = await unwrapDefault(importedModule);
 
     expect(result).toBe("defaultValue");
   });
@@ -13,7 +13,7 @@ describe("interopDefault", () => {
       default: () => "called",
     });
 
-    const result = await interopDefault(importedModule);
+    const result = await unwrapDefault(importedModule);
 
     expect(result).toBeTypeOf("function");
     expect(result()).toBe("called");
@@ -21,28 +21,28 @@ describe("interopDefault", () => {
 
   it("should return the full module if no default export exists", async () => {
     const importedModule = Promise.resolve({ namedExport: "value" });
-    const result = await interopDefault(importedModule);
+    const result = await unwrapDefault(importedModule);
 
     expect(result).toStrictEqual({ namedExport: "value" });
   });
 
   it("should return the module itself if already resolved", async () => {
     const moduleInstance = { namedExport: "directValue" };
-    const result = await interopDefault(moduleInstance);
+    const result = await unwrapDefault(moduleInstance);
 
     expect(result).toStrictEqual(moduleInstance);
   });
 
   it("should handle null module", async () => {
     const importedModule = Promise.resolve(null);
-    const result = await interopDefault(importedModule);
+    const result = await unwrapDefault(importedModule);
 
     expect(result).toBeNull();
   });
 
   it("should handle an empty module object", async () => {
     const importedModule = Promise.resolve({});
-    const result = await interopDefault(importedModule);
+    const result = await unwrapDefault(importedModule);
 
     expect(result).toStrictEqual({});
   });

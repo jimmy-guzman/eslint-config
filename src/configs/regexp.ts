@@ -1,4 +1,4 @@
-import * as regexpPlugin from "eslint-plugin-regexp";
+import regexp from "eslint-plugin-regexp";
 
 import type { TypedConfigItem } from "../types";
 
@@ -8,7 +8,7 @@ export const regexpConfig = () => {
   return [
     {
       name: "jimmy.codes/regexp",
-      plugins: { regexp: regexpPlugin },
+      plugins: { regexp },
       rules: regexpRules,
     },
   ] satisfies TypedConfigItem[];

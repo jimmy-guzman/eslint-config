@@ -4,7 +4,7 @@ import type { AstroOptions, TypedConfigItem } from "../types";
 
 import { GLOB_ASTRO } from "../globs";
 import { extractOptions } from "../utils/extract-options";
-import { interopDefault } from "../utils/interop-default";
+import { unwrapDefault } from "../utils/interop-default";
 
 export default async function astroConfig(options: AstroOptions | boolean) {
   const extractedOptions = extractOptions(options);
@@ -15,7 +15,7 @@ export default async function astroConfig(options: AstroOptions | boolean) {
       import("typescript-eslint"),
       import("eslint-plugin-astro"),
       import("astro-eslint-parser"),
-      interopDefault(import("eslint-plugin-jsx-a11y")),
+      unwrapDefault(import("eslint-plugin-jsx-a11y")),
     ],
   );
 

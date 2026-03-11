@@ -1,14 +1,14 @@
 import type { StorybookOptions, TypedConfigItem } from "../types";
 
 import { extractOptions } from "../utils/extract-options";
-import { interopDefault } from "../utils/interop-default";
+import { unwrapDefault } from "../utils/interop-default";
 import { upwarn } from "../utils/upwarn";
 
 export default async function storybookConfig(
   options: boolean | StorybookOptions,
 ) {
   const extractedOptions = extractOptions(options);
-  const { configs } = await interopDefault(import("eslint-plugin-storybook"));
+  const { configs } = await unwrapDefault(import("eslint-plugin-storybook"));
 
   const [setup, storiesConfig, mainConfig] = configs["flat/recommended"];
 

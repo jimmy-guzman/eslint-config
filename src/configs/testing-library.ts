@@ -3,7 +3,7 @@ import type { TestingLibraryOptions, TypedConfigItem } from "../types";
 import { GLOB_E2E, GLOB_TESTS } from "../globs";
 import { testingLibraryRules } from "../rules/testing-library";
 import { extractOptions } from "../utils/extract-options";
-import { interopDefault } from "../utils/interop-default";
+import { unwrapDefault } from "../utils/interop-default";
 
 export default async function testingLibraryConfig(
   options: boolean | TestingLibraryOptions,
@@ -12,7 +12,7 @@ export default async function testingLibraryConfig(
 
   const [jestDom, testingLibrary] = await Promise.all([
     import("eslint-plugin-jest-dom"),
-    interopDefault(import("eslint-plugin-testing-library")),
+    unwrapDefault(import("eslint-plugin-testing-library")),
   ]);
 
   return [

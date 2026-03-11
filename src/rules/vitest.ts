@@ -1,9 +1,9 @@
 import type { Rules, VitestOptions } from "../types";
 
-import { interopDefault } from "../utils/interop-default";
+import { unwrapDefault } from "../utils/interop-default";
 
 export const vitestRules = async (options?: VitestOptions) => {
-  const vitestPlugin = await interopDefault(import("@vitest/eslint-plugin"));
+  const vitestPlugin = await unwrapDefault(import("@vitest/eslint-plugin"));
 
   return {
     ...vitestPlugin.configs.recommended.rules,

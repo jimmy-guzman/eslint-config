@@ -3,12 +3,12 @@ import type { JestOptions, TypedConfigItem } from "../types";
 import { GLOB_E2E, GLOB_TESTS } from "../globs";
 import { jestRules } from "../rules/jest";
 import { extractOptions } from "../utils/extract-options";
-import { interopDefault } from "../utils/interop-default";
+import { unwrapDefault } from "../utils/interop-default";
 
 export default async function jestConfig(options: boolean | JestOptions) {
   const extractedOptions = extractOptions(options);
 
-  const jestPlugin = await interopDefault(import("eslint-plugin-jest"));
+  const jestPlugin = await unwrapDefault(import("eslint-plugin-jest"));
 
   return [
     {

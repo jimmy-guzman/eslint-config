@@ -7,7 +7,7 @@
  *
  * @returns The normalized and awaited default export.
  */
-export const interopDefault = async <T>(
+export const unwrapDefault = async <T>(
   module: Promise<T> | T,
 ): Promise<T extends { default: infer U } ? U : T> => {
   const resolved = await module;
