@@ -1,9 +1,9 @@
 import type { JestOptions, Rules } from "../types";
 
-import { interopDefault } from "../utils/interop-default";
+import { unwrapDefault } from "../utils/interop-default";
 
 export const jestRules = async (options?: JestOptions) => {
-  const jestPlugin = await interopDefault(import("eslint-plugin-jest"));
+  const jestPlugin = await unwrapDefault(import("eslint-plugin-jest"));
 
   return {
     ...jestPlugin.configs["flat/recommended"].rules,

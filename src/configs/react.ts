@@ -5,7 +5,7 @@ import type { ReactOptions, TypedConfigItem } from "../types";
 import { GLOB_JSX, GLOB_TSX } from "../globs";
 import { reactRules } from "../rules/react";
 import { extractOptions } from "../utils/extract-options";
-import { interopDefault } from "../utils/interop-default";
+import { unwrapDefault } from "../utils/interop-default";
 
 export default async function reactConfig(options: boolean | ReactOptions) {
   const extractedOptions = extractOptions(options);
@@ -21,16 +21,16 @@ export default async function reactConfig(options: boolean | ReactOptions) {
     reactNamingConventionPlugin,
     reactRscPlugin,
   ] = await Promise.all([
-    interopDefault(import("eslint-plugin-react-x")),
-    interopDefault(import("eslint-plugin-jsx-a11y")),
-    interopDefault(import("eslint-plugin-react-hooks")),
-    interopDefault(import("eslint-plugin-react-refresh")),
-    interopDefault(import("eslint-plugin-react-compiler")),
-    interopDefault(import("eslint-plugin-react-hooks-extra")),
-    interopDefault(import("eslint-plugin-react-dom")),
-    interopDefault(import("eslint-plugin-react-web-api")),
-    interopDefault(import("eslint-plugin-react-naming-convention")),
-    interopDefault(import("eslint-plugin-react-rsc")),
+    unwrapDefault(import("eslint-plugin-react-x")),
+    unwrapDefault(import("eslint-plugin-jsx-a11y")),
+    unwrapDefault(import("eslint-plugin-react-hooks")),
+    unwrapDefault(import("eslint-plugin-react-refresh")),
+    unwrapDefault(import("eslint-plugin-react-compiler")),
+    unwrapDefault(import("eslint-plugin-react-hooks-extra")),
+    unwrapDefault(import("eslint-plugin-react-dom")),
+    unwrapDefault(import("eslint-plugin-react-web-api")),
+    unwrapDefault(import("eslint-plugin-react-naming-convention")),
+    unwrapDefault(import("eslint-plugin-react-rsc")),
   ]);
 
   return [

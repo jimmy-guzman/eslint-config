@@ -3,12 +3,11 @@ import type { NextJSOptions, TypedConfigItem } from "../types";
 import { GLOB_NEXTJS } from "../globs";
 import { nextjsRules } from "../rules/nextjs";
 import { extractOptions } from "../utils/extract-options";
-import { interopDefault } from "../utils/interop-default";
 
 export default async function nextjsConfig(options: boolean | NextJSOptions) {
   const extractedOptions = extractOptions(options);
 
-  const nextjsPlugin = await interopDefault(import("@next/eslint-plugin-next"));
+  const nextjsPlugin = await import("@next/eslint-plugin-next");
 
   return [
     {

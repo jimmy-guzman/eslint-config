@@ -1,7 +1,7 @@
 import type { ReactOptions, Rules } from "../types";
 
 import { hasNext, hasTypescript, hasVite } from "../utils/has-dependency";
-import { interopDefault } from "../utils/interop-default";
+import { unwrapDefault } from "../utils/interop-default";
 import { upwarn } from "../utils/upwarn";
 
 const nextAllowedExportNames = [
@@ -30,13 +30,13 @@ export const reactRules = async (options?: ReactOptions) => {
     { configs: reactNamingConventionConfigs },
     { configs: reactRscConfigs },
   ] = await Promise.all([
-    interopDefault(import("eslint-plugin-react-x")),
-    interopDefault(import("eslint-plugin-jsx-a11y")),
-    interopDefault(import("eslint-plugin-react-dom")),
-    interopDefault(import("eslint-plugin-react-hooks-extra")),
-    interopDefault(import("eslint-plugin-react-web-api")),
-    interopDefault(import("eslint-plugin-react-naming-convention")),
-    interopDefault(import("eslint-plugin-react-rsc")),
+    unwrapDefault(import("eslint-plugin-react-x")),
+    unwrapDefault(import("eslint-plugin-jsx-a11y")),
+    unwrapDefault(import("eslint-plugin-react-dom")),
+    unwrapDefault(import("eslint-plugin-react-hooks-extra")),
+    unwrapDefault(import("eslint-plugin-react-web-api")),
+    unwrapDefault(import("eslint-plugin-react-naming-convention")),
+    unwrapDefault(import("eslint-plugin-react-rsc")),
   ]);
   const isUsingNextjs = hasNext();
   const isUsingVite = hasVite();

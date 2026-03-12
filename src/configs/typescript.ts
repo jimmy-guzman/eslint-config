@@ -3,7 +3,7 @@ import type { TypedConfigItem, TypeScriptOptions } from "../types";
 import { GLOB_JS, GLOB_JSX, GLOB_TESTS } from "../globs";
 import { typescriptRules } from "../rules/typescript";
 import { extractOptions } from "../utils/extract-options";
-import { interopDefault } from "../utils/interop-default";
+import { unwrapDefault } from "../utils/interop-default";
 
 export default async function typescriptConfig(
   options: boolean | TypeScriptOptions,
@@ -50,7 +50,7 @@ export default async function typescriptConfig(
           {
             name: "jimmy.codes/typescript/erasable-syntax-only",
             plugins: {
-              "erasable-syntax-only": await interopDefault(
+              "erasable-syntax-only": await unwrapDefault(
                 import("eslint-plugin-erasable-syntax-only"),
               ),
             },

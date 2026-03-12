@@ -3,14 +3,14 @@ import type { PlaywrightOptions, TypedConfigItem } from "../types";
 import { GLOB_PLAYWRIGHT } from "../globs";
 import { playwrightRules } from "../rules/playwright";
 import { extractOptions } from "../utils/extract-options";
-import { interopDefault } from "../utils/interop-default";
+import { unwrapDefault } from "../utils/interop-default";
 
 export default async function playwrightConfig(
   options: boolean | PlaywrightOptions,
 ) {
   const extractedOptions = extractOptions(options);
 
-  const playwrightPlugin = await interopDefault(
+  const playwrightPlugin = await unwrapDefault(
     import("eslint-plugin-playwright"),
   );
 

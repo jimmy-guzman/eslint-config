@@ -2,11 +2,11 @@ import type { Linter } from "eslint";
 
 import type { NextJSOptions, Rules } from "../types";
 
-import { interopDefault } from "../utils/interop-default";
+import { unwrapDefault } from "../utils/interop-default";
 import { upwarn } from "../utils/upwarn";
 
 export const nextjsRules = async (options?: NextJSOptions) => {
-  const nextjsPlugin = await interopDefault(import("@next/eslint-plugin-next"));
+  const nextjsPlugin = await unwrapDefault(import("@next/eslint-plugin-next"));
 
   return {
     ...upwarn(
