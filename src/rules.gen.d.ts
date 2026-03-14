@@ -17155,6 +17155,7 @@ type PlaywrightMaxNestedDescribe = []|[{
 // ----- playwright/missing-playwright-await -----
 type PlaywrightMissingPlaywrightAwait = []|[{
   customMatchers?: string[]
+  includePageLocatorMethods?: boolean
 }]
 // ----- playwright/no-hooks -----
 type PlaywrightNoHooks = []|[{
@@ -17181,6 +17182,7 @@ type PlaywrightNoRestrictedRoles = []|[(string | {
 // ----- playwright/no-skipped-test -----
 type PlaywrightNoSkippedTest = []|[{
   allowConditional?: boolean
+  disallowFixme?: boolean
 }]
 // ----- playwright/no-slowed-test -----
 type PlaywrightNoSlowedTest = []|[{
