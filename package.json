@@ -1,6 +1,6 @@
 {
   "name": "@jimmy.codes/eslint-config",
-  "version": "7.5.1",
+  "version": "7.5.2",
   "description": "A simple, modern ESLint config that covers most use cases.",
   "keywords": [
     "eslint",

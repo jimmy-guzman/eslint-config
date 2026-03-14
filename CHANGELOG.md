@@ -1,3 +1,10 @@
+## [7.5.2](https://github.com/jimmy-guzman/eslint-config/compare/v7.5.1...v7.5.2) (2026-03-14)
+
+
+### Bug Fixes
+
+* 🐛 always unwrap eslint-plugin-next ([#267](https://github.com/jimmy-guzman/eslint-config/issues/267)) ([d390c9e](https://github.com/jimmy-guzman/eslint-config/commit/d390c9e2a0e6c1f66cc529c5f5cdf618aeaf20bf))
+
 ## [7.5.1](https://github.com/jimmy-guzman/eslint-config/compare/v7.5.0...v7.5.1) (2026-03-14)
 
 
