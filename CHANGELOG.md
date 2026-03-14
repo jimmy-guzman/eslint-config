@@ -1,3 +1,10 @@
+## [7.5.1](https://github.com/jimmy-guzman/eslint-config/compare/v7.5.0...v7.5.1) (2026-03-14)
+
+
+### Bug Fixes
+
+* 🐛 bump deps ([#266](https://github.com/jimmy-guzman/eslint-config/issues/266)) ([fd69c27](https://github.com/jimmy-guzman/eslint-config/commit/fd69c27125ded3165a6397d2935682fff1d3fc67))
+
 # [7.5.0](https://github.com/jimmy-guzman/eslint-config/compare/v7.4.0...v7.5.0) (2026-03-07)
 
 
