@@ -2,7 +2,6 @@ import type { Linter } from "eslint";
 
 import type { RuleOptions } from "./rules.gen";
 
-type Base = Linter.Config<Linter.RulesRecord & Rules>;
 type ExtractPrefix<T> = T extends `${infer Prefix}/${infer Rest}`
   ? Rest extends `${string}/${string}`
     ? `${Prefix}/${ExtractPrefix<Rest>}`
@@ -17,14 +16,16 @@ type RulesWithPrefix<T, Prefix extends ValidPrefixes<T>> = {
 type ValidPrefixes<T> = ExtractPrefix<keyof T>;
 
 interface LinterConfigOverrides {
-  files?: MaybeReadonly<Base["files"]>;
-  ignores?: MaybeReadonly<Base["ignores"]>;
+  files?: MaybeReadonly<Linter.Config["files"]>;
+  ignores?: MaybeReadonly<Linter.Config["ignores"]>;
   plugins?: Record<string, unknown>;
 }
 
 export type Rules = RuleOptions;
 
-export type TypedConfigItem = Prettify<Override<Base, LinterConfigOverrides>>;
+export type TypedConfigItem = Prettify<
+  Override<Linter.Config, LinterConfigOverrides>
+>;
 
 export interface VitestOptions {
   /**
