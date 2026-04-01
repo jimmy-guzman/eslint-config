@@ -1,3 +1,10 @@
+# [7.6.0](https://github.com/jimmy-guzman/eslint-config/compare/v7.5.3...v7.6.0) (2026-04-01)
+
+
+### Features
+
+* ✨ enable new unicorn rules, enable `prefer-query-options` ([#269](https://github.com/jimmy-guzman/eslint-config/issues/269)) ([99df333](https://github.com/jimmy-guzman/eslint-config/commit/99df3333f582e4608fab53ddcba86d8bb23d3c42))
+
 ## [7.5.3](https://github.com/jimmy-guzman/eslint-config/compare/v7.5.2...v7.5.3) (2026-03-26)
 
 
