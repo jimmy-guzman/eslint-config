@@ -1,3 +1,10 @@
+## [7.6.1](https://github.com/jimmy-guzman/eslint-config/compare/v7.6.0...v7.6.1) (2026-04-02)
+
+
+### Bug Fixes
+
+* 🐛 better support for nextjs ([#270](https://github.com/jimmy-guzman/eslint-config/issues/270)) ([acc5f5d](https://github.com/jimmy-guzman/eslint-config/commit/acc5f5df505e4fef5b53abbf80059a670254730b))
+
 # [7.6.0](https://github.com/jimmy-guzman/eslint-config/compare/v7.5.3...v7.6.0) (2026-04-01)
 
 
