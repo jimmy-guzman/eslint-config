@@ -39,6 +39,8 @@ export const GLOB_E2E = [
 
 export const GLOB_NEXTJS = [GLOB_JS, GLOB_JSX, GLOB_TS, GLOB_TSX] as const;
 
+export const GLOB_NEXTJS_ENV = ["**/next-env.d.ts"] as const;
+
 export const GLOB_IGNORES = [
   "**/node_modules",
   "**/dist",

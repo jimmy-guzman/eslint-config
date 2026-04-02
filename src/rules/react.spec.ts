@@ -22,6 +22,7 @@ describe("reactRules", () => {
         {
           "allowConstantExport": false,
           "allowExportNames": [
+            "experimental_ppr",
             "dynamic",
             "dynamicParams",
             "revalidate",
@@ -29,12 +30,16 @@ describe("reactRules", () => {
             "runtime",
             "preferredRegion",
             "maxDuration",
-            "config",
-            "generateStaticParams",
             "metadata",
             "generateMetadata",
             "viewport",
             "generateViewport",
+            "generateImageMetadata",
+            "generateSitemaps",
+            "generateStaticParams",
+            "alt",
+            "size",
+            "contentType",
           ],
         },
       ]

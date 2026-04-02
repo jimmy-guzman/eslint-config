@@ -5,6 +5,7 @@ import { unwrapDefault } from "../utils/interop-default";
 import { upwarn } from "../utils/upwarn";
 
 const nextAllowedExportNames = [
+  "experimental_ppr",
   "dynamic",
   "dynamicParams",
   "revalidate",
@@ -12,12 +13,16 @@ const nextAllowedExportNames = [
   "runtime",
   "preferredRegion",
   "maxDuration",
-  "config",
-  "generateStaticParams",
   "metadata",
   "generateMetadata",
   "viewport",
   "generateViewport",
+  "generateImageMetadata",
+  "generateSitemaps",
+  "generateStaticParams",
+  "alt",
+  "size",
+  "contentType",
 ];
 
 export const reactRules = async (options?: ReactOptions) => {
