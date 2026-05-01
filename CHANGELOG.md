@@ -1,3 +1,10 @@
+# [7.7.0](https://github.com/jimmy-guzman/eslint-config/compare/v7.6.1...v7.7.0) (2026-05-01)
+
+
+### Features
+
+* ✨ use `jest-dom` fork w/ eslint v10 support ([#271](https://github.com/jimmy-guzman/eslint-config/issues/271)) ([f7e66a4](https://github.com/jimmy-guzman/eslint-config/commit/f7e66a44a0ba6d4d7ffcdbc7fb01005af2166afe))
+
 ## [7.6.1](https://github.com/jimmy-guzman/eslint-config/compare/v7.6.0...v7.6.1) (2026-04-02)
 
 
