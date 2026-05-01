@@ -1,5 +1,3 @@
-import type { Linter } from "eslint";
-
 import type { NextJSOptions, Rules } from "../types";
 
 import { unwrapDefault } from "../utils/interop-default";
@@ -9,10 +7,7 @@ export const nextjsRules = async (options?: NextJSOptions) => {
   const nextjsPlugin = await unwrapDefault(import("@next/eslint-plugin-next"));
 
   return {
-    ...upwarn(
-      // @next/eslint-plugin-next types for each rule use string instead of Linter.RuleLevel,
-      nextjsPlugin.configs.recommended.rules as Linter.RulesRecord,
-    ),
+    ...upwarn(nextjsPlugin.configs.recommended.rules),
     ...options?.overrides,
   } satisfies Rules;
 };
