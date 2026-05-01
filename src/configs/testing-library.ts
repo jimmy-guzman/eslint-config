@@ -11,7 +11,7 @@ export default async function testingLibraryConfig(
   const extractedOptions = extractOptions(options);
 
   const [jestDom, testingLibrary] = await Promise.all([
-    import("eslint-plugin-jest-dom"),
+    import("eslint-plugin-jest-dom-ya"),
     unwrapDefault(import("eslint-plugin-testing-library")),
   ]);
 

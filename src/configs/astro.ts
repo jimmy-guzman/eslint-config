@@ -50,6 +50,7 @@ export default async function astroConfig(options: AstroOptions | boolean) {
         "astro/no-deprecated-astro-resolve": "error",
         "astro/no-deprecated-getentrybyslug": "error",
         "astro/no-exports-from-components": "off",
+        "astro/no-prerender-export-outside-pages": "error",
         "astro/no-unsafe-inline-scripts": "error",
         "astro/no-unused-define-vars-in-style": "error",
         "astro/valid-compile": "error",
