@@ -277,7 +277,7 @@ This config includes the following plugins:
 | [`eslint-plugin-jest`](https://github.com/jest-community/eslint-plugin-jest)                                          | Jest support                       |
 | [`eslint-plugin-jest-dom`](https://github.com/testing-library/eslint-plugin-jest-dom)                                 | DOM assertions for tests           |
 | [`eslint-plugin-jsdoc`](https://github.com/gajus/eslint-plugin-jsdoc)                                                 | JSDoc comment rules                |
-| [`eslint-plugin-jsx-a11y`](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)                                      | Accessibility in JSX               |
+| [`eslint-plugin-jsx-a11y-x`](https://github.com/es-tooling/eslint-plugin-jsx-a11y-x)                                  | Accessibility in JSX               |
 | [`eslint-plugin-n`](https://github.com/eslint-community/eslint-plugin-n)                                              | Node.js-specific rules             |
 | [`eslint-plugin-perfectionist`](https://perfectionist.dev)                                                            | Sorting and consistency            |
 | [`eslint-plugin-playwright`](https://github.com/playwright-community/eslint-plugin-playwright)                        | Playwright testing support         |
