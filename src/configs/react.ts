@@ -22,7 +22,7 @@ export default async function reactConfig(options: boolean | ReactOptions) {
     reactRscPlugin,
   ] = await Promise.all([
     unwrapDefault(import("eslint-plugin-react-x")),
-    unwrapDefault(import("eslint-plugin-jsx-a11y")),
+    unwrapDefault(import("eslint-plugin-jsx-a11y-x")),
     unwrapDefault(import("eslint-plugin-react-hooks")),
     unwrapDefault(import("eslint-plugin-react-refresh")),
     unwrapDefault(import("eslint-plugin-react-compiler")),

@@ -5,6 +5,7 @@ import type { AstroOptions, TypedConfigItem } from "../types";
 import { GLOB_ASTRO } from "../globs";
 import { extractOptions } from "../utils/extract-options";
 import { unwrapDefault } from "../utils/interop-default";
+import { rebrand } from "../utils/rebrand";
 
 export default async function astroConfig(options: AstroOptions | boolean) {
   const extractedOptions = extractOptions(options);
@@ -15,7 +16,7 @@ export default async function astroConfig(options: AstroOptions | boolean) {
       import("typescript-eslint"),
       import("eslint-plugin-astro"),
       import("astro-eslint-parser"),
-      unwrapDefault(import("eslint-plugin-jsx-a11y")),
+      unwrapDefault(import("eslint-plugin-jsx-a11y-x")),
     ],
   );
 
@@ -42,7 +43,11 @@ export default async function astroConfig(options: AstroOptions | boolean) {
       },
       processor: "astro/client-side-ts",
       rules: {
-        ...jsxA11yPlugin.configs.recommended.rules,
+        ...rebrand(
+          jsxA11yPlugin.configs.recommended.rules,
+          "jsx-a11y-x",
+          "jsx-a11y",
+        ),
         "astro/missing-client-only-directive-value": "error",
         "astro/no-conflict-set-directives": "error",
         "astro/no-deprecated-astro-canonicalurl": "error",
