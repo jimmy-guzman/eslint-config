@@ -3,7 +3,9 @@ import { unwrap } from "./unwrap";
 describe("unwrap", () => {
   it("should return the result of calling default if it's a function", async () => {
     const importedModule = Promise.resolve({
-      default: () => "called",
+      default: () => {
+        return "called";
+      },
     });
     const result = await unwrap(importedModule);
 

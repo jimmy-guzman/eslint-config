@@ -10,7 +10,9 @@ describe("unwrapDefault", () => {
 
   it("should return the default export if it's a function", async () => {
     const importedModule = Promise.resolve({
-      default: () => "called",
+      default: () => {
+        return "called";
+      },
     });
 
     const result = await unwrapDefault(importedModule);

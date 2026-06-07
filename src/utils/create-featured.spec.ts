@@ -19,7 +19,9 @@ describe("createFeatured", () => {
 
   it("should return false when explicit is false and autoDetect is false", () => {
     const getFlag = createFeatured(false);
-    const detector = vi.fn(() => true);
+    const detector = vi.fn(() => {
+      return true;
+    });
 
     expect(getFlag(false, detector)).toBe(false);
     expect(detector).not.toHaveBeenCalled();
@@ -27,7 +29,9 @@ describe("createFeatured", () => {
 
   it("should call detector when explicit is false and autoDetect is true", () => {
     const getFlag = createFeatured(true);
-    const detector = vi.fn(() => true);
+    const detector = vi.fn(() => {
+      return true;
+    });
 
     expect(getFlag(false, detector)).toBe(true);
     expect(detector).toHaveBeenCalledOnce();
@@ -35,7 +39,9 @@ describe("createFeatured", () => {
 
   it("should return false when detector returns false", () => {
     const getFlag = createFeatured(true);
-    const detector = vi.fn(() => false);
+    const detector = vi.fn(() => {
+      return false;
+    });
 
     expect(getFlag(false, detector)).toBe(false);
   });

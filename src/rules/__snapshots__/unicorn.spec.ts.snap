@@ -25,7 +25,7 @@ exports[`should create unicorn rules 1`] = `
   "unicorn/new-for-builtins": "error",
   "unicorn/no-abusive-eslint-disable": "off",
   "unicorn/no-accessor-recursion": "error",
-  "unicorn/no-anonymous-default-export": "off",
+  "unicorn/no-anonymous-default-export": "error",
   "unicorn/no-array-callback-reference": "off",
   "unicorn/no-array-for-each": "error",
   "unicorn/no-array-method-this-argument": "error",

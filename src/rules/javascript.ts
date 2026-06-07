@@ -10,17 +10,7 @@ export const additionalRules = {
       allowImplicit: true, // Allow implicit return for flexibility while enforcing return consistency
     },
   ],
-  "arrow-body-style": "off", // We're using arrow-style/arrow-return-style
-  "arrow-style/arrow-return-style": [
-    "error",
-    {
-      jsxAlwaysUseExplicitReturn: true,
-      namedExportsAlwaysUseExplicitReturn: true,
-      objectReturnStyle: "off",
-      usePrettier: false,
-    },
-  ],
-  "arrow-style/no-export-default-arrow": "error",
+  "arrow-body-style": ["error", "always"], // Require braces and explicit return on all arrow functions
   "class-methods-use-this": "error", // Ensures class methods are used within their class (avoids unnecessary methods)
   "consistent-return": "error", // Prevents inconsistent function returns (e.g., sometimes returning `undefined`)
   "curly": ["error", "all"], // Enforce `{}` around all control statements (avoids accidental bugs)
