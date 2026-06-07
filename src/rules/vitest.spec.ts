@@ -1,7 +1,29 @@
+import { isPackageExists } from "local-pkg";
+
 import { vitestRules } from "./vitest";
+
+vi.mock("local-pkg");
 
 test("should create vitest rules", async () => {
   await expect(vitestRules()).resolves.toMatchSnapshot();
+});
+
+test("should enable typescript-aware unbound-method rules with typescript", async () => {
+  vi.mocked(isPackageExists).mockImplementation((name) => {
+    return name === "typescript";
+  });
+
+  const rules = await vitestRules();
+
+  expect(rules["vitest/unbound-method"]).toBe("error");
+  expect(rules["@typescript-eslint/unbound-method"]).toBe("off");
+});
+
+test("should disable vitest/unbound-method without typescript", async () => {
+  const rules = await vitestRules();
+
+  expect(rules["vitest/unbound-method"]).toBe("off");
+  expect(rules["@typescript-eslint/unbound-method"]).toBeUndefined();
 });
 
 test("should enforce importing vitest globals when 'explicit' option is used", async () => {

@@ -1,9 +1,11 @@
 import type { Rules, VitestOptions } from "../types";
 
+import { hasTypescript } from "../utils/has-dependency";
 import { unwrapDefault } from "../utils/interop-default";
 
 export const vitestRules = async (options?: VitestOptions) => {
   const vitestPlugin = await unwrapDefault(import("@vitest/eslint-plugin"));
+  const isUsingTypescript = hasTypescript();
 
   return {
     ...vitestPlugin.configs.recommended.rules,
@@ -70,7 +72,7 @@ export const vitestRules = async (options?: VitestOptions) => {
     "vitest/require-hook": "error",
     "vitest/require-to-throw-message": "error",
     "vitest/require-top-level-describe": "off",
-    // "vitest/unbound-method": "off", // requires typescript, missing https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/unbound-method.md
+    "vitest/unbound-method": isUsingTypescript ? "error" : "off",
     "vitest/valid-title": [
       "error",
       {
@@ -80,6 +82,9 @@ export const vitestRules = async (options?: VitestOptions) => {
       },
     ],
     "vitest/warn-todo": "warn",
+    ...(isUsingTypescript
+      ? { "@typescript-eslint/unbound-method": "off" as const }
+      : {}),
     ...options?.overrides,
   } satisfies Rules;
 };
