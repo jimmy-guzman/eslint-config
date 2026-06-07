@@ -7,7 +7,7 @@ exports[`typescriptConfig > should create config 1`] = `
       "parser": {
         "meta": {
           "name": "typescript-eslint/parser",
-          "version": "8.59.1",
+          "version": "8.60.1",
         },
         "parseForESLint": [Function],
       },
@@ -300,7 +300,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.59.1",
+                    "version": "8.60.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -509,7 +509,7 @@ exports[`typescriptConfig > should create config 1`] = `
               "parser": {
                 "meta": {
                   "name": "typescript-eslint/parser",
-                  "version": "8.59.1",
+                  "version": "8.60.1",
                 },
                 "parseForESLint": [Function],
               },
@@ -633,7 +633,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.59.1",
+                    "version": "8.60.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -713,7 +713,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.59.1",
+                    "version": "8.60.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -820,7 +820,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.59.1",
+                    "version": "8.60.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -904,7 +904,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.59.1",
+                    "version": "8.60.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1144,7 +1144,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.59.1",
+                    "version": "8.60.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1268,7 +1268,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.59.1",
+                    "version": "8.60.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1339,7 +1339,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.59.1",
+                    "version": "8.60.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1419,7 +1419,7 @@ exports[`typescriptConfig > should create config 1`] = `
                 "parser": {
                   "meta": {
                     "name": "typescript-eslint/parser",
-                    "version": "8.59.1",
+                    "version": "8.60.1",
                   },
                   "parseForESLint": [Function],
                 },
@@ -1967,7 +1967,7 @@ exports[`typescriptConfig > should create config 1`] = `
         "meta": {
           "name": "@typescript-eslint/eslint-plugin",
           "namespace": "@typescript-eslint",
-          "version": "8.59.1",
+          "version": "8.60.1",
         },
         "rules": {
           "adjacent-overload-signatures": {
@@ -6652,6 +6652,18 @@ You must still type the parameters of the function.",
               },
             ],
             "meta": {
+              "defaultOptions": [
+                {
+                  "detectObjects": false,
+                  "enforceConst": false,
+                  "ignore": [],
+                  "ignoreArrayIndexes": false,
+                  "ignoreEnums": false,
+                  "ignoreNumericLiteralTypes": false,
+                  "ignoreReadonlyClassProperties": false,
+                  "ignoreTypeIndexes": false,
+                },
+              ],
               "docs": {
                 "description": "Disallow magic numbers",
                 "extendsBaseRule": true,
@@ -6667,11 +6679,9 @@ You must still type the parameters of the function.",
                   "additionalProperties": false,
                   "properties": {
                     "detectObjects": {
-                      "default": false,
                       "type": "boolean",
                     },
                     "enforceConst": {
-                      "default": false,
                       "type": "boolean",
                     },
                     "ignore": {
@@ -6690,34 +6700,27 @@ You must still type the parameters of the function.",
                       "uniqueItems": true,
                     },
                     "ignoreArrayIndexes": {
-                      "default": false,
                       "type": "boolean",
                     },
                     "ignoreClassFieldInitialValues": {
-                      "default": false,
                       "type": "boolean",
                     },
                     "ignoreDefaultValues": {
-                      "default": false,
                       "type": "boolean",
                     },
                     "ignoreEnums": {
-                      "default": false,
                       "description": "Whether enums used in TypeScript are considered okay.",
                       "type": "boolean",
                     },
                     "ignoreNumericLiteralTypes": {
-                      "default": false,
                       "description": "Whether numbers used in TypeScript numeric literal types are considered okay.",
                       "type": "boolean",
                     },
                     "ignoreReadonlyClassProperties": {
-                      "default": false,
                       "description": "Whether \`readonly\` class properties are considered okay.",
                       "type": "boolean",
                     },
                     "ignoreTypeIndexes": {
-                      "default": false,
                       "description": "Whether numbers used to index types are okay.",
                       "type": "boolean",
                     },
@@ -7248,22 +7251,22 @@ Otherwise, if you don't need to preserve emojis or other non-Ascii characters, d
               },
               "fixable": undefined,
               "messages": {
-                "allowedImportName": "'{{importName}}' import from '{{importSource}}' is restricted because only '{{allowedImportNames}}' import(s) is/are allowed.",
+                "allowedImportName": "'{{importName}}' import from '{{importSource}}' is restricted because only {{allowedImportNames}} {{isOrAre}} allowed.",
                 "allowedImportNamePattern": "'{{importName}}' import from '{{importSource}}' is restricted because only imports that match the pattern '{{allowedImportNamePattern}}' are allowed from '{{importSource}}'.",
                 "allowedImportNamePatternWithCustomMessage": "'{{importName}}' import from '{{importSource}}' is restricted because only imports that match the pattern '{{allowedImportNamePattern}}' are allowed from '{{importSource}}'. {{customMessage}}",
-                "allowedImportNameWithCustomMessage": "'{{importName}}' import from '{{importSource}}' is restricted because only '{{allowedImportNames}}' import(s) is/are allowed. {{customMessage}}",
-                "everything": "* import is invalid because '{{importNames}}' from '{{importSource}}' is restricted.",
-                "everythingWithAllowImportNames": "* import is invalid because only '{{allowedImportNames}}' from '{{importSource}}' is/are allowed.",
-                "everythingWithAllowImportNamesAndCustomMessage": "* import is invalid because only '{{allowedImportNames}}' from '{{importSource}}' is/are allowed. {{customMessage}}",
+                "allowedImportNameWithCustomMessage": "'{{importName}}' import from '{{importSource}}' is restricted because only {{allowedImportNames}} {{isOrAre}} allowed. {{customMessage}}",
+                "everything": "* import is invalid because {{importNames}} from '{{importSource}}' {{isOrAre}} restricted.",
+                "everythingWithAllowImportNames": "* import is invalid because only {{allowedImportNames}} from '{{importSource}}' {{isOrAre}} allowed.",
+                "everythingWithAllowImportNamesAndCustomMessage": "* import is invalid because only {{allowedImportNames}} from '{{importSource}}' {{isOrAre}} allowed. {{customMessage}}",
                 "everythingWithAllowedImportNamePattern": "* import is invalid because only imports that match the pattern '{{allowedImportNamePattern}}' from '{{importSource}}' are allowed.",
                 "everythingWithAllowedImportNamePatternWithCustomMessage": "* import is invalid because only imports that match the pattern '{{allowedImportNamePattern}}' from '{{importSource}}' are allowed. {{customMessage}}",
-                "everythingWithCustomMessage": "* import is invalid because '{{importNames}}' from '{{importSource}}' is restricted. {{customMessage}}",
+                "everythingWithCustomMessage": "* import is invalid because {{importNames}} from '{{importSource}}' {{isOrAre}} restricted. {{customMessage}}",
                 "importName": "'{{importName}}' import from '{{importSource}}' is restricted.",
                 "importNameWithCustomMessage": "'{{importName}}' import from '{{importSource}}' is restricted. {{customMessage}}",
                 "path": "'{{importSource}}' import is restricted from being used.",
                 "pathWithCustomMessage": "'{{importSource}}' import is restricted from being used. {{customMessage}}",
-                "patternAndEverything": "* import is invalid because '{{importNames}}' from '{{importSource}}' is restricted from being used by a pattern.",
-                "patternAndEverythingWithCustomMessage": "* import is invalid because '{{importNames}}' from '{{importSource}}' is restricted from being used by a pattern. {{customMessage}}",
+                "patternAndEverything": "* import is invalid because {{importNames}} from '{{importSource}}' {{isOrAre}} restricted from being used by a pattern.",
+                "patternAndEverythingWithCustomMessage": "* import is invalid because {{importNames}} from '{{importSource}}' {{isOrAre}} restricted from being used by a pattern. {{customMessage}}",
                 "patternAndEverythingWithRegexImportName": "* import is invalid because import name matching '{{importNames}}' pattern from '{{importSource}}' is restricted from being used.",
                 "patternAndEverythingWithRegexImportNameAndCustomMessage": "* import is invalid because import name matching '{{importNames}}' pattern from '{{importSource}}' is restricted from being used. {{customMessage}}",
                 "patternAndImportName": "'{{importName}}' import from '{{importSource}}' is restricted from being used by a pattern.",
