@@ -74,6 +74,9 @@ export const GLOB_IGNORES = [
   "**/app.config.timestamp_*.js",
   "**/.tanstack",
   "**/.nitro",
+  "**/.agents",
+  "**/.claude",
+  "**/.worktrees",
 
   "**/CHANGELOG*.md",
   "**/*.min.*",
