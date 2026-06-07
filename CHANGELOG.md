@@ -1,3 +1,15 @@
+# [8.0.0](https://github.com/jimmy-guzman/eslint-config/compare/v7.9.0...v8.0.0) (2026-06-07)
+
+
+### Features
+
+* ✨ support eslint v10 ([#274](https://github.com/jimmy-guzman/eslint-config/issues/274)) ([72eb3fe](https://github.com/jimmy-guzman/eslint-config/commit/72eb3fe88714c0defd1073e9ee5cd1a0a8172d19)), closes [#264](https://github.com/jimmy-guzman/eslint-config/issues/264)
+
+
+### BREAKING CHANGES
+
+* 💥 requires ESLint >=10 and Node ^22.18.0 || >=24
+
 # [7.9.0](https://github.com/jimmy-guzman/eslint-config/compare/v7.8.0...v7.9.0) (2026-06-07)
 
 
