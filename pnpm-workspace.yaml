@@ -1,14 +1,7 @@
+allowBuilds:
+  esbuild: true
+  lefthook: true
+  unrs-resolver: true
 autoInstallPeers: false
-
-color: always
-
 engineStrict: true
-
-onlyBuiltDependencies:
-  - esbuild
-  - lefthook
-  - oxc-resolver
-  - sharp
-  - unrs-resolver
-
-savePrefix: ""
+saveExact: true

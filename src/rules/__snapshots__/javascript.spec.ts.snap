@@ -114,6 +114,7 @@ exports[`should create javascript rules 1`] = `
       "variables": true,
     },
   ],
+  "no-useless-assignment": "error",
   "no-useless-backreference": "error",
   "no-useless-catch": "error",
   "no-useless-computed-key": "error",

@@ -31,7 +31,6 @@ export const additionalRules = {
   "no-self-compare": "error", // Disallows `x === x` (usually a mistake)
   "no-template-curly-in-string": "error", // Flags unintended use of `${}` inside strings without backticks
   "no-throw-literal": "error", // Prevents throwing non-error objects (e.g., `throw "error"` should be `throw new Error("error")`)
-  "no-unassigned-vars": "error", // Disallow let or var variables that are read but never assigned
   "no-unmodified-loop-condition": "error", // Ensures loop conditions change, preventing infinite loops
   "no-unneeded-ternary": "error", // Disallow ternary operators when simpler alternatives exist
   "no-unreachable-loop": "error", // Prevents loops that can never execute
@@ -69,7 +68,6 @@ export const additionalRules = {
   "prefer-rest-params": "error", // Use `...args` instead of `arguments`
   "prefer-spread": "error", // Use `[...arr]` instead of `arr.concat()`
   "prefer-template": "error", // Use template literals instead of string concatenation
-  "preserve-caught-error": "error", // Ensures `catch` clauses preserve the original error (e.g., `catch (e) { throw e; }`)
   "radix": "error", // Require a radix argument in `parseInt`
   "require-await": "error", // Disallows async functions without `await` (prevents unnecessary `async`)
   "strict": ["error", "safe"], // Enforces `"use strict"` only where needed (safe mode)
