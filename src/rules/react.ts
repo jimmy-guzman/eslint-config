@@ -2,6 +2,7 @@ import type { ReactOptions, Rules } from "../types";
 
 import { hasNext, hasTypescript, hasVite } from "../utils/has-dependency";
 import { unwrapDefault } from "../utils/interop-default";
+import { rebrand } from "../utils/rebrand";
 import { upwarn } from "../utils/upwarn";
 
 const nextAllowedExportNames = [
@@ -28,7 +29,7 @@ const nextAllowedExportNames = [
 export const reactRules = async (options?: ReactOptions) => {
   const [
     { configs: reactConfigs },
-    { flatConfigs: jsxA11yConfigs },
+    { configs: jsxA11yConfigs },
     { configs: reactDomConfigs },
     { configs: reactHooksExtraConfigs },
     { configs: reactWebApiConfigs },
@@ -36,7 +37,7 @@ export const reactRules = async (options?: ReactOptions) => {
     { configs: reactRscConfigs },
   ] = await Promise.all([
     unwrapDefault(import("eslint-plugin-react-x")),
-    unwrapDefault(import("eslint-plugin-jsx-a11y")),
+    unwrapDefault(import("eslint-plugin-jsx-a11y-x")),
     unwrapDefault(import("eslint-plugin-react-dom")),
     unwrapDefault(import("eslint-plugin-react-hooks-extra")),
     unwrapDefault(import("eslint-plugin-react-web-api")),
@@ -67,7 +68,7 @@ export const reactRules = async (options?: ReactOptions) => {
       } satisfies Rules);
 
   return {
-    ...jsxA11yConfigs.recommended.rules,
+    ...rebrand(jsxA11yConfigs.recommended.rules, "jsx-a11y-x", "jsx-a11y"),
     ...upwarn(reactPluginRules),
     ...upwarn(reactDomPluginRules),
     ...upwarn(reactHooksExtraConfigs.recommended.rules),

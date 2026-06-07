@@ -8,5 +8,9 @@ export default {
     "commitlint",
     "@types/eslint",
     "@types/react",
+
+    // TODO: remove when astro plus eslint-plugin-jsx-a11y-x types are supported somehow
+    "@types/eslint-plugin-jsx-a11y",
+    "eslint-plugin-jsx-a11y",
   ],
 } satisfies KnipConfig;
