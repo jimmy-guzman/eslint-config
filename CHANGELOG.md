@@ -1,3 +1,11 @@
+## [8.0.1](https://github.com/jimmy-guzman/eslint-config/compare/v8.0.0...v8.0.1) (2026-06-07)
+
+
+### Bug Fixes
+
+* 🐛 add .agents, .claude and .worktress to ignores ([d39b19b](https://github.com/jimmy-guzman/eslint-config/commit/d39b19b5bff1d14c771363b4b218017d8cf03a04))
+* 🐛 disable typescript-eslint/unbound-method in tests ([56467b7](https://github.com/jimmy-guzman/eslint-config/commit/56467b7fbb2c2818456315d873eba488a695bf15))
+
 # [8.0.0](https://github.com/jimmy-guzman/eslint-config/compare/v7.9.0...v8.0.0) (2026-06-07)
 
 
