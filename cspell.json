@@ -48,7 +48,8 @@
     "vinxi",
     "vitepress",
     "vitest",
-    "wagoid"
+    "wagoid",
+    "worktrees"
   ],
   "ignorePaths": [
     "node_modules",
