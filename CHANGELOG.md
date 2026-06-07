@@ -1,3 +1,10 @@
+# [7.9.0](https://github.com/jimmy-guzman/eslint-config/compare/v7.8.0...v7.9.0) (2026-06-07)
+
+
+### Features
+
+* ✨ use `eslint-plugin-jsx-a11y-x` instead ([#272](https://github.com/jimmy-guzman/eslint-config/issues/272)) ([bae59bd](https://github.com/jimmy-guzman/eslint-config/commit/bae59bd2c3e43fbae978ce5a9008b0455d980082))
+
 # [7.8.0](https://github.com/jimmy-guzman/eslint-config/compare/v7.7.0...v7.8.0) (2026-06-07)
 
 
