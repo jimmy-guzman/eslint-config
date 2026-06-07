@@ -1,3 +1,10 @@
+# [7.8.0](https://github.com/jimmy-guzman/eslint-config/compare/v7.7.0...v7.8.0) (2026-06-07)
+
+
+### Features
+
+* ✨ arrow-body-style as "always" ([#273](https://github.com/jimmy-guzman/eslint-config/issues/273)) ([c038890](https://github.com/jimmy-guzman/eslint-config/commit/c03889021dfa3279cc77aba66a40c7714cc30581))
+
 # [7.7.0](https://github.com/jimmy-guzman/eslint-config/compare/v7.6.1...v7.7.0) (2026-05-01)
 
 
