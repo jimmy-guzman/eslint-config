@@ -31,7 +31,6 @@ export const reactRules = async (options?: ReactOptions) => {
     { configs: reactConfigs },
     { configs: jsxA11yConfigs },
     { configs: reactDomConfigs },
-    { configs: reactHooksExtraConfigs },
     { configs: reactWebApiConfigs },
     { configs: reactNamingConventionConfigs },
     { configs: reactRscConfigs },
@@ -39,7 +38,6 @@ export const reactRules = async (options?: ReactOptions) => {
     unwrapDefault(import("eslint-plugin-react-x")),
     unwrapDefault(import("eslint-plugin-jsx-a11y-x")),
     unwrapDefault(import("eslint-plugin-react-dom")),
-    unwrapDefault(import("eslint-plugin-react-hooks-extra")),
     unwrapDefault(import("eslint-plugin-react-web-api")),
     unwrapDefault(import("eslint-plugin-react-naming-convention")),
     unwrapDefault(import("eslint-plugin-react-rsc")),
@@ -71,12 +69,10 @@ export const reactRules = async (options?: ReactOptions) => {
     ...rebrand(jsxA11yConfigs.recommended.rules, "jsx-a11y-x", "jsx-a11y"),
     ...upwarn(reactPluginRules),
     ...upwarn(reactDomPluginRules),
-    ...upwarn(reactHooksExtraConfigs.recommended.rules),
     ...upwarn(reactWebApiConfigs.recommended.rules),
     ...upwarn(reactNamingConventionConfigs.recommended.rules),
     ...upwarn(reactRscConfigs.recommended.rules),
     "react-compiler/react-compiler": "error",
-    "react-hooks-extra/no-direct-set-state-in-use-effect": "off", // Handled by react-hooks/set-state-in-effect
     "react-hooks/component-hook-factories": "error",
     "react-hooks/error-boundaries": "error",
     "react-hooks/exhaustive-deps": "error",
@@ -93,7 +89,6 @@ export const reactRules = async (options?: ReactOptions) => {
     "react-hooks/unsupported-syntax": "error",
     "react-hooks/use-memo": "error",
     "react-hooks/void-use-memo": "error",
-    "react-naming-convention/component-name": "error",
     "react-refresh/only-export-components": [
       "warn",
       {
@@ -101,14 +96,25 @@ export const reactRules = async (options?: ReactOptions) => {
         allowExportNames: isUsingNextjs ? nextAllowedExportNames : [],
       },
     ],
-    "react-x/jsx-dollar": "off", // Seems a bit too aggressive
-    "react-x/jsx-shorthand-boolean": "error",
-    "react-x/jsx-shorthand-fragment": "error",
+    "react-x/error-boundaries": "off", // Handled by react-hooks/error-boundaries
+    "react-x/exhaustive-deps": "off", // Handled by react-hooks/exhaustive-deps
+    "react-x/globals": "off", // Handled by react-hooks/globals
+    "react-x/immutability": "off", // Handled by react-hooks/immutability
     "react-x/no-duplicate-key": "error",
+    "react-x/no-implicit-children": "error",
+    "react-x/no-implicit-key": "error",
+    "react-x/no-implicit-ref": "error",
+    "react-x/no-missing-component-display-name": "off", // displayName isn't required on every component
     "react-x/no-missing-context-display-name": "error",
-    "react-x/no-unnecessary-key": "error",
-    "react-x/no-unnecessary-use-ref": "error",
-    "react-x/prefer-namespace-import": "error",
+    "react-x/no-unused-state": "off", // Legacy class-component rule
+    "react-x/purity": "off", // Handled by react-hooks/purity
+    "react-x/refs": "off", // Handled by react-hooks/refs
+    "react-x/rules-of-hooks": "off", // Handled by react-hooks/rules-of-hooks
+    "react-x/set-state-in-effect": "off", // Handled by react-hooks/set-state-in-effect
+    "react-x/set-state-in-render": "off", // Handled by react-hooks/set-state-in-render
+    "react-x/static-components": "off", // Handled by react-hooks/static-components
+    "react-x/unsupported-syntax": "off", // Handled by react-hooks/unsupported-syntax
+    "react-x/use-memo": "off", // Handled by react-hooks/use-memo
     ...options?.overrides,
   } satisfies Rules;
 };
