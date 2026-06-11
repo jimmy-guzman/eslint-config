@@ -4913,11 +4913,6 @@ export interface RuleOptions {
    */
   'react-dom/no-missing-iframe-sandbox'?: Linter.RuleEntry<[]>
   /**
-   * Enforces the absence of a 'namespace' in React elements.
-   * @see https://eslint-react.xyz/docs/rules/dom-no-namespace
-   */
-  'react-dom/no-namespace'?: Linter.RuleEntry<[]>
-  /**
    * Replaces usage of 'ReactDOM.render()' with 'createRoot(node).render()'.
    * @see https://eslint-react.xyz/docs/rules/dom-no-render
    */
@@ -4962,16 +4957,6 @@ export interface RuleOptions {
    * @see https://eslint-react.xyz/docs/rules/dom-no-void-elements-with-children
    */
   'react-dom/no-void-elements-with-children'?: Linter.RuleEntry<[]>
-  /**
-   * Enforces importing React DOM via a namespace import.
-   * @see https://eslint-react.xyz/docs/rules/dom-prefer-namespace-import
-   */
-  'react-dom/prefer-namespace-import'?: Linter.RuleEntry<[]>
-  /**
-   * Disallows direct calls to the ['set' function](https://react.dev/reference/react/useState#setstate) of 'useState' in 'useEffect'.
-   * @see https://eslint-react.xyz/docs/rules/hooks-extra-no-direct-set-state-in-use-effect
-   */
-  'react-hooks-extra/no-direct-set-state-in-use-effect'?: Linter.RuleEntry<[]>
   /**
    * Validates against calling capitalized functions/methods instead of using JSX
    * @see https://react.dev/reference/eslint-plugin-react-hooks/lints/capitalized-calls
@@ -5118,25 +5103,10 @@ export interface RuleOptions {
    */
   'react-hooks/void-use-memo'?: Linter.RuleEntry<ReactHooksVoidUseMemo>
   /**
-   * Enforces naming conventions for components.
-   * @see https://eslint-react.xyz/docs/rules/naming-convention-component-name
-   */
-  'react-naming-convention/component-name'?: Linter.RuleEntry<ReactNamingConventionComponentName>
-  /**
-   * Enforces the context name to be a valid component name with the suffix 'Context'.
+   * Enforces identifier names assigned from `createContext` calls to be a valid component name with the suffix `Context`.
    * @see https://eslint-react.xyz/docs/rules/naming-convention-context-name
    */
   'react-naming-convention/context-name'?: Linter.RuleEntry<[]>
-  /**
-   * Enforces consistent file-naming conventions.
-   * @see https://eslint-react.xyz/docs/rules/naming-convention-filename
-   */
-  'react-naming-convention/filename'?: Linter.RuleEntry<ReactNamingConventionFilename>
-  /**
-   * Enforces consistent use of the JSX file extension.
-   * @see https://eslint-react.xyz/docs/rules/naming-convention-filename-extension
-   */
-  'react-naming-convention/filename-extension'?: Linter.RuleEntry<ReactNamingConventionFilenameExtension>
   /**
    * Enforces identifier names assigned from 'useId' calls to be either 'id' or end with 'Id'.
    * @see https://eslint-react.xyz/docs/rules/naming-convention-id-name
@@ -5147,15 +5117,10 @@ export interface RuleOptions {
    * @see https://eslint-react.xyz/docs/rules/naming-convention-ref-name
    */
   'react-naming-convention/ref-name'?: Linter.RuleEntry<[]>
-  /**
-   * Enforces destructuring and symmetric naming of the 'useState' hook value and setter.
-   * @see https://eslint-react.xyz/docs/rules/naming-convention-use-state
-   */
-  'react-naming-convention/use-state'?: Linter.RuleEntry<ReactNamingConventionUseState>
   'react-refresh/only-export-components'?: Linter.RuleEntry<ReactRefreshOnlyExportComponents>
   /**
-   * Validate and transform React Client/Server Function definitions.
-   * @see https://eslint-react.xyz/docs/rules/function-definition
+   * Validates and transforms React Client/Server Function definitions.
+   * @see https://eslint-react.xyz/docs/rules/rsc-function-definition
    */
   'react-rsc/function-definition'?: Linter.RuleEntry<[]>
   /**
@@ -5163,6 +5128,11 @@ export interface RuleOptions {
    * @see https://eslint-react.xyz/docs/rules/web-api-no-leaked-event-listener
    */
   'react-web-api/no-leaked-event-listener'?: Linter.RuleEntry<[]>
+  /**
+   * Enforces that every 'fetch' in a component or custom hook has a corresponding 'AbortController' abort in the cleanup function.
+   * @see https://eslint-react.xyz/docs/rules/web-api-no-leaked-fetch
+   */
+  'react-web-api/no-leaked-fetch'?: Linter.RuleEntry<[]>
   /**
    * Enforces that every 'setInterval' in a component or custom hook has a corresponding 'clearInterval'.
    * @see https://eslint-react.xyz/docs/rules/web-api-no-leaked-interval
@@ -5179,55 +5149,25 @@ export interface RuleOptions {
    */
   'react-web-api/no-leaked-timeout'?: Linter.RuleEntry<[]>
   /**
-   * Prevents unintentional '$' sign before expression.
-   * @see https://eslint-react.xyz/docs/rules/jsx-dollar
+   * Validates usage of Error Boundaries instead of try/catch for errors in child components.
+   * @see https://eslint-react.xyz/docs/rules/error-boundaries
    */
-  'react-x/jsx-dollar'?: Linter.RuleEntry<[]>
+  'react-x/error-boundaries'?: Linter.RuleEntry<[]>
   /**
-   * Enforces 'key' prop placement before spread props.
-   * @see https://eslint-react.xyz/docs/rules/jsx-key-before-spread
+   * Verifies the list of dependencies for Hooks like 'useEffect' and similar.
+   * @see https://github.com/facebook/react/issues/14920
    */
-  'react-x/jsx-key-before-spread'?: Linter.RuleEntry<[]>
+  'react-x/exhaustive-deps'?: Linter.RuleEntry<ReactXExhaustiveDeps>
   /**
-   * Prevents comment strings (e.g., beginning with '//' or '/*') from being accidentally inserted into a JSX element's text nodes.
-   * @see https://eslint-react.xyz/docs/rules/jsx-no-comment-textnodes
+   * Validates against assignment/mutation of globals during render, part of ensuring that side effects must run outside of render.
+   * @see https://eslint-react.xyz/docs/rules/globals
    */
-  'react-x/jsx-no-comment-textnodes'?: Linter.RuleEntry<[]>
+  'react-x/globals'?: Linter.RuleEntry<[]>
   /**
-   * Disallows duplicate props in JSX elements.
-   * @see https://eslint-react.xyz/docs/rules/jsx-no-duplicate-props
+   * Validates against mutating props, state, and other values that are immutable.
+   * @see https://eslint-react.xyz/docs/rules/immutability
    */
-  'react-x/jsx-no-duplicate-props'?: Linter.RuleEntry<[]>
-  /**
-   * Disallows immediately-invoked function expressions in JSX.
-   * @see https://eslint-react.xyz/docs/rules/jsx-no-iife
-   */
-  'react-x/jsx-no-iife'?: Linter.RuleEntry<[]>
-  /**
-   * Prevents using variables in JSX that are not defined in the scope.
-   * @see https://eslint-react.xyz/docs/rules/jsx-no-undef
-   */
-  'react-x/jsx-no-undef'?: Linter.RuleEntry<[]>
-  /**
-   * Enforces shorthand syntax for boolean props.
-   * @see https://eslint-react.xyz/docs/rules/jsx-shorthand-boolean
-   */
-  'react-x/jsx-shorthand-boolean'?: Linter.RuleEntry<ReactXJsxShorthandBoolean>
-  /**
-   * Enforces shorthand syntax for fragment elements.
-   * @see https://eslint-react.xyz/docs/rules/jsx-shorthand-fragment
-   */
-  'react-x/jsx-shorthand-fragment'?: Linter.RuleEntry<ReactXJsxShorthandFragment>
-  /**
-   * Marks React variables as used when JSX is present.
-   * @see https://eslint-react.xyz/docs/rules/jsx-uses-react
-   */
-  'react-x/jsx-uses-react'?: Linter.RuleEntry<[]>
-  /**
-   * Marks JSX element variables as used.
-   * @see https://eslint-react.xyz/docs/rules/jsx-uses-vars
-   */
-  'react-x/jsx-uses-vars'?: Linter.RuleEntry<[]>
+  'react-x/immutability'?: Linter.RuleEntry<[]>
   /**
    * Disallows accessing 'this.state' inside 'setState' calls.
    * @see https://eslint-react.xyz/docs/rules/no-access-state-in-setstate
@@ -5258,11 +5198,6 @@ export interface RuleOptions {
    * @see https://eslint-react.xyz/docs/rules/no-children-only
    */
   'react-x/no-children-only'?: Linter.RuleEntry<[]>
-  /**
-   * Disallows passing 'children' as a prop.
-   * @see https://eslint-react.xyz/docs/rules/no-children-prop
-   */
-  'react-x/no-children-prop'?: Linter.RuleEntry<[]>
   /**
    * Disallows the use of 'Children.toArray' from the 'react' package.
    * @see https://eslint-react.xyz/docs/rules/no-children-to-array
@@ -5299,15 +5234,10 @@ export interface RuleOptions {
    */
   'react-x/no-context-provider'?: Linter.RuleEntry<[]>
   /**
-   * Disallows 'createRef' in function components.
+   * Disallows 'createRef' in function components and Hooks.
    * @see https://eslint-react.xyz/docs/rules/no-create-ref
    */
   'react-x/no-create-ref'?: Linter.RuleEntry<[]>
-  /**
-   * Disallows the 'defaultProps' property in favor of ES6 default parameters.
-   * @see https://eslint-react.xyz/docs/rules/no-default-props
-   */
-  'react-x/no-default-props'?: Linter.RuleEntry<[]>
   /**
    * Disallows direct mutation of 'this.state'.
    * @see https://eslint-react.xyz/docs/rules/no-direct-mutation-state
@@ -5319,21 +5249,25 @@ export interface RuleOptions {
    */
   'react-x/no-duplicate-key'?: Linter.RuleEntry<[]>
   /**
-   * Disallows certain props on components.
-   * @see https://eslint-react.xyz/docs/rules/no-forbidden-props
-   * @deprecated
-   */
-  'react-x/no-forbidden-props'?: Linter.RuleEntry<ReactXNoForbiddenProps>
-  /**
    * Replaces usage of 'forwardRef' with passing 'ref' as a prop.
    * @see https://eslint-react.xyz/docs/rules/no-forward-ref
    */
   'react-x/no-forward-ref'?: Linter.RuleEntry<[]>
   /**
+   * Prevents implicitly passing the 'children' prop to components.
+   * @see https://eslint-react.xyz/docs/rules/no-implicit-children
+   */
+  'react-x/no-implicit-children'?: Linter.RuleEntry<[]>
+  /**
    * Prevents implicitly passing the 'key' prop to components.
    * @see https://eslint-react.xyz/docs/rules/no-implicit-key
    */
   'react-x/no-implicit-key'?: Linter.RuleEntry<[]>
+  /**
+   * Prevents implicitly passing the 'ref' prop to components.
+   * @see https://eslint-react.xyz/docs/rules/no-implicit-ref
+   */
+  'react-x/no-implicit-ref'?: Linter.RuleEntry<[]>
   /**
    * Prevents problematic leaked values from being rendered.
    * @see https://eslint-react.xyz/docs/rules/no-leaked-conditional-rendering
@@ -5365,20 +5299,10 @@ export interface RuleOptions {
    */
   'react-x/no-nested-component-definitions'?: Linter.RuleEntry<[]>
   /**
-   * Disallows nesting lazy component declarations inside other components.
+   * Disallows nesting lazy component declarations inside other components or hooks.
    * @see https://eslint-react.xyz/docs/rules/no-nested-lazy-component-declarations
    */
   'react-x/no-nested-lazy-component-declarations'?: Linter.RuleEntry<[]>
-  /**
-   * Disallows 'propTypes' in favor of TypeScript or another type-checking solution.
-   * @see https://eslint-react.xyz/docs/rules/no-prop-types
-   */
-  'react-x/no-prop-types'?: Linter.RuleEntry<[]>
-  /**
-   * Disallows 'shouldComponentUpdate' when extending 'React.PureComponent'.
-   * @see https://eslint-react.xyz/docs/rules/no-redundant-should-component-update
-   */
-  'react-x/no-redundant-should-component-update'?: Linter.RuleEntry<[]>
   /**
    * Disallows calling 'this.setState' in 'componentDidMount' outside functions such as callbacks.
    * @see https://eslint-react.xyz/docs/rules/no-set-state-in-component-did-mount
@@ -5395,35 +5319,10 @@ export interface RuleOptions {
    */
   'react-x/no-set-state-in-component-will-update'?: Linter.RuleEntry<[]>
   /**
-   * Replaces string refs with callback refs.
-   * @see https://eslint-react.xyz/docs/rules/no-string-refs
-   */
-  'react-x/no-string-refs'?: Linter.RuleEntry<[]>
-  /**
-   * Disallows unnecessary 'key' props on nested child elements when rendering lists.
-   * @see https://eslint-react.xyz/docs/rules/no-unnecessary-key
-   */
-  'react-x/no-unnecessary-key'?: Linter.RuleEntry<[]>
-  /**
-   * Disallows unnecessary usage of 'useCallback'.
-   * @see https://eslint-react.xyz/docs/rules/no-unnecessary-use-callback
-   */
-  'react-x/no-unnecessary-use-callback'?: Linter.RuleEntry<[]>
-  /**
-   * Disallows unnecessary usage of 'useMemo'.
-   * @see https://eslint-react.xyz/docs/rules/no-unnecessary-use-memo
-   */
-  'react-x/no-unnecessary-use-memo'?: Linter.RuleEntry<[]>
-  /**
    * Enforces that a function with the 'use' prefix uses at least one Hook inside it.
    * @see https://eslint-react.xyz/docs/rules/no-unnecessary-use-prefix
    */
   'react-x/no-unnecessary-use-prefix'?: Linter.RuleEntry<[]>
-  /**
-   * Disallows unnecessary usage of 'useRef'.
-   * @see https://eslint-react.xyz/docs/rules/no-unnecessary-use-ref
-   */
-  'react-x/no-unnecessary-use-ref'?: Linter.RuleEntry<[]>
   /**
    * Warns about the use of 'UNSAFE_componentWillMount' in class components.
    * @see https://eslint-react.xyz/docs/rules/no-unsafe-component-will-mount
@@ -5460,7 +5359,7 @@ export interface RuleOptions {
    */
   'react-x/no-unused-props'?: Linter.RuleEntry<[]>
   /**
-   * Warns about unused class component state.
+   * Warns about state variables that are defined but never used.
    * @see https://eslint-react.xyz/docs/rules/no-unused-state
    */
   'react-x/no-unused-state'?: Linter.RuleEntry<[]>
@@ -5470,35 +5369,50 @@ export interface RuleOptions {
    */
   'react-x/no-use-context'?: Linter.RuleEntry<[]>
   /**
-   * Disallows useless 'forwardRef' calls on components that don't use 'ref's.
-   * @see https://eslint-react.xyz/docs/rules/no-useless-forward-ref
+   * Validates that components and hooks are pure by checking that they do not call known-impure functions during render.
+   * @see https://eslint-react.xyz/docs/rules/purity
    */
-  'react-x/no-useless-forward-ref'?: Linter.RuleEntry<[]>
+  'react-x/purity'?: Linter.RuleEntry<[]>
   /**
-   * Disallows useless fragment elements.
-   * @see https://eslint-react.xyz/docs/rules/no-useless-fragment
+   * Validates correct usage of refs by checking that 'ref.current' is not read or written during render.
+   * @see https://eslint-react.xyz/docs/rules/refs
    */
-  'react-x/no-useless-fragment'?: Linter.RuleEntry<ReactXNoUselessFragment>
+  'react-x/refs'?: Linter.RuleEntry<[]>
   /**
-   * Enforces destructuring assignment for component props and context.
-   * @see https://eslint-react.xyz/docs/rules/prefer-destructuring-assignment
+   * Enforces the Rules of Hooks.
+   * @see https://react.dev/reference/rules/rules-of-hooks
    */
-  'react-x/prefer-destructuring-assignment'?: Linter.RuleEntry<[]>
+  'react-x/rules-of-hooks'?: Linter.RuleEntry<ReactXRulesOfHooks>
   /**
-   * Enforces importing React via a namespace import.
-   * @see https://eslint-react.xyz/docs/rules/prefer-namespace-import
+   * Validates against setting state synchronously in an effect, which can lead to re-renders that degrade performance.
+   * @see https://eslint-react.xyz/docs/rules/set-state-in-effect
    */
-  'react-x/prefer-namespace-import'?: Linter.RuleEntry<[]>
+  'react-x/set-state-in-effect'?: Linter.RuleEntry<[]>
   /**
-   * Enforces read-only props in components.
-   * @see https://eslint-react.xyz/docs/rules/prefer-read-only-props
+   * Validates against unconditionally setting state during render, which can trigger additional renders and potential infinite render loops.
+   * @see https://eslint-react.xyz/docs/rules/set-state-in-render
    */
-  'react-x/prefer-read-only-props'?: Linter.RuleEntry<[]>
+  'react-x/set-state-in-render'?: Linter.RuleEntry<[]>
   /**
-   * Enforces wrapping function calls made inside 'useState' in an 'initializer function'.
-   * @see https://eslint-react.xyz/docs/rules/prefer-use-state-lazy-initialization
+   * Validates that components are static, not recreated every render.
+   * @see https://eslint-react.xyz/docs/rules/static-components
    */
-  'react-x/prefer-use-state-lazy-initialization'?: Linter.RuleEntry<[]>
+  'react-x/static-components'?: Linter.RuleEntry<[]>
+  /**
+   * Validates against syntax that React Compiler does not support.
+   * @see https://eslint-react.xyz/docs/rules/unsupported-syntax
+   */
+  'react-x/unsupported-syntax'?: Linter.RuleEntry<[]>
+  /**
+   * Validates that 'useMemo' is called with a callback that returns a value.
+   * @see https://eslint-react.xyz/docs/rules/use-memo
+   */
+  'react-x/use-memo'?: Linter.RuleEntry<[]>
+  /**
+   * Enforces correct usage of 'useState', including destructuring, symmetric naming of the value and setter, and wrapping expensive initializers in a lazy initializer function.
+   * @see https://eslint-react.xyz/docs/rules/use-state
+   */
+  'react-x/use-state'?: Linter.RuleEntry<ReactXUseState>
   /**
    * disallow confusing quantifiers
    * @see https://ota-meshi.github.io/eslint-plugin-regexp/rules/confusing-quantifier.html
@@ -17735,29 +17649,6 @@ type ReactHooksUseMemo = []|[{
 type ReactHooksVoidUseMemo = []|[{
   [k: string]: unknown | undefined
 }]
-// ----- react-naming-convention/component-name -----
-type ReactNamingConventionComponentName = []|[(("PascalCase" | "CONSTANT_CASE") | {
-  allowAllCaps?: boolean
-  excepts?: string[]
-  rule?: ("PascalCase" | "CONSTANT_CASE")
-})]
-// ----- react-naming-convention/filename -----
-type ReactNamingConventionFilename = []|[(("PascalCase" | "camelCase" | "kebab-case" | "snake_case") | {
-  excepts?: string[]
-  extensions?: string[]
-  rule?: ("PascalCase" | "camelCase" | "kebab-case" | "snake_case")
-})]
-// ----- react-naming-convention/filename-extension -----
-type ReactNamingConventionFilenameExtension = []|[(("always" | "as-needed") | {
-  allow?: ("always" | "as-needed")
-  extensions?: string[]
-  ignoreFilesWithoutCode?: boolean
-})]
-// ----- react-naming-convention/use-state -----
-type ReactNamingConventionUseState = []|[{
-  enforceAssignment?: boolean
-  enforceSetterName?: boolean
-}]
 // ----- react-refresh/only-export-components -----
 type ReactRefreshOnlyExportComponents = []|[{
   extraHOCs?: string[]
@@ -17765,30 +17656,26 @@ type ReactRefreshOnlyExportComponents = []|[{
   allowConstantExport?: boolean
   checkJS?: boolean
 }]
-// ----- react-x/jsx-shorthand-boolean -----
-type ReactXJsxShorthandBoolean = []|[(-1 | 1)]
-// ----- react-x/jsx-shorthand-fragment -----
-type ReactXJsxShorthandFragment = []|[(-1 | 1)]
-// ----- react-x/no-forbidden-props -----
-type ReactXNoForbiddenProps = []|[{
-  forbid?: (string | {
-    excludedNodes?: string[]
-    prop: string
-  } | {
-    includedNodes?: string[]
-    prop: string
-  })[]
+// ----- react-x/exhaustive-deps -----
+type ReactXExhaustiveDeps = []|[{
+  additionalHooks?: string
+  enableDangerousAutofixThisMayCauseInfiniteLoops?: boolean
+  experimental_autoDependenciesHooks?: string[]
+  requireExplicitEffectDeps?: boolean
 }]
 // ----- react-x/no-unstable-default-props -----
 type ReactXNoUnstableDefaultProps = []|[{
   safeDefaultProps?: string[]
 }]
-// ----- react-x/no-useless-fragment -----
-type ReactXNoUselessFragment = []|[{
-  
-  allowEmptyFragment?: boolean
-  
-  allowExpressions?: boolean
+// ----- react-x/rules-of-hooks -----
+type ReactXRulesOfHooks = []|[{
+  additionalHooks?: string
+}]
+// ----- react-x/use-state -----
+type ReactXUseState = []|[{
+  enforceAssignment?: boolean
+  enforceLazyInitialization?: boolean
+  enforceSetterName?: boolean
 }]
 // ----- regexp/hexadecimal-escape -----
 type RegexpHexadecimalEscape = []|[("always" | "never")]

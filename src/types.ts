@@ -104,7 +104,6 @@ export interface ReactOptions {
     | "react-compiler"
     | "react-dom"
     | "react-hooks"
-    | "react-hooks-extra"
     | "react-naming-convention"
     | "react-refresh"
     | "react-web-api"
