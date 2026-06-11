@@ -1,3 +1,17 @@
+# [9.0.0](https://github.com/jimmy-guzman/eslint-config/compare/v8.0.1...v9.0.0) (2026-06-11)
+
+
+### Features
+
+* ✨ upgrade eslint-react plugins to v5 ([#276](https://github.com/jimmy-guzman/eslint-config/issues/276)) ([9dad3c6](https://github.com/jimmy-guzman/eslint-config/commit/9dad3c6f235a7520e8a6a9e15087b0bd7e89041c))
+
+
+### BREAKING CHANGES
+
+* 💥 react-hooks-extra is removed and the bundled rule
+set changes; new rules may surface errors and some opinionated rules
+(jsx-shorthand-*, prefer-namespace-import) no longer exist
+
 ## [8.0.1](https://github.com/jimmy-guzman/eslint-config/compare/v8.0.0...v8.0.1) (2026-06-07)
 
 
