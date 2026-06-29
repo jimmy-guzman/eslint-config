@@ -19,7 +19,7 @@ export const additionalRules = {
   "eqeqeq": "error", // Enforce strict equality (`===` and `!==`) over abstract equality (`==` and `!=`)
   "no-console": "warn", // Allow logging in development, but should be reviewed for production builds
   "no-div-regex": "error",
-  "no-else-return": ["error", { allowElseIf: false }], // Disallow `else` blocks after `return` statements, including `else if`
+  "no-else-return": "off", // Superseded by `unicorn/no-useless-else`, which also covers `throw`/`break`/`continue`
   "no-implicit-coercion": "error", // Prevents shorthand type conversions (e.g., `!!value`, `+var`)
   "no-implicit-globals": "error", // Prevents defining variables in the global scope
   "no-lonely-if": "error", // Disallow `if` statements that are the only statement in a block

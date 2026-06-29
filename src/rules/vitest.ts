@@ -82,9 +82,9 @@ export const vitestRules = async (options?: VitestOptions) => {
       },
     ],
     "vitest/warn-todo": "warn",
-    ...(isUsingTypescript
-      ? { "@typescript-eslint/unbound-method": "off" as const }
-      : {}),
+    ...(isUsingTypescript && {
+      "@typescript-eslint/unbound-method": "off" as const,
+    }),
     ...options?.overrides,
   } satisfies Rules;
 };

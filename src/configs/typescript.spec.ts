@@ -13,16 +13,13 @@ describe("typescriptConfig", () => {
     const [_first, _second, _third, _fourth, config] =
       await typescriptConfig(true);
 
-    expect(config).toStrictEqual(
-      expect.objectContaining({
-        languageOptions: expect.objectContaining({
-          parserOptions: expect.objectContaining({
-            projectService: true,
-            tsconfigRootDir: "/",
-          }),
-        }),
-      }),
-    );
+    const parserOptions = expect.objectContaining({
+      projectService: true,
+      tsconfigRootDir: "/",
+    });
+    const languageOptions = expect.objectContaining({ parserOptions });
+
+    expect(config).toStrictEqual(expect.objectContaining({ languageOptions }));
   });
 
   it("should add erasable syntax only config when enabled", async () => {
