@@ -46,9 +46,8 @@ export const reactRules = async (options?: ReactOptions) => {
   const isUsingVite = hasVite();
   const isUsingTypesScript = hasTypescript();
 
-  const reactPluginRules = isUsingTypesScript
-    ? reactConfigs["strict-type-checked"].rules
-    : reactConfigs.strict.rules;
+  const reactPluginRules =
+    reactConfigs[isUsingTypesScript ? "strict-type-checked" : "strict"].rules;
 
   const reactDomPluginRules = isUsingTypesScript
     ? ({

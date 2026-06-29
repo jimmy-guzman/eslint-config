@@ -34,7 +34,7 @@ describe("createFeatured", () => {
     });
 
     expect(getFlag(false, detector)).toBe(true);
-    expect(detector).toHaveBeenCalledOnce();
+    expect(detector).toHaveBeenCalledExactlyOnceWith();
   });
 
   it("should return false when detector returns false", () => {

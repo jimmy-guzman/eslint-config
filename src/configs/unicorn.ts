@@ -9,7 +9,7 @@ export const unicornConfig = () => {
     {
       ...eslintPluginUnicorn.configs.recommended,
       name: "jimmy.codes/unicorn",
-      rules: unicornRules,
+      rules: unicornRules(),
     },
   ] satisfies TypedConfigItem[];
 };

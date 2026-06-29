@@ -19,7 +19,7 @@ export const rebrand = (
   return Object.fromEntries(
     Object.entries(rules).map(([rule, option]) => {
       return [
-        rule.startsWith(`${from}/`) ? rule.replace(`${from}/`, `${to}/`) : rule,
+        rule.startsWith(`${from}/`) ? `${to}${rule.slice(from.length)}` : rule,
         option,
       ];
     }),
